@@ -22,14 +22,38 @@ function stripHtml(html) {
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#0?39;/g, "'")
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function safeCodePoint(n) {
+  return n >= 0x20 && n <= 0x10ffff && !(n >= 0xd800 && n <= 0xdfff) ? String.fromCodePoint(n) : '';
+}
+
+// フィードのタイトル・説明文に残るHTML実体参照(&#8217; 等)を文字に戻す
+function decodeEntities(s) {
+  return String(s ?? '')
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => safeCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => safeCodePoint(Number(d)))
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+}
+
+function canonicalLink(link) {
+  try {
+    const u = new URL(link);
+    u.hash = '';
+    for (const k of [...u.searchParams.keys()]) {
+      if (/^(utm_|fbclid|gclid|ref_?src|cmpid|mc_cid|mc_eid)/i.test(k)) u.searchParams.delete(k);
+    }
+    return u.toString();
+  } catch {
+    return link;
+  }
 }
 
 function itemDate(item) {
@@ -45,7 +69,7 @@ function itemSummary(item) {
   const raw =
     item.contentSnippet || stripHtml(item.contentEncoded) || stripHtml(item.content) ||
     stripHtml(item.summary) || stripHtml(item.description) || '';
-  return raw.replace(/\s+/g, ' ').trim().slice(0, 1200);
+  return decodeEntities(raw).replace(/\s+/g, ' ').trim().slice(0, 1200);
 }
 
 // rss-parser自体のtimeoutが効かないケース(接続がハングする等)に備えたハードタイムアウト
@@ -65,7 +89,7 @@ async function fetchFeed(feed, since) {
   for (const item of (parsed.items || []).slice(0, 120)) {
     const date = itemDate(item);
     if (!date || date < since || date.getTime() > Date.now() + 60 * 60 * 1000) continue;
-    const title = (item.title || '').replace(/\s+/g, ' ').trim();
+    const title = decodeEntities(item.title || '').replace(/\s+/g, ' ').trim();
     const link = (item.link || '').trim();
     if (!title || !link) continue;
     const summary = itemSummary(item);
@@ -100,9 +124,10 @@ export async function collectArticles(windowHours) {
   });
 
   // URL重複を除去(同一記事が複数フィードに載る場合は高ウェイト側を残す)
+  // クエリ文字列は記事の識別子であることがある(HNのitem?id=等)ため、トラッキング用パラメータのみ除去する
   const byLink = new Map();
   for (const a of articles) {
-    const key = a.link.replace(/[?#].*$/, '');
+    const key = canonicalLink(a.link);
     const prev = byLink.get(key);
     if (!prev || a.weight > prev.weight) byLink.set(key, a);
   }

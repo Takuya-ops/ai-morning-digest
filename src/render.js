@@ -1,8 +1,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const SITE_URL = process.env.SITE_URL || 'https://takuya-ops.github.io/ai-morning-digest';
-const REPO_URL = process.env.REPO_URL || 'https://github.com/Takuya-ops/ai-morning-digest';
+// GitHub Actions上では GITHUB_REPOSITORY (owner/repo) からURLを自動導出する(フォークしてもそのまま動く)
+const ghRepo = process.env.GITHUB_REPOSITORY;
+const [ghOwner, ghName] = ghRepo ? ghRepo.split('/') : [];
+const SITE_URL =
+  process.env.SITE_URL ||
+  (ghRepo ? `https://${ghOwner.toLowerCase()}.github.io/${ghName}` : 'https://takuya-ops.github.io/ai-morning-digest');
+const REPO_URL =
+  process.env.REPO_URL ||
+  (ghRepo ? `https://github.com/${ghRepo}` : 'https://github.com/Takuya-ops/ai-morning-digest');
 
 export function escapeHtml(s) {
   return String(s ?? '')
@@ -32,12 +39,14 @@ const CSS = `
   --bg: #f6f5f1; --card: #ffffff; --text: #1f2328; --muted: #656d76; --line: #e4e2dc;
   --accent: #b4552d; --accent-soft: #fdf0e9; --chip: #f0eee8; --chip-text: #454c54;
   --gold: #c99700; --silver: #8a939e; --bronze: #a9714b; --link: #0a63b6;
+  --rank-text: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #15171a; --card: #1e2126; --text: #e8eaed; --muted: #9aa3ad; --line: #33383f;
     --accent: #e58a5e; --accent-soft: #35271f; --chip: #2a2e34; --chip-text: #c4cad1;
     --gold: #e0b53f; --silver: #a8b2bd; --bronze: #c98f68; --link: #6cb2f0;
+    --rank-text: #15171a;
   }
 }
 * { box-sizing: border-box; }
@@ -76,9 +85,9 @@ h2.section {
   display: flex; align-items: center; justify-content: center;
   font-weight: 700; font-size: 1.05rem; background: var(--chip); color: var(--chip-text);
 }
-.rank.r1 { background: var(--gold); color: #fff; }
-.rank.r2 { background: var(--silver); color: #fff; }
-.rank.r3 { background: var(--bronze); color: #fff; }
+.rank.r1 { background: var(--gold); color: var(--rank-text); }
+.rank.r2 { background: var(--silver); color: var(--rank-text); }
+.rank.r3 { background: var(--bronze); color: var(--rank-text); }
 .topic h3 { margin: 0; font-size: 1.08rem; line-height: 1.55; }
 .topic h3 a { color: var(--text); }
 .topic .summary { margin: 10px 0 0; font-size: 0.94rem; }

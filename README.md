@@ -7,7 +7,7 @@
 
 ## 特徴
 
-- **抜け漏れ防止**: ITmedia AI+ / 日経クロステック / Publickey / GIGAZINE / OpenAI / Google / DeepMind / TechCrunch / The Verge / Hacker News など国内外31媒体のRSSを毎朝取得。TOP10に入らなかった記事も「その他」欄に全件掲載します。
+- **抜け漏れ防止**: ITmedia AI+ / 日経クロステック / Publickey / GIGAZINE / OpenAI / Google / DeepMind / TechCrunch / The Verge / Hacker News など国内外32媒体のRSSを毎朝取得。TOP10に入らなかった記事も「その他」欄に全件掲載します。
 - **大きなトピック順に表示**: 同じ話題を報じる記事を日英またいで自動でまとめ、「何媒体が報じたか×媒体の影響度」でスコアリングしてTOP10を表示します。
 - **ニュースの内容まで分かる**: 各トピックに日本語の要約(2〜4文)と「なぜ重要か」を掲載。`ANTHROPIC_API_KEY` を設定するとClaude(claude-opus-5)が要約を生成し、未設定でも記事の説明文から要約を組み立てます。
 - **見やすさ重視**: スマホ対応・ダークモード対応の1カラムレイアウト。ランキングバッジ、ソースチップ、折りたたみ式の関連記事一覧。
@@ -23,7 +23,7 @@
 ```
 GitHub Actions (毎日 20:30 UTC = 5:30 JST)
   └─ node src/index.js
-       1. collect.js   … 31フィードを並列取得、過去26時間分にフィルタ、AI関連判定、重複除去
+       1. collect.js   … 32フィードを並列取得、過去26時間分にフィルタ、AI関連判定、重複除去
        2. cluster.js   … エンティティ(企業名・製品名)とタイトル類似度で同一トピックを日英またいで集約
        3. cluster.js   … ソース数×媒体ウェイトでトピックの「大きさ」をスコアリング → TOP10
        4. summarize.js … Claudeで日本語見出し・要約・「なぜ重要か」を生成(APIキーなしでもフォールバック動作)
@@ -58,7 +58,7 @@ open docs/index.html
 | `ANTHROPIC_API_KEY` | なし | 設定するとClaudeで要約生成 |
 | `SUMMARY_MODEL` | `claude-opus-5` | 要約に使うClaudeモデル |
 | `SLACK_WEBHOOK_URL` | なし | Slack Incoming Webhook |
-| `SITE_URL` / `REPO_URL` | このリポジトリ | フォーク時に自分のURLへ変更 |
+| `SITE_URL` / `REPO_URL` | 自動導出 | GitHub Actions上では `GITHUB_REPOSITORY` から自動導出(フォークしてもそのまま動作)。手動指定も可 |
 
 ## フィードの追加・削除
 

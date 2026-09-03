@@ -30,6 +30,8 @@ async function main() {
 
   const topics = top.map((c, i) => {
     const s = summaries[i] || fallbackSummary(c);
+    // 見出し・要約の元になった代表記事を先頭に置く(render/notifyはarticles[0]をリンク先に使う)
+    const ordered = [c.representative, ...c.members.filter((m) => m !== c.representative)];
     return {
       rank: i + 1,
       headline: s.headline,
@@ -38,7 +40,7 @@ async function main() {
       score: c.score,
       sourceCount: c.sourceCount,
       entities: c.entities,
-      articles: c.members.map((m) => ({
+      articles: ordered.map((m) => ({
         title: m.title, link: m.link, feedName: m.feedName, lang: m.lang, date: m.date,
       })),
     };
