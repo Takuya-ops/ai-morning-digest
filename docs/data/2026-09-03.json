@@ -1,12 +1,12 @@
 {
  "date": "2026-09-03",
- "generatedAt": "2026-09-03T09:34:46.728Z",
- "since": "2026-09-02T07:34:44.772Z",
+ "generatedAt": "2026-09-03T09:35:35.717Z",
+ "since": "2026-09-02T07:35:28.186Z",
  "windowHours": 26,
  "stats": {
-  "articleCount": 157,
+  "articleCount": 163,
   "feedCount": 32,
-  "topicCount": 136,
+  "topicCount": 141,
   "feedErrors": []
  },
  "topics": [
@@ -139,11 +139,11 @@
      "date": "2026-09-02T23:00:00.000Z"
     },
     {
-     "title": "Claude Fable 5.1、Low effortで前世代maxと同等に。公式発表の要点をまとめて読み解いた",
-     "link": "https://zenn.dev/eques_blog/articles/4872d0e1da4f9c",
+     "title": "Claude Fable 5.1への移行は何を基準に判断するべきか",
+     "link": "https://zenn.dev/kai_ai/articles/930b02de9c8dc3",
      "feedName": "Zenn 生成AI",
      "lang": "ja",
-     "date": "2026-09-02T07:35:53.000Z"
+     "date": "2026-09-03T02:08:50.000Z"
     }
    ]
   },
@@ -240,6 +240,41 @@
   },
   {
    "rank": 6,
+   "headline": "Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開",
+   "summary": "Anthropicは2026年9月2日、オンラインでの商品・サービスの購入と販売を支援するAIエージェントの開発用ブループリント「Claude Commerce Agents」を公開した。",
+   "whyItMatters": "",
+   "score": 8.5,
+   "sourceCount": 3,
+   "entities": [
+    "anthropic",
+    "claude"
+   ],
+   "articles": [
+    {
+     "title": "Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開",
+     "link": "https://gihyo.jp/article/2026/09/claude-commerce-agents?utm_source=feed",
+     "feedName": "gihyo.jp",
+     "lang": "ja",
+     "date": "2026-09-03T05:42:00.000Z"
+    },
+    {
+     "title": "Anthropicが「オンラインストアに商品提案AIを組み込んで売上アップ」を実現するためのエージェントをオープンソースで公開",
+     "link": "https://gigazine.net/news/20260903-claude-commerce-agents/",
+     "feedName": "GIGAZINE",
+     "lang": "ja",
+     "date": "2026-09-03T04:05:00.000Z"
+    },
+    {
+     "title": "AIエージェントの失敗 2,227 件のうち 36% は、CLAUDE.md の 1 行で消えるものだった",
+     "link": "https://zenn.dev/tsutomusaito/articles/agent-failure-session-length",
+     "feedName": "Zenn 生成AI",
+     "lang": "ja",
+     "date": "2026-09-03T03:17:03.000Z"
+    }
+   ]
+  },
+  {
+   "rank": 7,
    "headline": "OpenAI faces 30 more lawsuits tied to Tumbler Ridge shooting",
    "summary": "Edelson PC is filing 30 new lawsuits against OpenAI over the Tumbler Ridge shooting, escalating claims to aiding and abetting and naming Chris Lehane, though evidence remains unconfirmed.",
    "whyItMatters": "",
@@ -266,7 +301,7 @@
    ]
   },
   {
-   "rank": 7,
+   "rank": 8,
    "headline": "トランプ政権「記事のAI学習は著作権侵害ではない」 OpenAIを支持する意見書、対New York Timesなどとの訴訟で",
    "summary": "「著作権で保護された文章をLLMの学習に利用することはフェアユース（公正利用）に当たり、著作権法に違反しない」",
    "whyItMatters": "",
@@ -289,34 +324,6 @@
      "feedName": "CNET Japan",
      "lang": "ja",
      "date": "2026-09-03T02:01:00.000Z"
-    }
-   ]
-  },
-  {
-   "rank": 8,
-   "headline": "Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開",
-   "summary": "Anthropicは2026年9月2日、オンラインでの商品・サービスの購入と販売を支援するAIエージェントの開発用ブループリント「Claude Commerce Agents」を公開した。",
-   "whyItMatters": "",
-   "score": 6,
-   "sourceCount": 2,
-   "entities": [
-    "anthropic",
-    "claude"
-   ],
-   "articles": [
-    {
-     "title": "Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開",
-     "link": "https://gihyo.jp/article/2026/09/claude-commerce-agents?utm_source=feed",
-     "feedName": "gihyo.jp",
-     "lang": "ja",
-     "date": "2026-09-03T05:42:00.000Z"
-    },
-    {
-     "title": "Anthropicが「オンラインストアに商品提案AIを組み込んで売上アップ」を実現するためのエージェントをオープンソースで公開",
-     "link": "https://gigazine.net/news/20260903-claude-commerce-agents/",
-     "feedName": "GIGAZINE",
-     "lang": "ja",
-     "date": "2026-09-03T04:05:00.000Z"
     }
    ]
   },
@@ -475,11 +482,25 @@
    "date": "2026-09-03T05:43:38.000Z"
   },
   {
+   "title": "AI に書かせた文章の「賞味期限」を機械で切る — 自分の販売ページが 8 時間「いま買わないでください」と言い続けた話",
+   "link": "https://zenn.dev/cele71/articles/652eafb1f5887c",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-09-03T05:39:49.000Z"
+  },
+  {
    "title": "Googleが脆弱性の発見・再現・修正を自動化するオープンソースフレームワーク「Mantis」の詳細を公開、巨大リポジトリでもトークンのオーバーヘッドを85％超削減",
    "link": "https://gigazine.net/news/20260903-google-mantis-open-source/",
    "feedName": "GIGAZINE",
    "lang": "ja",
    "date": "2026-09-03T05:30:00.000Z"
+  },
+  {
+   "title": "AIが書いた文をHacker Newsに出せない、と規約を読んで知った",
+   "link": "https://zenn.dev/hagumiba/articles/02-hn-ni-dasenai-riyuu",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-09-03T05:00:30.000Z"
   },
   {
    "title": "著作権を巡るOpenAIとニューヨーク・タイムズの訴訟について司法省が「AIトレーニングはフェアユース」と主張する書面を提出",
@@ -494,6 +515,13 @@
    "feedName": "ITmedia AI+",
    "lang": "ja",
    "date": "2026-09-03T04:51:58.000Z"
+  },
+  {
+   "title": "金曜に捨てた案を、AIは月曜にもう一度提案した",
+   "link": "https://zenn.dev/quallab/articles/crdd-context-repository-origin",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-09-03T04:48:23.000Z"
   },
   {
    "title": "RTX SparkミニPC「ProArt GR1X」。120BのLLMをローカル実行",
@@ -601,6 +629,13 @@
    "date": "2026-09-03T02:01:24.000Z"
   },
   {
+   "title": "AIくんがコード書くのは良くて絵を書くのはなんか嫌",
+   "link": "https://zenn.dev/simossyi/articles/36ebe1036febae",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-09-03T02:01:21.000Z"
+  },
+  {
    "title": "AI活用を促進する「シャドーAI」対策----ZDNETセキュリティセミナー開催",
    "link": "https://japan.zdnet.com/article/35251770/",
    "feedName": "ZDNET Japan",
@@ -671,6 +706,20 @@
    "date": "2026-09-03T01:11:00.000Z"
   },
   {
+   "title": "ガードレールだけでは、生成AIは安全にならない ─ 5つのレイヤーで考える環境整備",
+   "link": "https://zenn.dev/safie_inc/articles/109c96218ef66d",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-09-03T01:00:05.000Z"
+  },
+  {
+   "title": "最近、論文の記事を見なくなったので、なぜかを調べてみた",
+   "link": "https://zenn.dev/boku_yaji/articles/ecd0b11bebb631",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-09-03T00:55:00.000Z"
+  },
+  {
    "title": "オープンモデル普及で“お手軽”になるサイバー攻撃 防御側が今すべき「侵入前提」の対策",
    "link": "https://www.itmedia.co.jp/aiplus/article/2609/03/2000001098/",
    "feedName": "ITmedia AI+",
@@ -690,6 +739,13 @@
    "feedName": "Hugging Face",
    "lang": "en",
    "date": "2026-09-03T00:00:00.000Z"
+  },
+  {
+   "title": "ACE-Step 1.5をCPUだけで回して踏んだ、設定が黙って無視される5つの罠",
+   "link": "https://zenn.dev/st0202/articles/acestep-silent-config-traps",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-09-02T23:48:06.000Z"
   },
   {
    "title": "The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026",
@@ -867,8 +923,8 @@
    "date": "2026-09-02T20:00:00.000Z"
   },
   {
-   "title": "「人にしかできない仕事」とは？ AIエージェントによる変革を阻む2つの壁",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00849/00198/",
+   "title": "「おれさま」ロボットから、AIの性格について考えてみた",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00138/082802093/",
    "feedName": "日経クロステック",
    "lang": "ja",
    "date": "2026-09-02T20:00:00.000Z"
@@ -881,15 +937,15 @@
    "date": "2026-09-02T20:00:00.000Z"
   },
   {
-   "title": "「おれさま」ロボットから、AIの性格について考えてみた",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00138/082802093/",
+   "title": "大林組が法令調査や要件整理にAI活用、設計初期の作業時間を67％短縮",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00154/02910/",
    "feedName": "日経クロステック",
    "lang": "ja",
    "date": "2026-09-02T20:00:00.000Z"
   },
   {
-   "title": "大林組が法令調査や要件整理にAI活用、設計初期の作業時間を67％短縮",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00154/02910/",
+   "title": "「人にしかできない仕事」とは？ AIエージェントによる変革を阻む2つの壁",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00849/00198/",
    "feedName": "日経クロステック",
    "lang": "ja",
    "date": "2026-09-02T20:00:00.000Z"
@@ -1229,20 +1285,6 @@
    "feedName": "Zenn 生成AI",
    "lang": "ja",
    "date": "2026-09-02T08:00:15.000Z"
-  },
-  {
-   "title": "OCI Generative AIでGeminiもgpt-ossも呼べたので、7モデルの日本語力を比べてみた",
-   "link": "https://zenn.dev/sin9_ha/articles/oci-generative-ai-osaka-7models",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-09-02T07:59:48.000Z"
-  },
-  {
-   "title": "AI動画生成を同じ素材で比べる前に、固定した比較条件",
-   "link": "https://zenn.dev/kiritani_r/articles/d3c15aa8df5d76",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-09-02T07:54:15.000Z"
   },
   {
    "title": "NEC、AIモデル「ミュトス」をサイバーセキュリティに活用 「Project Glasswing」に参画",
