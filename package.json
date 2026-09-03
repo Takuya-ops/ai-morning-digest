@@ -1,0 +1,14 @@
+{
+  "name": "ai-morning-digest",
+  "version": "1.0.0",
+  "description": "毎朝5:30(JST)に生成AI関連ニュースを収集・ランキング・要約して届けるダイジェスト",
+  "type": "module",
+  "scripts": {
+    "digest": "node src/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.123.0",
+    "rss-parser": "^3.13.0"
+  }
+}
