@@ -1,12 +1,12 @@
 {
  "date": "2026-09-03",
- "generatedAt": "2026-09-03T10:22:05.286Z",
- "since": "2026-09-02T08:22:01.071Z",
+ "generatedAt": "2026-09-03T10:56:21.205Z",
+ "since": "2026-09-02T08:56:19.474Z",
  "windowHours": 26,
  "stats": {
-  "articleCount": 152,
+  "articleCount": 147,
   "feedCount": 32,
-  "topicCount": 132,
+  "topicCount": 127,
   "feedErrors": []
  },
  "topics": [
@@ -363,6 +363,13 @@
  ],
  "others": [
   {
+   "title": "Gemini Enterpriseの新機能、コンテンツポリシーで機密データを止める",
+   "link": "https://qiita.com/asayan_mana/items/bcdcfcb4dcbfe6f3c9ba",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-09-03T10:51:14.000Z"
+  },
+  {
    "title": "\"y\" を押す前に、ファイルが全部消えた話 ― 社内AIとローカルのコードを繋ぐ\"バイブコーディング\"ツールを自作してみた",
    "link": "https://qiita.com/teppei19980914/items/d470b20a2cd35b95fab6",
    "feedName": "Qiita 生成AI",
@@ -424,13 +431,6 @@
    "feedName": "Qiita 生成AI",
    "lang": "ja",
    "date": "2026-09-03T08:15:05.000Z"
-  },
-  {
-   "title": "トークン課金を気にせず生成AIを使いたい！OpenAI互換APIで“社内生成AI”を構築できるOracle Private AI Services Containerを試してみた",
-   "link": "https://qiita.com/ssfujita/items/1b902f20dfc2c64ad44f",
-   "feedName": "Qiita 生成AI",
-   "lang": "ja",
-   "date": "2026-09-03T08:14:41.000Z"
   },
   {
    "title": "ニューヨーク市、公立校で生成AI利用を1年間禁止 8年生まで約60万人が対象",
@@ -697,6 +697,13 @@
    "feedName": "gihyo.jp",
    "lang": "ja",
    "date": "2026-09-03T00:08:00.000Z"
+  },
+  {
+   "title": "Give Your Coding Agents a Memory You Own",
+   "link": "https://huggingface.co/blog/funes",
+   "feedName": "Hugging Face",
+   "lang": "en",
+   "date": "2026-09-03T00:00:00.000Z"
   },
   {
    "title": "Training a coding model to paint watercolours with TRL and OpenEnv",
@@ -1173,48 +1180,6 @@
    "feedName": "Zenn 生成AI",
    "lang": "ja",
    "date": "2026-09-02T09:28:47.000Z"
-  },
-  {
-   "title": "委託業者が無断でAI利用か――ヨルシカ、ライブ映像上映会のチケットサンプル画像が文字化け デザインにも影響",
-   "link": "https://www.itmedia.co.jp/news/article/2609/02/2000001082/",
-   "feedName": "ITmedia NEWS",
-   "lang": "ja",
-   "date": "2026-09-02T08:49:15.000Z"
-  },
-  {
-   "title": "1200体のAIは、誰ひとり密告しなかった ── 群れの沈黙と、多様性という防御",
-   "link": "https://zenn.dev/ryok/articles/agent-swarm-silence-diversity",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-09-02T08:40:32.000Z"
-  },
-  {
-   "title": "AWSのフィジカルAI導入支援プログラム、病院や物流施設用ロボの検証で成果",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/12009/",
-   "feedName": "日経クロステック",
-   "lang": "ja",
-   "date": "2026-09-02T08:40:00.000Z"
-  },
-  {
-   "title": "AIエージェント時代にデータサイエンティストは生き残れるのか",
-   "link": "https://zenn.dev/miogawa/articles/09bed306fc615a",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-09-02T08:30:05.000Z"
-  },
-  {
-   "title": "Metaがリアルタイム文字起こしAI「Muse Voice Transcribe」をリリース",
-   "link": "https://gigazine.net/news/20260902-meta-muse-voice-transcribe/",
-   "feedName": "GIGAZINE",
-   "lang": "ja",
-   "date": "2026-09-02T08:30:00.000Z"
-  },
-  {
-   "title": "Runway、コード不要でデジタル世界を構築するAIモデル「Solaris」発表",
-   "link": "https://japan.cnet.com/article/35252199/",
-   "feedName": "CNET Japan",
-   "lang": "ja",
-   "date": "2026-09-02T08:30:00.000Z"
   }
  ]
 }

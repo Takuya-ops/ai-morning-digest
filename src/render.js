@@ -229,7 +229,7 @@ ${errNote}
 <footer class="site">
   毎朝5:30(JST)に自動生成 / 生成時刻: ${fmtShort(data.generatedAt)} JST<br>
   ソース: 国内外${data.stats.feedCount}媒体のRSSを収集し、複数媒体が報じたトピックほど上位に表示しています。<br>
-  <a href="${REPO_URL}" target="_blank" rel="noopener">ai-morning-digest</a><br>
+  <a href="${REPO_URL}" target="_blank" rel="noopener">ai-morning-digest</a> / <a href="${prefix}privacy.html">プライバシーポリシー</a><br>
   📱 スマホは「ホーム画面に追加」でアプリとして使えます
 </footer>
 </div>
