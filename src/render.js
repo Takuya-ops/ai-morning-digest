@@ -95,15 +95,18 @@ h2.section {
   margin: 10px 0 0; font-size: 0.88rem; background: var(--accent-soft);
   border-radius: 8px; padding: 7px 12px;
 }
-.topic .sources { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.topic .sources { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
 .srcchip {
   background: var(--chip); color: var(--chip-text); border-radius: 999px;
-  padding: 2px 10px; font-size: 0.75rem; white-space: nowrap;
+  font-size: 0.75rem; white-space: nowrap;
 }
-.srcchip a { color: inherit; }
-.topic details { margin-top: 10px; }
+/* タップ領域はリンク側に持たせる(スマホでの押しやすさのため) */
+.srcchip a { color: inherit; display: inline-block; padding: 5px 12px; }
+.srcchip.more { padding: 5px 12px; }
+.topic details { margin-top: 8px; }
 .topic summary.toggle {
   cursor: pointer; color: var(--muted); font-size: 0.8rem; user-select: none;
+  padding: 9px 0; /* タップ領域を確保 */
 }
 .articles { list-style: none; margin: 8px 0 4px; padding: 0; }
 .articles li { padding: 5px 0; border-top: 1px dashed var(--line); font-size: 0.86rem; }
@@ -122,6 +125,20 @@ footer.site {
 }
 .empty { color: var(--muted); background: var(--card); border: 1px dashed var(--line);
   border-radius: 12px; padding: 24px; text-align: center; }
+/* 長い英語タイトルやURLが画面からはみ出さないようにする */
+.topic h3, .articles li, ul.others li, .summary { overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .wrap { padding: 16px 12px 48px; }
+  .site h1 { font-size: 1.28rem; }
+  .site .date { font-size: 0.98rem; }
+  .topic { padding: 14px 14px 12px; border-radius: 12px; }
+  .topic .head { gap: 10px; }
+  .topic h3 { font-size: 1.02rem; }
+  .rank { width: 1.9rem; height: 1.9rem; font-size: 0.95rem; border-radius: 8px; }
+  h2.section { margin-top: 32px; }
+  nav.links a { margin-right: 10px; }
+}
 `;
 
 function articleLi(a) {
@@ -135,7 +152,7 @@ function topicCard(t) {
     .slice(0, 8)
     .map((a) => `<span class="srcchip"><a href="${escapeHtml(a.link)}" target="_blank" rel="noopener" title="${escapeHtml(a.title)}">${escapeHtml(a.feedName)}</a></span>`)
     .join('');
-  const extra = t.articles.length > 8 ? `<span class="srcchip">+${t.articles.length - 8}</span>` : '';
+  const extra = t.articles.length > 8 ? `<span class="srcchip more">+${t.articles.length - 8}</span>` : '';
   const why = t.whyItMatters
     ? `<p class="why">💡 ${escapeHtml(t.whyItMatters)}</p>` : '';
   const details = t.articles.length > 1
@@ -173,6 +190,14 @@ export function renderPage(data, { isArchive = false } = {}) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>生成AIモーニングダイジェスト ${escapeHtml(data.date)}</title>
 <meta name="description" content="毎朝届く生成AI関連ニュースのまとめ(${escapeHtml(data.date)})">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f5f1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15171a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="AIダイジェスト">
+<link rel="manifest" href="${prefix}manifest.webmanifest">
+<link rel="icon" type="image/png" href="${prefix}icons/icon-192.png">
+<link rel="apple-touch-icon" href="${prefix}icons/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="生成AIモーニングダイジェスト" href="${prefix}feed.xml">
 <style>${CSS}</style>
 </head>
@@ -204,9 +229,13 @@ ${errNote}
 <footer class="site">
   毎朝5:30(JST)に自動生成 / 生成時刻: ${fmtShort(data.generatedAt)} JST<br>
   ソース: 国内外${data.stats.feedCount}媒体のRSSを収集し、複数媒体が報じたトピックほど上位に表示しています。<br>
-  <a href="${REPO_URL}" target="_blank" rel="noopener">ai-morning-digest</a>
+  <a href="${REPO_URL}" target="_blank" rel="noopener">ai-morning-digest</a><br>
+  📱 スマホは「ホーム画面に追加」でアプリとして使えます
 </footer>
 </div>
+<script>
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('${prefix}sw.js').catch(() => {});
+</script>
 </body>
 </html>`;
 }
@@ -253,6 +282,11 @@ function renderArchiveIndex(dates) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>アーカイブ | 生成AIモーニングダイジェスト</title>
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f5f1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15171a">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/png" href="../icons/icon-192.png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
 <style>${CSS}</style>
 </head>
 <body>
@@ -274,6 +308,10 @@ export function renderSite(data, docsDir) {
   const archiveDir = path.join(docsDir, 'archive');
   fs.mkdirSync(dataDir, { recursive: true });
   fs.mkdirSync(archiveDir, { recursive: true });
+
+  // PWA用の静的アセット(manifest / service worker / アイコン)をコピー
+  const staticDir = path.resolve(docsDir, '..', 'static');
+  if (fs.existsSync(staticDir)) fs.cpSync(staticDir, docsDir, { recursive: true });
 
   fs.writeFileSync(path.join(dataDir, `${data.date}.json`), JSON.stringify(data, null, 1));
   fs.writeFileSync(path.join(dataDir, 'latest.json'), JSON.stringify(data, null, 1));
