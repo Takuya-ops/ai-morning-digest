@@ -6,3 +6,6 @@ node_modules/
 xcuserdata/
 DerivedData/
 *.xcuserstate
+
+# Xcode build artifacts
+ios/build/
