@@ -13,6 +13,12 @@ final class DigestStore: ObservableObject {
     private static let baseURL = URL(string: "https://takuya-ops.github.io/ai-morning-digest/data/")!
     private static let cacheKey = "cachedDigestJSON"
 
+    private var currentLoad: Task<Bool, Never>?
+    private var isReloading = false
+    private var activeLoads = 0 {
+        didSet { isLoading = activeLoads > 0 }
+    }
+
     var isViewingLatest: Bool { viewingDate == nil }
 
     // 現在表示中の日付から見て1日古い/新しい日付(availableDatesは新しい順)
@@ -27,7 +33,12 @@ final class DigestStore: ObservableObject {
         return availableDates[target]
     }
 
+    // 起動時・フォアグラウンド復帰・引っ張って更新。日付目録も一緒に最新化する
     func reload() async {
+        guard !isReloading else { return } // .taskとscenePhaseの二重呼び出しをデデュープ
+        isReloading = true
+        defer { isReloading = false }
+        await loadIndex()
         await load(date: viewingDate)
     }
 
@@ -36,7 +47,9 @@ final class DigestStore: ObservableObject {
     }
 
     func show(date: String) async {
-        // 最新の日付が選ばれたら「最新モード」に戻す(以後の更新で自動的に新しい日に切り替わる)
+        // 目録を最新化してから「最新の日付かどうか」を判定する
+        // (毎朝の更新後に古い目録で判定すると日付を飛ばしてしまうため)
+        await loadIndex()
         if date == availableDates.first {
             await showLatest()
         } else if await load(date: date) {
@@ -52,28 +65,37 @@ final class DigestStore: ObservableObject {
         if let d = nextDate { await show(date: d) }
     }
 
-    func loadIndex() async {
+    @discardableResult
+    func loadIndex() async -> Bool {
         var request = URLRequest(url: Self.baseURL.appendingPathComponent("index.json"))
         request.cachePolicy = .reloadIgnoringLocalCacheData
         request.timeoutInterval = 15
         guard let (data, response) = try? await URLSession.shared.data(for: request),
               (response as? HTTPURLResponse)?.statusCode == 200,
-              let index = try? JSONDecoder().decode(DigestIndex.self, from: data) else { return }
+              let index = try? JSONDecoder().decode(DigestIndex.self, from: data) else { return false }
         availableDates = index.dates
+        return true
     }
 
-    // 成功したら true。失敗時は表示中の内容を維持して notice で知らせる。
+    // 成功したら true。ユーザー操作を優先するため、進行中の取得はキャンセルして置き換える。
     @discardableResult
     private func load(date: String?) async -> Bool {
-        guard !isLoading else { return false } // 起動時の.taskとscenePhase変化による二重フェッチを防ぐ
-        isLoading = true
-        defer { isLoading = false }
+        currentLoad?.cancel()
+        let task = Task { await performLoad(date: date) }
+        currentLoad = task
+        return await task.value
+    }
+
+    private func performLoad(date: String?) async -> Bool {
+        activeLoads += 1
+        defer { activeLoads -= 1 }
         let file = date.map { "\($0).json" } ?? "latest.json"
         var request = URLRequest(url: Self.baseURL.appendingPathComponent(file))
         request.cachePolicy = .reloadIgnoringLocalCacheData
         request.timeoutInterval = 20
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
+            guard !Task.isCancelled else { return false } // 新しい操作に置き換えられた結果は破棄
             guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
                 throw URLError(.badServerResponse)
             }
@@ -81,9 +103,14 @@ final class DigestStore: ObservableObject {
             notice = nil
             if date == nil {
                 UserDefaults.standard.set(data, forKey: Self.cacheKey)
+                // 目録の更新より先に新しい日の最新版が公開されていた場合も日付ナビを機能させる
+                if let d = digest?.date, !availableDates.contains(d) {
+                    availableDates.insert(d, at: 0)
+                }
             }
             return true
         } catch {
+            if Task.isCancelled || (error as? URLError)?.code == .cancelled { return false }
             if digest != nil {
                 // 表示中の内容は保持しつつ、取得に失敗したことは知らせる
                 notice = date == nil

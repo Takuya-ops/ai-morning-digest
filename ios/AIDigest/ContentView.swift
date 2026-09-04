@@ -161,12 +161,28 @@ struct ContentView: View {
 struct ArchiveSheet: View {
     @EnvironmentObject var store: DigestStore
     @Environment(\.dismiss) private var dismiss
+    @State private var indexFailed = false
 
     var body: some View {
         NavigationStack {
             Group {
                 if store.availableDates.isEmpty {
-                    ProgressView("日付一覧を取得中…")
+                    if indexFailed {
+                        VStack(spacing: 12) {
+                            Text("日付一覧を取得できませんでした")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            Button("再試行") {
+                                Task {
+                                    indexFailed = false
+                                    indexFailed = !(await store.loadIndex())
+                                }
+                            }
+                            .buttonStyle(.borderedProminent)
+                        }
+                    } else {
+                        ProgressView("日付一覧を取得中…")
+                    }
                 } else {
                     List(store.availableDates, id: \.self) { date in
                         Button {
@@ -202,7 +218,7 @@ struct ArchiveSheet: View {
                     Button("閉じる") { dismiss() }
                 }
             }
-            .task { await store.loadIndex() }
+            .task { indexFailed = !(await store.loadIndex()) }
         }
     }
 }
