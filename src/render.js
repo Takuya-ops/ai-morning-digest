@@ -69,8 +69,21 @@ header.site { margin-bottom: 8px; }
   background: var(--chip); color: var(--chip-text); border-radius: 999px;
   padding: 3px 12px; font-size: 0.78rem;
 }
-nav.links { margin: 10px 0 26px; font-size: 0.82rem; color: var(--muted); }
+nav.links { margin: 10px 0 8px; font-size: 0.82rem; color: var(--muted); }
 nav.links a { margin-right: 14px; }
+nav.daynav { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 26px; }
+nav.daynav a, nav.daynav .cur {
+  background: var(--chip); color: var(--chip-text); border-radius: 999px;
+  padding: 5px 14px; font-size: 0.82rem;
+}
+nav.daynav a:hover { text-decoration: none; opacity: 0.75; }
+nav.daynav .cur { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+ul.arch { list-style: none; margin: 0; padding: 0; }
+ul.arch li { margin-bottom: 14px; }
+ul.arch .archdate { font-weight: 700; font-size: 1.0rem; }
+ul.arch .archheads { margin: 6px 0 0; padding-left: 0; color: var(--muted); font-size: 0.86rem;
+  list-style: none; }
+ul.arch .archheads li { padding: 2px 0; border: none; margin: 0; }
 h2.section {
   font-size: 1.05rem; margin: 40px 0 14px; padding-left: 10px;
   border-left: 4px solid var(--accent);
@@ -171,7 +184,12 @@ function topicCard(t) {
 </article>`;
 }
 
-export function renderPage(data, { isArchive = false } = {}) {
+const fmtNavDate = (ymd) => {
+  const [, m, d] = ymd.split('-');
+  return `${Number(m)}/${Number(d)}`;
+};
+
+export function renderPage(data, { isArchive = false, prevDate = null, nextDate = null } = {}) {
   const topics = data.topics.map(topicCard).join('\n');
   const others = data.others.length
     ? `<ul class="others">${data.others.map(articleLi).join('')}</ul>`
@@ -213,9 +231,15 @@ export function renderPage(data, { isArchive = false } = {}) {
     <span>⏰ ${fmtShort(data.since)} 〜 ${fmtShort(data.generatedAt)} (JST)</span>
   </div>
   <nav class="links">
-    <a href="${prefix}archive/index.html">📚 過去のダイジェスト</a>
     <a href="${prefix}feed.xml">📡 RSSで購読(朝の通知に)</a>
     <a href="${REPO_URL}" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <nav class="daynav">
+    ${prevDate ? `<a href="${prefix}archive/${prevDate}.html">← 前日 (${fmtNavDate(prevDate)})</a>` : ''}
+    <span class="cur">${fmtNavDate(data.date)}</span>
+    ${nextDate ? `<a href="${prefix}archive/${nextDate}.html">翌日 (${fmtNavDate(nextDate)}) →</a>` : ''}
+    <a href="${prefix}archive/index.html">📚 日付一覧</a>
+    ${isArchive ? `<a href="../index.html">⏩ 最新へ</a>` : ''}
   </nav>
 </header>
 
@@ -272,9 +296,17 @@ ${items}
 `;
 }
 
-function renderArchiveIndex(dates) {
-  const lis = dates
-    .map((d) => `<li class="topic" style="padding:12px 20px"><a href="${d}.html">📅 ${d} のダイジェスト</a></li>`)
+function renderArchiveIndex(entries) {
+  const lis = entries
+    .map(({ date, headlines }) => {
+      const heads = headlines.length
+        ? `<ul class="archheads">${headlines.map((h) => `<li>・${escapeHtml(h)}</li>`).join('')}</ul>`
+        : '';
+      return `<li class="topic" style="padding:14px 20px">
+  <a class="archdate" href="${date}.html">📅 ${escapeHtml(fmtDate(`${date}T12:00:00+09:00`))}</a>
+  ${heads}
+</li>`;
+    })
     .join('\n');
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -295,7 +327,7 @@ function renderArchiveIndex(dates) {
   <h1>📚 過去のダイジェスト</h1>
   <nav class="links"><a href="../index.html">← 最新のダイジェストへ</a></nav>
 </header>
-<ul style="list-style:none;margin:0;padding:0">
+<ul class="arch">
 ${lis}
 </ul>
 </div>
@@ -315,21 +347,47 @@ export function renderSite(data, docsDir) {
 
   fs.writeFileSync(path.join(dataDir, `${data.date}.json`), JSON.stringify(data, null, 1));
   fs.writeFileSync(path.join(dataDir, 'latest.json'), JSON.stringify(data, null, 1));
-  fs.writeFileSync(path.join(docsDir, 'index.html'), renderPage(data));
-  fs.writeFileSync(path.join(archiveDir, `${data.date}.html`), renderPage(data, { isArchive: true }));
   fs.writeFileSync(path.join(docsDir, '.nojekyll'), '');
 
-  // アーカイブ一覧とRSS(直近20日分)を過去データから再構築
+  // 利用可能な日付一覧(昇順)。アプリ用の目録 data/index.json もここで出力する
   const dates = fs
     .readdirSync(dataDir)
     .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
     .map((f) => f.replace('.json', ''))
-    .sort()
-    .reverse();
-  fs.writeFileSync(path.join(archiveDir, 'index.html'), renderArchiveIndex(dates));
-
-  const recent = dates.slice(0, 20).map((d) =>
-    JSON.parse(fs.readFileSync(path.join(dataDir, `${d}.json`), 'utf8')),
+    .sort();
+  const byDate = new Map(
+    dates.map((d) => [d, JSON.parse(fs.readFileSync(path.join(dataDir, `${d}.json`), 'utf8'))]),
   );
+  fs.writeFileSync(
+    path.join(dataDir, 'index.json'),
+    JSON.stringify({ dates: [...dates].reverse() }, null, 1),
+  );
+
+  // 全アーカイブページを毎回再生成する(前日/翌日ナビを常に最新に保つため)
+  dates.forEach((d, i) => {
+    fs.writeFileSync(
+      path.join(archiveDir, `${d}.html`),
+      renderPage(byDate.get(d), {
+        isArchive: true,
+        prevDate: i > 0 ? dates[i - 1] : null,
+        nextDate: i < dates.length - 1 ? dates[i + 1] : null,
+      }),
+    );
+  });
+
+  // 最新ページ(今日)には前日リンクだけ付ける
+  fs.writeFileSync(
+    path.join(docsDir, 'index.html'),
+    renderPage(data, { prevDate: dates.length > 1 ? dates[dates.length - 2] : null }),
+  );
+
+  // 日付一覧(新しい順・トップ3見出し付き)
+  const entries = [...dates].reverse().map((d) => ({
+    date: d,
+    headlines: (byDate.get(d).topics || []).slice(0, 3).map((t) => t.headline),
+  }));
+  fs.writeFileSync(path.join(archiveDir, 'index.html'), renderArchiveIndex(entries));
+
+  const recent = [...dates].reverse().slice(0, 20).map((d) => byDate.get(d));
   fs.writeFileSync(path.join(docsDir, 'feed.xml'), renderFeedXml(recent));
 }

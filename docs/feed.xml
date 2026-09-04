@@ -6,11 +6,11 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
-    <title>【生成AIダイジェスト 2026-09-04】NVIDIA、AIモデル共有サイト「Hugging Face」を約2兆円で買収へ ほか9件</title>
+    <title>【生成AIダイジェスト 2026-09-04】GPT-6 Astra is the first model making OpenAI willing to declare the &quot;AGI era&quot; ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-04.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-04.html</guid>
-    <pubDate>Thu, 03 Sep 2026 22:48:57 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;NVIDIA、AIモデル共有サイト「Hugging Face」を約2兆円で買収へ&lt;/li&gt;&lt;li&gt;GPT-6 Astra is the first model making OpenAI willing to declare the &amp;quot;AGI era&amp;quot;&lt;/li&gt;&lt;li&gt;Claudeの“見えない透かし”適用開始 Fable 5.1とMythos 5.1が出力する文やコード、画像に付与 日本も対象&lt;/li&gt;&lt;li&gt;Google、「Gemini 3.8 Flash」公開 3.7から3週間、価格据え置きで防御特化の「Cyber」も&lt;/li&gt;&lt;li&gt;Meta、「Muse Spark 1.3」公開 コーディングとエージェント性能を強化 「最大の飛躍」とザッカーバーグCEO&lt;/li&gt;&lt;li&gt;ChatGPT, Grok, and Claude all went down at the same time&lt;/li&gt;&lt;li&gt;Google’s latest AI weather model gives you no excuse to forget your umbrella&lt;/li&gt;&lt;li&gt;Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開&lt;/li&gt;&lt;li&gt;トランプ政権「記事のAI学習は著作権侵害ではない」 OpenAIを支持する意見書、対New York Timesなどとの訴訟で&lt;/li&gt;&lt;li&gt;Daybreak for Frontline Defenders: $1B to protect essential services&lt;/li&gt;&lt;/ol&gt;</description>
+    <pubDate>Fri, 04 Sep 2026 01:10:20 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;GPT-6 Astra is the first model making OpenAI willing to declare the &amp;quot;AGI era&amp;quot;&lt;/li&gt;&lt;li&gt;OrcaRouter、Google「Gemini 3.8 Flash」、Alibaba「Qwen3.8 Max」、Anthropic「Claude Fable 5.1」のフロンティアモデルを提供開始&lt;/li&gt;&lt;li&gt;NVIDIA、AIモデル共有サイト「Hugging Face」を約2兆円で買収へ&lt;/li&gt;&lt;li&gt;複数のAIサービスで障害発生 ChatGPT／Claude／Grok【復旧済み】&lt;/li&gt;&lt;li&gt;Meta、「Muse Spark 1.3」公開 コーディングとエージェント性能を強化 「最大の飛躍」とザッカーバーグCEO&lt;/li&gt;&lt;li&gt;Google’s latest AI weather model gives you no excuse to forget your umbrella&lt;/li&gt;&lt;li&gt;トランプ政権「記事のAI学習は著作権侵害ではない」 OpenAIを支持する意見書、対New York Timesなどとの訴訟で&lt;/li&gt;&lt;li&gt;Daybreak for Frontline Defenders: $1B to protect essential services&lt;/li&gt;&lt;li&gt;Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開&lt;/li&gt;&lt;li&gt;Crusoe reportedly raises $3B at a $30B valuation&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
   <item>
     <title>【生成AIダイジェスト 2026-09-03】Google、Gemini 3.8 Flashと3.8 Flash Cyberをリリース ―コーディング、エージェントタスク、多段階推論を大幅に強化 ほか9件</title>

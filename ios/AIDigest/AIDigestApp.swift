@@ -10,7 +10,8 @@ struct AIDigestApp: App {
                 .environmentObject(store)
                 .tint(Color(red: 0.71, green: 0.33, blue: 0.18)) // サイトと同じアクセント色
                 .task {
-                    await store.load()
+                    await store.loadIndex() // 前日/翌日ナビ用の日付一覧
+                    await store.reload()
                     await syncNotifications()
                 }
         }

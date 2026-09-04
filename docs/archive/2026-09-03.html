@@ -49,8 +49,21 @@ header.site { margin-bottom: 8px; }
   background: var(--chip); color: var(--chip-text); border-radius: 999px;
   padding: 3px 12px; font-size: 0.78rem;
 }
-nav.links { margin: 10px 0 26px; font-size: 0.82rem; color: var(--muted); }
+nav.links { margin: 10px 0 8px; font-size: 0.82rem; color: var(--muted); }
 nav.links a { margin-right: 14px; }
+nav.daynav { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 26px; }
+nav.daynav a, nav.daynav .cur {
+  background: var(--chip); color: var(--chip-text); border-radius: 999px;
+  padding: 5px 14px; font-size: 0.82rem;
+}
+nav.daynav a:hover { text-decoration: none; opacity: 0.75; }
+nav.daynav .cur { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+ul.arch { list-style: none; margin: 0; padding: 0; }
+ul.arch li { margin-bottom: 14px; }
+ul.arch .archdate { font-weight: 700; font-size: 1.0rem; }
+ul.arch .archheads { margin: 6px 0 0; padding-left: 0; color: var(--muted); font-size: 0.86rem;
+  list-style: none; }
+ul.arch .archheads li { padding: 2px 0; border: none; margin: 0; }
 h2.section {
   font-size: 1.05rem; margin: 40px 0 14px; padding-left: 10px;
   border-left: 4px solid var(--accent);
@@ -133,9 +146,15 @@ footer.site {
     <span>⏰ 9/2 17:56 〜 9/3 19:56 (JST)</span>
   </div>
   <nav class="links">
-    <a href="../archive/index.html">📚 過去のダイジェスト</a>
     <a href="../feed.xml">📡 RSSで購読(朝の通知に)</a>
     <a href="https://github.com/Takuya-ops/ai-morning-digest" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <nav class="daynav">
+    
+    <span class="cur">9/3</span>
+    <a href="../archive/2026-09-04.html">翌日 (9/4) →</a>
+    <a href="../archive/index.html">📚 日付一覧</a>
+    <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
 

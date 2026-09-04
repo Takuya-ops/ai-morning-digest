@@ -10,6 +10,11 @@ struct Digest: Codable {
     let others: [Article]
 }
 
+// data/index.json — 閲覧可能な日付の目録(新しい順)
+struct DigestIndex: Codable {
+    let dates: [String]
+}
+
 struct Stats: Codable {
     let articleCount: Int
     let feedCount: Int

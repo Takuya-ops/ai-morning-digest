@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var store: DigestStore
     @State private var showSettings = false
+    @State private var showArchive = false
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -20,13 +21,21 @@ struct ContentView: View {
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 32)
-                        Button("再読み込み") { Task { await store.load() } }
+                        Button("再読み込み") { Task { await store.reload() } }
                             .buttonStyle(.borderedProminent)
                     }
                 }
             }
             .navigationTitle("AIダイジェスト")
             .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showArchive = true
+                    } label: {
+                        Image(systemName: "calendar")
+                    }
+                    .accessibilityLabel("過去のダイジェスト")
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showSettings = true
@@ -37,9 +46,13 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $showSettings) { SettingsSheet() }
+            .sheet(isPresented: $showArchive) { ArchiveSheet().environmentObject(store) }
         }
         .onChange(of: scenePhase) { phase in
-            if phase == .active { Task { await store.load() } }
+            // 過去分を閲覧中に勝手に最新へ戻らないよう、最新表示のときだけ再取得する
+            if phase == .active && store.isViewingLatest {
+                Task { await store.reload() }
+            }
         }
     }
 
@@ -56,9 +69,15 @@ struct ContentView: View {
                     Text("更新: \(DateFormat.time(digest.generatedAt)) JST")
                         .font(.caption2)
                         .foregroundColor(.secondary)
+                    if !store.isViewingLatest {
+                        Text("📖 過去のダイジェストを表示中")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
                     if let notice = store.notice {
                         Text("⚠️ \(notice)").font(.caption).foregroundColor(.orange)
                     }
+                    dayNavigation
                 }
                 .padding(.vertical, 2)
             }
@@ -90,7 +109,101 @@ struct ContentView: View {
             }
         }
         .listStyle(.insetGrouped)
-        .refreshable { await store.load() }
+        .refreshable { await store.reload() }
+    }
+
+    // 前日/翌日ナビゲーション(availableDatesが読めているときだけ表示)
+    @ViewBuilder
+    private var dayNavigation: some View {
+        if !store.availableDates.isEmpty {
+            HStack(spacing: 8) {
+                Button {
+                    Task { await store.showPrevious() }
+                } label: {
+                    Label("前日", systemImage: "chevron.left")
+                        .font(.footnote)
+                }
+                .disabled(store.previousDate == nil)
+
+                Spacer()
+
+                if !store.isViewingLatest {
+                    Button {
+                        Task { await store.showLatest() }
+                    } label: {
+                        Text("最新へ")
+                            .font(.footnote.bold())
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.small)
+                }
+
+                Spacer()
+
+                Button {
+                    Task { await store.showNext() }
+                } label: {
+                    HStack(spacing: 4) {
+                        Text("翌日")
+                        Image(systemName: "chevron.right")
+                    }
+                    .font(.footnote)
+                }
+                .disabled(store.nextDate == nil)
+            }
+            .buttonStyle(.borderless)
+            .padding(.top, 6)
+        }
+    }
+}
+
+// 過去のダイジェストの日付一覧シート
+struct ArchiveSheet: View {
+    @EnvironmentObject var store: DigestStore
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            Group {
+                if store.availableDates.isEmpty {
+                    ProgressView("日付一覧を取得中…")
+                } else {
+                    List(store.availableDates, id: \.self) { date in
+                        Button {
+                            Task { await store.show(date: date) }
+                            dismiss()
+                        } label: {
+                            HStack {
+                                Text(DateFormat.longDate(date))
+                                    .foregroundColor(.primary)
+                                if date == store.availableDates.first {
+                                    Text("最新")
+                                        .font(.caption2.bold())
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 2)
+                                        .background(Color.accentColor.opacity(0.15))
+                                        .foregroundColor(.accentColor)
+                                        .cornerRadius(6)
+                                }
+                                Spacer()
+                                if date == store.digest?.date {
+                                    Image(systemName: "checkmark")
+                                        .foregroundColor(.accentColor)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("過去のダイジェスト")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("閉じる") { dismiss() }
+                }
+            }
+            .task { await store.loadIndex() }
+        }
     }
 }
 
