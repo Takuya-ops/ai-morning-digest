@@ -8,37 +8,32 @@ App Store Connect の **2か所**に貼り付けてください:
 
 ---
 
-## コピー用(英文・約3,100バイト)
+## コピー用(英文・約2,700文字 / 上限4,000字)
 
 ```
 Hello App Review Team,
 
-Thank you for reviewing "生成AIモーニングダイジェスト". Below are our responses to Guideline 2.1.
+Thank you for reviewing "生成AIモーニングダイジェスト". Our responses to Guideline 2.1:
 
-1. Physical-device screen recording
-Video (publicly accessible): https://takuya-ops.github.io/ai-morning-digest/app-review-demo-iphone15pro.mp4
-Device: iPhone 15 Pro; iOS: 26.6.1; app version/build: 1.0 (2).
-The recording begins with launching the app from the Home Screen and demonstrates the latest digest, browsing past-date digests via the calendar and previous/next controls, notification-time settings, related-article expansion, opening an original article, and the additional news list. This is the same build selected for the current App Store review.
+1. Screen recording (physical device)
+Video: https://takuya-ops.github.io/ai-morning-digest/app-review-demo-iphone15pro.mp4
+Device: iPhone 15 Pro; iOS 26.6.1; app 1.0 (2) - the build selected for this review.
+It starts at app launch and shows the latest digest, browsing past-date digests via the calendar and previous/next controls, notification-time settings, expanding related articles, opening an original article, and the additional-news list.
 
-2. Purpose and target audience
-This is a native news reader that helps the general public - including developers, business users, and technology enthusiasts - stay current on generative AI. It saves time by grouping related coverage across outlets, ranking the day's top 10 topics, showing a short Japanese description for each, and listing all remaining articles so nothing is missed. Users can also browse digests from past dates and set an optional daily reminder.
+2. Purpose and audience
+A native news reader that helps the general public, developers, and business users stay current on generative AI. It groups related coverage, ranks the day's top 10 topics with short summaries, lists all remaining articles, offers past digests, and an optional daily reminder.
 
-3. Setup and access instructions
-Internet access is required to download the daily digest and to open source websites. No account, login, reviewer API key, or sample files are required.
-- Launch the app to see the latest digest (top 10 topics plus an additional-news list).
-- Tap "related articles" to expand a topic, then tap an article to open its source website in the browser.
-- Tap the calendar icon (top right) to pick a past date, or use the "previous day / next day / latest" controls under the date to move between days. Pull down to refresh.
-- Tap the bell icon to enable a daily reminder and choose a time; allow notifications when prompted. Notifications are optional and not needed for reading.
-There are no in-app accounts, in-app purchases, subscriptions, posting, comments, messaging, or uploads. The most recent latest digest is cached for offline reading.
+3. Setup and access
+Internet is required to load the digest and open source sites. No account, login, API key, or sample files are needed. Launch for the latest digest; expand a topic and tap an article to open its source site; use the calendar or previous/next/latest controls for other dates; pull to refresh; tap the bell to set an optional daily reminder. There are no accounts, purchases, subscriptions, posting, comments, or uploads. The latest digest is cached for offline reading.
 
-4. External services and tools
-Our aggregation runs server-side (outside the app): GitHub Actions runs a Node.js / rss-parser pipeline once daily, and GitHub Pages hosts the resulting static JSON, which the app fetches over HTTPS. The iOS app itself does not call any AI API. Daily reminders use Apple's on-device UserNotifications framework only; there is no remote push service, external authentication, or payment processor. Configured news sources include ITmedia AI+, ITmedia NEWS, Nikkei xTECH, Publickey, GIGAZINE, CNET Japan, ZDNET Japan, ASCII.jp, Impress Watch, INTERNET Watch, PC Watch, gihyo.jp, CodeZine, OpenAI, Google AI Blog, Google DeepMind, Microsoft Blog, NVIDIA Blog, Hugging Face, Mistral AI, Stability AI, AWS AI Blog, TechCrunch, The Verge, MIT Technology Review, Ars Technica, VentureBeat, The Decoder, Hacker News (via hnrss.org), Simon Willison, Zenn, and Qiita. An optional server-side summarization step (Anthropic Claude) and an optional Slack notification are disabled in production; the current production data uses the feeds' own descriptions.
+4. External services
+Aggregation runs server-side (outside the app): a GitHub Actions pipeline collects public RSS/Atom feeds once daily, and GitHub Pages hosts the static JSON the app fetches over HTTPS. The app itself calls no AI API; reminders use Apple's on-device UserNotifications only - no remote push, external authentication, or payments. Sources are 30+ public feeds from news outlets and AI vendors (e.g., ITmedia, Nikkei xTECH, TechCrunch, The Verge, OpenAI, Google, NVIDIA); the full list is in our public repository: https://github.com/Takuya-ops/ai-morning-digest
 
 5. Regional differences
-There are no region-specific features or region-specific digest selection. The same data is served wherever the app is distributed. The interface is in Japanese; individual articles may be in Japanese or English. Digest dates and times are shown in JST, and reminders fire in the device's local time. The availability of linked external websites is outside our control.
+None. The same data is served everywhere. The interface is Japanese; individual articles may be Japanese or English. Dates and times use JST; reminders fire in the device's local time.
 
-6. Regulated services and third-party material
-The app provides technology news only; it is not a regulated medical or financial service. It functions like an RSS reader: it displays third-party headlines and short descriptions taken from publicly published RSS/Atom feeds that the outlets provide for syndication, always with the source name shown and a link to the original article. Full article content is read on the source's own website; the app does not reproduce full articles and does not bypass any paywall or access restriction. Some sources (e.g., Zenn, Qiita, Hacker News) carry community-authored posts, which are likewise shown only as feed-provided headline/description with a link to the original. We respond promptly to any source's request to be removed from the app.
+6. Regulated services / third-party material
+This is technology news, not a regulated medical or financial service. Like an RSS reader, it displays third-party headlines and short feed-provided descriptions, always with the source name and a link to the original article. Full articles are read on the source's own website; the app does not reproduce full articles or bypass any paywall. Community sources (e.g., Zenn, Qiita, Hacker News) are shown the same way. We remove any source promptly on request.
 
 Thank you for your consideration.
 ```
