@@ -5,6 +5,19 @@
 
 📖 **毎朝ここを見る** → https://takuya-ops.github.io/ai-morning-digest/
 
+## デモ動画
+
+実際のiPhone画面で、ニュースTOP10、通知時刻の設定、過去の日付の閲覧、参照元の記事の確認を55秒で紹介しています。
+
+**[▶ デモ動画を確認したい方はこちら（AIナレーション付き）](https://takuya-ops.github.io/ai-morning-digest/demo/ai-digest-short-narrated.mp4)**
+
+<a href="https://takuya-ops.github.io/ai-morning-digest/demo/ai-digest-short-narrated.mp4"><img src="docs/demo/thumbnail.jpg" alt="生成AIモーニングダイジェストのデモ動画を見る" width="240"></a>
+
+- [AIナレーション付きで見る](https://takuya-ops.github.io/ai-morning-digest/demo/ai-digest-short-narrated.mp4)
+- [ナレーションなしで見る](https://takuya-ops.github.io/ai-morning-digest/demo/ai-digest-short-no-narration.mp4)
+
+どちらも字幕・赤枠・BGM・効果音付きです。動画内のニュースは収録時点の内容です。
+
 ## 特徴
 
 - **抜け漏れ防止**: ITmedia AI+ / 日経クロステック / Publickey / GIGAZINE / OpenAI / Google / DeepMind / TechCrunch / The Verge / Hacker News など国内外32媒体のRSSを毎朝取得。TOP10に入らなかった記事も「その他」欄に全件掲載します。
