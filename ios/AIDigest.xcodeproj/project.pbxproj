@@ -6,19 +6,73 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6F96C7EC5C7BEDE6F5364706 /* DigestWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F67F72742A7C00D325AD11 /* DigestWidget.swift */; };
+		89B031CD81ABFCD6B040E06E /* AIDigestWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EEF03F15375AEA61AF901A9A /* AIDigestWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C3BF37AA219B87EC976DD1CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0152C1A2F86F30E707757AFA /* Foundation.framework */; };
+		D1F036A2EF3ADA507666DA02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0152C1A2F86F30E707757AFA /* Foundation.framework */; };
+		E868C142FFACAA71A48E521B /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA006DF8A5DAF67B3A3FF60 /* CoreTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37291EF233934ECAADAD5A13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA00000A000000000000000A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C793BB3D7C159B5BC473EF74;
+			remoteInfo = AIDigestWidget;
+		};
+		EAC1B277872D9BF9753529F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA00000A000000000000000A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0000060000000000000006;
+			remoteInfo = AIDigest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FEB3427A66DB1BBD89171F09 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				89B031CD81ABFCD6B040E06E /* AIDigestWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0152C1A2F86F30E707757AFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0AA006DF8A5DAF67B3A3FF60 /* CoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		AA0000050000000000000005 /* AIDigest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIDigest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA5BC38EFAB09AB8B5B442FB /* AIDigestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIDigestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF03F15375AEA61AF901A9A /* AIDigestWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AIDigestWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F67F72742A7C00D325AD11 /* DigestWidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DigestWidget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AA0000010000000000000001 /* AIDigest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = AIDigest;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		893D99C0E309D6DDB4DFAB45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1F036A2EF3ADA507666DA02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA0000020000000000000002 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -26,14 +80,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C064A6A0F1F39EBC8171F4D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3BF37AA219B87EC976DD1CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00201FE9B5DE4FA7B9112DFA /* AIDigestWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F8F67F72742A7C00D325AD11 /* DigestWidget.swift */,
+			);
+			name = AIDigestWidget;
+			path = AIDigestWidget;
+			sourceTree = "<group>";
+		};
+		79DDF89DA92E1E7DF9D06B38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6A1EDA98D1EF6124C7F9707 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E656E244F714FA2C5B10ECB /* AIDigestTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AA006DF8A5DAF67B3A3FF60 /* CoreTests.swift */,
+			);
+			name = AIDigestTests;
+			path = AIDigestTests;
+			sourceTree = "<group>";
+		};
 		AA0000030000000000000003 = {
 			isa = PBXGroup;
 			children = (
 				AA0000010000000000000001 /* AIDigest */,
 				AA0000040000000000000004 /* Products */,
+				79DDF89DA92E1E7DF9D06B38 /* Frameworks */,
+				00201FE9B5DE4FA7B9112DFA /* AIDigestWidget */,
+				9E656E244F714FA2C5B10ECB /* AIDigestTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,13 +132,41 @@
 			isa = PBXGroup;
 			children = (
 				AA0000050000000000000005 /* AIDigest.app */,
+				EEF03F15375AEA61AF901A9A /* AIDigestWidget.appex */,
+				BA5BC38EFAB09AB8B5B442FB /* AIDigestTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F6A1EDA98D1EF6124C7F9707 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0152C1A2F86F30E707757AFA /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2110C9E16B4FF1AF7336C56E /* AIDigestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C91269BEDEF5EC81958DCB /* Build configuration list for PBXNativeTarget "AIDigestTests" */;
+			buildPhases = (
+				E48EA4605EF87265B763FA8E /* Sources */,
+				893D99C0E309D6DDB4DFAB45 /* Frameworks */,
+				3F6E7BDBAFE0B317E659CA6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1E55542199CC3D6FEFBD79D /* PBXTargetDependency */,
+			);
+			name = AIDigestTests;
+			productName = AIDigestTests;
+			productReference = BA5BC38EFAB09AB8B5B442FB /* AIDigestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AA0000060000000000000006 /* AIDigest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA0000070000000000000007 /* Build configuration list for PBXNativeTarget "AIDigest" */;
@@ -55,20 +174,37 @@
 				AA0000080000000000000008 /* Sources */,
 				AA0000020000000000000002 /* Frameworks */,
 				AA0000090000000000000009 /* Resources */,
+				FEB3427A66DB1BBD89171F09 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9EC202F06F39D2BC8A73BA0D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				AA0000010000000000000001 /* AIDigest */,
 			);
 			name = AIDigest;
-			packageProductDependencies = (
-			);
 			productName = AIDigest;
 			productReference = AA0000050000000000000005 /* AIDigest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C793BB3D7C159B5BC473EF74 /* AIDigestWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4FDFBA99B7709CB281067AA /* Build configuration list for PBXNativeTarget "AIDigestWidget" */;
+			buildPhases = (
+				594ACB29FD458AC8A124A146 /* Sources */,
+				C064A6A0F1F39EBC8171F4D3 /* Frameworks */,
+				AB64A0EDA0D2762CE4EE5E65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AIDigestWidget;
+			productName = AIDigestWidget;
+			productReference = EEF03F15375AEA61AF901A9A /* AIDigestWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,12 +237,28 @@
 			projectRoot = "";
 			targets = (
 				AA0000060000000000000006 /* AIDigest */,
+				C793BB3D7C159B5BC473EF74 /* AIDigestWidget */,
+				2110C9E16B4FF1AF7336C56E /* AIDigestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3F6E7BDBAFE0B317E659CA6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA0000090000000000000009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB64A0EDA0D2762CE4EE5E65 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -116,6 +268,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		594ACB29FD458AC8A124A146 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F96C7EC5C7BEDE6F5364706 /* DigestWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA0000080000000000000008 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,9 +283,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E48EA4605EF87265B763FA8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E868C142FFACAA71A48E521B /* CoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9EC202F06F39D2BC8A73BA0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AIDigestWidget;
+			target = C793BB3D7C159B5BC473EF74 /* AIDigestWidget */;
+			targetProxy = 37291EF233934ECAADAD5A13 /* PBXContainerItemProxy */;
+		};
+		F1E55542199CC3D6FEFBD79D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AIDigest;
+			target = AA0000060000000000000006 /* AIDigest */;
+			targetProxy = EAC1B277872D9BF9753529F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		058B0F052F2C34A76CA687E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyaops.aidigest.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIDigest.app/AIDigest";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2AADD9C1D1875B42BEF86070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = Config/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = AMY72MSK2G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Widget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "AIダイジェスト";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyaops.aidigest.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
 		AA00000C000000000000000C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -184,11 +407,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = AMY72MSK2G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AIダイジェスト";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -213,11 +438,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/App.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = AMY72MSK2G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AIダイジェスト";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -237,9 +464,67 @@
 			};
 			name = Release;
 		};
+		B7BC99A292E2BDC5889C7133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyaops.aidigest.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIDigest.app/AIDigest";
+			};
+			name = Debug;
+		};
+		E4AAA70EC8A92F70164FF150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = Config/App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = AMY72MSK2G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Widget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "AIダイジェスト";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takuyaops.aidigest.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		50C91269BEDEF5EC81958DCB /* Build configuration list for PBXNativeTarget "AIDigestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				058B0F052F2C34A76CA687E0 /* Release */,
+				B7BC99A292E2BDC5889C7133 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4FDFBA99B7709CB281067AA /* Build configuration list for PBXNativeTarget "AIDigestWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4AAA70EC8A92F70164FF150 /* Release */,
+				2AADD9C1D1875B42BEF86070 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AA0000070000000000000007 /* Build configuration list for PBXNativeTarget "AIDigest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
