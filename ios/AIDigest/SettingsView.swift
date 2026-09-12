@@ -17,6 +17,7 @@ struct SettingsView: View {
                 Picker("読み上げ音声", selection: $player.voice) { ForEach(BriefingVoice.allCases) { Text($0.label).tag($0) } }.pickerStyle(.menu)
                 Text("Microsoft音声は配信済みの音声を再生します。Nanami・Keitaを選べます。ダウンロード後は圏外でも再生できます。").font(.caption).foregroundStyle(.secondary)
                 Picker("要約のスタイル", selection: $summary) { ForEach(SummaryStyle.allCases) { Text($0.label).tag($0.rawValue) } }
+                Text("3行・詳細・やさしくは、運営側で生成して配信します。利用者のAPIキーは不要です。選んだスタイルがない記事は、配信済みの本文を表示します。").font(.caption).foregroundStyle(.secondary)
                 Picker("読み上げ速度", selection: $player.rate) { ForEach([0.8, 1, 1.2, 1.5], id: \.self) { Text("\($0, specifier: "%.1f")x").tag($0) } }
                 if player.voice == .device { Picker("端末の日本語音声", selection: $voice) { Text("端末の標準音声").tag(""); ForEach(AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("ja") }, id: \.identifier) { Text($0.name).tag($0.identifier) } } }
                 Picker("テーマ", selection: $theme) { Text("システム").tag("system"); Text("ライト").tag("light"); Text("ダーク").tag("dark") }

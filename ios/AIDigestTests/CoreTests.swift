@@ -28,6 +28,31 @@ final class CoreTests: XCTestCase {
         XCTAssertEqual(article.styles?.text(.detail), "詳細の要約"); XCTAssertEqual(article.styles?.text(.simple), "やさしい説明")
         XCTAssertEqual(article.faq.first?.a, "記事には記載なし"); XCTAssertTrue(article.aiGenerated)
         XCTAssertEqual(article.audio?[BriefingVoice.nanami.rawValue], "https://example.com/nanami.mp3")
+        XCTAssertEqual(article.availableSummaryStyles, [.short, .detail, .simple])
+        XCTAssertEqual(article.summaryText(.detail), "詳細の要約")
+        XCTAssertEqual(article.summaryText(.simple), "やさしい説明")
+    }
+    func testMissingOrPartialStylesNeverShowEmptyContent() throws {
+        let digest = try JSONDecoder().decode(Digest.self, from: Data(legacy.utf8))
+        var article = digest.readerArticles[0]
+        XCTAssertEqual(article.availableSummaryStyles, [])
+        for style in SummaryStyle.allCases { XCTAssertEqual(article.summaryText(style), article.summary) }
+        article.styles = try JSONDecoder().decode(SummaryStyles.self, from: Data(#"{"short":null,"detail":"  詳しい説明  ","simple":99}"#.utf8))
+        XCTAssertEqual(article.availableSummaryStyles, [.detail])
+        XCTAssertEqual(article.resolvedSummaryStyle(.simple), .detail)
+        XCTAssertEqual(article.summaryText(.simple), "詳しい説明")
+        article.styles = SummaryStyles(short: "\n ", detail: nil, simple: "")
+        XCTAssertEqual(article.availableSummaryStyles, [])
+        XCTAssertEqual(article.summaryText(.short), article.summary)
+    }
+    func testDuplicateLegacyStylesAreNotOfferedAsDifferentSummaries() throws {
+        let digest = try JSONDecoder().decode(Digest.self, from: Data(legacy.utf8))
+        var article = digest.readerArticles[0]
+        article.styles = SummaryStyles(short: "一文目。\n二文目。\n三文目。", detail: "一文目。 二文目。 三文目。", simple: "用語を説明します。")
+        XCTAssertEqual(article.availableSummaryStyles, [.short, .simple])
+        XCTAssertEqual(article.resolvedSummaryStyle(.detail), .short)
+        XCTAssertEqual(article.summaryText(.short).components(separatedBy: "\n").count, 3)
+        XCTAssertEqual(article.summaryText(.simple), "用語を説明します。")
     }
     @MainActor func testDatabasePreservesReadSavedAndEditedDraftAcrossRefreshAndReopen() throws {
         let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)

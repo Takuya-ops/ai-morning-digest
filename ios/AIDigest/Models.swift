@@ -70,10 +70,34 @@ enum SummaryStyle: String, CaseIterable, Codable, Identifiable {
     var label: String { switch self { case .short: return "3行"; case .detail: return "詳細"; case .simple: return "やさしく" } }
 }
 struct SummaryStyles: Codable, Hashable {
-    var short: String
-    var detail: String
-    var simple: String
-    func text(_ style: SummaryStyle) -> String { switch style { case .short: return short; case .detail: return detail; case .simple: return simple } }
+    var short: String?
+    var detail: String?
+    var simple: String?
+    init(short: String? = nil, detail: String? = nil, simple: String? = nil) {
+        self.short = short; self.detail = detail; self.simple = simple
+    }
+    private enum CodingKeys: String, CodingKey { case short, detail, simple }
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        short = try? values.decode(String.self, forKey: .short)
+        detail = try? values.decode(String.self, forKey: .detail)
+        simple = try? values.decode(String.self, forKey: .simple)
+    }
+    func text(_ style: SummaryStyle) -> String? {
+        let value: String? = switch style { case .short: short; case .detail: detail; case .simple: simple }
+        guard let text = value?.trimmingCharacters(in: .whitespacesAndNewlines), !text.isEmpty else { return nil }
+        return text
+    }
+    // Older feeds sometimes copied the same summary into all three fields.
+    // Only offer styles with real, distinct content.
+    var available: [SummaryStyle] {
+        var seen = Set<String>()
+        return SummaryStyle.allCases.filter { style in
+            guard let text = text(style) else { return false }
+            let normalized = text.replacingOccurrences(of: "\\s+", with: "", options: .regularExpression)
+            return seen.insert(normalized).inserted
+        }
+    }
 }
 struct FAQ: Codable, Hashable, Identifiable {
     var q: String
@@ -103,6 +127,13 @@ struct ReaderArticle: Codable, Identifiable, Hashable {
     var audio: [String: String]?
     var sourceURL: URL? { sources.first?.url }
     var thumbnailURL: URL? { sources.first?.thumbnailURL.flatMap(WebURL.parse) }
+    var availableSummaryStyles: [SummaryStyle] { styles?.available ?? [] }
+    func resolvedSummaryStyle(_ preferred: SummaryStyle) -> SummaryStyle {
+        availableSummaryStyles.contains(preferred) ? preferred : (availableSummaryStyles.first ?? .short)
+    }
+    func summaryText(_ preferred: SummaryStyle) -> String {
+        styles?.text(resolvedSummaryStyle(preferred)) ?? summary
+    }
     var speechText: String { (ttsText ?? "\(title)。\(summary)").replacingOccurrences(of: "https?://\\S+", with: "", options: .regularExpression) }
     init(topic: Topic, digestDate: String) {
         id = topic.articles.first?.link ?? "\(digestDate)-\(topic.rank)"

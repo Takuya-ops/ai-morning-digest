@@ -18,10 +18,19 @@ struct ArticleDetailView: View {
                 Text(article.title).font(.title2.bold()).fixedSize(horizontal: false, vertical: true)
                 Text("\(article.sources.first?.feedName ?? "") · \(DateFormat.time(article.sources.first?.date ?? "")) JST").font(.caption).foregroundStyle(.secondary)
                 VStack(alignment: .leading, spacing: 12) {
-                    Picker("要約スタイル", selection: $style) { ForEach(SummaryStyle.allCases) { Text($0.label).tag($0) } }.pickerStyle(.segmented)
+                    if article.availableSummaryStyles.count > 1 {
+                        Picker("要約スタイル", selection: $style) {
+                            ForEach(article.availableSummaryStyles) { Text($0.label).tag($0) }
+                        }.pickerStyle(.segmented).accessibilityIdentifier("summaryStylePicker")
+                    } else {
+                        Text(article.availableSummaryStyles.first.map { "\($0.label)の要約" } ?? "記事の説明").font(.headline)
+                    }
                     Label(article.aiGenerated ? "AI生成の要約" : "配信済みの要約・説明文", systemImage: article.aiGenerated ? "sparkles" : "doc.text").font(.caption).foregroundStyle(.secondary)
-                    if article.styles == nil, style != .short { Text("この配信分には別スタイルの要約がありません。配信済みの要約を表示しています。").font(.caption).foregroundStyle(.secondary) }
-                    Text(article.styles?.text(style) ?? article.summary).font(.system(size: readingSize * scaledBodySize / 17)).lineSpacing(8).textSelection(.enabled).fixedSize(horizontal: false, vertical: true)
+                    Text(article.summaryText(style)).font(.system(size: readingSize * scaledBodySize / 17)).lineSpacing(8).textSelection(.enabled).fixedSize(horizontal: false, vertical: true).accessibilityIdentifier("summaryText")
+                    if article.availableSummaryStyles.count < SummaryStyle.allCases.count {
+                        Label("この配信分には3種類の要約がそろっていません。用意されている本文を表示しています。要約は運営側で生成するため、利用者のAPIキー設定は不要です。", systemImage: "info.circle")
+                            .font(.caption).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                    }
                 }
                 if let why = article.whyItMatters, !why.isEmpty {
                     VStack(alignment: .leading, spacing: 8) { Label("なぜ重要？", systemImage: "lightbulb").font(.headline); Text(why).font(.body).lineSpacing(6) }.padding(16).frame(maxWidth: .infinity, alignment: .leading).background(Color.accentColor.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
@@ -59,7 +68,8 @@ struct ArticleDetailView: View {
                 Button { playFromHere() } label: { Label("再生", systemImage: "play.fill") }
             }.font(.subheadline).padding(.horizontal, 20).frame(minHeight: 56).background(.regularMaterial)
         }
-        .onAppear { style = SummaryStyle(rawValue: preferredStyle) ?? .short; store.markRead(article) }
+        .onAppear { style = article.resolvedSummaryStyle(SummaryStyle(rawValue: preferredStyle) ?? .short); store.markRead(article) }
+        .onChange(of: article.id) { _ in style = article.resolvedSummaryStyle(SummaryStyle(rawValue: preferredStyle) ?? .short) }
         .sheet(item: $safari) { SafariView(url: $0.url).ignoresSafeArea() }
         .sheet(item: $share) { ShareSheet(items: $0.items) }
         .simultaneousGesture(DragGesture(minimumDistance: 70).onEnded { value in
@@ -78,7 +88,7 @@ struct ArticleDetailView: View {
         let renderer = ImageRenderer(content: VStack(alignment: .leading, spacing: 24) {
             Text("AI MORNING DIGEST").font(.caption.bold()).foregroundStyle(Color.accentColor)
             Text(article.title).font(.title.bold())
-            Text(article.styles?.short ?? article.summary).font(.body).lineSpacing(7)
+            Text(article.summaryText(.short)).font(.body).lineSpacing(7)
             Divider(); Text("\(article.digestDate) · \(article.sources.first?.feedName ?? "")").font(.caption)
             Text("AIダイジェスト · \(article.aiGenerated ? "AI生成の要約" : "出典の説明文")").font(.caption)
         }.padding(36).frame(width: 560).background(Color.white).foregroundStyle(Color.black))

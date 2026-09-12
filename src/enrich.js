@@ -20,7 +20,9 @@ export function enrichSummary(hit, cluster, fallback) {
   return {
     headline: text(hit.headline, 200), summary: text(hit.summary, 1200), whyItMatters: text(hit.whyItMatters, 600),
     aiGenerated: true, topics: [...new Set(labels)].slice(0, 3).length ? [...new Set(labels)].slice(0, 3) : classify(hit.headline),
-    summaryStyles: { short: text(styles.short, 600) || hit.summary, detail: text(styles.detail, 1600) || hit.summary, simple: text(styles.simple, 1000) || hit.summary },
+    // A missing style must stay unavailable; copying summary made the picker
+    // appear functional while every option displayed exactly the same text.
+    summaryStyles: { short: text(styles.short, 600) || null, detail: text(styles.detail, 1600) || null, simple: text(styles.simple, 1000) || null },
     ttsText: text(hit.ttsText, 1800) || `${hit.headline}。${hit.summary}`,
     faq, socialPost: text(hit.socialPost, 160),
   };

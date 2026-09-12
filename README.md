@@ -7,7 +7,7 @@
 
 ## 旧版のデモ動画（build 2）
 
-改修前のiPhone画面で、ニュースTOP10、通知時刻の設定、過去の日付の閲覧、参照元の記事の確認を55秒で紹介しています。今回のbuild 3の画面とは異なります。
+改修前のiPhone画面で、ニュースTOP10、通知時刻の設定、過去の日付の閲覧、参照元の記事の確認を55秒で紹介しています。今回のbuild 4の画面とは異なります。
 
 **[▶ デモ動画を確認したい方はこちら（AIナレーション付き）](https://takuya-ops.github.io/ai-morning-digest/demo/ai-digest-short-narrated.mp4)**
 
@@ -49,6 +49,23 @@
 3. キーは端末専用Keychainに保存します。アプリに共通キーを埋め込んだり、GitHub Pagesに公開したりしません。Xには自身のAPI利用料金・制限が適用されます。
 
 Xの実アカウントへの投稿テストは未実施です。[X APIの認証](https://docs.x.com/fundamentals/authentication/guides/v2-authentication-mapping)・[料金](https://docs.x.com/x-api/getting-started/pricing)を確認してください。
+
+#### 「3行・詳細・やさしく」が切り替わらない場合
+
+この3種類は運営側が事前生成する機能です。**アプリ利用者のAPIキー設定は不要**で、Xのキーとも別です。未配信の記事はRSSの説明文だけを表示します。build 4では、空欄・欠落・同じ内容のスタイルを切り替え候補に出さず、未配信の理由を表示します。
+
+運営側で有効化する手順:
+
+1. この変更を本番の `main` に反映する。
+2. GitHubリポジトリの Settings → Secrets and variables → Actions に `ANTHROPIC_API_KEY` を設定する（キーをソースや公開JSONへ書かない）。
+3. Actions → daily-digest → Run workflow を `main` に対して実行する。
+4. Pagesへの配信後、`data/latest.json` の `topics[].summaryStyles.short/detail/simple` に異なる本文が入ったことを確認し、アプリの今日タブで更新する。過去の記事は自動では再生成しない。
+
+2026-09-12の確認時点ではSecret一覧が空で、公開中の10トピックに3種類の要約はありませんでした。キーを設定しても、クレジット・モデル権限・通信等で生成に失敗する場合は説明文へ戻ります。成功したかは配信JSONまで確認してください。
+
+#### アイコン
+
+build 4で、濃紺を背景に朝日とニュースの行を組み合わせたマークへ更新しました。iOS・PWAの素材を統一しています。[調査した公式資料・デザイン方針・再出力方法](design/README.md)。
 
 ### Microsoft Nanami / Keita の音声配信
 
