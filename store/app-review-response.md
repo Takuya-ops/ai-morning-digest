@@ -1,60 +1,42 @@
-# App Review 返信文(Guideline 2.1 対応・Build 2 / 過去日付閲覧機能あり)
+# App Review Notes — Guideline 4.2.2 / 1.0 (3)
 
-App Store Connect の **2か所**に貼り付けてください:
-1. 対象アプリの審査メッセージ → 「App Reviewに返信」
-2. 対象バージョン → 「App Review情報」→「メモ / Notes」
+更新: 2026-09-12。**再提出用ドラフト。App Store Connectには未反映・未送信です。**
+旧1.0 (2)の動画を新ビルドの証拠として使わないでください。実機確認と本番配信を終え、実際に使える機能だけを残して提出します。
 
-> 送信前の確認: 撮影時のiOSバージョンが下記(26.6.1)と一致しているか、iPhoneの「設定 → 一般 → 情報」で確認してください。動画は現ビルド(1.0 build 2)と同一コードで撮影されています。
+## 英文ドラフト
 
----
-
-## コピー用(英文・約2,700文字 / 上限4,000字)
-
-```
 Hello App Review Team,
 
-Thank you for reviewing "生成AIモーニングダイジェスト". Our responses to Guideline 2.1:
+This version of AI Morning Digest has been redesigned around an on-device morning briefing, offline library, and native iOS controls. Please try:
 
-1. Screen recording (physical device)
-Video: https://takuya-ops.github.io/ai-morning-digest/app-review-demo-iphone15pro.mp4
-Device: iPhone 15 Pro; iOS 26.6.1; app 1.0 (2) - the build selected for this review.
-It starts at app launch and shows the latest digest, browsing past-date digests via the calendar and previous/next controls, notification-time settings, expanding related articles, opening an original article, and the additional-news list.
+1. Audio briefing: Open Today (今日), choose the iPhone voice from the voice menu, and tap Play (再生). The app reads the daily topics in sequence using AVSpeechSynthesizer. The mini player offers pause, previous/next article, and 0.8x/1.0x/1.2x/1.5x speed. Audio uses the iOS playback audio session. Microsoft Nanami and Keita can also be selected when that day's pre-generated audio is available. Those files use AVAudioPlayer and are cached for offline playback. No microphone is used.
 
-2. Purpose and audience
-A native news reader that helps the general public, developers, and business users stay current on generative AI. It groups related coverage, ranks the day's top 10 topics with short summaries, lists all remaining articles, offers past digests, and an optional daily reminder.
+2. Daily reminders: In Settings (設定), enable the reminder, select the time, and choose weekdays or every day. Tap “2分後にテスト通知” to schedule a notification two minutes from now, then leave the app to see it. The notification opens Today, with optional playback on tap. Notifications are scheduled locally for the next 30 days and renewed when the app runs.
 
-3. Setup and access
-Internet is required to load the digest and open source sites. No account, login, API key, or sample files are needed. Launch for the latest digest; expand a topic and tap an article to open its source site; use the calendar or previous/next/latest controls for other dates; pull to refresh; tap the bell to set an optional daily reminder. There are no accounts, purchases, subscriptions, posting, comments, or uploads. The latest digest is cached for offline reading.
+3. WidgetKit: Add “AIダイジェスト” from the Home Screen widget gallery. The small widget shows one headline, the medium widget shows three, and a rectangular Lock Screen widget is also included. Tap a headline to open its article. The main app shares its latest headlines through an App Group. iOS determines actual background refresh timing.
 
-4. External services
-Aggregation runs server-side (outside the app): a GitHub Actions pipeline collects public RSS/Atom feeds once daily, and GitHub Pages hosts the static JSON the app fetches over HTTPS. The app itself calls no AI API; reminders use Apple's on-device UserNotifications only - no remote push, external authentication, or payments. Sources are 30+ public feeds from news outlets and AI vendors (e.g., ITmedia, Nikkei xTECH, TechCrunch, The Verge, OpenAI, Google, NVIDIA); the full list is in our public repository: https://github.com/Takuya-ops/ai-morning-digest
+4. Offline library: Open Today online and allow the initial download to finish. Enable Airplane Mode and reopen the app. The stored digest is displayed immediately. Library (ライブラリ) contains saved articles and a date-based archive, including the recent seven days when available. Downloaded thumbnails remain available offline. Older digests are pruned after 30 days; explicitly saved articles remain saved.
 
-5. Regional differences
-None. The same data is served everywhere. The interface is Japanese; individual articles may be Japanese or English. Dates and times use JST; reminders fire in the device's local time.
+5. Personalization: Select topics during onboarding or in Settings. Followed topics appear first. Open an article to mark it read; use its Save button or swipe its list row to save it. Read state, bookmarks, topics, and completed days persist on-device. Articles use native views, with a source link at the end opening SFSafariViewController.
 
-6. Regulated services / third-party material
-This is technology news, not a regulated medical or financial service. Like an RSS reader, it displays third-party headlines and short feed-provided descriptions, always with the source name and a link to the original article. Full articles are read on the source's own website; the app does not reproduce full articles or bypass any paywall. Community sources (e.g., Zenn, Qiita, Hacker News) are shown the same way. We remove any source promptly on request.
+6. Article tools: Newly generated enriched digests include three summary styles and pre-generated questions and answers. AI-generated text is labeled and attributed. Older RSS-only digests indicate when additional summaries are unavailable. Native sharing can export a summary card with its source URL.
+
+7. Optional X tools: The X tab searches public X posts using the user's own X API credentials. Drafts (投稿案) prepares 10 editable news-post alternatives without credentials. Direct posting requires the user's own Read and write credentials, an account check, and a final send confirmation. Credentials are stored in the device Keychain and sent only to X. No posts are sent automatically. These optional functions are separate from the no-login news reader.
+
+There is no app account, advertising, subscription, or in-app purchase. Reading, reminders, saved articles, and device speech require no API keys. The public-news pipeline runs daily outside the app. Per-user questions are not sent to an AI service. X usage is subject to the user's X developer account and applicable API charges.
 
 Thank you for your consideration.
-```
 
----
+## 提出前の確認
 
-## 日本語訳(社内確認用・提出不要)
+- [ ] 1.0 (3)をTestFlight/実機で起動し、旧ビルドと差し替える。
+- [ ] 本番バッチを更新し、3スタイル・Q&A・Nanami/Keitaの配信を確認。キー未設定の現状では該当説明を調整する。
+- [ ] ロック・他アプリ・消音スイッチ・着信/割り込み後の音声再生を実機検証する。
+- [ ] 通知受信だけでなく通知タップ→今日→再生を実機確認する。
+- [ ] Widget各サイズ・タップ遷移、機内モード、共有、Siriを実機確認する。
+- [ ] X連携を実際の権限で検証し、必要な審査アクセス方法を用意する。秘密キーを公開資料に記載しない。
+- [ ] X表示の追加に合わせ、年齢区分・UGC関連回答・App Privacyを確認する。
+- [ ] 新ビルドのスクリーンショット・必要なら実機動画を用意する。
+- [ ] App Store Connectの欄で文字数を確認し、必要な手順に絞る。
 
-1. **実機録画**: 動画URL・端末(iPhone 15 Pro)・iOS(26.6.1)・ビルド(1.0 build 2)を明記。起動→最新→過去日付(カレンダー/前日・翌日)→通知設定→関連記事→元記事→その他ニュースの流れ。審査対象と同一ビルド。
-2. **目的・対象**: 生成AI動向を追う一般〜開発者向けニュースリーダー。関連記事の集約・TOP10・要約・抜け漏れ防止・過去日付・毎日のリマインダー。
-3. **利用手順**: ログイン/APIキー/サンプル不要。最新表示、関連記事展開→元記事、カレンダー/前日翌日で過去日付、引っ張って更新、ベルで通知設定。アプリ内課金・投稿・アカウントなし。
-4. **外部サービス**: 収集は端末外(GitHub Actions + rss-parser、GitHub Pagesが静的JSONを配信)。アプリはAIAPIを呼ばない。通知は端末内のUserNotificationsのみ。要約(Claude)とSlackは本番で無効。ソース一覧を列挙。
-5. **地域差**: なし。全地域同一データ。UIは日本語、記事は日英。日時はJST、通知は端末ローカル時刻。
-6. **規制・第三者コンテンツ**: 医療/金融の規制サービスではない。RSSリーダーと同様、各社が配信用に公開しているRSS/Atomの見出し+短い説明を出典名・元記事リンク付きで表示。全文は元サイトで閲覧、ペイウォール回避なし。Zenn/Qiita/HN等のコミュニティ投稿も同様。削除要請には速やかに対応。
-
----
-
-## 送信前に最終確認する箇所
-
-| 箇所 | 確認内容 |
-|---|---|
-| iOSバージョン | 「設定 → 一般 → 情報」で 26.6.1 か確認(違えば英文の iOS 行を修正) |
-| 審査対象ビルド | 「配信 → iOSアプリ 1.0 → ビルド」で **1.0 (2)** が選択されていること(Build 1 から差し替え) |
-| 動画URL | 上記URLがブラウザで再生できること(公開確認済み) |
+根拠: [Apple App Review Guidelines 4.2](https://developer.apple.com/app-store/review/guidelines/#minimum-functionality)。機能追加によって承認が保証されるものではありません。

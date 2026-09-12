@@ -1,93 +1,74 @@
-# App Store 提出用メタデータ(下書き)
+# App Storeメタデータ — 1.0 (3) 再提出ドラフト
 
-App Store Connectの各欄にそのまま貼り付けられる形で用意しています。
-
-## 基本情報
+2026-09-12更新。App Store Connectへの反映・再提出は未実施。本番配信・実機検証を終え、実際に利用できる機能だけを残して使用してください。
 
 | 項目 | 値 |
 |---|---|
-| アプリ名(30字以内) | 生成AIモーニングダイジェスト |
-| サブタイトル(30字以内) | 毎朝のAIニュースを1分でキャッチアップ |
+| アプリ名 | 生成AIモーニングダイジェスト |
+| サブタイトル | 聴く・保存する、毎朝のAIニュース |
 | バンドルID | com.takuyaops.aidigest |
 | SKU | ai-morning-digest-ios |
-| プライマリカテゴリ | ニュース |
-| セカンダリカテゴリ | 仕事効率化 |
-| 年齢制限 | 4+(制限対象コンテンツなし) |
-| 価格 | 無料 |
-| プライバシーポリシーURL | https://takuya-ops.github.io/ai-morning-digest/privacy.html |
-| サポートURL | https://github.com/Takuya-ops/ai-morning-digest |
+| カテゴリ | ニュース / 仕事効率化 |
+| 価格 | 無料・アプリ内課金なし |
+| プライバシーURL | https://takuya-ops.github.io/ai-morning-digest/privacy.html |
+| サポートURL | https://github.com/Takuya-ops/ai-morning-digest/issues |
 
-> アプリ名が既に取られている場合の代替案: 「AIモーニングダイジェスト」「生成AI朝刊ダイジェスト」
+## 説明文案
 
-## 説明文
+聴けるAIニュース。毎朝のリマインダー。オフラインでも読めるライブラリ。
+国内外のニュース・AI企業の公式ブログから、その日の生成AIの動きをまとめます。
+通勤中や朝の支度中は音声で、気になった記事は保存してあとから。
 
-```
-毎朝5:30、国内外32のメディア・AI企業公式ブログから生成AI関連ニュースを自動収集。
-「どれだけ多くの媒体が報じたか」で今日の重要トピックTOP10をランキングし、
-日本語の要約付きで届けるニュースダイジェストアプリです。
+【朝のブリーフィング】
+今日のトピックを順番に読み上げ。再生・一時停止・記事送りと4段階の速度調整に対応。
+音声メニューでMicrosoft Nanami・Keita、iPhoneの標準音声を選べます。
+Microsoft音声は対応する配信分で利用でき、初回ダウンロード後はオフラインでも再生できます。
 
-【特徴】
-・大きなトピックから順に表示 — 同じ話題を報じる記事を日英またいで自動でまとめ、重要な順にTOP10を表示
-・抜け漏れなし — TOP10に入らなかった記事もすべて「その他」欄に掲載
-・毎朝の通知 — 好きな時刻(既定6:30)に通知が届き、起きたらすぐ今日のAIニュースを把握
-・要約付き — 各トピックに日本語の要約。気になったら記事タップで元記事へ
-・オフライン対応 — 圏外でも前回取得分を表示
-・登録不要・完全無料・広告なし
+【朝の時間に合わせた通知】
+好きな時刻を設定し、毎日または平日にリマインド。
+通知をタップして今日のニュースを開けます。通知は端末内で予約します。
 
-【収集ソース(一部)】
-ITmedia AI+ / 日経クロステック / Publickey / GIGAZINE / CNET Japan / ZDNET Japan /
-OpenAI / Google / Google DeepMind / Microsoft / NVIDIA / Hugging Face /
-TechCrunch / The Verge / MIT Technology Review / Ars Technica / Hacker News ほか
+【オフラインで読む・振り返る】
+取得済みのダイジェストをすぐに表示。直近7日分を取得し、30日間保持します。
+保存した記事はあとから読めるライブラリへ。既読表示と日付アーカイブで振り返れます。
 
-ChatGPT、Claude、Geminiなどの生成AIの動向を毎朝1分でキャッチアップしたい方に。
-```
+【興味のあるニュースから】
+モデル・API、エージェント、画像・動画生成、音声、研究など、フォローしたトピックを上に表示。
+要約のスタイル切替と疑問Q&Aも対応配信分で利用できます。
+AI生成の要約にはラベルと出典を表示します。
 
-## キーワード(100字以内)
+【ホーム画面にも】
+WidgetKitウィジェットで最新の見出しを確認。
+記事の要約カードをiOSの共有シートから共有できます。
 
-```
-生成AI,AI,ニュース,ChatGPT,Claude,Gemini,LLM,人工知能,朝刊,ダイジェスト,テック,まとめ
-```
+【任意のX連携】
+Xだけの情報を見られる専用タブと、取得記事から作る10件の投稿案。
+投稿案は編集・保存でき、内容確認後にXへ直接投稿できます。
+Xの検索・直接投稿には、ご自身のX APIキーと必要な権限が必要です。
+X APIの利用料金・利用制限は、ご自身のX開発者アカウントに適用されます。
 
-## App Reviewメモ(審査担当者向け・英語)
+ニュースの閲覧・音声・通知・保存は登録不要。広告、アプリ内課金はありません。
+ニュースは日次更新します。更新・通知・ウィジェットの時刻は通信状況とiOSの制御に影響されます。
 
-```
-This app is a news digest reader for generative-AI topics. It displays headlines,
-short excerpts, and links from publicly available RSS feeds published by news outlets
-and AI vendors, with full attribution and links to the original articles (similar to
-an RSS reader). The digest data is aggregated once daily by an open-source pipeline
-(https://github.com/Takuya-ops/ai-morning-digest) and served as static JSON on GitHub Pages.
-The app collects no user data, requires no login, and uses only local notifications.
-No demo account is needed.
-```
+## キーワード
 
-## App privacy(プライバシー質問への回答)
+生成AI,AI,ニュース,ChatGPT,Claude,Gemini,LLM,朝刊,ダイジェスト,音声,オフライン,ウィジェット
 
-- データ収集: **なし**(Data Not Collected)
-- トラッキング: なし
-- 第三者SDK: なし
+## 審査・プライバシー・年齢区分
 
-## 輸出コンプライアンス
+[app-review-response.md](app-review-response.md)を使用します。旧版の「投稿機能なし」「インターネット必須」の説明は流用しません。
 
-- `ITSAppUsesNonExemptEncryption = NO` をInfo.plistに設定済み(HTTPS標準通信のみ)→ 質問は自動スキップされます
+- 開発者の利用者アカウント・分析・広告・トラッキングはありません。
+- 個人設定・既読・保存・投稿案は端末内、X認証情報は端末専用Keychainに保存します。
+- 任意のX連携では認証情報・検索語・投稿内容をXへ送り、ユーザーID/表示名/ユーザー名を取得します。App Store Connectの現在の質問と第三者サービスの取り扱いを確認してApp Privacyを回答します。旧版の「データ収集なし」を無条件にコピーしません。
+- Xの公開投稿を表示するため、旧版の4+を前提にせず、年齢区分質問票・UGCの表示/非表示/報告導線を確認します。
+- Microsoft音声は運営側のAzure Speechで事前生成し、利用者の端末には音声ファイルを配信します。
+- 詳細は [privacy.html](../static/privacy.html)。公開版の更新はマージ・Pages反映後に確認します。
 
-## スクリーンショット
+## 画像・ビルド
 
-`store/screenshots/` に6.9インチ(1320×2868, iPhone 17 Pro Max)のスクリーンショットを用意済み。
-App Store Connectの「6.9インチディスプレイ」欄にアップロードしてください(6.5インチ以下は自動流用されます)。
+新UIの確認用画像: [verification/screenshots](verification/screenshots/)。Simulatorでの検証記録で、旧 store/screenshots/ を置き換える提出用6.9インチ一式ではありません。
 
-## 提出手順(Developer Program加入後)
+提出用は今日＋再生、音声選択、通知設定、記事の要約/Q&A、ライブラリ、WidgetKitを再撮影します。実際に生成されていない内容を作例で埋めません。
 
-1. Xcode → Settings → Accounts で加入済みApple IDにサインインしていることを確認
-2. App Store Connect (https://appstoreconnect.apple.com) → マイApp →「+」→ 新規App
-   - プラットフォーム: iOS / 名前・バンドルID・SKU: 上の表の通り
-3. このリポジトリの `ios/` でアーカイブ&アップロード(Claudeに依頼すればコマンドで実行します):
-   ```bash
-   xcodebuild -project AIDigest.xcodeproj -scheme AIDigest -configuration Release \
-     -destination 'generic/platform=iOS' -allowProvisioningUpdates archive \
-     -archivePath build/AIDigest.xcarchive
-   xcodebuild -exportArchive -archivePath build/AIDigest.xcarchive \
-     -exportOptionsPlist ExportOptions.plist -exportPath build/export -allowProvisioningUpdates
-   xcrun altool --upload-app -f build/export/AIDigest.ipa -t ios \
-     --apiKey <KEY_ID> --apiIssuer <ISSUER_ID>   # または Xcode Organizer から Distribute App
-   ```
-4. App Store Connectでビルドを選択 → メタデータ・スクリーンショットを貼り付け → 審査へ提出
+ローカルアーカイブ: ios/build/AIDigest.xcarchive（git管理外）。配布用署名・TestFlight転送は別工程です。既存 ios/ExportOptions.plist は destination=upload を含むため、ローカル書き出しのつもりで実行しないでください。

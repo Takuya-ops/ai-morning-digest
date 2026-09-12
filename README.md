@@ -5,9 +5,9 @@
 
 📖 **毎朝ここを見る** → https://takuya-ops.github.io/ai-morning-digest/
 
-## デモ動画
+## 旧版のデモ動画（build 2）
 
-実際のiPhone画面で、ニュースTOP10、通知時刻の設定、過去の日付の閲覧、参照元の記事の確認を55秒で紹介しています。
+改修前のiPhone画面で、ニュースTOP10、通知時刻の設定、過去の日付の閲覧、参照元の記事の確認を55秒で紹介しています。今回のbuild 3の画面とは異なります。
 
 **[▶ デモ動画を確認したい方はこちら（AIナレーション付き）](https://takuya-ops.github.io/ai-morning-digest/demo/ai-digest-short-narrated.mp4)**
 
@@ -29,10 +29,50 @@
 
 [ios/](ios/) にSwiftUI製のネイティブiPhoneアプリ「AIダイジェスト」があります。
 
-- 毎朝のダイジェスト(TOP10+全記事)をネイティブUIで表示、引っ張って更新
-- **毎朝の通知**: 指定時刻(既定6:30)にローカル通知。アプリ内の🔔から時刻変更可能
-- オフラインでも前回取得分を表示
-- 記事タップでSafariの元記事へ
+- **今日 / X / 投稿案 / ライブラリ / 設定**の5タブ。記事はアプリ内で読み、出典だけをアプリ内Safariで開きます。
+- **音声ブリーフィング**: プルダウンでMicrosoft **Nanami / Keita**、iPhone標準音声を選択。Microsoft音声は日次バッチで事前生成するMP3をAVAudioPlayerで再生・保存し、標準音声はAVSpeechSynthesizerを使用。再生・一時停止・記事送り・4段階速度・ミニプレイヤー・バックグラウンド音声とロック画面操作の実装を含みます（実機での最終検証は未実施）。
+- **通知**: 既定7:00、平日/毎日、タップで再生、2分後のテスト通知。30日先までローカル予約し、起動/バックグラウンド更新で延長。未来の日付に古い見出しを表示しません。
+- **オフライン**: SQLiteに当日＋直近7日を取得、30日保持。旧キャッシュを移行し、保存記事は保持期限後も残します。バックグラウンド取得の実行時刻はiOSが決めます。
+- **読む・振り返る**: 興味トピック、保存/既読、日付・カレンダーアーカイブ、要約3種・Q&A（新形式の配信分）、画像カード共有、読了記録、Siriショートカット。
+- **WidgetKit**: Small / Medium / ロック画面。App Groupで最新の見出しを共有します。
+- **Xの情報**: 自分のAPIキーを設定し、手動更新で最大10投稿を検索。原文・投稿者・出典を表示し、アカウントの非表示とXでの報告への導線を用意。
+- **投稿案**: 取得記事から10案、端末内で編集・保存。キーなしでも共有シートが使えます。本人用の4つのキーとRead and write権限があれば、投稿先確認→内容確認→送信でXに直接投稿。タイムアウト時は再送せず結果確認が必要な状態にします。
+
+実装範囲・検証結果・残る再提出手順は [store/implementation-status.md](store/implementation-status.md) を参照してください。App Storeの承認・再提出はまだ行っていません。
+
+### 要約生成とXの設定
+
+現在の配信先は既存の `data/latest.json` と `data/YYYY-MM-DD.json` を維持しています。v2は `summaryStyles`, `ttsText`, `topics`, `faq`, `aiGenerated`, `socialDrafts` と記事ごとの `audio` を追加し、旧アプリ用の `summary` 文字列を保持します。
+
+1. 3スタイル・Q&Aを日次生成するには、リポジトリのActions Secretに `ANTHROPIC_API_KEY` を設定します。未設定時はRSSの説明文と端末内の投稿案構成で動作します。利用者ごとにLLMを呼びません。
+2. Xは各利用者がアプリの「設定 → X連携」でキーを登録します。Read and writeを有効にした自分のX開発者アプリのAPI Key / API Key Secret / Access Token / Access Token Secretを使用します。検索のみならBearer Tokenも利用できます。
+3. キーは端末専用Keychainに保存します。アプリに共通キーを埋め込んだり、GitHub Pagesに公開したりしません。Xには自身のAPI利用料金・制限が適用されます。
+
+Xの実アカウントへの投稿テストは未実施です。[X APIの認証](https://docs.x.com/fundamentals/authentication/guides/v2-authentication-mapping)・[料金](https://docs.x.com/x-api/getting-started/pricing)を確認してください。
+
+### Microsoft Nanami / Keita の音声配信
+
+1. 運営側のAzure Speechリソースを用意します。日次の公開ニュース文だけをMicrosoftへ送り、利用者の閲覧履歴や入力は送信しません。
+2. GitHub Actions Secret `AZURE_SPEECH_KEY` と、Actions Variable `AZURE_SPEECH_REGION`（例 `japaneast`、作成したリソースと同じリージョン）を設定します。Speechの料金プラン・上限は運営側で管理します。
+3. `daily-digest` が要約後にNanamiとKeitaの2種類を生成します。1日最大10記事×2音声、同じ文章・音声は再実行時に再利用します。利用者ごとの音声生成費用は発生しませんが、運営側のAzure Speech利用料はプランと文字数に応じます。
+4. MP3を `digest-audio-YYYY-MM-DD` のGitHub Release assetsに保存し、配信JSONの各トピックに `audio["ja-JP-NanamiNeural"]` / `audio["ja-JP-KeitaNeural"]` のHTTPS URLを載せます。MP3を日々gitにコミットしない設計です。GitHubの `GITHUB_TOKEN` はワークフローから自動提供し、`contents: write` を使います。
+5. アプリの「今日 → 音声」または「設定 → 読み上げ音声」で選択します。取得済み音声は30日保持し、圏外でも再生可能です。初回取得は通信が必要です。未配信の過去記事や「その他の記事」は標準音声で再生してください。
+
+Azureキーがないときは音声の生成をスキップします。UIは未配信であることを明示し、Nanamiを選んだのに別の声を流すことはありません。初期選択は端末音声ですが、未選択の利用者にNanamiが全記事分届いた時点でNanamiを既定にします。キーはiOSバイナリやJSONには含めません。
+
+音声生成の疎通・音質確認はAzure設定後に必要です。[Microsoftの日本語音声一覧](https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/language-support?tabs=stt-tts)・[公式REST API](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/rest-text-to-speech)に基づきます。非公式のEdge TTSエンドポイントは利用しません。
+
+### ビルドとテスト
+
+```sh
+npm ci
+npm test
+xcodebuild -project ios/AIDigest.xcodeproj -scheme AIDigest \
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+  CODE_SIGNING_ALLOWED=NO test
+```
+
+Xcode 26.6で開発、最低iOS 16。外部iOSライブラリは不要です。実機・配布ビルドにはアプリ本体とウィジェット両方の署名、App Group `group.com.takuyaops.aidigest` が必要です。
 
 **iPhone実機へのインストール**(Apple IDがあれば無料):
 
@@ -95,6 +135,9 @@ open docs/index.html
 | `DIGEST_WINDOW_HOURS` | `26` | 収集対象の時間窓(時間) |
 | `ANTHROPIC_API_KEY` | なし | 設定するとClaudeで要約生成 |
 | `SUMMARY_MODEL` | `claude-opus-5` | 要約に使うClaudeモデル |
+| `AZURE_SPEECH_KEY` | なし | 運営側のMicrosoft音声生成キー。未設定時は生成をスキップ |
+| `AZURE_SPEECH_REGION` | なし | Speechリソースのリージョン（例 `japaneast`） |
+| `GITHUB_TOKEN` / `GITHUB_REPOSITORY` | Actionsで自動提供 | 日次MP3をGitHub Release assetsに保存 |
 | `SLACK_WEBHOOK_URL` | なし | Slack Incoming Webhook |
 | `SITE_URL` / `REPO_URL` | 自動導出 | GitHub Actions上では `GITHUB_REPOSITORY` から自動導出(フォークしてもそのまま動作)。手動指定も可 |
 
