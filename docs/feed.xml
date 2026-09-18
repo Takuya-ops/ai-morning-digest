@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-09-19】Security researchers used Claude to help them hack into OpenAI ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-19.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-19.html</guid>
+    <pubDate>Fri, 18 Sep 2026 22:46:03 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Security researchers used Claude to help them hack into OpenAI&lt;/li&gt;&lt;li&gt;ChatGPTがWordに対応 ラフなメモ→しっかりした文章に校正&lt;/li&gt;&lt;li&gt;Anthropic、AI開発の26％を「Claudeが主導」 「1％未満」から半年で急拡大&lt;/li&gt;&lt;li&gt;Qwen3.8-27Bを9分の1に圧縮も性能98.2%維持の「Bonsai 2 27B」&lt;/li&gt;&lt;li&gt;「規定を探す時間」をAIで短縮 豊川信用金庫が生成AIを職員のFAQに活用&lt;/li&gt;&lt;li&gt;「AIで資料は作れるけど、増えすぎた」を解消するNotebook機能とは？&lt;/li&gt;&lt;li&gt;AI導入は6割、でも8割超が「チャット止まり」 業務自動化まで進まない原因は？&lt;/li&gt;&lt;li&gt;Anthropic’s first embedded evaluator is … Accenture?&lt;/li&gt;&lt;li&gt;World model companies are keeping a lot of secrets&lt;/li&gt;&lt;li&gt;A new kind of AI model from a ChatGPT inventor is thrilling developers&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-09-18】Anthropic、Claudeの「チャット」と「Cowork」を統合 資料作成の「Docs」「Slides」も ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-18.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-18.html</guid>
