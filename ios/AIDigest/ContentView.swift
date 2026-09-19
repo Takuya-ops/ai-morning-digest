@@ -2,387 +2,164 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var store: DigestStore
-    @State private var showSettings = false
-    @State private var showArchive = false
-    @Environment(\.scenePhase) private var scenePhase
-
+    @EnvironmentObject var player: BriefingPlayer
+    @EnvironmentObject var router: AppRouter
+    @AppStorage("onboardingComplete") private var onboarded = false
+    @State private var linkedArticle: ReaderArticle?
     var body: some View {
-        NavigationStack {
-            Group {
-                if let digest = store.digest {
-                    digestList(digest)
-                } else if store.isLoading {
-                    ProgressView("今朝のダイジェストを取得中…")
-                } else {
-                    VStack(spacing: 12) {
-                        Text("🌅").font(.system(size: 48))
-                        Text(store.notice ?? "下に引っ張って更新してください")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 32)
-                        Button("再読み込み") { Task { await store.reload() } }
-                            .buttonStyle(.borderedProminent)
-                    }
-                }
-            }
-            .navigationTitle("AIダイジェスト")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showArchive = true
-                    } label: {
-                        Image(systemName: "calendar")
-                    }
-                    .accessibilityLabel("過去のダイジェスト")
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showSettings = true
-                    } label: {
-                        Image(systemName: "bell.badge")
-                    }
-                    .accessibilityLabel("通知設定")
-                }
-            }
-            .sheet(isPresented: $showSettings) { SettingsSheet() }
-            .sheet(isPresented: $showArchive) { ArchiveSheet().environmentObject(store) }
+        TabView(selection: $router.tab) {
+            NavigationStack { TodayView() }.playerInset().tabItem { Label("今日", systemImage: "sun.max") }.tag(0)
+            NavigationStack { XFeedView() }.playerInset().tabItem { Label("X", systemImage: "bubble.left.and.bubble.right") }.tag(1)
+            NavigationStack { DraftsView() }.playerInset().tabItem { Label("投稿案", systemImage: "square.and.pencil") }.tag(2)
+            NavigationStack { LibraryView() }.playerInset().tabItem { Label("ライブラリ", systemImage: "books.vertical") }.tag(3)
+            NavigationStack { SettingsView() }.playerInset().tabItem { Label("設定", systemImage: "gearshape") }.tag(4)
         }
-        .onChange(of: scenePhase) { phase in
-            // 過去分を閲覧中に勝手に最新へ戻らないよう、最新表示のときだけ再取得する
-            if phase == .active && store.isViewingLatest {
-                Task { await store.reload() }
-            }
-        }
+        .fullScreenCover(isPresented: Binding(get: { !onboarded }, set: { if !$0 { onboarded = true } })) { OnboardingView() }
+        .sheet(item: $linkedArticle) { article in NavigationStack { ArticleDetailView(article: article).toolbar { ToolbarItem(placement: .confirmationAction) { Button("閉じる") { linkedArticle = nil } } } }.playerInset() }
+        .onChange(of: router.articleID) { _ in handleLink() }
+        .onChange(of: router.autoplay) { _ in handleLink() }
+        .onChange(of: store.digest?.generatedAt) { _ in player.adoptMicrosoftDefaultIfAvailable(store.orderedBrief); handleLink() }
+        .onChange(of: onboarded) { _ in handleLink() }
+        .onAppear { player.adoptMicrosoftDefaultIfAvailable(store.orderedBrief); handleLink() }
+        .alert("音声再生", isPresented: Binding(get: { player.error != nil }, set: { if !$0 { player.error = nil } })) { Button("OK") { player.error = nil } } message: { Text(player.error ?? "") }
     }
-
-    private func digestList(_ digest: Digest) -> some View {
-        List {
-            Section {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(DateFormat.longDate(digest.date))
-                        .font(.title3.bold())
-                        .foregroundColor(.accentColor)
-                    Text("📰 \(digest.stats.articleCount)記事 / 🗞️ \(digest.stats.feedCount)媒体 / 🧵 \(digest.stats.topicCount)トピック")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                    Text("更新: \(DateFormat.time(digest.generatedAt)) JST")
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
-                    if !store.isViewingLatest {
-                        Text("📖 過去のダイジェストを表示中")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
-                    if let notice = store.notice {
-                        Text("⚠️ \(notice)").font(.caption).foregroundColor(.orange)
-                    }
-                    dayNavigation
-                }
-                .padding(.vertical, 2)
-            }
-
-            if digest.topics.isEmpty {
-                Section {
-                    Text("対象期間内に生成AI関連のトピックが見つかりませんでした")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
-            } else {
-                Section("今日の重要トピック TOP\(digest.topics.count)") {
-                    ForEach(digest.topics) { TopicRow(topic: $0) }
-                }
-            }
-
-            if !digest.others.isEmpty {
-                Section("その他の生成AIニュース(\(digest.others.count)件)") {
-                    ForEach(digest.others) { article in
-                        ArticleRow(article: article)
-                    }
-                }
-            }
-
-            Section {
-                Text("毎朝5:30(JST)に自動更新 / 国内外\(digest.stats.feedCount)媒体から収集")
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-            }
-        }
-        .listStyle(.insetGrouped)
-        .refreshable { await store.reload() }
+    private func handleLink() {
+        guard onboarded else { return }
+        if let id = router.articleID, let article = store.database?.article(id: id) ?? store.digest?.readerArticles.first(where: { $0.id == id }) { linkedArticle = article; router.articleID = nil }
+        if router.autoplay, !store.orderedBrief.isEmpty { router.autoplay = false; player.start(store.orderedBrief, completesBriefing: true) }
     }
+}
+private struct PlayerInset: ViewModifier {
+    @EnvironmentObject var player: BriefingPlayer
+    func body(content: Content) -> some View { content.safeAreaInset(edge: .bottom, spacing: 0) { if player.current != nil { MiniPlayer() } } }
+}
+extension View { func playerInset() -> some View { modifier(PlayerInset()) } }
 
-    // 前日/翌日ナビゲーション(availableDatesが読めているときだけ表示)
-    @ViewBuilder
-    private var dayNavigation: some View {
-        if !store.availableDates.isEmpty {
-            HStack(spacing: 8) {
-                Button {
-                    Task { await store.showPrevious() }
-                } label: {
-                    Label("前日", systemImage: "chevron.left")
-                        .font(.footnote)
-                }
-                .disabled(store.previousDate == nil)
-
-                Spacer()
-
-                if !store.isViewingLatest {
-                    Button {
-                        Task { await store.showLatest() }
-                    } label: {
-                        Text("最新へ")
-                            .font(.footnote.bold())
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.small)
-                }
-
-                Spacer()
-
-                Button {
-                    Task { await store.showNext() }
-                } label: {
-                    HStack(spacing: 4) {
-                        Text("翌日")
-                        Image(systemName: "chevron.right")
-                    }
-                    .font(.footnote)
-                }
-                .disabled(store.nextDate == nil)
+struct MiniPlayer: View {
+    @EnvironmentObject var player: BriefingPlayer
+    var body: some View {
+        VStack(spacing: 4) {
+            HStack {
+                Image(systemName: "waveform").foregroundStyle(Color.accentColor)
+                Text(player.preparing ? "\(player.voice.shortName)の音声を準備中…" : player.current?.title ?? "").font(.caption.weight(.semibold)).lineLimit(1)
+                Spacer(minLength: 4)
+                Button { player.stop() } label: { Image(systemName: "xmark").frame(width: 44, height: 44) }.accessibilityLabel("再生を終了")
             }
-            .buttonStyle(.borderless)
-            .padding(.top, 6)
-        }
+            HStack {
+                Text("\(player.index + 1) / \(player.articles.count)").font(.caption.monospacedDigit()).foregroundStyle(.secondary)
+                Spacer()
+                Button { player.skip(-1) } label: { Image(systemName: "backward.end.fill").frame(width: 44, height: 44) }.disabled(player.index == 0).accessibilityLabel("前の記事")
+                Button { player.toggle() } label: { if player.preparing { ProgressView().frame(width: 52, height: 44) } else { Image(systemName: player.playing ? "pause.fill" : "play.fill").frame(width: 52, height: 44) } }.disabled(player.preparing).accessibilityLabel(player.playing ? "一時停止" : "再生を再開")
+                Button { player.skip(1) } label: { Image(systemName: "forward.end.fill").frame(width: 44, height: 44) }.disabled(player.index + 1 >= player.articles.count).accessibilityLabel("次の記事")
+                Spacer()
+                Menu { ForEach([0.8, 1, 1.2, 1.5], id: \.self) { rate in Button("\(rate, specifier: "%.1f")x") { player.rate = rate } } } label: { Text("\(player.rate, specifier: "%.1f")x").font(.caption.bold()).frame(minWidth: 44, minHeight: 44) }.accessibilityLabel("読み上げ速度")
+            }
+        }.padding(.horizontal, 16).background(.regularMaterial)
     }
 }
 
-// 過去のダイジェストの日付一覧シート
-struct ArchiveSheet: View {
+struct TodayView: View {
     @EnvironmentObject var store: DigestStore
-    @Environment(\.dismiss) private var dismiss
-    @State private var indexFailed = false
-
+    @EnvironmentObject var player: BriefingPlayer
+    @State private var unreadOnly = false
     var body: some View {
-        NavigationStack {
-            Group {
-                if store.availableDates.isEmpty {
-                    if indexFailed {
-                        VStack(spacing: 12) {
-                            Text("日付一覧を取得できませんでした")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            Button("再試行") {
-                                Task {
-                                    indexFailed = false
-                                    indexFailed = !(await store.loadIndex())
-                                }
-                            }
-                            .buttonStyle(.borderedProminent)
-                        }
-                    } else {
-                        ProgressView("日付一覧を取得中…")
-                    }
-                } else {
-                    List(store.availableDates, id: \.self) { date in
-                        Button {
-                            Task { await store.show(date: date) }
-                            dismiss()
-                        } label: {
-                            HStack {
-                                Text(DateFormat.longDate(date))
-                                    .foregroundColor(.primary)
-                                if date == store.availableDates.first {
-                                    Text("最新")
-                                        .font(.caption2.bold())
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 2)
-                                        .background(Color.accentColor.opacity(0.15))
-                                        .foregroundColor(.accentColor)
-                                        .cornerRadius(6)
-                                }
-                                Spacer()
-                                if date == store.digest?.date {
-                                    Image(systemName: "checkmark")
-                                        .foregroundColor(.accentColor)
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .navigationTitle("過去のダイジェスト")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("閉じる") { dismiss() }
-                }
-            }
-            .task { indexFailed = !(await store.loadIndex()) }
+        Group {
+            if let digest = store.digest { digestContent(digest) }
+            else { EmptyPanel(icon: "sun.horizon", title: store.isLoading ? "朝のニュースを取得中" : "ダイジェストを読み込めません", message: store.notice ?? "初回はインターネットに接続してください。取得後はオフラインで読むことができます。") { Task { await store.refresh() } } }
         }
+        .navigationTitle("今日")
+        .toolbar { ToolbarItem(placement: .topBarTrailing) { if store.streak > 0 { Label("\(store.streak)日", systemImage: "flame").font(.caption).foregroundStyle(Color.accentColor) } } }
     }
-}
-
-struct TopicRow: View {
-    let topic: Topic
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .top, spacing: 10) {
-                RankBadge(rank: topic.rank)
-                if let url = topic.articles.first?.url {
-                    Link(destination: url) {
-                        Text(topic.headline)
-                            .font(.headline)
-                            .foregroundColor(.primary)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                } else {
-                    Text(topic.headline)
-                        .font(.headline)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-            }
-            Text(topic.summary)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-            if let why = topic.whyItMatters, !why.isEmpty {
-                Label(why, systemImage: "lightbulb")
-                    .font(.footnote)
-                    .padding(8)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color.accentColor.opacity(0.1))
-                    .cornerRadius(8)
-            }
-            if topic.articles.count > 1 {
-                DisclosureGroup("関連記事 \(topic.articles.count)件") {
-                    VStack(alignment: .leading, spacing: 0) {
-                        ForEach(topic.articles) { article in
-                            ArticleRow(article: article)
-                                .padding(.vertical, 6)
-                            Divider()
-                        }
-                    }
-                }
-                .font(.footnote)
-                .foregroundColor(.secondary)
-            } else if let article = topic.articles.first {
-                Text(article.feedName)
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-            }
-        }
-        .padding(.vertical, 4)
-        // Listの行全体が先頭のLinkに反応しないようにし、見出し/展開/各記事を個別にタップ可能にする
-        .buttonStyle(.borderless)
-    }
-}
-
-struct ArticleRow: View {
-    let article: Article
-
-    var body: some View {
-        if let url = article.url {
-            Link(destination: url) {
-                rowContent
-            }
-        } else {
-            rowContent
-        }
-    }
-
-    private var rowContent: some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Text(article.title)
-                .font(.subheadline)
-                .foregroundColor(.primary)
-                .multilineTextAlignment(.leading)
-            HStack(spacing: 8) {
-                Text(article.feedName)
-                Text(DateFormat.time(article.date))
-            }
-            .font(.caption2)
-            .foregroundColor(.secondary)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .contentShape(Rectangle())
-    }
-}
-
-struct RankBadge: View {
-    let rank: Int
-
-    private var color: Color {
-        switch rank {
-        case 1: return Color(red: 0.79, green: 0.59, blue: 0.0)
-        case 2: return Color(red: 0.54, green: 0.58, blue: 0.62)
-        case 3: return Color(red: 0.66, green: 0.44, blue: 0.29)
-        default: return Color(.systemGray5)
-        }
-    }
-
-    var body: some View {
-        Text("\(rank)")
-            .font(.subheadline.bold())
-            .foregroundColor(rank <= 3 ? .white : .primary)
-            .frame(width: 30, height: 30)
-            .background(color)
-            .cornerRadius(8)
-    }
-}
-
-struct SettingsSheet: View {
-    @Environment(\.dismiss) private var dismiss
-    @AppStorage("notifyEnabled") private var notifyEnabled = false
-    @AppStorage("notifyHour") private var notifyHour = 6
-    @AppStorage("notifyMinute") private var notifyMinute = 30
-    @State private var showDeniedAlert = false
-
-    private var timeBinding: Binding<Date> {
-        Binding {
-            Calendar.current.date(from: DateComponents(hour: notifyHour, minute: notifyMinute)) ?? Date()
-        } set: { newValue in
-            let comps = Calendar.current.dateComponents([.hour, .minute], from: newValue)
-            notifyHour = comps.hour ?? 6
-            notifyMinute = comps.minute ?? 30
-            Task { await NotificationManager.reschedule() }
-        }
-    }
-
-    var body: some View {
-        NavigationStack {
-            Form {
+    private func digestContent(_ digest: Digest) -> some View {
+        ScrollViewReader { proxy in
+            List {
                 Section {
-                    Toggle("毎朝通知する", isOn: $notifyEnabled)
-                        .onChange(of: notifyEnabled) { newValue in
-                            Task {
-                                let ok = await NotificationManager.reschedule()
-                                if newValue && !ok {
-                                    notifyEnabled = false
-                                    showDeniedAlert = true
-                                }
-                            }
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text(DateFormat.longDate(digest.date)).font(.title3.bold())
+                        Text("\(digest.stats.feedCount)媒体から、今知っておきたい動きを。").font(.subheadline).foregroundStyle(.secondary)
+                        if digest.date != DateFormat.day() { Label("今日はまだ未配信です。\(digest.date)のダイジェストを表示中", systemImage: "clock").font(.caption).foregroundStyle(.secondary) }
+                        Button { player.start(store.orderedBrief, completesBriefing: true) } label: {
+                            Label("再生 · 約\(max(1, Int(ceil(Double(store.orderedBrief.reduce(0) { $0 + $1.speechText.count }) / 300 / player.rate))))分", systemImage: "play.fill").font(.headline).frame(maxWidth: .infinity, minHeight: 40)
+                        }.buttonStyle(.borderedProminent).disabled(store.orderedBrief.isEmpty).accessibilityIdentifier("playBriefing")
+                        Picker("音声", selection: $player.voice) { ForEach(BriefingVoice.allCases) { Text($0.label).tag($0) } }.pickerStyle(.menu)
+                        if player.voice != .device, !store.orderedBrief.allSatisfy({ $0.audio?[player.voice.rawValue] != nil }) {
+                            Text("この配信分には\(player.voice.shortName)の音声がありません。iPhoneの標準音声ですぐに聴けます。").font(.caption).foregroundStyle(.secondary)
                         }
-                    if notifyEnabled {
-                        DatePicker("通知時刻", selection: timeBinding, displayedComponents: .hourAndMinute)
+                        HStack { Label("\(player.voice.shortName)で読み上げ", systemImage: "headphones"); Spacer(); Text("\(digest.briefArticles.filter { store.readIDs.contains($0.id) }.count)/\(digest.briefArticles.count) 読了") }.font(.caption).foregroundStyle(.secondary)
+                        if let notice = store.notice { Label(notice, systemImage: "wifi.exclamationmark").font(.caption).foregroundStyle(.secondary) }
+                        if let updated = store.lastUpdated { Text("最終取得 \(DateFormat.localStamp(updated))").font(.caption2).foregroundStyle(.secondary) }
+                    }.padding(.vertical, 8)
+                }
+                Section { Toggle("未読のみ表示", isOn: $unreadOnly).font(.subheadline) }
+                ForEach(sectionNames(digest), id: \.self) { section in
+                    let values = sectionArticles(section, digest: digest)
+                    if !values.isEmpty {
+                        Section(section) { ForEach(values) { article in ArticleNavigationRow(article: article).id(article.id) } }
                     }
-                } footer: {
-                    Text("ダイジェストは毎朝5:30(JST)ごろに更新されます。それ以降の時刻がおすすめです。")
                 }
-            }
-            .navigationTitle("通知設定")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("完了") { dismiss() }
+                if !digest.others.isEmpty {
+                    Section("その他のニュース · \(digest.others.count)件") {
+                        ForEach(digest.readerArticles.filter { !Set(digest.briefArticles.map(\.id)).contains($0.id) && (!unreadOnly || !store.readIDs.contains($0.id)) }) { article in ArticleNavigationRow(article: article) }
+                    }
                 }
-            }
-            .alert("通知が許可されていません", isPresented: $showDeniedAlert) {
-                Button("OK", role: .cancel) {}
-            } message: {
-                Text("iOSの設定 → AIダイジェスト → 通知 から許可してください。")
-            }
+                Section {
+                    Button { store.completeBriefing(date: digest.date) } label: { Label(store.completedDays.contains(digest.date) ? "今日の読了を記録しました" : "今日のブリーフィングを読了", systemImage: "checkmark.circle") }.disabled(digest.date != DateFormat.day() || digest.topics.isEmpty)
+                    Text("要約・疑問は配信時に作成。原文の全文ではありません。出典は各記事の末尾から確認できます。").font(.caption).foregroundStyle(.secondary)
+                }
+            }.listStyle(.insetGrouped).refreshable { await store.refresh() }
+                .onChange(of: player.current?.id) { id in if let id, !unreadOnly { withAnimation { proxy.scrollTo(id, anchor: .center) } } }
         }
+    }
+    private func sectionNames(_ digest: Digest) -> [String] { store.followedTopics.isEmpty ? ["今日の重要トピック"] : store.followedTopics + ["その他の動き"] }
+    private func sectionArticles(_ section: String, digest: Digest) -> [ReaderArticle] {
+        store.orderedBrief.filter { article in
+            let label = store.followedTopics.first { article.topics.contains($0) } ?? (store.followedTopics.isEmpty ? "今日の重要トピック" : "その他の動き")
+            return label == section && (!unreadOnly || !store.readIDs.contains(article.id))
+        }
+    }
+}
+struct ArticleNavigationRow: View {
+    @EnvironmentObject var store: DigestStore
+    let article: ReaderArticle
+    var body: some View {
+        NavigationLink { ArticleDetailView(article: article) } label: { NewsRow(article: article) }
+            .swipeActions(edge: .trailing) { Button { store.toggleSave(article) } label: { Label(store.savedIDs.contains(article.id) ? "保存を解除" : "保存", systemImage: store.savedIDs.contains(article.id) ? "bookmark.slash" : "bookmark") }.tint(.accentColor) }
+            .accessibilityIdentifier("articleRow")
+    }
+}
+struct NewsRow: View {
+    @EnvironmentObject var store: DigestStore
+    @EnvironmentObject var player: BriefingPlayer
+    let article: ReaderArticle
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            ThumbnailView(url: article.thumbnailURL)
+            VStack(alignment: .leading, spacing: 6) {
+                Text(article.topics.first ?? "AIニュース").font(.caption2.weight(.semibold)).foregroundStyle(Color.accentColor)
+                Text(article.title).font(.headline).lineLimit(2).foregroundStyle(store.readIDs.contains(article.id) ? .secondary : .primary)
+                Text(article.summary).font(.subheadline).lineLimit(1).foregroundStyle(.secondary)
+                HStack(spacing: 5) { Text(article.sources.first?.feedName ?? ""); if store.savedIDs.contains(article.id) { Image(systemName: "bookmark.fill") }; if player.current?.id == article.id { Image(systemName: "waveform").foregroundStyle(Color.accentColor) } }.font(.caption2).foregroundStyle(.secondary)
+            }
+        }.padding(.vertical, 8).listRowBackground(player.current?.id == article.id ? Color.accentColor.opacity(0.09) : nil)
+    }
+}
+struct ThumbnailView: View {
+    let url: URL?
+    @State private var data: Data?
+    var body: some View {
+        Group {
+            if let data, let image = UIImage(data: data) { Image(uiImage: image).resizable().scaledToFill() }
+            else { ZStack { Color.accentColor.opacity(0.08); Image(systemName: "text.alignleft").font(.title2).foregroundStyle(Color.accentColor) } }
+        }.frame(width: 64, height: 64).clipShape(RoundedRectangle(cornerRadius: 10)).accessibilityHidden(true)
+            .task(id: url) { if let url { data = await ImageCache.shared.image(url) } }
+    }
+}
+struct EmptyPanel: View {
+    let icon: String
+    let title: String
+    let message: String
+    var action: (() -> Void)? = nil
+    var body: some View {
+        VStack(spacing: 16) { Image(systemName: icon).font(.system(size: 42)).foregroundStyle(Color.accentColor); Text(title).font(.title2.bold()); Text(message).font(.body).foregroundStyle(.secondary).multilineTextAlignment(.center); if let action { Button("再読み込み", action: action).buttonStyle(.borderedProminent) } }.padding(28).frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
