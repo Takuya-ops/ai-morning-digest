@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-09-23】Claude Opus 5.5 matches Fable 5.1 performance at lower cost and promises less &quot;Claudish&quot; writing ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-23.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-23.html</guid>
+    <pubDate>Tue, 22 Sep 2026 23:11:53 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Claude Opus 5.5 matches Fable 5.1 performance at lower cost and promises less &amp;quot;Claudish&amp;quot; writing&lt;/li&gt;&lt;li&gt;OpenAI「GPT-6 Sol/Luna」発表 料金半額、ただし普通のChatではまだ使えず&lt;/li&gt;&lt;li&gt;SpaceXAI、「Grok 4.7」発表 コーディングと知識労働向けで同社最高性能、価格は据え置き&lt;/li&gt;&lt;li&gt;Better prompt caching for GPT-6&lt;/li&gt;&lt;li&gt;Parallel cut research time and cost in half with GPT‑6 Astra&lt;/li&gt;&lt;li&gt;オープンウェイトの最高評価AIモデル「MiMo-V2.6」、Xiaomiが無償公開 〜1.02TのProはOpus 5に一部で並び、310BのFlashも好成績&lt;/li&gt;&lt;li&gt;Priorities and principles for effective third party assessments&lt;/li&gt;&lt;li&gt;AWS、SalesforceがAI連携を強化 データ分断をどう解消するか&lt;/li&gt;&lt;li&gt;AIを導入した企業ほど困る「データ基盤問題」 パーソルが3サービスで支援へ&lt;/li&gt;&lt;li&gt;Snorkel AI triples valuation to $3.5B as demand for AI training data booms&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-09-22】Amazon blocks Meta’s Muse AI agent ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-22.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-22.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-04.html</guid>
     <pubDate>Fri, 04 Sep 2026 01:10:20 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;GPT-6 Astra is the first model making OpenAI willing to declare the &amp;quot;AGI era&amp;quot;&lt;/li&gt;&lt;li&gt;OrcaRouter、Google「Gemini 3.8 Flash」、Alibaba「Qwen3.8 Max」、Anthropic「Claude Fable 5.1」のフロンティアモデルを提供開始&lt;/li&gt;&lt;li&gt;NVIDIA、AIモデル共有サイト「Hugging Face」を約2兆円で買収へ&lt;/li&gt;&lt;li&gt;複数のAIサービスで障害発生 ChatGPT／Claude／Grok【復旧済み】&lt;/li&gt;&lt;li&gt;Meta、「Muse Spark 1.3」公開 コーディングとエージェント性能を強化 「最大の飛躍」とザッカーバーグCEO&lt;/li&gt;&lt;li&gt;Google’s latest AI weather model gives you no excuse to forget your umbrella&lt;/li&gt;&lt;li&gt;トランプ政権「記事のAI学習は著作権侵害ではない」 OpenAIを支持する意見書、対New York Timesなどとの訴訟で&lt;/li&gt;&lt;li&gt;Daybreak for Frontline Defenders: $1B to protect essential services&lt;/li&gt;&lt;li&gt;Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開&lt;/li&gt;&lt;li&gt;Crusoe reportedly raises $3B at a $30B valuation&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-03】Google、Gemini 3.8 Flashと3.8 Flash Cyberをリリース ―コーディング、エージェントタスク、多段階推論を大幅に強化 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-03.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-03.html</guid>
-    <pubDate>Thu, 03 Sep 2026 10:56:21 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Google、Gemini 3.8 Flashと3.8 Flash Cyberをリリース ―コーディング、エージェントタスク、多段階推論を大幅に強化&lt;/li&gt;&lt;li&gt;Meta、「Muse Spark 1.3」公開 コーディングとエージェント性能を強化 「最大の飛躍」とザッカーバーグCEO&lt;/li&gt;&lt;li&gt;Claudeの“見えない透かし”適用開始 Fable 5.1とMythos 5.1が出力する文やコード、画像に付与 日本も対象&lt;/li&gt;&lt;li&gt;Proactive cyber defense for governments and enterprises&lt;/li&gt;&lt;li&gt;AWSをゲームで学べる“AWSクエスト”にまさかの新バージョン AIバーチャル顧客と対話可能に&lt;/li&gt;&lt;li&gt;OpenAI faces 30 more lawsuits tied to Tumbler Ridge shooting&lt;/li&gt;&lt;li&gt;トランプ政権「記事のAI学習は著作権侵害ではない」 OpenAIを支持する意見書、対New York Timesなどとの訴訟で&lt;/li&gt;&lt;li&gt;Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開&lt;/li&gt;&lt;li&gt;OpenAIが新AIモデル「Astra」を発表、近日中に提供開始へ&lt;/li&gt;&lt;li&gt;ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
