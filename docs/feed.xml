@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-09-24】Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-24.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-24.html</guid>
+    <pubDate>Wed, 23 Sep 2026 23:04:32 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war&lt;/li&gt;&lt;li&gt;Gemini 3.8 text-to-speech&lt;/li&gt;&lt;li&gt;Two years of OpenAI Academy&lt;/li&gt;&lt;li&gt;OpenAI extends cyber access to Ukraine for civilian defense&lt;/li&gt;&lt;li&gt;Sam Altman’s remarks at the United Nations Security Council&lt;/li&gt;&lt;li&gt;Harvey turns legal context into stronger drafts with GPT-6 Astra&lt;/li&gt;&lt;li&gt;How invideo improves color grading 3x with GPT‑6 Astra&lt;/li&gt;&lt;li&gt;Ringg’s AI agents resolve up to 65% of customer calls with OpenAI&lt;/li&gt;&lt;li&gt;Introducing MentalHealthBench&lt;/li&gt;&lt;li&gt;Airbnb widens access to GPT-6 Astra and OpenAI frontier models&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-09-23】Claude Opus 5.5 matches Fable 5.1 performance at lower cost and promises less &quot;Claudish&quot; writing ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-23.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-23.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-05.html</guid>
     <pubDate>Fri, 04 Sep 2026 22:29:05 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;AGI能力テストで99.9%、ChatGPTの新モデル「GPT-6 Astra」登場&lt;/li&gt;&lt;li&gt;ChatGPT・Claude・Grokがほぼ同時刻にダウン&lt;/li&gt;&lt;li&gt;NVIDIAが重たいAI処理を同一ネットワーク内のPCに割り振れる無料ツール「PAIR」を公開&lt;/li&gt;&lt;li&gt;NVIDIAがHugging Faceを2兆円超えで買収したことを正式発表&lt;/li&gt;&lt;li&gt;AI compute provider Nscale is looking for $3.5B in pre-IPO financing&lt;/li&gt;&lt;li&gt;What will Apple’s John Ternus era look like?&lt;/li&gt;&lt;li&gt;Another swarm of OpenAI agents reached the open internet without the frontier lab’s knowledge&lt;/li&gt;&lt;li&gt;Apple’s Ternus era begins as Nvidia bets on the whole AI stack&lt;/li&gt;&lt;li&gt;Google’s Gemini Spark can now manage your Google Photos library&lt;/li&gt;&lt;li&gt;Less than 24 hours to apply for your TechCrunch Disrupt 2026 Side Event&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-04】GPT-6 Astra is the first model making OpenAI willing to declare the &quot;AGI era&quot; ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-04.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-04.html</guid>
-    <pubDate>Fri, 04 Sep 2026 01:10:20 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;GPT-6 Astra is the first model making OpenAI willing to declare the &amp;quot;AGI era&amp;quot;&lt;/li&gt;&lt;li&gt;OrcaRouter、Google「Gemini 3.8 Flash」、Alibaba「Qwen3.8 Max」、Anthropic「Claude Fable 5.1」のフロンティアモデルを提供開始&lt;/li&gt;&lt;li&gt;NVIDIA、AIモデル共有サイト「Hugging Face」を約2兆円で買収へ&lt;/li&gt;&lt;li&gt;複数のAIサービスで障害発生 ChatGPT／Claude／Grok【復旧済み】&lt;/li&gt;&lt;li&gt;Meta、「Muse Spark 1.3」公開 コーディングとエージェント性能を強化 「最大の飛躍」とザッカーバーグCEO&lt;/li&gt;&lt;li&gt;Google’s latest AI weather model gives you no excuse to forget your umbrella&lt;/li&gt;&lt;li&gt;トランプ政権「記事のAI学習は著作権侵害ではない」 OpenAIを支持する意見書、対New York Timesなどとの訴訟で&lt;/li&gt;&lt;li&gt;Daybreak for Frontline Defenders: $1B to protect essential services&lt;/li&gt;&lt;li&gt;Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開&lt;/li&gt;&lt;li&gt;Crusoe reportedly raises $3B at a $30B valuation&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
