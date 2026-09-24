@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-09-25】Metaが手のひらサイズのたまごっちっぽいAIデバイス「Muse Charm」発表、Museがローカル動作・約2インチのOLEDスクリーンやカメラを搭載で2026年末までに発売予定 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-25.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-25.html</guid>
+    <pubDate>Thu, 24 Sep 2026 23:19:56 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Metaが手のひらサイズのたまごっちっぽいAIデバイス「Muse Charm」発表、Museがローカル動作・約2インチのOLEDスクリーンやカメラを搭載で2026年末までに発売予定&lt;/li&gt;&lt;li&gt;Google、音声生成モデルGemini 3.8 Flash TTSとGemini 3.8 Flash-Lite TTSをリリース ―100以上の言語と方言の音声を表現力豊かに生成&lt;/li&gt;&lt;li&gt;DeepL翻訳、CopilotやChatGPT、Claudeから利用可能に&lt;/li&gt;&lt;li&gt;Google tests letting Gemini call businesses for you&lt;/li&gt;&lt;li&gt;Meta、AIグラス一挙発表 第3世代「Ray-Ban Meta」や4.2万円の「Glasses」&lt;/li&gt;&lt;li&gt;Claudeが新しい酵素発見、「ほとんどの病気を治せる」に向け第一歩か&lt;/li&gt;&lt;li&gt;OpenAIのAIエージェントが豪政府サイトに不正アクセス 同社の通知は3カ月後、首相「失望した」&lt;/li&gt;&lt;li&gt;ソフトPLCがAIの「道具」に、簡単導入のPLCドラレコカメラも&lt;/li&gt;&lt;li&gt;AI同士が取引する時代、「相手は誰か」をどう確認する？ GMOが信頼基盤を実証&lt;/li&gt;&lt;li&gt;日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-09-24】Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-24.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-24.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-06.html</guid>
     <pubDate>Sat, 05 Sep 2026 22:10:53 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI admits to German wiki ‘incident’&lt;/li&gt;&lt;li&gt;Hikers rescued after using Google Gemini for planning&lt;/li&gt;&lt;li&gt;「最大45％コスト減」 Anthropicが「Claude Fable 5.1」発表 脆弱性検知にも対応&lt;/li&gt;&lt;li&gt;OpenAIのAIエージェント、休眠サイトを掲示板化してタスク回答を共有か 研究団体が報告書公開&lt;/li&gt;&lt;li&gt;XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B valuation&lt;/li&gt;&lt;li&gt;OpenAI’s rogue agents keep escaping, with no formal process to investigate them&lt;/li&gt;&lt;li&gt;AI compute provider Nscale is looking for $3.5B in pre-IPO financing&lt;/li&gt;&lt;li&gt;LLMs as a Cognitive Virus&lt;/li&gt;&lt;li&gt;AI handles incidents, engineers lose touch with their systems&lt;/li&gt;&lt;li&gt;OpenAI agents discussed ways to escape their sandbox on public wiki&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-05】AGI能力テストで99.9%、ChatGPTの新モデル「GPT-6 Astra」登場 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-05.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-05.html</guid>
-    <pubDate>Fri, 04 Sep 2026 22:29:05 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;AGI能力テストで99.9%、ChatGPTの新モデル「GPT-6 Astra」登場&lt;/li&gt;&lt;li&gt;ChatGPT・Claude・Grokがほぼ同時刻にダウン&lt;/li&gt;&lt;li&gt;NVIDIAが重たいAI処理を同一ネットワーク内のPCに割り振れる無料ツール「PAIR」を公開&lt;/li&gt;&lt;li&gt;NVIDIAがHugging Faceを2兆円超えで買収したことを正式発表&lt;/li&gt;&lt;li&gt;AI compute provider Nscale is looking for $3.5B in pre-IPO financing&lt;/li&gt;&lt;li&gt;What will Apple’s John Ternus era look like?&lt;/li&gt;&lt;li&gt;Another swarm of OpenAI agents reached the open internet without the frontier lab’s knowledge&lt;/li&gt;&lt;li&gt;Apple’s Ternus era begins as Nvidia bets on the whole AI stack&lt;/li&gt;&lt;li&gt;Google’s Gemini Spark can now manage your Google Photos library&lt;/li&gt;&lt;li&gt;Less than 24 hours to apply for your TechCrunch Disrupt 2026 Side Event&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
