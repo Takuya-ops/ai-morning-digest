@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-09-26】Microsoftが次世代「Copilot」を発表=「Home」「Code」「Autopilot」でAI時代の働き方を再定義 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-26.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-26.html</guid>
+    <pubDate>Fri, 25 Sep 2026 23:26:51 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Microsoftが次世代「Copilot」を発表=「Home」「Code」「Autopilot」でAI時代の働き方を再定義&lt;/li&gt;&lt;li&gt;Googleが宇宙にAIデータセンターを設置する実証実験「Project Suncatcher」でAI専用チップ・TPUを搭載した人工衛星を10月1日に打ち上げ&lt;/li&gt;&lt;li&gt;Anthropic to pay Akamai $11.6 billion over seven years in cloud deal&lt;/li&gt;&lt;li&gt;Google、リアルタイムで表情豊かに話すAIアバター「Gemini 3.8 Live with Live Avatar」提供開始 画像1枚で独自アバターも&lt;/li&gt;&lt;li&gt;ChatGPTやCopilotから直接翻訳 「DeepL」のMCP対応で多言語業務はどう変わる？&lt;/li&gt;&lt;li&gt;U.S. appeals court upholds designation of Anthropic as supply chain risk&lt;/li&gt;&lt;li&gt;Proaction boosts sales 60% and saves 75+ hours with Codex&lt;/li&gt;&lt;li&gt;Crusoe abandons $1.25B plan to use Boom turbines at AI data centers&lt;/li&gt;&lt;li&gt;Microsoft、「Copilot」を刷新 「仕事のための新しいOS」とナデラCEO&lt;/li&gt;&lt;li&gt;Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-09-25】Metaが手のひらサイズのたまごっちっぽいAIデバイス「Muse Charm」発表、Museがローカル動作・約2インチのOLEDスクリーンやカメラを搭載で2026年末までに発売予定 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-25.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-25.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-07.html</guid>
     <pubDate>Sun, 06 Sep 2026 22:15:00 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;An Alien Mind&lt;/li&gt;&lt;li&gt;GPT-6 Astra「Low」とUltraを同じ課題で比較したら、修正コードは同一で推論トークンは5.85倍だった&lt;/li&gt;&lt;li&gt;Research acceleration: The view inside OpenAI&lt;/li&gt;&lt;li&gt;Authors push back as publishers and agents make claims on Anthropic settlement&lt;/li&gt;&lt;li&gt;Travis Kalanick’s Atoms might be getting into the robotaxi business&lt;/li&gt;&lt;li&gt;Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft&lt;/li&gt;&lt;li&gt;OpenAI、休眠サイトへの自社AIエージェント書き込みを認め、非公表の理由を説明&lt;/li&gt;&lt;li&gt;「PyBullet」ライブラリをインストール、ロボットシミュレーションを始めよう&lt;/li&gt;&lt;li&gt;「建設SaaS」の戦国時代は第2幕へ、アンドパッドなどベンチャー15社&lt;/li&gt;&lt;li&gt;「ドメイン特化型LLM」で専門業務を支援、ハルシネーションを抑制&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-06】OpenAI admits to German wiki ‘incident’ ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-06.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-06.html</guid>
-    <pubDate>Sat, 05 Sep 2026 22:10:53 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAI admits to German wiki ‘incident’&lt;/li&gt;&lt;li&gt;Hikers rescued after using Google Gemini for planning&lt;/li&gt;&lt;li&gt;「最大45％コスト減」 Anthropicが「Claude Fable 5.1」発表 脆弱性検知にも対応&lt;/li&gt;&lt;li&gt;OpenAIのAIエージェント、休眠サイトを掲示板化してタスク回答を共有か 研究団体が報告書公開&lt;/li&gt;&lt;li&gt;XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B valuation&lt;/li&gt;&lt;li&gt;OpenAI’s rogue agents keep escaping, with no formal process to investigate them&lt;/li&gt;&lt;li&gt;AI compute provider Nscale is looking for $3.5B in pre-IPO financing&lt;/li&gt;&lt;li&gt;LLMs as a Cognitive Virus&lt;/li&gt;&lt;li&gt;AI handles incidents, engineers lose touch with their systems&lt;/li&gt;&lt;li&gt;OpenAI agents discussed ways to escape their sandbox on public wiki&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
