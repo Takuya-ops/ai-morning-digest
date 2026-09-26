@@ -5,6 +5,8 @@ import { clusterArticles, rankClusters } from './cluster.js';
 import { summarizeTopics, fallbackSummary } from './summarize.js';
 import { renderSite, toJstYmd } from './render.js';
 import { notifySlack } from './notify.js';
+import { stableID, classify, createDrafts } from './enrich.js';
+import { attachMicrosoftAudio } from './speech.js';
 
 const TOP_N = Number(process.env.DIGEST_TOP_N || 10);
 const WINDOW_HOURS = Number(process.env.DIGEST_WINDOW_HOURS || 26);
@@ -18,6 +20,7 @@ async function main() {
   const { since, articles, feedErrors, feedCount } = await collectArticles(WINDOW_HOURS);
   console.log(`collect: ${articles.length}件の生成AI関連記事を取得 (取得失敗: ${feedErrors.length}フィード)`);
   for (const e of feedErrors) console.warn(`  ⚠️ ${e.feedName}: ${e.error}`);
+  if (!articles.length) throw new Error('No articles collected; preserving the previous published digest.');
 
   const clusters = rankClusters(clusterArticles(articles));
   console.log(`cluster: ${clusters.length}トピックに集約`);
@@ -33,6 +36,13 @@ async function main() {
     // 見出し・要約の元になった代表記事を先頭に置く(render/notifyはarticles[0]をリンク先に使う)
     const ordered = [c.representative, ...c.members.filter((m) => m !== c.representative)];
     return {
+      id: stableID(c.representative.link),
+      topics: s.topics || classify(s.headline),
+      summaryStyles: s.summaryStyles,
+      ttsText: s.ttsText,
+      faq: s.faq || [],
+      aiGenerated: s.aiGenerated ?? false,
+      socialPost: s.socialPost,
       rank: i + 1,
       headline: s.headline,
       summary: s.summary,
@@ -41,7 +51,7 @@ async function main() {
       sourceCount: c.sourceCount,
       entities: c.entities,
       articles: ordered.map((m) => ({
-        title: m.title, link: m.link, feedName: m.feedName, lang: m.lang, date: m.date,
+        title: m.title, link: m.link, feedName: m.feedName, lang: m.lang, date: m.date, thumbnailURL: m.thumbnailURL,
       })),
     };
   });
@@ -50,10 +60,11 @@ async function main() {
   const others = rest
     .flatMap((c) => c.members)
     .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .map((m) => ({ title: m.title, link: m.link, feedName: m.feedName, lang: m.lang, date: m.date }));
+    .map((m) => ({ title: m.title, link: m.link, feedName: m.feedName, lang: m.lang, date: m.date, excerpt: m.summary, thumbnailURL: m.thumbnailURL }));
 
   const generatedAt = new Date().toISOString();
   const data = {
+    schemaVersion: 2,
     date: toJstYmd(generatedAt),
     generatedAt,
     since,
@@ -66,8 +77,11 @@ async function main() {
     },
     topics,
     others,
+    audioDurationSec: Math.ceil(topics.reduce((n, t) => n + (t.ttsText || `${t.headline}。${t.summary}`).length, 0) / 5),
+    socialDrafts: createDrafts(topics, toJstYmd(generatedAt)),
   };
 
+  await attachMicrosoftAudio(data);
   renderSite(data, docsDir);
   console.log(`render: ${docsDir} にHTML/JSON/RSSを出力しました (${data.date})`);
 
