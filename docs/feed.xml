@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-09-28】「アサヒ・ニチレイの惨劇」はどう防げた？ 米HP幹部が語る“ネット遮断AI”と日本攻略 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-28.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-28.html</guid>
+    <pubDate>Sun, 27 Sep 2026 23:19:04 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;「アサヒ・ニチレイの惨劇」はどう防げた？ 米HP幹部が語る“ネット遮断AI”と日本攻略&lt;/li&gt;&lt;li&gt;ロボットを入れれば終わりじゃない フィジカルAIを現場で動かす企業の役割とは&lt;/li&gt;&lt;li&gt;離職率16.2％から6.7％へ 筑波記念病院がAIで見つけた「職場の見えない課題」&lt;/li&gt;&lt;li&gt;安川電機が熟練工の「感覚」をAIロボットで再現、カメラで見ながらアーク溶接&lt;/li&gt;&lt;li&gt;トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設&lt;/li&gt;&lt;li&gt;ファナックがAI溶接エージェント実演 ロボット制御装置が安全PLCに&lt;/li&gt;&lt;li&gt;Anthropic’s CEO is about to have dinner with President Trump&lt;/li&gt;&lt;li&gt;Can Muse overcome Meta’s trust issues?&lt;/li&gt;&lt;li&gt;Anthropic’s Dario Amodei gets the SNL treatment&lt;/li&gt;&lt;li&gt;Claude Code の PreCompact hook でコンテキスト圧縮(/compact・自動圧縮)の直前に作業状態を退避する実装手順 — 圧縮は止められない・stdout は注入されない・auto では custom_instructions が空、3つのハマりどころ【2026】&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-09-27】Microsoft、Copilotを刷新 — Home・Code・常駐エージェント「Autopilot」の3本柱に ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-27.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-27.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-09.html</guid>
     <pubDate>Tue, 08 Sep 2026 22:55:04 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Meta debuts its Muse AI agent. Will consumers trust it?&lt;/li&gt;&lt;li&gt;Introducing ChatGPT Images 2.5&lt;/li&gt;&lt;li&gt;ChatGPT Workに「ユーザーの文章のクセを学んで再現する機能」が追加される&lt;/li&gt;&lt;li&gt;On the Navier–Stokes Millennium Prize Problem&lt;/li&gt;&lt;li&gt;Mistral raises €3B as sovereign AI becomes big business&lt;/li&gt;&lt;li&gt;AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome&lt;/li&gt;&lt;li&gt;ChatGPT、有料ユーザー全リセット 「Astra」で使い切った人向けに&lt;/li&gt;&lt;li&gt;How GPT-5.6 Sol helps run quantum computing experiments&lt;/li&gt;&lt;li&gt;The Work Now Within Reach&lt;/li&gt;&lt;li&gt;GitHub、Copilot CLIで複数AIモデルを使い分けてコスト削減を図る「Project HydraFusion」を研究プレビューで提供&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-08】M365 Copilotでも「GPT-6 Astra」利用可能に 「Fable 5.1」も可 Work IQと合わせて「より的確な応答」に ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-08.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-08.html</guid>
-    <pubDate>Mon, 07 Sep 2026 22:57:52 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;M365 Copilotでも「GPT-6 Astra」利用可能に 「Fable 5.1」も可 Work IQと合わせて「より的確な応答」に&lt;/li&gt;&lt;li&gt;GitHub Copilotが複数AIモデルを自動で使い分ける「HydraFusion」を公開、TerminalBench 2.1でClaude Opus 5比コスト67％減・スコア4.9ポイント向上&lt;/li&gt;&lt;li&gt;Supporting independent journalism in Ukraine&lt;/li&gt;&lt;li&gt;AI創薬候補、6種の「老化時計」で生物学的年齢の低下を示唆&lt;/li&gt;&lt;li&gt;Googleの自動化ツール「Workspace Studio」とは？ 他ツールとの違いと活用法&lt;/li&gt;&lt;li&gt;中国新興自動車メーカーが取り組むAIアーキテクチャ「LBM」は本流となるか&lt;/li&gt;&lt;li&gt;Opaque recurrence, and other AI terms that you should probably know&lt;/li&gt;&lt;li&gt;独自AI搭載の「国産四足歩行ロボ」、デモ動画を公開 東大発スタートアップのHighlanders&lt;/li&gt;&lt;li&gt;生成AIの普及だけじゃない 「デザイン業の倒産」が前年同期比166％増になった意外な理由&lt;/li&gt;&lt;li&gt;「Copilot、Word文書まとめて」で社内全滅？ 勝手に増殖するAIウイルスで大騒ぎ：895th Lap&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
