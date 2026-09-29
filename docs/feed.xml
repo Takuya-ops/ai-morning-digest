@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-09-29】Anthropic、「Claude Sonnet 5.5」公開 料金据え置きで30％以上高速化、タスク当たりコスト最大3割減 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-29.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-29.html</guid>
+    <pubDate>Tue, 29 Sep 2026 00:29:18 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Anthropic、「Claude Sonnet 5.5」公開 料金据え置きで30％以上高速化、タスク当たりコスト最大3割減&lt;/li&gt;&lt;li&gt;AIが書いたコードは「ブラックボックス」でいい？ Claude Code作者が語るプロトタイプと本番の線引き&lt;/li&gt;&lt;li&gt;Nvidia launches new platform for reining in rogue AI agents&lt;/li&gt;&lt;li&gt;OpenAI’s AI agents need to catch up&lt;/li&gt;&lt;li&gt;Google、「Gemini 3.8 Live with Live Avatar」を一般提供開始&lt;/li&gt;&lt;li&gt;最先端AIモデルの「思考しすぎてコスト増加」を解決するべくKimi K3ベースで開発されたAIモデル「Ember-1」が登場&lt;/li&gt;&lt;li&gt;The Lenfest Institute grows landmark program with expanded OpenAI support&lt;/li&gt;&lt;li&gt;Are you a Codex Original?&lt;/li&gt;&lt;li&gt;Basis completes a tax workbook 2x faster with GPT-6 Astra&lt;/li&gt;&lt;li&gt;OpenAI reportedly ditches model over safety concerns&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-09-28】「アサヒ・ニチレイの惨劇」はどう防げた？ 米HP幹部が語る“ネット遮断AI”と日本攻略 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-28.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-28.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-10.html</guid>
     <pubDate>Wed, 09 Sep 2026 22:41:52 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAIが画像生成AI「ChatGPT Images 2.5」をリリースしたので使ってみた&lt;/li&gt;&lt;li&gt;Meta、パーソナルAIエージェント「Muse」発表 メール送信や買い物も代行（まずは米国で無料提供開始）&lt;/li&gt;&lt;li&gt;OpenAI、ミレニアム懸賞問題「ナビエ・ストークス方程式」をAIが解決したと発表 数学者は経緯に反発&lt;/li&gt;&lt;li&gt;‘Gambling with our lives’: Anthropic researcher quits, warns against self-improving AI&lt;/li&gt;&lt;li&gt;GPT-6 Astra: The next generation in intelligence for work&lt;/li&gt;&lt;li&gt;ChatGPTのProプラン「新規受付一時停止するかも…」 GPT-6 Astraの「前例のない需要」受けて&lt;/li&gt;&lt;li&gt;Anthropicの研究者が退社し超知能の開発競争を猛批判──「来年末には制御不能になる可能性」&lt;/li&gt;&lt;li&gt;Google&amp;#39;s AI genome system evaluates every possible one-base change&lt;/li&gt;&lt;li&gt;「Apple Watch Ultra 4」発表、Siri AIや音声検知に対応 9月18日発売へ&lt;/li&gt;&lt;li&gt;動画編集の「DaVinci Resolve」、ClaudeやCodexからの操作に対応&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-09】Meta debuts its Muse AI agent. Will consumers trust it? ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-09.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-09.html</guid>
-    <pubDate>Tue, 08 Sep 2026 22:55:04 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Meta debuts its Muse AI agent. Will consumers trust it?&lt;/li&gt;&lt;li&gt;Introducing ChatGPT Images 2.5&lt;/li&gt;&lt;li&gt;ChatGPT Workに「ユーザーの文章のクセを学んで再現する機能」が追加される&lt;/li&gt;&lt;li&gt;On the Navier–Stokes Millennium Prize Problem&lt;/li&gt;&lt;li&gt;Mistral raises €3B as sovereign AI becomes big business&lt;/li&gt;&lt;li&gt;AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome&lt;/li&gt;&lt;li&gt;ChatGPT、有料ユーザー全リセット 「Astra」で使い切った人向けに&lt;/li&gt;&lt;li&gt;How GPT-5.6 Sol helps run quantum computing experiments&lt;/li&gt;&lt;li&gt;The Work Now Within Reach&lt;/li&gt;&lt;li&gt;GitHub、Copilot CLIで複数AIモデルを使い分けてコスト削減を図る「Project HydraFusion」を研究プレビューで提供&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
