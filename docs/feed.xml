@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-01】OpenAI、AIとチームで作業する「ChatGPT Space」と、継続的に動作するクラウドエージェント「dots」を発表。GPT-6.1 Solも提供開始 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-01.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-01.html</guid>
+    <pubDate>Thu, 01 Oct 2026 00:06:12 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、AIとチームで作業する「ChatGPT Space」と、継続的に動作するクラウドエージェント「dots」を発表。GPT-6.1 Solも提供開始&lt;/li&gt;&lt;li&gt;Google releases Gemini 4 Argon, called its most powerful model yet&lt;/li&gt;&lt;li&gt;「中国のGLM-5.3はClaude Mythos Preview級のサイバー攻撃能力を持つ一方で安全対策が不十分」とAnthropicが警告&lt;/li&gt;&lt;li&gt;AI時代に接近する決済とトークン Stripeが描くエージェンティックエコノミー&lt;/li&gt;&lt;li&gt;Google reportedly tests paying publishers for AI search results&lt;/li&gt;&lt;li&gt;Disrupting a coordinated model-distillation campaign&lt;/li&gt;&lt;li&gt;Helping small businesses put AI to work&lt;/li&gt;&lt;li&gt;AI主権はなぜ「切実な経営課題」になったのか モデル“禁輸”問題が示した「選択肢を持つこと」の重要性&lt;/li&gt;&lt;li&gt;日立とファナックがフィジカルAI協業 日立エッジAI×ファナックロボ有効性も検証&lt;/li&gt;&lt;li&gt;Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-09-30】GPT-6.1 Sol comes close to Astra at a fifth of the price ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-30.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-30.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-12.html</guid>
     <pubDate>Fri, 11 Sep 2026 22:44:16 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;グーグル、「Gemini」のWindowsアプリを公開 Alt＋スペースで手軽に起動&lt;/li&gt;&lt;li&gt;ChatGPT Work、質問するだけで社内データ分析・グラフやダッシュボードも作る「Data agent」&lt;/li&gt;&lt;li&gt;OpenAI、金融機関向け「ChatGPT for Financial Services」 金融データ搭載し「GPT-6 Astra」で分析&lt;/li&gt;&lt;li&gt;Codexと同じハーネスを使ってAIエージェントを作れる「Agents API」が登場&lt;/li&gt;&lt;li&gt;ChatGPT、最上位プランの新規受付を一時停止 「Astra」需要対応のため 既存加入者には影響なし&lt;/li&gt;&lt;li&gt;Rapidly scaling online storage to serve over 1 billion ChatGPT users&lt;/li&gt;&lt;li&gt;Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too&lt;/li&gt;&lt;li&gt;OpenAI’s feud with mathematicians is only escalating&lt;/li&gt;&lt;li&gt;One week left to book your exhibit table at TechCrunch Disrupt 2026&lt;/li&gt;&lt;li&gt;Final, final, final call for TechCrunch Disrupt 2026 Side Events&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-11】Metaの個人向け新AIエージェント「Muse」、機密コンピューティングに注目 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-11.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-11.html</guid>
-    <pubDate>Thu, 10 Sep 2026 22:43:59 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Metaの個人向け新AIエージェント「Muse」、機密コンピューティングに注目&lt;/li&gt;&lt;li&gt;GPT-6 Astraが人気すぎてOpenAIのサーバーがピンチでProプランの新規サブスク契約が一時停止されるかも&lt;/li&gt;&lt;li&gt;Introducing the Agents API&lt;/li&gt;&lt;li&gt;How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules&lt;/li&gt;&lt;li&gt;Now everyone can put data to work&lt;/li&gt;&lt;li&gt;Introducing ChatGPT for Financial Services&lt;/li&gt;&lt;li&gt;Expanding AI access and cyber defense for federal, state, local, and tribal governments&lt;/li&gt;&lt;li&gt;Build more natural voice experiences with GPT‑Live‑1 in the API&lt;/li&gt;&lt;li&gt;好業績なのに“上場廃止” なぜネットワンはSCSKとの「攻めの統合」に賭けたのか&lt;/li&gt;&lt;li&gt;「AI利用料は90％下落、でも支出増」の怪――AIコスト問題で注目の「ジェボンズのパラドックス」から考える&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
