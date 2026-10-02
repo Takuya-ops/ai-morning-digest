@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-03】ChatGPTの“利用制限”リセットへ 有料ユーザー向け ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-03.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-03.html</guid>
+    <pubDate>Fri, 02 Oct 2026 23:57:47 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;ChatGPTの“利用制限”リセットへ 有料ユーザー向け&lt;/li&gt;&lt;li&gt;A model guide for the GPT-6 family&lt;/li&gt;&lt;li&gt;Chatham scales its capital markets expertise with OpenAI&lt;/li&gt;&lt;li&gt;Sean Parker is rebuilding Stability AI around music&lt;/li&gt;&lt;li&gt;Affected by layoffs? Don’t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass&lt;/li&gt;&lt;li&gt;Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents&lt;/li&gt;&lt;li&gt;Call it AI, call it Super Intelligence, only 2% of consumers are buying it&lt;/li&gt;&lt;li&gt;It’s not AI anymore, it’s ‘super intelligence’ (according to the White House)&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026: Blackstone’s Jas Khaira on building the next generation of AI giants&lt;/li&gt;&lt;li&gt;Circuit Breaker Labs hopes to make AI safer for your kids (and you)&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-02】Google、GPT-6 Astra対抗の「Gemini 4 Argon」発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-02.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-02.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-14.html</guid>
     <pubDate>Sun, 13 Sep 2026 22:33:35 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Anthoropic CEOが「AI開発の減速」提言 OpenAIアルトマン氏、イーロン・マスク氏も賛同&lt;/li&gt;&lt;li&gt;What’s behind the AI industry’s latest warnings of doom?&lt;/li&gt;&lt;li&gt;Obama urges Democrats to have a ‘clear plan’ for AI safeguards&lt;/li&gt;&lt;li&gt;「AIコーディングより人を雇う方が安い」時代が来る？ 生成AIの予算超過を防ぐトークン浪費対策の全て&lt;/li&gt;&lt;li&gt;本命はAIエージェントによる変革 日本企業を阻む2つの壁&lt;/li&gt;&lt;li&gt;機械学習のトップ会議 医療とロボ技術に脚光&lt;/li&gt;&lt;li&gt;バーティカルAI（Vertical AI）&lt;/li&gt;&lt;li&gt;「死亡事故がゼロの世の中を」──苦節7年、危険な作業をAIで省力化 全国で稼働する「交通誘導AI」の現在地&lt;/li&gt;&lt;li&gt;Claude Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher&lt;/li&gt;&lt;li&gt;AI社員がファクトチェック、日報は翌日作業のコンテキスト&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-13】OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-13.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-13.html</guid>
-    <pubDate>Sat, 12 Sep 2026 22:29:13 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026&lt;/li&gt;&lt;li&gt;SpotifyのエンジニアがClaude Codeのトークン消費を約90％削減した方法とは?&lt;/li&gt;&lt;li&gt;Anthropic CEO outlines plan to slow AI development&lt;/li&gt;&lt;li&gt;Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data&lt;/li&gt;&lt;li&gt;Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too&lt;/li&gt;&lt;li&gt;OpenAI’s feud with mathematicians is only escalating&lt;/li&gt;&lt;li&gt;One week left to book your exhibit table at TechCrunch Disrupt 2026&lt;/li&gt;&lt;li&gt;Final, final, final call for TechCrunch Disrupt 2026 Side Events&lt;/li&gt;&lt;li&gt;OpenAI’s rogue AI tried to hack another company in May&lt;/li&gt;&lt;li&gt;Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
