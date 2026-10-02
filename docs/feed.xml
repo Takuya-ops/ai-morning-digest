@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-02】Google、GPT-6 Astra対抗の「Gemini 4 Argon」発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-02.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-02.html</guid>
+    <pubDate>Fri, 02 Oct 2026 00:03:50 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Google、GPT-6 Astra対抗の「Gemini 4 Argon」発表&lt;/li&gt;&lt;li&gt;Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search&lt;/li&gt;&lt;li&gt;The eternal complement&lt;/li&gt;&lt;li&gt;How Albertsons Companies is reimagining retail from the inside out&lt;/li&gt;&lt;li&gt;GoogleがGeminiアプリとWorkspaceに「スキル」を導入、Gemsは廃止へ&lt;/li&gt;&lt;li&gt;The Den frees up 10-15 hours a week to grow with ChatGPT Work&lt;/li&gt;&lt;li&gt;「長く働くAI」が裏目に？ OpenAIの“脱走事件”が示すリスクの変化 企業に求められる対応は&lt;/li&gt;&lt;li&gt;「DMに逃げる理由は秘密保持ではない」 人とAIエージェントの“最強チーム”を作るベストプラクティス&lt;/li&gt;&lt;li&gt;ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能&lt;/li&gt;&lt;li&gt;「Claude」3倍高速化の裏で、Anthropic開発者が「あえてしなかったこと」：899th Lap&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-01】OpenAI、AIとチームで作業する「ChatGPT Space」と、継続的に動作するクラウドエージェント「dots」を発表。GPT-6.1 Solも提供開始 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-01.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-01.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-13.html</guid>
     <pubDate>Sat, 12 Sep 2026 22:29:13 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026&lt;/li&gt;&lt;li&gt;SpotifyのエンジニアがClaude Codeのトークン消費を約90％削減した方法とは?&lt;/li&gt;&lt;li&gt;Anthropic CEO outlines plan to slow AI development&lt;/li&gt;&lt;li&gt;Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data&lt;/li&gt;&lt;li&gt;Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too&lt;/li&gt;&lt;li&gt;OpenAI’s feud with mathematicians is only escalating&lt;/li&gt;&lt;li&gt;One week left to book your exhibit table at TechCrunch Disrupt 2026&lt;/li&gt;&lt;li&gt;Final, final, final call for TechCrunch Disrupt 2026 Side Events&lt;/li&gt;&lt;li&gt;OpenAI’s rogue AI tried to hack another company in May&lt;/li&gt;&lt;li&gt;Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-12】グーグル、「Gemini」のWindowsアプリを公開 Alt＋スペースで手軽に起動 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-12.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-12.html</guid>
-    <pubDate>Fri, 11 Sep 2026 22:44:16 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;グーグル、「Gemini」のWindowsアプリを公開 Alt＋スペースで手軽に起動&lt;/li&gt;&lt;li&gt;ChatGPT Work、質問するだけで社内データ分析・グラフやダッシュボードも作る「Data agent」&lt;/li&gt;&lt;li&gt;OpenAI、金融機関向け「ChatGPT for Financial Services」 金融データ搭載し「GPT-6 Astra」で分析&lt;/li&gt;&lt;li&gt;Codexと同じハーネスを使ってAIエージェントを作れる「Agents API」が登場&lt;/li&gt;&lt;li&gt;ChatGPT、最上位プランの新規受付を一時停止 「Astra」需要対応のため 既存加入者には影響なし&lt;/li&gt;&lt;li&gt;Rapidly scaling online storage to serve over 1 billion ChatGPT users&lt;/li&gt;&lt;li&gt;Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too&lt;/li&gt;&lt;li&gt;OpenAI’s feud with mathematicians is only escalating&lt;/li&gt;&lt;li&gt;One week left to book your exhibit table at TechCrunch Disrupt 2026&lt;/li&gt;&lt;li&gt;Final, final, final call for TechCrunch Disrupt 2026 Side Events&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
