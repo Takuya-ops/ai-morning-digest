@@ -1,13 +1,13 @@
 {
  "schemaVersion": 2,
  "date": "2026-10-04",
- "generatedAt": "2026-10-03T23:08:57.625Z",
- "since": "2026-10-02T21:08:52.140Z",
+ "generatedAt": "2026-10-03T23:11:28.559Z",
+ "since": "2026-10-02T21:11:22.636Z",
  "windowHours": 26,
  "stats": {
-  "articleCount": 46,
+  "articleCount": 45,
   "feedCount": 32,
-  "topicCount": 44,
+  "topicCount": 43,
   "feedErrors": [
    {
     "feedId": "venturebeat-ai",
@@ -48,7 +48,10 @@
      "lang": "en",
      "date": "2026-10-03T22:18:13.000Z"
     }
-   ]
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/d746a1ec25a18f451c1697ca-gemini-3.8-flash-tts-Kore.wav"
+   }
   },
   {
    "id": "f2d7ab32786c48e1f7e3e06b",
@@ -83,7 +86,10 @@
      "lang": "ja",
      "date": "2026-10-03T02:00:00.000Z"
     }
-   ]
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/b789b33ee052260f72323de8-gemini-3.8-flash-tts-Kore.wav"
+   }
   },
   {
    "id": "67dac9f5f51307d87730bad3",
@@ -109,7 +115,10 @@
      "lang": "en",
      "date": "2026-10-03T18:43:57.000Z"
     }
-   ]
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/059d7c3b8feeed71d7e2b842-gemini-3.8-flash-tts-Kore.wav"
+   }
   },
   {
    "id": "3c49c40e0ec38e267dc70e67",
@@ -133,7 +142,10 @@
      "lang": "en",
      "date": "2026-10-03T14:00:00.000Z"
     }
-   ]
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/dbf419221dda82d7cdbce45a-gemini-3.8-flash-tts-Kore.wav"
+   }
   },
   {
    "id": "e80cb1c2a280ae7d538463b1",
@@ -160,7 +172,10 @@
      "lang": "ja",
      "date": "2026-10-03T08:52:00.000Z"
     }
-   ]
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/3e5a17d8a0327289723e329a-gemini-3.8-flash-tts-Kore.wav"
+   }
   },
   {
    "id": "3e010d7a21429a0fec6c6dc0",
@@ -188,7 +203,10 @@
      "lang": "ja",
      "date": "2026-10-03T01:41:21.000Z"
     }
-   ]
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/00d160ad90bcb97111ac476a-gemini-3.8-flash-tts-Kore.wav"
+   }
   },
   {
    "id": "0b0013541ceaec0bcf7f5bbc",
@@ -214,33 +232,10 @@
      "lang": "en",
      "date": "2026-10-03T00:45:39.000Z"
     }
-   ]
-  },
-  {
-   "id": "5671402926db891c3047aac7",
-   "topics": [
-    "モデル・API"
    ],
-   "faq": [],
-   "aiGenerated": false,
-   "rank": 8,
-   "headline": "Sean Parker is rebuilding Stability AI around music",
-   "summary": "Sean Parker, who once taught the music industry what asking for forgiveness looks like, is now back with the labels' blessing and money.",
-   "whyItMatters": "",
-   "score": 4,
-   "sourceCount": 1,
-   "entities": [
-    "stability"
-   ],
-   "articles": [
-    {
-     "title": "Sean Parker is rebuilding Stability AI around music",
-     "link": "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/",
-     "feedName": "TechCrunch AI",
-     "lang": "en",
-     "date": "2026-10-02T21:09:14.000Z"
-    }
-   ]
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/977acb95c24e305574a464c1-gemini-3.8-flash-tts-Kore.wav"
+   }
   },
   {
    "id": "bd1136d0fcfd6f1357de280a",
@@ -249,7 +244,7 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 9,
+   "rank": 8,
    "headline": "The Agent Said It Was Done. The Database Disagreed.",
    "summary": "(要約情報なし。リンク先をご確認ください)",
    "whyItMatters": "",
@@ -264,7 +259,10 @@
      "lang": "en",
      "date": "2026-10-03T22:56:48.000Z"
     }
-   ]
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/52253de3e9535ccd60b2c810-gemini-3.8-flash-tts-Kore.wav"
+   }
   },
   {
    "id": "337e3f19ed608da6ed2eaa07",
@@ -274,7 +272,7 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 10,
+   "rank": 9,
    "headline": "Getting the most out of Opus 5.5 in Claude and Claude Code",
    "summary": "Article URL: https://claude.dev/blog/getting-the-most-out-of-opus-5-5/ Comments URL: https://news.ycombinator.com/item?id=49946567 Points: 127 # Comments: 85",
    "whyItMatters": "",
@@ -291,7 +289,37 @@
      "lang": "en",
      "date": "2026-10-03T18:29:30.000Z"
     }
-   ]
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/63bbca53d479d1b9a20ee9c1-gemini-3.8-flash-tts-Kore.wav"
+   }
+  },
+  {
+   "id": "f0287c92448162787e962af7",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 10,
+   "headline": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+   "summary": "https://archive.ph/TyDPf Comments URL: https://news.ycombinator.com/item?id=49946228 Points: 39 # Comments: 16",
+   "whyItMatters": "",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+     "link": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-10-03T17:44:29.000Z"
+    }
+   ],
+   "audio": {
+    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/ae4ad918525a62543cacdd3c-gemini-3.8-flash-tts-Kore.wav"
+   }
   }
  ],
  "others": [
@@ -342,14 +370,6 @@
    "lang": "en",
    "date": "2026-10-03T18:56:30.000Z",
    "excerpt": "OpenAI CEO Sam Altman warns against attributing religious power to AI models, calling it a \"real safety issue.\" His comments follow reports on Anthropic's meetings with religious thinkers and a statement by Pope Leo XIV on AI. As recently as 2024, Altman himself spoke of building \"magic intelligence in the sky\" and feeling \"on the side of the angels\" working on AI. The article Apparently, OpenAI isn't trying to build \"magic intelligence in the sky\" anymore appeared first on The Decoder."
-  },
-  {
-   "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
-   "link": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
-   "feedName": "Hacker News",
-   "lang": "en",
-   "date": "2026-10-03T17:44:29.000Z",
-   "excerpt": "https://archive.ph/TyDPf Comments URL: https://news.ycombinator.com/item?id=49946228 Points: 39 # Comments: 16"
   },
   {
    "title": "Capcom is preparing for a ‘future where we create games together with AI’",
@@ -655,14 +675,14 @@
    "aiGenerated": false
   },
   {
-   "id": "2026-10-04-5671402926db891c3047aac7-0",
-   "title": "8. Sean Parker is rebuilding Stability AI around music",
-   "text": "【AIニュース】\nSean Parker is rebuilding Stability AI around music\nSean Parker, who once taught the music industry what asking for forgiveness looks like, is now back with the labels' blessing and money.\nhttps://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/\n#生成AI",
+   "id": "2026-10-04-bd1136d0fcfd6f1357de280a-0",
+   "title": "8. The Agent Said It Was Done. The Database Disagreed.",
+   "text": "【AIニュース】\nThe Agent Said It Was Done. The Database Disagreed.\n(要約情報なし。リンク先をご確認ください)\nhttps://huggingface.co/blog/microsoft/thinkingbox\n#生成AI",
    "sourceIDs": [
-    "5671402926db891c3047aac7"
+    "bd1136d0fcfd6f1357de280a"
    ],
    "sourceURLs": [
-    "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/"
+    "https://huggingface.co/blog/microsoft/thinkingbox"
    ],
    "aiGenerated": false
   },
