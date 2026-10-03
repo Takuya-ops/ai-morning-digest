@@ -87,7 +87,7 @@ test('Gemini sends verbatim Japanese and separate style to official host; preser
 });
 test('Gemini rejects errors, interrupted output, raw PCM, truncated WAV and missing audio', async () => {
   for (const response of [new Response('private details', { status: 429 }), geminiResponse(wav(), 'audio/l16'), geminiResponse(wav(), 'audio/wav', 'MAX_TOKENS'), geminiResponse(Buffer.alloc(600)), geminiResponse(wav().subarray(0, 900)), Response.json({ candidates: [] })]) {
-    await assert.rejects(synthesizeGemini('ニュース', { key: 'test-only', fetcher: async () => response }));
+    await assert.rejects(synthesizeGemini('ニュース', { key: 'test-only', fetcher: async () => response, sleep: async () => {} }));
   }
   await assert.rejects(synthesizeGemini('ニュース', {}), /not configured/);
 });
@@ -125,4 +125,21 @@ test('WAV release uploads declare audio/wav', async () => {
     return Response.json({ browser_download_url: 'https://github.com/owner/repo/releases/download/day/gemini.wav' });
   } });
   await publisher.upload('gemini.wav', wav());
+});
+
+test('Gemini honors Retry-After and succeeds after a transient rate limit', async () => {
+  let calls = 0; const waits = [];
+  const audio = await synthesizeGemini('ニュース', { key: 'test-only', sleep: async ms => waits.push(ms), fetcher: async () => {
+    calls++;
+    return calls === 1 ? new Response('', { status: 429, headers: { 'Retry-After': '2' } }) : geminiResponse();
+  } });
+  assert.deepEqual(audio, wav()); assert.equal(calls, 2); assert.deepEqual(waits, [2000]);
+});
+test('Gemini exhausted quota has bounded retries and permission failures are not retried', async () => {
+  for (const status of [429, 403]) {
+    let calls = 0; const waits = [];
+    await assert.rejects(synthesizeGemini('ニュース', { key: 'test-only', sleep: async ms => waits.push(ms), fetcher: async () => { calls++; return new Response('', { status }); } }), new RegExp(`HTTP ${status}`));
+    assert.equal(calls, status === 429 ? 4 : 1);
+    assert.deepEqual(waits, status === 429 ? [60000, 60000, 60000] : []);
+  }
 });

@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { setTimeout as delay } from 'node:timers/promises';
 
 // Official Azure Speech REST API. No browser/Edge impersonation or shared app key.
 export const MICROSOFT_VOICES = ['ja-JP-NanamiNeural', 'ja-JP-KeitaNeural'];
@@ -115,17 +116,28 @@ export function geminiAssetName(topic) {
   const hash = createHash('sha256').update(`${GEMINI_MODEL}\nKore\n${GEMINI_STYLE}\nwav-v1\n${speechText(topic)}`).digest('hex').slice(0, 24);
   return `${hash}-${GEMINI_VOICE}.wav`;
 }
-export async function synthesizeGemini(text, { key, fetcher = fetch } = {}) {
+export async function synthesizeGemini(text, { key, fetcher = fetch, sleep = delay } = {}) {
   if (!key) throw new Error('GEMINI_API_KEY not configured');
   if (!text?.trim()) throw new Error('Empty narration');
-  const response = await fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`, {
-    method: 'POST', redirect: 'error', signal: AbortSignal.timeout(120_000),
+  const request = {
+    method: 'POST', redirect: 'error',
     headers: { 'x-goog-api-key': key, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       contents: [{ role: 'user', parts: [{ text, speech_metadata: { style: GEMINI_STYLE } }] }],
       generationConfig: { responseModalities: ['AUDIO'], speechConfig: { voiceConfig: { voice: 'Kore' } } },
     }),
-  });
+  };
+  let response;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    response = await fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`, { ...request, signal: AbortSignal.timeout(120_000) });
+    if (![429, 503].includes(response.status) || attempt === 3) break;
+    const retryAfter = response.headers.get('retry-after');
+    const seconds = retryAfter && /^\d+$/.test(retryAfter) ? Number(retryAfter) : retryAfter ? (Date.parse(retryAfter) - Date.now()) / 1000 : NaN;
+    // Free-tier minute limits can be lower than a ten-article digest. Bound
+    // retries also for daily quota exhaustion; never expose API error bodies.
+    await response.body?.cancel();
+    await sleep(Number.isFinite(seconds) ? Math.min(120, Math.max(1, seconds)) * 1000 : 60_000);
+  }
   // Never log provider response bodies, which can contain request details.
   if (!response.ok) throw new Error(`Gemini TTS HTTP ${response.status}`);
   const result = await response.json();
