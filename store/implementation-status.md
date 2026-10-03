@@ -80,4 +80,6 @@ App Storeへのアップロード・再提出・承認は行っていません�
 - `checks` の手動実行で `gemini_sample=true` を選ぶと短い日本語サンプルを生成し、7日保存のActions artifactへ出力。通常のPRテストではAPIを呼ばない。
 - Node 17件・iOS 21件成功（WAVキャッシュ・旧設定の移行・手動選択の保持を含む）。ActionsのPRチェック成功。GEMINI_API_KEYのSecret登録を確認。
 - 実API検証: Actions run 37160587864で日本語サンプル生成成功。15.36秒、24kHz/mono/PCM16 WAV、全体デコード成功、最大音量 -1.0dB。音源はローカル `audio-check/gemini-sample.wav` とActions artifact（7日）。耳での試聴評価は未実施。
-- build 5の署名付きReleaseアーカイブとcodesign検証に成功。実機導入・本番配信は未実施。既存PR #1には音声以外の未マージ改修も含むため、マージ範囲の確認が必要。
+- build 5の署名付きReleaseアーカイブとcodesign検証に成功。アーカイブはローカル `ios/build/AIDigest-gemini-build5.xcarchive`。build 5の実機導入・App Store転送は未実施。
+- 本人のGitHub反映依頼によりPR #1をmainへマージ（e1821f9）。本番初回で429となったため、Retry-After対応・最大3回の待機再試行を追加（b8efce2）。Nodeは19件成功。
+- 本番再実行 [37160942732](https://github.com/Takuya-ops/ai-morning-digest/actions/runs/37160942732) 成功。2026-10-04の10記事すべてにGemini音声を配信。Pages成功、公開latest.jsonの10件のURLと全10音声のHTTP 200・合計10,407,540 bytesを確認。日次処理もGeminiを使用。
