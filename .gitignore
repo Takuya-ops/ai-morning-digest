@@ -9,3 +9,11 @@ DerivedData/
 
 # Xcode build artifacts
 ios/build/
+.env
+.env.*
+!.env.example
+*.xcarchive/
+*.ipa
+
+# Local TTS verification outputs
+audio-check/

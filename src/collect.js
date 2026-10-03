@@ -12,6 +12,7 @@ const parser = new Parser({
     item: [
       ['dc:date', 'dcDate'],
       ['content:encoded', 'contentEncoded'],
+      ['media:thumbnail', 'mediaThumbnail'],
     ],
   },
 });
@@ -103,6 +104,7 @@ async function fetchFeed(feed, since) {
       link,
       date: date.toISOString(),
       summary,
+      thumbnailURL: [item.enclosure?.type?.startsWith('image/') ? item.enclosure.url : null, item.mediaThumbnail?.$?.url].find(u => typeof u === 'string' && u.startsWith('https://')),
     });
   }
   return items;

@@ -5,9 +5,9 @@
 
 📖 **毎朝ここを見る** → https://takuya-ops.github.io/ai-morning-digest/
 
-## デモ動画
+## 旧版のデモ動画（build 2）
 
-実際のiPhone画面で、ニュースTOP10、通知時刻の設定、過去の日付の閲覧、参照元の記事の確認を55秒で紹介しています。
+改修前のiPhone画面で、ニュースTOP10、通知時刻の設定、過去の日付の閲覧、参照元の記事の確認を55秒で紹介しています。今回のbuild 4の画面とは異なります。
 
 **[▶ デモ動画を確認したい方はこちら（AIナレーション付き）](https://takuya-ops.github.io/ai-morning-digest/demo/ai-digest-short-narrated.mp4)**
 
@@ -29,10 +29,70 @@
 
 [ios/](ios/) にSwiftUI製のネイティブiPhoneアプリ「AIダイジェスト」があります。
 
-- 毎朝のダイジェスト(TOP10+全記事)をネイティブUIで表示、引っ張って更新
-- **毎朝の通知**: 指定時刻(既定6:30)にローカル通知。アプリ内の🔔から時刻変更可能
-- オフラインでも前回取得分を表示
-- 記事タップでSafariの元記事へ
+- **今日 / X / 投稿案 / ライブラリ / 設定**の5タブ。記事はアプリ内で読み、出典だけをアプリ内Safariで開きます。
+- **音声ブリーフィング**: プルダウンで**Gemini 3.8 / Kore**、Microsoft **Nanami / Keita**、iPhone標準音声を選択。配信音声は日次バッチで事前生成するWAV / MP3をAVAudioPlayerで再生・保存し、標準音声はAVSpeechSynthesizerを使用。再生・一時停止・記事送り・4段階速度・ミニプレイヤー・バックグラウンド音声とロック画面操作の実装を含みます（実機での最終検証は未実施）。
+- **通知**: 既定7:00、平日/毎日、タップで再生、2分後のテスト通知。30日先までローカル予約し、起動/バックグラウンド更新で延長。未来の日付に古い見出しを表示しません。
+- **オフライン**: SQLiteに当日＋直近7日を取得、30日保持。旧キャッシュを移行し、保存記事は保持期限後も残します。バックグラウンド取得の実行時刻はiOSが決めます。
+- **読む・振り返る**: 興味トピック、保存/既読、日付・カレンダーアーカイブ、要約3種・Q&A（新形式の配信分）、画像カード共有、読了記録、Siriショートカット。
+- **WidgetKit**: Small / Medium / ロック画面。App Groupで最新の見出しを共有します。
+- **Xの情報**: 自分のAPIキーを設定し、手動更新で最大10投稿を検索。原文・投稿者・出典を表示し、アカウントの非表示とXでの報告への導線を用意。
+- **投稿案**: 取得記事から10案、端末内で編集・保存。キーなしでも共有シートが使えます。本人用の4つのキーとRead and write権限があれば、投稿先確認→内容確認→送信でXに直接投稿。タイムアウト時は再送せず結果確認が必要な状態にします。
+
+実装範囲・検証結果・残る再提出手順は [store/implementation-status.md](store/implementation-status.md) を参照してください。App Storeの承認・再提出はまだ行っていません。
+
+### 要約生成とXの設定
+
+現在の配信先は既存の `data/latest.json` と `data/YYYY-MM-DD.json` を維持しています。v2は `summaryStyles`, `ttsText`, `topics`, `faq`, `aiGenerated`, `socialDrafts` と記事ごとの `audio` を追加し、旧アプリ用の `summary` 文字列を保持します。
+
+1. 3スタイル・Q&Aを日次生成するには、リポジトリのActions Secretに `ANTHROPIC_API_KEY` を設定します。未設定時はRSSの説明文と端末内の投稿案構成で動作します。利用者ごとにLLMを呼びません。
+2. Xは各利用者がアプリの「設定 → X連携」でキーを登録します。Read and writeを有効にした自分のX開発者アプリのAPI Key / API Key Secret / Access Token / Access Token Secretを使用します。検索のみならBearer Tokenも利用できます。
+3. キーは端末専用Keychainに保存します。アプリに共通キーを埋め込んだり、GitHub Pagesに公開したりしません。Xには自身のAPI利用料金・制限が適用されます。
+
+Xの実アカウントへの投稿テストは未実施です。[X APIの認証](https://docs.x.com/fundamentals/authentication/guides/v2-authentication-mapping)・[料金](https://docs.x.com/x-api/getting-started/pricing)を確認してください。
+
+#### 「3行・詳細・やさしく」が切り替わらない場合
+
+この3種類は運営側が事前生成する機能です。**アプリ利用者のAPIキー設定は不要**で、Xのキーとも別です。未配信の記事はRSSの説明文だけを表示します。build 4では、空欄・欠落・同じ内容のスタイルを切り替え候補に出さず、未配信の理由を表示します。
+
+運営側で有効化する手順:
+
+1. この変更を本番の `main` に反映する。
+2. GitHubリポジトリの Settings → Secrets and variables → Actions に `ANTHROPIC_API_KEY` を設定する（キーをソースや公開JSONへ書かない）。
+3. Actions → daily-digest → Run workflow を `main` に対して実行する。
+4. Pagesへの配信後、`data/latest.json` の `topics[].summaryStyles.short/detail/simple` に異なる本文が入ったことを確認し、アプリの今日タブで更新する。過去の記事は自動では再生成しない。
+
+2026-09-12の確認時点ではSecret一覧が空で、公開中の10トピックに3種類の要約はありませんでした。キーを設定しても、クレジット・モデル権限・通信等で生成に失敗する場合は説明文へ戻ります。成功したかは配信JSONまで確認してください。
+
+#### アイコン
+
+build 4で、濃紺を背景に朝日とニュースの行を組み合わせたマークへ更新しました。iOS・PWAの素材を統一しています。[調査した公式資料・デザイン方針・再出力方法](design/README.md)。
+
+### Gemini 3.8 Flash TTS の音声配信
+
+標準のナレーションは `gemini-3.8-flash-tts` / Kore。標準的な日本語で、明瞭・少しゆっくり・文ごとに間を取る指示を `speech_metadata.style` に渡します。指示文を読み上げ本文へ混ぜません。
+
+1. GitHub の Settings → Secrets and variables → Actions に `GEMINI_API_KEY` を登録します。キーをソースやiOSアプリ、配信JSONへ入れません。
+2. この変更を `main` に反映して、Actions → daily-digest → Run workflow を実行します。
+3. 各記事のWAVを `digest-audio-YYYY-MM-DD` のRelease assetsへ保存し、JSONの `topics[].audio["gemini-3.8-flash-tts-Kore"]` で配信します。モデル・声・話し方・本文が同じなら、その日付の再実行で生成済み音声を再利用します。生成は最大10記事／回です。
+4. 更新版iOSアプリで「今日」を更新します。新規インストールはGeminiが標準。既存設定は全記事のGemini音声が届いた時点で一度だけ切り替え、その後に選んだ音声は保持します。取得したWAV／既存MP3は30日キャッシュし、オフラインでも再生できます。
+
+全記事分が完成したときだけGemini音声を公開します。未設定・生成失敗でもニュース配信は続行します。未配信の記事には案内を表示し、端末音声への変更は利用者が選びます。過去記事は自動で再生成しません。
+
+Microsoft Nanami / Keita は引き続き選択できます。追加生成には `AZURE_SPEECH_KEY` と `AZURE_SPEECH_REGION` が必要です。Geminiは運営側のAPI利用枠を使用し、利用者によるキー入力は不要です。
+
+公式資料: [モデル](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts)・[音声生成API](https://ai.google.dev/gemini-api/docs/generate-content/speech-generation)。3.8の通常レスポンスはWAVのため、旧モデル向けのPCMヘッダー追加は行いません。
+
+### ビルドとテスト
+
+```sh
+npm ci
+npm test
+xcodebuild -project ios/AIDigest.xcodeproj -scheme AIDigest \
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+  CODE_SIGNING_ALLOWED=NO test
+```
+
+Xcode 26.6で開発、最低iOS 16。外部iOSライブラリは不要です。実機・配布ビルドにはアプリ本体とウィジェット両方の署名、App Group `group.com.takuyaops.aidigest` が必要です。
 
 **iPhone実機へのインストール**(Apple IDがあれば無料):
 
@@ -95,6 +155,10 @@ open docs/index.html
 | `DIGEST_WINDOW_HOURS` | `26` | 収集対象の時間窓(時間) |
 | `ANTHROPIC_API_KEY` | なし | 設定するとClaudeで要約生成 |
 | `SUMMARY_MODEL` | `claude-opus-5` | 要約に使うClaudeモデル |
+| `GEMINI_API_KEY` | なし | Gemini 3.8 Flash TTSの生成キー。GitHub Actions Secretに登録 |
+| `AZURE_SPEECH_KEY` | なし | 運営側のMicrosoft音声生成キー。未設定時は生成をスキップ |
+| `AZURE_SPEECH_REGION` | なし | Speechリソースのリージョン（例 `japaneast`） |
+| `GITHUB_TOKEN` / `GITHUB_REPOSITORY` | Actionsで自動提供 | 日次音声をGitHub Release assetsに保存 |
 | `SLACK_WEBHOOK_URL` | なし | Slack Incoming Webhook |
 | `SITE_URL` / `REPO_URL` | 自動導出 | GitHub Actions上では `GITHUB_REPOSITORY` から自動導出(フォークしてもそのまま動作)。手動指定も可 |
 
