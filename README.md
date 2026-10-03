@@ -30,7 +30,7 @@
 [ios/](ios/) にSwiftUI製のネイティブiPhoneアプリ「AIダイジェスト」があります。
 
 - **今日 / X / 投稿案 / ライブラリ / 設定**の5タブ。記事はアプリ内で読み、出典だけをアプリ内Safariで開きます。
-- **音声ブリーフィング**: プルダウンでMicrosoft **Nanami / Keita**、iPhone標準音声を選択。Microsoft音声は日次バッチで事前生成するMP3をAVAudioPlayerで再生・保存し、標準音声はAVSpeechSynthesizerを使用。再生・一時停止・記事送り・4段階速度・ミニプレイヤー・バックグラウンド音声とロック画面操作の実装を含みます（実機での最終検証は未実施）。
+- **音声ブリーフィング**: プルダウンで**Gemini 3.8 / Kore**、Microsoft **Nanami / Keita**、iPhone標準音声を選択。配信音声は日次バッチで事前生成するWAV / MP3をAVAudioPlayerで再生・保存し、標準音声はAVSpeechSynthesizerを使用。再生・一時停止・記事送り・4段階速度・ミニプレイヤー・バックグラウンド音声とロック画面操作の実装を含みます（実機での最終検証は未実施）。
 - **通知**: 既定7:00、平日/毎日、タップで再生、2分後のテスト通知。30日先までローカル予約し、起動/バックグラウンド更新で延長。未来の日付に古い見出しを表示しません。
 - **オフライン**: SQLiteに当日＋直近7日を取得、30日保持。旧キャッシュを移行し、保存記事は保持期限後も残します。バックグラウンド取得の実行時刻はiOSが決めます。
 - **読む・振り返る**: 興味トピック、保存/既読、日付・カレンダーアーカイブ、要約3種・Q&A（新形式の配信分）、画像カード共有、読了記録、Siriショートカット。
@@ -67,17 +67,20 @@ Xの実アカウントへの投稿テストは未実施です。[X APIの認証]
 
 build 4で、濃紺を背景に朝日とニュースの行を組み合わせたマークへ更新しました。iOS・PWAの素材を統一しています。[調査した公式資料・デザイン方針・再出力方法](design/README.md)。
 
-### Microsoft Nanami / Keita の音声配信
+### Gemini 3.8 Flash TTS の音声配信
 
-1. 運営側のAzure Speechリソースを用意します。日次の公開ニュース文だけをMicrosoftへ送り、利用者の閲覧履歴や入力は送信しません。
-2. GitHub Actions Secret `AZURE_SPEECH_KEY` と、Actions Variable `AZURE_SPEECH_REGION`（例 `japaneast`、作成したリソースと同じリージョン）を設定します。Speechの料金プラン・上限は運営側で管理します。
-3. `daily-digest` が要約後にNanamiとKeitaの2種類を生成します。1日最大10記事×2音声、同じ文章・音声は再実行時に再利用します。利用者ごとの音声生成費用は発生しませんが、運営側のAzure Speech利用料はプランと文字数に応じます。
-4. MP3を `digest-audio-YYYY-MM-DD` のGitHub Release assetsに保存し、配信JSONの各トピックに `audio["ja-JP-NanamiNeural"]` / `audio["ja-JP-KeitaNeural"]` のHTTPS URLを載せます。MP3を日々gitにコミットしない設計です。GitHubの `GITHUB_TOKEN` はワークフローから自動提供し、`contents: write` を使います。
-5. アプリの「今日 → 音声」または「設定 → 読み上げ音声」で選択します。取得済み音声は30日保持し、圏外でも再生可能です。初回取得は通信が必要です。未配信の過去記事や「その他の記事」は標準音声で再生してください。
+標準のナレーションは `gemini-3.8-flash-tts` / Kore。標準的な日本語で、明瞭・少しゆっくり・文ごとに間を取る指示を `speech_metadata.style` に渡します。指示文を読み上げ本文へ混ぜません。
 
-Azureキーがないときは音声の生成をスキップします。UIは未配信であることを明示し、Nanamiを選んだのに別の声を流すことはありません。初期選択は端末音声ですが、未選択の利用者にNanamiが全記事分届いた時点でNanamiを既定にします。キーはiOSバイナリやJSONには含めません。
+1. GitHub の Settings → Secrets and variables → Actions に `GEMINI_API_KEY` を登録します。キーをソースやiOSアプリ、配信JSONへ入れません。
+2. この変更を `main` に反映して、Actions → daily-digest → Run workflow を実行します。
+3. 各記事のWAVを `digest-audio-YYYY-MM-DD` のRelease assetsへ保存し、JSONの `topics[].audio["gemini-3.8-flash-tts-Kore"]` で配信します。モデル・声・話し方・本文が同じなら、その日付の再実行で生成済み音声を再利用します。生成は最大10記事／回です。
+4. 更新版iOSアプリで「今日」を更新します。新規インストールはGeminiが標準。既存設定は全記事のGemini音声が届いた時点で一度だけ切り替え、その後に選んだ音声は保持します。取得したWAV／既存MP3は30日キャッシュし、オフラインでも再生できます。
 
-音声生成の疎通・音質確認はAzure設定後に必要です。[Microsoftの日本語音声一覧](https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/language-support?tabs=stt-tts)・[公式REST API](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/rest-text-to-speech)に基づきます。非公式のEdge TTSエンドポイントは利用しません。
+全記事分が完成したときだけGemini音声を公開します。未設定・生成失敗でもニュース配信は続行します。未配信の記事には案内を表示し、端末音声への変更は利用者が選びます。過去記事は自動で再生成しません。
+
+Microsoft Nanami / Keita は引き続き選択できます。追加生成には `AZURE_SPEECH_KEY` と `AZURE_SPEECH_REGION` が必要です。Geminiは運営側のAPI利用枠を使用し、利用者によるキー入力は不要です。
+
+公式資料: [モデル](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts)・[音声生成API](https://ai.google.dev/gemini-api/docs/generate-content/speech-generation)。3.8の通常レスポンスはWAVのため、旧モデル向けのPCMヘッダー追加は行いません。
 
 ### ビルドとテスト
 
@@ -152,9 +155,10 @@ open docs/index.html
 | `DIGEST_WINDOW_HOURS` | `26` | 収集対象の時間窓(時間) |
 | `ANTHROPIC_API_KEY` | なし | 設定するとClaudeで要約生成 |
 | `SUMMARY_MODEL` | `claude-opus-5` | 要約に使うClaudeモデル |
+| `GEMINI_API_KEY` | なし | Gemini 3.8 Flash TTSの生成キー。GitHub Actions Secretに登録 |
 | `AZURE_SPEECH_KEY` | なし | 運営側のMicrosoft音声生成キー。未設定時は生成をスキップ |
 | `AZURE_SPEECH_REGION` | なし | Speechリソースのリージョン（例 `japaneast`） |
-| `GITHUB_TOKEN` / `GITHUB_REPOSITORY` | Actionsで自動提供 | 日次MP3をGitHub Release assetsに保存 |
+| `GITHUB_TOKEN` / `GITHUB_REPOSITORY` | Actionsで自動提供 | 日次音声をGitHub Release assetsに保存 |
 | `SLACK_WEBHOOK_URL` | なし | Slack Incoming Webhook |
 | `SITE_URL` / `REPO_URL` | 自動導出 | GitHub Actions上では `GITHUB_REPOSITORY` から自動導出(フォークしてもそのまま動作)。手動指定も可 |
 

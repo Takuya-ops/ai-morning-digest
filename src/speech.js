@@ -30,7 +30,7 @@ export async function synthesize(text, voice, { key, region, fetcher = fetch }) 
   return bytes;
 }
 
-// MP3s are release assets, not daily binary commits in git history.
+// Audio files are release assets, not daily binary commits in git history.
 export async function releasePublisher({ repository, token, date, commit, fetcher = fetch }) {
   if (!/^[\w.-]+\/[\w.-]+$/.test(repository || '') || !token || !/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error('GitHub audio publishing configuration missing');
   const base = `https://api.github.com/repos/${repository}`;
@@ -40,7 +40,7 @@ export async function releasePublisher({ repository, token, date, commit, fetche
   if (response.status === 404) {
     response = await fetcher(`${base}/releases`, {
       method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' }, redirect: 'error', signal: AbortSignal.timeout(30_000),
-      body: JSON.stringify({ tag_name: tag, target_commitish: commit || 'main', name: `Daily briefing audio ${date}`, body: 'Pre-generated Microsoft Nanami / Keita narration of the daily digest. Source attribution is in the matching digest JSON.', make_latest: 'false' }),
+      body: JSON.stringify({ tag_name: tag, target_commitish: commit || 'main', name: `Daily briefing audio ${date}`, body: 'Pre-generated narration of the daily digest. Source attribution is in the matching digest JSON.', make_latest: 'false' }),
     });
   }
   if (!response.ok) throw new Error(`GitHub audio release HTTP ${response.status}`);
@@ -64,7 +64,7 @@ export async function releasePublisher({ repository, token, date, commit, fetche
     upload: async (name, bytes) => {
       // Construct the host ourselves: never send the token to an API-provided URL.
       const uploaded = await fetcher(`https://uploads.github.com/repos/${repository}/releases/${release.id}/assets?name=${encodeURIComponent(name)}`, {
-        method: 'POST', headers: { ...headers, 'Content-Type': 'audio/mpeg' }, body: bytes, redirect: 'error', signal: AbortSignal.timeout(60_000),
+        method: 'POST', headers: { ...headers, 'Content-Type': name.endsWith('.wav') ? 'audio/wav' : 'audio/mpeg' }, body: bytes, redirect: 'error', signal: AbortSignal.timeout(60_000),
       });
       if (!uploaded.ok) throw new Error(`GitHub audio upload HTTP ${uploaded.status}`);
       const asset = await uploaded.json();
@@ -105,4 +105,65 @@ export async function attachMicrosoftAudio(data, {
       } catch { log.warn(`speech: ${voice}の生成または配信に失敗。ニュースの生成は継続します。Azureのリージョン・残高とGitHubの権限を確認してください。`); }
     }
   } catch { log.warn('speech: 音声配信の準備に失敗。GitHubのリポジトリ名・contents:write権限を確認してください。ニュースの生成は継続します。'); }
+}
+
+
+export const GEMINI_MODEL = 'gemini-3.8-flash-tts';
+export const GEMINI_VOICE = 'gemini-3.8-flash-tts-Kore';
+export const GEMINI_STYLE = '標準的な日本語のニュースナレーション。落ち着いた自然な声で、明瞭に、少しゆっくり読み上げてください。文の区切りで短く間を取り、数字と英語の製品名を丁寧に発音してください。ささやき声や大げさな演技は避けてください。';
+export function geminiAssetName(topic) {
+  const hash = createHash('sha256').update(`${GEMINI_MODEL}\nKore\n${GEMINI_STYLE}\nwav-v1\n${speechText(topic)}`).digest('hex').slice(0, 24);
+  return `${hash}-${GEMINI_VOICE}.wav`;
+}
+export async function synthesizeGemini(text, { key, fetcher = fetch } = {}) {
+  if (!key) throw new Error('GEMINI_API_KEY not configured');
+  if (!text?.trim()) throw new Error('Empty narration');
+  const response = await fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`, {
+    method: 'POST', redirect: 'error', signal: AbortSignal.timeout(120_000),
+    headers: { 'x-goog-api-key': key, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      contents: [{ role: 'user', parts: [{ text, speech_metadata: { style: GEMINI_STYLE } }] }],
+      generationConfig: { responseModalities: ['AUDIO'], speechConfig: { voiceConfig: { voice: 'Kore' } } },
+    }),
+  });
+  // Never log provider response bodies, which can contain request details.
+  if (!response.ok) throw new Error(`Gemini TTS HTTP ${response.status}`);
+  const result = await response.json();
+  const candidate = result.candidates?.[0];
+  if (candidate?.finishReason !== 'STOP') throw new Error('Incomplete Gemini narration');
+  const parts = candidate.content?.parts?.filter(part => part.inlineData) || [];
+  if (parts.length !== 1) throw new Error('Missing or ambiguous Gemini audio');
+  const { data, mimeType } = parts[0].inlineData;
+  if (!['audio/wav', 'audio/x-wav'].includes(mimeType) || typeof data !== 'string' || data.length > 43_000_000) throw new Error('Invalid Gemini audio format');
+  const bytes = Buffer.from(data, 'base64');
+  // 3.8 returns a complete WAV, unlike older models' headerless PCM.
+  if (bytes.length < 500 || bytes.length > 32_000_000 || bytes.toString('ascii', 0, 4) !== 'RIFF' || bytes.toString('ascii', 8, 12) !== 'WAVE' || bytes.readUInt32LE(4) + 8 !== bytes.length) throw new Error('Invalid Gemini WAV');
+  return bytes;
+}
+
+export async function attachGeminiAudio(data, {
+  env = process.env, fetcher = fetch, publisher, synth = synthesizeGemini, log = console,
+} = {}) {
+  if (!env.GEMINI_API_KEY) {
+    log.warn('speech: GEMINI_API_KEY未設定。Gemini音声は未配信です。'); return;
+  }
+  if (!data.topics.length || data.topics.length > 10) {
+    log.warn('speech: 音声生成は1日最大10記事です。'); return;
+  }
+  // A rerun must not advertise stale or only partially completed narration.
+  for (const topic of data.topics) { if (topic.audio) delete topic.audio[GEMINI_VOICE]; }
+  try {
+    publisher ||= await releasePublisher({ repository: env.GITHUB_REPOSITORY, token: env.GITHUB_TOKEN, date: data.date, commit: env.GITHUB_SHA, fetcher });
+    const completed = [];
+    for (const topic of data.topics) {
+      const name = geminiAssetName(topic);
+      const url = publisher.existing(name) || await publisher.upload(name, await synth(speechText(topic), { key: env.GEMINI_API_KEY, fetcher }));
+      completed.push([topic, url]);
+    }
+    for (const [topic, url] of completed) topic.audio = { ...topic.audio, [GEMINI_VOICE]: url };
+    log.info(`speech: Gemini 3.8 Flash TTS ${completed.length}記事を配信に追加しました。`);
+  } catch (error) {
+    const status = /^Gemini TTS HTTP \d{3}$/.test(error.message) ? ` (${error.message})` : '';
+    log.warn(`speech: Gemini音声の生成・配信に失敗${status}。APIキー・利用枠・GitHub権限を確認してください。ニュースの生成は継続します。`);
+  }
 }

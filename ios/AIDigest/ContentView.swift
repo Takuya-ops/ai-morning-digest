@@ -18,9 +18,9 @@ struct ContentView: View {
         .sheet(item: $linkedArticle) { article in NavigationStack { ArticleDetailView(article: article).toolbar { ToolbarItem(placement: .confirmationAction) { Button("閉じる") { linkedArticle = nil } } } }.playerInset() }
         .onChange(of: router.articleID) { _ in handleLink() }
         .onChange(of: router.autoplay) { _ in handleLink() }
-        .onChange(of: store.digest?.generatedAt) { _ in player.adoptMicrosoftDefaultIfAvailable(store.orderedBrief); handleLink() }
+        .onChange(of: store.digest?.generatedAt) { _ in player.adoptGeminiDefaultIfAvailable(store.orderedBrief); handleLink() }
         .onChange(of: onboarded) { _ in handleLink() }
-        .onAppear { player.adoptMicrosoftDefaultIfAvailable(store.orderedBrief); handleLink() }
+        .onAppear { player.adoptGeminiDefaultIfAvailable(store.orderedBrief); handleLink() }
         .alert("音声再生", isPresented: Binding(get: { player.error != nil }, set: { if !$0 { player.error = nil } })) { Button("OK") { player.error = nil } } message: { Text(player.error ?? "") }
     }
     private func handleLink() {

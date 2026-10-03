@@ -2,12 +2,13 @@ import Foundation
 import CryptoKit
 
 enum BriefingVoice: String, CaseIterable, Identifiable {
+    case gemini = "gemini-3.8-flash-tts-Kore"
     case nanami = "ja-JP-NanamiNeural"
     case keita = "ja-JP-KeitaNeural"
     case device
     var id: String { rawValue }
-    var label: String { switch self { case .nanami: return "Microsoft Nanami（女性）"; case .keita: return "Microsoft Keita（男性）"; case .device: return "iPhoneの標準音声" } }
-    var shortName: String { switch self { case .nanami: return "Nanami"; case .keita: return "Keita"; case .device: return "iPhone標準" } }
+    var label: String { switch self { case .gemini: return "Gemini 3.8（Kore）"; case .nanami: return "Microsoft Nanami（女性）"; case .keita: return "Microsoft Keita（男性）"; case .device: return "iPhoneの標準音声" } }
+    var shortName: String { switch self { case .gemini: return "Gemini 3.8"; case .nanami: return "Nanami"; case .keita: return "Keita"; case .device: return "iPhone標準" } }
 }
 actor AudioCache {
     static let shared = AudioCache()
@@ -20,16 +21,18 @@ actor AudioCache {
     }
     func file(for url: URL) async throws -> URL {
         guard url.scheme == "https" else { throw URLError(.unsupportedURL) }
-        let name = SHA256.hash(data: Data(url.absoluteString.utf8)).map { String(format: "%02x", $0) }.joined() + ".mp3"
+        let name = SHA256.hash(data: Data(url.absoluteString.utf8)).map { String(format: "%02x", $0) }.joined() + (url.pathExtension.lowercased() == "wav" ? ".wav" : ".mp3")
         let location = directory.appendingPathComponent(name)
         if FileManager.default.fileExists(atPath: location.path) { return location }
         if let existing = inFlight[url] { return try await existing.value }
         let task = Task<URL, Error> {
             var request = URLRequest(url: url); request.timeoutInterval = 30
             let (data, response) = try await session.data(for: request)
-            guard (response as? HTTPURLResponse)?.statusCode == 200, (500...8_000_000).contains(data.count) else { throw URLError(.badServerResponse) }
+            guard (response as? HTTPURLResponse)?.statusCode == 200, (500...32_000_000).contains(data.count) else { throw URLError(.badServerResponse) }
             let header = Array(data.prefix(3))
-            guard header == [0x49, 0x44, 0x33] || (header[0] == 0xff && header[1] & 0xe0 == 0xe0) else { throw URLError(.cannotDecodeContentData) }
+            let isWAV = data.prefix(4) == Data("RIFF".utf8) && data.subdata(in: 8..<12) == Data("WAVE".utf8)
+            let isMP3 = header == [0x49, 0x44, 0x33] || (header[0] == 0xff && header[1] & 0xe0 == 0xe0)
+            guard url.pathExtension.lowercased() == "wav" ? isWAV : isMP3 else { throw URLError(.cannotDecodeContentData) }
             try FileManager.default.createDirectory(at: location.deletingLastPathComponent(), withIntermediateDirectories: true)
             try data.write(to: location, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
             return location
@@ -38,7 +41,7 @@ actor AudioCache {
         return try await task.value
     }
     func invalidate(_ url: URL) {
-        let name = SHA256.hash(data: Data(url.absoluteString.utf8)).map { String(format: "%02x", $0) }.joined() + ".mp3"
+        let name = SHA256.hash(data: Data(url.absoluteString.utf8)).map { String(format: "%02x", $0) }.joined() + (url.pathExtension.lowercased() == "wav" ? ".wav" : ".mp3")
         try? FileManager.default.removeItem(at: directory.appendingPathComponent(name))
     }
     func prefetch(_ urls: [URL]) async {

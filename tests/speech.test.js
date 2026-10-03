@@ -59,3 +59,70 @@ test('release assets use fixed GitHub hosts and changed-voice assets are reusabl
   const created = JSON.parse(requests.find(r => r.target.endsWith('/releases')).request.body);
   assert.equal(created.make_latest, 'false');
 });
+
+// Gemini 3.8 returns WAV, not the raw PCM returned by earlier TTS models.
+const { GEMINI_MODEL, GEMINI_VOICE, GEMINI_STYLE, synthesizeGemini, attachGeminiAudio, geminiAssetName } = await import('../src/speech.js');
+function wav() {
+  const bytes = Buffer.alloc(1004);
+  bytes.write('RIFF'); bytes.writeUInt32LE(bytes.length - 8, 4); bytes.write('WAVE', 8);
+  bytes.write('fmt ', 12); bytes.writeUInt32LE(16, 16); bytes.writeUInt16LE(1, 20); bytes.writeUInt16LE(1, 22);
+  bytes.writeUInt32LE(24000, 24); bytes.writeUInt32LE(48000, 28); bytes.writeUInt16LE(2, 32); bytes.writeUInt16LE(16, 34);
+  bytes.write('data', 36); bytes.writeUInt32LE(960, 40);
+  return bytes;
+}
+const geminiResponse = (bytes = wav(), mimeType = 'audio/wav', finishReason = 'STOP') => Response.json({ candidates: [{ finishReason, content: { parts: [{ inlineData: { mimeType, data: bytes.toString('base64') } }] } }] });
+test('Gemini sends verbatim Japanese and separate style to official host; preserves WAV exactly', async () => {
+  let request;
+  const result = await synthesizeGemini('生成AIのニュースです。', { key: 'test-only', fetcher: async (url, options) => {
+    assert.equal(url, `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`);
+    request = options;
+    return geminiResponse();
+  } });
+  assert.deepEqual(result, wav());
+  const body = JSON.parse(request.body);
+  assert.deepEqual(body.contents[0].parts, [{ text: '生成AIのニュースです。', speech_metadata: { style: GEMINI_STYLE } }]);
+  assert.equal(body.generationConfig.speechConfig.voiceConfig.voice, 'Kore');
+  assert.equal(request.headers['x-goog-api-key'], 'test-only');
+  assert.equal(request.redirect, 'error');
+});
+test('Gemini rejects errors, interrupted output, raw PCM, truncated WAV and missing audio', async () => {
+  for (const response of [new Response('private details', { status: 429 }), geminiResponse(wav(), 'audio/l16'), geminiResponse(wav(), 'audio/wav', 'MAX_TOKENS'), geminiResponse(Buffer.alloc(600)), geminiResponse(wav().subarray(0, 900)), Response.json({ candidates: [] })]) {
+    await assert.rejects(synthesizeGemini('ニュース', { key: 'test-only', fetcher: async () => response }));
+  }
+  await assert.rejects(synthesizeGemini('ニュース', {}), /not configured/);
+});
+test('Gemini caches complete voice and changing narration changes cache identity', async () => {
+  const data = { date: '2026-10-04', topics: [topic(), { ...topic(), ttsText: '次のニュースです。' }] };
+  const saved = new Map(); let calls = 0;
+  const publisher = { existing: name => saved.get(name), upload: async name => { const url = `https://example.com/${name}`; saved.set(name, url); return url; } };
+  const options = { env: { GEMINI_API_KEY: 'test-only' }, publisher, log: quiet, synth: async () => { calls++; return wav(); } };
+  await attachGeminiAudio(data, options); await attachGeminiAudio(data, options);
+  assert.equal(calls, 2);
+  assert.ok(data.topics.every(t => t.audio[GEMINI_VOICE].endsWith('.wav')));
+  assert.notEqual(geminiAssetName(data.topics[0]), geminiAssetName(data.topics[1]));
+  assert.notEqual(geminiAssetName(topic()), assetName(topic(), MICROSOFT_VOICES[0]));
+});
+test('Gemini partial failure never exposes a partial playlist and rerun reuses uploaded articles', async () => {
+  const data = { date: '2026-10-04', topics: [topic(), { ...topic(), ttsText: '次' }] };
+  const saved = new Map(); let calls = 0;
+  const publisher = { existing: name => saved.get(name), upload: async name => { saved.set(name, `https://example.com/${name}`); return saved.get(name); } };
+  const options = { env: { GEMINI_API_KEY: 'test-only' }, publisher, log: quiet, synth: async () => { if (++calls === 2) throw new Error('failure'); return wav(); } };
+  await attachGeminiAudio(data, options);
+  assert.ok(data.topics.every(t => !t.audio?.[GEMINI_VOICE]));
+  await attachGeminiAudio(data, options);
+  assert.equal(calls, 3); assert.ok(data.topics.every(t => t.audio[GEMINI_VOICE]));
+});
+test('Gemini missing key or oversized digest makes no API calls', async () => {
+  const forbidden = async () => { assert.fail('Unexpected network'); };
+  await attachGeminiAudio({ topics: [topic()] }, { env: {}, fetcher: forbidden, log: quiet });
+  await attachGeminiAudio({ topics: Array.from({ length: 11 }, topic) }, { env: { GEMINI_API_KEY: 'test-only' }, fetcher: forbidden, log: quiet });
+});
+test('WAV release uploads declare audio/wav', async () => {
+  const publisher = await releasePublisher({ repository: 'owner/repo', token: 'test-only', date: '2026-10-04', fetcher: async (url, request) => {
+    if (url.includes('/tags/')) return Response.json({ id: 42 });
+    if (url.includes('per_page')) return Response.json([]);
+    assert.equal(request.headers['Content-Type'], 'audio/wav');
+    return Response.json({ browser_download_url: 'https://github.com/owner/repo/releases/download/day/gemini.wav' });
+  } });
+  await publisher.upload('gemini.wav', wav());
+});

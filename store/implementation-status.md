@@ -70,3 +70,12 @@
 - [説明文](app-store-metadata.md)・[審査ノート](app-review-response.md)を実動作に合わせて確定し、プライバシー・年齢区分を更新して再提出。
 
 App Storeへのアップロード・再提出・承認は行っていません。iCloud同期と端末内自由入力LLMは元仕様どおり将来の検討項目です。
+
+
+## 2026-10-04 Gemini 3.8 TTSへの切り替え
+
+- `gemini-3.8-flash-tts` / Koreで、明瞭・ややゆっくりした日本語ナレーションを事前生成。`speech_metadata.style`と本文を分離し、APIが返すWAVをそのまま配信。
+- 全記事完成後に音声URLを公開。モデル・声・話し方・本文をハッシュに含め、再実行時は配信済みファイルを再利用。秘密キーはActionsのみで使用。
+- iOS build 5はWAV / MP3のキャッシュに対応。Geminiを標準とし、既存設定はGemini配信時に一度だけ移行。Nanami / Keita / 端末音声の手動選択を維持。
+- `checks` の手動実行で `gemini_sample=true` を選ぶと短い日本語サンプルを生成し、7日保存のActions artifactへ出力。通常のPRテストではAPIを呼ばない。
+- Node 17件・iOS 21件成功（WAVキャッシュ・旧設定の移行・手動選択の保持を含む）。GEMINI_API_KEYのSecret登録を確認。実API・署名ビルド・試聴・実機導入・本番配信は確認中。

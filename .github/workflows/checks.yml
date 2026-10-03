@@ -3,6 +3,11 @@ on:
   pull_request:
     paths: ['src/**', 'tests/**', 'ios/**', 'package*.json', '.github/workflows/checks.yml']
   workflow_dispatch:
+    inputs:
+      gemini_sample:
+        description: 'Generate one Japanese Gemini TTS sample (uses API quota)'
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -16,3 +21,15 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+      - name: Generate Gemini audio sample
+        if: github.event_name == 'workflow_dispatch' && inputs.gemini_sample
+        run: node scripts/check-gemini-audio.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Save Gemini audio sample
+        if: github.event_name == 'workflow_dispatch' && inputs.gemini_sample
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemini-audio-sample
+          path: audio-check/
+          retention-days: 7

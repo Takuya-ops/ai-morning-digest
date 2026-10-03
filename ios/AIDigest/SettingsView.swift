@@ -15,7 +15,7 @@ struct SettingsView: View {
             Section("興味のあるトピック · \(store.followedTopics.count)件") { TopicChoices() }
             Section("読む・聴く") {
                 Picker("読み上げ音声", selection: $player.voice) { ForEach(BriefingVoice.allCases) { Text($0.label).tag($0) } }.pickerStyle(.menu)
-                Text("Microsoft音声は配信済みの音声を再生します。Nanami・Keitaを選べます。ダウンロード後は圏外でも再生できます。").font(.caption).foregroundStyle(.secondary)
+                Text("Gemini 3.8の日本語ナレーションを再生します。ダウンロード後は圏外でも聴けます。Microsoft音声・iPhone標準音声も選べます。").font(.caption).foregroundStyle(.secondary)
                 Picker("要約のスタイル", selection: $summary) { ForEach(SummaryStyle.allCases) { Text($0.label).tag($0.rawValue) } }
                 Text("3行・詳細・やさしくは、運営側で生成して配信します。利用者のAPIキーは不要です。選んだスタイルがない記事は、配信済みの本文を表示します。").font(.caption).foregroundStyle(.secondary)
                 Picker("読み上げ速度", selection: $player.rate) { ForEach([0.8, 1, 1.2, 1.5], id: \.self) { Text("\($0, specifier: "%.1f")x").tag($0) } }
@@ -39,10 +39,10 @@ struct PrivacyView: View {
         List {
             Section("端末内の記録") { Text("興味トピック、通知・表示設定、既読・保存、読了日、投稿案と投稿結果を端末内に保存します。ダイジェストは30日、保存した記事は保存解除まで保持します。開発者によるアカウント登録、広告、行動分析はありません。") }
             Section("通信") { Text("ニュースはGitHub Pagesから取得し、画像は各配信元へ接続します。各配信先にはIPアドレスなど通信に必要な情報が伝わります。出典はアプリ内Safariで開きます。読み上げにマイクを使わず、閲覧履歴や利用者の入力を生成AIへ送りません。") }
-            Section("Microsoft音声") { Text("Nanami・Keitaは、運営側が公開ニュースの読み上げ文をAzure Speechへ送り、事前生成した音声です。音声ファイルをGitHub Releasesから取得して端末内に保存します。利用者のキーや閲覧履歴はMicrosoftへ送りません。iPhoneの標準音声も選択できます。") }
+            Section("配信音声") { Text("Gemini音声は運営側が公開ニュースの読み上げ文をGoogleのGemini APIへ送り、事前生成します。Nanami・KeitaにはAzure Speechを使用します。音声ファイルをGitHub Releasesから取得して端末内に保存します。利用者のキーや閲覧履歴はGoogle・Microsoftへ送りません。iPhoneの標準音声も選択できます。") }
             Section("X連携（任意）") { Text("ご自身のキーはこのiPhone専用のKeychainに保存します。認証ヘッダー・検索条件・投稿文はX APIに直接送信します。アカウント確認でユーザーID・表示名・ユーザー名を取得します。Xの検索結果は24時間以内のみ表示します。投稿はご自身の確認操作後に送信します。") }
             Section("連携解除・共有") { Text("設定から連携を解除するとキーと検索キャッシュを削除します。アプリを削除してもKeychainのキーが残る場合があります。Xで公開した投稿は削除されません。X側の認可取り消し・投稿削除はXで行ってください。共有シートでは、ご自身が選んだ送信先へ記事・要約カード・投稿案を渡します。") }
-            Section { Text("最終更新 2026年9月12日").font(.caption); Link("Web版のポリシー・お問い合わせ", destination: URL(string: "https://takuya-ops.github.io/ai-morning-digest/privacy.html")!) }
+            Section { Text("最終更新 2026年10月4日").font(.caption); Link("Web版のポリシー・お問い合わせ", destination: URL(string: "https://takuya-ops.github.io/ai-morning-digest/privacy.html")!) }
         }.navigationTitle("プライバシー").navigationBarTitleDisplayMode(.inline)
     }
 }

@@ -6,7 +6,7 @@ import { summarizeTopics, fallbackSummary } from './summarize.js';
 import { renderSite, toJstYmd } from './render.js';
 import { notifySlack } from './notify.js';
 import { stableID, classify, createDrafts } from './enrich.js';
-import { attachMicrosoftAudio } from './speech.js';
+import { attachGeminiAudio, attachMicrosoftAudio } from './speech.js';
 
 const TOP_N = Number(process.env.DIGEST_TOP_N || 10);
 const WINDOW_HOURS = Number(process.env.DIGEST_WINDOW_HOURS || 26);
@@ -81,6 +81,8 @@ async function main() {
     socialDrafts: createDrafts(topics, toJstYmd(generatedAt)),
   };
 
+  await attachGeminiAudio(data);
+  // Optional legacy voices remain available when Azure is configured.
   await attachMicrosoftAudio(data);
   renderSite(data, docsDir);
   console.log(`render: ${docsDir} にHTML/JSON/RSSを出力しました (${data.date})`);

@@ -188,6 +188,51 @@ final class XServiceTests: XCTestCase {
 }
 
 final class MicrosoftAudioTests: XCTestCase {
+    @MainActor
+    func testExistingVoiceMigratesOnlyWhenAllGeminiAudioExistsAndRespectsLaterChoice() {
+        let defaults = UserDefaults.standard
+        let keys = ["briefingVoice", "geminiVoicePreferenceV1"]
+        let original = keys.map { defaults.object(forKey: $0) }
+        defer { for (key, value) in zip(keys, original) { if let value { defaults.set(value, forKey: key) } else { defaults.removeObject(forKey: key) } } }
+        defaults.set("device", forKey: "briefingVoice")
+        defaults.removeObject(forKey: "geminiVoicePreferenceV1")
+        let player = BriefingPlayer()
+        var article = ReaderArticle(article: Article(title: "ニュース", link: "https://example.com/news", feedName: "test", date: "2026-10-04"), digestDate: "2026-10-04")
+        player.adoptGeminiDefaultIfAvailable([article])
+        XCTAssertEqual(player.voice, .device)
+        article.audio = [BriefingVoice.gemini.rawValue: "https://example.com/gemini.wav"]
+        player.adoptGeminiDefaultIfAvailable([article])
+        XCTAssertEqual(player.voice, .gemini)
+        player.voice = .nanami
+        player.adoptGeminiDefaultIfAvailable([article])
+        XCTAssertEqual(player.voice, .nanami)
+    }
+    func testGeminiIsFirstAndLegacyVoicesRemainAvailable() {
+        XCTAssertEqual(BriefingVoice.allCases.first, .gemini)
+        XCTAssertEqual(BriefingVoice.gemini.rawValue, "gemini-3.8-flash-tts-Kore")
+    }
+    func testGeminiWAVIsCachedWithCorrectExtensionAndWorksOffline() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockXProtocol.self]
+        var bytes = Data(repeating: 0, count: 1004)
+        bytes.replaceSubrange(0..<4, with: Data("RIFF".utf8))
+        bytes.replaceSubrange(8..<12, with: Data("WAVE".utf8))
+        MockXProtocol.requests = []; MockXProtocol.handler = { _ in (200, bytes) }
+        let session = URLSession(configuration: config)
+        let cache = AudioCache(directory: directory, session: session)
+        let url = URL(string: "https://github.com/owner/repo/releases/download/day/gemini.wav")!
+        let local = try await cache.file(for: url)
+        XCTAssertEqual(local.pathExtension, "wav")
+        XCTAssertEqual(try Data(contentsOf: local), bytes)
+        MockXProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
+        let reopened = AudioCache(directory: directory, session: session)
+        let offline = try await reopened.file(for: url)
+        XCTAssertEqual(local, offline)
+        XCTAssertEqual(MockXProtocol.requests.count, 1)
+        await cache.invalidate(url)
+        XCTAssertFalse(FileManager.default.fileExists(atPath: local.path))
+    }
     func testNanamiAndKeitaAvailableInPicker() {
         XCTAssertEqual(BriefingVoice.nanami.rawValue, "ja-JP-NanamiNeural")
         XCTAssertTrue(BriefingVoice.allCases.contains(.nanami)); XCTAssertTrue(BriefingVoice.allCases.contains(.keita))

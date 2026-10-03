@@ -8,9 +8,10 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     @Published private(set) var index = 0
     @Published private(set) var playing = false
     @Published private(set) var preparing = false
-    @Published var voice: BriefingVoice = BriefingVoice(rawValue: UserDefaults.standard.string(forKey: "briefingVoice") ?? "device") ?? .device {
+    @Published var voice: BriefingVoice = BriefingVoice(rawValue: UserDefaults.standard.string(forKey: "briefingVoice") ?? BriefingVoice.gemini.rawValue) ?? .gemini {
         didSet {
             UserDefaults.standard.set(voice.rawValue, forKey: "briefingVoice")
+            UserDefaults.standard.set(true, forKey: "geminiVoicePreferenceV1")
             let restart = playing || preparing
             resetAudio()
             if restart { speakCurrent() }
@@ -36,10 +37,11 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     private var resumeAfterInterruption = false
     private var completesBriefing = false
     var current: ReaderArticle? { articles.indices.contains(index) ? articles[index] : nil }
-    func adoptMicrosoftDefaultIfAvailable(_ articles: [ReaderArticle]) {
-        guard UserDefaults.standard.string(forKey: "briefingVoice") == nil,
-              !articles.isEmpty, articles.allSatisfy({ $0.audio?[BriefingVoice.nanami.rawValue] != nil }) else { return }
-        voice = .nanami
+    func adoptGeminiDefaultIfAvailable(_ articles: [ReaderArticle]) {
+        guard !UserDefaults.standard.bool(forKey: "geminiVoicePreferenceV1"),
+              !playing, !preparing,
+              !articles.isEmpty, articles.allSatisfy({ $0.audio?[BriefingVoice.gemini.rawValue].flatMap(WebURL.parse)?.scheme == "https" }) else { return }
+        voice = .gemini
     }
     override init() {
         super.init(); synth.delegate = self; synth.usesApplicationAudioSession = true
@@ -72,7 +74,7 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     private func speakCurrent() {
         resetAudio(); error = nil
         guard let current, activate() else { return }
-        if voice != .device { prepareMicrosoft(current); return }
+        if voice != .device { prepareRemoteAudio(current); return }
         let utterance = AVSpeechUtterance(string: current.speechText)
         let voiceID = UserDefaults.standard.string(forKey: "speechVoice") ?? ""
         utterance.voice = AVSpeechSynthesisVoice(identifier: voiceID) ?? AVSpeechSynthesisVoice(language: "ja-JP")
@@ -85,7 +87,7 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
         currentUtterance = nil; synth.stopSpeaking(at: .immediate)
         audioPlayer?.stop(); audioPlayer = nil; playing = false
     }
-    private func prepareMicrosoft(_ article: ReaderArticle) {
+    private func prepareRemoteAudio(_ article: ReaderArticle) {
         guard let url = article.audio?[voice.rawValue].flatMap(WebURL.parse) else {
             error = "\(voice.shortName)の音声は、この配信分にはまだ用意されていません。音声が配信されたあとに再取得するか、プルダウンでiPhoneの標準音声を選択してください。"
             return

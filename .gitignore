@@ -14,3 +14,6 @@ ios/build/
 !.env.example
 *.xcarchive/
 *.ipa
+
+# Local TTS verification outputs
+audio-check/
