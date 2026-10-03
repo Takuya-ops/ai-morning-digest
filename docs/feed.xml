@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-04】OpenAI safety employee resigns, claiming the company’s ‘culture is broken’ ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-04.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-04.html</guid>
+    <pubDate>Sat, 03 Oct 2026 23:08:57 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI safety employee resigns, claiming the company’s ‘culture is broken’&lt;/li&gt;&lt;li&gt;Apple、macOSの「フルディスクアクセス」に追加の制御を導入へ 「AIエージェントの進化でリスクが大幅に増大」&lt;/li&gt;&lt;li&gt;Amazon responds to data center backlash, says it no longer uses NDAs&lt;/li&gt;&lt;li&gt;All the AI agents that can live in your text messages&lt;/li&gt;&lt;li&gt;Amazon、データセンター批判に反論 10億ドル超の地域支援策も発表&lt;/li&gt;&lt;li&gt;Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応&lt;/li&gt;&lt;li&gt;Meta wants your next gadget to be Muse-infused&lt;/li&gt;&lt;li&gt;Sean Parker is rebuilding Stability AI around music&lt;/li&gt;&lt;li&gt;The Agent Said It Was Done. The Database Disagreed.&lt;/li&gt;&lt;li&gt;Getting the most out of Opus 5.5 in Claude and Claude Code&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-03】ChatGPTの“利用制限”リセットへ 有料ユーザー向け ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-03.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-03.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-15.html</guid>
     <pubDate>Mon, 14 Sep 2026 23:20:47 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;「iOS 27」配信開始！ 対応するのはiPhone 11以降 日本語のSiri AIは10月開始予定&lt;/li&gt;&lt;li&gt;How Fyxer built an AI executive assistant people trust&lt;/li&gt;&lt;li&gt;盛り上がる「AI減速」論に「勝手にどうぞ。許可を求めるな」 トランプ政権幹部&lt;/li&gt;&lt;li&gt;ソニー銀行、勘定系システムの開発に生成AIを本格適用&lt;/li&gt;&lt;li&gt;「投稿した記憶のない娘の個人情報」をMeta AIが知人の投稿などから正確に推測するという恐怖体験を母親が告白&lt;/li&gt;&lt;li&gt;GPT-6 AstraとClaude Fableの性能を引き出すハーネス「Fusion」が登場、Claude CodeやCodexで使う場合と同等の性能を示しつつコストを最大39％削減&lt;/li&gt;&lt;li&gt;Sakana AIが複数モデルの使い分けでGPT-6 Astra超えを達成する「Fugu Ultra v2」をリリース＆コスパに優れた「Fugu Max」も登場&lt;/li&gt;&lt;li&gt;Perplexity trusts GPT-6 Astra with end-to-end systems&lt;/li&gt;&lt;li&gt;トランプ大統領、アモデイ氏を名指しで「完璧な小さい天使のふり」 「AIに必要なガードレールは強く賢い大統領だけ」&lt;/li&gt;&lt;li&gt;「AIを盗む」のではなく「AIを動かす」ために Googleが捉えた攻撃者の異変&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-14】Anthoropic CEOが「AI開発の減速」提言 OpenAIアルトマン氏、イーロン・マスク氏も賛同 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-14.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-14.html</guid>
-    <pubDate>Sun, 13 Sep 2026 22:33:35 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Anthoropic CEOが「AI開発の減速」提言 OpenAIアルトマン氏、イーロン・マスク氏も賛同&lt;/li&gt;&lt;li&gt;What’s behind the AI industry’s latest warnings of doom?&lt;/li&gt;&lt;li&gt;Obama urges Democrats to have a ‘clear plan’ for AI safeguards&lt;/li&gt;&lt;li&gt;「AIコーディングより人を雇う方が安い」時代が来る？ 生成AIの予算超過を防ぐトークン浪費対策の全て&lt;/li&gt;&lt;li&gt;本命はAIエージェントによる変革 日本企業を阻む2つの壁&lt;/li&gt;&lt;li&gt;機械学習のトップ会議 医療とロボ技術に脚光&lt;/li&gt;&lt;li&gt;バーティカルAI（Vertical AI）&lt;/li&gt;&lt;li&gt;「死亡事故がゼロの世の中を」──苦節7年、危険な作業をAIで省力化 全国で稼働する「交通誘導AI」の現在地&lt;/li&gt;&lt;li&gt;Claude Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher&lt;/li&gt;&lt;li&gt;AI社員がファクトチェック、日報は翌日作業のコンテキスト&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
