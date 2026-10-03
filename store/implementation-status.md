@@ -78,4 +78,6 @@ App Storeへのアップロード・再提出・承認は行っていません�
 - 全記事完成後に音声URLを公開。モデル・声・話し方・本文をハッシュに含め、再実行時は配信済みファイルを再利用。秘密キーはActionsのみで使用。
 - iOS build 5はWAV / MP3のキャッシュに対応。Geminiを標準とし、既存設定はGemini配信時に一度だけ移行。Nanami / Keita / 端末音声の手動選択を維持。
 - `checks` の手動実行で `gemini_sample=true` を選ぶと短い日本語サンプルを生成し、7日保存のActions artifactへ出力。通常のPRテストではAPIを呼ばない。
-- Node 17件・iOS 21件成功（WAVキャッシュ・旧設定の移行・手動選択の保持を含む）。GEMINI_API_KEYのSecret登録を確認。実API・署名ビルド・試聴・実機導入・本番配信は確認中。
+- Node 17件・iOS 21件成功（WAVキャッシュ・旧設定の移行・手動選択の保持を含む）。ActionsのPRチェック成功。GEMINI_API_KEYのSecret登録を確認。
+- 実API検証: Actions run 37160587864で日本語サンプル生成成功。15.36秒、24kHz/mono/PCM16 WAV、全体デコード成功、最大音量 -1.0dB。音源はローカル `audio-check/gemini-sample.wav` とActions artifact（7日）。耳での試聴評価は未実施。
+- build 5の署名付きReleaseアーカイブとcodesign検証に成功。実機導入・本番配信は未実施。既存PR #1には音声以外の未マージ改修も含むため、マージ範囲の確認が必要。
