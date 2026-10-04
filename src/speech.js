@@ -139,7 +139,19 @@ export async function synthesizeGemini(text, { key, fetcher = fetch, sleep = del
     await sleep(Number.isFinite(seconds) ? Math.min(120, Math.max(1, seconds)) * 1000 : 60_000);
   }
   // Never log provider response bodies, which can contain request details.
-  if (!response.ok) throw new Error(`Gemini TTS HTTP ${response.status}`);
+  if (!response.ok) {
+    const error = new Error(`Gemini TTS HTTP ${response.status}`);
+    // Classify structured quota fields only. Never log the provider's message,
+    // project identifiers, request text, API key, or complete response body.
+    if (response.status === 429) {
+      const body = await response.json().catch(() => ({}));
+      const details = Array.isArray(body.error?.details) ? body.error.details : [];
+      const fields = details.flatMap(detail => Array.isArray(detail.violations) ? detail.violations : [])
+        .flatMap(v => [v.quotaId, v.quotaMetric]).filter(v => typeof v === 'string').join(' ');
+      error.quotaPeriod = /per[_-]?day/i.test(fields) ? 'day' : /per[_-]?minute/i.test(fields) ? 'minute' : 'unknown';
+    }
+    throw error;
+  }
   const result = await response.json();
   const candidate = result.candidates?.[0];
   if (candidate?.finishReason !== 'STOP') throw new Error('Incomplete Gemini narration');
@@ -175,7 +187,8 @@ export async function attachGeminiAudio(data, {
     for (const [topic, url] of completed) topic.audio = { ...topic.audio, [GEMINI_VOICE]: url };
     log.info(`speech: Gemini 3.8 Flash TTS ${completed.length}記事を配信に追加しました。`);
   } catch (error) {
-    const status = /^Gemini TTS HTTP \d{3}$/.test(error.message) ? ` (${error.message})` : '';
+    const period = { day: '・日次利用枠', minute: '・分単位の利用枠', unknown: '・利用枠の種類は未特定' }[error.quotaPeriod] || '';
+    const status = /^Gemini TTS HTTP \d{3}$/.test(error.message) ? ` (${error.message}${period})` : '';
     log.warn(`speech: Gemini音声の生成・配信に失敗${status}。APIキー・利用枠・GitHub権限を確認してください。ニュースの生成は継続します。`);
   }
 }

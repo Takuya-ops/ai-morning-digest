@@ -46,8 +46,11 @@ struct PlayerDetailView: View {
     func refresh() async { let value = await AudioCache.shared.usage(); bytes = value.bytes; pinned = value.pinned }
     func cancel() { work?.cancel(); status = "停止しています。取得済み音声は残ります。" }
     func download(_ articles: [ReaderArticle], voice: BriefingVoice) {
-        guard !running else { return }; running = true; completed = 0
+        guard !running else { return }; completed = 0
         let available = articles.filter { $0.audio?[voice.rawValue].flatMap(WebURL.parse) != nil }; total = available.count
+        guard !available.isEmpty else { status = "この音声はまだ配信されていません。"; return }
+        running = true
+        let packID = ExperienceStore.shared.beginPack(available, voice: voice)
         work = Task {
             defer { running = false }
             do {
@@ -55,7 +58,7 @@ struct PlayerDetailView: View {
                     try Task.checkCancellation()
                     let url = WebURL.parse(article.audio![voice.rawValue]!)!
                     _ = try await AudioCache.shared.verifiedFile(for: url, metadata: article.audioMetadata?[voice.rawValue])
-                    try await AudioCache.shared.pin(url, value: true); ExperienceStore.shared.pinDownload(article); completed += 1; status = "\(completed) / \(total)件を保存"; await refresh()
+                    try await AudioCache.shared.pin(url, value: true); ExperienceStore.shared.pinDownload(article, packID: packID); completed += 1; status = "\(completed) / \(total)件を保存"; await refresh()
                 }
                 status = total == 0 ? "この音声はまだ配信されていません。" : "保存完了。\(articles.count - total)件は音声未配信です。"
             } catch is CancellationError { status = "停止しました。取得済み音声は残っています。" }
@@ -65,6 +68,7 @@ struct PlayerDetailView: View {
     }
 }
 struct DownloadView: View {
+    @EnvironmentObject var library: ExperienceStore
     @EnvironmentObject var store: DigestStore
     @EnvironmentObject var player: BriefingPlayer
     @StateObject private var manager = DownloadManager.shared
@@ -77,6 +81,14 @@ struct DownloadView: View {
                 if manager.running { ProgressView(value: Double(manager.completed), total: Double(max(1, manager.total))); Button("停止") { manager.cancel() } }
                 Text(manager.status).font(.subheadline)
                 Text("手動保存はモバイル通信も使用します。保存済みの音声は圏外でも聴けます。").font(.caption)
+            }
+            Section("日付・音声別の保存") {
+                ForEach((library.state.downloadPacks ?? []).sorted { $0.date > $1.date }) { pack in
+                    NavigationLink { DownloadPackView(packID: pack.id) } label: {
+                        VStack(alignment: .leading) { Text("\(pack.date) · \(BriefingVoice(rawValue: pack.voice)?.shortName ?? pack.voice)"); Text("\(pack.articles.count)/\(pack.expectedCount)件 · \(pack.articles.count == pack.expectedCount ? "保存完了" : "一部保存")").font(.caption) }
+                    }
+                    Button("この保存分を削除", role: .destructive) { Task { await library.deletePack(pack.id); await manager.refresh() } }.disabled(manager.running)
+                }
             }
             Section("自動保存") { Toggle("Wi-Fi接続時に自動取得", isOn: $automatic); Text("アプリの更新時に取得します。自動取得は7日間・合計250 MiBが上限です。手動保存した音声は削除するまで保持します。").font(.caption) }
             Section("保存容量") { Text("\(Double(manager.bytes) / 1048576, specifier: "%.1f") / 250 MiB · 手動保存\(manager.pinned)件"); Button("保存音声を削除", role: .destructive) { Task { await AudioCache.shared.removeDownloads(); ExperienceStore.shared.clearDownloadPins(); await manager.refresh() } }.disabled(manager.running); Text("再生中の音声は残します。記事・メモ・保存マークは消えません。").font(.caption) }
@@ -180,4 +192,23 @@ struct WeeklyReviewView: View {
         do { try AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio); try AVAudioSession.sharedInstance().setActive(true); audio = try AVAudioPlayer(contentsOf: url); audio?.play() } catch { self.error = "サンプルを再生できませんでした。" }
     }
     func stop() { audio?.stop() }
+}
+
+struct DownloadPackView: View {
+    let packID: String
+    @EnvironmentObject var library: ExperienceStore
+    @EnvironmentObject var player: BriefingPlayer
+    var body: some View {
+        let pack = library.state.downloadPacks?.first { $0.id == packID }
+        List {
+            if let pack {
+                Section {
+                    Text("\(pack.date) · \(pack.articles.count)/\(pack.expectedCount)記事")
+                    Button("保存した音声を再生") { if let voice = BriefingVoice(rawValue: pack.voice) { player.voice = voice; player.start(pack.articles) } }.disabled(pack.articles.isEmpty)
+                    Text("取得した時点の記事と音声です。再生中に元の記事が更新されても、この保存分を使用します。").font(.caption)
+                }
+                ForEach(pack.articles, id: \.editionID) { ArticleNavigationRow(article: $0) }
+            }
+        }.navigationTitle("保存した配信")
+    }
 }

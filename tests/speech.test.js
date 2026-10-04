@@ -143,3 +143,19 @@ test('Gemini exhausted quota has bounded retries and permission failures are not
     assert.deepEqual(waits, status === 429 ? [60000, 60000, 60000] : []);
   }
 });
+
+
+test('Gemini quota diagnostics classify structured limits without disclosing provider details', async () => {
+  let failure;
+  try {
+    await synthesizeGemini('ニュース', { key: 'test-only', sleep: async () => {}, fetcher: async () => Response.json({ error: {
+      message: 'private-project-and-request', details: [{ violations: [{ quotaId: 'GenerateRequestsPerDayPerProjectPerModel', quotaValue: '10' }] }],
+    } }, { status: 429 }) });
+  } catch (error) { failure = error; }
+  assert.equal(failure.quotaPeriod, 'day');
+  assert.equal(failure.message, 'Gemini TTS HTTP 429');
+  const warnings = [];
+  await attachGeminiAudio({ topics: [topic()] }, { env: { GEMINI_API_KEY: 'test-only' }, publisher: { existing: () => undefined }, synth: async () => { throw failure; }, log: { info() {}, warn: text => warnings.push(text) } });
+  assert.match(warnings[0], /日次利用枠/);
+  assert.doesNotMatch(warnings.join(''), /private-project|test-only|GenerateRequestsPerDay/);
+});

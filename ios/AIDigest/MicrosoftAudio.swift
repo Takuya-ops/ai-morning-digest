@@ -36,6 +36,10 @@ actor AudioCache {
         loadPins(); let files = (try? FileManager.default.contentsOfDirectory(at: directory, includingPropertiesForKeys: [.fileSizeKey])) ?? []
         return (files.reduce(0) { $0 + ((try? $1.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? 0) }, pins.count)
     }
+    func discardDownload(_ url: URL) {
+        try? pin(url, value: false)
+        if url != protectedURL { invalidate(url) }
+    }
     func removeDownloads() {
         loadPins(); pins = []; try? JSONEncoder().encode(pins).write(to: directory.appendingPathComponent("pins.json"), options: .atomic)
         let protected = protectedURL.map(name)

@@ -270,3 +270,19 @@ final class ExperienceTests: XCTestCase {
         player.stop(); restored.stop()
     }
 }
+
+final class DownloadPackTests: XCTestCase {
+    @MainActor func testPackIdentityKeepsAContentRevisionAndDeletionKeepsNotes() async throws {
+        let library = ExperienceStore(repository: LibraryRepository(url: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)))
+        await library.load()
+        var article = ReaderArticle(article: Article(title: "保存する記事", link: "https://example.com/item", feedName: "Source", date: ""), digestDate: "2026-10-04")
+        article.audio = [BriefingVoice.gemini.rawValue: "https://example.com/original.wav"]
+        let first = library.beginPack([article], voice: .gemini); library.pinDownload(article, packID: first); library.note("残すメモ", for: article)
+        XCTAssertEqual(library.beginPack([article], voice: .gemini), first)
+        article.title = "更新された記事"; article.audio?[BriefingVoice.gemini.rawValue] = "https://example.com/new.wav"
+        let second = library.beginPack([article], voice: .gemini); library.pinDownload(article, packID: second)
+        XCTAssertNotEqual(first, second); XCTAssertEqual(library.state.downloadPacks?.first?.articles.first?.title, "保存する記事")
+        await library.deletePack(first)
+        XCTAssertEqual(library.state.downloadPacks?.count, 1); XCTAssertEqual(library.state.notes[article.editionID], "残すメモ"); XCTAssertTrue(library.state.downloadedEditions?.contains(article.editionID) == true)
+    }
+}

@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 import Security
+import CryptoKit
 
 struct AudioMetadata: Codable, Hashable {
     let durationSeconds: Double
@@ -31,7 +32,12 @@ struct MuteRules: Codable {
 struct ArticleCollection: Codable, Identifiable {
     var id = UUID().uuidString; var name: String; var editions: Set<String> = []
 }
+struct DownloadPack: Codable, Identifiable {
+    var id: String; var date: String; var voice: String; var expectedCount: Int; var articles: [ReaderArticle] = []
+    var urls: Set<URL> { Set(articles.compactMap { $0.audio?[voice].flatMap(WebURL.parse) }) }
+}
 struct LibraryState: Codable {
+    var downloadPacks: [DownloadPack]?
     var articles: [String: ReaderArticle] = [:]
     var downloadedEditions: Set<String>?
     var notes: [String: String] = [:]
@@ -113,8 +119,31 @@ struct BriefingPlan {
         state.articles[article.editionID] = article
         if state.collections[index].editions.contains(article.editionID) { state.collections[index].editions.remove(article.editionID) } else { state.collections[index].editions.insert(article.editionID) }; persist()
     }
-    func pinDownload(_ article: ReaderArticle) { state.articles[article.editionID] = article; var pins = state.downloadedEditions ?? []; pins.insert(article.editionID); state.downloadedEditions = pins; persist() }
-    func clearDownloadPins() { state.downloadedEditions = []; persist() }
+    func beginPack(_ articles: [ReaderArticle], voice: BriefingVoice) -> String {
+        let manifest = articles.compactMap { $0.audio?[voice.rawValue] }.sorted().joined(separator: "\n")
+        let hash = SHA256.hash(data: Data(manifest.utf8)).map { String(format: "%02x", $0) }.joined().prefix(16)
+        let id = (articles.first?.digestDate ?? DateFormat.day()) + "|" + voice.rawValue + "|" + hash
+        if !(state.downloadPacks ?? []).contains(where: { $0.id == id }) {
+            var packs = state.downloadPacks ?? []; packs.append(DownloadPack(id: id, date: articles.first?.digestDate ?? DateFormat.day(), voice: voice.rawValue, expectedCount: articles.count)); state.downloadPacks = packs; persist()
+        }
+        return id
+    }
+    func pinDownload(_ article: ReaderArticle, packID: String) {
+        state.articles[article.editionID] = article
+        var pins = state.downloadedEditions ?? []; pins.insert(article.editionID); state.downloadedEditions = pins
+        if var packs = state.downloadPacks, let index = packs.firstIndex(where: { $0.id == packID }) {
+            packs[index].articles.removeAll { $0.editionID == article.editionID }; packs[index].articles.append(article); state.downloadPacks = packs
+        }
+        persist()
+    }
+    func deletePack(_ id: String) async {
+        guard let pack = state.downloadPacks?.first(where: { $0.id == id }) else { return }
+        state.downloadPacks?.removeAll { $0.id == id }
+        let retained = Set((state.downloadPacks ?? []).flatMap { $0.urls })
+        for url in pack.urls.subtracting(retained) { await AudioCache.shared.discardDownload(url) }
+        state.downloadedEditions = Set((state.downloadPacks ?? []).flatMap { $0.articles.map(\.editionID) }); persist()
+    }
+    func clearDownloadPins() { state.downloadedEditions = []; state.downloadPacks = []; persist() }
     func markListened(_ article: ReaderArticle) { state.listened.insert(article.editionID); persist() }
     func setMutes(_ rules: MuteRules) {
         func clean(_ values: [String]) -> [String] { var seen = Set<String>(); return values.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty && seen.insert($0).inserted } }
