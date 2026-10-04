@@ -887,13 +887,13 @@
  ],
  "audioDurationSec": 139,
  "publication": {
-  "revision": 1,
+  "revision": 2,
   "contentRevision": "249d26456420e8063b66759a460b654578851e7086b92421ac54bc061c6eea91",
   "textState": "ready",
-  "updatedAt": "2026-10-04T00:35:44.623Z",
+  "updatedAt": "2026-10-04T00:40:11.245Z",
   "audioByVoice": {
    "gemini-3.8-flash-tts-Kore": {
-    "state": "pending",
+    "state": "failed",
     "expectedCount": 10,
     "generatedCount": 0
    }
