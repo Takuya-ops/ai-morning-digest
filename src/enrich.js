@@ -24,42 +24,6 @@ export function enrichSummary(hit, cluster, fallback) {
     // appear functional while every option displayed exactly the same text.
     summaryStyles: { short: text(styles.short, 600) || null, detail: text(styles.detail, 1600) || null, simple: text(styles.simple, 1000) || null },
     ttsText: text(hit.ttsText, 1800) || `${hit.headline}。${hit.summary}`,
-    faq, socialPost: text(hit.socialPost, 160),
+    faq,
   };
-}
-
-// Conservative bound (all non-ASCII count twice). Native editor provides the
-// weighted count including emoji and URL handling. Never append invented facts.
-function fit(text, budget = 245) {
-  let result = '', used = 0;
-  for (const c of text.normalize('NFC')) {
-    const weight = c.codePointAt(0) <= 0x10ff ? 1 : 2;
-    if (used + weight > budget - 2) return `${result}…`;
-    result += c; used += weight;
-  }
-  return result;
-}
-export function createDrafts(topics, date) {
-  const eligible = topics.filter(t => safeURL(t.articles?.[0]?.link));
-  if (!eligible.length) return [];
-  const drafts = [];
-  const labels = ['AIニュース', '今日の注目', '朝のAIメモ', 'AI動向まとめ', 'チェックしたい発表', '今日のAIトピック', 'AIニュース備忘録', '注目ニュースの要点', 'AIニュースを読む', '朝のキャッチアップ'];
-  for (let i = 0; i < 10; i++) {
-    const t = eligible[i % eligible.length];
-    const variant = Math.floor(i / eligible.length);
-    const label = labels[variant % labels.length];
-    const source = safeURL(t.articles[0].link);
-    const body = variant === 0 && t.socialPost ? t.socialPost : `${t.headline}\n${variant % 2 ? (t.whyItMatters || t.summary) : t.summary}`;
-    const text = `${fit(`【${label}】\n${body}`)}\n${source}\n#生成AI`;
-    drafts.push({ id: `${date}-${t.id || stableID(source)}-${variant}`, title: `${i + 1}. ${t.headline}`, text, sourceIDs: [t.id || stableID(source)], sourceURLs: [source], aiGenerated: Boolean(t.aiGenerated && variant === 0 && t.socialPost) });
-  }
-  for (let group = 0; group < 2; group++) {
-    const selected = eligible.slice(group * 3, group * 3 + 3);
-    if (selected.length < 3) continue;
-    const sourceURLs = selected.map(t => safeURL(t.articles[0].link));
-    const label = group === 0 ? 'AIニュース3選' : 'あわせて読みたいAIニュース';
-    const text = `【${label}】\n${selected.map((t, i) => `${fit(t.headline, 45)}\n${sourceURLs[i]}`).join('\n')}\n#生成AI`;
-    drafts[8 + group] = { id: `${date}-roundup-${stableID(sourceURLs.join('\n'))}`, title: `${9 + group}. ${label}`, text, sourceIDs: selected.map(t => t.id || stableID(t.articles[0].link)), sourceURLs, aiGenerated: false };
-  }
-  return drafts;
 }

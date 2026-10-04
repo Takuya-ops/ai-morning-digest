@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"Security researchers used Claude to help them hack into OpenAI","audio":{}},{"headline":"ChatGPTがWordに対応 ラフなメモ→しっかりした文章に校正","audio":{}},{"headline":"Anthropic、AI開発の26％を「Claudeが主導」 「1％未満」から半年で急拡大","audio":{}},{"headline":"Qwen3.8-27Bを9分の1に圧縮も性能98.2%維持の「Bonsai 2 27B」","audio":{}},{"headline":"「規定を探す時間」をAIで短縮 豊川信用金庫が生成AIを職員のFAQに活用","audio":{}},{"headline":"「AIで資料は作れるけど、増えすぎた」を解消するNotebook機能とは？","audio":{}},{"headline":"AI導入は6割、でも8割超が「チャット止まり」 業務自動化まで進まない原因は？","audio":{}},{"headline":"Anthropic’s first embedded evaluator is … Accenture?","audio":{}},{"headline":"World model companies are keeping a lot of secrets","audio":{}},{"headline":"A new kind of AI model from a ChatGPT inventor is thrilling developers","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

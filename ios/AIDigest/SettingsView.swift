@@ -23,7 +23,7 @@ struct SettingsView: View {
                 Picker("テーマ", selection: $theme) { Text("システム").tag("system"); Text("ライト").tag("light"); Text("ダーク").tag("dark") }
                 Picker("記事の文字サイズ", selection: $readingSize) { Text("標準").tag(17.0); Text("大きめ").tag(20.0); Text("特大").tag(24.0) }
             }
-            Section("X連携") { NavigationLink { XSettingsView() } label: { Label("APIキーと投稿先アカウント", systemImage: "key") }; Text("基本機能は無料。X連携は任意です。API利用分はご自身のX開発者アカウントで課金される場合があります。").font(.caption).foregroundStyle(.secondary) }
+            Section("ライブラリ") { NavigationLink("ダウンロード管理") { DownloadView() }; NavigationLink("非表示キーワード・媒体") { MuteSettingsView() }; NavigationLink("AI用語集") { ScrollView { GlossaryView(text: nil) } } }
             Section("記録") { LabeledContent("連続読了", value: "\(store.streak)日"); LabeledContent("保存済みの記事", value: "\(store.savedIDs.count)件"); LabeledContent("オフライン保存", value: "\(store.cachedDates.count)日分") }
             Section("このアプリについて") {
                 Text("AIダイジェスト \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0")\n毎朝のニュースを、読む・聴く・振り返る。").font(.subheadline)
@@ -37,11 +37,9 @@ struct SettingsView: View {
 struct PrivacyView: View {
     var body: some View {
         List {
-            Section("端末内の記録") { Text("興味トピック、通知・表示設定、既読・保存、読了日、投稿案と投稿結果を端末内に保存します。ダイジェストは30日、保存した記事は保存解除まで保持します。開発者によるアカウント登録、広告、行動分析はありません。") }
+            Section("端末内の記録") { Text("興味トピック、通知・表示設定、既読・保存、読了日、再生位置、聴了記録、メモ、コレクションを端末内に保存します。ダイジェストは30日、保存した記事は保存解除まで保持します。開発者によるアカウント登録、広告、行動分析はありません。") }
             Section("通信") { Text("ニュースはGitHub Pagesから取得し、画像は各配信元へ接続します。各配信先にはIPアドレスなど通信に必要な情報が伝わります。出典はアプリ内Safariで開きます。読み上げにマイクを使わず、閲覧履歴や利用者の入力を生成AIへ送りません。") }
             Section("配信音声") { Text("Gemini音声は運営側が公開ニュースの読み上げ文をGoogleのGemini APIへ送り、事前生成します。Nanami・KeitaにはAzure Speechを使用します。音声ファイルをGitHub Releasesから取得して端末内に保存します。利用者のキーや閲覧履歴はGoogle・Microsoftへ送りません。iPhoneの標準音声も選択できます。") }
-            Section("X連携（任意）") { Text("ご自身のキーはこのiPhone専用のKeychainに保存します。認証ヘッダー・検索条件・投稿文はX APIに直接送信します。アカウント確認でユーザーID・表示名・ユーザー名を取得します。Xの検索結果は24時間以内のみ表示します。投稿はご自身の確認操作後に送信します。") }
-            Section("連携解除・共有") { Text("設定から連携を解除するとキーと検索キャッシュを削除します。アプリを削除してもKeychainのキーが残る場合があります。Xで公開した投稿は削除されません。X側の認可取り消し・投稿削除はXで行ってください。共有シートでは、ご自身が選んだ送信先へ記事・要約カード・投稿案を渡します。") }
             Section { Text("最終更新 2026年10月4日").font(.caption); Link("Web版のポリシー・お問い合わせ", destination: URL(string: "https://takuya-ops.github.io/ai-morning-digest/privacy.html")!) }
         }.navigationTitle("プライバシー").navigationBarTitleDisplayMode(.inline)
     }
@@ -83,6 +81,7 @@ struct NotificationSettings: View {
     }
 }
 struct OnboardingView: View {
+    @StateObject private var preview = VoicePreview()
     @EnvironmentObject var store: DigestStore
     @EnvironmentObject var player: BriefingPlayer
     @AppStorage("onboardingComplete") private var complete = false
@@ -97,10 +96,8 @@ struct OnboardingView: View {
                         Text("朝の6分を、\nAIを知る時間に。").font(.largeTitle.bold())
                         Text("ニュースを聴く。気になる動きを追う。\n保存して、圏外でも振り返る。").font(.title3).foregroundStyle(.secondary).lineSpacing(8)
                         Label("登録不要 · 基本機能はすべて無料", systemImage: "checkmark.shield").font(.subheadline)
-                        Button("読み上げを試す") {
-                            let source = Article(title: "音声デモ", link: "https://takuya-ops.github.io/ai-morning-digest/", feedName: "デモ", date: "", excerpt: "おはようございます。AIダイジェストでは、毎朝のニュースを端末の音声で読み上げます。気になった記事は保存して、あとから読み返せます。")
-                            player.start([ReaderArticle(article: source, digestDate: "demo")])
-                        }.buttonStyle(.bordered)
+                        Button("Gemini音声を試す（約15秒）") { player.pause(); preview.play() }.buttonStyle(.bordered)
+                        if let error = preview.error { Text(error).font(.caption) }
                         Spacer()
                     }.padding(28).padding(.top, 28)
                 } else if step == 1 {
@@ -110,9 +107,9 @@ struct OnboardingView: View {
                 }
                 HStack {
                     if step > 0 { Button("戻る") { step -= 1 }.frame(minWidth: 60, minHeight: 48) }
-                    Button(step == 2 ? "今日のダイジェストへ" : step == 1 && store.followedTopics.isEmpty ? "スキップして次へ" : "次へ") { player.stop(); if step == 2 { complete = true } else { step += 1 } }.buttonStyle(.borderedProminent).frame(maxWidth: .infinity, minHeight: 48)
+                    Button(step == 2 ? "今日のダイジェストへ" : step == 1 && store.followedTopics.isEmpty ? "スキップして次へ" : "次へ") { preview.stop(); if step == 2 { complete = true } else { step += 1 } }.buttonStyle(.borderedProminent).frame(maxWidth: .infinity, minHeight: 48)
                 }.padding(20)
             }.background(Color(.systemGroupedBackground))
-        }.interactiveDismissDisabled()
+        }.interactiveDismissDisabled().onDisappear { preview.stop() }
     }
 }

@@ -9,9 +9,6 @@ final class CoreTests: XCTestCase {
         XCTAssertNil(digest.topics[0].summaryStyles)
         XCTAssertEqual(digest.readerArticles[0].id, "https://example.com/news")
         XCTAssertEqual(digest.readerArticles[0].faq, [])
-        XCTAssertEqual(DraftFactory.make(digest).count, 10)
-        XCTAssertEqual(Set(DraftFactory.make(digest).map(\.id)).count, 10)
-        XCTAssertTrue(DraftFactory.make(digest).allSatisfy { XText.weight($0.text) <= 280 })
     }
     func testV2SummaryStylesAndFAQDecodeWithoutBreakingLegacyFields() throws {
         var object = try JSONSerialization.jsonObject(with: Data(legacy.utf8)) as! [String: Any]
@@ -54,7 +51,7 @@ final class CoreTests: XCTestCase {
         XCTAssertEqual(article.summaryText(.short).components(separatedBy: "\n").count, 3)
         XCTAssertEqual(article.summaryText(.simple), "用語を説明します。")
     }
-    @MainActor func testDatabasePreservesReadSavedAndEditedDraftAcrossRefreshAndReopen() throws {
+    @MainActor func testDatabasePreservesReadSavedAcrossRefreshAndReopen() throws {
         let root = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: root) }
         let url = root.appendingPathComponent("test.sqlite")
@@ -62,14 +59,11 @@ final class CoreTests: XCTestCase {
         let digest = try JSONDecoder().decode(Digest.self, from: Data(legacy.utf8))
         try db.save(digest); let article = digest.readerArticles[0]
         try db.markRead(article.id); try db.setSaved(article, saved: true)
-        try db.saveDraft("draft-1", text: "編集中の文章", status: "unknown")
         try db.save(digest)
         let reopened = try LocalDatabase(url: url)
         XCTAssertTrue(try reopened.states().read.contains(article.id))
         XCTAssertTrue(try reopened.states().saved.contains(article.id))
         XCTAssertEqual(try reopened.savedArticles().first?.title, article.title)
-        XCTAssertEqual(reopened.draftState("draft-1")?.text, "編集中の文章")
-        XCTAssertEqual(reopened.draftState("draft-1")?.status, "unknown")
         XCTAssertNotNil(reopened.fetchedAt(digest.date))
         try reopened.prune(now: DateFormat.parse("2026-11-12T00:00:00Z")!)
         XCTAssertTrue(try reopened.cachedDates().isEmpty)
@@ -104,21 +98,13 @@ final class CoreTests: XCTestCase {
             XCTAssertEqual(request.content.userInfo["url"] as? String, "aidigest://today?autoplay=1")
         }
     }
-    func testWeightedTextUnicodeAndURLs() {
-        XCTAssertEqual(XText.weight("日本語"), 6)
-        XCTAssertEqual(XText.weight("cafe\u{301}"), 4)
-        XCTAssertEqual(XText.weight("👨‍👩‍👧‍👦"), 2)
-        XCTAssertEqual(XText.weight("https://example.com/long/path?query=hello"), 23)
-        XCTAssertLessThanOrEqual(XText.weight(XText.fit(String(repeating: "日本語", count: 100))), 245)
-        XCTAssertNil(WebURL.parse("javascript:alert(1)"))
-    }
     @MainActor func testOfflineStartupImmediatelyRestoresCachedDigest() async throws {
         let url = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         let db = try LocalDatabase(url: url)
         let digest = try JSONDecoder().decode(Digest.self, from: Data(legacy.utf8))
         try db.save(digest)
-        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockXProtocol.self]
-        MockXProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
+        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockNetworkProtocol.self]
+        MockNetworkProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
         let store = DigestStore(database: db, session: URLSession(configuration: config))
         XCTAssertEqual(store.digest?.date, "2026-09-12")
         let success = await store.refresh()
@@ -132,17 +118,10 @@ final class CoreTests: XCTestCase {
         XCTAssertEqual(try db.savedArticles().first?.title, "音声モデル")
         XCTAssertEqual(try db.cachedDates().count, 2)
     }
-    func testOAuthSigningGoldenVectorAndJSONBodyExcluded() {
-        let credentials = XCredentials(apiKey: "key", apiSecret: "secret", accessToken: "token", accessSecret: "token-secret")
-        let header = OAuth1.header(method: "POST", url: URL(string: "https://api.x.com/2/tweets")!, credentials: credentials, nonce: "fixed", timestamp: "1234567890")
-        XCTAssertTrue(header.contains("oauth_signature=\"2%2Ffi6YIHgCxll7%2F28VQw7g8rd%2FY%3D\""))
-        XCTAssertEqual(OAuth1.encode("a b+c/日本語"), "a%20b%2Bc%2F%E6%97%A5%E6%9C%AC%E8%AA%9E")
-        let get = OAuth1.header(method: "GET", url: URL(string: "https://api.x.com/2/tweets/search/recent?query=AI%20news&max_results=10")!, credentials: credentials, nonce: "fixed", timestamp: "1234567890")
-        XCTAssertNotEqual(header, get)
-    }
+
 }
 
-final class MockXProtocol: URLProtocol {
+final class MockNetworkProtocol: URLProtocol {
     static var handler: ((URLRequest) throws -> (Int, Data))!
     static var requests: [URLRequest] = []
     override class func canInit(with request: URLRequest) -> Bool { true }
@@ -154,39 +133,6 @@ final class MockXProtocol: URLProtocol {
     }
     override func stopLoading() {}
 }
-final class XServiceTests: XCTestCase {
-    var service: XService!
-    let keys = XCredentials(apiKey: "key", apiSecret: "secret", accessToken: "token", accessSecret: "access-secret")
-    override func setUp() { let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockXProtocol.self]; service = XService(session: URLSession(configuration: config)); MockXProtocol.requests = [] }
-    func testSuccessfulPostUsesUserOAuthAndReturnsResultURL() async throws {
-        MockXProtocol.handler = { request in XCTAssertEqual(request.httpMethod, "POST"); XCTAssertEqual(request.url?.absoluteString, "https://api.x.com/2/tweets"); XCTAssertTrue(request.value(forHTTPHeaderField: "Authorization")?.hasPrefix("OAuth ") == true); return (201, Data(#"{"data":{"id":"12345"}}"#.utf8)) }
-        let url = try await service.post(text: "確認済みのニュース", credentials: keys)
-        XCTAssertEqual(url.absoluteString, "https://x.com/i/web/status/12345"); XCTAssertEqual(MockXProtocol.requests.count, 1)
-    }
-    func testTimeoutDoesNotRetryAndReportsUnknownOutcome() async {
-        MockXProtocol.handler = { _ in throw URLError(.timedOut) }
-        do { _ = try await service.post(text: "ニュース", credentials: keys); XCTFail("must fail") }
-        catch { guard case XError.unknownOutcome = error else { return XCTFail("wrong error: \(error)") } }
-        XCTAssertEqual(MockXProtocol.requests.count, 1)
-    }
-    func testAppOnlyBearerCannotPostAndOverlengthDoesNotSend() async {
-        do { _ = try await service.post(text: "ニュース", credentials: XCredentials(bearerToken: "read-only")); XCTFail("must reject") } catch {}
-        do { _ = try await service.post(text: String(repeating: "日", count: 141), credentials: keys); XCTFail("must reject") } catch {}
-        XCTAssertTrue(MockXProtocol.requests.isEmpty)
-    }
-    func testSearchAttributionAndBoundedQuery() async throws {
-        MockXProtocol.handler = { request in
-            let query = URLComponents(url: request.url!, resolvingAgainstBaseURL: false)!.queryItems!
-            XCTAssertEqual(query.first { $0.name == "max_results" }?.value, "10")
-            XCTAssertEqual(query.first { $0.name == "query" }?.value, "生成AI C++")
-            XCTAssertTrue(request.url!.absoluteString.contains("%2B%2B"))
-            return (200, Data(#"{"data":[{"id":"1","text":"原文","author_id":"2","created_at":"2026-09-12T00:00:00Z"}],"includes":{"users":[{"id":"2","name":"Author","username":"author"}]},"meta":{"result_count":1}}"#.utf8))
-        }
-        let posts = try await service.search(query: "生成AI C++", credentials: keys)
-        XCTAssertEqual(posts.first?.username, "author"); XCTAssertEqual(posts.first?.text, "原文"); XCTAssertEqual(posts.first?.url?.absoluteString, "https://x.com/author/status/1")
-    }
-}
-
 final class MicrosoftAudioTests: XCTestCase {
     @MainActor
     func testExistingVoiceMigratesOnlyWhenAllGeminiAudioExistsAndRespectsLaterChoice() {
@@ -214,22 +160,22 @@ final class MicrosoftAudioTests: XCTestCase {
     func testGeminiWAVIsCachedWithCorrectExtensionAndWorksOffline() async throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
-        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockXProtocol.self]
+        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockNetworkProtocol.self]
         var bytes = Data(repeating: 0, count: 1004)
         bytes.replaceSubrange(0..<4, with: Data("RIFF".utf8))
         bytes.replaceSubrange(8..<12, with: Data("WAVE".utf8))
-        MockXProtocol.requests = []; MockXProtocol.handler = { _ in (200, bytes) }
+        MockNetworkProtocol.requests = []; MockNetworkProtocol.handler = { _ in (200, bytes) }
         let session = URLSession(configuration: config)
         let cache = AudioCache(directory: directory, session: session)
         let url = URL(string: "https://github.com/owner/repo/releases/download/day/gemini.wav")!
         let local = try await cache.file(for: url)
         XCTAssertEqual(local.pathExtension, "wav")
         XCTAssertEqual(try Data(contentsOf: local), bytes)
-        MockXProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
+        MockNetworkProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
         let reopened = AudioCache(directory: directory, session: session)
         let offline = try await reopened.file(for: url)
         XCTAssertEqual(local, offline)
-        XCTAssertEqual(MockXProtocol.requests.count, 1)
+        XCTAssertEqual(MockNetworkProtocol.requests.count, 1)
         await cache.invalidate(url)
         XCTAssertFalse(FileManager.default.fileExists(atPath: local.path))
     }
@@ -240,26 +186,87 @@ final class MicrosoftAudioTests: XCTestCase {
     func testDownloadedAudioIsReusedAfterRestartWithoutNetwork() async throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
-        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockXProtocol.self]
+        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockNetworkProtocol.self]
         let session = URLSession(configuration: config)
         let bytes = Data([0x49, 0x44, 0x33] + Array(repeating: UInt8(0), count: 600))
-        MockXProtocol.requests = []; MockXProtocol.handler = { _ in (200, bytes) }
+        MockNetworkProtocol.requests = []; MockNetworkProtocol.handler = { _ in (200, bytes) }
         let url = URL(string: "https://github.com/owner/repo/releases/download/date/nanami.mp3")!
         let cache = AudioCache(directory: directory, session: session)
         let local = try await cache.file(for: url)
         XCTAssertEqual(try Data(contentsOf: local), bytes)
-        MockXProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
+        MockNetworkProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
         let reopened = AudioCache(directory: directory, session: session)
         let offline = try await reopened.file(for: url)
-        XCTAssertEqual(local, offline); XCTAssertEqual(MockXProtocol.requests.count, 1)
+        XCTAssertEqual(local, offline); XCTAssertEqual(MockNetworkProtocol.requests.count, 1)
     }
     func testErrorPageIsNotCachedAsAudio() async {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
-        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockXProtocol.self]
-        MockXProtocol.handler = { _ in (200, Data(String(repeating: "<html>error</html>", count: 50).utf8)) }
+        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockNetworkProtocol.self]
+        MockNetworkProtocol.handler = { _ in (200, Data(String(repeating: "<html>error</html>", count: 50).utf8)) }
         let cache = AudioCache(directory: directory, session: URLSession(configuration: config))
         do { _ = try await cache.file(for: URL(string: "https://example.com/audio.mp3")!); XCTFail("HTML must not be cached") } catch {}
         XCTAssertFalse(FileManager.default.fileExists(atPath: directory.path))
+    }
+}
+
+final class ExperienceTests: XCTestCase {
+    private func article(_ id: String = "one", day: String = "2026-10-04") -> ReaderArticle {
+        var article = ReaderArticle(article: Article(title: "ＧＰＴ 音声モデル", link: "https://example.com/\(id)", feedName: "Source", date: day, excerpt: "要約の検索テストです。"), digestDate: day)
+        article.narrationLanguage = "ja"; article.topics = ["音声"]
+        article.audio = [BriefingVoice.gemini.rawValue: "https://example.com/a.wav"]
+        article.audioMetadata = [BriefingVoice.gemini.rawValue: AudioMetadata(durationSeconds: 100, byteLength: 1000, mimeType: "audio/wav", assetSHA256: "hash", scriptHash: "script")]
+        return article
+    }
+    func testPlannerHonorsBudgetRateLanguageAndListenedPriority() {
+        let a = article(), b = article("two"); var unknown = article("three"); unknown.narrationLanguage = nil
+        let plan = BriefingPlan.make([a, b, unknown], minutes: 3, voice: .gemini, rate: 1, listened: [a.editionID], mutes: MuteRules())
+        XCTAssertEqual(plan.articles.map(\.id), [b.id]); XCTAssertLessThanOrEqual(plan.seconds, 180)
+        let fast = BriefingPlan.make([a, b, unknown], minutes: 3, voice: .gemini, rate: 1.5, listened: [], mutes: MuteRules())
+        XCTAssertEqual(fast.articles.count, 2); XCTAssertEqual(fast.seconds, 200 / 1.5 + 0.4, accuracy: 0.001)
+    }
+    func testSearchNormalizesWidthAndCaseAndKeepsEditionsSeparate() {
+        let a = article(), b = article(day: "2026-10-03"), index = SearchIndex([a, b])
+        XCTAssertEqual(index.find("gpt 音声").count, 2)
+        XCTAssertEqual(index.find("gpt", date: "2026-10-03").map(\.editionID), [b.editionID])
+        XCTAssertTrue(index.find("gpt 不一致").isEmpty)
+        XCTAssertTrue(index.find("", unread: [a.id]).isEmpty)
+        XCTAssertEqual(index.find("", saved: [a.id]).count, 2)
+    }
+    func testMutesCoverKeywordCategoryAndFeed() {
+        let a = article()
+        XCTAssertTrue(MuteRules(keywords: ["gpt"]).contains(a))
+        XCTAssertTrue(MuteRules(categories: ["音声"]).contains(a))
+        XCTAssertTrue(MuteRules(feeds: ["Source"]).contains(a))
+        XCTAssertFalse(MuteRules(keywords: ["別の話題"]).contains(a))
+        XCTAssertTrue(BriefingPlan.make([a], minutes: 0, voice: .gemini, rate: 1, listened: [], mutes: MuteRules(feeds: ["Source"])).articles.isEmpty)
+    }
+    func testRepositoryPersistsNotesCollectionsAndRejectsOlderWrites() async throws {
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString).appendingPathComponent("library.json")
+        let repository = LibraryRepository(url: url), a = article()
+        var state = LibraryState(); state.articles[a.editionID] = a; state.notes[a.editionID] = "秘密のメモ"; state.collections = [ArticleCollection(name: "研究", editions: [a.editionID])]; state.listened = [a.editionID]
+        try await repository.save(state, revision: 2); try await repository.save(LibraryState(), revision: 1)
+        let reopened = try await LibraryRepository(url: url).load()
+        XCTAssertEqual(reopened.notes[a.editionID], "秘密のメモ"); XCTAssertEqual(reopened.collections.first?.editions, [a.editionID]); XCTAssertEqual(reopened.listened, [a.editionID])
+    }
+    func testTenThousandArticleSearchBudget() {
+        let articles = (0..<10000).map { article(String($0)) }, index = SearchIndex(articles)
+        let start = Date(); XCTAssertEqual(index.find("gpt 音声").count, 10000)
+        XCTAssertLessThan(Date().timeIntervalSince(start), 0.3)
+    }
+    @MainActor func testCollectionsDoNotDeleteNotesAndSnapshotSurvivesRetention() async throws {
+        let repository = LibraryRepository(url: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)), library = ExperienceStore(repository: repository)
+        await library.load(); let a = article(day: "2020-01-01")
+        library.addCollection("保存箱"); let id = try XCTUnwrap(library.state.collections.first?.id)
+        library.toggleCollection(id, article: a); library.note("残す", for: a); library.deleteCollection(id); library.ingest([], saved: [])
+        XCTAssertEqual(library.state.notes[a.editionID], "残す"); XCTAssertNotNil(library.state.articles[a.editionID]); XCTAssertTrue(library.state.collections.isEmpty)
+    }
+    @MainActor func testPlayerRestoresPausedQueueWithoutAutoplay() {
+        let defaults = UserDefaults.standard, key = "playbackCheckpointV1", previous = defaults.data(forKey: key)
+        defer { if let previous { defaults.set(previous, forKey: key) } else { defaults.removeObject(forKey: key) } }
+        defaults.removeObject(forKey: key)
+        let player = BriefingPlayer(); player.start([article()]); player.pause(); player.checkpoint()
+        let restored = BriefingPlayer(); XCTAssertEqual(restored.current?.id, article().id); XCTAssertFalse(restored.playing); XCTAssertFalse(restored.preparing)
+        player.stop(); restored.stop()
     }
 }

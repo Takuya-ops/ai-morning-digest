@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"Meta debuts its Muse AI agent. Will consumers trust it?","audio":{}},{"headline":"Introducing ChatGPT Images 2.5","audio":{}},{"headline":"ChatGPT Workに「ユーザーの文章のクセを学んで再現する機能」が追加される","audio":{}},{"headline":"On the Navier–Stokes Millennium Prize Problem","audio":{}},{"headline":"Mistral raises €3B as sovereign AI becomes big business","audio":{}},{"headline":"AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome","audio":{}},{"headline":"ChatGPT、有料ユーザー全リセット 「Astra」で使い切った人向けに","audio":{}},{"headline":"How GPT-5.6 Sol helps run quantum computing experiments","audio":{}},{"headline":"The Work Now Within Reach","audio":{}},{"headline":"GitHub、Copilot CLIで複数AIモデルを使い分けてコスト削減を図る「Project HydraFusion」を研究プレビューで提供","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

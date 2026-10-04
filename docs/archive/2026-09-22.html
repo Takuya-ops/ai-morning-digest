@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"Amazon blocks Meta’s Muse AI agent","audio":{}},{"headline":"GPT-6 Astraの教科書","audio":{}},{"headline":"Uravation、「AI画像チェッカー」「画像の文字起こし（OCR）」「生成AIパスポート 模擬試験」など無料ツール6種類を追加し、自社サイトの無料ツールは計17種類に。いずれも登録不要・無料","audio":{}},{"headline":"Advisory Group on Mathematics and Artificial Intelligence","audio":{}},{"headline":"Building standards for the next phase of AI","audio":{}},{"headline":"Expanding OpenAI Academy with new learning paths","audio":{}},{"headline":"How V7 gives AI agents institutional memory","audio":{}},{"headline":"Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは","audio":{}},{"headline":"OpenAI forms math advisory group as its AI resolves more than 100 open problems","audio":{}},{"headline":"Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

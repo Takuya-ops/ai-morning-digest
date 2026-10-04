@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var library: ExperienceStore
     @EnvironmentObject var store: DigestStore
     @EnvironmentObject var player: BriefingPlayer
     @EnvironmentObject var router: AppRouter
@@ -9,10 +10,8 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $router.tab) {
             NavigationStack { TodayView() }.playerInset().tabItem { Label("今日", systemImage: "sun.max") }.tag(0)
-            NavigationStack { XFeedView() }.playerInset().tabItem { Label("X", systemImage: "bubble.left.and.bubble.right") }.tag(1)
-            NavigationStack { DraftsView() }.playerInset().tabItem { Label("投稿案", systemImage: "square.and.pencil") }.tag(2)
-            NavigationStack { LibraryView() }.playerInset().tabItem { Label("ライブラリ", systemImage: "books.vertical") }.tag(3)
-            NavigationStack { SettingsView() }.playerInset().tabItem { Label("設定", systemImage: "gearshape") }.tag(4)
+            NavigationStack { LibraryView() }.playerInset().tabItem { Label("ライブラリ", systemImage: "books.vertical") }.tag(1)
+            NavigationStack { SettingsView() }.playerInset().tabItem { Label("設定", systemImage: "gearshape") }.tag(2)
         }
         .fullScreenCover(isPresented: Binding(get: { !onboarded }, set: { if !$0 { onboarded = true } })) { OnboardingView() }
         .sheet(item: $linkedArticle) { article in NavigationStack { ArticleDetailView(article: article).toolbar { ToolbarItem(placement: .confirmationAction) { Button("閉じる") { linkedArticle = nil } } } }.playerInset() }
@@ -21,12 +20,20 @@ struct ContentView: View {
         .onChange(of: store.digest?.generatedAt) { _ in player.adoptGeminiDefaultIfAvailable(store.orderedBrief); handleLink() }
         .onChange(of: onboarded) { _ in handleLink() }
         .onAppear { player.adoptGeminiDefaultIfAvailable(store.orderedBrief); handleLink() }
+        .alert("ライブラリの保存", isPresented: Binding(get: { library.error != nil }, set: { if !$0 { library.error = nil } })) { Button("OK") { library.error = nil } } message: { Text(library.error ?? "") }
         .alert("音声再生", isPresented: Binding(get: { player.error != nil }, set: { if !$0 { player.error = nil } })) { Button("OK") { player.error = nil } } message: { Text(player.error ?? "") }
     }
     private func handleLink() {
         guard onboarded else { return }
         if let id = router.articleID, let article = store.database?.article(id: id) ?? store.digest?.readerArticles.first(where: { $0.id == id }) { linkedArticle = article; router.articleID = nil }
-        if router.autoplay, !store.orderedBrief.isEmpty { router.autoplay = false; player.start(store.orderedBrief, completesBriefing: true) }
+        if router.autoplay {
+            router.autoplay = false
+            Task {
+                let fresh = await store.refresh()
+                guard fresh, store.digest?.date == DateFormat.day(), !store.orderedBrief.isEmpty, player.voice == .device || store.orderedBrief.allSatisfy({ $0.audio?[player.voice.rawValue] != nil }) else { store.notice = "今日の音声はまだ準備中です。更新してから再生してください。"; return }
+                player.start(store.orderedBrief, completesBriefing: true)
+            }
+        }
     }
 }
 private struct PlayerInset: ViewModifier {
@@ -36,11 +43,12 @@ private struct PlayerInset: ViewModifier {
 extension View { func playerInset() -> some View { modifier(PlayerInset()) } }
 
 struct MiniPlayer: View {
+    @State private var expanded = false
     @EnvironmentObject var player: BriefingPlayer
     var body: some View {
         VStack(spacing: 4) {
             HStack {
-                Image(systemName: "waveform").foregroundStyle(Color.accentColor)
+                Button { expanded = true } label: { Image(systemName: "waveform").frame(width: 44, height: 44) }.accessibilityLabel("再生位置とタイマーを開く")
                 Text(player.preparing ? "\(player.voice.shortName)の音声を準備中…" : player.current?.title ?? "").font(.caption.weight(.semibold)).lineLimit(1)
                 Spacer(minLength: 4)
                 Button { player.stop() } label: { Image(systemName: "xmark").frame(width: 44, height: 44) }.accessibilityLabel("再生を終了")
@@ -54,11 +62,12 @@ struct MiniPlayer: View {
                 Spacer()
                 Menu { ForEach([0.8, 1, 1.2, 1.5], id: \.self) { rate in Button("\(rate, specifier: "%.1f")x") { player.rate = rate } } } label: { Text("\(player.rate, specifier: "%.1f")x").font(.caption.bold()).frame(minWidth: 44, minHeight: 44) }.accessibilityLabel("読み上げ速度")
             }
-        }.padding(.horizontal, 16).background(.regularMaterial)
+        }.padding(.horizontal, 16).background(.regularMaterial).sheet(isPresented: $expanded) { PlayerDetailView() }
     }
 }
 
 struct TodayView: View {
+    @EnvironmentObject var library: ExperienceStore
     @EnvironmentObject var store: DigestStore
     @EnvironmentObject var player: BriefingPlayer
     @State private var unreadOnly = false
@@ -78,9 +87,7 @@ struct TodayView: View {
                         Text(DateFormat.longDate(digest.date)).font(.title3.bold())
                         Text("\(digest.stats.feedCount)媒体から、今知っておきたい動きを。").font(.subheadline).foregroundStyle(.secondary)
                         if digest.date != DateFormat.day() { Label("今日はまだ未配信です。\(digest.date)のダイジェストを表示中", systemImage: "clock").font(.caption).foregroundStyle(.secondary) }
-                        Button { player.start(store.orderedBrief, completesBriefing: true) } label: {
-                            Label("再生 · 約\(max(1, Int(ceil(Double(store.orderedBrief.reduce(0) { $0 + $1.speechText.count }) / 300 / player.rate))))分", systemImage: "play.fill").font(.headline).frame(maxWidth: .infinity, minHeight: 40)
-                        }.buttonStyle(.borderedProminent).disabled(store.orderedBrief.isEmpty).accessibilityIdentifier("playBriefing")
+                        ListeningControls()
                         Picker("音声", selection: $player.voice) { ForEach(BriefingVoice.allCases) { Text($0.label).tag($0) } }.pickerStyle(.menu)
                         if player.voice != .device, !store.orderedBrief.allSatisfy({ $0.audio?[player.voice.rawValue] != nil }) {
                             Text("この配信分には\(player.voice.shortName)の音声がありません。iPhoneの標準音声ですぐに聴けます。").font(.caption).foregroundStyle(.secondary)
@@ -99,7 +106,7 @@ struct TodayView: View {
                 }
                 if !digest.others.isEmpty {
                     Section("その他のニュース · \(digest.others.count)件") {
-                        ForEach(digest.readerArticles.filter { !Set(digest.briefArticles.map(\.id)).contains($0.id) && (!unreadOnly || !store.readIDs.contains($0.id)) }) { article in ArticleNavigationRow(article: article) }
+                        ForEach(digest.readerArticles.filter { !library.state.mutes.contains($0) && !Set(digest.briefArticles.map(\.id)).contains($0.id) && (!unreadOnly || !store.readIDs.contains($0.id)) }) { article in ArticleNavigationRow(article: article) }
                     }
                 }
                 Section {

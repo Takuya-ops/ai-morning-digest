@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"GPT-6 Astra is the first model making OpenAI willing to declare the \"AGI era\"","audio":{}},{"headline":"OrcaRouter、Google「Gemini 3.8 Flash」、Alibaba「Qwen3.8 Max」、Anthropic「Claude Fable 5.1」のフロンティアモデルを提供開始","audio":{}},{"headline":"NVIDIA、AIモデル共有サイト「Hugging Face」を約2兆円で買収へ","audio":{}},{"headline":"複数のAIサービスで障害発生 ChatGPT／Claude／Grok【復旧済み】","audio":{}},{"headline":"Meta、「Muse Spark 1.3」公開 コーディングとエージェント性能を強化 「最大の飛躍」とザッカーバーグCEO","audio":{}},{"headline":"Google’s latest AI weather model gives you no excuse to forget your umbrella","audio":{}},{"headline":"トランプ政権「記事のAI学習は著作権侵害ではない」 OpenAIを支持する意見書、対New York Timesなどとの訴訟で","audio":{}},{"headline":"Daybreak for Frontline Defenders: $1B to protect essential services","audio":{}},{"headline":"Anthropic、商取引向けAIエージェントの設計図「Claude Commerce Agents」をオープンソースで公開","audio":{}},{"headline":"Crusoe reportedly raises $3B at a $30B valuation","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 
