@@ -15,6 +15,7 @@ struct ContentView: View {
         }
         .fullScreenCover(isPresented: Binding(get: { !onboarded }, set: { if !$0 { onboarded = true } })) { OnboardingView() }
         .sheet(item: $linkedArticle) { article in NavigationStack { ArticleDetailView(article: article).toolbar { ToolbarItem(placement: .confirmationAction) { Button("閉じる") { linkedArticle = nil } } } }.playerInset() }
+        .onChange(of: store.isLoading) { loading in if !loading { handleLink() } }
         .onChange(of: router.articleID) { _ in handleLink() }
         .onChange(of: router.autoplay) { _ in handleLink() }
         .onChange(of: store.digest?.generatedAt) { _ in player.adoptGeminiDefaultIfAvailable(store.orderedBrief); handleLink() }
@@ -26,7 +27,7 @@ struct ContentView: View {
     private func handleLink() {
         guard onboarded else { return }
         if let id = router.articleID, let article = store.database?.article(id: id) ?? store.digest?.readerArticles.first(where: { $0.id == id }) { linkedArticle = article; router.articleID = nil }
-        if router.autoplay {
+        if router.autoplay, !store.isLoading {
             router.autoplay = false
             Task {
                 let fresh = await store.refresh()
