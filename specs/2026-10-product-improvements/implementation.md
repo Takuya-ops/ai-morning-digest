@@ -71,3 +71,5 @@ TTSの429エラーは、構造化されたquotaId/quotaMetricから日次・分�
 本人からのdaily-digest失敗通知に対応し、本文の配信成功と音声の日次利用枠を分けて判定するよう変更した。`publication-outcome.js` は固定原稿のcontentRevision/revisionと処理結果を照合し、日次枠以外のエラーを警告へ変換しない。`report-publication.js` がActions Summary・警告・終了コードを出力する。HTTP 429の日次枠を最初のレスポンスで確認した時点で短時間の再試行を止める。
 
 ローカルNodeテスト26件成功（既知の日次枠、認証/設定等の失敗、古い原稿の結果、本文失敗、不正件数、全件成功、日次枠を1回で停止する検証を含む）。iOSコードの変更なし。音声の生成完了や利用枠回復を意味する変更ではない。
+
+修正後の本番 [daily-digest 37167817858](https://github.com/Takuya-ops/ai-morning-digest/actions/runs/37167817858) は成功（本文公開確認済み、日次利用枠は警告、4/10件保持・音声未配信）。[checks 37167828031](https://github.com/Takuya-ops/ai-morning-digest/actions/runs/37167828031) も成功。旧失敗実行の履歴は変更していない。
