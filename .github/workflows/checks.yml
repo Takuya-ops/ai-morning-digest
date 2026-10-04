@@ -8,10 +8,6 @@ on:
         description: 'Check Gemini summary model (uses a small API call)'
         type: boolean
         default: false
-      gemini_sample:
-        description: 'Generate one Japanese Gemini TTS sample (uses API quota)'
-        type: boolean
-        default: false
 permissions:
   contents: read
 jobs:
@@ -30,15 +26,3 @@ jobs:
         run: node scripts/check-gemini-summary.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      - name: Generate Gemini audio sample
-        if: github.event_name == 'workflow_dispatch' && inputs.gemini_sample
-        run: node scripts/check-gemini-audio.js
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      - name: Save Gemini audio sample
-        if: github.event_name == 'workflow_dispatch' && inputs.gemini_sample
-        uses: actions/upload-artifact@v4
-        with:
-          name: gemini-audio-sample
-          path: audio-check/
-          retention-days: 7

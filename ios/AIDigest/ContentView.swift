@@ -27,19 +27,12 @@ struct ContentView: View {
     private func handleLink() {
         guard onboarded else { return }
         if let id = router.articleID, let article = store.database?.article(id: id) ?? store.digest?.readerArticles.first(where: { $0.id == id }) { linkedArticle = article; router.articleID = nil }
-        if router.autoplay, !store.isLoading {
-            router.autoplay = false
-            Task {
-                let fresh = await store.refresh()
-                guard fresh, store.digest?.date == DateFormat.day(), !store.orderedBrief.isEmpty, player.voice == .device || store.orderedBrief.allSatisfy({ $0.audio?[player.voice.rawValue] != nil }) else { store.notice = "今日の音声はまだ準備中です。更新してから再生してください。"; return }
-                player.start(store.orderedBrief, completesBriefing: true)
-            }
-        }
+        router.autoplay = false
     }
 }
 private struct PlayerInset: ViewModifier {
     @EnvironmentObject var player: BriefingPlayer
-    func body(content: Content) -> some View { content.safeAreaInset(edge: .bottom, spacing: 0) { if player.current != nil { MiniPlayer() } } }
+    func body(content: Content) -> some View { content.safeAreaInset(edge: .bottom, spacing: 0) { if AudioFeatures.enabled && player.current != nil { MiniPlayer() } } }
 }
 extension View { func playerInset() -> some View { modifier(PlayerInset()) } }
 
@@ -88,12 +81,7 @@ struct TodayView: View {
                         Text(DateFormat.longDate(digest.date)).font(.title3.bold())
                         Text("\(digest.stats.feedCount)媒体から、今知っておきたい動きを。").font(.subheadline).foregroundStyle(.secondary)
                         if digest.date != DateFormat.day() { Label("今日はまだ未配信です。\(digest.date)のダイジェストを表示中", systemImage: "clock").font(.caption).foregroundStyle(.secondary) }
-                        ListeningControls()
-                        Picker("音声", selection: $player.voice) { ForEach(BriefingVoice.allCases) { Text($0.label).tag($0) } }.pickerStyle(.menu)
-                        if player.voice != .device, !store.orderedBrief.allSatisfy({ $0.audio?[player.voice.rawValue] != nil }) {
-                            Text("この配信分には\(player.voice.shortName)の音声がありません。iPhoneの標準音声ですぐに聴けます。").font(.caption).foregroundStyle(.secondary)
-                        }
-                        HStack { Label("\(player.voice.shortName)で読み上げ", systemImage: "headphones"); Spacer(); Text("\(digest.briefArticles.filter { store.readIDs.contains($0.id) }.count)/\(digest.briefArticles.count) 読了") }.font(.caption).foregroundStyle(.secondary)
+                        Text("\(digest.briefArticles.filter { store.readIDs.contains($0.id) }.count)/\(digest.briefArticles.count) 読了").font(.caption).foregroundStyle(.secondary)
                         if let notice = store.notice { Label(notice, systemImage: "wifi.exclamationmark").font(.caption).foregroundStyle(.secondary) }
                         if let updated = store.lastUpdated { Text("最終取得 \(DateFormat.localStamp(updated))").font(.caption2).foregroundStyle(.secondary) }
                     }.padding(.vertical, 8)

@@ -611,5 +611,8 @@
    "lang": "en",
    "date": "2026-09-18T20:26:33.000Z"
   }
- ]
+ ],
+ "features": {
+  "audio": false
+ }
 }

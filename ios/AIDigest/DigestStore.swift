@@ -100,7 +100,7 @@ final class DigestStore: ObservableObject {
             }
             await ImageCache.shared.prefetch(current.readerArticles.compactMap(\.thumbnailURL))
             let preferred = VoicePreferences.selected.rawValue
-            if preferred != "device", UserDefaults.standard.bool(forKey: "autoDownloadWiFi") { await AudioCache.shared.prefetch(current.briefArticles.compactMap { $0.audio?[preferred].flatMap(WebURL.parse) }) }
+            if AudioFeatures.enabled, preferred != "device", UserDefaults.standard.bool(forKey: "autoDownloadWiFi") { await AudioCache.shared.prefetch(current.briefArticles.compactMap { $0.audio?[preferred].flatMap(WebURL.parse) }) }
             await AudioCache.shared.prune()
             importLibrary()
             return true

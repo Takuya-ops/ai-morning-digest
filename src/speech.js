@@ -1,3 +1,4 @@
+import { AUDIO_ENABLED } from './audio-policy.js';
 import { createHash } from 'node:crypto';
 import { setTimeout as delay } from 'node:timers/promises';
 
@@ -81,8 +82,9 @@ function checkedDownloadURL(value, repository) {
 }
 
 export async function attachMicrosoftAudio(data, {
-  env = process.env, fetcher = fetch, publisher, synth = synthesize, log = console,
+  env = process.env, fetcher = fetch, publisher, synth = synthesize, log = console, enabled = AUDIO_ENABLED,
 } = {}) {
+  if (!enabled) return { status: 'disabled', generatedCount: 0 };
   if (!env.AZURE_SPEECH_KEY || !env.AZURE_SPEECH_REGION) {
     log.info('speech: Azure Speech未設定。Microsoft音声の生成をスキップします。'); return;
   }
@@ -163,8 +165,9 @@ export async function synthesizeGemini(text, { key, fetcher = fetch, sleep = del
 }
 
 export async function attachGeminiAudio(data, {
-  env = process.env, fetcher = fetch, publisher, synth = synthesizeGemini, log = console,
+  env = process.env, fetcher = fetch, publisher, synth = synthesizeGemini, log = console, enabled = AUDIO_ENABLED,
 } = {}) {
+  if (!enabled) return { status: 'disabled', generatedCount: 0 };
   if (!env.GEMINI_API_KEY) {
     log.warn('speech: GEMINI_API_KEY未設定。Gemini音声は未配信です。'); return { status: 'failed', reason: 'configuration', generatedCount: 0 };
   }

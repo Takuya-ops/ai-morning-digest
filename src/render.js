@@ -201,18 +201,6 @@ export function renderPage(data, { isArchive = false, prevDate = null, nextDate 
     ? topics
     : '<p class="empty">対象期間内に生成AI関連のトピックが見つかりませんでした</p>';
   const prefix = isArchive ? '../' : '';
-  const audioData = data.topics.map(t => ({ headline: t.headline, audio: Object.fromEntries(Object.entries(t.audio || {}).filter(([, value]) => {
-    try { const u = new URL(value); return u.protocol === 'https:' && u.hostname === 'github.com' && u.pathname.startsWith('/Takuya-ops/ai-morning-digest/releases/download/'); } catch { return false; }
-  })) }));
-  const player = `<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
-  <h2>今日のニュースを聴く</h2><p data-title></p>
-  <label>音声 <select data-voice style="min-height:44px"></select></label>
-  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
-  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
-  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
-  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
-  <script type="application/json" id="briefing-audio-data">${JSON.stringify(audioData).replace(/</g, '\\u003c')}</script>
-  <script src="${prefix}audio-player.js" defer></script>`;
 
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -255,7 +243,6 @@ export function renderPage(data, { isArchive = false, prevDate = null, nextDate 
     ${isArchive ? `<a href="../index.html">⏩ 最新へ</a>` : ''}
   </nav>
 </header>
-${player}
 
 <h2 class="section">今日の重要トピック TOP${data.topics.length || 10}</h2>
 ${topicsHtml}

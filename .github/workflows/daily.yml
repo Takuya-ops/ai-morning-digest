@@ -6,8 +6,8 @@ on:
     - cron: '30 20 * * *'
   workflow_dispatch:
     inputs:
-      retry_audio:
-        description: 'Retry audio for the currently published text without generating new summaries'
+      publish_existing:
+        description: 'Republish existing news without calling AI APIs'
         type: boolean
         default: false
 
@@ -36,23 +36,16 @@ jobs:
 
       - run: npm test
 
-      - name: Reuse the published text for audio retry
-        if: inputs.retry_audio
-        run: |
-          mkdir -p .work
-          cp docs/data/latest.json .work/digest-input.json
+      - name: Republish existing text without API calls
+        if: inputs.publish_existing
+        run: node scripts/disable-audio-publication.js
 
       - name: Generate text
-        if: ${{ !inputs.retry_audio }}
+        if: ${{ !inputs.publish_existing }}
         run: node src/index.js
         env:
-          DIGEST_PHASE: text
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
-          AZURE_SPEECH_REGION: ${{ vars.AZURE_SPEECH_REGION || secrets.AZURE_SPEECH_REGION }}
-          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Commit and push
         run: |
@@ -72,28 +65,5 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
 
-      - name: Generate audio for the published text
-        run: node scripts/publish-audio.js
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GITHUB_TOKEN: ${{ github.token }}
-
-      - name: Publish audio state
-        run: |
-          git add docs
-          if ! git diff --cached --quiet; then
-            git commit -m "audio: $(TZ=Asia/Tokyo date +%F)"
-            git pull --rebase origin main
-            git push
-          fi
-
-      - name: Request audio Pages build
-        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
-        env:
-          GH_TOKEN: ${{ github.token }}
-
       - name: Verify public publication
         run: node scripts/verify-publication.js
-
-      - name: Report text and audio outcomes
-        run: node scripts/report-publication.js

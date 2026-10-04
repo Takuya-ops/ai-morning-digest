@@ -46,6 +46,7 @@ struct PlayerDetailView: View {
     func refresh() async { let value = await AudioCache.shared.usage(); bytes = value.bytes; pinned = value.pinned }
     func cancel() { work?.cancel(); status = "停止しています。取得済み音声は残ります。" }
     func download(_ articles: [ReaderArticle], voice: BriefingVoice) {
+        guard AudioFeatures.enabled else { return }
         guard !running else { return }; completed = 0
         let available = articles.filter { $0.audio?[voice.rawValue].flatMap(WebURL.parse) != nil }; total = available.count
         guard !available.isEmpty else { status = "この音声はまだ配信されていません。"; return }
@@ -158,7 +159,7 @@ struct MuteSettingsView: View {
             Section("キーワード") { TextField("見出し・要約から除外", text: $keyword); Button("追加") { var rules = library.state.mutes; if !keyword.trimmingCharacters(in: .whitespaces).isEmpty { rules.keywords.append(keyword.trimmingCharacters(in: .whitespaces)); library.setMutes(rules); keyword = "" } }; ForEach(library.state.mutes.keywords, id: \.self) { word in Button("解除: \(word)") { var rules = library.state.mutes; rules.keywords.removeAll { $0 == word }; library.setMutes(rules) } } }
             Section("カテゴリ") { ForEach(InterestTopics.all, id: \.self) { topic in Toggle(topic, isOn: Binding(get: { library.state.mutes.categories.contains(topic) }, set: { value in var rules = library.state.mutes; rules.categories.removeAll { $0 == topic }; if value { rules.categories.append(topic) }; library.setMutes(rules) })) } }
             Section("媒体名（完全一致）") { TextField("媒体名", text: $feed); Button("追加") { var rules = library.state.mutes; if !feed.isEmpty { rules.feeds.append(feed); library.setMutes(rules); feed = "" } }; ForEach(library.state.mutes.feeds, id: \.self) { item in Button("解除: \(item)") { var rules = library.state.mutes; rules.feeds.removeAll { $0 == item }; library.setMutes(rules) } } }
-            Text("今日の一覧と新しい再生リストから除外します。保存記事・検索結果・再生中のリストは残ります。").font(.caption)
+            Text("今日の一覧から除外します。保存記事・検索結果は残ります。").font(.caption)
         }.navigationTitle("非表示の設定")
     }
 }
@@ -176,7 +177,7 @@ struct WeeklyReviewView: View {
         let items = library.state.articles.values.filter { days.contains($0.digestDate) }
         let covered = Set(items.map(\.digestDate))
         List {
-            Section { Stepper("\(weeksAgo == 0 ? "今週" : "\(weeksAgo)週前")", value: $weeksAgo, in: 0...52); Text("\(days.first!) 〜 \(days.last!)（日本時間）"); Text("取得済み \(covered.count)/7日 · \(items.count)記事"); Text("既読 \(items.filter { store.readIDs.contains($0.id) }.count) · 聴了 \(items.filter { library.state.listened.contains($0.editionID) }.count) · 保存 \(items.filter { store.savedIDs.contains($0.id) }.count)") }
+            Section { Stepper("\(weeksAgo == 0 ? "今週" : "\(weeksAgo)週前")", value: $weeksAgo, in: 0...52); Text("\(days.first!) 〜 \(days.last!)（日本時間）"); Text("取得済み \(covered.count)/7日 · \(items.count)記事"); Text("既読 \(items.filter { store.readIDs.contains($0.id) }.count) · 保存 \(items.filter { store.savedIDs.contains($0.id) }.count)") }
             Section("テーマ別") { ForEach(InterestTopics.all, id: \.self) { topic in let count = items.filter { $0.topics.contains(topic) }.count; if count > 0 { LabeledContent(topic, value: "\(count)件") } } }
             Section("未取得・未配信の日") { ForEach(days.filter { !covered.contains($0) }, id: \.self) { Text($0) } }
             Section("今週の保存記事") { ForEach(items.filter { store.savedIDs.contains($0.id) }.sorted { $0.digestDate > $1.digestDate }, id: \.editionID) { ArticleNavigationRow(article: $0) } }
@@ -188,6 +189,7 @@ struct WeeklyReviewView: View {
     private var audio: AVAudioPlayer?
     @Published var error: String?
     func play() {
+        guard AudioFeatures.enabled else { return }
         guard let url = Bundle.main.url(forResource: "gemini-preview", withExtension: "wav") else { error = "サンプルが見つかりません。"; return }
         do { try AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio); try AVAudioSession.sharedInstance().setActive(true); audio = try AVAudioPlayer(contentsOf: url); audio?.play() } catch { self.error = "サンプルを再生できませんでした。" }
     }

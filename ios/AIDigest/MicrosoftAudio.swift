@@ -15,6 +15,7 @@ actor AudioCache {
     static let shared = AudioCache()
     private let directory: URL
     private let session: URLSession
+    private let enabled: Bool
     private var protectedURL: URL?
     private var active = 0
     private var waiters: [CheckedContinuation<Void, Never>] = []
@@ -55,11 +56,13 @@ actor AudioCache {
         return location
     }
     private var inFlight: [URL: Task<URL, Error>] = [:]
-    init(directory: URL? = nil, session: URLSession = .shared) {
+    init(directory: URL? = nil, session: URLSession = .shared, enabled: Bool = AudioFeatures.enabled) {
+        self.enabled = enabled
         self.directory = directory ?? FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appendingPathComponent("briefing-audio", isDirectory: true)
         self.session = session
     }
     func file(for url: URL) async throws -> URL {
+        guard enabled else { throw URLError(.resourceUnavailable) }
         guard url.scheme == "https" else { throw URLError(.unsupportedURL) }
         let name = SHA256.hash(data: Data(url.absoluteString.utf8)).map { String(format: "%02x", $0) }.joined() + (url.pathExtension.lowercased() == "wav" ? ".wav" : ".mp3")
         let location = directory.appendingPathComponent(name)
@@ -89,7 +92,7 @@ actor AudioCache {
         try? FileManager.default.removeItem(at: directory.appendingPathComponent(name))
     }
     func prefetch(_ urls: [URL]) async {
-        guard await NetworkPolicy.onWiFi() else { return }
+        guard enabled, await NetworkPolicy.onWiFi() else { return }
         for url in Set(urls).prefix(12) { guard !Task.isCancelled else { return }; _ = try? await file(for: url) }
     }
     func prune(reserving: Int = 0) {

@@ -13,7 +13,7 @@ final class AppRouter: ObservableObject {
         tab = 0
         let query = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems ?? []
         articleID = query.first { $0.name == "id" }?.value
-        autoplay = query.first { $0.name == "autoplay" }?.value == "1"
+        autoplay = false
     }
 }
 final class DigestAppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {

@@ -95,7 +95,7 @@ final class CoreTests: XCTestCase {
             let trigger = try XCTUnwrap(request.trigger as? UNCalendarNotificationTrigger)
             let date = try XCTUnwrap(calendar.date(from: trigger.dateComponents))
             XCTAssertGreaterThan(date, now); XCTAssertFalse([1, 7].contains(calendar.component(.weekday, from: date)))
-            XCTAssertEqual(request.content.userInfo["url"] as? String, "aidigest://today?autoplay=1")
+            XCTAssertEqual(request.content.userInfo["url"] as? String, "aidigest://today?autoplay=0")
         }
     }
     @MainActor func testOfflineStartupImmediatelyRestoresCachedDigest() async throws {
@@ -142,7 +142,7 @@ final class MicrosoftAudioTests: XCTestCase {
         defer { for (key, value) in zip(keys, original) { if let value { defaults.set(value, forKey: key) } else { defaults.removeObject(forKey: key) } } }
         defaults.set("device", forKey: "briefingVoice")
         defaults.removeObject(forKey: "geminiVoicePreferenceV1")
-        let player = BriefingPlayer()
+        let player = BriefingPlayer(audioEnabled: true)
         var article = ReaderArticle(article: Article(title: "ニュース", link: "https://example.com/news", feedName: "test", date: "2026-10-04"), digestDate: "2026-10-04")
         player.adoptGeminiDefaultIfAvailable([article])
         XCTAssertEqual(player.voice, .device)
@@ -166,13 +166,13 @@ final class MicrosoftAudioTests: XCTestCase {
         bytes.replaceSubrange(8..<12, with: Data("WAVE".utf8))
         MockNetworkProtocol.requests = []; MockNetworkProtocol.handler = { _ in (200, bytes) }
         let session = URLSession(configuration: config)
-        let cache = AudioCache(directory: directory, session: session)
+        let cache = AudioCache(directory: directory, session: session, enabled: true)
         let url = URL(string: "https://github.com/owner/repo/releases/download/day/gemini.wav")!
         let local = try await cache.file(for: url)
         XCTAssertEqual(local.pathExtension, "wav")
         XCTAssertEqual(try Data(contentsOf: local), bytes)
         MockNetworkProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
-        let reopened = AudioCache(directory: directory, session: session)
+        let reopened = AudioCache(directory: directory, session: session, enabled: true)
         let offline = try await reopened.file(for: url)
         XCTAssertEqual(local, offline)
         XCTAssertEqual(MockNetworkProtocol.requests.count, 1)
@@ -191,11 +191,11 @@ final class MicrosoftAudioTests: XCTestCase {
         let bytes = Data([0x49, 0x44, 0x33] + Array(repeating: UInt8(0), count: 600))
         MockNetworkProtocol.requests = []; MockNetworkProtocol.handler = { _ in (200, bytes) }
         let url = URL(string: "https://github.com/owner/repo/releases/download/date/nanami.mp3")!
-        let cache = AudioCache(directory: directory, session: session)
+        let cache = AudioCache(directory: directory, session: session, enabled: true)
         let local = try await cache.file(for: url)
         XCTAssertEqual(try Data(contentsOf: local), bytes)
         MockNetworkProtocol.handler = { _ in throw URLError(.notConnectedToInternet) }
-        let reopened = AudioCache(directory: directory, session: session)
+        let reopened = AudioCache(directory: directory, session: session, enabled: true)
         let offline = try await reopened.file(for: url)
         XCTAssertEqual(local, offline); XCTAssertEqual(MockNetworkProtocol.requests.count, 1)
     }
@@ -204,7 +204,7 @@ final class MicrosoftAudioTests: XCTestCase {
         defer { try? FileManager.default.removeItem(at: directory) }
         let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockNetworkProtocol.self]
         MockNetworkProtocol.handler = { _ in (200, Data(String(repeating: "<html>error</html>", count: 50).utf8)) }
-        let cache = AudioCache(directory: directory, session: URLSession(configuration: config))
+        let cache = AudioCache(directory: directory, session: URLSession(configuration: config), enabled: true)
         do { _ = try await cache.file(for: URL(string: "https://example.com/audio.mp3")!); XCTFail("HTML must not be cached") } catch {}
         XCTAssertFalse(FileManager.default.fileExists(atPath: directory.path))
     }
@@ -265,8 +265,8 @@ final class ExperienceTests: XCTestCase {
         let defaults = UserDefaults.standard, key = "playbackCheckpointV1", previous = defaults.data(forKey: key)
         defer { if let previous { defaults.set(previous, forKey: key) } else { defaults.removeObject(forKey: key) } }
         defaults.removeObject(forKey: key)
-        let player = BriefingPlayer(); player.start([article()]); player.pause(); player.checkpoint()
-        let restored = BriefingPlayer(); XCTAssertEqual(restored.current?.id, article().id); XCTAssertFalse(restored.playing); XCTAssertFalse(restored.preparing)
+        let player = BriefingPlayer(audioEnabled: true); player.start([article()]); player.pause(); player.checkpoint()
+        let restored = BriefingPlayer(audioEnabled: true); XCTAssertEqual(restored.current?.id, article().id); XCTAssertFalse(restored.playing); XCTAssertFalse(restored.preparing)
         player.stop(); restored.stop()
     }
 }
@@ -284,5 +284,22 @@ final class DownloadPackTests: XCTestCase {
         XCTAssertNotEqual(first, second); XCTAssertEqual(library.state.downloadPacks?.first?.articles.first?.title, "保存する記事")
         await library.deletePack(first)
         XCTAssertEqual(library.state.downloadPacks?.count, 1); XCTAssertEqual(library.state.notes[article.editionID], "残すメモ"); XCTAssertTrue(library.state.downloadedEditions?.contains(article.editionID) == true)
+    }
+}
+
+final class DisabledAudioTests: XCTestCase {
+    @MainActor func testProductionPlayerIgnoresPlaybackAndLegacyAutoplayLinks() async throws {
+        XCTAssertFalse(AudioFeatures.enabled)
+        let player = BriefingPlayer()
+        let article = ReaderArticle(article: Article(title: "ニュース", link: "https://example.com", feedName: "Source", date: ""), digestDate: "2026-10-04")
+        player.start([article]); player.resume()
+        XCTAssertNil(player.current); XCTAssertFalse(player.playing); XCTAssertFalse(player.preparing)
+        AppRouter.shared.open(URL(string: "aidigest://today?autoplay=1")!)
+        XCTAssertFalse(AppRouter.shared.autoplay)
+        let config = URLSessionConfiguration.ephemeral; config.protocolClasses = [MockNetworkProtocol.self]
+        MockNetworkProtocol.handler = { _ in XCTFail("Disabled audio must not download"); throw URLError(.cancelled) }
+        let cache = AudioCache(directory: FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString), session: URLSession(configuration: config))
+        do { _ = try await cache.file(for: URL(string: "https://example.com/old.wav")!); XCTFail("Should reject disabled audio") }
+        catch { XCTAssertEqual((error as? URLError)?.code, .resourceUnavailable) }
     }
 }

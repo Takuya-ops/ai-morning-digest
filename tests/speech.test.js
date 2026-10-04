@@ -22,21 +22,21 @@ test('Microsoft voice list always includes Nanami; SSML is escaped and only offi
 test('missing keys make no network calls; reruns reuse audio and do not synthesize twice', async () => {
   const data = { date: '2026-09-12', topics: [topic()] };
   const forbidden = async () => { throw new Error('Unexpected network'); };
-  await attachMicrosoftAudio(data, { env: {}, fetcher: forbidden, log: quiet });
+  await attachMicrosoftAudio(data, { enabled: true, env: {}, fetcher: forbidden, log: quiet });
   assert.equal(data.topics[0].audio, undefined);
   const saved = new Map(); let calls = 0;
   const publisher = { existing: (name) => saved.get(name), upload: async (name) => { const url = `https://github.com/owner/repo/releases/download/day/${name}`; saved.set(name, url); return url; } };
   const synth = async () => { calls++; return Buffer.alloc(600); };
-  await attachMicrosoftAudio(data, { env, publisher, synth, log: quiet });
+  await attachMicrosoftAudio(data, { enabled: true, env, publisher, synth, log: quiet });
   assert.equal(Object.keys(data.topics[0].audio).length, 2); assert.equal(calls, 2);
-  await attachMicrosoftAudio(data, { env, publisher, synth, log: quiet });
+  await attachMicrosoftAudio(data, { enabled: true, env, publisher, synth, log: quiet });
   assert.equal(calls, 2);
   assert.notEqual(assetName(topic(), MICROSOFT_VOICES[0]), assetName({ ...topic(), ttsText: '変更したニュース' }, MICROSOFT_VOICES[0]));
 });
 test('partially generated voice is not advertised; other voice can still complete', async () => {
   const data = { date: '2026-09-12', topics: [topic(), { ...topic(), ttsText: '2件目' }] };
   const publisher = { existing: () => null, upload: async (name) => `https://example.com/${name}` };
-  await attachMicrosoftAudio(data, { env, publisher, log: quiet, synth: async (text, voice) => {
+  await attachMicrosoftAudio(data, { enabled: true, env, publisher, log: quiet, synth: async (text, voice) => {
     if (text === '2件目' && voice === MICROSOFT_VOICES[0]) throw new Error('Service unavailable');
     return Buffer.alloc(600);
   } });
@@ -95,7 +95,7 @@ test('Gemini caches complete voice and changing narration changes cache identity
   const data = { date: '2026-10-04', topics: [topic(), { ...topic(), ttsText: '次のニュースです。' }] };
   const saved = new Map(); let calls = 0;
   const publisher = { existing: name => saved.get(name), upload: async name => { const url = `https://example.com/${name}`; saved.set(name, url); return url; } };
-  const options = { env: { GEMINI_API_KEY: 'test-only' }, publisher, log: quiet, synth: async () => { calls++; return wav(); } };
+  const options = { enabled: true, env: { GEMINI_API_KEY: 'test-only' }, publisher, log: quiet, synth: async () => { calls++; return wav(); } };
   await attachGeminiAudio(data, options); await attachGeminiAudio(data, options);
   assert.equal(calls, 2);
   assert.ok(data.topics.every(t => t.audio[GEMINI_VOICE].endsWith('.wav')));
@@ -106,7 +106,7 @@ test('Gemini partial failure never exposes a partial playlist and rerun reuses u
   const data = { date: '2026-10-04', topics: [topic(), { ...topic(), ttsText: '次' }] };
   const saved = new Map(); let calls = 0;
   const publisher = { existing: name => saved.get(name), upload: async name => { saved.set(name, `https://example.com/${name}`); return saved.get(name); } };
-  const options = { env: { GEMINI_API_KEY: 'test-only' }, publisher, log: quiet, synth: async () => { if (++calls === 2) throw new Error('failure'); return wav(); } };
+  const options = { enabled: true, env: { GEMINI_API_KEY: 'test-only' }, publisher, log: quiet, synth: async () => { if (++calls === 2) throw new Error('failure'); return wav(); } };
   await attachGeminiAudio(data, options);
   assert.ok(data.topics.every(t => !t.audio?.[GEMINI_VOICE]));
   await attachGeminiAudio(data, options);
@@ -114,8 +114,8 @@ test('Gemini partial failure never exposes a partial playlist and rerun reuses u
 });
 test('Gemini missing key or oversized digest makes no API calls', async () => {
   const forbidden = async () => { assert.fail('Unexpected network'); };
-  await attachGeminiAudio({ topics: [topic()] }, { env: {}, fetcher: forbidden, log: quiet });
-  await attachGeminiAudio({ topics: Array.from({ length: 11 }, topic) }, { env: { GEMINI_API_KEY: 'test-only' }, fetcher: forbidden, log: quiet });
+  await attachGeminiAudio({ topics: [topic()] }, { enabled: true, env: {}, fetcher: forbidden, log: quiet });
+  await attachGeminiAudio({ topics: Array.from({ length: 11 }, topic) }, { enabled: true, env: { GEMINI_API_KEY: 'test-only' }, fetcher: forbidden, log: quiet });
 });
 test('WAV release uploads declare audio/wav', async () => {
   const publisher = await releasePublisher({ repository: 'owner/repo', token: 'test-only', date: '2026-10-04', fetcher: async (url, request) => {
@@ -156,7 +156,7 @@ test('Gemini quota diagnostics classify structured limits without disclosing pro
   assert.equal(failure.quotaPeriod, 'day');
   assert.equal(failure.message, 'Gemini TTS HTTP 429');
   const warnings = [];
-  const outcome = await attachGeminiAudio({ topics: [topic()] }, { env: { GEMINI_API_KEY: 'test-only' }, publisher: { existing: () => undefined }, synth: async () => { throw failure; }, log: { info() {}, warn: text => warnings.push(text) } });
+  const outcome = await attachGeminiAudio({ topics: [topic()] }, { enabled: true, env: { GEMINI_API_KEY: 'test-only' }, publisher: { existing: () => undefined }, synth: async () => { throw failure; }, log: { info() {}, warn: text => warnings.push(text) } });
   assert.deepEqual(outcome, { status: 'failed', reason: 'daily-quota', generatedCount: 0 });
   assert.match(warnings[0], /日次利用枠/);
   assert.doesNotMatch(warnings.join(''), /private-project|test-only|GenerateRequestsPerDay/);

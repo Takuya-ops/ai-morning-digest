@@ -9,7 +9,7 @@ enum NotificationManager {
         let hour = defaults.object(forKey: "notifyHour") as? Int ?? 7
         let minute = defaults.object(forKey: "notifyMinute") as? Int ?? 0
         let weekdays = defaults.bool(forKey: "notifyWeekdays")
-        let autoplay = defaults.bool(forKey: "notifyAutoplay")
+        let autoplay = false
         return (0..<30).compactMap { offset in
             guard let day = calendar.date(byAdding: .day, value: offset, to: now), let date = calendar.date(bySettingHour: hour, minute: minute, second: 0, of: day), date > now else { return nil }
             if weekdays && [1, 7].contains(calendar.component(.weekday, from: date)) { return nil }
@@ -55,7 +55,7 @@ enum NotificationManager {
         let center = UNUserNotificationCenter.current()
         guard try await center.requestAuthorization(options: [.alert, .sound]) else { throw NotificationError.denied }
         let content = UNMutableNotificationContent(); content.title = "AIダイジェスト · 通知テスト"; content.body = "タップすると今日のニュースを開きます。"; content.sound = .default
-        content.userInfo = ["url": "aidigest://today?autoplay=\(UserDefaults.standard.bool(forKey: "notifyAutoplay") ? 1 : 0)"]
+        content.userInfo = ["url": "aidigest://today?autoplay=\(0)"]
         try await center.add(UNNotificationRequest(identifier: "digest-test", content: content, trigger: UNTimeIntervalNotificationTrigger(timeInterval: 120, repeats: false)))
     }
     enum NotificationError: LocalizedError { case denied; var errorDescription: String? { "iOSの設定で通知を許可してください。" } }

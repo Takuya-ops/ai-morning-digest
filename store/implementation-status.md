@@ -1,3 +1,5 @@
+> build 7では本人の費用削減指示により音声を全面停止。以下は過去の検証履歴です。現状は[機能改善の実装記録](../specs/2026-10-product-improvements/implementation.md)を参照。
+
 > build 6（2026-10-04）の現行状態は[機能改善の実装記録](../specs/2026-10-product-improvements/implementation.md)を参照。X関連の下記記録は過去版の検証履歴であり、現行アプリから機能を削除済み。
 
 # 実装・検証記録 — 2026-09-12

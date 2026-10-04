@@ -52,13 +52,21 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     private var completesBriefing = false
     var current: ReaderArticle? { articles.indices.contains(index) ? articles[index] : nil }
     func adoptGeminiDefaultIfAvailable(_ articles: [ReaderArticle]) {
-        guard !UserDefaults.standard.bool(forKey: "geminiVoicePreferenceV1"),
+        guard audioEnabled, !UserDefaults.standard.bool(forKey: "geminiVoicePreferenceV1"),
               !playing, !preparing,
               !articles.isEmpty, articles.allSatisfy({ $0.audio?[BriefingVoice.gemini.rawValue].flatMap(WebURL.parse)?.scheme == "https" }) else { return }
         voice = .gemini
     }
-    override init() {
+    private let audioEnabled: Bool
+    init(audioEnabled: Bool = AudioFeatures.enabled) {
+        self.audioEnabled = audioEnabled
         super.init()
+        guard audioEnabled else {
+            UserDefaults.standard.removeObject(forKey: checkpointKey)
+            UserDefaults.standard.set(false, forKey: "notifyAutoplay")
+            UserDefaults.standard.set(false, forKey: "autoDownloadWiFi")
+            return
+        }
         if let data = UserDefaults.standard.data(forKey: checkpointKey), let saved = try? JSONDecoder().decode(Checkpoint.self, from: data), saved.articles.indices.contains(saved.index), saved.voice == voice.rawValue {
             articles = saved.articles; index = saved.index; pendingPosition = saved.position; position = saved.position; heardSeconds = saved.heard
         }
@@ -91,11 +99,12 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
         }
     }
     func start(_ articles: [ReaderArticle], at index: Int = 0, completesBriefing: Bool = false) {
-        guard articles.indices.contains(index) else { return }
+        guard audioEnabled, articles.indices.contains(index) else { return }
         pendingPosition = 0; position = 0; heardSeconds = []; lastTick = nil
         self.articles = articles; self.index = index; self.completesBriefing = completesBriefing && index == 0; speakCurrent(); UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
     private func activate() -> Bool {
+        guard audioEnabled else { return false }
         do { let session = AVAudioSession.sharedInstance(); try session.setCategory(.playback, mode: .spokenAudio); try session.setActive(true); return true }
         catch { self.error = "音声を開始できませんでした。再生をやり直してください。"; playing = false; return false }
     }

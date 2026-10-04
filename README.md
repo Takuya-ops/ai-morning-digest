@@ -42,42 +42,22 @@
 
 実装範囲・検証結果・残る再提出手順は [store/implementation-status.md](store/implementation-status.md) を参照してください。App Storeの承認・再提出はまだ行っていません。
 
-### build 6の追加機能
+### build 7の現行機能
 
-- 再生位置を保存して再起動後に再開、15秒送り戻し、15分・30分・記事終了タイマー。起動だけでは自動再生しません。
-- 3分・5分・10分・全件のニュース選択。時間指定は日本語・実測時間付きの音声を対象にします。
-- 今日の音声をまとめて保存、取得進捗と停止、Wi-Fi自動取得、250 MiBの容量管理。
-- 端末内の記事検索（最大5語AND、日付・カテゴリ・保存・未読）、キーワード・カテゴリ・媒体の非表示。
-- コレクションと個人メモ、公式資料付き用語集、取得範囲を明示する週次集計。
-- Web版に再生・一時停止・次の記事・速度・音声選択。
-- Xタブ・投稿案・認証・直接投稿を削除。通常のOS共有シートは利用可能です。
-
-### 日本語要約と配信状態
-
-`ANTHROPIC_API_KEY` があればClaude、なければ `GEMINI_API_KEY` のGeminiで日本語要約・スタイル・Q&Aを生成します。利用者のキーは不要です。失敗時は原文の説明文と明示し、架空の要約やQ&Aを補いません。
-
-v3は旧版の `summary` と `audio` を維持し、`publication`、`editorial`、`narration`、`audioMetadata` を追加します。本文を先にpushし、同じ原稿の音声を生成・検証して追記します。音声だけの再試行は Actions → daily-digest → Run workflow → `retry_audio`。同じ原稿のRelease assetを再利用します。
-
-本文とPages公開が確認でき、音声がGeminiの日次利用枠だけで停止した場合は、Actionsを警告付き成功にし、Summaryに「本文配信完了・音声は利用枠待ち」と表示します。音声の公開状態は `failed` のままです。認証・設定・通信・音声検証・Pages公開のエラーは失敗のままとし、成功表示だけで音声配信済みとは判断しません。日次利用枠は短時間に再試行せず、回復後の `retry_audio` で再開します。
+- 今日・ライブラリ・設定の3タブ。記事の閲覧、保存、検索、非表示、メモ、コレクション、用語集、週次集計を利用できます。
+- 音声再生・ダウンロード・試聴・通知/Siri自動再生は停止しました。Gemini/AzureのTTS呼び出し、音声のサンプル生成、Webのプレイヤーも停止しています。
+- 日本語要約・スタイル・Q&Aは引き続き日次生成します。`ANTHROPIC_API_KEY` があればClaude、なければ `GEMINI_API_KEY` のGeminiを使用します。**要約APIの利用費は残ります。**
+- Xタブ・投稿案・認証・直接投稿はありません。通常のOS共有シートは利用できます。
+- 公開JSONは既存の本文項目を維持し、`features.audio = false`、`publication.audioByVoice = {}` とします。過去配信の音声URLとメタデータも取り除きます。
+- Actionsの `publish_existing` は既存本文の再公開専用です。要約・音声APIのどちらも呼びません。通常の日次実行は新しい本文だけを生成します。
 
 #### アイコン
 
 build 4で、濃紺を背景に朝日とニュースの行を組み合わせたマークへ更新しました。iOS・PWAの素材を統一しています。[調査した公式資料・デザイン方針・再出力方法](design/README.md)。
 
-### Gemini 3.8 Flash TTS の音声配信
+### 音声の停止
 
-標準のナレーションは `gemini-3.8-flash-tts` / Kore。標準的な日本語で、明瞭・少しゆっくり・文ごとに間を取る指示を `speech_metadata.style` に渡します。指示文を読み上げ本文へ混ぜません。
-
-1. GitHub の Settings → Secrets and variables → Actions に `GEMINI_API_KEY` を登録します。キーをソースやiOSアプリ、配信JSONへ入れません。
-2. この変更を `main` に反映して、Actions → daily-digest → Run workflow を実行します。
-3. 各記事のWAVを `digest-audio-YYYY-MM-DD` のRelease assetsへ保存し、JSONの `topics[].audio["gemini-3.8-flash-tts-Kore"]` で配信します。モデル・声・話し方・本文が同じなら、その日付の再実行で生成済み音声を再利用します。生成は最大10記事／回です。
-4. 更新版iOSアプリで「今日」を更新します。新規インストールはGeminiが標準。既存設定は全記事のGemini音声が届いた時点で一度だけ切り替え、その後に選んだ音声は保持します。自動取得したWAV／既存MP3は7日・250 MiBの範囲でキャッシュし、オフラインでも再生できます。
-
-全記事分が完成したときだけGemini音声を公開します。429/503ではRetry-After（未指定なら60秒）を待って最大3回再試行します。未設定・生成失敗でもニュース配信は続行します。未配信の記事には案内を表示し、端末音声への変更は利用者が選びます。過去記事は自動で再生成しません。
-
-Microsoft Nanami / Keita は引き続き選択できます。手動の単一フェーズ実行での追加生成には `AZURE_SPEECH_KEY` と `AZURE_SPEECH_REGION` が必要です。Geminiは運営側のAPI利用枠を使用し、利用者によるキー入力は不要です。
-
-公式資料: [モデル](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts)・[音声生成API](https://ai.google.dev/gemini-api/docs/generate-content/speech-generation)。3.8の通常レスポンスはWAVのため、旧モデル向けのPCMヘッダー追加は行いません。
+運用費を抑えるため音声は無効です。キーが登録されていても日次処理からTTSを呼びません。旧音声生成スクリプトを直接実行してもAPI呼び出しは発生しません。過去に生成したRelease assetsは保存していますが、現行画面や配信JSONから利用しません。端末内にある旧版アプリの画面を変えるにはbuild 7以降への更新が必要です。
 
 ### ビルドとテスト
 
@@ -152,7 +132,7 @@ open docs/index.html
 | `DIGEST_WINDOW_HOURS` | `26` | 収集対象の時間窓(時間) |
 | `ANTHROPIC_API_KEY` | なし | 設定するとClaudeで要約生成 |
 | `SUMMARY_MODEL` | `claude-opus-5` | 要約に使うClaudeモデル |
-| `GEMINI_API_KEY` | なし | Gemini 3.8 Flash TTSの生成キー。GitHub Actions Secretに登録 |
+| `GEMINI_API_KEY` | なし | 日本語要約用。GitHub Actions Secretに登録（TTSは停止中） |
 | `AZURE_SPEECH_KEY` | なし | 運営側のMicrosoft音声生成キー。未設定時は生成をスキップ |
 | `AZURE_SPEECH_REGION` | なし | Speechリソースのリージョン（例 `japaneast`） |
 | `GITHUB_TOKEN` / `GITHUB_REPOSITORY` | Actionsで自動提供 | 日次音声をGitHub Release assetsに保存 |

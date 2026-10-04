@@ -3,7 +3,7 @@
 // キャッシュ名は必ず PREFIX で始める: username.github.io はプロジェクト間でオリジンを共有するため、
 // 自分のキャッシュだけを掃除しないと他プロジェクトのオフラインデータを消してしまう
 const PREFIX = 'ai-digest-';
-const CACHE = `${PREFIX}v1`;
+const CACHE = `${PREFIX}v2-text-only`;
 
 self.addEventListener('install', () => {
   self.skipWaiting();

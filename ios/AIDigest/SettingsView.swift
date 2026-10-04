@@ -13,20 +13,16 @@ struct SettingsView: View {
         Form {
             NotificationSettings()
             Section("興味のあるトピック · \(store.followedTopics.count)件") { TopicChoices() }
-            Section("読む・聴く") {
-                Picker("読み上げ音声", selection: $player.voice) { ForEach(BriefingVoice.allCases) { Text($0.label).tag($0) } }.pickerStyle(.menu)
-                Text("Gemini 3.8の日本語ナレーションを再生します。ダウンロード後は圏外でも聴けます。Microsoft音声・iPhone標準音声も選べます。").font(.caption).foregroundStyle(.secondary)
+            Section("読む") {
                 Picker("要約のスタイル", selection: $summary) { ForEach(SummaryStyle.allCases) { Text($0.label).tag($0.rawValue) } }
                 Text("3行・詳細・やさしくは、運営側で生成して配信します。利用者のAPIキーは不要です。選んだスタイルがない記事は、配信済みの本文を表示します。").font(.caption).foregroundStyle(.secondary)
-                Picker("読み上げ速度", selection: $player.rate) { ForEach([0.8, 1, 1.2, 1.5], id: \.self) { Text("\($0, specifier: "%.1f")x").tag($0) } }
-                if player.voice == .device { Picker("端末の日本語音声", selection: $voice) { Text("端末の標準音声").tag(""); ForEach(AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("ja") }, id: \.identifier) { Text($0.name).tag($0.identifier) } } }
                 Picker("テーマ", selection: $theme) { Text("システム").tag("system"); Text("ライト").tag("light"); Text("ダーク").tag("dark") }
                 Picker("記事の文字サイズ", selection: $readingSize) { Text("標準").tag(17.0); Text("大きめ").tag(20.0); Text("特大").tag(24.0) }
             }
-            Section("ライブラリ") { NavigationLink("ダウンロード管理") { DownloadView() }; NavigationLink("非表示キーワード・媒体") { MuteSettingsView() }; NavigationLink("AI用語集") { ScrollView { GlossaryView(text: nil) } } }
+            Section("ライブラリ") { NavigationLink("非表示キーワード・媒体") { MuteSettingsView() }; NavigationLink("AI用語集") { ScrollView { GlossaryView(text: nil) } } }
             Section("記録") { LabeledContent("連続読了", value: "\(store.streak)日"); LabeledContent("保存済みの記事", value: "\(store.savedIDs.count)件"); LabeledContent("オフライン保存", value: "\(store.cachedDates.count)日分") }
             Section("このアプリについて") {
-                Text("AIダイジェスト \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0")\n毎朝のニュースを、読む・聴く・振り返る。").font(.subheadline)
+                Text("AIダイジェスト \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0")\n毎朝のニュースを、読む・保存する・振り返る。").font(.subheadline)
                 Text("ホーム画面を長押し → ウィジェットを追加 → AIダイジェストで、最新の見出しを配置できます。").font(.subheadline)
                 NavigationLink("プライバシーポリシー") { PrivacyView() }
                 Button("サポート") { safari = BrowserLink(url: URL(string: "https://github.com/Takuya-ops/ai-morning-digest/issues")!) }
@@ -37,9 +33,8 @@ struct SettingsView: View {
 struct PrivacyView: View {
     var body: some View {
         List {
-            Section("端末内の記録") { Text("興味トピック、通知・表示設定、既読・保存、読了日、再生位置、聴了記録、メモ、コレクションを端末内に保存します。ダイジェストは30日、保存した記事は保存解除まで保持します。開発者によるアカウント登録、広告、行動分析はありません。") }
-            Section("通信") { Text("ニュースはGitHub Pagesから取得し、画像は各配信元へ接続します。各配信先にはIPアドレスなど通信に必要な情報が伝わります。出典はアプリ内Safariで開きます。読み上げにマイクを使わず、閲覧履歴や利用者の入力を生成AIへ送りません。") }
-            Section("配信音声") { Text("Gemini音声は運営側が公開ニュースの読み上げ文をGoogleのGemini APIへ送り、事前生成します。Nanami・KeitaにはAzure Speechを使用します。音声ファイルをGitHub Releasesから取得して端末内に保存します。利用者のキーや閲覧履歴はGoogle・Microsoftへ送りません。iPhoneの標準音声も選択できます。") }
+            Section("端末内の記録") { Text("興味トピック、通知・表示設定、既読・保存、読了日、メモ、コレクションを端末内に保存します。ダイジェストは30日、保存した記事は保存解除まで保持します。開発者によるアカウント登録、広告、行動分析はありません。") }
+            Section("通信") { Text("ニュースはGitHub Pagesから取得し、画像は各配信元へ接続します。各配信先にはIPアドレスなど通信に必要な情報が伝わります。出典はアプリ内Safariで開きます。マイクでの録音は行わず、閲覧履歴や利用者の入力を生成AIへ送りません。") }
             Section { Text("最終更新 2026年10月4日").font(.caption); Link("Web版のポリシー・お問い合わせ", destination: URL(string: "https://takuya-ops.github.io/ai-morning-digest/privacy.html")!) }
         }.navigationTitle("プライバシー").navigationBarTitleDisplayMode(.inline)
     }
@@ -68,7 +63,6 @@ struct NotificationSettings: View {
             Toggle("毎朝のリマインダー", isOn: $enabled).onChange(of: enabled) { _ in schedule(requestPermission: true) }
             DatePicker("通知時刻", selection: time, displayedComponents: .hourAndMinute).disabled(!enabled)
             Toggle("平日のみ", isOn: $weekdays).disabled(!enabled).onChange(of: weekdays) { _ in schedule() }
-            Toggle("通知をタップすると再生", isOn: $autoplay).disabled(!enabled).onChange(of: autoplay) { _ in schedule() }
             Button("2分後にテスト通知") { Task { do { try await NotificationManager.testNotification(); message = "2分後に通知します。アプリを閉じてお待ちください。" } catch { message = error.localizedDescription } } }
         } header: { Text("配信時刻") } footer: { Text("端末の時刻で通知します。30日先まで予約し、起動・バックグラウンド更新で延長します。ニュースの更新は毎朝5:30 JST以降。バックグラウンド取得の時刻はiOSが決定します。") }
         .alert("通知", isPresented: Binding(get: { message != nil }, set: { if !$0 { message = nil } })) { Button("OK") { message = nil }; if enabled { Button("iOSの設定を開く") { if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) } } } } message: { Text(message ?? "") }
@@ -94,10 +88,8 @@ struct OnboardingView: View {
                     VStack(alignment: .leading, spacing: 24) {
                         Image(systemName: "sun.horizon.fill").font(.system(size: 64)).foregroundStyle(Color.accentColor)
                         Text("朝の6分を、\nAIを知る時間に。").font(.largeTitle.bold())
-                        Text("ニュースを聴く。気になる動きを追う。\n保存して、圏外でも振り返る。").font(.title3).foregroundStyle(.secondary).lineSpacing(8)
+                        Text("ニュースを読む。気になる動きを追う。\n保存して、圏外でも振り返る。").font(.title3).foregroundStyle(.secondary).lineSpacing(8)
                         Label("登録不要 · 基本機能はすべて無料", systemImage: "checkmark.shield").font(.subheadline)
-                        Button("Gemini音声を試す（約15秒）") { player.pause(); preview.play() }.buttonStyle(.bordered)
-                        if let error = preview.error { Text(error).font(.caption) }
                         Spacer()
                     }.padding(28).padding(.top, 28)
                 } else if step == 1 {

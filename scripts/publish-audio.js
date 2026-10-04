@@ -1,13 +1,2 @@
-import fs from 'node:fs';
-import { attachGeminiAudio, GEMINI_VOICE } from '../src/speech.js';
-import { completePublication } from '../src/publication.js';
-import { renderSite } from '../src/render.js';
-const data = JSON.parse(fs.readFileSync('.work/digest-input.json'));
-const latest = JSON.parse(fs.readFileSync('docs/data/latest.json'));
-if (latest.publication?.contentRevision !== data.publication.contentRevision) throw new Error('The published text has changed; refusing to overwrite it');
-const generation = await attachGeminiAudio(data);
-const state = await completePublication(data, GEMINI_VOICE);
-renderSite(data, 'docs');
-fs.writeFileSync('.work/audio-state', state);
-fs.writeFileSync('.work/audio-result.json', JSON.stringify({ contentRevision: data.publication.contentRevision, revision: data.publication.revision, generation }));
-console.log(`Audio publication: ${state}`);
+// Intentionally makes no API calls while audio is disabled.
+console.log('音声機能は停止中です。音声APIは呼び出しません。');

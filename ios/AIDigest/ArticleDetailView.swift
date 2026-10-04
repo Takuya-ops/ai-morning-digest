@@ -67,7 +67,7 @@ struct ArticleDetailView: View {
                 Spacer()
                 Menu { Button("テキストと出典を共有") { share = SharePayload(items: ["\(article.title)\n\(article.summary)\n\(article.sourceURL?.absoluteString ?? "")"]) }; Button("要約カードを共有") { shareCard() } } label: { Label("共有", systemImage: "square.and.arrow.up") }
                 Spacer()
-                Button { playFromHere() } label: { Label("再生", systemImage: "play.fill") }
+
             }.font(.subheadline).padding(.horizontal, 20).frame(minHeight: 56).background(.regularMaterial)
         }
         .onAppear { style = article.resolvedSummaryStyle(SummaryStyle(rawValue: preferredStyle) ?? .short); store.markRead(article) }

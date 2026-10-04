@@ -28,13 +28,10 @@ test('missing key reports unavailable and malformed WAV is rejected', async () =
   assert.equal(await completePublication(data, GEMINI_VOICE), 'unavailable');
   assert.throws(() => waveInfo(wav.subarray(0, 100))); assert.throws(() => waveInfo(Buffer.from('<html>error</html>')));
 });
-test('web audio escapes script injection and excludes unsafe audio', () => {
-  const data = sample(); data.topics[0].headline = '</script><script>alert(1)</script>';
-  data.topics[0].audio = { bad: 'javascript:alert(1)', good: 'https://github.com/Takuya-ops/ai-morning-digest/releases/download/test/test.wav' };
+test('web never exposes playback even when an archive contains old audio URLs', () => {
+  const data = sample(); data.topics[0].audio = { [GEMINI_VOICE]: 'https://github.com/Takuya-ops/ai-morning-digest/releases/download/test/test.wav' };
   const html = renderPage(data);
-  const block = html.match(/id="briefing-audio-data">(.*?)<\/script>/s)[1];
-  assert.ok(!block.includes('<')); const parsed = JSON.parse(block); assert.equal(parsed[0].audio.bad, undefined);
-  assert.equal(parsed[0].headline, data.topics[0].headline); assert.ok(html.includes('preload="none"')); assert.ok(!html.includes('autoplay'));
+  assert.ok(!html.includes('<audio')); assert.ok(!html.includes('briefing-player')); assert.ok(!html.includes('test.wav'));
 });
 
 test('Gemini summary uses a server-side key, and API failures preserve source excerpts', async () => {
