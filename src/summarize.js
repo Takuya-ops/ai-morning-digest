@@ -1,4 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
+import { setTimeout as delay } from 'node:timers/promises';
 import { TOPIC_LABELS, enrichSummary } from './enrich.js';
 
 // ANTHROPIC_API_KEY があれば Claude でトップ記事の日本語見出し・要約を生成する。
@@ -52,21 +53,44 @@ function extractJson(text) {
   return JSON.parse(text.slice(start, end + 1));
 }
 
+export async function geminiSummaryResponse(prompt, { key, models = ['gemini-3.8-flash', 'gemini-2.5-flash'], fetcher = fetch, wait = delay } = {}) {
+  let lastError;
+  for (const model of models) {
+    if (!/^[a-z0-9.-]+$/.test(model)) throw new Error('Invalid model');
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const response = await fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+          method: 'POST', redirect: 'error', signal: AbortSignal.timeout(120000),
+          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
+          body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', maxOutputTokens: 32768 } }),
+        });
+        if (!response.ok) {
+          lastError = new Error(`HTTP ${response.status}`);
+          if ([429, 500, 502, 503, 504].includes(response.status) && attempt < 2) { await wait(5000 * (attempt + 1)); continue; }
+          // Invalid credentials cannot be repaired by selecting a different model.
+          if ([401, 403].includes(response.status)) throw lastError;
+          break;
+        }
+        const result = await response.json();
+        if (result.candidates?.[0]?.finishReason !== 'STOP') { lastError = new Error('Incomplete summary'); break; }
+        const parsed = extractJson(result.candidates[0].content.parts.filter(p => p.text && !p.thought).map(p => p.text).join(''));
+        if (!Array.isArray(parsed)) throw new Error('Invalid summary');
+        return { parsed, model };
+      } catch (error) {
+        lastError = error;
+        if (/^HTTP (401|403)$/.test(error.message)) throw error;
+        if (attempt < 2) { await wait(5000 * (attempt + 1)); continue; }
+      }
+    }
+  }
+  throw lastError || new Error('No summary models');
+}
+
 export async function summarizeTopics(clusters) {
   if (!process.env.ANTHROPIC_API_KEY && process.env.GEMINI_API_KEY) {
     try {
-      const model = process.env.GEMINI_SUMMARY_MODEL || 'gemini-3.8-flash';
-      if (!/^[a-z0-9.-]+$/.test(model)) throw new Error('Invalid model');
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-        method: 'POST', redirect: 'error', signal: AbortSignal.timeout(120000),
-        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY },
-        body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: buildPrompt(clusters) }] }], generationConfig: { responseMimeType: 'application/json', maxOutputTokens: 16384 } }),
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const result = await response.json();
-      if (result.candidates?.[0]?.finishReason !== 'STOP') throw new Error('Incomplete summary');
-      const parsed = extractJson(result.candidates[0].content.parts.filter(p => p.text).map(p => p.text).join(''));
-      console.log('summarize: Geminiで日本語要約を生成しました');
+      const { parsed, model } = await geminiSummaryResponse(buildPrompt(clusters), { key: process.env.GEMINI_API_KEY, models: process.env.GEMINI_SUMMARY_MODEL ? [process.env.GEMINI_SUMMARY_MODEL] : undefined });
+      console.log(`summarize: ${model}で日本語要約を生成しました`);
       return clusters.map((c, i) => enrichSummary(parsed.find(p => p.index === i), c, fallbackSummary(c)));
     } catch (error) { const reason = /^HTTP \d+$/.test(error.message) ? error.message : error.message === 'Incomplete summary' ? 'Incomplete summary' : 'Invalid or unavailable response'; console.warn(`summarize: Gemini要約に失敗 (${reason})。原文の説明を使用します。`); return clusters.map(fallbackSummary); }
   }

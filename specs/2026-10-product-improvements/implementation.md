@@ -54,3 +54,5 @@ VoiceOver全操作、最大文字サイズ全画面、低容量端末、Bluetoot
 - iOS build 6: 署名付きarchive生成とcodesign検証に成功。App Store提出・実機へのインストールは本変更の完了条件には含めない。
 
 日次Actionsは本文・音声のpush後に[PagesビルドAPI](https://docs.github.com/en/rest/pages/pages#request-a-github-pages-build)を明示的に呼び、最後に公開JSONの本文版・revision・声別状態を最大5分間確認する。pushだけで配信済みとは扱わない。
+
+本番のGemini 3.8 Flash要約APIでHTTP 503を確認したため、要約には一時エラーの最大3回試行と `gemini-2.5-flash` への切替を追加した。音声は指定どおりGemini 3.8 Flash TTSのまま。401/403はモデルを変えて再試行しない。モデル名は実APIの一覧で確認した。

@@ -29,7 +29,7 @@ export function initializePublication(data, voice, configured) {
   for (const t of data.topics) {
     t.articleKey = t.articles[0]?.link;
     const japanese = /[ぁ-んァ-ヶ]/u.test(t.ttsText || `${t.headline} ${t.summary}`);
-    const language = japanese ? 'ja' : t.articles[0]?.lang === 'en' ? 'en' : 'und';
+    const language = japanese && (t.aiGenerated || t.articles[0]?.lang === 'ja') ? 'ja' : t.articles[0]?.lang === 'en' ? 'en' : 'und';
     t.editorial = { method: t.aiGenerated ? 'ai_summary' : 'source_excerpt', language, status: language === 'ja' ? 'ready' : language === 'en' ? 'untranslated' : 'unavailable' };
     t.narration = { language, scriptHash: digestHash(speechText(t)) };
   }

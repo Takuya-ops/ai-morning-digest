@@ -49,10 +49,25 @@ test('Gemini summary uses a server-side key, and API failures preserve source ex
       return Response.json({ candidates: [{ finishReason: 'STOP', content: { parts: [{ text: JSON.stringify([{ index: 0, headline: '日本語の見出し', summary: '日本語で要約しました。', summaryStyles: { short: '短文です。' } }]) }] } }] });
     };
     const result = await summarizeTopics(clusters); assert.equal(result[0].aiGenerated, true); assert.equal(result[0].summaryStyles.detail, null);
-    globalThis.fetch = async () => new Response('', { status: 429 });
+    globalThis.fetch = async () => new Response('', { status: 403 });
     const failed = await summarizeTopics(clusters); assert.equal(failed[0].aiGenerated, false); assert.equal(failed[0].summary, source.summary); assert.equal(failed[0].faq, undefined);
   } finally {
     globalThis.fetch = before.fetch;
     for (const [name, value] of [['GEMINI_API_KEY', before.gemini], ['ANTHROPIC_API_KEY', before.anthropic]]) { if (value === undefined) delete process.env[name]; else process.env[name] = value; }
   }
+});
+
+test('an English excerpt with a Japanese fallback message is not a Japanese narration', () => {
+  const data = sample(); Object.assign(data.topics[0], { headline: 'English headline', summary: '要約情報なし。', ttsText: null, aiGenerated: false, articles: [{ link: 'https://example.com', lang: 'en' }] });
+  initializePublication(data, GEMINI_VOICE, false);
+  assert.equal(data.topics[0].narration.language, 'en'); assert.equal(data.topics[0].editorial.status, 'untranslated');
+});
+
+test('summary retries transient errors and falls back to the available stable model', async () => {
+  const { geminiSummaryResponse } = await import('../src/summarize.js'); let calls = 0, waits = 0;
+  const result = await geminiSummaryResponse('test', { key: 'test', wait: async () => { waits++; }, fetcher: async url => {
+    calls++; if (url.includes('gemini-3.8-flash')) return new Response('', { status: 503 });
+    return Response.json({ candidates: [{ finishReason: 'STOP', content: { parts: [{ text: '[{"index":0,"summary":"日本語です。"}]' }] } }] });
+  } });
+  assert.equal(calls, 4); assert.equal(waits, 2); assert.equal(result.model, 'gemini-2.5-flash');
 });
