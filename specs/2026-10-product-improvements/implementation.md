@@ -48,7 +48,7 @@ VoiceOver全操作、最大文字サイズ全画面、低容量端末、Bluetoot
 
 ### 2026-10-04の実行結果
 
-- Node: 最終変更で23件成功（利用枠エラーの秘匿診断テストを含む）。PRマージ時の20件はGitHub Actionsのchecksでも成功。
+- Node: 最終変更で23件成功（利用枠エラーの秘匿診断テストを含む）。最終23件はGitHub Actions [checks 37166405894](https://github.com/Takuya-ops/ai-morning-digest/actions/runs/37166405894)でも成功。
 - iOS: iPhone 18 Pro / iOS 27 Simulatorで23件成功（日付別保存の版維持・削除時のメモ保持を含む）。iOS 26.5は最終テスト時に起動待ちとなったため、成功結果に含めない。1万件検索はインデックス構築を除く検索部分で300ms未満のassertionを通過。
 - Web: 実ブラウザでRelease音声の読み込み、1.2倍速、次の記事、一時停止を確認。人間による音質評価とは区別する。
 - iOS build 6: 署名付きarchive生成とcodesign検証に成功。App Store提出・実機へのインストールは本変更の完了条件には含めない。
@@ -58,3 +58,10 @@ VoiceOver全操作、最大文字サイズ全画面、低容量端末、Bluetoot
 本番のGemini 3.8 Flash要約APIでHTTP 503を確認したため、要約には一時エラーの最大3回試行と `gemini-2.5-flash` への切替を追加した。音声は指定どおりGemini 3.8 Flash TTSのまま。401/403はモデルを変えて再試行しない。モデル名は実APIの一覧で確認した。
 
 TTSの429エラーは、構造化されたquotaId/quotaMetricから日次・分単位・不明の3分類だけを記録する。プロバイダのエラー本文、プロジェクト識別子、キー、原稿はログに出さない。既にReleaseへ保存した同一原稿の音声は再試行で再生成しない。
+
+### 本番配信の確認結果（10月4日10時 JST）
+
+- 最新本文は日本語10/10件で公開。本文のcontentRevisionを維持した `retry_audio` で音声だけを再試行した。
+- [Actions 37166434006](https://github.com/Takuya-ops/ai-morning-digest/actions/runs/37166434006)でGemini TTSのHTTP 429を**日次利用枠**と特定。新原稿に対応するRelease WAVは4/10件で、公開JSONは声の状態をfailed・公開件数0とする。旧原稿の音声で代用しない。
+- Pagesの公開JSONが生成した本文版・revision・声別状態と一致することをActionsで確認。最後の「Verify audio availability」は意図どおり失敗した。アプリ実装・checks成功と、本番音声の未配信を区別する。
+- 音声全件の配信には利用枠の回復または運営側の利用枠見直しが必要。回復後はActions → daily-digest → Run workflow → `retry_audio` を有効にして実行すれば、生成済み4件を再利用する。課金・利用枠の変更は実施していない。[Google公式の利用枠説明](https://ai.google.dev/gemini-api/docs/rate-limits)
