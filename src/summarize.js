@@ -68,7 +68,7 @@ export async function summarizeTopics(clusters) {
       const parsed = extractJson(result.candidates[0].content.parts.filter(p => p.text).map(p => p.text).join(''));
       console.log('summarize: Geminiで日本語要約を生成しました');
       return clusters.map((c, i) => enrichSummary(parsed.find(p => p.index === i), c, fallbackSummary(c)));
-    } catch { console.warn('summarize: Gemini要約に失敗。原文の説明を使用します。'); return clusters.map(fallbackSummary); }
+    } catch (error) { const reason = /^HTTP \d+$/.test(error.message) ? error.message : error.message === 'Incomplete summary' ? 'Incomplete summary' : 'Invalid or unavailable response'; console.warn(`summarize: Gemini要約に失敗 (${reason})。原文の説明を使用します。`); return clusters.map(fallbackSummary); }
   }
   if (!process.env.ANTHROPIC_API_KEY) {
     console.log('summarize: ANTHROPIC_API_KEY 未設定のためフィード説明文から要約を生成します');

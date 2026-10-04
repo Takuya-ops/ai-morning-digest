@@ -4,6 +4,10 @@ on:
     paths: ['src/**', 'scripts/**', 'static/**', 'tests/**', 'ios/**', 'package*.json', '.github/workflows/**']
   workflow_dispatch:
     inputs:
+      summary_sample:
+        description: 'Check Gemini summary model (uses a small API call)'
+        type: boolean
+        default: false
       gemini_sample:
         description: 'Generate one Japanese Gemini TTS sample (uses API quota)'
         type: boolean
@@ -21,6 +25,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+      - name: Check Gemini summary model
+        if: github.event_name == 'workflow_dispatch' && inputs.summary_sample
+        run: node scripts/check-gemini-summary.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - name: Generate Gemini audio sample
         if: github.event_name == 'workflow_dispatch' && inputs.gemini_sample
         run: node scripts/check-gemini-audio.js
