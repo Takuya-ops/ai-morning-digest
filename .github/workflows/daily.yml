@@ -95,5 +95,5 @@ jobs:
       - name: Verify public publication
         run: node scripts/verify-publication.js
 
-      - name: Verify audio availability
-        run: test "$(cat .work/audio-state)" = ready
+      - name: Report text and audio outcomes
+        run: node scripts/report-publication.js

@@ -58,6 +58,8 @@
 
 v3は旧版の `summary` と `audio` を維持し、`publication`、`editorial`、`narration`、`audioMetadata` を追加します。本文を先にpushし、同じ原稿の音声を生成・検証して追記します。音声だけの再試行は Actions → daily-digest → Run workflow → `retry_audio`。同じ原稿のRelease assetを再利用します。
 
+本文とPages公開が確認でき、音声がGeminiの日次利用枠だけで停止した場合は、Actionsを警告付き成功にし、Summaryに「本文配信完了・音声は利用枠待ち」と表示します。音声の公開状態は `failed` のままです。認証・設定・通信・音声検証・Pages公開のエラーは失敗のままとし、成功表示だけで音声配信済みとは判断しません。日次利用枠は短時間に再試行せず、回復後の `retry_audio` で再開します。
+
 #### アイコン
 
 build 4で、濃紺を背景に朝日とニュースの行を組み合わせたマークへ更新しました。iOS・PWAの素材を統一しています。[調査した公式資料・デザイン方針・再出力方法](design/README.md)。

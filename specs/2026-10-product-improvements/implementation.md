@@ -32,7 +32,7 @@
 - 用語辞書はLLM/RAG/TTS/トークン/コンテキストの5項目。公式文書を確認して日本語で短く説明する。利用者のメモや本文を追加のAI呼び出しへ渡さない。
 - 週次振り返りはローカル記事の集計であり、AI作文・未取得記事の推測を行わない。過去の週は残存記事だけが対象。
 - 既存のXキーを専用service/account指定で削除し、旧X検索キャッシュ・検索設定・ミュート設定を消す。旧SQLiteに既にあるdraftsテーブルは触らず、読み書きコードを削除する。X上の過去の投稿は操作しない。
-- 本文と音声の公開は別commit。GitHub Pagesの配信反映には遅延がある。音声失敗でも本文commitは残る。音声未配信/失敗のActionsは失敗として見えるため、運用者は `retry_audio` を実行する。期限内の自動リトライはTTS API内の最大3回。
+- 本文と音声の公開は別commit。GitHub Pagesの配信反映には遅延がある。音声失敗でも本文commitは残る。本文/Pages公開確認後、Geminiの日次利用枠に限定して警告付き成功とする。Summaryに音声未配信と生成済み件数を明示し、公開JSONの音声はfailedのまま。その他の設定・認証・通信・公開/音声検証エラーはActionsも失敗する。利用枠回復後に `retry_audio` で再開する。一時エラーは最大3回の再試行、日次枠は即時停止。
 
 ## データ契約
 
@@ -65,3 +65,9 @@ TTSの429エラーは、構造化されたquotaId/quotaMetricから日次・分�
 - [Actions 37166434006](https://github.com/Takuya-ops/ai-morning-digest/actions/runs/37166434006)でGemini TTSのHTTP 429を**日次利用枠**と特定。新原稿に対応するRelease WAVは4/10件で、公開JSONは声の状態をfailed・公開件数0とする。旧原稿の音声で代用しない。
 - Pagesの公開JSONが生成した本文版・revision・声別状態と一致することをActionsで確認。最後の「Verify audio availability」は意図どおり失敗した。アプリ実装・checks成功と、本番音声の未配信を区別する。
 - 音声全件の配信には利用枠の回復または運営側の利用枠見直しが必要。回復後はActions → daily-digest → Run workflow → `retry_audio` を有効にして実行すれば、生成済み4件を再利用する。課金・利用枠の変更は実施していない。[Google公式の利用枠説明](https://ai.google.dev/gemini-api/docs/rate-limits)
+
+### 失敗通知への対応（10月4日）
+
+本人からのdaily-digest失敗通知に対応し、本文の配信成功と音声の日次利用枠を分けて判定するよう変更した。`publication-outcome.js` は固定原稿のcontentRevision/revisionと処理結果を照合し、日次枠以外のエラーを警告へ変換しない。`report-publication.js` がActions Summary・警告・終了コードを出力する。HTTP 429の日次枠を最初のレスポンスで確認した時点で短時間の再試行を止める。
+
+ローカルNodeテスト26件成功（既知の日次枠、認証/設定等の失敗、古い原稿の結果、本文失敗、不正件数、全件成功、日次枠を1回で停止する検証を含む）。iOSコードの変更なし。音声の生成完了や利用枠回復を意味する変更ではない。

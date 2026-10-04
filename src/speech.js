@@ -130,27 +130,24 @@ export async function synthesizeGemini(text, { key, fetcher = fetch, sleep = del
   let response;
   for (let attempt = 0; attempt < 4; attempt++) {
     response = await fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`, { ...request, signal: AbortSignal.timeout(120_000) });
-    if (![429, 503].includes(response.status) || attempt === 3) break;
+    if (response.ok) break;
+    const error = new Error(`Gemini TTS HTTP ${response.status}`);
+    if (response.status === 429) {
+      // Read only structured quota fields. Never emit the provider's message,
+      // project identifiers, request text, API key, or complete response body.
+      const body = await response.json().catch(() => ({}));
+      const details = Array.isArray(body?.error?.details) ? body.error.details : [];
+      const fields = details.flatMap(detail => Array.isArray(detail?.violations) ? detail.violations : [])
+        .flatMap(v => [v?.quotaId, v?.quotaMetric]).filter(v => typeof v === 'string').join(' ');
+      error.quotaPeriod = /per[_-]?day/i.test(fields) ? 'day' : /per[_-]?minute/i.test(fields) ? 'minute' : 'unknown';
+    } else {
+      await response.body?.cancel();
+    }
+    // A daily limit cannot recover during a short retry loop.
+    if (error.quotaPeriod === 'day' || ![429, 503].includes(response.status) || attempt === 3) throw error;
     const retryAfter = response.headers.get('retry-after');
     const seconds = retryAfter && /^\d+$/.test(retryAfter) ? Number(retryAfter) : retryAfter ? (Date.parse(retryAfter) - Date.now()) / 1000 : NaN;
-    // Free-tier minute limits can be lower than a ten-article digest. Bound
-    // retries also for daily quota exhaustion; never expose API error bodies.
-    await response.body?.cancel();
     await sleep(Number.isFinite(seconds) ? Math.min(120, Math.max(1, seconds)) * 1000 : 60_000);
-  }
-  // Never log provider response bodies, which can contain request details.
-  if (!response.ok) {
-    const error = new Error(`Gemini TTS HTTP ${response.status}`);
-    // Classify structured quota fields only. Never log the provider's message,
-    // project identifiers, request text, API key, or complete response body.
-    if (response.status === 429) {
-      const body = await response.json().catch(() => ({}));
-      const details = Array.isArray(body.error?.details) ? body.error.details : [];
-      const fields = details.flatMap(detail => Array.isArray(detail.violations) ? detail.violations : [])
-        .flatMap(v => [v.quotaId, v.quotaMetric]).filter(v => typeof v === 'string').join(' ');
-      error.quotaPeriod = /per[_-]?day/i.test(fields) ? 'day' : /per[_-]?minute/i.test(fields) ? 'minute' : 'unknown';
-    }
-    throw error;
   }
   const result = await response.json();
   const candidate = result.candidates?.[0];
@@ -169,16 +166,16 @@ export async function attachGeminiAudio(data, {
   env = process.env, fetcher = fetch, publisher, synth = synthesizeGemini, log = console,
 } = {}) {
   if (!env.GEMINI_API_KEY) {
-    log.warn('speech: GEMINI_API_KEY未設定。Gemini音声は未配信です。'); return;
+    log.warn('speech: GEMINI_API_KEY未設定。Gemini音声は未配信です。'); return { status: 'failed', reason: 'configuration', generatedCount: 0 };
   }
   if (!data.topics.length || data.topics.length > 10) {
-    log.warn('speech: 音声生成は1日最大10記事です。'); return;
+    log.warn('speech: 音声生成は1日最大10記事です。'); return { status: 'failed', reason: 'invalid-input', generatedCount: 0 };
   }
   // A rerun must not advertise stale or only partially completed narration.
   for (const topic of data.topics) { if (topic.audio) delete topic.audio[GEMINI_VOICE]; }
+  const completed = [];
   try {
     publisher ||= await releasePublisher({ repository: env.GITHUB_REPOSITORY, token: env.GITHUB_TOKEN, date: data.date, commit: env.GITHUB_SHA, fetcher });
-    const completed = [];
     for (const topic of data.topics) {
       const name = geminiAssetName(topic);
       const url = publisher.existing(name) || await publisher.upload(name, await synth(speechText(topic), { key: env.GEMINI_API_KEY, fetcher }));
@@ -186,9 +183,11 @@ export async function attachGeminiAudio(data, {
     }
     for (const [topic, url] of completed) topic.audio = { ...topic.audio, [GEMINI_VOICE]: url };
     log.info(`speech: Gemini 3.8 Flash TTS ${completed.length}記事を配信に追加しました。`);
+    return { status: 'ready', generatedCount: completed.length };
   } catch (error) {
     const period = { day: '・日次利用枠', minute: '・分単位の利用枠', unknown: '・利用枠の種類は未特定' }[error.quotaPeriod] || '';
     const status = /^Gemini TTS HTTP \d{3}$/.test(error.message) ? ` (${error.message}${period})` : '';
     log.warn(`speech: Gemini音声の生成・配信に失敗${status}。APIキー・利用枠・GitHub権限を確認してください。ニュースの生成は継続します。`);
+    return { status: 'failed', reason: error.message === 'Gemini TTS HTTP 429' && error.quotaPeriod === 'day' ? 'daily-quota' : 'generation-error', generatedCount: completed.length };
   }
 }
