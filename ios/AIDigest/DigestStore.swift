@@ -33,7 +33,7 @@ final class DigestStore: ObservableObject {
             reloadLocalState(); availableDates = cachedDates
         } catch { notice = error.localizedDescription }
     }
-    var orderedBrief: [ReaderArticle] { ordered(digest?.briefArticles ?? []) }
+    var orderedBrief: [ReaderArticle] { ordered(digest?.briefArticles ?? []).filter { !ExperienceStore.shared.state.mutes.contains($0) } }
     func ordered(_ articles: [ReaderArticle]) -> [ReaderArticle] {
         let followed = followedTopics
         return articles.enumerated().sorted { a, b in
@@ -54,7 +54,7 @@ final class DigestStore: ObservableObject {
     }
     func markRead(_ article: ReaderArticle) {
         guard let database else { return }
-        do { try database.markRead(article.id); reloadLocalState() } catch { notice = error.localizedDescription }
+        do { try database.ensureArticle(article); try database.markRead(article.id); reloadLocalState() } catch { notice = error.localizedDescription }
     }
     func toggleSave(_ article: ReaderArticle) {
         guard let database else { return }
@@ -71,6 +71,10 @@ final class DigestStore: ObservableObject {
             cachedDates = try database.cachedDates(); let states = try database.states()
             readIDs = states.read; savedIDs = states.saved; savedArticles = try database.savedArticles(); completedDays = try database.completedDays()
         } catch { notice = error.localizedDescription }
+    }
+    func importLibrary() {
+        let items = cachedDates.compactMap { cachedDigest($0) }.flatMap(\.readerArticles) + savedArticles
+        ExperienceStore.shared.ingest(items, saved: savedIDs)
     }
     func cachedDigest(_ date: String) -> Digest? { try? database?.digest(date: date) }
     @discardableResult
@@ -95,9 +99,10 @@ final class DigestStore: ObservableObject {
                 }
             }
             await ImageCache.shared.prefetch(current.readerArticles.compactMap(\.thumbnailURL))
-            let preferred = UserDefaults.standard.string(forKey: "briefingVoice") ?? BriefingVoice.nanami.rawValue
-            if preferred != "device" { await AudioCache.shared.prefetch(current.briefArticles.compactMap { $0.audio?[preferred].flatMap(WebURL.parse) }) }
+            let preferred = VoicePreferences.selected.rawValue
+            if preferred != "device", UserDefaults.standard.bool(forKey: "autoDownloadWiFi") { await AudioCache.shared.prefetch(current.briefArticles.compactMap { $0.audio?[preferred].flatMap(WebURL.parse) }) }
             await AudioCache.shared.prune()
+            importLibrary()
             return true
         } catch {
             guard !Task.isCancelled else { return false }
@@ -108,7 +113,7 @@ final class DigestStore: ObservableObject {
     func archive(_ day: String) async -> Digest? {
         guard Self.validDay(day) else { return nil }
         if let cached = cachedDigest(day) { return cached }
-        do { let value = try await fetch("\(day).json"); try database?.save(value); reloadLocalState(); return value }
+        do { let value = try await fetch("\(day).json"); try database?.save(value); reloadLocalState(); importLibrary(); return value }
         catch { notice = "この日のデータは端末にありません。接続して再試行してください。"; return nil }
     }
     static func validDay(_ day: String) -> Bool { day.range(of: "^\\d{4}-\\d{2}-\\d{2}$", options: .regularExpression) != nil }

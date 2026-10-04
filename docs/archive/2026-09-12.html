@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"グーグル、「Gemini」のWindowsアプリを公開 Alt＋スペースで手軽に起動","audio":{}},{"headline":"ChatGPT Work、質問するだけで社内データ分析・グラフやダッシュボードも作る「Data agent」","audio":{}},{"headline":"OpenAI、金融機関向け「ChatGPT for Financial Services」 金融データ搭載し「GPT-6 Astra」で分析","audio":{}},{"headline":"Codexと同じハーネスを使ってAIエージェントを作れる「Agents API」が登場","audio":{}},{"headline":"ChatGPT、最上位プランの新規受付を一時停止 「Astra」需要対応のため 既存加入者には影響なし","audio":{}},{"headline":"Rapidly scaling online storage to serve over 1 billion ChatGPT users","audio":{}},{"headline":"Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too","audio":{}},{"headline":"OpenAI’s feud with mathematicians is only escalating","audio":{}},{"headline":"One week left to book your exhibit table at TechCrunch Disrupt 2026","audio":{}},{"headline":"Final, final, final call for TechCrunch Disrupt 2026 Side Events","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

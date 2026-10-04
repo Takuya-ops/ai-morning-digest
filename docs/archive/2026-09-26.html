@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"Microsoftが次世代「Copilot」を発表=「Home」「Code」「Autopilot」でAI時代の働き方を再定義","audio":{}},{"headline":"Googleが宇宙にAIデータセンターを設置する実証実験「Project Suncatcher」でAI専用チップ・TPUを搭載した人工衛星を10月1日に打ち上げ","audio":{}},{"headline":"Anthropic to pay Akamai $11.6 billion over seven years in cloud deal","audio":{}},{"headline":"Google、リアルタイムで表情豊かに話すAIアバター「Gemini 3.8 Live with Live Avatar」提供開始 画像1枚で独自アバターも","audio":{}},{"headline":"ChatGPTやCopilotから直接翻訳 「DeepL」のMCP対応で多言語業務はどう変わる？","audio":{}},{"headline":"U.S. appeals court upholds designation of Anthropic as supply chain risk","audio":{}},{"headline":"Proaction boosts sales 60% and saves 75+ hours with Codex","audio":{}},{"headline":"Crusoe abandons $1.25B plan to use Boom turbines at AI data centers","audio":{}},{"headline":"Microsoft、「Copilot」を刷新 「仕事のための新しいOS」とナデラCEO","audio":{}},{"headline":"Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

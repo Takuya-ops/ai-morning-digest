@@ -8,10 +8,11 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     @Published private(set) var index = 0
     @Published private(set) var playing = false
     @Published private(set) var preparing = false
-    @Published var voice: BriefingVoice = BriefingVoice(rawValue: UserDefaults.standard.string(forKey: "briefingVoice") ?? BriefingVoice.gemini.rawValue) ?? .gemini {
+    @Published var voice: BriefingVoice = VoicePreferences.selected {
         didSet {
             UserDefaults.standard.set(voice.rawValue, forKey: "briefingVoice")
             UserDefaults.standard.set(true, forKey: "geminiVoicePreferenceV1")
+            pendingPosition = 0; heardSeconds = []; position = 0
             let restart = playing || preparing
             resetAudio()
             if restart { speakCurrent() }
@@ -25,6 +26,19 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
             else if playing { speakCurrent() } else if current != nil { currentUtterance = nil; synth.stopSpeaking(at: .immediate) }
         }
     }
+    @Published private(set) var position: Double = 0
+    @Published private(set) var duration: Double = 0
+    @Published var sleepMinutes = 0 { didSet { sleepDeadline = sleepMinutes > 0 ? Date().addingTimeInterval(Double(sleepMinutes * 60)) : nil } }
+    @Published var stopAfterArticle = false
+    private var sleepDeadline: Date?
+    private var timer: Timer?
+    private var pendingPosition: Double = 0
+    private var heardSeconds = Set<Int>()
+    private var lastTick: Double?
+    private struct Checkpoint: Codable { let articles: [ReaderArticle]; let index: Int; let position: Double; let voice: String; let heard: Set<Int> }
+    private let checkpointKey = "playbackCheckpointV1"
+    var canSeek: Bool { audioPlayer != nil && duration > 0 }
+    var onListenedArticle: ((ReaderArticle) -> Void)?
     var onFinishedArticle: ((ReaderArticle) -> Void)?
     var onFinishedBriefing: ((String) -> Void)?
     private let synth = AVSpeechSynthesizer()
@@ -44,9 +58,22 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
         voice = .gemini
     }
     override init() {
-        super.init(); synth.delegate = self; synth.usesApplicationAudioSession = true
+        super.init()
+        if let data = UserDefaults.standard.data(forKey: checkpointKey), let saved = try? JSONDecoder().decode(Checkpoint.self, from: data), saved.articles.indices.contains(saved.index), saved.voice == voice.rawValue {
+            articles = saved.articles; index = saved.index; pendingPosition = saved.position; position = saved.position; heardSeconds = saved.heard
+        }
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in Task { @MainActor in self?.tick() } }
+        synth.delegate = self; synth.usesApplicationAudioSession = true
         UIApplication.shared.beginReceivingRemoteControlEvents()
         let commands = MPRemoteCommandCenter.shared()
+        commands.skipForwardCommand.preferredIntervals = [15]
+        commands.skipBackwardCommand.preferredIntervals = [15]
+        commands.skipForwardCommand.addTarget { [weak self] _ in Task { @MainActor in self?.seek(by: 15) }; return .success }
+        commands.skipBackwardCommand.addTarget { [weak self] _ in Task { @MainActor in self?.seek(by: -15) }; return .success }
+        commands.changePlaybackPositionCommand.addTarget { [weak self] event in
+            guard let event = event as? MPChangePlaybackPositionCommandEvent else { return .commandFailed }
+            Task { @MainActor in self?.seek(to: event.positionTime) }; return .success
+        }
         commands.playCommand.addTarget { [weak self] _ in Task { @MainActor in self?.resume() }; return .success }
         commands.pauseCommand.addTarget { [weak self] _ in Task { @MainActor in self?.pause() }; return .success }
         commands.nextTrackCommand.addTarget { [weak self] _ in Task { @MainActor in self?.skip(1) }; return .success }
@@ -65,6 +92,7 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     }
     func start(_ articles: [ReaderArticle], at index: Int = 0, completesBriefing: Bool = false) {
         guard articles.indices.contains(index) else { return }
+        pendingPosition = 0; position = 0; heardSeconds = []; lastTick = nil
         self.articles = articles; self.index = index; self.completesBriefing = completesBriefing && index == 0; speakCurrent(); UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
     private func activate() -> Bool {
@@ -84,6 +112,7 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     }
     private func resetAudio() {
         generation = UUID(); preparation?.cancel(); preparation = nil; preparing = false
+        lastTick = nil; duration = 0
         currentUtterance = nil; synth.stopSpeaking(at: .immediate)
         audioPlayer?.stop(); audioPlayer = nil; playing = false
     }
@@ -96,13 +125,16 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
         preparing = true
         preparation = Task { @MainActor in
             do {
-                let file = try await AudioCache.shared.file(for: url)
+                await AudioCache.shared.protect(url)
+                let file = try await AudioCache.shared.verifiedFile(for: url, metadata: article.audioMetadata?[selected.rawValue])
                 guard !Task.isCancelled, token == generation else { return }
                 let audio: AVAudioPlayer
                 do { audio = try AVAudioPlayer(contentsOf: file) }
                 catch { await AudioCache.shared.invalidate(url); throw error }
                 audio.delegate = self; audio.enableRate = true; audio.rate = Float(rate)
                 audioPlayer = audio; audio.prepareToPlay()
+                duration = audio.duration; audio.currentTime = min(pendingPosition, max(0, audio.duration - 0.1)); pendingPosition = 0; position = audio.currentTime; lastTick = nil
+                await AudioCache.shared.protect(url)
                 playing = audio.play(); preparing = false
                 if !playing { error = "音声を再生できませんでした。もう一度再生してください。" }
                 nowPlaying()
@@ -117,6 +149,7 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     }
     func pause() {
         if preparing { preparation?.cancel(); preparation = nil; preparing = false; generation = UUID() }
+        checkpoint(); lastTick = nil
         audioPlayer?.pause(); synth.pauseSpeaking(at: .immediate); playing = false; nowPlaying()
     }
     func resume() {
@@ -129,10 +162,12 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
         guard !articles.isEmpty else { return }
         let next = index + offset
         guard articles.indices.contains(next) else { return }
-        completesBriefing = false; index = next; speakCurrent()
+        completesBriefing = false; pendingPosition = 0; heardSeconds = []; index = next; speakCurrent()
     }
     func stop() {
-        resetAudio(); articles = []; index = 0
+        resetAudio(); articles = []; index = 0; position = 0; duration = 0; pendingPosition = 0; lastTick = nil
+        UserDefaults.standard.removeObject(forKey: checkpointKey)
+        Task { await AudioCache.shared.protect(nil) }
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nil
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
     }
@@ -150,9 +185,37 @@ final class BriefingPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDeleg
     }
     private func advance() {
         guard let article = current else { return }
+        tick()
+        if voice == .device || (duration > 0 && Double(heardSeconds.count) / duration >= 0.9) { onListenedArticle?(article) }
         onFinishedArticle?(article)
+        if stopAfterArticle {
+            stopAfterArticle = false; resetAudio(); pendingPosition = 0; position = 0; heardSeconds = []
+            if index + 1 < articles.count { index += 1; checkpoint() } else { stop() }; return
+        }
+        heardSeconds = []; pendingPosition = 0; lastTick = nil
         if index + 1 < articles.count { index += 1; speakCurrent() }
         else { if completesBriefing { onFinishedBriefing?(article.digestDate) }; stop() }
+    }
+    func checkpoint() {
+        guard current != nil else { return }
+        let value = Checkpoint(articles: articles, index: index, position: audioPlayer?.currentTime ?? pendingPosition, voice: voice.rawValue, heard: heardSeconds)
+        if let data = try? JSONEncoder().encode(value) { UserDefaults.standard.set(data, forKey: checkpointKey) }
+    }
+    func seek(by seconds: Double) { seek(to: position + seconds) }
+    func seek(to seconds: Double) {
+        guard let audioPlayer else { return }
+        audioPlayer.currentTime = min(max(0, seconds), max(0, audioPlayer.duration - 0.05))
+        position = audioPlayer.currentTime; lastTick = nil; checkpoint(); nowPlaying()
+    }
+    private func tick() {
+        if let deadline = sleepDeadline, Date() >= deadline { sleepMinutes = 0; pause() }
+        guard let audioPlayer else { return }
+        let currentTime = audioPlayer.currentTime
+        if playing, let previous = lastTick, currentTime >= previous, currentTime - previous < 4 {
+            for second in Int(previous)..<Int(currentTime) { heardSeconds.insert(second) }
+        }
+        lastTick = playing ? currentTime : nil; position = currentTime; duration = audioPlayer.duration
+        if playing { checkpoint(); nowPlaying() }
     }
     private func nowPlaying() {
         guard let current else { return }

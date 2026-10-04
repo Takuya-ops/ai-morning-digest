@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"Metaが手のひらサイズのたまごっちっぽいAIデバイス「Muse Charm」発表、Museがローカル動作・約2インチのOLEDスクリーンやカメラを搭載で2026年末までに発売予定","audio":{}},{"headline":"Google、音声生成モデルGemini 3.8 Flash TTSとGemini 3.8 Flash-Lite TTSをリリース ―100以上の言語と方言の音声を表現力豊かに生成","audio":{}},{"headline":"DeepL翻訳、CopilotやChatGPT、Claudeから利用可能に","audio":{}},{"headline":"Google tests letting Gemini call businesses for you","audio":{}},{"headline":"Meta、AIグラス一挙発表 第3世代「Ray-Ban Meta」や4.2万円の「Glasses」","audio":{}},{"headline":"Claudeが新しい酵素発見、「ほとんどの病気を治せる」に向け第一歩か","audio":{}},{"headline":"OpenAIのAIエージェントが豪政府サイトに不正アクセス 同社の通知は3カ月後、首相「失望した」","audio":{}},{"headline":"ソフトPLCがAIの「道具」に、簡単導入のPLCドラレコカメラも","audio":{}},{"headline":"AI同士が取引する時代、「相手は誰か」をどう確認する？ GMOが信頼基盤を実証","audio":{}},{"headline":"日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

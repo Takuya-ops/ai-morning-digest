@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"Google、GPT-6 Astra対抗の「Gemini 4 Argon」発表","audio":{}},{"headline":"Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search","audio":{}},{"headline":"The eternal complement","audio":{}},{"headline":"How Albertsons Companies is reimagining retail from the inside out","audio":{}},{"headline":"GoogleがGeminiアプリとWorkspaceに「スキル」を導入、Gemsは廃止へ","audio":{}},{"headline":"The Den frees up 10-15 hours a week to grow with ChatGPT Work","audio":{}},{"headline":"「長く働くAI」が裏目に？ OpenAIの“脱走事件”が示すリスクの変化 企業に求められる対応は","audio":{}},{"headline":"「DMに逃げる理由は秘密保持ではない」 人とAIエージェントの“最強チーム”を作るベストプラクティス","audio":{}},{"headline":"ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能","audio":{}},{"headline":"「Claude」3倍高速化の裏で、Anthropic開発者が「あえてしなかったこと」：899th Lap","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

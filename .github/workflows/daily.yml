@@ -5,9 +5,15 @@ on:
     # 20:30 UTC = 翌朝 5:30 JST(GitHub Actionsのcronは数分〜数十分遅延することがあります)
     - cron: '30 20 * * *'
   workflow_dispatch:
+    inputs:
+      retry_audio:
+        description: 'Retry audio for the currently published text without generating new summaries'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: daily-digest
@@ -15,7 +21,9 @@ concurrency:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
 
@@ -28,9 +36,17 @@ jobs:
 
       - run: npm test
 
-      - name: Generate digest
+      - name: Reuse the published text for audio retry
+        if: inputs.retry_audio
+        run: |
+          mkdir -p .work
+          cp docs/data/latest.json .work/digest-input.json
+
+      - name: Generate text
+        if: ${{ !inputs.retry_audio }}
         run: node src/index.js
         env:
+          DIGEST_PHASE: text
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -50,3 +66,34 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Request text Pages build
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Generate audio for the published text
+        run: node scripts/publish-audio.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Publish audio state
+        run: |
+          git add docs
+          if ! git diff --cached --quiet; then
+            git commit -m "audio: $(TZ=Asia/Tokyo date +%F)"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Request audio Pages build
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Verify public publication
+        run: node scripts/verify-publication.js
+
+      - name: Verify audio availability
+        run: test "$(cat .work/audio-state)" = ready

@@ -10,6 +10,7 @@ struct LibraryView: View {
     @State private var failure = false
     var body: some View {
         VStack(spacing: 0) {
+            HStack { NavigationLink("検索") { LocalSearchView() }; Spacer(); NavigationLink("コレクション") { CollectionsView() }; Spacer(); NavigationLink("週次") { WeeklyReviewView() } }.font(.subheadline).padding().frame(minHeight: 44)
             Picker("ライブラリ", selection: $section) { Text("保存済み").tag(0); Text("アーカイブ").tag(1) }.pickerStyle(.segmented).padding(.horizontal).padding(.bottom, 8)
             if section == 0 {
                 if store.savedArticles.isEmpty { EmptyPanel(icon: "bookmark", title: "あとで読みたい記事を保存", message: "記事を左にスワイプするか、記事内の保存ボタンを押すとここに残ります。") }

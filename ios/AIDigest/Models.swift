@@ -9,7 +9,7 @@ struct Digest: Codable {
     let topics: [Topic]
     let others: [Article]
     var audioDurationSec: Int?
-    var socialDrafts: [PostDraft]?
+    var publication: Publication?
 
     var readerArticles: [ReaderArticle] {
         var seen = Set<String>()
@@ -43,7 +43,12 @@ struct Topic: Codable, Identifiable {
     var faq: [FAQ]?
     var aiGenerated: Bool?
     var audio: [String: String]?
+    var audioMetadata: [String: AudioMetadata]?
+    var editorial: Editorial?
+    var narration: Narration?
 }
+
+struct Narration: Codable, Hashable { let language: String; let scriptHash: String }
 
 struct Article: Codable, Identifiable, Hashable {
     var id: String { link }
@@ -125,6 +130,9 @@ struct ReaderArticle: Codable, Identifiable, Hashable {
     var sources: [Article]
     var aiGenerated: Bool
     var audio: [String: String]?
+    var audioMetadata: [String: AudioMetadata]?
+    var narrationLanguage: String?
+    var editorial: Editorial?
     var sourceURL: URL? { sources.first?.url }
     var thumbnailURL: URL? { sources.first?.thumbnailURL.flatMap(WebURL.parse) }
     var availableSummaryStyles: [SummaryStyle] { styles?.available ?? [] }
@@ -140,28 +148,13 @@ struct ReaderArticle: Codable, Identifiable, Hashable {
         self.digestDate = digestDate; title = topic.headline; summary = topic.summary; whyItMatters = topic.whyItMatters
         topics = topic.topics ?? InterestTopics.infer(topic.headline); styles = topic.summaryStyles; ttsText = topic.ttsText
         faq = topic.faq ?? []; sources = topic.articles; aiGenerated = topic.aiGenerated ?? false; audio = topic.audio
+        audioMetadata = topic.audioMetadata; narrationLanguage = topic.narration?.language; editorial = topic.editorial
     }
     init(article: Article, digestDate: String) {
         id = article.link; self.digestDate = digestDate; title = article.title
         summary = article.excerpt ?? "この過去記事には要約が配信されていません。出典で内容を確認できます。"
         topics = InterestTopics.infer(article.title); faq = []; sources = [article]; aiGenerated = false
     }
-}
-struct PostDraft: Codable, Identifiable, Hashable {
-    var id: String
-    var title: String
-    var text: String
-    var sourceIDs: [String]
-    var sourceURLs: [String]
-    var aiGenerated: Bool
-}
-struct XPost: Codable, Identifiable, Hashable {
-    var id: String
-    var text: String
-    var username: String
-    var name: String
-    var createdAt: String
-    var url: URL? { WebURL.parse("https://x.com/\(username)/status/\(id)") }
 }
 
 enum DateFormat {

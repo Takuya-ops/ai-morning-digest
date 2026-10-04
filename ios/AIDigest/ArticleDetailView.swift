@@ -25,7 +25,7 @@ struct ArticleDetailView: View {
                     } else {
                         Text(article.availableSummaryStyles.first.map { "\($0.label)の要約" } ?? "記事の説明").font(.headline)
                     }
-                    Label(article.aiGenerated ? "AI生成の要約" : "配信済みの要約・説明文", systemImage: article.aiGenerated ? "sparkles" : "doc.text").font(.caption).foregroundStyle(.secondary)
+                    Label(article.aiGenerated ? "AI生成の要約" : "原文の抜粋・説明文（未翻訳の場合があります）", systemImage: article.aiGenerated ? "sparkles" : "doc.text").font(.caption).foregroundStyle(.secondary)
                     Text(article.summaryText(style)).font(.system(size: readingSize * scaledBodySize / 17)).lineSpacing(8).textSelection(.enabled).fixedSize(horizontal: false, vertical: true).accessibilityIdentifier("summaryText")
                     if article.availableSummaryStyles.count < SummaryStyle.allCases.count {
                         Label("この配信分には3種類の要約がそろっていません。用意されている本文を表示しています。要約は運営側で生成するため、利用者のAPIキー設定は不要です。", systemImage: "info.circle")
@@ -46,6 +46,8 @@ struct ArticleDetailView: View {
                         }
                     }
                 }
+                GlossaryView(text: article.title + " " + article.summary)
+                ArticleNotebook(article: article)
                 VStack(alignment: .leading, spacing: 12) {
                     Text("出典").font(.headline)
                     if let source = article.sources.first, let url = source.url { Button { safari = BrowserLink(url: url) } label: { Text("\(source.feedName) · 元記事を読む").font(.subheadline).frame(minHeight: 44, alignment: .leading) } }

@@ -47,16 +47,20 @@ struct AIDigestApp: App {
     @StateObject private var store = DigestStore()
     @StateObject private var player = BriefingPlayer()
     @StateObject private var router = AppRouter.shared
-    @StateObject private var x = XStore()
+    @StateObject private var experience = ExperienceStore.shared
     @AppStorage("theme") private var theme = "system"
     @Environment(\.scenePhase) private var phase
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(store).environmentObject(player).environmentObject(router).environmentObject(x)
+            ContentView().environmentObject(store).environmentObject(player).environmentObject(router).environmentObject(experience)
                 .tint(Color.accentColor)
                 .preferredColorScheme(theme == "dark" ? .dark : theme == "light" ? .light : nil)
                 .onOpenURL { router.open($0) }
                 .task {
+                    ExperienceStore.removeLegacyXCredentials()
+                    await experience.load()
+                    store.importLibrary()
+                    player.onListenedArticle = { experience.markListened($0) }
                     player.onFinishedArticle = { store.markRead($0) }
                     player.onFinishedBriefing = { store.completeBriefing(date: $0) }
                     await store.refresh()
@@ -64,7 +68,7 @@ struct AIDigestApp: App {
                 }
                 .onChange(of: phase) { value in
                     if value == .active { store.reloadLocalState(); Task { await store.refresh() } }
-                    if value == .background { DigestAppDelegate.scheduleRefresh() }
+                    if value == .background { player.checkpoint(); DigestAppDelegate.scheduleRefresh() }
                 }
         }
     }

@@ -7,7 +7,7 @@
 
 ## 機能改善の提案と設計書
 
-[2026年10月の機能提案・要件定義書・基本設計書・詳細設計書](specs/2026-10-product-improvements/README.md)を掲載しています。既存コードを確認して整理した提案段階の文書で、記載した新機能は未実装です。
+[2026年10月の機能提案・要件定義書・基本設計書・詳細設計書](specs/2026-10-product-improvements/README.md)を掲載しています。既存コードを確認して整理した設計書です。build 6の実装状況・設計との差分は[実装記録](specs/2026-10-product-improvements/implementation.md)を参照してください。
 
 ## 旧版のデモ動画（build 2）
 
@@ -26,46 +26,37 @@
 
 - **抜け漏れ防止**: ITmedia AI+ / 日経クロステック / Publickey / GIGAZINE / OpenAI / Google / DeepMind / TechCrunch / The Verge / Hacker News など国内外32媒体のRSSを毎朝取得。TOP10に入らなかった記事も「その他」欄に全件掲載します。
 - **大きなトピック順に表示**: 同じ話題を報じる記事を日英またいで自動でまとめ、「何媒体が報じたか×媒体の影響度」でスコアリングしてTOP10を表示します。
-- **ニュースの内容まで分かる**: 各トピックに日本語の要約(2〜4文)と「なぜ重要か」を掲載。`ANTHROPIC_API_KEY` を設定するとClaude(claude-opus-5)が要約を生成し、未設定でも記事の説明文から要約を組み立てます。
+- **ニュースの内容まで分かる**: 各トピックに日本語の要約(2〜4文)と「なぜ重要か」を掲載。運営側のClaudeまたはGeminiで生成し、生成できなかった場合は原文の説明文と明示します。
 - **見やすさ重視**: スマホ対応・ダークモード対応の1カラムレイアウト。ランキングバッジ、ソースチップ、折りたたみ式の関連記事一覧。
 
 ## 📱 iOSアプリ(ネイティブ)
 
 [ios/](ios/) にSwiftUI製のネイティブiPhoneアプリ「AIダイジェスト」があります。
 
-- **今日 / X / 投稿案 / ライブラリ / 設定**の5タブ。記事はアプリ内で読み、出典だけをアプリ内Safariで開きます。
+- **今日 / ライブラリ / 設定**の3タブ。記事はアプリ内で読み、出典だけをアプリ内Safariで開きます。
 - **音声ブリーフィング**: プルダウンで**Gemini 3.8 / Kore**、Microsoft **Nanami / Keita**、iPhone標準音声を選択。配信音声は日次バッチで事前生成するWAV / MP3をAVAudioPlayerで再生・保存し、標準音声はAVSpeechSynthesizerを使用。再生・一時停止・記事送り・4段階速度・ミニプレイヤー・バックグラウンド音声とロック画面操作の実装を含みます（実機での最終検証は未実施）。
 - **通知**: 既定7:00、平日/毎日、タップで再生、2分後のテスト通知。30日先までローカル予約し、起動/バックグラウンド更新で延長。未来の日付に古い見出しを表示しません。
 - **オフライン**: SQLiteに当日＋直近7日を取得、30日保持。旧キャッシュを移行し、保存記事は保持期限後も残します。バックグラウンド取得の実行時刻はiOSが決めます。
 - **読む・振り返る**: 興味トピック、保存/既読、日付・カレンダーアーカイブ、要約3種・Q&A（新形式の配信分）、画像カード共有、読了記録、Siriショートカット。
 - **WidgetKit**: Small / Medium / ロック画面。App Groupで最新の見出しを共有します。
-- **Xの情報**: 自分のAPIキーを設定し、手動更新で最大10投稿を検索。原文・投稿者・出典を表示し、アカウントの非表示とXでの報告への導線を用意。
-- **投稿案**: 取得記事から10案、端末内で編集・保存。キーなしでも共有シートが使えます。本人用の4つのキーとRead and write権限があれば、投稿先確認→内容確認→送信でXに直接投稿。タイムアウト時は再送せず結果確認が必要な状態にします。
 
 実装範囲・検証結果・残る再提出手順は [store/implementation-status.md](store/implementation-status.md) を参照してください。App Storeの承認・再提出はまだ行っていません。
 
-### 要約生成とXの設定
+### build 6の追加機能
 
-現在の配信先は既存の `data/latest.json` と `data/YYYY-MM-DD.json` を維持しています。v2は `summaryStyles`, `ttsText`, `topics`, `faq`, `aiGenerated`, `socialDrafts` と記事ごとの `audio` を追加し、旧アプリ用の `summary` 文字列を保持します。
+- 再生位置を保存して再起動後に再開、15秒送り戻し、15分・30分・記事終了タイマー。起動だけでは自動再生しません。
+- 3分・5分・10分・全件のニュース選択。時間指定は日本語・実測時間付きの音声を対象にします。
+- 今日の音声をまとめて保存、取得進捗と停止、Wi-Fi自動取得、250 MiBの容量管理。
+- 端末内の記事検索（最大5語AND、日付・カテゴリ・保存・未読）、キーワード・カテゴリ・媒体の非表示。
+- コレクションと個人メモ、公式資料付き用語集、取得範囲を明示する週次集計。
+- Web版に再生・一時停止・次の記事・速度・音声選択。
+- Xタブ・投稿案・認証・直接投稿を削除。通常のOS共有シートは利用可能です。
 
-1. 3スタイル・Q&Aを日次生成するには、リポジトリのActions Secretに `ANTHROPIC_API_KEY` を設定します。未設定時はRSSの説明文と端末内の投稿案構成で動作します。利用者ごとにLLMを呼びません。
-2. Xは各利用者がアプリの「設定 → X連携」でキーを登録します。Read and writeを有効にした自分のX開発者アプリのAPI Key / API Key Secret / Access Token / Access Token Secretを使用します。検索のみならBearer Tokenも利用できます。
-3. キーは端末専用Keychainに保存します。アプリに共通キーを埋め込んだり、GitHub Pagesに公開したりしません。Xには自身のAPI利用料金・制限が適用されます。
+### 日本語要約と配信状態
 
-Xの実アカウントへの投稿テストは未実施です。[X APIの認証](https://docs.x.com/fundamentals/authentication/guides/v2-authentication-mapping)・[料金](https://docs.x.com/x-api/getting-started/pricing)を確認してください。
+`ANTHROPIC_API_KEY` があればClaude、なければ `GEMINI_API_KEY` のGeminiで日本語要約・スタイル・Q&Aを生成します。利用者のキーは不要です。失敗時は原文の説明文と明示し、架空の要約やQ&Aを補いません。
 
-#### 「3行・詳細・やさしく」が切り替わらない場合
-
-この3種類は運営側が事前生成する機能です。**アプリ利用者のAPIキー設定は不要**で、Xのキーとも別です。未配信の記事はRSSの説明文だけを表示します。build 4では、空欄・欠落・同じ内容のスタイルを切り替え候補に出さず、未配信の理由を表示します。
-
-運営側で有効化する手順:
-
-1. この変更を本番の `main` に反映する。
-2. GitHubリポジトリの Settings → Secrets and variables → Actions に `ANTHROPIC_API_KEY` を設定する（キーをソースや公開JSONへ書かない）。
-3. Actions → daily-digest → Run workflow を `main` に対して実行する。
-4. Pagesへの配信後、`data/latest.json` の `topics[].summaryStyles.short/detail/simple` に異なる本文が入ったことを確認し、アプリの今日タブで更新する。過去の記事は自動では再生成しない。
-
-2026-09-12の確認時点ではSecret一覧が空で、公開中の10トピックに3種類の要約はありませんでした。キーを設定しても、クレジット・モデル権限・通信等で生成に失敗する場合は説明文へ戻ります。成功したかは配信JSONまで確認してください。
+v3は旧版の `summary` と `audio` を維持し、`publication`、`editorial`、`narration`、`audioMetadata` を追加します。本文を先にpushし、同じ原稿の音声を生成・検証して追記します。音声だけの再試行は Actions → daily-digest → Run workflow → `retry_audio`。同じ原稿のRelease assetを再利用します。
 
 #### アイコン
 
@@ -78,11 +69,11 @@ build 4で、濃紺を背景に朝日とニュースの行を組み合わせた�
 1. GitHub の Settings → Secrets and variables → Actions に `GEMINI_API_KEY` を登録します。キーをソースやiOSアプリ、配信JSONへ入れません。
 2. この変更を `main` に反映して、Actions → daily-digest → Run workflow を実行します。
 3. 各記事のWAVを `digest-audio-YYYY-MM-DD` のRelease assetsへ保存し、JSONの `topics[].audio["gemini-3.8-flash-tts-Kore"]` で配信します。モデル・声・話し方・本文が同じなら、その日付の再実行で生成済み音声を再利用します。生成は最大10記事／回です。
-4. 更新版iOSアプリで「今日」を更新します。新規インストールはGeminiが標準。既存設定は全記事のGemini音声が届いた時点で一度だけ切り替え、その後に選んだ音声は保持します。取得したWAV／既存MP3は30日キャッシュし、オフラインでも再生できます。
+4. 更新版iOSアプリで「今日」を更新します。新規インストールはGeminiが標準。既存設定は全記事のGemini音声が届いた時点で一度だけ切り替え、その後に選んだ音声は保持します。自動取得したWAV／既存MP3は7日・250 MiBの範囲でキャッシュし、オフラインでも再生できます。
 
 全記事分が完成したときだけGemini音声を公開します。429/503ではRetry-After（未指定なら60秒）を待って最大3回再試行します。未設定・生成失敗でもニュース配信は続行します。未配信の記事には案内を表示し、端末音声への変更は利用者が選びます。過去記事は自動で再生成しません。
 
-Microsoft Nanami / Keita は引き続き選択できます。追加生成には `AZURE_SPEECH_KEY` と `AZURE_SPEECH_REGION` が必要です。Geminiは運営側のAPI利用枠を使用し、利用者によるキー入力は不要です。
+Microsoft Nanami / Keita は引き続き選択できます。手動の単一フェーズ実行での追加生成には `AZURE_SPEECH_KEY` と `AZURE_SPEECH_REGION` が必要です。Geminiは運営側のAPI利用枠を使用し、利用者によるキー入力は不要です。
 
 公式資料: [モデル](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts)・[音声生成API](https://ai.google.dev/gemini-api/docs/generate-content/speech-generation)。3.8の通常レスポンスはWAVのため、旧モデル向けのPCMヘッダー追加は行いません。
 

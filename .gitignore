@@ -17,3 +17,5 @@ ios/build/
 
 # Local TTS verification outputs
 audio-check/
+
+.work/

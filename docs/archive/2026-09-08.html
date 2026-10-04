@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"M365 Copilotでも「GPT-6 Astra」利用可能に 「Fable 5.1」も可 Work IQと合わせて「より的確な応答」に","audio":{}},{"headline":"GitHub Copilotが複数AIモデルを自動で使い分ける「HydraFusion」を公開、TerminalBench 2.1でClaude Opus 5比コスト67％減・スコア4.9ポイント向上","audio":{}},{"headline":"Supporting independent journalism in Ukraine","audio":{}},{"headline":"AI創薬候補、6種の「老化時計」で生物学的年齢の低下を示唆","audio":{}},{"headline":"Googleの自動化ツール「Workspace Studio」とは？ 他ツールとの違いと活用法","audio":{}},{"headline":"中国新興自動車メーカーが取り組むAIアーキテクチャ「LBM」は本流となるか","audio":{}},{"headline":"Opaque recurrence, and other AI terms that you should probably know","audio":{}},{"headline":"独自AI搭載の「国産四足歩行ロボ」、デモ動画を公開 東大発スタートアップのHighlanders","audio":{}},{"headline":"生成AIの普及だけじゃない 「デザイン業の倒産」が前年同期比166％増になった意外な理由","audio":{}},{"headline":"「Copilot、Word文書まとめて」で社内全滅？ 勝手に増殖するAIウイルスで大騒ぎ：895th Lap","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

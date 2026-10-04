@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"「アサヒ・ニチレイの惨劇」はどう防げた？ 米HP幹部が語る“ネット遮断AI”と日本攻略","audio":{}},{"headline":"ロボットを入れれば終わりじゃない フィジカルAIを現場で動かす企業の役割とは","audio":{}},{"headline":"離職率16.2％から6.7％へ 筑波記念病院がAIで見つけた「職場の見えない課題」","audio":{}},{"headline":"安川電機が熟練工の「感覚」をAIロボットで再現、カメラで見ながらアーク溶接","audio":{}},{"headline":"トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設","audio":{}},{"headline":"ファナックがAI溶接エージェント実演 ロボット制御装置が安全PLCに","audio":{}},{"headline":"Anthropic’s CEO is about to have dinner with President Trump","audio":{}},{"headline":"Can Muse overcome Meta’s trust issues?","audio":{}},{"headline":"Anthropic’s Dario Amodei gets the SNL treatment","audio":{}},{"headline":"Claude Code の PreCompact hook でコンテキスト圧縮(/compact・自動圧縮)の直前に作業状態を退避する実装手順 — 圧縮は止められない・stdout は注入されない・auto では custom_instructions が空、3つのハマりどころ【2026】","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

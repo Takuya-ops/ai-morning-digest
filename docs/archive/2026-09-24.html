@@ -157,6 +157,15 @@ footer.site {
     <a href="../index.html">⏩ 最新へ</a>
   </nav>
 </header>
+<section id="briefing-player" aria-label="ニュース音声" style="padding:20px;border:1px solid #999;border-radius:12px;margin:20px 0">
+  <h2>今日のニュースを聴く</h2><p data-title></p>
+  <label>音声 <select data-voice style="min-height:44px"></select></label>
+  <label>速度 <select data-rate style="min-height:44px"><option value="0.8">0.8倍</option><option value="1" selected>1倍</option><option value="1.2">1.2倍</option><option value="1.5">1.5倍</option></select></label>
+  <audio controls preload="none" style="width:100%;margin:12px 0" aria-label="音声プレイヤー"></audio>
+  <button data-next style="min-height:44px">次の記事</button><p role="status" aria-live="polite"></p>
+  <p style="font-size:.85em">再生ボタンを押すと音声を取得します。Web版のオフライン再生・バックグラウンド再生はブラウザに依存します。</p></section>
+  <script type="application/json" id="briefing-audio-data">[{"headline":"Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war","audio":{}},{"headline":"Gemini 3.8 text-to-speech","audio":{}},{"headline":"Two years of OpenAI Academy","audio":{}},{"headline":"OpenAI extends cyber access to Ukraine for civilian defense","audio":{}},{"headline":"Sam Altman’s remarks at the United Nations Security Council","audio":{}},{"headline":"Harvey turns legal context into stronger drafts with GPT-6 Astra","audio":{}},{"headline":"How invideo improves color grading 3x with GPT‑6 Astra","audio":{}},{"headline":"Ringg’s AI agents resolve up to 65% of customer calls with OpenAI","audio":{}},{"headline":"Introducing MentalHealthBench","audio":{}},{"headline":"Airbnb widens access to GPT-6 Astra and OpenAI frontier models","audio":{}}]</script>
+  <script src="../audio-player.js" defer></script>
 
 <h2 class="section">今日の重要トピック TOP10</h2>
 

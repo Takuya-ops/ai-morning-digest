@@ -5,8 +5,11 @@ import { clusterArticles, rankClusters } from './cluster.js';
 import { summarizeTopics, fallbackSummary } from './summarize.js';
 import { renderSite, toJstYmd } from './render.js';
 import { notifySlack } from './notify.js';
-import { stableID, classify, createDrafts } from './enrich.js';
-import { attachGeminiAudio, attachMicrosoftAudio } from './speech.js';
+import { stableID, classify } from './enrich.js';
+import { attachGeminiAudio, attachMicrosoftAudio, GEMINI_VOICE } from './speech.js';
+
+import fs from 'node:fs';
+import { initializePublication, completePublication } from './publication.js';
 
 const TOP_N = Number(process.env.DIGEST_TOP_N || 10);
 const WINDOW_HOURS = Number(process.env.DIGEST_WINDOW_HOURS || 26);
@@ -42,7 +45,6 @@ async function main() {
       ttsText: s.ttsText,
       faq: s.faq || [],
       aiGenerated: s.aiGenerated ?? false,
-      socialPost: s.socialPost,
       rank: i + 1,
       headline: s.headline,
       summary: s.summary,
@@ -78,12 +80,27 @@ async function main() {
     topics,
     others,
     audioDurationSec: Math.ceil(topics.reduce((n, t) => n + (t.ttsText || `${t.headline}。${t.summary}`).length, 0) / 5),
-    socialDrafts: createDrafts(topics, toJstYmd(generatedAt)),
   };
 
+  initializePublication(data, GEMINI_VOICE, Boolean(process.env.GEMINI_API_KEY));
+  const previousPath = path.join(docsDir, 'data', 'latest.json');
+  if (fs.existsSync(previousPath)) {
+    const previous = JSON.parse(fs.readFileSync(previousPath));
+    if (previous.publication?.contentRevision === data.publication.contentRevision && previous.publication.audioByVoice?.[GEMINI_VOICE]?.state === 'ready') {
+      data.publication = previous.publication;
+      data.topics.forEach((topic, i) => { topic.audio = previous.topics[i].audio; topic.audioMetadata = previous.topics[i].audioMetadata; });
+    }
+  }
+  if (process.env.DIGEST_PHASE === 'text') {
+    fs.mkdirSync('.work', { recursive: true });
+    fs.writeFileSync('.work/digest-input.json', JSON.stringify(data));
+    renderSite(data, docsDir);
+    return;
+  }
   await attachGeminiAudio(data);
   // Optional legacy voices remain available when Azure is configured.
   await attachMicrosoftAudio(data);
+  await completePublication(data, GEMINI_VOICE);
   renderSite(data, docsDir);
   console.log(`render: ${docsDir} にHTML/JSON/RSSを出力しました (${data.date})`);
 

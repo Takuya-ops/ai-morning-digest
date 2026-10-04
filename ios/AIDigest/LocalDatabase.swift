@@ -16,7 +16,6 @@ final class LocalDatabase {
         try execute("CREATE TABLE IF NOT EXISTS digests (date TEXT PRIMARY KEY, payload TEXT NOT NULL, fetched_at REAL NOT NULL)")
         try execute("CREATE TABLE IF NOT EXISTS articles (id TEXT PRIMARY KEY, payload TEXT NOT NULL, read_at REAL, saved_at REAL)")
         try execute("CREATE TABLE IF NOT EXISTS completed (day TEXT PRIMARY KEY)")
-        try execute("CREATE TABLE IF NOT EXISTS drafts (id TEXT PRIMARY KEY, text TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'draft', post_url TEXT, updated_at REAL NOT NULL)")
     }
     deinit { sqlite3_close(db) }
 
@@ -70,6 +69,9 @@ final class LocalDatabase {
         return (Set(values.filter { $0[1] != nil }.compactMap { $0[0] }), Set(values.filter { $0[2] != nil }.compactMap { $0[0] }))
     }
     func savedArticles() throws -> [ReaderArticle] { try rows("SELECT payload FROM articles WHERE saved_at IS NOT NULL ORDER BY saved_at DESC").compactMap { row in row[0].flatMap { try? JSONDecoder().decode(ReaderArticle.self, from: Data($0.utf8)) } } }
+    func ensureArticle(_ article: ReaderArticle) throws {
+        try execute("INSERT OR IGNORE INTO articles(id,payload) VALUES(?,?)", [article.id, String(decoding: try JSONEncoder().encode(article), as: UTF8.self)])
+    }
     func markRead(_ id: String) throws { try execute("UPDATE articles SET read_at=COALESCE(read_at,?) WHERE id=?", [String(Date().timeIntervalSince1970), id]) }
     func setSaved(_ article: ReaderArticle, saved: Bool) throws {
         try execute("INSERT INTO articles(id,payload,saved_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET saved_at=excluded.saved_at", [article.id, String(decoding: try JSONEncoder().encode(article), as: UTF8.self), saved ? String(Date().timeIntervalSince1970) : nil])
@@ -84,12 +86,5 @@ final class LocalDatabase {
             guard let json = row[1], let a = try? JSONDecoder().decode(ReaderArticle.self, from: Data(json.utf8)), a.digestDate < cutoff else { return nil }; return row[0]
         }
         for id in oldIDs { try execute("DELETE FROM articles WHERE id=?", [id]) }
-    }
-    func draftState(_ id: String) -> (text: String, status: String, url: String?)? {
-        guard let row = try? rows("SELECT text,status,post_url FROM drafts WHERE id=?", [id]).first, let text = row[0], let status = row[1] else { return nil }
-        return (text, status, row[2])
-    }
-    func saveDraft(_ id: String, text: String, status: String = "draft", url: String? = nil) throws {
-        try execute("INSERT INTO drafts VALUES(?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET text=excluded.text,status=excluded.status,post_url=excluded.post_url,updated_at=excluded.updated_at", [id, text, status, url, String(Date().timeIntervalSince1970)])
     }
 }
