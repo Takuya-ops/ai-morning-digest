@@ -8,7 +8,7 @@
 - 要約APIは継続するため、その利用費は残る。既存本文だけを無課金で再公開する `publish_existing` を用意。
 - iOS画面の切替にはbuild 7への更新が必要。既存インストールやオフラインの古いWeb表示を遠隔で更新済みとは扱わない。
 
-検証: Node28件・iOS27 Simulator24件成功。33 JSON / 34 HTMLページについて音声URL・プレイヤーがないことを確認。
+検証: Node28件・iOS27 Simulator24件成功。33 JSON / 34 HTMLページについて音声URL・プレイヤーがないことを確認。 build 7の署名付きarchiveとcodesign検証成功。本番再公開 [37174138437](https://github.com/Takuya-ops/ai-morning-digest/actions/runs/37174138437) はAI生成手順をスキップして成功、[checks 37174140392](https://github.com/Takuya-ops/ai-morning-digest/actions/runs/37174140392) も成功。公開latest.jsonのaudio=false/音声URL0件とWebのプレイヤーなしを確認。実機導入・App Store提出は未実施。
 
 ---
 
