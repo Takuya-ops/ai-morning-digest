@@ -1,14 +1,19 @@
 {
- "schemaVersion": 2,
+ "schemaVersion": 3,
  "date": "2026-10-04",
- "generatedAt": "2026-10-03T23:16:13.091Z",
- "since": "2026-10-02T21:16:09.958Z",
+ "generatedAt": "2026-10-04T00:28:59.758Z",
+ "since": "2026-10-02T22:28:53.478Z",
  "windowHours": 26,
  "stats": {
-  "articleCount": 45,
+  "articleCount": 50,
   "feedCount": 32,
-  "topicCount": 43,
+  "topicCount": 48,
   "feedErrors": [
+   {
+    "feedId": "deepmind",
+    "feedName": "Google DeepMind",
+    "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+   },
    {
     "feedId": "venturebeat-ai",
     "feedName": "VentureBeat AI",
@@ -49,8 +54,15 @@
      "date": "2026-10-03T22:18:13.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/d746a1ec25a18f451c1697ca-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "448acd48efd607a9f5278308e27edacdfae98db0883f7b476423f5ad206e925a"
    }
   },
   {
@@ -87,8 +99,51 @@
      "date": "2026-10-03T02:00:00.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/b789b33ee052260f72323de8-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://www.itmedia.co.jp/news/article/2610/03/2000001983/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "71c81d5f1255b3a27e7977f77ea34fb8c53f02ccb3ad0596eba51f7ca141cd0d"
+   }
+  },
+  {
+   "id": "3c91eaa54ae801f1c8f7df40",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 3,
+   "headline": "「OpenAIの文化は壊れている」──安全性報告書を統括した従業員が退社し、寄稿",
+   "summary": "OpenAIで安全性報告の執筆を統括したデビッド・ロビンソン氏が退社し、企業文化の崩壊を訴える記事を寄稿した。現行の反復開発手法は失敗を前提としており、能力向上に伴いリスクが拡大すると指摘。原子力や航空分野の安全知見の導入や、未監視下の安全性を担保する新たな科学の確立を求めた。",
+   "whyItMatters": "",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "openai"
+   ],
+   "articles": [
+    {
+     "title": "「OpenAIの文化は壊れている」──安全性報告書を統括した従業員が退社し、寄稿",
+     "link": "https://www.itmedia.co.jp/news/article/2610/04/2000001986/",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-10-03T23:05:47.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/news/article/2610/04/2000001986/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "cdf8ccfbb03514f70632ef31486fa1a3933973c089a3d82840cc8270e0e141f3"
    }
   },
   {
@@ -98,7 +153,7 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 3,
+   "rank": 4,
    "headline": "Amazon responds to data center backlash, says it no longer uses NDAs",
    "summary": "The CEO of Amazon Web Services tried to push back against widespread suspicion of data centers.",
    "whyItMatters": "",
@@ -116,8 +171,15 @@
      "date": "2026-10-03T18:43:57.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/059d7c3b8feeed71d7e2b842-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "052236c277ba89c8a59544ca1e2ba5753f120975c6786b5cc0bb26731d273b46"
    }
   },
   {
@@ -127,7 +189,7 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 4,
+   "rank": 5,
    "headline": "All the AI agents that can live in your text messages",
    "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
    "whyItMatters": "",
@@ -143,8 +205,15 @@
      "date": "2026-10-03T14:00:00.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/dbf419221dda82d7cdbce45a-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "bf2cba2707aa589acbddf33dccfa4b0e2325bfc01c5f483b2e70720897a5f4aa"
    }
   },
   {
@@ -154,7 +223,7 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 5,
+   "rank": 6,
    "headline": "Amazon、データセンター批判に反論 10億ドル超の地域支援策も発表",
    "summary": "AWSのマット・ガーマンCEOは、データセンター建設批判に反論する声明を出した。水資源枯渇などの懸念を「迷信”と否定しつつ、電力料金負担や自治体とのNDA撤廃を含む行動指針を発表。さらに地域支援として、資格取得や省エネ改修などを助成する10億ドル超の基金を立ち上げる。",
    "whyItMatters": "",
@@ -173,8 +242,15 @@
      "date": "2026-10-03T08:52:00.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/3e5a17d8a0327289723e329a-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://www.itmedia.co.jp/news/article/2610/03/2000001985/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "5307298044e5f1783d44a5fe35426cdf98e6ae05417d2cf6c42237dfd483a9f8"
    }
   },
   {
@@ -185,7 +261,7 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 6,
+   "rank": 7,
    "headline": "Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応",
    "summary": "Metaは、パーソナルAI「Muse」と連携するガジェットを自作できるプロジェクト「Muse Gadgets」を発表した。ESP32やRaspberry Pi向けSDKをGitHubでオープンソース公開。自作機器や家電と連携させる専用デバイス「Muse Home Link」も米国の有料会員向けに無償提供する。",
    "whyItMatters": "",
@@ -204,8 +280,15 @@
      "date": "2026-10-03T01:41:21.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/00d160ad90bcb97111ac476a-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://www.itmedia.co.jp/news/article/2610/03/2000001984/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "f5b40aeefdd7ec25187d99ef7b4ff48d149ce726c331e484d35f19942ac57ba9"
    }
   },
   {
@@ -215,7 +298,7 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 7,
+   "rank": 8,
    "headline": "Meta wants your next gadget to be Muse-infused",
    "summary": "Meta wants Muse in your TV and your toaster, so it's giving the code away for free.",
    "whyItMatters": "",
@@ -233,8 +316,15 @@
      "date": "2026-10-03T00:45:39.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/977acb95c24e305574a464c1-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "2cc2b19aa3556d2680d5ec45c0f1b044cd137f5dec431078fc254d40f3f5ec0a"
    }
   },
   {
@@ -244,7 +334,7 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 8,
+   "rank": 9,
    "headline": "The Agent Said It Was Done. The Database Disagreed.",
    "summary": "(要約情報なし。リンク先をご確認ください)",
    "whyItMatters": "",
@@ -260,8 +350,15 @@
      "date": "2026-10-03T22:56:48.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/52253de3e9535ccd60b2c810-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://huggingface.co/blog/microsoft/thinkingbox",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "dd212955973091a87965a1b8c5a2d15e2e62d6afd6223b0194eaef2c20bc3044"
    }
   },
   {
@@ -272,9 +369,9 @@
    ],
    "faq": [],
    "aiGenerated": false,
-   "rank": 9,
+   "rank": 10,
    "headline": "Getting the most out of Opus 5.5 in Claude and Claude Code",
-   "summary": "Article URL: https://claude.dev/blog/getting-the-most-out-of-opus-5-5/ Comments URL: https://news.ycombinator.com/item?id=49946567 Points: 127 # Comments: 85",
+   "summary": "Article URL: https://claude.dev/blog/getting-the-most-out-of-opus-5-5/ Comments URL: https://news.ycombinator.com/item?id=49946567 Points: 150 # Comments: 108",
    "whyItMatters": "",
    "score": 3.5,
    "sourceCount": 1,
@@ -290,54 +387,58 @@
      "date": "2026-10-03T18:29:30.000Z"
     }
    ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/63bbca53d479d1b9a20ee9c1-gemini-3.8-flash-tts-Kore.wav"
-   }
-  },
-  {
-   "id": "f0287c92448162787e962af7",
-   "topics": [
-    "モデル・API"
-   ],
-   "faq": [],
-   "aiGenerated": false,
-   "rank": 10,
-   "headline": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
-   "summary": "https://archive.ph/TyDPf Comments URL: https://news.ycombinator.com/item?id=49946228 Points: 39 # Comments: 16",
-   "whyItMatters": "",
-   "score": 3.5,
-   "sourceCount": 1,
-   "entities": [],
-   "articles": [
-    {
-     "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
-     "link": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
-     "feedName": "Hacker News",
-     "lang": "en",
-     "date": "2026-10-03T17:44:29.000Z"
-    }
-   ],
-   "audio": {
-    "gemini-3.8-flash-tts-Kore": "https://github.com/Takuya-ops/ai-morning-digest/releases/download/digest-audio-2026-10-04/ae4ad918525a62543cacdd3c-gemini-3.8-flash-tts-Kore.wav"
+   "articleKey": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "f7d660c53a299e0dcc05c669fdc8767b69687250e41659d872c12a9ecebcbbb7"
    }
   }
  ],
  "others": [
   {
-   "title": "Claude Code の UserPromptSubmit hook でプロンプト送信時に git 状態を自動注入し、API キーの貼り付けをブロックする実装手順 — matcher は効かない・exit 2 の stderr は Claude に届かない・JSON は exit 0 のときだけ解釈、3つのハマりどころ【2026】",
-   "link": "https://qiita.com/yureki_lab/items/bf48752be6ab34b0c75a",
+   "title": "Opus 5.5 動画プロンプトの 6 要素：同一題材のブリーフを 3 段階で書き分けた比較と修正手順",
+   "link": "https://qiita.com/yumamorikawa/items/ca4823a76c9517ffb486",
    "feedName": "Qiita 生成AI",
    "lang": "ja",
-   "date": "2026-10-03T23:01:48.000Z",
-   "excerpt": "はじめに / 対象と前提 Claude Code の hooks のうち、ユーザーがプロンプトを送信した瞬間に走る UserPromptSubmit を実装した記録。PreToolUse や Stop と違って「Claude が考え始める前」に割り込めるので、用途は大きく..."
+   "date": "2026-10-04T00:28:28.000Z",
+   "excerpt": "Claude Opus 5.5 は動画をコードとして書く。プロンプトで決めていない項目は、すべて Opus のデフォルト値で補われる。デザインの方向性を与えずにフロントエンドの作業を依頼すると、Opus 5.5 は少数の既定スタイルに戻る。「avoid a generic..."
   },
   {
-   "title": "長文記事の差し絵をどこに入れるか分からないので、ChatGPTにまるっと決めてもらった",
-   "link": "https://qiita.com/TheOkachanPG/items/19fee21261f25a168155",
+   "title": "宮本百合子が1,186作品もある。青空文庫の全作品を1枚のCSVで検索した【kurashi-skill Day 24】",
+   "link": "https://qiita.com/Ichiropen/items/eaf026ad74ba9c216a9c",
    "feedName": "Qiita 生成AI",
    "lang": "ja",
-   "date": "2026-10-03T22:28:38.000Z",
-   "excerpt": "長い記事を書いていると、最後の最後で力尽きることがあります。 本文はほぼ完成している。 あとちょっと整えれば公開できる。 それなのに、 もう何も考えたくない。 超ロングの記事を書いた後は、本当にこうなります。 私の場合、この「あとちょっと」のところで力尽きて、せっかくほぼ完..."
+   "date": "2026-10-04T00:28:04.000Z",
+   "excerpt": "本屋にも図書館にも行かずに、著作権の切れた文学作品がタダで読める。青空文庫だ。漱石も太宰も、宮沢賢治も、全部無料で全文公開されている。「APIはあるの?」と聞かれたら、答えは「ない。でも、もっと良いものがある」だった。全作品の一覧が、1枚のCSVで公開されているのだ。ダウン..."
+  },
+  {
+   "title": "GitHub Copilot、9月に発表したVS Code向けの新機能をまとめて紹介",
+   "link": "https://codezine.jp/article/detail/29896",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-04T00:00:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "AIで書いた記事がつまらない。これからは「素人感」が武器になる",
+   "link": "https://qiita.com/kentaro-php/items/42d36b0119591a3b26f8",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-03T23:32:41.000Z",
+   "excerpt": "最近、気づいたこと Qiitaもnoteもブログも、AIで書いた記事が明らかに増えた。 読めばすぐわかる。構成がきれいで、見出しが整っていて、誤字が一つもない。 で、読み終わって何も残らない。 当たり障りがなさすぎる。 「〜という点に注意が必要です」「〜を活用することで効..."
+  },
+  {
+   "title": "AI生成コードのレビューは全行読む必要ある？契約とテストで絞る設計",
+   "link": "https://qiita.com/syun136_616/items/88a4e245bea0f9787326",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-03T23:18:44.000Z",
+   "excerpt": "この記事の要点 AI生成コードのレビューは、全行を同じ密度で読む必要はなく、「契約」と「テスト」で機械的に守れる部分と、人が読むべき部分に分けるのが現実的です。 契約（入力と出力の約束事）をテストで固定すると、人は実装の中身ではなく「契約そのものが正しいか」に集中できます..."
   },
   {
    "title": "September sponsors-only newsletter",
@@ -348,22 +449,6 @@
    "excerpt": "I just sent the September edition of my sponsors-only monthly newsletter . If you are a sponsor (or start a sponsorship now) you can access it here . This month: More Fable class models A pricing war 3D graphics, Blender, and pixel art LLMs come for mathematics So many more accidental cyberattacks The vulnapocalypse comes for Datasette What I'm using right now My software releases this month 2026 in LLMs (so far) Here's a copy of the August newsletter as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Tags: newsletter"
   },
   {
-   "title": "OpenAI「dots」の仕組みと対象プラン (GPT-6 Astra・専用クラウドPC・操作ルール)",
-   "link": "https://qiita.com/quotidia/items/71240f654144219349bd",
-   "feedName": "Qiita 生成AI",
-   "lang": "ja",
-   "date": "2026-10-03T21:01:14.000Z",
-   "excerpt": "本記事は筆者が運営する AI Quotidia の海外ニュース解説記事です。 OpenAIは2026年9月29日(火)(米国時間)、ChatGPTで使う新しいAIエージェント (指示を受けて自分で作業を進めるAI)「dots」を発表しました。 要点 GPT-6 As..."
-  },
-  {
-   "title": "Claude Code Modsは一番深く拡張できて、一番持ち運べない — 直近のアップデート13個を★で評価（2026/10/3時点）",
-   "link": "https://qiita.com/faruryo/items/c075c8c3d664c38f2384",
-   "feedName": "Qiita 生成AI",
-   "lang": "ja",
-   "date": "2026-10-03T19:35:09.000Z",
-   "excerpt": "仕事中もプライベートでも、ご飯を食べながらでもトイレの中でもAIエージェントを触っている私が、Claude Code 2.1.283〜2.1.288（2026-09-25〜10-02）の変更13個に★を付けました。基準は、自分の作業がどれだけ良くなったか（なりそうか）です。..."
-  },
-  {
    "title": "Apparently, OpenAI isn't trying to build \"magic intelligence in the sky\" anymore",
    "link": "https://the-decoder.com/apparently-openai-isnt-trying-to-build-magic-intelligence-in-the-sky-anymore/",
    "feedName": "The Decoder",
@@ -372,12 +457,44 @@
    "excerpt": "OpenAI CEO Sam Altman warns against attributing religious power to AI models, calling it a \"real safety issue.\" His comments follow reports on Anthropic's meetings with religious thinkers and a statement by Pope Leo XIV on AI. As recently as 2024, Altman himself spoke of building \"magic intelligence in the sky\" and feeling \"on the side of the angels\" working on AI. The article Apparently, OpenAI isn't trying to build \"magic intelligence in the sky\" anymore appeared first on The Decoder."
   },
   {
+   "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+   "link": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-10-03T17:44:29.000Z",
+   "excerpt": "https://archive.ph/TyDPf Comments URL: https://news.ycombinator.com/item?id=49946228 Points: 68 # Comments: 74"
+  },
+  {
    "title": "Capcom is preparing for a ‘future where we create games together with AI’",
    "link": "https://www.theverge.com/games/1004418/capcom-ai-game-development",
    "feedName": "The Verge AI",
    "lang": "en",
    "date": "2026-10-03T16:49:10.000Z",
    "excerpt": "Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so down on the tech. During the Capcom Open Conference RE: 2026 programmer Satoshi Ishida gave a presentation with the mouthful of a title: \"The Outlook and Future of the REX Project, Further Evolving the RE Engine for the Next Generation.\" During the talk he laid out the challenges facing studios producing games at the scale of Resident Evil, which can make even simple tasks extremely time consuming. The solution Ishida said is \"successfully integrating AI technology into development workflows.\" Capcom has said previously that it will not use AI … Read the full story at The Verge."
+  },
+  {
+   "title": "なぜ、私のブログ記事は2026年5月からAI偏重になってしまったのか？",
+   "link": "https://zenn.dev/pdfractal/articles/dc8895e9534eb9",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-03T16:17:43.000Z",
+   "excerpt": "はじめに 私は2025年頃から、ZennでIT技術、AI、プロジェクトマネジメント、ビジネス、自己啓発の五分野に限定し、ほぼ毎日一本の記事を書くことを続けてきました。ところが記事一覧を振り返ると、2026年5月頃を境に、それまで相当な割合を占めていたIT技術の記事が急減し、プロジェクトマネジメントの記事も減少する一方で、AIの記事が大きく増えています。興味深いのは、これは意識的な方針変更ではなかったことです。当時の私は「これからAI中心で書こう」と決めた覚えがなく、その日その日に興味を持ったことを書いていただけでした。それにもかかわらず、後から一覧を見ると、2026年5月を境に問題意..."
+  },
+  {
+   "title": "ChatGPT・Work・Codex・Codex CLIを、作業と確認のしかたで選ぶ",
+   "link": "https://zenn.dev/sugitakenji/articles/e1819b47908689",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-03T16:09:05.000Z",
+   "excerpt": "ChatGPTで相談し、Workで資料を作り、Codexでコードを直す。入口としては分かりやすい使い分けですが、実際に使っていると境界はもっと緩やかです。文書の修正にもGitを使いますし、コードを直す前に調査や説明資料が必要になることもあります。 そこで私は、何を扱うか、どこで作業するか、結果をどう確認したいかの3つから選ぶようにしています。 この記事は、手元の比較メモ「ChatGPT・Work・Codex・Codex CLI の違いと使い分け」をもとに、開発作業で迷いやすい点を整理したものです。2026年9月29日の利用記録と、2026年10月3日に確認した公式資料を区別して紹介します..."
+  },
+  {
+   "title": "言わない技術 第1回：検証を指示しない技術",
+   "link": "https://zenn.dev/garplab/articles/9c0e57f691135a",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-03T15:41:20.000Z",
+   "excerpt": "この記事は、連載「言わない技術」の第 1 回です。うまくいかない症状と、その対処を一つずつ並べています。各回はファイルやスクリプトを一つ置けば完結します。その仕組みがなぜ要るのかは、置いたあとに解説を読めば分かります。連載の全体像と各回の一覧は序論にあります。 今回は、指示ファイルに書いた「必ず実行してください」という行の話です。5 か月前に私が足したその行は、いまも 1 行も減っていません。その 1 行があるだけで、AI の手数 —— ツール呼び出しの回数 —— は倍になります。 前作「読まない技術」の第 6 回で、ルールを、破られたら落ちる自動テストに置き換えると書きました。今回..."
   },
   {
    "title": "Splice CEO Kakul Srivastava thinks AI emails are killing conversations",
@@ -588,135 +705,18 @@
    "excerpt": "Meta says FDA isn't sufficient to Muse reading messages. Apple begs to differ."
   }
  ],
- "audioDurationSec": 362,
- "socialDrafts": [
-  {
-   "id": "2026-10-04-7a09b2d0105640acb46a39f2-0",
-   "title": "1. OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
-   "text": "【AIニュース】\nOpenAI safety employee resigns, claiming the company’s ‘culture is broken’\nBy his own admission, David Robinson is “something of a cliché”: an employee at a leading AI company who issues a dire warning while resigning from …\nhttps://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/\n#生成AI",
-   "sourceIDs": [
-    "7a09b2d0105640acb46a39f2"
-   ],
-   "sourceURLs": [
-    "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-f2d7ab32786c48e1f7e3e06b-0",
-   "title": "2. Apple、macOSの「フルディスクアクセス」に追加の制御を導入へ 「AIエージェントの進化でリスクが大幅に増大」",
-   "text": "【AIニュース】\nApple、macOSの「フルディスクアクセス」に追加の制御を導入へ 「AIエージェントの進化でリスクが大幅に増大」\nAppleは、macOSの「フルディスクアクセス」権限の付与手順を厳格化する方針を発表した。AIエージェントの自律化に伴うデータ流出リス…\nhttps://www.itmedia.co.jp/news/article/2610/03/2000001983/\n#生成AI",
-   "sourceIDs": [
-    "f2d7ab32786c48e1f7e3e06b"
-   ],
-   "sourceURLs": [
-    "https://www.itmedia.co.jp/news/article/2610/03/2000001983/"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-67dac9f5f51307d87730bad3-0",
-   "title": "3. Amazon responds to data center backlash, says it no longer uses NDAs",
-   "text": "【AIニュース】\nAmazon responds to data center backlash, says it no longer uses NDAs\nThe CEO of Amazon Web Services tried to push back against widespread suspicion of data centers.\nhttps://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/\n#生成AI",
-   "sourceIDs": [
-    "67dac9f5f51307d87730bad3"
-   ],
-   "sourceURLs": [
-    "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-3c49c40e0ec38e267dc70e67-0",
-   "title": "4. All the AI agents that can live in your text messages",
-   "text": "【AIニュース】\nAll the AI agents that can live in your text messages\nWe created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.\nhttps://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/\n#生成AI",
-   "sourceIDs": [
-    "3c49c40e0ec38e267dc70e67"
-   ],
-   "sourceURLs": [
-    "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-e80cb1c2a280ae7d538463b1-0",
-   "title": "5. Amazon、データセンター批判に反論 10億ドル超の地域支援策も発表",
-   "text": "【AIニュース】\nAmazon、データセンター批判に反論 10億ドル超の地域支援策も発表\nAWSのマット・ガーマンCEOは、データセンター建設批判に反論する声明を出した。水資源枯渇などの懸念を「迷信”と否定しつつ、電力料金負担や自治体とのNDA撤廃を含む行動指針を…\nhttps://www.itmedia.co.jp/news/article/2610/03/2000001985/\n#生成AI",
-   "sourceIDs": [
-    "e80cb1c2a280ae7d538463b1"
-   ],
-   "sourceURLs": [
-    "https://www.itmedia.co.jp/news/article/2610/03/2000001985/"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-3e010d7a21429a0fec6c6dc0-0",
-   "title": "6. Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応",
-   "text": "【AIニュース】\nMeta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応\nMetaは、パーソナルAI「Muse」と連携するガジェットを自作できるプロジェクト「Muse Gadgets」を発表した。ESP32やRaspberry Pi…\nhttps://www.itmedia.co.jp/news/article/2610/03/2000001984/\n#生成AI",
-   "sourceIDs": [
-    "3e010d7a21429a0fec6c6dc0"
-   ],
-   "sourceURLs": [
-    "https://www.itmedia.co.jp/news/article/2610/03/2000001984/"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-0b0013541ceaec0bcf7f5bbc-0",
-   "title": "7. Meta wants your next gadget to be Muse-infused",
-   "text": "【AIニュース】\nMeta wants your next gadget to be Muse-infused\nMeta wants Muse in your TV and your toaster, so it's giving the code away for free.\nhttps://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/\n#生成AI",
-   "sourceIDs": [
-    "0b0013541ceaec0bcf7f5bbc"
-   ],
-   "sourceURLs": [
-    "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-bd1136d0fcfd6f1357de280a-0",
-   "title": "8. The Agent Said It Was Done. The Database Disagreed.",
-   "text": "【AIニュース】\nThe Agent Said It Was Done. The Database Disagreed.\n(要約情報なし。リンク先をご確認ください)\nhttps://huggingface.co/blog/microsoft/thinkingbox\n#生成AI",
-   "sourceIDs": [
-    "bd1136d0fcfd6f1357de280a"
-   ],
-   "sourceURLs": [
-    "https://huggingface.co/blog/microsoft/thinkingbox"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-roundup-35a872a5c85bf8a0c3653746",
-   "title": "9. AIニュース3選",
-   "text": "【AIニュース3選】\nOpenAI safety employee resigns, claiming th…\nhttps://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/\nApple、macOSの「フルディスクアクセス」に追…\nhttps://www.itmedia.co.jp/news/article/2610/03/2000001983/\nAmazon responds to data center backlash, sa…\nhttps://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/\n#生成AI",
-   "sourceIDs": [
-    "7a09b2d0105640acb46a39f2",
-    "f2d7ab32786c48e1f7e3e06b",
-    "67dac9f5f51307d87730bad3"
-   ],
-   "sourceURLs": [
-    "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
-    "https://www.itmedia.co.jp/news/article/2610/03/2000001983/",
-    "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/"
-   ],
-   "aiGenerated": false
-  },
-  {
-   "id": "2026-10-04-roundup-ca0ad70f6a61579fd37aa395",
-   "title": "10. あわせて読みたいAIニュース",
-   "text": "【あわせて読みたいAIニュース】\nAll the AI agents that can live in your tex…\nhttps://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/\nAmazon、データセンター批判に反論 10億ドル超…\nhttps://www.itmedia.co.jp/news/article/2610/03/2000001985/\nMeta、AIエージェント「Muse」とつながる自作…\nhttps://www.itmedia.co.jp/news/article/2610/03/2000001984/\n#生成AI",
-   "sourceIDs": [
-    "3c49c40e0ec38e267dc70e67",
-    "e80cb1c2a280ae7d538463b1",
-    "3e010d7a21429a0fec6c6dc0"
-   ],
-   "sourceURLs": [
-    "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
-    "https://www.itmedia.co.jp/news/article/2610/03/2000001985/",
-    "https://www.itmedia.co.jp/news/article/2610/03/2000001984/"
-   ],
-   "aiGenerated": false
+ "audioDurationSec": 360,
+ "publication": {
+  "revision": 1,
+  "contentRevision": "0691d9ca6679b57e2ad3f5732a3e841e0562f025e97c799e0dc8fd7ba301020f",
+  "textState": "ready",
+  "updatedAt": "2026-10-04T00:28:59.760Z",
+  "audioByVoice": {
+   "gemini-3.8-flash-tts-Kore": {
+    "state": "pending",
+    "expectedCount": 10,
+    "generatedCount": 0
+   }
   }
- ]
+ }
 }
