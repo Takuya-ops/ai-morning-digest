@@ -15,7 +15,7 @@ struct ContentView: View {
         }
         .fullScreenCover(isPresented: Binding(get: { !onboarded }, set: { if !$0 { onboarded = true } })) { OnboardingView() }
         .sheet(item: $linkedArticle) { article in NavigationStack { ArticleDetailView(article: article).toolbar { ToolbarItem(placement: .confirmationAction) { Button("閉じる") { linkedArticle = nil } } } }.playerInset() }
-        .onChange(of: store.isLoading) { loading in if !loading { handleLink() } }
+        .onChange(of: store.isLoading) { loading in if !loading { player.adoptGeminiDefaultIfAvailable(store.orderedBrief); handleLink() } }
         .onChange(of: router.articleID) { _ in handleLink() }
         .onChange(of: router.autoplay) { _ in handleLink() }
         .onChange(of: store.digest?.generatedAt) { _ in player.adoptGeminiDefaultIfAvailable(store.orderedBrief); handleLink() }

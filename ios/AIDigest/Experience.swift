@@ -116,7 +116,10 @@ struct BriefingPlan {
     func pinDownload(_ article: ReaderArticle) { state.articles[article.editionID] = article; var pins = state.downloadedEditions ?? []; pins.insert(article.editionID); state.downloadedEditions = pins; persist() }
     func clearDownloadPins() { state.downloadedEditions = []; persist() }
     func markListened(_ article: ReaderArticle) { state.listened.insert(article.editionID); persist() }
-    func setMutes(_ rules: MuteRules) { state.mutes = rules; persist() }
+    func setMutes(_ rules: MuteRules) {
+        func clean(_ values: [String]) -> [String] { var seen = Set<String>(); return values.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty && seen.insert($0).inserted } }
+        state.mutes = MuteRules(keywords: clean(rules.keywords), categories: clean(rules.categories), feeds: clean(rules.feeds)); persist()
+    }
     private func persist() {
         guard ready else { return }
         revision += 1; let version = revision, snapshot = state
