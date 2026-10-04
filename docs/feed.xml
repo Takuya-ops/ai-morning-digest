@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-05】現場任せのAI活用が失敗する理由と経営層の役割 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-05.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-05.html</guid>
+    <pubDate>Sun, 04 Oct 2026 23:31:56 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;現場任せのAI活用が失敗する理由と経営層の役割&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;国産AI開発「ノエトラ」始動、政府と44社が最大1兆円支援&lt;/li&gt;&lt;li&gt;Google、AI投稿増でOSSバグ報奨プログラムを凍結&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;Google、個人向けGeminiの無料モデルを「Flash-Lite」に制限&lt;/li&gt;&lt;li&gt;OpenAI元従業員が安全性と企業文化の問題を指摘し退社&lt;/li&gt;&lt;li&gt;名古屋大など、テスラ比7割軽量な次世代インバーター開発へ&lt;/li&gt;&lt;li&gt;「Agent Builder」で手軽にAIエージェントを開発可能に&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-04】OpenAIの安全性担当者が退任、「企業文化が崩壊」と警告 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-04.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-04.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-16.html</guid>
     <pubDate>Tue, 15 Sep 2026 23:05:45 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking&lt;/li&gt;&lt;li&gt;アップル、「Siri AI」をClaudeやGPTに置き換え可能に？ 「iOS 27」のコードが示す新機能&lt;/li&gt;&lt;li&gt;Is Big Tech’s AI slowdown a safety pact or a cartel?&lt;/li&gt;&lt;li&gt;「ブラウザを開く手間」を解消 作業画面に直接呼び出せるWindows版「Gemini」公開&lt;/li&gt;&lt;li&gt;OpenAI、AI安全性でAnthropic、Google DeepMindと協議中──Bloomberg報道&lt;/li&gt;&lt;li&gt;富士通、国産CPU「モナカ」販売 スパコン技術を結集した“小さなチップ”に託す「3兆円のAIビジネス」の行方&lt;/li&gt;&lt;li&gt;The AI data center boom is colliding with cities scarred by big industry&lt;/li&gt;&lt;li&gt;Meta now lets AI agents handle the boring parts of WhatsApp Business setup&lt;/li&gt;&lt;li&gt;【Pythonで学ぶデータ分析】独立性の検定をベイズ統計で行う ～ 雨男・雨女は本当にいるのか？&lt;/li&gt;&lt;li&gt;「APIキーは.envに」はもはや通用しない AIエージェントの“内通者化”をどう防ぐ？&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-15】「iOS 27」配信開始！ 対応するのはiPhone 11以降 日本語のSiri AIは10月開始予定 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-15.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-15.html</guid>
-    <pubDate>Mon, 14 Sep 2026 23:20:47 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;「iOS 27」配信開始！ 対応するのはiPhone 11以降 日本語のSiri AIは10月開始予定&lt;/li&gt;&lt;li&gt;How Fyxer built an AI executive assistant people trust&lt;/li&gt;&lt;li&gt;盛り上がる「AI減速」論に「勝手にどうぞ。許可を求めるな」 トランプ政権幹部&lt;/li&gt;&lt;li&gt;ソニー銀行、勘定系システムの開発に生成AIを本格適用&lt;/li&gt;&lt;li&gt;「投稿した記憶のない娘の個人情報」をMeta AIが知人の投稿などから正確に推測するという恐怖体験を母親が告白&lt;/li&gt;&lt;li&gt;GPT-6 AstraとClaude Fableの性能を引き出すハーネス「Fusion」が登場、Claude CodeやCodexで使う場合と同等の性能を示しつつコストを最大39％削減&lt;/li&gt;&lt;li&gt;Sakana AIが複数モデルの使い分けでGPT-6 Astra超えを達成する「Fugu Ultra v2」をリリース＆コスパに優れた「Fugu Max」も登場&lt;/li&gt;&lt;li&gt;Perplexity trusts GPT-6 Astra with end-to-end systems&lt;/li&gt;&lt;li&gt;トランプ大統領、アモデイ氏を名指しで「完璧な小さい天使のふり」 「AIに必要なガードレールは強く賢い大統領だけ」&lt;/li&gt;&lt;li&gt;「AIを盗む」のではなく「AIを動かす」ために Googleが捉えた攻撃者の異変&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
