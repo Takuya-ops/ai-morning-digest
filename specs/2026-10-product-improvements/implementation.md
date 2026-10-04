@@ -52,3 +52,5 @@ VoiceOver全操作、最大文字サイズ全画面、低容量端末、Bluetoot
 - iOS: iPhone 18 Pro / iOS 27 Simulatorで22件成功。iOS 26.5は最終テスト時に起動待ちとなったため、成功結果に含めない。1万件検索はインデックス構築を除く検索部分で300ms未満のassertionを通過。
 - Web: 実ブラウザでRelease音声の読み込み、1.2倍速、次の記事、一時停止を確認。人間による音質評価とは区別する。
 - iOS build 6: 署名付きarchive生成とcodesign検証に成功。App Store提出・実機へのインストールは本変更の完了条件には含めない。
+
+日次Actionsは本文・音声のpush後に[PagesビルドAPI](https://docs.github.com/en/rest/pages/pages#request-a-github-pages-build)を明示的に呼び、最後に公開JSONの本文版・revision・声別状態を最大5分間確認する。pushだけで配信済みとは扱わない。

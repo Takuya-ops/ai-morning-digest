@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: daily-digest
@@ -66,6 +67,11 @@ jobs:
             git push
           fi
 
+      - name: Request text Pages build
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Generate audio for the published text
         run: node scripts/publish-audio.js
         env:
@@ -80,6 +86,14 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Request audio Pages build
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Verify public publication
+        run: node scripts/verify-publication.js
 
       - name: Verify audio availability
         run: test "$(cat .work/audio-state)" = ready
