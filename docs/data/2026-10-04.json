@@ -1,19 +1,14 @@
 {
  "schemaVersion": 3,
  "date": "2026-10-04",
- "generatedAt": "2026-10-04T00:28:59.758Z",
- "since": "2026-10-02T22:28:53.478Z",
+ "generatedAt": "2026-10-04T00:35:44.621Z",
+ "since": "2026-10-02T22:34:59.234Z",
  "windowHours": 26,
  "stats": {
-  "articleCount": 50,
+  "articleCount": 48,
   "feedCount": 32,
-  "topicCount": 48,
+  "topicCount": 46,
   "feedErrors": [
-   {
-    "feedId": "deepmind",
-    "feedName": "Google DeepMind",
-    "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
-   },
    {
     "feedId": "venturebeat-ai",
     "feedName": "VentureBeat AI",
@@ -25,14 +20,34 @@
   {
    "id": "7a09b2d0105640acb46a39f2",
    "topics": [
-    "モデル・API"
+    "規制・政策",
+    "研究・論文"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "OpenAIの安全性担当者が辞任した。\n同氏は企業文化が壊れていると警告を発した。\nAI安全性をめぐる内部の懸念が再燃している。",
+    "detail": "OpenAIで安全部門のリーダーを務めていたデビッド・ロビンソン氏が同社を辞職しました。ロビンソン氏は退任に際して「企業文化が壊れている（culture is broken）」と強い警告を発信しています。大手AI企業において安全性への懸念を理由に辞任する従業員が後を絶たない中、同氏も自身を「ある種の典型例」と表現しつつ警鐘を鳴らしました。先進モデルの開発競争が過熱する裏で、安全性評価体制やガバナンスへの疑念が再び議論を呼んでいます。",
+    "simple": "OpenAIでAIの安全性を担当していた社員が退職しました。その際、「会社の文化が壊れている」と強い危機感を表明しました。AIの危険性を心配する専門家が辞めていく状況が続いています。"
+   },
+   "ttsText": "OpenAIの安全性担当者が退任し、企業文化が壊れていると警告しました。大手AI企業における安全性の軽視を懸念する声が再び上がっています。",
+   "faq": [
+    {
+     "q": "辞任したのは誰ですか？",
+     "a": "デビッド・ロビンソン（David Robinson）氏です。"
+    },
+    {
+     "q": "どのような警告を発しましたか？",
+     "a": "OpenAIの企業文化が壊れている（culture is broken）と指摘しました。"
+    },
+    {
+     "q": "ロビンソン氏の今後の活動は決まっていますか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 1,
-   "headline": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
-   "summary": "By his own admission, David Robinson is “something of a cliché”: an employee at a leading AI company who issues a dire warning while resigning from their job.",
-   "whyItMatters": "",
+   "headline": "OpenAIの安全性担当者が退任、「企業文化が崩壊」と警告",
+   "summary": "OpenAIで安全性関連の業務を担っていたデビッド・ロビンソン氏が同社を辞職しました。同氏は辞任にあたり、OpenAIの企業文化が壊れているとする厳しい警告を発表しました。主要なAI企業において、安全性の懸念を理由に従業員が離職し警告を発する事例が続いています。",
+   "whyItMatters": "最先端AIを開発するOpenAI内部の安全性に対する取り組みや組織文化への懸念が改めて浮き彫りになりました。",
    "score": 9,
    "sourceCount": 2,
    "entities": [
@@ -56,27 +71,47 @@
    ],
    "articleKey": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
    "editorial": {
-    "method": "source_excerpt",
-    "language": "en",
-    "status": "untranslated"
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
    },
    "narration": {
-    "language": "en",
-    "scriptHash": "448acd48efd607a9f5278308e27edacdfae98db0883f7b476423f5ad206e925a"
+    "language": "ja",
+    "scriptHash": "96c0e422aa8f3f58699d4eeffc5e25d84762962c78c49013e4deef69cc32a82d"
    }
   },
   {
    "id": "f2d7ab32786c48e1f7e3e06b",
    "topics": [
     "エージェント",
-    "企業導入事例"
+    "開発ツール",
+    "規制・政策"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "AppleがmacOSのフルディスクアクセス制限を強化。\nAIエージェント自律化による流出リスクに対応する。\n明示的な操作や追加の制御手順が導入される。",
+    "detail": "現地時間2026年10月2日、AppleはmacOSにおける「フルディスクアクセス」権限の付与手順を厳格化すると発表しました。自律的に動作するAIエージェントが普及する中で、ユーザーデータへの不正アクセスや情報流出のリスクが大幅に増大していることを受けた措置です。これに伴い、権限付与にはより明示的な操作や追加の制御が必要となります。背景にはMetaのAIエージェント「Muse」を巡るメッセージデータの監視に関する議論などがあり、OS側でセキュリティ境界を再定義する動きとなっています。",
+    "simple": "AppleがMacのセキュリティを強化します。自律して動くAIが勝手にパソコン内の全データを見ないよう、「フルディスクアクセス」という強力な権限を簡単に渡せない仕組みを導入します。"
+   },
+   "ttsText": "AppleはmacOSのフルディスクアクセス権限に新たな制限を導入すると発表しました。自律型AIエージェントの進化によるデータ流出リスクを抑える狙いです。",
+   "faq": [
+    {
+     "q": "どのような制限が加わりますか？",
+     "a": "フルディスクアクセス権限の付与手順が厳格化され、明示的な操作や追加制御が導入されます。"
+    },
+    {
+     "q": "なぜこの対策が行われるのですか？",
+     "a": "AIエージェントの自律化に伴うデータ流出リスクの増大や、MetaのAIエージェント「Muse」を巡る議論が背景にあります。"
+    },
+    {
+     "q": "この変更はどのバージョンのmacOSでいつ配信されますか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 2,
-   "headline": "Apple、macOSの「フルディスクアクセス」に追加の制御を導入へ 「AIエージェントの進化でリスクが大幅に増大」",
-   "summary": "Appleは、macOSの「フルディスクアクセス」権限の付与手順を厳格化する方針を発表した。AIエージェントの自律化に伴うデータ流出リスクを抑えるため、明示的な操作や追加制御を導入する。背景にはMetaのAIエージェント「Muse」を巡るメッセージデータ監視の議論などがある。",
-   "whyItMatters": "",
+   "headline": "Apple、macOSの「フルディスクアクセス」に新制限へ",
+   "summary": "Appleは、macOSの「フルディスクアクセス」権限の付与手順を厳格化する方針を発表しました。AIエージェントの自律化に伴うデータ流出リスクを抑えるため、明示的な操作や追加制御を導入します。MetaのAIエージェント「Muse」を巡るメッセージデータ監視の議論などが背景にあります。",
+   "whyItMatters": "AIエージェントの普及に伴うプライバシー侵害やデータ漏洩リスクに対し、OSレベルでのセキュリティ強化が進むことを示しています。",
    "score": 7.5,
    "sourceCount": 2,
    "entities": [
@@ -101,26 +136,46 @@
    ],
    "articleKey": "https://www.itmedia.co.jp/news/article/2610/03/2000001983/",
    "editorial": {
-    "method": "source_excerpt",
+    "method": "ai_summary",
     "language": "ja",
     "status": "ready"
    },
    "narration": {
     "language": "ja",
-    "scriptHash": "71c81d5f1255b3a27e7977f77ea34fb8c53f02ccb3ad0596eba51f7ca141cd0d"
+    "scriptHash": "6c5e453d789a53ccbe64dc1055ec4ff17084895459b2217257def13c0983b750"
    }
   },
   {
    "id": "3c91eaa54ae801f1c8f7df40",
    "topics": [
-    "モデル・API"
+    "規制・政策",
+    "研究・論文"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "OpenAIの安全性報告統括者が退職し寄稿を発表。\n失敗を前提とする反復開発手法のリスクを指摘した。\n航空や原子力のような安全工学の導入を訴えた。",
+    "detail": "OpenAIで安全性報告書の執筆を統括していたデビッド・ロビンソン氏が退社し、同社の企業文化崩壊を訴える寄稿記事を発表しました。ロビンソン氏は、現在のAI開発で一般的な「試行錯誤と反復」による手法は失敗することを前提にしており、AIの能力が高まるほどリスクが許容できない規模に拡大すると警鐘を鳴らしています。同氏は、原子力や航空といった重大な事故が許されない分野の安全知見を取り入れることや、人間が監視していない環境でも安全性を客観的に担保できる新しい科学体系の確立を強く訴えています。",
+    "simple": "OpenAIで安全報告書をまとめていた担当者が退社し、「今の開発方法は危険だ」と訴えました。飛行機や原子力発電所のように絶対に事故を起こさない仕組みをAI開発にも取り入れるべきだと主張しています。"
+   },
+   "ttsText": "OpenAIの元安全性統括者デビッド・ロビンソン氏が退社し、企業文化の崩壊を訴えました。失敗を前提とする現在の開発手法を見直し、原子力や航空分野の安全知見を導入するよう求めています。",
+   "faq": [
+    {
+     "q": "寄稿した元従業員は誰ですか？",
+     "a": "OpenAIで安全性報告の執筆を統括していたデビッド・ロビンソン氏です。"
+    },
+    {
+     "q": "現行のAI開発手法の何が問題と指摘されていますか？",
+     "a": "反復開発手法は失敗を前提としており、AIの能力向上に伴いリスクが拡大すると指摘されています。"
+    },
+    {
+     "q": "代替案としてどのような分野の安全知見が挙げられていますか？",
+     "a": "原子力や航空分野の安全知見の導入や、未監視下の安全性を担保する新たな科学の確立が求められています。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 3,
-   "headline": "「OpenAIの文化は壊れている」──安全性報告書を統括した従業員が退社し、寄稿",
-   "summary": "OpenAIで安全性報告の執筆を統括したデビッド・ロビンソン氏が退社し、企業文化の崩壊を訴える記事を寄稿した。現行の反復開発手法は失敗を前提としており、能力向上に伴いリスクが拡大すると指摘。原子力や航空分野の安全知見の導入や、未監視下の安全性を担保する新たな科学の確立を求めた。",
-   "whyItMatters": "",
+   "headline": "OpenAI元安全性統括者「文化崩壊」寄稿、開発手法に警鐘",
+   "summary": "OpenAIで安全性報告の執筆を統括したデビッド・ロビンソン氏が退社し、企業文化の崩壊を訴える記事を寄稿しました。現行の反復開発手法は失敗を前提としており、能力向上に伴いリスクが拡大すると指摘しています。原子力や航空分野の安全知見導入や、未監視下の安全性を担保する新たな科学の確立を求めました。",
+   "whyItMatters": "AIの能力が急速に高まる中、従来の試行錯誤的な開発サイクルでは破滅的な失敗を防げないという構造的課題を提起しています。",
    "score": 4.5,
    "sourceCount": 1,
    "entities": [
@@ -137,26 +192,46 @@
    ],
    "articleKey": "https://www.itmedia.co.jp/news/article/2610/04/2000001986/",
    "editorial": {
-    "method": "source_excerpt",
+    "method": "ai_summary",
     "language": "ja",
     "status": "ready"
    },
    "narration": {
     "language": "ja",
-    "scriptHash": "cdf8ccfbb03514f70632ef31486fa1a3933973c089a3d82840cc8270e0e141f3"
+    "scriptHash": "eb2d7ed753d600cb6a1b8350a09dfa32d8898575abb04dd05be331fdde5924e6"
    }
   },
   {
    "id": "67dac9f5f51307d87730bad3",
    "topics": [
-    "モデル・API"
+    "企業導入事例",
+    "規制・政策"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "AWSのCEOがデータセンター批判に反論した。\n広範な疑惑や反発に対して姿勢を示した。\n今後は自治体などとのNDAを使用しないと表明した。",
+    "detail": "Amazon Web Services（AWS）のCEOは、同社の大規模データセンター展開に対する反発や懸念の声に対して反論を行いました。データセンターをめぐっては各地で不信感が高まっていましたが、AWSは透明性を確保する姿勢を示すため、今後は秘密保持契約（NDA）を使用しない方針を明らかにしました。地域社会との摩擦を緩和し、インフラ拡大に向けた合意形成を図る狙いがあります。",
+    "simple": "Amazonのクラウド部門トップが、データセンターに対する批判に反論しました。地域とのやり取りをオープンにするため、秘密を守る契約（NDA）を使わない方針を明らかにしました。"
+   },
+   "ttsText": "アマゾン・ウェブ・サービスのCEOは、データセンター建設への批判に反論し、今後は自治体などとの秘密保持契約を使用しない方針を明らかにしました。",
+   "faq": [
+    {
+     "q": "AWSはどのような批判を受けていますか？",
+     "a": "データセンターに対する広範な不信感や反発を受けています。"
+    },
+    {
+     "q": "今回の発表で明らかにした対応は何ですか？",
+     "a": "データセンター関連で今後NDA（秘密保持契約）を使用しないと表明しました。"
+    },
+    {
+     "q": "対象となるデータセンターの具体的な地域はどこですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 4,
-   "headline": "Amazon responds to data center backlash, says it no longer uses NDAs",
-   "summary": "The CEO of Amazon Web Services tried to push back against widespread suspicion of data centers.",
-   "whyItMatters": "",
+   "headline": "AWS CEO、データセンター批判に反論しNDA撤廃を表明",
+   "summary": "Amazon Web Services（AWS）のCEOは、データセンターの建設や運用に対する広範な批判や不信感に反論しました。その一環として、自治体などとの契約において秘密保持契約（NDA）を今後は使用しない方針を表明しました。",
+   "whyItMatters": "データセンター拡大に伴う環境負荷や地域社会への影響に対し、クラウド大手が透明性を高める姿勢へ転換し始めています。",
    "score": 4.5,
    "sourceCount": 1,
    "entities": [
@@ -173,26 +248,46 @@
    ],
    "articleKey": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/",
    "editorial": {
-    "method": "source_excerpt",
-    "language": "en",
-    "status": "untranslated"
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
    },
    "narration": {
-    "language": "en",
-    "scriptHash": "052236c277ba89c8a59544ca1e2ba5753f120975c6786b5cc0bb26731d273b46"
+    "language": "ja",
+    "scriptHash": "b0949f113d8ee9adb1499cda81c47bf2b960d5e2ca7762f9a7e91b7aa508146f"
    }
   },
   {
    "id": "3c49c40e0ec38e267dc70e67",
    "topics": [
-    "エージェント"
+    "エージェント",
+    "モデル・API"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "SMSやチャットで動くAIエージェントの特集が公開。\n汎用アシスタントから家族・仕事向けまで多岐にわたる。\n日常のメッセージング内で手軽に利用可能。",
+    "detail": "TechCrunchは、テキストメッセージ環境内で直接対話・機能する代表的なAIエージェントのまとめリストを公開しました。専用のアプリケーションを介さずとも、日常的に使用するメッセージ機能の中でアシスタント機能を提供できる点が特徴です。紹介されたエージェントは汎用的な日常アシスタントにとどまらず、家族間でのスケジュール調整や情報共有、旅行の計画や手配、さらには業務支援に特化したものまで多岐にわたっています。",
+    "simple": "普段使っているメッセージアプリの中でそのまま使える便利なAIエージェントがまとめられました。旅行の計画、家族の用事、仕事のお手伝いなど、目的に応じた様々なAIが登場しています。"
+   },
+   "ttsText": "テキストメッセージ内で直接利用できるAIエージェントのまとめが公開されました。家族向けや旅行、仕事向けなど用途に応じたエージェントが注目されています。",
+   "faq": [
+    {
+     "q": "どのような用途のAIエージェントが紹介されていますか？",
+     "a": "汎用アシスタントのほか、家族向け、旅行用、仕事用などに特化したエージェントが紹介されています。"
+    },
+    {
+     "q": "エージェントはどこで動作しますか？",
+     "a": "スマートフォンのテキストメッセージ（SMSやチャット環境）内で動作します。"
+    },
+    {
+     "q": "紹介されている具体的なエージェントの製品名は何ですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 5,
-   "headline": "All the AI agents that can live in your text messages",
-   "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
-   "whyItMatters": "",
+   "headline": "テキストメッセージ内で動作する注目のAIエージェント一覧",
+   "summary": "メッセージアプリ上で直接対話・動作可能な注目のAIエージェントをまとめたリストが公開されました。一般的なアシスタント機能を持つエージェントから、家族向け、旅行計画用、仕事の効率化に特化したものまで、多様な用途のエージェントが取り上げられています。",
+   "whyItMatters": "専用アプリを起動することなく、日常のSMSやチャットツール内で完結するAIエージェントの実用化が進んでいます。",
    "score": 4.5,
    "sourceCount": 1,
    "entities": [],
@@ -207,26 +302,47 @@
    ],
    "articleKey": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
    "editorial": {
-    "method": "source_excerpt",
-    "language": "en",
-    "status": "untranslated"
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
    },
    "narration": {
-    "language": "en",
-    "scriptHash": "bf2cba2707aa589acbddf33dccfa4b0e2325bfc01c5f483b2e70720897a5f4aa"
+    "language": "ja",
+    "scriptHash": "5544cf8a33323d9c833ae55af79e7cd99a325ef9c436ec5ce13d9dfd0739df83"
    }
   },
   {
    "id": "e80cb1c2a280ae7d538463b1",
    "topics": [
-    "モデル・API"
+    "企業導入事例",
+    "規制・政策",
+    "資金調達・M&A"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "AWSのCEOがデータセンター建設批判に反論。\n水資源問題などを否定しNDA撤廃などの指針を表明。\n10億ドル超の地域支援基金を設立する。",
+    "detail": "AWSのマット・ガーマンCEOは、データセンター新設計画に対する地域社会からの反発に反論する声明を発表しました。特に指摘されている水資源の枯渇といった懸念を「迷信」であると退けた上で、電力料金の適切な負担や、自治体と結んでいた秘密保持契約（NDA）の撤廃を盛り込んだ新たな行動指針を提示しました。加えて、住民のスキル向上や資格取得、省エネ改修などを助成するための10億ドルを超える地域支援基金の立ち上げを表明し、地域共生と透明性の向上を図っています。",
+    "simple": "アマゾン（AWS）が、データセンターに対する環境批判に反論しました。水不足の心配を否定しつつ、秘密契約を廃止し、地域支援のために約10億ドル以上の基金を作ると発表しました。"
+   },
+   "ttsText": "AWSのマット・ガーマンCEOは、データセンター批判に反論し、秘密保持契約の撤廃と10億ドル超の地域支援基金の立ち上げを発表しました。",
+   "faq": [
+    {
+     "q": "AWSのCEOは水資源枯渇の懸念をどう説明しましたか？",
+     "a": "水資源枯渇などの懸念を「迷信」であると否定しました。"
+    },
+    {
+     "q": "発表された行動指針には何が含まれますか？",
+     "a": "電力料金負担や自治体との秘密保持契約（NDA）撤廃などが含まれます。"
+    },
+    {
+     "q": "10億ドル超の基金はどのような用途に使われますか？",
+     "a": "資格取得や省エネ改修などを助成する地域支援に使われます。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 6,
-   "headline": "Amazon、データセンター批判に反論 10億ドル超の地域支援策も発表",
-   "summary": "AWSのマット・ガーマンCEOは、データセンター建設批判に反論する声明を出した。水資源枯渇などの懸念を「迷信”と否定しつつ、電力料金負担や自治体とのNDA撤廃を含む行動指針を発表。さらに地域支援として、資格取得や省エネ改修などを助成する10億ドル超の基金を立ち上げる。",
-   "whyItMatters": "",
+   "headline": "Amazon、データセンター批判に反論し10億ドル超の基金設立",
+   "summary": "AWSのマット・ガーマンCEOは、データセンター建設への批判に反論する声明を発表しました。水資源枯渇の懸念を迷信と否定し、電力料金負担や自治体とのNDA撤廃を含む行動指針を示しました。さらに資格取得や省エネ改修を支援する10億ドル超の地域支援基金を立ち上げます。",
+   "whyItMatters": "AI需要拡大に伴うデータセンターの電力・水消費への反発に対し、莫大な地域還元と透明性確保で合意を取り付ける新たな業界標準を示す動きです。",
    "score": 4,
    "sourceCount": 1,
    "entities": [
@@ -244,27 +360,47 @@
    ],
    "articleKey": "https://www.itmedia.co.jp/news/article/2610/03/2000001985/",
    "editorial": {
-    "method": "source_excerpt",
+    "method": "ai_summary",
     "language": "ja",
     "status": "ready"
    },
    "narration": {
     "language": "ja",
-    "scriptHash": "5307298044e5f1783d44a5fe35426cdf98e6ae05417d2cf6c42237dfd483a9f8"
+    "scriptHash": "5a0bf8380fc8014ac771a87e0226b75960b6198abcebbc64395be1c398637c9f"
    }
   },
   {
    "id": "3e010d7a21429a0fec6c6dc0",
    "topics": [
     "エージェント",
-    "開発ツール"
+    "開発ツール",
+    "モデル・API"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "MetaがAI「Muse」とつながる自作向けSDKを公開。\nESP32やRaspberry Piに対応しGitHubで配布。\n専用デバイス「Home Link」の無償提供も実施。",
+    "detail": "Metaは、パーソナルAIエージェント「Muse」と連携可能なガジェットを自作できる開発プロジェクト「Muse Gadgets」を発表しました。電子工作で広く使われているマイコン「ESP32」やシングルボードコンピュータ「Raspberry Pi」に対応したSDKをGitHub上でオープンソースとして一般公開しました。さらに、ユーザーが自作した機器や既存の家電製品とMuseを円滑につなぐ専用デバイス「Muse Home Link」を用意し、米国内の有料会員を対象に無償提供を開始します。",
+    "simple": "Metaが、自社のAI「Muse」を自作の電子機器とつなげられる開発キットを無料公開しました。小型PCのラズベリーパイなどに対応しており、家電やガジェットをAIで操作できるようになります。"
+   },
+   "ttsText": "Metaは、AIエージェント「Muse」と連携する自作ガジェット向け開発キットをオープンソース公開しました。ラズベリーパイなどに対応しています。",
+   "faq": [
+    {
+     "q": "対応しているハードウェアは何ですか？",
+     "a": "ESP32やRaspberry Pi（ラズベリーパイ）などに対応しています。"
+    },
+    {
+     "q": "「Muse Home Link」は誰に提供されますか？",
+     "a": "米国の有料会員向けに無償提供されます。"
+    },
+    {
+     "q": "SDKはどこで入手できますか？",
+     "a": "GitHubでオープンソースとして公開されています。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 7,
-   "headline": "Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応",
-   "summary": "Metaは、パーソナルAI「Muse」と連携するガジェットを自作できるプロジェクト「Muse Gadgets」を発表した。ESP32やRaspberry Pi向けSDKをGitHubでオープンソース公開。自作機器や家電と連携させる専用デバイス「Muse Home Link」も米国の有料会員向けに無償提供する。",
-   "whyItMatters": "",
+   "headline": "Meta、AI「Muse」連携の自作ガジェット用SDKを公開",
+   "summary": "Metaは、自社のパーソナルAI「Muse」と連携する機器を自作できる「Muse Gadgets」を発表しました。ESP32やRaspberry Pi向けSDKをGitHubでオープンソース公開しています。また、自作機器や家電と連携させる専用デバイス「Muse Home Link」を米国の有料会員向けに無償提供します。",
+   "whyItMatters": "AIエージェントをPCやスマホの画面内から物理世界のハードウェアや家電へと拡張し、IoTエコシステムを巻き込む試みです。",
    "score": 4,
    "sourceCount": 1,
    "entities": [
@@ -282,26 +418,46 @@
    ],
    "articleKey": "https://www.itmedia.co.jp/news/article/2610/03/2000001984/",
    "editorial": {
-    "method": "source_excerpt",
+    "method": "ai_summary",
     "language": "ja",
     "status": "ready"
    },
    "narration": {
     "language": "ja",
-    "scriptHash": "f5b40aeefdd7ec25187d99ef7b4ff48d149ce726c331e484d35f19942ac57ba9"
+    "scriptHash": "9edfff1d98e16705c93df4e6b958218fd6ced9b166939421e6fd31daa399367e"
    }
   },
   {
    "id": "0b0013541ceaec0bcf7f5bbc",
    "topics": [
-    "モデル・API"
+    "エージェント",
+    "開発ツール"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "MetaがAI「Muse」連携コードを無償提供。\nテレビやトースターなど多様な家電への組み込みを促進。\n家庭内デバイスへのAI普及を狙う。",
+    "detail": "Metaは、テレビやトースターといった多様な家電製品やガジェットに自社のAIエージェント「Muse」を組み込めるようにするため、関連するソースコードを無料で一般公開しました。身の回りのあらゆる物理デバイスにMuseを浸透させ、家庭内エコシステムの中心に自社AIを据える狙いがあります。",
+    "simple": "Metaは、テレビやトースターなどの家電に同社のAI「Muse」を組み込めるプログラムを無料で公開しました。身近な家電をもっと賢くすることを目指しています。"
+   },
+   "ttsText": "Metaは、テレビや家電製品などに自社のAI「Muse」を組み込めるコードを無償提供し、家庭内機器へのAI導入を進めています。",
+   "faq": [
+    {
+     "q": "Metaはどのような機器にMuseを組み込もうとしていますか？",
+     "a": "テレビやトースターなどの各種ガジェット・家電製品です。"
+    },
+    {
+     "q": "コードの利用には費用がかかりますか？",
+     "a": "無料で提供（giving the code away for free）されています。"
+    },
+    {
+     "q": "対応する家電メーカーのパートナーシップは発表されていますか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 8,
-   "headline": "Meta wants your next gadget to be Muse-infused",
-   "summary": "Meta wants Muse in your TV and your toaster, so it's giving the code away for free.",
-   "whyItMatters": "",
+   "headline": "Meta、AI「Muse」を家電やガジェットへ無償開放",
+   "summary": "Metaは、AIアシスタント「Muse」をテレビやトースターなどの身の回りのガジェットに組み込めるよう、関連コードを無償で提供し始めました。家庭内のあらゆるハードウェアへのMuse搭載を後押しする狙いがあります。",
+   "whyItMatters": "Metaがコードの無償提供を通じて、スマートホームや家電ハードウェア市場における自社AIの標準化を加速させています。",
    "score": 4,
    "sourceCount": 1,
    "entities": [
@@ -318,26 +474,47 @@
    ],
    "articleKey": "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
    "editorial": {
-    "method": "source_excerpt",
-    "language": "en",
-    "status": "untranslated"
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
    },
    "narration": {
-    "language": "en",
-    "scriptHash": "2cc2b19aa3556d2680d5ec45c0f1b044cd137f5dec431078fc254d40f3f5ec0a"
+    "language": "ja",
+    "scriptHash": "17f3af4d0ee01f4ab505260df8623dae6baab6d5868ade12e0d2ff334a74be6c"
    }
   },
   {
    "id": "bd1136d0fcfd6f1357de280a",
    "topics": [
-    "エージェント"
+    "エージェント",
+    "開発ツール",
+    "研究・論文"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": null,
+    "detail": null,
+    "simple": null
+   },
+   "ttsText": "ハギングフェイスに、エージェントの完了報告とデータベースの不整合を題材にした記事が掲載されました。",
+   "faq": [
+    {
+     "q": "記事のタイトルは何ですか？",
+     "a": "「The Agent Said It Was Done. The Database Disagreed.」です。"
+    },
+    {
+     "q": "どのプラットフォームで公開されましたか？",
+     "a": "Hugging Faceで公開されました。"
+    },
+    {
+     "q": "記事で検証された具体的なデータベース名は何ですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 9,
-   "headline": "The Agent Said It Was Done. The Database Disagreed.",
-   "summary": "(要約情報なし。リンク先をご確認ください)",
-   "whyItMatters": "",
+   "headline": "AIエージェント完了報告とDB不整合の検証記事",
+   "summary": "Hugging Faceに「エージェントは完了したと言ったが、データベースは同意しなかった」と題された技術トピックが掲載されました。自律型AIエージェントのタスク完了判定と、実際のデータ更新との不一致に関する課題を取り上げていると見られます。",
+   "whyItMatters": "AIエージェントの実務適用において、タスク実行の信頼性やデータベース整合性の担保が重要な課題となっています。",
    "score": 3.5,
    "sourceCount": 1,
    "entities": [],
@@ -352,13 +529,13 @@
    ],
    "articleKey": "https://huggingface.co/blog/microsoft/thinkingbox",
    "editorial": {
-    "method": "source_excerpt",
+    "method": "ai_summary",
     "language": "ja",
     "status": "ready"
    },
    "narration": {
     "language": "ja",
-    "scriptHash": "dd212955973091a87965a1b8c5a2d15e2e62d6afd6223b0194eaef2c20bc3044"
+    "scriptHash": "05f2313e8939895cd302b94c612e60fa78d0480316b430559f96dccc9831ca32"
    }
   },
   {
@@ -367,12 +544,31 @@
     "モデル・API",
     "開発ツール"
    ],
-   "faq": [],
-   "aiGenerated": false,
+   "summaryStyles": {
+    "short": "Opus 5.5を最大限活用するための解説が公開。\nClaudeおよびClaude Codeでの利用法を紹介。\nHacker Newsなどで大きな注目を集めている。",
+    "detail": null,
+    "simple": "AIモデル「Opus 5.5」を、チャットやプログラミング用ツール「Claude Code」で上手に使いこなすための公式アドバイスが公開され、開発者の間で話題になっています。"
+   },
+   "ttsText": "ClaudeやClaude CodeでOpus 5.5を最大限に活用するための解説が公開され、開発者の注目を集めています。",
+   "faq": [
+    {
+     "q": "解説の対象となっているモデルは何ですか？",
+     "a": "Opus 5.5です。"
+    },
+    {
+     "q": "どのツールでの活用法が取り上げられていますか？",
+     "a": "ClaudeおよびClaude Codeです。"
+    },
+    {
+     "q": "記事内で推奨されている具体的なプロンプト手法は何ですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
    "rank": 10,
-   "headline": "Getting the most out of Opus 5.5 in Claude and Claude Code",
-   "summary": "Article URL: https://claude.dev/blog/getting-the-most-out-of-opus-5-5/ Comments URL: https://news.ycombinator.com/item?id=49946567 Points: 150 # Comments: 108",
-   "whyItMatters": "",
+   "headline": "ClaudeとClaude Code向けOpus 5.5活用ガイド公開",
+   "summary": "Anthropicの最新モデル「Opus 5.5」をClaudeおよび開発者向けツール「Claude Code」で最大限に活用するための解説記事が開発者ブログで公開され、Hacker Newsで話題を集めています。",
+   "whyItMatters": "高度なコーディングや推論を担う主力モデルの性能を現場で最大限に引き出すための実践的な知見が共有されています。",
    "score": 3.5,
    "sourceCount": 1,
    "entities": [
@@ -389,17 +585,25 @@
    ],
    "articleKey": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
    "editorial": {
-    "method": "source_excerpt",
-    "language": "en",
-    "status": "untranslated"
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
    },
    "narration": {
-    "language": "en",
-    "scriptHash": "f7d660c53a299e0dcc05c669fdc8767b69687250e41659d872c12a9ecebcbbb7"
+    "language": "ja",
+    "scriptHash": "664f274e696caa4b0a9fee5bbe95484f26f939d6c9888677defa1dbdb02f3543"
    }
   }
  ],
  "others": [
+  {
+   "title": "AI時代からSI時代へ? トランプ政権のスーパーインテリジェンス",
+   "link": "https://www.watch.impress.co.jp/docs/topic/watchplus/2145023.html",
+   "feedName": "Impress Watch",
+   "lang": "ja",
+   "date": "2026-10-04T00:30:00.000Z",
+   "excerpt": "Impress Watchニュースレターに掲載した記事です。ニュースレターは無料で、毎週編集部員が会員向けのコラムなどをお送りしています。登録はこちらから。"
+  },
   {
    "title": "Opus 5.5 動画プロンプトの 6 要素：同一題材のブリーフを 3 段階で書き分けた比較と修正手順",
    "link": "https://qiita.com/yumamorikawa/items/ca4823a76c9517ffb486",
@@ -471,30 +675,6 @@
    "lang": "en",
    "date": "2026-10-03T16:49:10.000Z",
    "excerpt": "Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so down on the tech. During the Capcom Open Conference RE: 2026 programmer Satoshi Ishida gave a presentation with the mouthful of a title: \"The Outlook and Future of the REX Project, Further Evolving the RE Engine for the Next Generation.\" During the talk he laid out the challenges facing studios producing games at the scale of Resident Evil, which can make even simple tasks extremely time consuming. The solution Ishida said is \"successfully integrating AI technology into development workflows.\" Capcom has said previously that it will not use AI … Read the full story at The Verge."
-  },
-  {
-   "title": "なぜ、私のブログ記事は2026年5月からAI偏重になってしまったのか？",
-   "link": "https://zenn.dev/pdfractal/articles/dc8895e9534eb9",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-10-03T16:17:43.000Z",
-   "excerpt": "はじめに 私は2025年頃から、ZennでIT技術、AI、プロジェクトマネジメント、ビジネス、自己啓発の五分野に限定し、ほぼ毎日一本の記事を書くことを続けてきました。ところが記事一覧を振り返ると、2026年5月頃を境に、それまで相当な割合を占めていたIT技術の記事が急減し、プロジェクトマネジメントの記事も減少する一方で、AIの記事が大きく増えています。興味深いのは、これは意識的な方針変更ではなかったことです。当時の私は「これからAI中心で書こう」と決めた覚えがなく、その日その日に興味を持ったことを書いていただけでした。それにもかかわらず、後から一覧を見ると、2026年5月を境に問題意..."
-  },
-  {
-   "title": "ChatGPT・Work・Codex・Codex CLIを、作業と確認のしかたで選ぶ",
-   "link": "https://zenn.dev/sugitakenji/articles/e1819b47908689",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-10-03T16:09:05.000Z",
-   "excerpt": "ChatGPTで相談し、Workで資料を作り、Codexでコードを直す。入口としては分かりやすい使い分けですが、実際に使っていると境界はもっと緩やかです。文書の修正にもGitを使いますし、コードを直す前に調査や説明資料が必要になることもあります。 そこで私は、何を扱うか、どこで作業するか、結果をどう確認したいかの3つから選ぶようにしています。 この記事は、手元の比較メモ「ChatGPT・Work・Codex・Codex CLI の違いと使い分け」をもとに、開発作業で迷いやすい点を整理したものです。2026年9月29日の利用記録と、2026年10月3日に確認した公式資料を区別して紹介します..."
-  },
-  {
-   "title": "言わない技術 第1回：検証を指示しない技術",
-   "link": "https://zenn.dev/garplab/articles/9c0e57f691135a",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-10-03T15:41:20.000Z",
-   "excerpt": "この記事は、連載「言わない技術」の第 1 回です。うまくいかない症状と、その対処を一つずつ並べています。各回はファイルやスクリプトを一つ置けば完結します。その仕組みがなぜ要るのかは、置いたあとに解説を読めば分かります。連載の全体像と各回の一覧は序論にあります。 今回は、指示ファイルに書いた「必ず実行してください」という行の話です。5 か月前に私が足したその行は、いまも 1 行も減っていません。その 1 行があるだけで、AI の手数 —— ツール呼び出しの回数 —— は倍になります。 前作「読まない技術」の第 6 回で、ルールを、破られたら落ちる自動テストに置き換えると書きました。今回..."
   },
   {
    "title": "Splice CEO Kakul Srivastava thinks AI emails are killing conversations",
@@ -705,15 +885,15 @@
    "excerpt": "Meta says FDA isn't sufficient to Muse reading messages. Apple begs to differ."
   }
  ],
- "audioDurationSec": 360,
+ "audioDurationSec": 139,
  "publication": {
-  "revision": 2,
-  "contentRevision": "0691d9ca6679b57e2ad3f5732a3e841e0562f025e97c799e0dc8fd7ba301020f",
+  "revision": 1,
+  "contentRevision": "249d26456420e8063b66759a460b654578851e7086b92421ac54bc061c6eea91",
   "textState": "ready",
-  "updatedAt": "2026-10-04T00:33:04.706Z",
+  "updatedAt": "2026-10-04T00:35:44.623Z",
   "audioByVoice": {
    "gemini-3.8-flash-tts-Kore": {
-    "state": "failed",
+    "state": "pending",
     "expectedCount": 10,
     "generatedCount": 0
    }
