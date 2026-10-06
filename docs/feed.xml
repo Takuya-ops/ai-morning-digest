@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-06】OpenAI、EUでChatGPTの文章に透かし導入 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-06.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-06.html</guid>
+    <pubDate>Tue, 06 Oct 2026 01:25:06 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、EUでChatGPTの文章に透かし導入&lt;/li&gt;&lt;li&gt;Gemini無料版、10月9日からFlash-Lite限定に&lt;/li&gt;&lt;li&gt;Claude Code、規制ワークロードで活用・課題も浮上&lt;/li&gt;&lt;li&gt;macOSからApple Intelligenceを削除するツール登場&lt;/li&gt;&lt;li&gt;OpenAI、EUのテキスト出所規則への対応&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTに新たな広告フォーマット導入&lt;/li&gt;&lt;li&gt;国産3D CAD/CAM/CAE、サロゲートAIを金型設計に活用&lt;/li&gt;&lt;li&gt;声優津田健次郎氏のAI音声訴訟、請求棄却も論点残る&lt;/li&gt;&lt;li&gt;3D CADモデルを生成AIとレンダリングで魅力的に&lt;/li&gt;&lt;li&gt;ガートナー、フィジカルAIに関する10の誤解を指摘&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-05】現場任せのAI活用が失敗する理由と経営層の役割 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-05.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-05.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-17.html</guid>
     <pubDate>Wed, 16 Sep 2026 23:11:40 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Google、会話を止めずに裏でタスクを実行する音声モデル「Gemini 3.8 Live」公開 推論強化の上位版も&lt;/li&gt;&lt;li&gt;Anthropic merges Claude chat and Cowork in one interface&lt;/li&gt;&lt;li&gt;Your AI agents can now control your Google Home devices&lt;/li&gt;&lt;li&gt;Gemini Notebook、モバイルアプリに音声対話や録音機能を順次追加へ ——レポート作成に「学習の概要」機能も&lt;/li&gt;&lt;li&gt;Meta、InstagramやFacebook横断の新サブスク「Meta One」発表 AI枠拡大で月額949円から&lt;/li&gt;&lt;li&gt;富士通、国産CPU「モナカ」販売 スパコン技術を結集した“小さなチップ”に託す「3兆円のAIビジネス」の行方&lt;/li&gt;&lt;li&gt;Apple reportedly building server packed with M-series Ultra chips for AI&lt;/li&gt;&lt;li&gt;LLMの193倍速い“判断だけのAI”「Jev」、ChatGPTの共著研究者が開発&lt;/li&gt;&lt;li&gt;Our framework for reporting model misalignment&lt;/li&gt;&lt;li&gt;Helping older adults use AI in everyday life&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-16】Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-16.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-16.html</guid>
-    <pubDate>Tue, 15 Sep 2026 23:05:45 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking&lt;/li&gt;&lt;li&gt;アップル、「Siri AI」をClaudeやGPTに置き換え可能に？ 「iOS 27」のコードが示す新機能&lt;/li&gt;&lt;li&gt;Is Big Tech’s AI slowdown a safety pact or a cartel?&lt;/li&gt;&lt;li&gt;「ブラウザを開く手間」を解消 作業画面に直接呼び出せるWindows版「Gemini」公開&lt;/li&gt;&lt;li&gt;OpenAI、AI安全性でAnthropic、Google DeepMindと協議中──Bloomberg報道&lt;/li&gt;&lt;li&gt;富士通、国産CPU「モナカ」販売 スパコン技術を結集した“小さなチップ”に託す「3兆円のAIビジネス」の行方&lt;/li&gt;&lt;li&gt;The AI data center boom is colliding with cities scarred by big industry&lt;/li&gt;&lt;li&gt;Meta now lets AI agents handle the boring parts of WhatsApp Business setup&lt;/li&gt;&lt;li&gt;【Pythonで学ぶデータ分析】独立性の検定をベイズ統計で行う ～ 雨男・雨女は本当にいるのか？&lt;/li&gt;&lt;li&gt;「APIキーは.envに」はもはや通用しない AIエージェントの“内通者化”をどう防ぐ？&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
