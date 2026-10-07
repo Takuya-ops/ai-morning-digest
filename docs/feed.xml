@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-07】Introducing Mistral Large 4: Le chonk ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-07.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-07.html</guid>
+    <pubDate>Wed, 07 Oct 2026 00:02:13 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Introducing Mistral Large 4: Le chonk&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTの生成文に電子透かし EUで導入へ&lt;/li&gt;&lt;li&gt;Sharing AI progress in mathematics&lt;/li&gt;&lt;li&gt;Atlassian and OpenAI expand partnership to turn enterprise knowledge into action&lt;/li&gt;&lt;li&gt;How Jump Trading is scaling quant research with ChatGPT&lt;/li&gt;&lt;li&gt;Googleが無料・下位プランで使えるGeminiのモデルを制限&lt;/li&gt;&lt;li&gt;ChatGPT、画像生成中にビジュアル広告 米国でテスト開始へ&lt;/li&gt;&lt;li&gt;Advancing computer use with Ironclad&lt;/li&gt;&lt;li&gt;なぜ答えが揺れ、堂々と間違えるのか ―― 確率で動く生成AIの正体&lt;/li&gt;&lt;li&gt;Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-06】OpenAI、EUでChatGPTの文章に透かし導入 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-06.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-06.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-18.html</guid>
     <pubDate>Thu, 17 Sep 2026 23:00:04 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Anthropic、Claudeの「チャット」と「Cowork」を統合 資料作成の「Docs」「Slides」も&lt;/li&gt;&lt;li&gt;Google DeepMind、AGIの影響を議論する「DeepMind Institute」設立 「AGIに近づいている」&lt;/li&gt;&lt;li&gt;Introducing Astra for Law&lt;/li&gt;&lt;li&gt;Microsoft exec called AI scraping ‘the largest theft of labor in human history,’ new unredacted filings reveal&lt;/li&gt;&lt;li&gt;OpenAI、モデルの「ミスアライメント」報告の新フレームワーク公開 データ捏造など6件の事例も公表&lt;/li&gt;&lt;li&gt;ChatGPTが「マネーフォワード ME」データと連携 相談可能に&lt;/li&gt;&lt;li&gt;PrismML hopes its tiny LLM will change how we all use AI&lt;/li&gt;&lt;li&gt;英チャールズ国王、AI大手トップらに「実存的な危険」を警告 NVIDIAやOpenAI、Anthropicが参加&lt;/li&gt;&lt;li&gt;AIが異常察知し7つの専門エージェントが解決案を提案、NECのSCMソリューション&lt;/li&gt;&lt;li&gt;The FAA’s plan to fix air traffic? $875M worth of AI&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-17】Google、会話を止めずに裏でタスクを実行する音声モデル「Gemini 3.8 Live」公開 推論強化の上位版も ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-17.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-17.html</guid>
-    <pubDate>Wed, 16 Sep 2026 23:11:40 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Google、会話を止めずに裏でタスクを実行する音声モデル「Gemini 3.8 Live」公開 推論強化の上位版も&lt;/li&gt;&lt;li&gt;Anthropic merges Claude chat and Cowork in one interface&lt;/li&gt;&lt;li&gt;Your AI agents can now control your Google Home devices&lt;/li&gt;&lt;li&gt;Gemini Notebook、モバイルアプリに音声対話や録音機能を順次追加へ ——レポート作成に「学習の概要」機能も&lt;/li&gt;&lt;li&gt;Meta、InstagramやFacebook横断の新サブスク「Meta One」発表 AI枠拡大で月額949円から&lt;/li&gt;&lt;li&gt;富士通、国産CPU「モナカ」販売 スパコン技術を結集した“小さなチップ”に託す「3兆円のAIビジネス」の行方&lt;/li&gt;&lt;li&gt;Apple reportedly building server packed with M-series Ultra chips for AI&lt;/li&gt;&lt;li&gt;LLMの193倍速い“判断だけのAI”「Jev」、ChatGPTの共著研究者が開発&lt;/li&gt;&lt;li&gt;Our framework for reporting model misalignment&lt;/li&gt;&lt;li&gt;Helping older adults use AI in everyday life&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
