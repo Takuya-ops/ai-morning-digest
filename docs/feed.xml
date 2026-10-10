@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-11】MSサティア・ナデラCEO、AIモデルの透明性と非常ブレーキの必要性を提唱 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-11.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-11.html</guid>
+    <pubDate>Sat, 10 Oct 2026 23:45:31 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;MSサティア・ナデラCEO、AIモデルの透明性と非常ブレーキの必要性を提唱&lt;/li&gt;&lt;li&gt;Anthropic、AIエージェントの制御不能を受け内部評価のネット接続を遮断&lt;/li&gt;&lt;li&gt;Apple、パーソナライズ型ポッドキャスト企業Huxeの技術ライセンスとチーム雇用契約&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026がサンフランシスコで開催へ、300社超が登壇予定&lt;/li&gt;&lt;li&gt;テキストメッセージ内で利用可能な注目AIエージェントのまとめリストが公開&lt;/li&gt;&lt;li&gt;OpenAI、安全性研究者3人を解雇　処分の理由を巡り主張が対立&lt;/li&gt;&lt;li&gt;DistroKid、UMGの提訴を受け楽曲を削除　非AI作品も巻き添えに&lt;/li&gt;&lt;li&gt;Nvidia、オープンモデルを手がける米Reflection AIの買収に向けて交渉中か&lt;/li&gt;&lt;li&gt;OpenAIとMeta、AIエージェントのプライバシー保護を巡り激しい競合&lt;/li&gt;&lt;li&gt;Cloudflareの無料枠でセルフホスト可能な個人用AIエージェント「Talorys」が登場&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-10】Google Gemini Agent、Claudeも利用可能に ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-10.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-10.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-22.html</guid>
     <pubDate>Mon, 21 Sep 2026 23:29:47 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Amazon blocks Meta’s Muse AI agent&lt;/li&gt;&lt;li&gt;GPT-6 Astraの教科書&lt;/li&gt;&lt;li&gt;Uravation、「AI画像チェッカー」「画像の文字起こし（OCR）」「生成AIパスポート 模擬試験」など無料ツール6種類を追加し、自社サイトの無料ツールは計17種類に。いずれも登録不要・無料&lt;/li&gt;&lt;li&gt;Advisory Group on Mathematics and Artificial Intelligence&lt;/li&gt;&lt;li&gt;Building standards for the next phase of AI&lt;/li&gt;&lt;li&gt;Expanding OpenAI Academy with new learning paths&lt;/li&gt;&lt;li&gt;How V7 gives AI agents institutional memory&lt;/li&gt;&lt;li&gt;Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは&lt;/li&gt;&lt;li&gt;OpenAI forms math advisory group as its AI resolves more than 100 open problems&lt;/li&gt;&lt;li&gt;Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-21】「社長の頭の中」をAIに 経営と現場をつなぐ専用AIとは？ ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-21.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-21.html</guid>
-    <pubDate>Sun, 20 Sep 2026 22:38:35 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;「社長の頭の中」をAIに 経営と現場をつなぐ専用AIとは？&lt;/li&gt;&lt;li&gt;AI研修を受けた人は1割未満 「学びたい」4割超なのに、なぜ？&lt;/li&gt;&lt;li&gt;大和鋼管工業、SaaS増加で複雑化したライセンス管理を「情シスAI」でどう解決？&lt;/li&gt;&lt;li&gt;双日調査、Copilot導入企業の87.5％が「情報分散」を課題 「横断検索AI」に期待か&lt;/li&gt;&lt;li&gt;Googleの「Gemini」も能力テスト中に実在企業3社に侵入──WSJ報道&lt;/li&gt;&lt;li&gt;6 days left to save up to $200 to TechCrunch Disrupt 2026&lt;/li&gt;&lt;li&gt;World model companies are keeping a lot of secrets&lt;/li&gt;&lt;li&gt;Is the AI industry really ready to slow down?&lt;/li&gt;&lt;li&gt;Vocci’s ring adds a new form factor to meeting note-taking&lt;/li&gt;&lt;li&gt;ScrollEd wants to turn textbooks into TikTok&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
