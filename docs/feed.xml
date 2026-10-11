@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-12】Appleがスマートホーム製品「HomeView」を発売か ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-12.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-12.html</guid>
+    <pubDate>Sun, 11 Oct 2026 23:52:35 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Appleがスマートホーム製品「HomeView」を発売か&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026がサンフランシスコで開幕へ&lt;/li&gt;&lt;li&gt;AIデータセンター建設計画と秘密保持契約を巡る議論&lt;/li&gt;&lt;li&gt;音声AIは「ChatGPTの瞬間」に未到達か、文脈把握に課題&lt;/li&gt;&lt;li&gt;大規模言語モデルの能力に対する共通理解の格差が拡大&lt;/li&gt;&lt;li&gt;トランプ氏の「SI」呼称方針にシリコンバレーの一部が同調&lt;/li&gt;&lt;li&gt;ローカル環境でのAIモデル活用、データ保護と導入の壁&lt;/li&gt;&lt;li&gt;マイクロソフトCEO、「AIモデルは侵害前提で扱うべき」と警鐘&lt;/li&gt;&lt;li&gt;米管理職の78％が部下の業績評価作成にAIを活用&lt;/li&gt;&lt;li&gt;AIで法隆寺の五重塔を3D化、専門家監修と修正で高精度再現&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-11】MSサティア・ナデラCEO、AIモデルの透明性と非常ブレーキの必要性を提唱 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-11.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-11.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-23.html</guid>
     <pubDate>Tue, 22 Sep 2026 23:11:53 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Claude Opus 5.5 matches Fable 5.1 performance at lower cost and promises less &amp;quot;Claudish&amp;quot; writing&lt;/li&gt;&lt;li&gt;OpenAI「GPT-6 Sol/Luna」発表 料金半額、ただし普通のChatではまだ使えず&lt;/li&gt;&lt;li&gt;SpaceXAI、「Grok 4.7」発表 コーディングと知識労働向けで同社最高性能、価格は据え置き&lt;/li&gt;&lt;li&gt;Better prompt caching for GPT-6&lt;/li&gt;&lt;li&gt;Parallel cut research time and cost in half with GPT‑6 Astra&lt;/li&gt;&lt;li&gt;オープンウェイトの最高評価AIモデル「MiMo-V2.6」、Xiaomiが無償公開 〜1.02TのProはOpus 5に一部で並び、310BのFlashも好成績&lt;/li&gt;&lt;li&gt;Priorities and principles for effective third party assessments&lt;/li&gt;&lt;li&gt;AWS、SalesforceがAI連携を強化 データ分断をどう解消するか&lt;/li&gt;&lt;li&gt;AIを導入した企業ほど困る「データ基盤問題」 パーソルが3サービスで支援へ&lt;/li&gt;&lt;li&gt;Snorkel AI triples valuation to $3.5B as demand for AI training data booms&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-22】Amazon blocks Meta’s Muse AI agent ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-22.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-22.html</guid>
-    <pubDate>Mon, 21 Sep 2026 23:29:47 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Amazon blocks Meta’s Muse AI agent&lt;/li&gt;&lt;li&gt;GPT-6 Astraの教科書&lt;/li&gt;&lt;li&gt;Uravation、「AI画像チェッカー」「画像の文字起こし（OCR）」「生成AIパスポート 模擬試験」など無料ツール6種類を追加し、自社サイトの無料ツールは計17種類に。いずれも登録不要・無料&lt;/li&gt;&lt;li&gt;Advisory Group on Mathematics and Artificial Intelligence&lt;/li&gt;&lt;li&gt;Building standards for the next phase of AI&lt;/li&gt;&lt;li&gt;Expanding OpenAI Academy with new learning paths&lt;/li&gt;&lt;li&gt;How V7 gives AI agents institutional memory&lt;/li&gt;&lt;li&gt;Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは&lt;/li&gt;&lt;li&gt;OpenAI forms math advisory group as its AI resolves more than 100 open problems&lt;/li&gt;&lt;li&gt;Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>

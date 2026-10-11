@@ -1,0 +1,825 @@
+{
+ "schemaVersion": 3,
+ "date": "2026-10-12",
+ "generatedAt": "2026-10-11T23:52:35.216Z",
+ "since": "2026-10-10T21:51:55.909Z",
+ "windowHours": 26,
+ "stats": {
+  "articleCount": 42,
+  "feedCount": 32,
+  "topicCount": 42,
+  "feedErrors": [
+   {
+    "feedId": "deepmind",
+    "feedName": "Google DeepMind",
+    "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+   },
+   {
+    "feedId": "venturebeat-ai",
+    "feedName": "VentureBeat AI",
+    "error": "Status code 429"
+   }
+  ]
+ },
+ "topics": [
+  {
+   "id": "83406123c1b1f9329fb785f0",
+   "topics": [
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "Appleが新型スマートホーム製品を開発中。\n名称は「HomeView」で発売予定もある模様。\n同社初のスマートホーム成功となるか注目。",
+    "detail": null,
+    "simple": "Appleが「HomeView」という新しいスマートホーム向けの機器を発売する見通しです。スマートホームとは、家電などをネットにつなげて便利にする仕組みのことで、Appleがこの分野で成功できるかが注目されています。"
+   },
+   "faq": [
+    {
+     "q": "「HomeView」の発売日はいつですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "どのような機能を持った製品ですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "製品の価格はいくらですか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 1,
+   "headline": "Appleがスマートホーム製品「HomeView」を発売か",
+   "summary": "Appleが開発中と報じられていた新型スマートホーム製品について、名称が「HomeView」となり発売時期が定まった可能性が報じられました。過去数年にわたり同社による新デバイス開発の噂が続いていましたが、具体的な製品名と投入の動きが浮上しています。スマートホーム市場におけるApple初の成功事例となるかが注目されています。",
+   "whyItMatters": "Appleがスマートホーム市場で本格的なプレゼンスを確立できるかの試金石となります。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "apple"
+   ],
+   "articles": [
+    {
+     "title": "Will the HomeView be Apple’s first smart home success?",
+     "link": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-10-11T21:14:40.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "a4c8caac7994dd32b1062c68ced732ef37a197f0f64c16000e188aa953b65fbb"
+   }
+  },
+  {
+   "id": "fb07dbee3ae27f29ba5cad6c",
+   "topics": [
+    "開発ツール"
+   ],
+   "summaryStyles": {
+    "short": "Disrupt 2026が間もなく開幕。\n会場はサンフランシスコのモスコーン・ウェスト。\n登壇者から次世代の技術を直接聞ける機会。",
+    "detail": null,
+    "simple": "サンフランシスコで「TechCrunch Disrupt」という世界的な最新技術の発表会が開催されます。これから新しい技術やサービスを作る人たちの話を直接聞くことができる注目のイベントです。"
+   },
+   "faq": [
+    {
+     "q": "具体的な開催日時はいつですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "どのようなスピーカーが登壇しますか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "オンライン参加は可能ですか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 2,
+   "headline": "TechCrunch Disrupt 2026がサンフランシスコで開幕へ",
+   "summary": "テックイベント「TechCrunch Disrupt 2026」が、サンフランシスコのモスコーン・ウェストにて48時間以内に開催されます。次世代を担うプロダクトの構築者から直接知見を得られる場として用意されています。現在、会場での値上げ前に最大100ドルの割引や2枚目半額などのパス割引が案内されています。",
+   "whyItMatters": "次世代の先端テクノロジーやスタートアップの最新トレンドをいち早く把握できる大規模イベントです。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "48 hours to TechCrunch Disrupt 2026 — hear directly from the people building what’s next",
+     "link": "https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-10-11T19:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "0ccb61eff7ea0cc4704a45a6a51cff18a935e5cf2ff4db5e6dfb940894779d43"
+   }
+  },
+  {
+   "id": "2ff11c15230d666114622766",
+   "topics": [
+    "規制・政策"
+   ],
+   "summaryStyles": {
+    "short": "データセンター建設の凍結が議論に。\nAI業界のコミュニケーション不足が課題視。\nNDA撤廃による反対派の説得が論点。",
+    "detail": null,
+    "simple": "AIを動かす巨大なコンピューター施設（データセンター）を作ることに反対する人々がいます。AI関連企業が秘密保持のルールを緩めて情報をオープンにすることで、住民たちを納得させられるかが話し合われています。"
+   },
+   "faq": [
+    {
+     "q": "なぜデータセンター建設に反対が出ているのですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "NDA（秘密保持契約）には具体的に何が含まれていますか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "どの地域のデータセンターが対象ですか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 3,
+   "headline": "AIデータセンター建設計画と秘密保持契約を巡る議論",
+   "summary": "ポッドキャスト「Equity」にて、データセンターの建設凍結措置による影響とAI業界のコミュニケーション上の課題について議論が行われました。AI業界が秘密保持契約（NDA）を撤廃することで、データセンター建設に反対する人々を説得できるかどうかが焦点となっています。",
+   "whyItMatters": "AIインフラ拡充に伴う地域社会との摩擦解消や、業界の透明性向上が問われています。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+     "link": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-10-11T16:52:33.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "b9813dedfdc3d30a85f0f37459394b3138270eb2c1e6dfe31524fdc237863265"
+   }
+  },
+  {
+   "id": "27abcf7051e177f24b51149f",
+   "topics": [
+    "音声",
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "音声AIはブレイクスルーに未到達との見解。\n文脈レイヤーの重要情報を見落としやすい。\n全体のシステム破綻につながる課題が残る。",
+    "detail": null,
+    "simple": "声で会話するAI（音声AI）は、まだChatGPTのように誰でも使えるレベルには達していないと専門家が指摘しています。前後の話の流れを正しく理解し損ねて、会話全体がうまくいかなくなる問題が残っています。"
+   },
+   "faq": [
+    {
+     "q": "「ChatGPTの瞬間（ChatGPT moment）」とはどういう意味ですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "この意見を述べた経営幹部は誰ですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "文脈レイヤーの改善に向けた具体的な対策はありますか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 4,
+   "headline": "音声AIは「ChatGPTの瞬間」に未到達か、文脈把握に課題",
+   "summary": "複数の経営幹部は、音声AIがまだ飛躍的な普及期（ChatGPTモーメント）に達していないとの見方を示しています。音声AIは文脈を把握するレイヤーで重要なポイントを見落とすことが多く、システム全体のパイプラインが破綻する原因になっていると指摘されています。",
+   "whyItMatters": "テキスト生成AIに比べて音声AIの実用化や自然な対話には依然として技術的壁が存在することを示しています。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "chatgpt"
+   ],
+   "articles": [
+    {
+     "title": "These execs think voice AI hasn’t reached its ChatGPT moment yet",
+     "link": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-10-11T14:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "36e2df237167e8a91edccbc912eb2dfbcb2e2ae271e1d468e28246bd55229083"
+   }
+  },
+  {
+   "id": "d16bd93ff857d83dc220c14f",
+   "topics": [
+    "研究・論文",
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "LLMの能力理解に関する格差が拡大中。\nカルパシー氏の投稿がHacker Newsで話題に。\nモデルの実力についての議論が活発化。",
+    "detail": null,
+    "simple": "大規模言語モデル（LLM）というAIが「どれくらい賢いのか」についての考え方が、人によって大きくズレてきていることが注目を集めています。"
+   },
+   "faq": [
+    {
+     "q": "アンドレイ・カルパシー氏はどのような投稿をしましたか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "認識の格差が広がるとどのような問題が起きますか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "コメント欄では主にどのような意見が出ていますか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 5,
+   "headline": "大規模言語モデルの能力に対する共通理解の格差が拡大",
+   "summary": "Hacker Newsにおいて、大規模言語モデル（LLM）の能力に関する共通認識の乖離が広がっているというアンドレイ・カルパシー氏の投稿が話題となっています。コミュニティ内で多くのポイントやコメントを集め、LLMが実際に何を実行できるかについての理解の差に関して議論が行われています。",
+   "whyItMatters": "AIの真の実力や限界に対する専門家と一般層の認識のズレが浮き彫りになっています。",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "The gap in shared understanding of LLM capability is widening",
+     "link": "https://twitter.com/karpathy/status/2109361546505966046",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-10-11T20:20:52.000Z"
+    }
+   ],
+   "articleKey": "https://twitter.com/karpathy/status/2109361546505966046",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "3bcd80f0e0997e135df38ed2c1cbc8b68d6c004dd269c59851542d29ed6411d1"
+   }
+  },
+  {
+   "id": "10ff9df7a5585aaf706ba8d3",
+   "topics": [
+    "規制・政策"
+   ],
+   "summaryStyles": {
+    "short": "トランプ氏がAIを「SI」に改称する意向。\nシリコンバレーの一部有力者が同調の動き。\nマスク氏はSpaceXAIの改名を表明。",
+    "detail": null,
+    "simple": "トランプ大統領がAI（人工知能）を「SI（スーパーインテリジェンス：超知能）」と呼び変えようとしており、イーロン・マスク氏など一部のIT界の大物がこれに合わせて名前を変える動きを見せています。"
+   },
+   "faq": [
+    {
+     "q": "なぜトランプ氏はAIを「SI」に改称しようとしているのですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "イーロン・マスク氏以外に賛同した人物は誰ですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "一般的なユーザーも呼称を変更していますか？",
+     "a": "記事には記載なし（大半の一般層はAIと呼び続けているとされています）"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 6,
+   "headline": "トランプ氏の「SI」呼称方針にシリコンバレーの一部が同調",
+   "summary": "トランプ大統領が人工知能（AI）を「スーパーインテリジェンス（SI）」と改称しようとする動きに対し、シリコンバレーの有力者の一部が同調しています。イーロン・マスク氏は迅速に賛同し、SpaceXAIを「SpaceXSI」に改名すると表明しました。一般層の多くは依然として「AI」の呼称を使用しているものの、政権への配慮やブランディングの動きが見られます。",
+   "whyItMatters": "テクノロジー業界の有力企業や経営者が政治的方針に適応しようとする姿勢を示しています。",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+     "link": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+     "feedName": "The Verge AI",
+     "lang": "en",
+     "date": "2026-10-11T18:33:56.000Z"
+    }
+   ],
+   "articleKey": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "0adb718139549dcf19cef46152a1110b68cdf222f70605bb16ab75f7cb84d230"
+   }
+  },
+  {
+   "id": "a439fdc2654eaaf3ce0c2970",
+   "topics": [
+    "開発ツール",
+    "エージェント"
+   ],
+   "summaryStyles": {
+    "short": "個人のPCでAIを動かす試みが注目。\nクラウドへの個人データ送信を避けられる利点。\n高額なPC環境が必要など難しさも存在。",
+    "detail": null,
+    "simple": "ネット上のサービスに自分のデータを預けずに、自分のパソコンの中だけでAI（ローカルAI）を動かす使い方が注目されています。安全ですが、高性能で高価なパソコンが必要になる難しさもあります。"
+   },
+   "faq": [
+    {
+     "q": "ローカルAIの実行に必要なPCスペックはどれくらいですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "どのようなローカルAIモデルが使用されていますか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "「Baby's first local AI agent」とは何を指していますか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 7,
+   "headline": "ローカル環境でのAIモデル活用、データ保護と導入の壁",
+   "summary": "クラウドサービスへの個人データ提供を懸念するユーザーの間で、PCのローカル環境でAIモデルを実行する試みが注目されています。ローカル環境で強力なモデルを動作させることが可能になりつつある一方、高額な大容量メモリを搭載したPCが必要になるなど、コストや設定面での挫折や難しさが存在しています。",
+   "whyItMatters": "プライバシーを保護しながらAIを活用する手法として、ローカル運用の可能性とハードウェア面の課題が示されています。",
+   "score": 3,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "Learning to use local AI is exciting, overwhelming, and frustrating",
+     "link": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
+     "feedName": "The Verge AI",
+     "lang": "en",
+     "date": "2026-10-11T11:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "6de98f72dc030391146354bd3aec8bfb2732576a80c6edc69601f1a716b55dc2"
+   }
+  },
+  {
+   "id": "47aa66d1b4eb0050da8553d1",
+   "topics": [
+    "規制・政策",
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "ナデラCEOがAIの危険性について警告。\nAIモデルは侵害前提で扱うべきと主張。\n改ざん防止の証跡と透明なシステムを提唱。",
+    "detail": null,
+    "simple": "マイクロソフトのトップであるナデラ氏が、AIは「最初から悪用や改ざんがされているかもしれない」と考えて慎重に扱うべきだと述べました。中身が見えないままAIを信じるのではなく、安全を確認できる仕組み作りが必要です。"
+   },
+   "faq": [
+    {
+     "q": "ナデラ氏が求めている「透明なシステム」の具体例は何ですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "「tamper-proof human readable evidence」とはどのような証跡ですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "マイクロソフト製品にこの方針がどう適用されますか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 8,
+   "headline": "マイクロソフトCEO、「AIモデルは侵害前提で扱うべき」と警鐘",
+   "summary": "マイクロソフトのサティア・ナデラCEOはXへの投稿で、極めて高度なAIモデルがもたらす危険性について見解を示しました。ナデラ氏は、すべてのモデルが侵害（改ざん等）されていると想定すべきだとし、結果を単に受け入れるだけの「入れ子のブラックボックス」として扱うべきではないと主張しました。封じ込めや監視が可能で、改ざん防止の証跡を残す透明なシステムの構築を求めています。",
+   "whyItMatters": "大手テックのトップがAIのブラックボックス化に危機感を示し、厳格な監査性と透明性の必要性を訴えた重要な提言です。",
+   "score": 3,
+   "sourceCount": 1,
+   "entities": [
+    "microsoft"
+   ],
+   "articles": [
+    {
+     "title": "Satya Nadella says we should assume all AI models are ‘compromised’",
+     "link": "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised",
+     "feedName": "The Verge AI",
+     "lang": "en",
+     "date": "2026-10-10T22:10:17.000Z"
+    }
+   ],
+   "articleKey": "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "e027757a6a3e52dbb08000ca57248049b84d071323b4d0168312fd36984e9598"
+   }
+  },
+  {
+   "id": "de1a9eadd81be41c1bb71a7d",
+   "topics": [
+    "企業導入事例"
+   ],
+   "summaryStyles": {
+    "short": "米国の管理職の78％が評価作成にAIを利用。\n業績評価の作成でAI活用が急増中。\n人事評価の現場に影響が出始めている模様。",
+    "detail": null,
+    "simple": "アメリカの調査で、上司の約8割（78%）が部下の成績や仕事ぶりを評価する書類を作るときにAIを使っていることがわかりました。会社の評価業務でもAIを使うのが当たり前になりつつあります。"
+   },
+   "faq": [
+    {
+     "q": "具体的にどのAIツールが使われていますか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "AI利用によってどのような影響が生じていますか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "この調査の対象人数や調査時期はいつですか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 9,
+   "headline": "米管理職の78％が部下の業績評価作成にAIを活用",
+   "summary": "米国の調査によると、マネージャー層の78％が部下の業績評価の作成にAIを利用していることが明らかになりました。管理職による人事評価業務へのAI活用が急速に増加しており、その影響や変化が職場に現れ始めていることが示されています。",
+   "whyItMatters": "人事評価という機微なマネジメント領域においてAI利用が常態化しつつある実態を示しています。",
+   "score": 2.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "マネージャーの78％、部下の業績評価作成にAIを利用--米調査",
+     "link": "https://japan.zdnet.com/article/35253403/",
+     "feedName": "ZDNET Japan",
+     "lang": "ja",
+     "date": "2026-10-11T22:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://japan.zdnet.com/article/35253403/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "e75deb6ba71e8f4b6d5bbfde13ce9dbab50c87af3cddbeda33074cda41471f2a"
+   }
+  },
+  {
+   "id": "a1ae6605cb75e391b399582b",
+   "topics": [
+    "画像・動画生成",
+    "国内動向"
+   ],
+   "summaryStyles": {
+    "short": "法隆寺の五重塔をAIツールで3D化。\nUE5で動かすまでの制作事例が公開。\n高い精度には専門家の監修が不可欠と判明。",
+    "detail": "歴史的建造物である「法隆寺の五重塔」を、3D生成ツール「Dots」を活用して3Dモデル化し、ゲームエンジン「Unreal Engine 5（UE5）」上で動かす取り組みが紹介されました。\n\n制作の過程では、AI単体で即座に完璧なモデルができるわけではなく、建築の専門家による指摘や学術論文のデータを参照しながら細部の修正が繰り返されました。結果として驚きの完成度に到達することに成功しています。\n\n本事例を通じて、AIを活用したクリエイティブ制作の大きな可能性が示されたと同時に、複雑な建築構造を正確に再現する難しさや、品質と精度を担保するためには人間の専門家による監修が不可欠であることが明らかになりました。",
+    "simple": "AIを使って奈良の「法隆寺の五重塔」を立体的な3Dデータにし、ゲームの画面内で動かす実験が行われました。AIだけに任せるのではなく、専門家のアドバイスや論文を見ながら細かく修正することで、とてもリアルな完成度になりました。"
+   },
+   "faq": [
+    {
+     "q": "使用された「Dots」とはどのようなツールですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "監修を行った専門家は誰ですか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "制作にかかった期間はどれくらいですか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 10,
+   "headline": "AIで法隆寺の五重塔を3D化、専門家監修と修正で高精度再現",
+   "summary": "3Dツール「Dots」を用いて法隆寺の五重塔を3D化し、Unreal Engine 5（UE5）で動作させる制作事例が紹介されました。専門家の指摘や論文を基に修正を重ねることで高い完成度に到達しました。AIによる制作の可能性が示された一方、建築物の構造を理解した精度確保の難しさと専門家監修の重要性が浮き彫りになりました。",
+   "whyItMatters": "歴史的建造物のデジタル化において、生成AIツールと専門家知見の融合が不可欠であることを実証しています。",
+   "score": 2.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "AIに「法隆寺の五重塔」を作らせてみた 修正を重ねてたどり着いた驚きの完成度",
+     "link": "https://ascii.jp/elem/000/004/441/4441802/?rss",
+     "feedName": "ASCII.jp",
+     "lang": "ja",
+     "date": "2026-10-11T22:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://ascii.jp/elem/000/004/441/4441802/?rss",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "ed44442893b5b8609a53a2d59eb49ceddd849d8f117f4dcd3d4cb741e4614622"
+   }
+  }
+ ],
+ "others": [
+  {
+   "title": "Codex・Claude Code・Gemini、それぞれ何に強いのか ― 得意分野を分けて整理した",
+   "link": "https://qiita.com/Next-Survive/items/e5753afa06abe370dbe8",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T23:09:16.000Z",
+   "excerpt": "「結局どれが一番強いのか」。この問いには、たぶん答えが出ません。 前回、3社の料金と性能を比較して分かったのは、性能も価格もほぼ横並びになったということでした。SWE-bench で Codex 88.7% / Claude Code 87.6%。差は1.1ポイントです。 ..."
+  },
+  {
+   "title": "AI API のフォールバックでタイムアウトが足し算になる問題を、AbortSignal の共有期限で止める",
+   "link": "https://qiita.com/sz_tak/items/5e124326f848289d4925",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T23:06:48.000Z",
+   "excerpt": "結論 AI API を「主 → 予備」の順に呼ぶフォールバックを作ると、それぞれのタイムアウトが足し算になります。 Claude 60 秒＋OpenAI 120 秒で、最悪 180 秒。処理全体の上限（150 秒）を超えてしまい、失敗したときの後始末が走らない恐れがありま..."
+  },
+  {
+   "title": "Claude API の Citations(引用機能)で回答の根拠箇所を返させる実装手順 — 回答が細切れの text ブロックで返る・PDF のページ番号は end が排他・Structured Outputs と併用で 400、3つのハマりどころ【2026】",
+   "link": "https://qiita.com/yureki_lab/items/4fe98328f2cf173170d6",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T23:01:24.000Z",
+   "excerpt": "はじめに / 対象と前提 社内ドキュメントや規約 PDF を Claude に読ませて質問に答えさせると、必ず「その回答、どこに書いてあった?」と聞かれる。プロンプトで「根拠を引用して」と頼む方法もあるが、引用文そのものを AI が作り変えてしまうことがあり、検証が面倒だ..."
+  },
+  {
+   "title": "AirbnbのAIネイティブ化 ── CEOの決算発言とCTOの証言で読む、AIファーストな組織とは？",
+   "link": "https://zenn.dev/leading_ai/articles/airbnb-ai-native-organization",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T22:16:52.000Z",
+   "excerpt": "序章：Airbnbは、「AIファーストのアプリになる」と語った1年後、「AIネイティブな会社に作り直した」と宣言した 2025年8月6日、Airbnbの共同創業者でCEO（最高経営責任者）のブライアン・チェスキー氏は、決算説明会でこう述べた。 今後数年で、Airbnbは「AI-first application（AIファーストのアプリ）」になる。 Airbnb 共同創業者/CEO：ブライアン・チェスキー氏 https://www.cnbc.com/2025/08/06/airbnb-beats-on-top-and-bottom-lines-for-second-quarter...."
+  },
+  {
+   "title": "AI問い合わせ回答の自動送信をどこまで許すか：定型回答・人の確認・結果不明の境界",
+   "link": "https://qiita.com/YushiYamamoto/items/a05d021efe4542091b20",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T22:13:34.000Z",
+   "excerpt": "2026年10月12日確認。問い合わせAIの回答を人の確認なしに送る範囲を、エンジニア・テックリードが決めるための設計例です。公開一次資料と、架空データを使ったAI支援による個人ローカル検証を扱います。実LLM、認証・認可、メール送信、継続運用は未検証です。 結論：最初..."
+  },
+  {
+   "title": "プログラミング初心者が複数のAIでアプリ開発に挑戦する｜RecurAI開発記録 #1",
+   "link": "https://zenn.dev/smalltools_lab/articles/e401d34944e4c1",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T20:05:05.000Z",
+   "excerpt": "はじめまして。RecurAI（リカーAI） です。 プログラミングの専門知識がない状態から、複数のAIを活用してWebアプリや便利なツールを開発するプロジェクトを始めました。 この記事では、RecurAIを立ち上げた目的と、これからの開発方針を紹介します。 なぜAIでアプリを開発するのか 日常生活や仕事では、ちょっとした不便を感じることがあります。 毎回同じ作業を繰り返している Excelやメモでの管理が面倒 既存のアプリでは欲しい機能が足りない 自分に合った小さなツールが欲しい 以前なら、プログラミングの知識がなければ、自分でアプリを作ることは難しいと感じていました。 しかし、..."
+  },
+  {
+   "title": "AI agent teams waste massive tokens for barely measurable quality gains, research finds",
+   "link": "https://the-decoder.com/ai-agent-teams-waste-massive-tokens-for-barely-measurable-quality-gains-research-finds/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-11T15:39:26.000Z",
+   "excerpt": "Teams of AI agents barely outperform solo agents but cost up to 5.1x more, according to Vals AI. Only one out of four tests with GPT-6 Sol and Claude Opus 5.5 showed a measurable gain. Anthropic's own data backs this up: beyond ten agents, quality plateaus while token costs keep climbing. The article AI agent teams waste massive tokens for barely measurable quality gains, research finds appeared first on The Decoder."
+  },
+  {
+   "title": "AI agents overstate their results and remain far from autonomous research, study finds",
+   "link": "https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-11T13:44:32.000Z",
+   "excerpt": "Epoch AI and Anthropic independently found the same thing: current AI models like GPT-5.6 Sol and Claude Fable 5 can run experiments but lack scientific self-criticism and genuine creative thinking. At best, Sol reached 15 percent of the human reference score, and even that came from methods researchers already knew. The models' biggest weakness is still their inability to critically question their own results. The article AI agents overstate their results and remain far from autonomous research, study finds appeared first on The Decoder."
+  },
+  {
+   "title": "AIが失敗した理由をどう説明するか 信頼と説明可溶性へ",
+   "link": "https://zenn.dev/syoshida07/articles/9a89524f8b1878",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T13:39:22.000Z",
+   "excerpt": "生成AIが社会に広く浸透した2023年以降、多くの利用者はGPTやClaude、Copilot、Geminiなどの性能比較に注目してきた、どのモデルが賢いのか、どのモデルが正確なのか・・・という議論は現在も続いている。 しかし研究の最前線では、少し違うテーマが注目され始めているようだ。 その象徴の一つがMicrosoft Researchが公開した Diagnosing AI Agent Failures from Execution Trajectories である、これはAIエージェントの失敗原因を分析するための研究であり、EMNLP 2026に採択されている。 重要なのは、この研..."
+  },
+  {
+   "title": "AI が攻撃する時代、守る側の規則が書くべき「意図の記録」",
+   "link": "https://zenn.dev/dekita/articles/ai-agent-attacks-write-the-intent-record",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T12:57:52.000Z",
+   "excerpt": "はじめに この稿は、2026 年 10 月上旬に日本で起きた、AI による無差別攻撃と情報漏洩の波を読み解きます。守る側の社内規則が、攻撃の担い手の変化に追いついていない、というのが論点です。 10 月 6 日から 8 日にかけて、日本の複数の企業が個人情報の大規模な漏洩を相次いで公表しました。ディスカウントストアの MrMax Holdings は最大 173 万人分、GMO 系の調査サイトは約 95 万件と報告しました。コンビニ大手のローソンは会員 ID 約 215 万 5000 件、カラオケの第一興商は約 872 万件です。10 月 7 日には、ソフトバンク系の IDC Fro..."
+  },
+  {
+   "title": "BedrockのOpenAIモデルでreasoning.summaryを実測 — トークン計上・応答速度・Guardrailsを検証",
+   "link": "https://zenn.dev/kashiwabaray/articles/0a1719bec85fa7",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T12:53:37.000Z",
+   "excerpt": "1. はじめに 推論モデルをチャット UI や業務アプリに組み込むと、回答が出るまでの数秒をどう埋めるか、モデルがどのようなアプローチを取ったかをどう説明するかが課題になります。推論トークンは output トークンとして計上されますが、GPT-5.x / GPT-6.x などのクローズドウェイトのモデルでは、生の推論内容は API で公開されません。会話継続用には、暗号化された推論情報が返される場合があります。 AWS（Amazon Web Services）は 2026/10/09（米国時間）に、Amazon Bedrock の Responses API で OpenAI モデ..."
+  },
+  {
+   "title": "工場のAI任せは職制のどこに置くか — 製造業の3つの階層で決める",
+   "link": "https://zenn.dev/satoshimizuhara/articles/ai-agent-factory-layers",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T11:33:25.000Z",
+   "excerpt": "前回は、任せ方の線引きを新しい規程に書き足すのではなく、社がすでに持つ3つの書類に載せるという話で、導入判断の連載を締めた。本稿からは、ここまでの内容を業界に寄せて読む回にする。まず取り上げるのは製造業で、テーマは「工場の職制の中で、AI任せの工程をどこに置くか」だ。 先月の相談：班長が頷かない日程表の話 先月、金属加工メーカーの生産管理課を訪ねた。工場長の相談は、こうだった。「AIに生産日程表の下書きを任せようとしたが、現場の班長が『機械に日程を変えられると困る』と頷いてくれない。技術的にはもう動くのに、現場が受け付けない」。 会議に参加させてもらうと、一名の班長がこう言った。「毎..."
+  },
+  {
+   "title": "AIに毎日コラムと反省会を任せたら、「審査が身内すぎる」運用になった",
+   "link": "https://zenn.dev/after6labo/articles/b5150abde91b05",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T11:00:05.000Z",
+   "excerpt": "1. 結果と、確認できている範囲 架空の古書店の看板娘「望月鳴海」が書いた、という設定のコラムを、AIに毎日1本作成・公開させる運用を組みました。10月11日時点で、公開済みのコラムは23本です。 公開済みのコラム：23本（001〜023。最新は10月7日の023） 執筆ガイド：v9（2026年10月4日更新）。私の指示、リンク確認の手順、会話機能の要件、公開後の振り返りなどを反映してきた版数です 運用：2026年9月21日に、コラムの毎日の本番公開、公開後の振り返り、執筆ガイドの更新をAIに任せました（日次の初回は9月22日） 費用：このために追加で払っているAPI料金はありませ..."
+  },
+  {
+   "title": "AIに読ませたファイルは次の質問にも19,152トークン乗っていた。要約したら料金は3.8倍になった",
+   "link": "https://zenn.dev/numarn/articles/claude-compact-tool-history-cost-handson",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T10:09:31.000Z",
+   "excerpt": "AI に「このファイルを読んで」と頼むと、その中身はその1回だけでなく、以後のやりとり全部に付いてくる。 Claude Code(ターミナルから AI に作業を頼む道具)で実際に測ったら、48,800 バイトのファイルを1回読ませただけで、 次の質問にも、その次にも、19,152 トークンが乗り続けていた。1トークンも減らない。 トークンというのは、AI に送る文章を細かく刻んだ数え方の単位です。だいたい日本語1文字で1トークン前後。 料金はこの数で決まります。つまり「1回読ませた」ぶんが、黙っていても毎回請求される。 Claude Code には、溜まった会話を AI 自身に要約させて..."
+  },
+  {
+   "title": "Cheaper AI tokens are driving more demand, and that's Jensen Huang's best-case scenario",
+   "link": "https://the-decoder.com/cheaper-ai-tokens-are-driving-more-demand-and-thats-jensen-huangs-best-case-scenario/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-11T09:49:59.000Z",
+   "excerpt": "Data from a16z shows a Jevons paradox in the AI market: token prices keep falling, but H100 GPU rental prices hold steady or climb. Cheaper AI drives demand faster than costs drop. If that demand flattens, the chain from chip makers to cloud providers takes a hit. The article Cheaper AI tokens are driving more demand, and that's Jensen Huang's best-case scenario appeared first on The Decoder."
+  },
+  {
+   "title": "ArXiv caps submissions at two per month as AI paper flood overwhelms the preprint server",
+   "link": "https://the-decoder.com/arxiv-caps-submissions-at-two-per-month-as-ai-paper-flood-overwhelms-the-preprint-server/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-11T09:17:32.000Z",
+   "excerpt": "Starting October 2026, arXiv will cap submissions at two per person per month. Monthly submissions have doubled in two years, and in the cs.AI category they've grown more than sixfold. According to arXiv, a small fraction of authors are flooding the platform with low-quality papers, overwhelming its volunteer moderators. The article ArXiv caps submissions at two per month as AI paper flood overwhelms the preprint server appeared first on The Decoder."
+  },
+  {
+   "title": "Microsoft's Nadella bows to Trump's language diktat on \"Super Intelligence\" and uses it to attack OpenAI and Anthropic",
+   "link": "https://the-decoder.com/microsofts-nadella-bows-to-trumps-language-diktat-on-super-intelligence-and-uses-it-to-attack-openai-and-anthropic/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-11T09:08:35.000Z",
+   "excerpt": "Microsoft CEO Satya Nadella now calls artificial intelligence \"super intelligence\" instead of artificial intelligence, falling in line with Trump's preferred language. In his latest blog post, he frames AI models as insider security threats, taking yet another shot at OpenAI and Anthropic. The real motive is business: Microsoft risks falling behind as AI labs turn their models into the primary computer interface. The article Microsoft's Nadella bows to Trump's language diktat on \"Super Intelligence\" and uses it to attack OpenAI and Anthropic appeared first on The Decoder."
+  },
+  {
+   "title": "30年前にBBCが放送した「アート作品を作るAI・AARON」を扱ったテレビ番組",
+   "link": "https://gigazine.net/news/20261011-computer-art/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-11T08:30:00.000Z",
+   "excerpt": "生成AIの発達により、写真やイラストなどのアート作品がAIを使って大量に生み出されています。そんな中、イギリスの公共放送局であるBBCが、1996年に放送した「絵画を制作できるAI」について取り上げた番組のアーカイブを公開しています。 続きを読む..."
+  },
+  {
+   "title": "Liquid AI、エッジ向けのオープンモデル「d1-3B」などを公開",
+   "link": "https://codezine.jp/article/detail/29986",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-11T08:00:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "Odyssey-3 is a new generative world model that you can try for free",
+   "link": "https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-11T07:48:01.000Z",
+   "excerpt": "Odyssey is making its world model Odyssey-3 available as a public research preview. The 14-billion-parameter model generates interactive environments from text prompts in real time and can reportedly control robots, drones, and even GTA V. Odyssey claims top scores on physics benchmarks, though the methodology behind those results has limits. The article Odyssey-3 is a new generative world model that you can try for free appeared first on The Decoder."
+  },
+  {
+   "title": "ゴムマリの業務AIエージェント、『給与計算チェック』を提供開始",
+   "link": "https://ascii.jp/elem/000/004/441/4441797/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-10-11T07:10:00.000Z",
+   "excerpt": "ゴムマリの業務AIエージェント、『給与計算チェック』を提供開始"
+  },
+  {
+   "title": "一人事業のAI相棒 送る前に止め、書いた後に確かめる",
+   "link": "https://zenn.dev/asagi_lab/books/solo-business-ai-partner",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T06:51:55.000Z",
+   "excerpt": "AIを事業の相棒にしたい人に向けて、AIへ仕事を任せて結果を見張らずに済む状態へ近づくための、運用の型を渡す本です。型は、送る前に止める、書いた後に確かめる、覚えさせる、毎日回す、の4つ。筆者はエンジニアではない個人事業主で、Claude Code上に作った自作のAI相棒で事業を回す中で起きた事故の記録から、その型を取り出しました。"
+  },
+  {
+   "title": "AI活用案件はどうやって生まれるのか ― 生成AIの相談を“案件”に変えるまで",
+   "link": "https://zenn.dev/field2ai/articles/96e9bdeb087b20",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T05:17:59.000Z",
+   "excerpt": "はじめに 普段の仕事の中で、社内チャットやメールからこんな相談を受けることがあります。 「この業務、生成AIで何かできませんか？」 「社内文書をRAGで検索できるようにしたいです」 「最近AIエージェントが話題なので、うちの業務でも使えませんか？」 一見すると、すぐにAI案件が始まりそうな相談です。 ただ、実際に話を聞いてみると、 何に困っているのかがまだ曖昧 誰が使うのか決まっていない AIを使って何が改善するのか説明できない そもそもAIを使う必要があるのか分からない ということも少なくありません。つまり、 「AIを使いたい」という相談と、「AI案件」は同じではありません..."
+  },
+  {
+   "title": "Excelの月末締めをAIに任せる話 — 47の手順を本にまとめるまで",
+   "link": "https://zenn.dev/yoshitokinosita/articles/0011-excel-ai-yuegetsu-intro",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T05:15:51.000Z",
+   "excerpt": "あたりまえの作業ほど、AIに向いている 経理・事務職の月末に起きていることを、冷静に並べてみる。 名寄せ: 敬称や表記ゆれを1件ずつ直す 突合: 2つの表を突き合わせて消えない差分を探す 締め報告: 数字を決まった形の報告書に直す データ整形: 項目順が違う表を統一する 下書き: 報告書のひな形に数字を流し込む チェック: 合計が合わないときの差分特定 いずれも「ルールが決まっていて、判断基準が明確」な作業です。これは、AIに任せるうえで最も相性が良い種類です。 本にまとめました この手順を、貼って試せる形に整理したものが『Excel × AI 業務自動化入門』『Excel ..."
+  },
+  {
+   "title": "3年で1000億円規模？ みずほFGのAI開発はどのような技術に支えられているのか",
+   "link": "https://codezine.jp/article/detail/29968",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-11T04:00:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "言わない技術 第6回：サブエージェントの出力だけは、細かく指示しろ",
+   "link": "https://zenn.dev/garplab/articles/8534a10f79ef31",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T02:36:59.000Z",
+   "excerpt": "この記事は、連載「言わない技術」の第 6 回です。うまくいかない症状と、その対処を一つずつ並べています。各回はファイルやスクリプトを一つ置けば完結します。その仕組みがなぜ要るのかは、置いたあとに解説を読めば分かります。連載の全体像と各回の一覧は序論にあります。 今回は、サブエージェントの話です。サブエージェントというのは、メインのセッション（AIとの、始まりから終わりまで一続きのやり取り）を引き継がずに、別に立ち上がって働くAIのことです。この連載で私が細かく書いている指示は、サブエージェントへの指示だけです。その指示でも、私が細かく書くのは出力の形に限ります。 この連載で、私は、A..."
+  },
+  {
+   "title": "【１日１デプロイ】押す長さでジャンプが変わる「ぴょんっとパンの丘」を作った",
+   "link": "https://zenn.dev/boraemon2000/articles/bread-hill-hop-variable-jump",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T02:06:10.000Z",
+   "excerpt": "今回作ったもの 「１日１デプロイ」の新作として、ブラウザで遊べる短編アクション ぴょんっとパンの丘 を作りました。 ブラピさんはパン生地を背負い、丘を自動で走ります。プレイヤーがするのは、画面を押して離すことだけ。短く押すと低いジャンプ、長く押すと高いジャンプになり、木箱や看板、水たまりを越えながら小麦のひかりを集めます。 1プレイは14秒です。最後に窯へ着くと、集めた小麦の数がパンの大きさへ変わります。小さな丸パン、ふっくら山型パン、大きな王冠パン。得点だけでなく、走った結果が最後の見た目へ残るゲームにしました。 ▶ ぴょんっとパンの丘を遊ぶ 遊び方 「走り出す」を押す ..."
+  },
+  {
+   "title": "無料でmacOS 27のApple Intelligenceをオフにして空きディスク容量を増やす方法",
+   "link": "https://gigazine.net/news/20261011-removemacai/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-11T02:00:00.000Z",
+   "excerpt": "AppleのAI機能「Apple Intelligence」は、Macのストレージに数GB以上の容量を必要とします。Apple Intelligenceを使わないユーザー向けに、機能を無効化してAIモデルを削除し、ディスクの空き容量を増やせる無料のオープンソースツール「RemoveMacAI」が公開されています。RemoveMacAIはAppleシリコンを搭載したMacに対応しており、macOS 27で利用できます。 続きを読む..."
+  },
+  {
+   "title": "なぜ、生成AIはプロ級のソースコードを書けるようになった一方で、イラストについては素人並止まりなのか？",
+   "link": "https://zenn.dev/pdfractal/articles/89c0151abf4396",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T01:12:40.000Z",
+   "excerpt": "はじめに 2022年8月にStable Diffusionが一般公開され、同年11月にはChatGPTが登場しました。画像生成AIと大規模言語モデル（LLM）が一般に普及し始めた時期は、ほぼ同じです。それから約4年が経過した現在、両者の進歩には大きな差が生じています。LLMはプロのソフトウェアエンジニアが実務に利用できるソースコードを生成し、コーディングエージェントは複数のファイルを修正してテストまで実行するようになりました。一方、画像生成AIは4年前よりは美しいイラストを描けるようになったものの、複雑な構図や複数のキャラクターを扱わせると、途端に素人のような仕事になります。 なぜ、..."
+  },
+  {
+   "title": "【新機能】Kiro Workflow 入門 ── マルチエージェント連携を定義ファイルで動かす",
+   "link": "https://zenn.dev/pero_nw0125/articles/kiro-workflow-multiagent-20261010",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-11T00:34:06.000Z",
+   "excerpt": "この記事で学べる事 Kiro の新機能 Workflow は、マルチエージェントのオーケストレーションを JSON の定義ファイルで宣言的に書ける仕組みです。 本記事では、実際に動かした FizzBuzz の2エージェント連携（実装 → レビュー）のログをもとに、4つの JSON ファイルの中身を1つずつ解説します。 そのうえで、単なる入門では終わらせず、「そもそもエージェントを分けるべきか」を見極める3つの判断軸（責務の衝突／プロンプトの単純化と過程の記録／人による承認ゲート）を提示します。 はじめに Kiro のアップデートで、Workflow（ワークフロー）という機能が..."
+  },
+  {
+   "title": "AnthropicのAIが未解決殺人事件に関する虚偽の情報を提供",
+   "link": "https://gigazine.net/news/20261011-anthropic-ai-gave-fake-tip-unsolved-homicide/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-11T00:00:00.000Z",
+   "excerpt": "2026年10月9日、フィラデルフィア警察が「AnthropicのAIモデルが未解決殺人事件に関する虚偽の情報を送信してきた」と発表しました。 続きを読む..."
+  },
+  {
+   "title": "Python 3.15.0 added to actions/python-versions",
+   "link": "https://simonwillison.net/2026/Oct/10/python-actions/",
+   "feedName": "Simon Willison",
+   "lang": "en",
+   "date": "2026-10-10T23:58:04.000Z",
+   "excerpt": "Python 3.15.0 added to actions/python-versions Bit of a niche link, but I've been waiting for this for a couple of days - I even told ChatGPT to check for it: Clone https://github.com/actions/python-versions and git pull once an hour until they add the stable 3.15 - then tell me about it Now that this has landed, you can add \"3.15\" to a GitHub Actions testing matrix to run tests against the new Python 3.15.0 release . Tags: github , python , github-actions , chatgpt"
+  }
+ ],
+ "features": {
+  "audio": false
+ },
+ "publication": {
+  "revision": 1,
+  "contentRevision": "9fd61e699c5db05523da0700bd59085de4dfac6467822eee38f7e4b8fc912977",
+  "textState": "ready",
+  "updatedAt": "2026-10-11T23:52:35.218Z",
+  "audioByVoice": {}
+ }
+}
