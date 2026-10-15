@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-16】メタ、オープンなマルチモーダルAI「Muse Spark Open」発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-16.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-16.html</guid>
+    <pubDate>Thu, 15 Oct 2026 23:16:01 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;メタ、オープンなマルチモーダルAI「Muse Spark Open」発表&lt;/li&gt;&lt;li&gt;メタ、Appleと連携しMac向けAIモデルを最適化&lt;/li&gt;&lt;li&gt;Google、ロボット向けAI「Gemini 4 Argon」を発表&lt;/li&gt;&lt;li&gt;米8州がOpenAIを提訴、ChatGPTの子供への危害とデータ収集で&lt;/li&gt;&lt;li&gt;Google、論文の論理矛盾をAIで検証する「Deep Review」を公開&lt;/li&gt;&lt;li&gt;OpenAI、生命科学研究向けAI「GPT-Rosalind」を提供&lt;/li&gt;&lt;li&gt;OpenAI、教育者向けAI活用と学習支援ツールを紹介&lt;/li&gt;&lt;li&gt;Sakana AI、「Sakana Chat」にAI記憶可視化機能「My Fish」を追加&lt;/li&gt;&lt;li&gt;ドイツ地方都市がAIベンチャーの聖地に変貌&lt;/li&gt;&lt;li&gt;Amazonデバイス責任者、AI機器がアプリ不要な未来を予測&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-15】Google、最上位モデル「Gemini 4 Argon」を一般提供開始 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-15.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-15.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-27.html</guid>
     <pubDate>Sat, 26 Sep 2026 23:05:45 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Microsoft、Copilotを刷新 — Home・Code・常駐エージェント「Autopilot」の3本柱に&lt;/li&gt;&lt;li&gt;OpenAI pauses training of its ‘most capable models’&lt;/li&gt;&lt;li&gt;Claude Code、/usageによる推定費用の確認とエフォートの使い分けを解説 ——Opus 5.5の料金とキャッシュの利用&lt;/li&gt;&lt;li&gt;NTTドコモ、「正しく質問させる」をやめ、“聞き返すAI”で変える顧客対応&lt;/li&gt;&lt;li&gt;Insurers claim AI is already increasing healthcare costs&lt;/li&gt;&lt;li&gt;I created an interactive digital avatar of myself — and you can talk to it&lt;/li&gt;&lt;li&gt;「AIトークンコスト増を44％抑制」できる可能性も 高性能モデルの“使い過ぎ”、どう減らす？&lt;/li&gt;&lt;li&gt;「1週間の開発タスク」でAIの限界を検証 Googleが「Android Bench 2.0」公開&lt;/li&gt;&lt;li&gt;「Codex」で1時間にわたる障害→使用量リセットへ&lt;/li&gt;&lt;li&gt;At Meta Connect, the company’s smart glasses were everywhere&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-26】Microsoftが次世代「Copilot」を発表=「Home」「Code」「Autopilot」でAI時代の働き方を再定義 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-26.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-26.html</guid>
-    <pubDate>Fri, 25 Sep 2026 23:26:51 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Microsoftが次世代「Copilot」を発表=「Home」「Code」「Autopilot」でAI時代の働き方を再定義&lt;/li&gt;&lt;li&gt;Googleが宇宙にAIデータセンターを設置する実証実験「Project Suncatcher」でAI専用チップ・TPUを搭載した人工衛星を10月1日に打ち上げ&lt;/li&gt;&lt;li&gt;Anthropic to pay Akamai $11.6 billion over seven years in cloud deal&lt;/li&gt;&lt;li&gt;Google、リアルタイムで表情豊かに話すAIアバター「Gemini 3.8 Live with Live Avatar」提供開始 画像1枚で独自アバターも&lt;/li&gt;&lt;li&gt;ChatGPTやCopilotから直接翻訳 「DeepL」のMCP対応で多言語業務はどう変わる？&lt;/li&gt;&lt;li&gt;U.S. appeals court upholds designation of Anthropic as supply chain risk&lt;/li&gt;&lt;li&gt;Proaction boosts sales 60% and saves 75+ hours with Codex&lt;/li&gt;&lt;li&gt;Crusoe abandons $1.25B plan to use Boom turbines at AI data centers&lt;/li&gt;&lt;li&gt;Microsoft、「Copilot」を刷新 「仕事のための新しいOS」とナデラCEO&lt;/li&gt;&lt;li&gt;Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
