@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-17】Meta、Mac Studio 2台で動くオープンモデル公開 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-17.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-17.html</guid>
+    <pubDate>Fri, 16 Oct 2026 22:59:56 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Meta、Mac Studio 2台で動くオープンモデル公開&lt;/li&gt;&lt;li&gt;MS、CLI型AIツール導入による開発者への影響を分析&lt;/li&gt;&lt;li&gt;Amazon、会話を記憶・要約するAI端末「Bee」2種発表&lt;/li&gt;&lt;li&gt;NVIDIA、ローカル向けAI「Nemotron 3.5」公開&lt;/li&gt;&lt;li&gt;Google新AI「Gemini 4 Argon」性能ベンチマーク判明&lt;/li&gt;&lt;li&gt;ChatGPTのChrome拡張、開いているタブの参照に対応&lt;/li&gt;&lt;li&gt;Stack Overflow、エージェント用プラグインで登録急増&lt;/li&gt;&lt;li&gt;Replit、Anthropicとの協業終了をCEOが明言&lt;/li&gt;&lt;li&gt;インド、設定の不備突く不正AIエージェント活動を報告&lt;/li&gt;&lt;li&gt;元NVIDIA担当VC、ロボット工学の現状を「レゴ時代」と指摘&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-16】メタ、オープンなマルチモーダルAI「Muse Spark Open」発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-16.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-16.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-28.html</guid>
     <pubDate>Sun, 27 Sep 2026 23:19:04 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;「アサヒ・ニチレイの惨劇」はどう防げた？ 米HP幹部が語る“ネット遮断AI”と日本攻略&lt;/li&gt;&lt;li&gt;ロボットを入れれば終わりじゃない フィジカルAIを現場で動かす企業の役割とは&lt;/li&gt;&lt;li&gt;離職率16.2％から6.7％へ 筑波記念病院がAIで見つけた「職場の見えない課題」&lt;/li&gt;&lt;li&gt;安川電機が熟練工の「感覚」をAIロボットで再現、カメラで見ながらアーク溶接&lt;/li&gt;&lt;li&gt;トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設&lt;/li&gt;&lt;li&gt;ファナックがAI溶接エージェント実演 ロボット制御装置が安全PLCに&lt;/li&gt;&lt;li&gt;Anthropic’s CEO is about to have dinner with President Trump&lt;/li&gt;&lt;li&gt;Can Muse overcome Meta’s trust issues?&lt;/li&gt;&lt;li&gt;Anthropic’s Dario Amodei gets the SNL treatment&lt;/li&gt;&lt;li&gt;Claude Code の PreCompact hook でコンテキスト圧縮(/compact・自動圧縮)の直前に作業状態を退避する実装手順 — 圧縮は止められない・stdout は注入されない・auto では custom_instructions が空、3つのハマりどころ【2026】&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-27】Microsoft、Copilotを刷新 — Home・Code・常駐エージェント「Autopilot」の3本柱に ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-27.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-27.html</guid>
-    <pubDate>Sat, 26 Sep 2026 23:05:45 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Microsoft、Copilotを刷新 — Home・Code・常駐エージェント「Autopilot」の3本柱に&lt;/li&gt;&lt;li&gt;OpenAI pauses training of its ‘most capable models’&lt;/li&gt;&lt;li&gt;Claude Code、/usageによる推定費用の確認とエフォートの使い分けを解説 ——Opus 5.5の料金とキャッシュの利用&lt;/li&gt;&lt;li&gt;NTTドコモ、「正しく質問させる」をやめ、“聞き返すAI”で変える顧客対応&lt;/li&gt;&lt;li&gt;Insurers claim AI is already increasing healthcare costs&lt;/li&gt;&lt;li&gt;I created an interactive digital avatar of myself — and you can talk to it&lt;/li&gt;&lt;li&gt;「AIトークンコスト増を44％抑制」できる可能性も 高性能モデルの“使い過ぎ”、どう減らす？&lt;/li&gt;&lt;li&gt;「1週間の開発タスク」でAIの限界を検証 Googleが「Android Bench 2.0」公開&lt;/li&gt;&lt;li&gt;「Codex」で1時間にわたる障害→使用量リセットへ&lt;/li&gt;&lt;li&gt;At Meta Connect, the company’s smart glasses were everywhere&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
