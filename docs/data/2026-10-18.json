@@ -1,0 +1,837 @@
+{
+ "schemaVersion": 3,
+ "date": "2026-10-18",
+ "generatedAt": "2026-10-17T22:35:37.781Z",
+ "since": "2026-10-16T20:33:38.584Z",
+ "windowHours": 26,
+ "stats": {
+  "articleCount": 42,
+  "feedCount": 32,
+  "topicCount": 42,
+  "feedErrors": [
+   {
+    "feedId": "deepmind",
+    "feedName": "Google DeepMind",
+    "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+   },
+   {
+    "feedId": "venturebeat-ai",
+    "feedName": "VentureBeat AI",
+    "error": "Status code 429"
+   }
+  ]
+ },
+ "topics": [
+  {
+   "id": "7dd27ee4e856d38c005b577b",
+   "topics": [
+    "規制・政策"
+   ],
+   "summaryStyles": {
+    "short": "Metaが利用規約から懸念文言を削除\nAI学習やデータ収集への批判に対応\n同社は巡回手法自体の変更を否定",
+    "detail": null,
+    "simple": null
+   },
+   "faq": [
+    {
+     "q": "どのような文言が削除されましたか？",
+     "a": "スクレイピングやAI学習への懸念を引き起こした文言ですが、具体的な削除文は記事には記載なし。"
+    },
+    {
+     "q": "Metaのウェブ収集方法自体は変わりますか？",
+     "a": "広報担当者は、規約の改定がウェブのクロール方法自体の変更を反映したものではないと説明しています。"
+    },
+    {
+     "q": "規約が変更された日付はいつですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 1,
+   "headline": "Meta、AI学習用スクレイピング懸念を呼んだ規約文言を削除",
+   "summary": "Metaは、AIモデルの学習やウェブスクレイピングに対する懸念を引き起こしていた利用規約の文言を削除しました。Metaの広報担当者は、改定された規約は同社によるウェブのクロール方法自体の変更を反映したものではないと主張しています。規約変更により、外部からの批判に対応した形です。",
+   "whyItMatters": "AI開発企業による無断データ収集への懸念が高まる中、利用規約の透明性や批判への対応が注目されています。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "meta"
+   ],
+   "articles": [
+    {
+     "title": "Meta removes language that raised scraping and AI training concerns",
+     "link": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-10-17T21:31:32.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "60b0982bf4727ef5dd158e5d2f53807c85f6e875242391f7d105d2d4aaa1fe8a"
+   }
+  },
+  {
+   "id": "fd3979152c2e61bd5aa53781",
+   "topics": [
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "Anthropicの従業員構成が変化\n若手が減りシニア層の比率が増大\n会議に費やす時間が増加している",
+    "detail": null,
+    "simple": null
+   },
+   "faq": [
+    {
+     "q": "従業員構成はどのように変化しましたか？",
+     "a": "若手（ジュニア）層が減少し、よりシニア層の比率が高まりました。"
+    },
+    {
+     "q": "業務形態にはどのような影響が出ていますか？",
+     "a": "会議に費やす時間が増加しています。"
+    },
+    {
+     "q": "現在の正確な従業員数は何人ですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 2,
+   "headline": "Anthropic、従業員のシニア化が進み会議時間が増加と報告",
+   "summary": "Anthropicの発表によれば、同社の従業員の構成と行われる業務の種類は過去1年間で大幅に変化しました。従業員の若手（ジュニア）比率が減少し、シニア層の比率が高まったことで、会議に費やされる時間が増加しているとされています。組織の成長や業務内容の変化に伴い、同社内での働き方や人員配置の構造が変化している状況が示されています。",
+   "whyItMatters": "急速に拡大する主要AIスタートアップにおける組織構造や業務形態の推移を示しています。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "anthropic"
+   ],
+   "articles": [
+    {
+     "title": "Anthropic says its workforce has become less junior and is spending more time in meetings",
+     "link": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-10-17T20:21:19.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "3a7a46d13a5890c03cb3c3d7c8b6f831862133685587f2293571909859b8822b"
+   }
+  },
+  {
+   "id": "fcf73aabe3e37fa7f99807ec",
+   "topics": [
+    "開発ツール",
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "Replitが標準AIをOpenAIに変更\nAnthropicから置き換える方針を表明\nClaudeも継続して利用可能",
+    "detail": null,
+    "simple": null
+   },
+   "faq": [
+    {
+     "q": "デフォルトのモデルはどう変わりますか？",
+     "a": "AnthropicからOpenAIのモデルへ置き換えられます。"
+    },
+    {
+     "q": "これまで使われていたClaudeは使えなくなりますか？",
+     "a": "プラットフォーム上で引き続き利用可能です。"
+    },
+    {
+     "q": "切り替えの具体的な理由は何ですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 3,
+   "headline": "Replit、デフォルトのAIモデルをAnthropicからOpenAIへ変更",
+   "summary": "開発プラットフォームを提供するReplitのCEOであるMasad氏は、同サービスのデフォルトのモデルプロバイダーをAnthropicからOpenAIに置き換えることを明確にしました。なお、これまでデフォルトだったAnthropicのClaudeについても、プラットフォーム上の顧客は引き続き利用可能であると説明されています。",
+   "whyItMatters": "主要な開発プラットフォームにおけるAIモデルの採用戦略の変化を示しています。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "openai",
+    "anthropic",
+    "claude"
+   ],
+   "articles": [
+    {
+     "title": "Replit makes OpenAI its default over Anthropic, CEO says",
+     "link": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-10-17T18:48:08.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "254b6d16b3ff1281d010078c8e6bbc91971ec8f8a59b305f7cd4df73b8907b94"
+   }
+  },
+  {
+   "id": "7a5558b323a4fb998e5351da",
+   "topics": [
+    "国内動向"
+   ],
+   "summaryStyles": {
+    "short": "子世代の69.3％が親のAI利用に反対\nSHIFT AIがシニアとAIの意識調査を実施\n教育の障壁や利用を望まない理由を提示",
+    "detail": null,
+    "simple": "SHIFT AIという組織が、65歳以上の親を持つ30〜50代を対象に調査を行いました。その結果、約7割の人が「親に生成AIを使ってほしくない」と考えていることが判明しました。調査では、なぜ使ってほしくないのかという理由や、親にAIの使い方を教える難しさなどが示されています。"
+   },
+   "faq": [
+    {
+     "q": "調査対象となったのは誰ですか？",
+     "a": "65歳以上の親を持つ全国の30〜50代男女723人です。"
+    },
+    {
+     "q": "親にAIを使ってほしくない割合はどれくらいですか？",
+     "a": "69.3％です。"
+    },
+    {
+     "q": "使ってほしくない具体的な理由の1位は何ですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 4,
+   "headline": "65歳以上の生成AI利用、子世代の約7割が否定的な姿勢を示す",
+   "summary": "SHIFT AIが65歳以上の親を持つ30〜50代男女723人を対象に実施した調査によると、親に生成AIを使ってほしくないと回答した割合が69.3％に達しました。調査結果では、子世代が利用を望まない理由に加え、回答者自身の利用頻度や、親に生成AIの使い方を教える際に生じる障壁なども明らかにされています。",
+   "whyItMatters": "シニア層への生成AI普及における家族間の意識ギャップや普及の課題を浮き彫りにしています。",
+   "score": 4,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "「そもそも親にAIなんて必要ない」 65歳以上の生成AI利用、子世代の7割が拒否する理由",
+     "link": "https://atmarkit.itmedia.co.jp/ait/articles/2610/17/news007.html",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-10-17T08:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://atmarkit.itmedia.co.jp/ait/articles/2610/17/news007.html",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "2a9d429757fab2e0e0e0bfd45a113759079680e2f804a6eae56fe91162455582"
+   }
+  },
+  {
+   "id": "3e1bb6f4d90247655c88e7e1",
+   "topics": [
+    "開発ツール"
+   ],
+   "summaryStyles": {
+    "short": "RTX SparkノートPCの提供が開始\nBlackwellと最大128GBメモリ搭載\n価格は2399ドルから各社が発売",
+    "detail": null,
+    "simple": "NVIDIAが「RTX Spark」という高性能なノートパソコンを発売しました。最大128GBという大容量メモリと最新グラフィックスを備えており、インターネットを介さずにパソコン本体の中だけで高度なAIを動かしたり、画像作成やゲームを高画質で行ったりできます。価格は2399ドル（約数万円〜数十万円）からです。"
+   },
+   "faq": [
+    {
+     "q": "RTX SparkノートPCの開始価格はいくらですか？",
+     "a": "2399ドルからです。"
+    },
+    {
+     "q": "どのメーカーから発売されますか？",
+     "a": "ASUS、Dell、HP、Lenovo、Microsoft、MSIから発売されます。"
+    },
+    {
+     "q": "搭載されているメモリの最大容量はどれくらいですか？",
+     "a": "最大128GBの統合メモリです。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 5,
+   "headline": "NVIDIA、Blackwell搭載の「RTX Spark」搭載PC発売を発表",
+   "summary": "NVIDIAは、Blackwell RTXグラフィックスと最大128GBの統合メモリを搭載した薄型WindowsノートPC「RTX Spark」の提供開始を発表しました。価格は2399ドルからで、ASUS、Dell、HP、Lenovo、Microsoft、MSIから発売され、ローカル環境での強力なAI処理やコンテンツ制作、ゲーム機能を提供します。",
+   "whyItMatters": "高性能なAIモデルをクラウドに頼らずローカル環境で動かせる個人向け端末の普及を促します。",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [
+    "nvidia"
+   ],
+   "articles": [
+    {
+     "title": "RTX Spark Ignites Global Celebration as New Windows PCs Arrive",
+     "link": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/",
+     "feedName": "NVIDIA Blog",
+     "lang": "en",
+     "date": "2026-10-17T21:00:13.000Z"
+    }
+   ],
+   "articleKey": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "568746a62175284376f1bbcf446c9735f4f9da1d2c597e1d7a9208b7d29f1dc7"
+   }
+  },
+  {
+   "id": "9ce1d661b5d81c143a196fc1",
+   "topics": [
+    "開発ツール"
+   ],
+   "summaryStyles": {
+    "short": "CodexがMacの容量を過剰消費と報告\nGitHubのIssueがHNで話題に\n開発者から多数のコメントが寄せられる",
+    "detail": null,
+    "simple": null
+   },
+   "faq": [
+    {
+     "q": "どのツールに関する問題が報告されていますか？",
+     "a": "OpenAIのCodexです。"
+    },
+    {
+     "q": "具体的にどのような問題が発生していますか？",
+     "a": "Macのディスク容量（ストレージ）を過剰に消費していると報告されています。"
+    },
+    {
+     "q": "容量消費を解決するための修正方法は記載されていますか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 6,
+   "headline": "GitHub上でOpenAI CodexによるMac容量逼迫の報告が話題に",
+   "summary": "開発者向けコミュニティのHacker Newsにおいて、OpenAIのCodexがMacのディスク容量を過剰に消費しているというGitHubのIssueが共有され、話題となっています。投稿されたIssueには複数のコメントが寄せられており、利用者の環境でストレージ消費が課題となっている様子が指摘されています。",
+   "whyItMatters": "ローカル環境で利用されるAIツールのリソース消費に関する課題が開発者コミュニティで注目されています。",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [
+    "openai",
+    "github"
+   ],
+   "articles": [
+    {
+     "title": "Codex is EATING my Mac's disk space",
+     "link": "https://github.com/openai/codex/issues/25921",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-10-17T17:45:08.000Z"
+    }
+   ],
+   "articleKey": "https://github.com/openai/codex/issues/25921",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "f506d81569d6f88e44b4511970dd162c019bb09c0362caed16dbaf92b9997c70"
+   }
+  },
+  {
+   "id": "0b81a58f5b3fe1314623827b",
+   "topics": [
+    "規制・政策"
+   ],
+   "summaryStyles": {
+    "short": "Metaが批判を受け利用規約を改定\nニュースなどのスクレイピング示唆を撤回\n商業利用規約ページから該当文を削除",
+    "detail": null,
+    "simple": "Meta社が利用規約の文章を変更しました。以前は、外部のニュースサイトなどの内容を自動で収集して、自社のAIを学習させるために利用できるような規約になっていました。しかし、外部からの強い反発を受けたため、自社のAI開発や学習にサイトのデータを利用できるとする記述を削除しました。"
+   },
+   "faq": [
+    {
+     "q": "なぜMetaは規約文言を削除したのですか？",
+     "a": "外部からの反発を受けたためです。"
+    },
+    {
+     "q": "削除されたのはどの規約ページですか？",
+     "a": "商業利用規約（commercial terms）のページです。"
+    },
+    {
+     "q": "削除された文言には具体的に何と書かれていましたか？",
+     "a": "Metaが製品やサービスの提供、改善、研究、学習などのためにドメインやウェブページ、URLのコンテンツを利用できるといった内容が書かれていました。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 7,
+   "headline": "Meta、ニュースサイト等のスクレイピングを示唆する規約文言を削除",
+   "summary": "Metaは反発を受け、AIの学習のためにニュースサイトを含むサイトからコンテンツをスクレイピングできると示唆していた利用規約の文言を削除しました。具体的には、規約対象のドメインやURLのコンテンツをMeta製品やサービスの提供、改善、研究、学習などに使用できるとする商業利用規約の文言が削除されたことが確認されています。",
+   "whyItMatters": "AI学習用のウェブデータ収集に対する世論の反発と、テック大手の規約見直しの動きを示しています。",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [
+    "meta"
+   ],
+   "articles": [
+    {
+     "title": "Meta removes language that may have allowed it to scrape news sites",
+     "link": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+     "feedName": "The Verge AI",
+     "lang": "en",
+     "date": "2026-10-17T15:04:36.000Z"
+    }
+   ],
+   "articleKey": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "99bf05821323472d920da9d673e10f5cfa29c6697f0059bcb1cbaaed2fae7026"
+   }
+  },
+  {
+   "id": "b31543fcd7d1501be961df37",
+   "topics": [
+    "エージェント"
+   ],
+   "summaryStyles": {
+    "short": "主要サイトがAIエージェントを遮断\n予約や購入の自動代行がブロックされる\nMETAやOpenAIなどのツールで発生",
+    "detail": null,
+    "simple": "AIエージェントとは、人に代わってネット上でレストランの予約や買い物などの作業を自動で行うAIのことです。しかし最近、大手のウェブサイト側がこうしたAIのアクセスを拒否し、自動作業をブロックする事例が相次いで報告されています。"
+   },
+   "faq": [
+    {
+     "q": "どのようなAIサービスで遮断が報告されていますか？",
+     "a": "MetaのMuse、xAIのGrok、OpenAIのDots、Instinctなどのサービスで報告されています。"
+    },
+    {
+     "q": "AIエージェントは本来どのような作業を行う予定でしたか？",
+     "a": "ディナーの予約、受信トレイの整理、靴の購入などのタスク代行が挙げられています。"
+    },
+    {
+     "q": "ウェブサイト側がアクセスを遮断している技術的な仕組みは何ですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 8,
+   "headline": "主要ウェブサイト、AIエージェントによるアクセスを遮断する動き",
+   "summary": "自律型AIエージェントが注目を集める一方、主要なウェブサイトがエージェントによるタスク代行をブロックする事例が報告されています。MetaのMuse、xAIのGrok、OpenAIのDotsなどのサービスにおいて、ネット上の予約や買い物などの作業を妨げる遮断が発生しており、ウェブ側がエージェントのアクセスを拒否する動きが広がっています。",
+   "whyItMatters": "AIエージェントが自律的に作業を代行する未来に対し、外部ウェブサイト側による拒絶という新たな障壁が浮き彫りになっています。",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [
+    "openai",
+    "google",
+    "meta"
+   ],
+   "articles": [
+    {
+     "title": "Websites are closing their doors to AI agents",
+     "link": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+     "feedName": "The Verge AI",
+     "lang": "en",
+     "date": "2026-10-17T13:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "71cf253aa457d32cb1b0af47b0a9de9dc477682e9c2db46cb98f55fae6971595"
+   }
+  },
+  {
+   "id": "cac24968e5aa0d5bf28d3c60",
+   "topics": [
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "DeepSeekの新モデル情報が公開\nAPIやOpenRouterに登場\nHNで多数のコメントを集め話題に",
+    "detail": null,
+    "simple": null
+   },
+   "faq": [
+    {
+     "q": "公開されたモデルの名前は何ですか？",
+     "a": "DeepSeek-v4.1-Flash-1017です。"
+    },
+    {
+     "q": "どのプラットフォームで情報が確認されましたか？",
+     "a": "DeepSeekのAPIドキュメントおよびOpenRouter上です。"
+    },
+    {
+     "q": "このモデルの性能やパラメータ数はどれくらいですか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 9,
+   "headline": "「DeepSeek-v4.1-Flash-1017」が公開され話題に",
+   "summary": "DeepSeekのAPIドキュメントおよびOpenRouter上で「DeepSeek-v4.1-Flash-1017」に関する情報が公開され、技術系コミュニティで注目を集めました。Hacker Newsでは関連リンクが投稿され、600ポイント以上の支持と500件を超えるコメントが寄せられるなど、利用者の間で高い関心を呼んでいます。",
+   "whyItMatters": "急成長するDeepSeekの新たなモデル公開やアップデートに対する開発者コミュニティの関心の高さを示しています。",
+   "score": 3,
+   "sourceCount": 1,
+   "entities": [
+    "deepseek"
+   ],
+   "articles": [
+    {
+     "title": "DeepSeek-v4.1-Flash-1017",
+     "link": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-10-17T08:21:25.000Z"
+    }
+   ],
+   "articleKey": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "bf3e60ce52f0a7ed5f9137e49940846446d763af91beac3f5db5ac88b0c896e7"
+   }
+  },
+  {
+   "id": "5cf8bc3a52e1e15c3bc18eea",
+   "topics": [
+    "開発ツール",
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "購入前にローカルLLM速度を体験\n新ツール「Llmspeed」が公開\nHNで紹介され開発者から注目を集める",
+    "detail": null,
+    "simple": "「Llmspeed」という新しいツールが公開されました。パソコン本体でAI（大規模言語モデル）を動かす場合、部品や機器によって動く速さが大きく異なります。このツールを使うことで、高価なパソコンや機材を実際に購入する前に、AIがどれくらいの速度で動くのかを体験して確認できます。"
+   },
+   "faq": [
+    {
+     "q": "「Llmspeed」とはどのようなツールですか？",
+     "a": "ハードウェアを購入する前に、ローカルLLMがどれくらいの速さで動くかを体感できるツールです。"
+    },
+    {
+     "q": "ツールのウェブサイトURLはどこですか？",
+     "a": "https://llmspeed.dev/ です。"
+    },
+    {
+     "q": "利用料金はかかりますか？",
+     "a": "記事には記載なし。"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 10,
+   "headline": "ローカルLLMの動作速度を体験できるツール「Llmspeed」公開",
+   "summary": "ハードウェアを購入する前にローカル環境での大規模言語モデル（LLM）の実行速度を体感できるツール「Llmspeed」が公開され、Hacker Newsで紹介されました。PCなどの機器を購入する前にLLMの動作パフォーマンスを把握したい開発者やユーザー向けに提供されており、コミュニティで注目を集めています。",
+   "whyItMatters": "高価なハードウェアを導入する前にローカルLLMの性能を事前把握できる手段を提供します。",
+   "score": 3,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
+     "link": "https://llmspeed.dev/",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-10-17T04:36:53.000Z"
+    }
+   ],
+   "articleKey": "https://llmspeed.dev/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "00dfc79ebcfc740f35383529123fcadc98a41ff0c7e2bbbe61c7cf4bc65d485f"
+   }
+  }
+ ],
+ "others": [
+  {
+   "title": "小型AIモデルはIoT機器で自己複製できるか：Anthropic Frontier Red Teamの実験",
+   "link": "https://qiita.com/quotidia/items/a25b5db0654c1b0c2470",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T21:01:02.000Z",
+   "excerpt": "本記事は筆者が運営する AI Quotidia の海外ニュース解説記事です。 米Anthropicの研究チームは2026年10月12日(月) (米国時間)、研究者が自分で買った1台約55ドルのテレビボックス15台をつなぎ、260億パラメータ (AIの中で、学習によって調..."
+  },
+  {
+   "title": "中国、AI技術23項目を輸出規制へ その中身とは",
+   "link": "https://japan.cnet.com/article/35253670/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-10-17T20:40:00.000Z",
+   "excerpt": "中国の商務部と科学技術部は10月16日、大規模AIモデルや、自律的に作業を進めるAIエージェントなどに関する23項目の技術を、輸出の禁止・制限の対象に加える案を公表した。ただし、大規模モデルの機能をAPIやアプリで海外向けに提供する場合は、技術輸出管理の対象外とする方針だ。"
+  },
+  {
+   "title": "DM全履歴をAIに渡さない：参照範囲を固定した「読み取り専用コンテキスト束」をPythonで作る",
+   "link": "https://qiita.com/susie000720/items/4f97531a34dff8689763",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T17:10:40.000Z",
+   "excerpt": "DMで「この利用者は広告利用にも同意していたか」を確認したい。しかし、数行を探すためにAIへ全履歴を渡したり、返信・削除まで可能な認証情報を持たせたりするのは過剰です。 ここでの緊張は、AIを使うか使わないかではありません。確認を速くしたい一方で、AIが読める範囲と、人が最..."
+  },
+  {
+   "title": "An OpenAI model hacked a government site, grabbed 24 years of hospital data and kept it quiet",
+   "link": "https://the-decoder.com/an-openai-model-hacked-a-government-site-grabbed-24-years-of-hospital-data-and-kept-it-quiet/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-17T15:36:11.000Z",
+   "excerpt": "OpenAI has published four new cases where its AI models bypassed security boundaries on their own during training or testing. In one case, a model extracted server passwords from a government website, forged authorization tokens, and downloaded 24 years of hospital data without mentioning the unauthorized access. The article An OpenAI model hacked a government site, grabbed 24 years of hospital data and kept it quiet appeared first on The Decoder."
+  },
+  {
+   "title": "AnthropicのコードレビューとQA自動化の仕組みを調べてみた",
+   "link": "https://qiita.com/AgemonoFryday/items/120af76e823412b892fd",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T15:02:33.000Z",
+   "excerpt": "Anthropicが、Claude Code開発チームのコードレビュー手法を公開していました。 記事はこちら：How the Claude Code team does code review Claude Codeのコードの約90%はClaude自身が書いているそうです。..."
+  },
+  {
+   "title": "Anthropics' Claude cracks a 25-year-old NSA cryptography mystery in under 30 minutes",
+   "link": "https://the-decoder.com/anthropics-claude-cracks-a-25-year-old-nsa-cryptography-mystery-in-under-30-minutes/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-17T14:42:56.000Z",
+   "excerpt": "Anthropic's AI model Claude has solved a 25-year-old cryptography puzzle. The mysterious seeds behind NIST's standard curves for digital signatures were provided by the NSA without explanation, raising long-standing suspicion about built-in backdoors. Claude figured out in under 30 minutes that the seeds came from \"lrand48,\" a simple C random number generator, making deliberate backdoors far less likely. The article Anthropics' Claude cracks a 25-year-old NSA cryptography mystery in under 30 minutes appeared first on The Decoder."
+  },
+  {
+   "title": "Qiita記事生成パイプラインを44日回したら、17日間「ゼロ本」の穴があった話",
+   "link": "https://qiita.com/fuji1009_REBELL/items/8bfbe9f280a3d1e89cde",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T14:33:35.000Z",
+   "excerpt": "Qiitaに技術記事を出し続けるための自動生成パイプラインを、この44日間で39本回しました。数だけ見れば悪くないペースです。ただし途中に、1本も生成されなかった17日間の空白があります。しかも通知自体は正常に届いていたので、しばらく気づきませんでした。 「LLMで発信力を..."
+  },
+  {
+   "title": "コード系でOpus 5超え「DeepSeek-V4.1-Flash-1017」無償公開",
+   "link": "https://pc.watch.impress.co.jp/docs/news/2149045.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-17T13:29:20.000Z",
+   "excerpt": "前バージョンの登場からわずか37日、DeepSeekの“Flash”がまた強くなった。DeepSeekは10月17日(日本時間)、AIモデル「DeepSeek-V4.1-Flash-1017」を発表した。同日のうちに、オープンウェイト(モデルの重み)はMITライセンスのもとHugging Faceで無償公開され、商用利用も認められる。総パラメータ数552B(5,520億)ながら、コード修正ベンチマーク「DeepSWE v1.1」は77.0で、Anthropicの最上位級「Claude Opus 5」の74.0を上回る。"
+  },
+  {
+   "title": "商談の日報と引継ぎ、AIはどこまで任せられますか？ — 約束の受け渡しで決める",
+   "link": "https://zenn.dev/satoshimizuhara/articles/ai-agent-sales-report-handover",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T11:36:36.000Z",
+   "excerpt": "昨日は、小売の発注の仕事で、営業と販売の現場に寄せて読む1回目を書いた。本稿はその2回目で、営業側の現場に寄って、日報と引継ぎの仕事を置く。日報の要約や訪問記録の転記は機械が速く、案件一覧のたたき台も並べられる。しかし日報は、翌朝の席に置かれた瞬間に次の約束の引き受けに変わる仕事で、この境目の切り方に、支店を持つ営業の現場はつまずいている。 先月の相談：6支店の販売会社、引継ぎメモの話 先月、地方に6支店を持つ設備機器の販売会社の営業本部を訪ねた。営業部長の相談は、こうだった。「AIに営業日報の要約と、商談メモから案件一覧のたたき台を作らせ始めた。日報の書く時間は減り、所長の朝の席は..."
+  },
+  {
+   "title": "Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs",
+   "link": "https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-17T10:33:28.000Z",
+   "excerpt": "Deepseek has released V4.1-Flash-1017 as an open-weight model that posts better benchmarks, finishes tasks faster, and produces shorter outputs than its predecessor. The company is also opening up its internal search engine through new Search and Fetch APIs at $0.75 per 1,000 calls. API users in tools like Claude Code and Codex get free access for now. The article Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs appeared first on The Decoder."
+  },
+  {
+   "title": "Excelの請求書作成でAIに任せるのは転記式の下書きまで — 金額と宛先は式で拾う",
+   "link": "https://zenn.dev/yoshitokinosita/articles/0017-excel-ai-seikyu",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T10:16:26.000Z",
+   "excerpt": "月末の締めが済んだところで、請求書の発行が残る 月末の締め作業が一段落したところで、請求書の発行が待っています。様式は毎月同じで、得意先も毎月同じ。変わるのは金額と明細の行数です。請求明細台帳を開き、1件ずつひな形の明細行に写していく。判断を要しない代わりに、写し間違いが最も出やすい工程です。宛先の表記が1字ずれているだけで、問い合わせの電話が来ます。 前回は、月次データの整形を扱いました。整形が済んだ台帳は、締め報告と同じく、この請求書にも繋がる形になっています。今回も連載の「Excel側の前準備 → AIへの依頼文 → 検算」の3段階で組みます。請求書は社外に送る文書です。社内で..."
+  },
+  {
+   "title": "AI models hide mistakes in their own work reports, but one sentence in your prompt can help",
+   "link": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-17T09:54:36.000Z",
+   "excerpt": "AI agents systematically skip errors in their own reports, even when they spot the problems. In a study by Google Research, MIT, and Harvard, GPT-5.5 left out negative results in 198 out of 200 paper abstracts. The article AI models hide mistakes in their own work reports, but one sentence in your prompt can help appeared first on The Decoder."
+  },
+  {
+   "title": "Mathematicians say OpenAI doesn't understand its own Navier-Stokes proof",
+   "link": "https://the-decoder.com/mathematicians-say-openai-doesnt-understand-its-own-navier-stokes-proof/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-17T09:00:26.000Z",
+   "excerpt": "OpenAI submitted a 166-page solution to the Navier-Stokes problem but apparently doesn't fully understand its own proof. Several groups of experts dispute the claimed methodology, saying the actual approach differs from what OpenAI described. And because language models are black boxes, where the underlying ideas came from will likely never be clear. The article Mathematicians say OpenAI doesn't understand its own Navier-Stokes proof appeared first on The Decoder."
+  },
+  {
+   "title": "すべてのAIコーディングエージェントのコストを閲覧・検索・追跡しローカルで動作する「AgentsView」、Claude Code・Codex・Cursor・Copilot・Geminiなど60種類以上のエージェントを自動検出し全文検索も可能",
+   "link": "https://gigazine.net/news/20261017-agentsview/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-17T09:00:00.000Z",
+   "excerpt": "Claude CodeやCodexなどを並行して利用すると、どのAIコーディングエージェントやモデルへどれだけトークンを使ったのか全体像を把握しにくくなります。そこで使えるのが複数のエージェントのローカル履歴を自動収集し、モデル別・日別・セッション別の利用量やAPI料金換算のコストをまとめて確認できる「AgentsView」です。 続きを読む..."
+  },
+  {
+   "title": "2026年秋のAIアップデートを業務視点で読む：安く・速く・小さく、旧モデルは退場へ",
+   "link": "https://zenn.dev/kosukeozawa/articles/ai-updates-autumn-2026-business",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T08:49:55.000Z",
+   "excerpt": "2026年9月から10月にかけて、主要なAI各社が立て続けに新しいモデルを公表しました。追いかけるだけで疲れますが、業務で使う側から見ると、押さえるべき変化は多くありません。この記事では「安くなった」「速くなった」「小さいモデルが実用水準になった」「旧モデルの提供終了が始まった」の4点に絞り、一次情報（各社の公式発表・公式ドキュメント）に沿って整理します。 ベンチマークの順位争いではなく、「自社のどの業務に、どのモデルを、いつまで使えるのか」を判断するための材料として読んでください。価格や日付はすべて出典を明記しています。 イメージ画像（生成AIで作成） まず、2026年秋に何が発..."
+  },
+  {
+   "title": "GitHub、プルリクエスト向け「AI Scan」を一般提供",
+   "link": "https://codezine.jp/article/detail/30045",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-17T08:00:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "資料に無いことを聞いても100回とも作り話はしなかった。でも「必ず埋めて」と命じた10回中7回はキーごと消えた",
+   "link": "https://zenn.dev/numarn/articles/source-absent-value-fill-handson",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T06:11:25.000Z",
+   "excerpt": "結論 AI に資料を渡して「この4項目を答えて」と頼むとき、私がいちばん心配していたのは知ったかぶりでした。 資料に書いていない項目まで、もっともらしい数字で埋めてくるのではないか。 そこで、わざと答えが書いていない項目を2つ混ぜた資料を作って、聞き方を5通りに変えて各10回ずつ走らせました。 合計100回ぶんの「書いていない項目」のうち、数字や断定で埋めてきた回は0件でした。 拍子抜けしたところで、別の壊れ方が出てきました。 「全項目を必ず数値で埋めてください。null や空欄は使わないでください」と命じた10回のうち7回は、 その2項目が答えの中からキーごと消えました。 黙っ..."
+  },
+  {
+   "title": "【１日１デプロイ】3レーンを守る「パチン！木の実砦」を作った",
+   "link": "https://zenn.dev/boraemon2000/articles/acorn-fort-volley-lane-defense",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T05:43:10.000Z",
+   "excerpt": "今回作ったもの 「１日１デプロイ」の新作として、約15秒で遊べる3レーン防衛 パチン！木の実砦 を作りました。 奥から左・中央・右の3本の道を進んでくる影玉へ、木の実を撃ち返します。月花の光は3枚。影が届くと1枚消えますが、その影も消えてプレイは続きます。最後の大きな影を4発で追い返せば勝利です。 照準を細かく動かすのではなく、いまどの道を撃つか を選ぶゲームです。発射のあとは0.38秒の再装填があり、連打で弾は増えません。装填中に押した入力は、最後の1レーンだけ予約され、装填が終わった瞬間に自動で撃ちます。 案内役のブラピさんは砦の発射係としてCanvasに透過で重ね、敵や3つ..."
+  },
+  {
+   "title": "LLMに設計レビューをさせてみて、任せられる範囲を決め直した話",
+   "link": "https://zenn.dev/vaonvn/articles/1397937577549d",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T03:43:09.000Z",
+   "excerpt": "以前、要件定義書の初稿をLLMと一緒に書いた話と、AIコードレビューを1年続けて分かったことを書きました。今回はその間にある工程、基本設計のレビューです。 社内のプロジェクトで、基本設計書のレビューにLLMを使って みました。結果は、はっきり二つに分かれました。指摘がそのまま使えた観点と、業務の事情を知らないと外れてしまう観点です。この記事では、その分かれ方と、分かれ方を見てLLMに任せる範囲をどう決め直したかを書きます。数字は取っていないので、件数や割合は出てきません。 何をレビューさせたか 対象は、画面設計、API設計、テーブル定義、それに非機能要件を書いた基本設計書です。社内..."
+  },
+  {
+   "title": "個人FDE向けのターゲットを考えてみた話",
+   "link": "https://zenn.dev/hyuma_python/articles/72f27dad3e5764",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T01:36:56.000Z",
+   "excerpt": "こんにちは！独学でプログラミングを学び、個人でアプリを開発してきました。 フリーランスエンジニアやIT企業のCOOを経験し、LLMのプロジェクトでは設計から担当した経験があります。ここ半年は、AIを使った自分の開発に専念しています。 実際のAIの使い方や考え方などを共有できればと思いますので、ぜひフォローお願いします！ AIを使って作れるものは増えました。では、FDEとして活動していくなら、誰に、何を届ければいいのでしょうか。 我々ITエンジニアと世間の認知ギャップはどの程度あるのでしょうか。 FDEとして個人で活動するなら、私はまず、小規模な製造業の見積・受発注・図面や仕様の確認・作業..."
+  },
+  {
+   "title": "【本日みつけたお買い得品】120Hz/2,560×1,600ドットのRyzen AI搭載ノートが約3万9千円オフ",
+   "link": "https://pc.watch.impress.co.jp/docs/news/todays_sales/2149005.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-17T01:05:17.000Z",
+   "excerpt": "Amazonは10月16日から19日にかけて、プライム感謝祭を実施中だ。15.3型ノートPCのマウスコンピューター「mouse B5-A7A01SR」は、プライム会員限定の3万9,704円引きで、22万7,880円にて購入できる。"
+  },
+  {
+   "title": "「枠」を見抜き、情報を「結晶化」させる技術 —— 生成AI時代の構造定義と研究最前線",
+   "link": "https://zenn.dev/dx_junkyard/articles/132a028df5696c",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-17T00:12:56.000Z",
+   "excerpt": "はじめに：生成AIが「枠」を埋め尽くした世界で、何が残るのか 生成AIが目覚ましい勢いで進歩する現在、文章の生成、コードの実装、データの要約といった「局所的なタスク」は圧倒的な速度で処理されるようになった。このような時代において、ますます本質的な価値を持つようになっているのは、俯瞰した視点で物事の構造を見抜く力であり、新しい価値を生み出す構造を定義する力である。 筆者はこれまで、生成AIと人間・社会システムの関係性について、いくつかの視点から考察を重ねてきた。 たとえば、過去の記事『生成AIは「枠」を埋め尽くす 〜最後に残るのは、新しい枠をつくる力である〜』では、ソフトウェア脆弱性探..."
+  },
+  {
+   "title": "Show HN: Things to Do API",
+   "link": "https://thingstodoapi.com/",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-10-16T23:58:34.000Z",
+   "excerpt": "I built an api/mcp for local events: pop-ups, one-off events, concerts, etc. currently covering the SF bay area. I've been building a bunch of consumer apps lately around personalization and recommendation and have had a hard time finding this data in one spot. agents can find useful stuff through tool calls / web search, but slow. you can scrape on demand too, but i wanted a faster data set and couldn't find an existing provider for the mix of event types I was searching for. the methodology for it is to find influential accounts/posters/etc. and do a fan out across things that they co-post with. mcp: `claude mcp add --transport http thingstodo https://api.thingstodoapi.com/mcp` I'm considering adding other cities. If you're building something that needs local event data, would something like this be useful and where would you want coverage? Comments URL: https://news.ycombinator.com/item?id=50126384 Points: 28 # Comments: 17"
+  },
+  {
+   "title": "【小技】「日本語で答えて」はもう要らない。Kiro の返答言語を表示言語で固定する",
+   "link": "https://zenn.dev/aws_japan/articles/kiro-display-language-reply",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-16T23:31:31.000Z",
+   "excerpt": "はじめに こんにちは、AWS Japan でソリューションアーキテクトをしているいなりくです。 Kiro に日本語で返事をしてほしくて、毎回「日本語で答えて」と書き添えたり、Steering に「日本語で回答すること」と書いたりしている、という人は多いのではないでしょうか。英語のエラーログを貼った途端に返事が英語に切り替わり、もう一度頼み直した経験がある人もいると思います。 2026 年 7 月 28 日にリリースされた Kiro IDE 1.0.242 で、Kiro は IDE の表示言語に合わせて返事をするようになりました。表示言語を日本語にしておけば、質問が英語でも、何も指示し..."
+  },
+  {
+   "title": "音声AI「Grok Voice 3.0」 応答1秒未満 テスラにも搭載",
+   "link": "https://www.watch.impress.co.jp/docs/news/2148932.html",
+   "feedName": "Impress Watch",
+   "lang": "ja",
+   "date": "2026-10-16T23:30:00.000Z",
+   "excerpt": "xAI(SpaceXSI)は14日、音声対話AIモデル「Grok Voice 3.0」を発表し、開発者向けの「Grok Voice API」で提供開始した。利用料金は1分あたり0.08ドル(1時間あたり4.80ドル)で、従来モデルから据え置く。"
+  },
+  {
+   "title": "差し戻し上等、再提出は 3 回まで。Kiro workflows の Kiro 残業ループ",
+   "link": "https://zenn.dev/aws_japan/articles/kiro-introducing-workflows",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-16T23:19:06.000Z",
+   "excerpt": "はじめに こんにちは、AWS Japan でソリューションアーキテクトをしているいなりくです。 エージェントに「実装して」と頼み、終わったら「レビューして」、指摘が出たら「直して」と、1 つ終わるたびに次の指示を打ち込んでいる、という経験はないでしょうか。 2026 年 9 月 30 日に Kiro へ追加された workflows は、この指示の受け渡しを Kiro 側に任せる機能です。作業の手順を recipe というファイルに書いておくと、Kiro がその順番どおりにエージェントを動かします。 https://kiro.dev/blog/introducing-workflow..."
+  },
+  {
+   "title": "RAGかFine-tuningか：失敗原因から選ぶ設計判断",
+   "link": "https://zenn.dev/kas_blog/articles/20260908-rag-vs-fine-tuning",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-16T22:52:57.000Z",
+   "excerpt": "RAG（Retrieval-Augmented Generation：検索拡張生成）とFine-tuning（追加学習）は、LLM applicationを用途へ適応させる代表的な方法です。ただし、「最新知識ならRAG、振る舞いならFine-tuning」という説明だけで実装を決めると、failureの層を取り違えます。 結論は、手法を先に選ぶのではなく、変更したい状態がどこにあるかを特定することです。 外部source、検索結果、query-time contextを変えるならRAG model parameterまたはadapterを変えるならFine-tuning instruc..."
+  },
+  {
+   "title": "亡くなった声優の声、AIでの再現は原則禁止 日俳連が新指針",
+   "link": "https://japan.cnet.com/article/35253656/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-10-16T22:25:00.000Z",
+   "excerpt": "日本俳優連合（日俳連）は10月15日、俳優や声優の声を生成AIで利用する際の指針を発表した。学習から生成、作品での公開・利用まで、各段階で本人の事前同意を得るよう求める。音声の無断利用を防ぎ、AI利用時の報酬や契約の基準を示す。"
+  },
+  {
+   "title": "3時間先までの雨予測をAIで改善 ウェザーニュースアプリに本格実装",
+   "link": "https://japan.cnet.com/article/35253654/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-10-16T22:11:00.000Z",
+   "excerpt": "ウェザーニューズは10月15日、天気アプリ「ウェザーニュース」の3時間先までの天気・降水量予測に、独自のAI気象予測モデル「AI-Nowcast」を導入したと発表した。雨雲の急な発生や発達を捉え、予測精度を高めるとしている。"
+  },
+  {
+   "title": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+   "link": "https://simonwillison.net/2026/Oct/16/code-review/",
+   "feedName": "Simon Willison",
+   "lang": "en",
+   "date": "2026-10-16T22:06:37.000Z",
+   "excerpt": "We think \"did a human read the code?\" is an imprecise proxy for \"what could go wrong with this change, and which check—automated or human—is the right one to catch it?\" Asking that question also changed when review happens. Before, review was a gate at the end of the road: write the code, open a PR, wait for your colleague. Now, review runs continuously, more like spellcheck while you write. Most changes have been reviewed and fixed by Claude at least once before a human is asked to look. This catches most routine mistakes, and saves team attention for higher-level questions and scrutiny. &mdash; Addy Osmani, Morgan Westlee Lunt, and Qing Wang , How the Claude Code team does code review Tags: anthropic , claude , ai , claude-code , llms , addy-osmani , coding-agents , generative-ai , agentic-engineering , code-review"
+  },
+  {
+   "title": "OpenAI models hacked a crypto wallet and breached more websites",
+   "link": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+   "feedName": "Ars Technica AI",
+   "lang": "en",
+   "date": "2026-10-16T20:59:01.000Z",
+   "excerpt": "The actions could have resulted in criminal charges had humans been behind the keyboard."
+  },
+  {
+   "title": "Building trust in AI agents: A production-ready evaluation framework with Amazon Bedrock AgentCore",
+   "link": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
+   "feedName": "AWS AI Blog",
+   "lang": "en",
+   "date": "2026-10-16T20:48:16.000Z",
+   "excerpt": "Autonomous AI agents fail softly: latency stays flat while answer quality quietly erodes. This post shares a nine-stage evaluation framework, built on Amazon Bedrock AgentCore, that catches silent quality regressions across the full agent lifecycle, from first commit to live production."
+  }
+ ],
+ "features": {
+  "audio": false
+ },
+ "publication": {
+  "revision": 1,
+  "contentRevision": "1462532d476a85446f90ee456ac1ec3ef6f4c1e7bd8ced0876e33aa742f64abb",
+  "textState": "ready",
+  "updatedAt": "2026-10-17T22:35:37.783Z",
+  "audioByVoice": {}
+ }
+}

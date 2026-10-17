@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-18】Meta、AI学習用スクレイピング懸念を呼んだ規約文言を削除 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-18.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-18.html</guid>
+    <pubDate>Sat, 17 Oct 2026 22:35:37 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Meta、AI学習用スクレイピング懸念を呼んだ規約文言を削除&lt;/li&gt;&lt;li&gt;Anthropic、従業員のシニア化が進み会議時間が増加と報告&lt;/li&gt;&lt;li&gt;Replit、デフォルトのAIモデルをAnthropicからOpenAIへ変更&lt;/li&gt;&lt;li&gt;65歳以上の生成AI利用、子世代の約7割が否定的な姿勢を示す&lt;/li&gt;&lt;li&gt;NVIDIA、Blackwell搭載の「RTX Spark」搭載PC発売を発表&lt;/li&gt;&lt;li&gt;GitHub上でOpenAI CodexによるMac容量逼迫の報告が話題に&lt;/li&gt;&lt;li&gt;Meta、ニュースサイト等のスクレイピングを示唆する規約文言を削除&lt;/li&gt;&lt;li&gt;主要ウェブサイト、AIエージェントによるアクセスを遮断する動き&lt;/li&gt;&lt;li&gt;「DeepSeek-v4.1-Flash-1017」が公開され話題に&lt;/li&gt;&lt;li&gt;ローカルLLMの動作速度を体験できるツール「Llmspeed」公開&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-17】Meta、Mac Studio 2台で動くオープンモデル公開 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-17.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-17.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-29.html</guid>
     <pubDate>Tue, 29 Sep 2026 00:29:18 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Anthropic、「Claude Sonnet 5.5」公開 料金据え置きで30％以上高速化、タスク当たりコスト最大3割減&lt;/li&gt;&lt;li&gt;AIが書いたコードは「ブラックボックス」でいい？ Claude Code作者が語るプロトタイプと本番の線引き&lt;/li&gt;&lt;li&gt;Nvidia launches new platform for reining in rogue AI agents&lt;/li&gt;&lt;li&gt;OpenAI’s AI agents need to catch up&lt;/li&gt;&lt;li&gt;Google、「Gemini 3.8 Live with Live Avatar」を一般提供開始&lt;/li&gt;&lt;li&gt;最先端AIモデルの「思考しすぎてコスト増加」を解決するべくKimi K3ベースで開発されたAIモデル「Ember-1」が登場&lt;/li&gt;&lt;li&gt;The Lenfest Institute grows landmark program with expanded OpenAI support&lt;/li&gt;&lt;li&gt;Are you a Codex Original?&lt;/li&gt;&lt;li&gt;Basis completes a tax workbook 2x faster with GPT-6 Astra&lt;/li&gt;&lt;li&gt;OpenAI reportedly ditches model over safety concerns&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-28】「アサヒ・ニチレイの惨劇」はどう防げた？ 米HP幹部が語る“ネット遮断AI”と日本攻略 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-28.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-28.html</guid>
-    <pubDate>Sun, 27 Sep 2026 23:19:04 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;「アサヒ・ニチレイの惨劇」はどう防げた？ 米HP幹部が語る“ネット遮断AI”と日本攻略&lt;/li&gt;&lt;li&gt;ロボットを入れれば終わりじゃない フィジカルAIを現場で動かす企業の役割とは&lt;/li&gt;&lt;li&gt;離職率16.2％から6.7％へ 筑波記念病院がAIで見つけた「職場の見えない課題」&lt;/li&gt;&lt;li&gt;安川電機が熟練工の「感覚」をAIロボットで再現、カメラで見ながらアーク溶接&lt;/li&gt;&lt;li&gt;トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設&lt;/li&gt;&lt;li&gt;ファナックがAI溶接エージェント実演 ロボット制御装置が安全PLCに&lt;/li&gt;&lt;li&gt;Anthropic’s CEO is about to have dinner with President Trump&lt;/li&gt;&lt;li&gt;Can Muse overcome Meta’s trust issues?&lt;/li&gt;&lt;li&gt;Anthropic’s Dario Amodei gets the SNL treatment&lt;/li&gt;&lt;li&gt;Claude Code の PreCompact hook でコンテキスト圧縮(/compact・自動圧縮)の直前に作業状態を退避する実装手順 — 圧縮は止められない・stdout は注入されない・auto では custom_instructions が空、3つのハマりどころ【2026】&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
