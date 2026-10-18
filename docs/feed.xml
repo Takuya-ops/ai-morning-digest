@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-19】AIエージェントの暴走とデータ保全対策 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-19.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-19.html</guid>
+    <pubDate>Sun, 18 Oct 2026 22:32:58 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;AIエージェントの暴走とデータ保全対策&lt;/li&gt;&lt;li&gt;Anthropicが株式の5%を公益基金へ拠出&lt;/li&gt;&lt;li&gt;DisneyがCharacter.AI従業員の大半を雇用合意&lt;/li&gt;&lt;li&gt;Meta、スクレイピング等巡る懸念文言を削除&lt;/li&gt;&lt;li&gt;潜在空間で思考するハイブリッド推論エージェント&lt;/li&gt;&lt;li&gt;トヨタ、生産現場データ活用し全方位でロボット開発&lt;/li&gt;&lt;li&gt;トヨタ、ルールベース併用のE2E自動運転を内製化&lt;/li&gt;&lt;li&gt;Claude Code活用の地震掲示板開発記事が話題に&lt;/li&gt;&lt;li&gt;光電融合技術が普及期へ、NVIDIAもGPU間光接続を導入&lt;/li&gt;&lt;li&gt;ロボットやドローンによるビルの無人施工研究&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-18】Meta、AI学習用スクレイピング懸念を呼んだ規約文言を削除 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-18.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-18.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-30.html</guid>
     <pubDate>Tue, 29 Sep 2026 23:55:21 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;GPT-6.1 Sol comes close to Astra at a fifth of the price&lt;/li&gt;&lt;li&gt;NVIDIA、AIエージェントをハードウェアでも監視する「Open Agent Safety Platform」発表 Anthropicなど100以上の組織が参加&lt;/li&gt;&lt;li&gt;Anthropic、Claude Sonnet 5.5を公開 — 料金据え置きで30%以上高速、タスク当たり最大3割安&lt;/li&gt;&lt;li&gt;OpenAI、「24時間働く」エージェント「dots」発表 Astra搭載、クラウド上で常時稼働&lt;/li&gt;&lt;li&gt;OpenAI launches always-on Dots agents to rival Meta&amp;#39;s Muse&lt;/li&gt;&lt;li&gt;Geminiの「Gem」廃止へ、11月17日から「スキル」へ刷新&lt;/li&gt;&lt;li&gt;AMD acquires World Labs AI startup, upping the ante against Nvidia&lt;/li&gt;&lt;li&gt;AIエージェント「Manus 2.0」登場 新アプリ「Cue」も&lt;/li&gt;&lt;li&gt;DevDay 2026 Recap&lt;/li&gt;&lt;li&gt;Introducing dots&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-29】Anthropic、「Claude Sonnet 5.5」公開 料金据え置きで30％以上高速化、タスク当たりコスト最大3割減 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-29.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-29.html</guid>
-    <pubDate>Tue, 29 Sep 2026 00:29:18 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Anthropic、「Claude Sonnet 5.5」公開 料金据え置きで30％以上高速化、タスク当たりコスト最大3割減&lt;/li&gt;&lt;li&gt;AIが書いたコードは「ブラックボックス」でいい？ Claude Code作者が語るプロトタイプと本番の線引き&lt;/li&gt;&lt;li&gt;Nvidia launches new platform for reining in rogue AI agents&lt;/li&gt;&lt;li&gt;OpenAI’s AI agents need to catch up&lt;/li&gt;&lt;li&gt;Google、「Gemini 3.8 Live with Live Avatar」を一般提供開始&lt;/li&gt;&lt;li&gt;最先端AIモデルの「思考しすぎてコスト増加」を解決するべくKimi K3ベースで開発されたAIモデル「Ember-1」が登場&lt;/li&gt;&lt;li&gt;The Lenfest Institute grows landmark program with expanded OpenAI support&lt;/li&gt;&lt;li&gt;Are you a Codex Original?&lt;/li&gt;&lt;li&gt;Basis completes a tax workbook 2x faster with GPT-6 Astra&lt;/li&gt;&lt;li&gt;OpenAI reportedly ditches model over safety concerns&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
