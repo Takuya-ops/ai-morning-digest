@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-20】OpenAI、マイナー言語のコーディングやCOBOL移行の評価を強化 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-20.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-20.html</guid>
+    <pubDate>Mon, 19 Oct 2026 23:55:00 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、マイナー言語のコーディングやCOBOL移行の評価を強化&lt;/li&gt;&lt;li&gt;NscaleとAnthropic、再び450億ドル規模の計算資源契約を協議か&lt;/li&gt;&lt;li&gt;Hugging Face幹部、AI性能評価手法の複雑さと未成熟さを指摘&lt;/li&gt;&lt;li&gt;米国土安全保障省、中国DeepSeek関連製品の排除命令を発令&lt;/li&gt;&lt;li&gt;米マイクロソフト、AIエージェントの内部脅威リスクを警告&lt;/li&gt;&lt;li&gt;日立や東京ガスなど4社、データセンターと発電設備の一体開発で協業&lt;/li&gt;&lt;li&gt;デジタル庁、全府省庁18万人向けに生成AI「源内」を提供へ&lt;/li&gt;&lt;li&gt;江戸川区、AI活用で年間3万5000時間の業務削減に成功&lt;/li&gt;&lt;li&gt;自動運転のTuring、GPU超のチップ活用で開発スピード加速へ&lt;/li&gt;&lt;li&gt;トレンドマイクロ、国内法人のセキュリティに100億円規模の緊急支援&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-19】AIエージェントの暴走とデータ保全対策 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-19.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-19.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-01.html</guid>
     <pubDate>Thu, 01 Oct 2026 00:06:12 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI、AIとチームで作業する「ChatGPT Space」と、継続的に動作するクラウドエージェント「dots」を発表。GPT-6.1 Solも提供開始&lt;/li&gt;&lt;li&gt;Google releases Gemini 4 Argon, called its most powerful model yet&lt;/li&gt;&lt;li&gt;「中国のGLM-5.3はClaude Mythos Preview級のサイバー攻撃能力を持つ一方で安全対策が不十分」とAnthropicが警告&lt;/li&gt;&lt;li&gt;AI時代に接近する決済とトークン Stripeが描くエージェンティックエコノミー&lt;/li&gt;&lt;li&gt;Google reportedly tests paying publishers for AI search results&lt;/li&gt;&lt;li&gt;Disrupting a coordinated model-distillation campaign&lt;/li&gt;&lt;li&gt;Helping small businesses put AI to work&lt;/li&gt;&lt;li&gt;AI主権はなぜ「切実な経営課題」になったのか モデル“禁輸”問題が示した「選択肢を持つこと」の重要性&lt;/li&gt;&lt;li&gt;日立とファナックがフィジカルAI協業 日立エッジAI×ファナックロボ有効性も検証&lt;/li&gt;&lt;li&gt;Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-09-30】GPT-6.1 Sol comes close to Astra at a fifth of the price ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-30.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-09-30.html</guid>
-    <pubDate>Tue, 29 Sep 2026 23:55:21 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;GPT-6.1 Sol comes close to Astra at a fifth of the price&lt;/li&gt;&lt;li&gt;NVIDIA、AIエージェントをハードウェアでも監視する「Open Agent Safety Platform」発表 Anthropicなど100以上の組織が参加&lt;/li&gt;&lt;li&gt;Anthropic、Claude Sonnet 5.5を公開 — 料金据え置きで30%以上高速、タスク当たり最大3割安&lt;/li&gt;&lt;li&gt;OpenAI、「24時間働く」エージェント「dots」発表 Astra搭載、クラウド上で常時稼働&lt;/li&gt;&lt;li&gt;OpenAI launches always-on Dots agents to rival Meta&amp;#39;s Muse&lt;/li&gt;&lt;li&gt;Geminiの「Gem」廃止へ、11月17日から「スキル」へ刷新&lt;/li&gt;&lt;li&gt;AMD acquires World Labs AI startup, upping the ante against Nvidia&lt;/li&gt;&lt;li&gt;AIエージェント「Manus 2.0」登場 新アプリ「Cue」も&lt;/li&gt;&lt;li&gt;DevDay 2026 Recap&lt;/li&gt;&lt;li&gt;Introducing dots&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
