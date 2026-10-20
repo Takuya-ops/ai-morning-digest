@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-21】OpenAI、創薬AI強化へOrchestra Bioを買収 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-21.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-21.html</guid>
+    <pubDate>Tue, 20 Oct 2026 23:22:12 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、創薬AI強化へOrchestra Bioを買収&lt;/li&gt;&lt;li&gt;米国土安全保障省、中国DeepSeek製品を連邦文民機関から排除&lt;/li&gt;&lt;li&gt;車載Geminiの個人連携強化とAIエージェントのマイクラクリア&lt;/li&gt;&lt;li&gt;フランチャイズ店がChatGPT導入で照合時間を94％削減&lt;/li&gt;&lt;li&gt;AnthropicがAI安全性法案を提案、政府差し止めには裁判許可要求&lt;/li&gt;&lt;li&gt;DMG森精機、工作機械の不具合対応を支援する生成AIを提供&lt;/li&gt;&lt;li&gt;Hugging Face CEO、NetflixのAI特集は不正確と警告&lt;/li&gt;&lt;li&gt;インテル、PC市場鈍化で苦戦もAI半導体需要を好機に変革へ&lt;/li&gt;&lt;li&gt;PFNと米Tenstorrent、光電融合を活かしたAI半導体を共同開発&lt;/li&gt;&lt;li&gt;NTT提唱の光技術IOWN、欧州データセンターの電力危機救うか&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-20】OpenAI、マイナー言語のコーディングやCOBOL移行の評価を強化 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-20.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-20.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-02.html</guid>
     <pubDate>Fri, 02 Oct 2026 00:03:50 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Google、GPT-6 Astra対抗の「Gemini 4 Argon」発表&lt;/li&gt;&lt;li&gt;Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search&lt;/li&gt;&lt;li&gt;The eternal complement&lt;/li&gt;&lt;li&gt;How Albertsons Companies is reimagining retail from the inside out&lt;/li&gt;&lt;li&gt;GoogleがGeminiアプリとWorkspaceに「スキル」を導入、Gemsは廃止へ&lt;/li&gt;&lt;li&gt;The Den frees up 10-15 hours a week to grow with ChatGPT Work&lt;/li&gt;&lt;li&gt;「長く働くAI」が裏目に？ OpenAIの“脱走事件”が示すリスクの変化 企業に求められる対応は&lt;/li&gt;&lt;li&gt;「DMに逃げる理由は秘密保持ではない」 人とAIエージェントの“最強チーム”を作るベストプラクティス&lt;/li&gt;&lt;li&gt;ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能&lt;/li&gt;&lt;li&gt;「Claude」3倍高速化の裏で、Anthropic開発者が「あえてしなかったこと」：899th Lap&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-01】OpenAI、AIとチームで作業する「ChatGPT Space」と、継続的に動作するクラウドエージェント「dots」を発表。GPT-6.1 Solも提供開始 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-01.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-01.html</guid>
-    <pubDate>Thu, 01 Oct 2026 00:06:12 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAI、AIとチームで作業する「ChatGPT Space」と、継続的に動作するクラウドエージェント「dots」を発表。GPT-6.1 Solも提供開始&lt;/li&gt;&lt;li&gt;Google releases Gemini 4 Argon, called its most powerful model yet&lt;/li&gt;&lt;li&gt;「中国のGLM-5.3はClaude Mythos Preview級のサイバー攻撃能力を持つ一方で安全対策が不十分」とAnthropicが警告&lt;/li&gt;&lt;li&gt;AI時代に接近する決済とトークン Stripeが描くエージェンティックエコノミー&lt;/li&gt;&lt;li&gt;Google reportedly tests paying publishers for AI search results&lt;/li&gt;&lt;li&gt;Disrupting a coordinated model-distillation campaign&lt;/li&gt;&lt;li&gt;Helping small businesses put AI to work&lt;/li&gt;&lt;li&gt;AI主権はなぜ「切実な経営課題」になったのか モデル“禁輸”問題が示した「選択肢を持つこと」の重要性&lt;/li&gt;&lt;li&gt;日立とファナックがフィジカルAI協業 日立エッジAI×ファナックロボ有効性も検証&lt;/li&gt;&lt;li&gt;Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
