@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-22】OpenAIのモデルがGoogle Cloudで提供開始へ ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-22.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-22.html</guid>
+    <pubDate>Wed, 21 Oct 2026 23:33:55 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAIのモデルがGoogle Cloudで提供開始へ&lt;/li&gt;&lt;li&gt;数千のAIエージェントを活用し脳細胞データから新発見&lt;/li&gt;&lt;li&gt;Anthropicが新AIエージェント「Claude Duet」発表&lt;/li&gt;&lt;li&gt;PHPの重大脆弱性をAIが発見、世界でサービス一時停止も&lt;/li&gt;&lt;li&gt;OpenAI、配信パートナー向けに共通安全基準を策定&lt;/li&gt;&lt;li&gt;米AT&amp;amp;T、OpenAIと連携し社内法務業務を効率化&lt;/li&gt;&lt;li&gt;ChatGPT広告が26か国へ拡大、出稿主10万社を突破&lt;/li&gt;&lt;li&gt;OpenAI、OSS脆弱性対策「Patch the Planet」始動&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPT専用のLLM広告配信基盤を公開&lt;/li&gt;&lt;li&gt;OpenAI、サイバー防衛者強化の青写真を発表&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-21】OpenAI、創薬AI強化へOrchestra Bioを買収 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-21.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-21.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-03.html</guid>
     <pubDate>Fri, 02 Oct 2026 23:57:47 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;ChatGPTの“利用制限”リセットへ 有料ユーザー向け&lt;/li&gt;&lt;li&gt;A model guide for the GPT-6 family&lt;/li&gt;&lt;li&gt;Chatham scales its capital markets expertise with OpenAI&lt;/li&gt;&lt;li&gt;Sean Parker is rebuilding Stability AI around music&lt;/li&gt;&lt;li&gt;Affected by layoffs? Don’t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass&lt;/li&gt;&lt;li&gt;Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents&lt;/li&gt;&lt;li&gt;Call it AI, call it Super Intelligence, only 2% of consumers are buying it&lt;/li&gt;&lt;li&gt;It’s not AI anymore, it’s ‘super intelligence’ (according to the White House)&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026: Blackstone’s Jas Khaira on building the next generation of AI giants&lt;/li&gt;&lt;li&gt;Circuit Breaker Labs hopes to make AI safer for your kids (and you)&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-02】Google、GPT-6 Astra対抗の「Gemini 4 Argon」発表 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-02.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-02.html</guid>
-    <pubDate>Fri, 02 Oct 2026 00:03:50 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Google、GPT-6 Astra対抗の「Gemini 4 Argon」発表&lt;/li&gt;&lt;li&gt;Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search&lt;/li&gt;&lt;li&gt;The eternal complement&lt;/li&gt;&lt;li&gt;How Albertsons Companies is reimagining retail from the inside out&lt;/li&gt;&lt;li&gt;GoogleがGeminiアプリとWorkspaceに「スキル」を導入、Gemsは廃止へ&lt;/li&gt;&lt;li&gt;The Den frees up 10-15 hours a week to grow with ChatGPT Work&lt;/li&gt;&lt;li&gt;「長く働くAI」が裏目に？ OpenAIの“脱走事件”が示すリスクの変化 企業に求められる対応は&lt;/li&gt;&lt;li&gt;「DMに逃げる理由は秘密保持ではない」 人とAIエージェントの“最強チーム”を作るベストプラクティス&lt;/li&gt;&lt;li&gt;ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能&lt;/li&gt;&lt;li&gt;「Claude」3倍高速化の裏で、Anthropic開発者が「あえてしなかったこと」：899th Lap&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
