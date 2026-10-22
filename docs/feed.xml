@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-23】Anthropicが常時稼働AI「Claude Duet」発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-23.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-23.html</guid>
+    <pubDate>Thu, 22 Oct 2026 23:34:12 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Anthropicが常時稼働AI「Claude Duet」発表&lt;/li&gt;&lt;li&gt;OpenAIのモデルがPHPの重大な脆弱性を発見&lt;/li&gt;&lt;li&gt;Google CloudにOpenAIモデルが追加へ&lt;/li&gt;&lt;li&gt;Uberが全従業員3万人にChatGPTを導入&lt;/li&gt;&lt;li&gt;Canvaが初の画像生成AI「Canva Craft」発表&lt;/li&gt;&lt;li&gt;OpenAI、高速低コストな「Decisions API」発表&lt;/li&gt;&lt;li&gt;ChatGPT広告が89カ国に拡大、広告主10万社超&lt;/li&gt;&lt;li&gt;中国系集団がAIで攻撃自動化とMS警告&lt;/li&gt;&lt;li&gt;声で動く協働ロボ向けパッケージを共同開発&lt;/li&gt;&lt;li&gt;OpenAI、評価額1.25兆ドルで300億ドル調達へ&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-22】OpenAIのモデルがGoogle Cloudで提供開始へ ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-22.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-22.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-04.html</guid>
     <pubDate>Sun, 04 Oct 2026 00:35:44 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAIの安全性担当者が退任、「企業文化が崩壊」と警告&lt;/li&gt;&lt;li&gt;Apple、macOSの「フルディスクアクセス」に新制限へ&lt;/li&gt;&lt;li&gt;OpenAI元安全性統括者「文化崩壊」寄稿、開発手法に警鐘&lt;/li&gt;&lt;li&gt;AWS CEO、データセンター批判に反論しNDA撤廃を表明&lt;/li&gt;&lt;li&gt;テキストメッセージ内で動作する注目のAIエージェント一覧&lt;/li&gt;&lt;li&gt;Amazon、データセンター批判に反論し10億ドル超の基金設立&lt;/li&gt;&lt;li&gt;Meta、AI「Muse」連携の自作ガジェット用SDKを公開&lt;/li&gt;&lt;li&gt;Meta、AI「Muse」を家電やガジェットへ無償開放&lt;/li&gt;&lt;li&gt;AIエージェント完了報告とDB不整合の検証記事&lt;/li&gt;&lt;li&gt;ClaudeとClaude Code向けOpus 5.5活用ガイド公開&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-03】ChatGPTの“利用制限”リセットへ 有料ユーザー向け ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-03.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-03.html</guid>
-    <pubDate>Fri, 02 Oct 2026 23:57:47 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;ChatGPTの“利用制限”リセットへ 有料ユーザー向け&lt;/li&gt;&lt;li&gt;A model guide for the GPT-6 family&lt;/li&gt;&lt;li&gt;Chatham scales its capital markets expertise with OpenAI&lt;/li&gt;&lt;li&gt;Sean Parker is rebuilding Stability AI around music&lt;/li&gt;&lt;li&gt;Affected by layoffs? Don’t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass&lt;/li&gt;&lt;li&gt;Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents&lt;/li&gt;&lt;li&gt;Call it AI, call it Super Intelligence, only 2% of consumers are buying it&lt;/li&gt;&lt;li&gt;It’s not AI anymore, it’s ‘super intelligence’ (according to the White House)&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026: Blackstone’s Jas Khaira on building the next generation of AI giants&lt;/li&gt;&lt;li&gt;Circuit Breaker Labs hopes to make AI safer for your kids (and you)&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
