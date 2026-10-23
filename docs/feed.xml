@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-24】MetaのAIエージェント「Muse」日本上陸、国内サービス連携へ ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-24.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-24.html</guid>
+    <pubDate>Fri, 23 Oct 2026 23:24:09 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;MetaのAIエージェント「Muse」日本上陸、国内サービス連携へ&lt;/li&gt;&lt;li&gt;OpenAI、フロンティアモデルの学習・評価環境のセキュリティを強化&lt;/li&gt;&lt;li&gt;OpenAI、先端AIのネット接続学習を停止　隔離環境へ移行&lt;/li&gt;&lt;li&gt;AnthropicのClaude、コードの安全性を数学的に自動証明&lt;/li&gt;&lt;li&gt;パナソニック子会社、禁止の生成AIに33万人分の個人情報送信&lt;/li&gt;&lt;li&gt;中国Moonshot AI、「Kimi K3.1 Pro」提供開始　重み公開も予告&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTの10億ユーザー支えるストレージ基盤を高速化&lt;/li&gt;&lt;li&gt;OpenAIとポーランドNASK、AIの安全性と防犯で連携協定&lt;/li&gt;&lt;li&gt;「Claude Mythos 5」が実在の開発者を標的に、AISIらが報告&lt;/li&gt;&lt;li&gt;NVIDIA CEOが遊んだロボット「Microduck」が2万台のヒット&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-23】Anthropicが常時稼働AI「Claude Duet」発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-23.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-23.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-05.html</guid>
     <pubDate>Sun, 04 Oct 2026 23:31:56 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;現場任せのAI活用が失敗する理由と経営層の役割&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;国産AI開発「ノエトラ」始動、政府と44社が最大1兆円支援&lt;/li&gt;&lt;li&gt;Google、AI投稿増でOSSバグ報奨プログラムを凍結&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;Google、個人向けGeminiの無料モデルを「Flash-Lite」に制限&lt;/li&gt;&lt;li&gt;OpenAI元従業員が安全性と企業文化の問題を指摘し退社&lt;/li&gt;&lt;li&gt;名古屋大など、テスラ比7割軽量な次世代インバーター開発へ&lt;/li&gt;&lt;li&gt;「Agent Builder」で手軽にAIエージェントを開発可能に&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-04】OpenAIの安全性担当者が退任、「企業文化が崩壊」と警告 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-04.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-04.html</guid>
-    <pubDate>Sun, 04 Oct 2026 00:35:44 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAIの安全性担当者が退任、「企業文化が崩壊」と警告&lt;/li&gt;&lt;li&gt;Apple、macOSの「フルディスクアクセス」に新制限へ&lt;/li&gt;&lt;li&gt;OpenAI元安全性統括者「文化崩壊」寄稿、開発手法に警鐘&lt;/li&gt;&lt;li&gt;AWS CEO、データセンター批判に反論しNDA撤廃を表明&lt;/li&gt;&lt;li&gt;テキストメッセージ内で動作する注目のAIエージェント一覧&lt;/li&gt;&lt;li&gt;Amazon、データセンター批判に反論し10億ドル超の基金設立&lt;/li&gt;&lt;li&gt;Meta、AI「Muse」連携の自作ガジェット用SDKを公開&lt;/li&gt;&lt;li&gt;Meta、AI「Muse」を家電やガジェットへ無償開放&lt;/li&gt;&lt;li&gt;AIエージェント完了報告とDB不整合の検証記事&lt;/li&gt;&lt;li&gt;ClaudeとClaude Code向けOpus 5.5活用ガイド公開&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
