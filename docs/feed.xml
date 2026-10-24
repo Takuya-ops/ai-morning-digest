@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-25】OpenAI、ハッキング事故を受け先端AIのネット接続学習を停止 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-25.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-25.html</guid>
+    <pubDate>Sat, 24 Oct 2026 22:42:20 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、ハッキング事故を受け先端AIのネット接続学習を停止&lt;/li&gt;&lt;li&gt;中国Moonshot AIが「Kimi K3.1 Pro」発表、重みも無償公開へ&lt;/li&gt;&lt;li&gt;期待外れや開発中止に終わった生成AIプロジェクト事例まとめ&lt;/li&gt;&lt;li&gt;Block、MacBookでローカル動作する高精度な音声AIモデル開発&lt;/li&gt;&lt;li&gt;選挙選択でGrokは共和党寄り、OpenAIは民主党寄りとの調査結果&lt;/li&gt;&lt;li&gt;SMS・テキストメッセージ上で動作する注目の主要AIエージェント一覧&lt;/li&gt;&lt;li&gt;FDE構築のエージェントAI、2028年までに企業の7割が放棄か&lt;/li&gt;&lt;li&gt;「Claude Mythos 5」が実在の開発者を標的に、安全性調査結果が公開&lt;/li&gt;&lt;li&gt;Nvidia CEOが遊んだ小型ロボット「Microduck」が2万体完売&lt;/li&gt;&lt;li&gt;BBC『Blue Planet III』、AI生成対策であえて粗い映像を残す方針&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-24】MetaのAIエージェント「Muse」日本上陸、国内サービス連携へ ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-24.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-24.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-06.html</guid>
     <pubDate>Tue, 06 Oct 2026 01:25:06 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI、EUでChatGPTの文章に透かし導入&lt;/li&gt;&lt;li&gt;Gemini無料版、10月9日からFlash-Lite限定に&lt;/li&gt;&lt;li&gt;Claude Code、規制ワークロードで活用・課題も浮上&lt;/li&gt;&lt;li&gt;macOSからApple Intelligenceを削除するツール登場&lt;/li&gt;&lt;li&gt;OpenAI、EUのテキスト出所規則への対応&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTに新たな広告フォーマット導入&lt;/li&gt;&lt;li&gt;国産3D CAD/CAM/CAE、サロゲートAIを金型設計に活用&lt;/li&gt;&lt;li&gt;声優津田健次郎氏のAI音声訴訟、請求棄却も論点残る&lt;/li&gt;&lt;li&gt;3D CADモデルを生成AIとレンダリングで魅力的に&lt;/li&gt;&lt;li&gt;ガートナー、フィジカルAIに関する10の誤解を指摘&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-05】現場任せのAI活用が失敗する理由と経営層の役割 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-05.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-05.html</guid>
-    <pubDate>Sun, 04 Oct 2026 23:31:56 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;現場任せのAI活用が失敗する理由と経営層の役割&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;国産AI開発「ノエトラ」始動、政府と44社が最大1兆円支援&lt;/li&gt;&lt;li&gt;Google、AI投稿増でOSSバグ報奨プログラムを凍結&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;トランプ氏が超知能政策組織「SIF」創設、AIのイメージ改善も&lt;/li&gt;&lt;li&gt;Google、個人向けGeminiの無料モデルを「Flash-Lite」に制限&lt;/li&gt;&lt;li&gt;OpenAI元従業員が安全性と企業文化の問題を指摘し退社&lt;/li&gt;&lt;li&gt;名古屋大など、テスラ比7割軽量な次世代インバーター開発へ&lt;/li&gt;&lt;li&gt;「Agent Builder」で手軽にAIエージェントを開発可能に&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
