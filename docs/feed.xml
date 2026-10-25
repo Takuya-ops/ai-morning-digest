@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-26】AI時代の資源獲得と開発現場の課題 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-26.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-26.html</guid>
+    <pubDate>Sun, 25 Oct 2026 22:48:23 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;AI時代の資源獲得と開発現場の課題&lt;/li&gt;&lt;li&gt;Grokが全編AI生成映像「Odyssey」の冒頭7分を公開&lt;/li&gt;&lt;li&gt;非テック企業にとってAIの財務的リターンはゼロとの分析&lt;/li&gt;&lt;li&gt;Muse CharmやFriendなど注目のAIウェアラブルが登場&lt;/li&gt;&lt;li&gt;サイバー攻撃が多様化、生成AI悪用による侵害も増加&lt;/li&gt;&lt;li&gt;自律的な開発手法「ループエンジニアリング」に期待&lt;/li&gt;&lt;li&gt;AIで加速する情報漏洩、侵入口塞ぐ以外の備えが急務&lt;/li&gt;&lt;li&gt;OpenAIとAnthropicがLLM価格を最大80%値下げ&lt;/li&gt;&lt;li&gt;川崎重工、造船や介護で培ったフィジカルAIロボを外販へ&lt;/li&gt;&lt;li&gt;建設現場の生成AI導入、施工管理など中核業務では途上&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-25】OpenAI、ハッキング事故を受け先端AIのネット接続学習を停止 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-25.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-25.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-07.html</guid>
     <pubDate>Wed, 07 Oct 2026 00:02:13 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Introducing Mistral Large 4: Le chonk&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTの生成文に電子透かし EUで導入へ&lt;/li&gt;&lt;li&gt;Sharing AI progress in mathematics&lt;/li&gt;&lt;li&gt;Atlassian and OpenAI expand partnership to turn enterprise knowledge into action&lt;/li&gt;&lt;li&gt;How Jump Trading is scaling quant research with ChatGPT&lt;/li&gt;&lt;li&gt;Googleが無料・下位プランで使えるGeminiのモデルを制限&lt;/li&gt;&lt;li&gt;ChatGPT、画像生成中にビジュアル広告 米国でテスト開始へ&lt;/li&gt;&lt;li&gt;Advancing computer use with Ironclad&lt;/li&gt;&lt;li&gt;なぜ答えが揺れ、堂々と間違えるのか ―― 確率で動く生成AIの正体&lt;/li&gt;&lt;li&gt;Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-06】OpenAI、EUでChatGPTの文章に透かし導入 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-06.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-06.html</guid>
-    <pubDate>Tue, 06 Oct 2026 01:25:06 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAI、EUでChatGPTの文章に透かし導入&lt;/li&gt;&lt;li&gt;Gemini無料版、10月9日からFlash-Lite限定に&lt;/li&gt;&lt;li&gt;Claude Code、規制ワークロードで活用・課題も浮上&lt;/li&gt;&lt;li&gt;macOSからApple Intelligenceを削除するツール登場&lt;/li&gt;&lt;li&gt;OpenAI、EUのテキスト出所規則への対応&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTに新たな広告フォーマット導入&lt;/li&gt;&lt;li&gt;国産3D CAD/CAM/CAE、サロゲートAIを金型設計に活用&lt;/li&gt;&lt;li&gt;声優津田健次郎氏のAI音声訴訟、請求棄却も論点残る&lt;/li&gt;&lt;li&gt;3D CADモデルを生成AIとレンダリングで魅力的に&lt;/li&gt;&lt;li&gt;ガートナー、フィジカルAIに関する10の誤解を指摘&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
