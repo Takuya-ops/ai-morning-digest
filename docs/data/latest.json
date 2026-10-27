@@ -1,14 +1,19 @@
 {
  "schemaVersion": 3,
- "date": "2026-10-26",
- "generatedAt": "2026-10-25T22:48:23.743Z",
- "since": "2026-10-24T20:44:40.829Z",
+ "date": "2026-10-27",
+ "generatedAt": "2026-10-27T00:02:35.460Z",
+ "since": "2026-10-25T22:01:13.855Z",
  "windowHours": 26,
  "stats": {
-  "articleCount": 60,
+  "articleCount": 144,
   "feedCount": 32,
-  "topicCount": 58,
+  "topicCount": 136,
   "feedErrors": [
+   {
+    "feedId": "deepmind",
+    "feedName": "Google DeepMind",
+    "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+   },
    {
     "feedId": "venturebeat-ai",
     "feedName": "VentureBeat AI",
@@ -18,939 +23,1435 @@
  },
  "topics": [
   {
-   "id": "880142f70163c02e924e9214",
+   "id": "35e334c198740f7416638922",
    "topics": [
-    "開発ツール",
-    "企業導入事例"
+    "モデル・API"
    ],
-   "summaryStyles": {
-    "short": "AI開発で学習データの重要性が急上昇。\n開発速度は上がるも成果につながらぬ罠。\nセキュリティ脅威に伴う働き方の変化。",
-    "detail": "生成AIの競争はハードウェアやモデル規模だけでなく、質の高い学習データの確保へとシフトしています。象徴的な事例として、グーグルが航空会社の業務データを購入した動きなどが挙げられます。一方でソフトウェア開発の現場では、AIコーディングツールの導入によって実装速度が劇的に上がったものの、顧客のニーズを見誤ればプロダクトの成長にはつながらないという課題が指摘されています。また、言語の脆弱性を突いた不正アクセスなどAI時代におけるセキュリティ脅威も深刻化しており、開発文化や働き方そのものの見直しが求められています。",
-    "simple": "AIを賢くするために、企業の独自データが重要な資源となっています。一方で、AIを使ってアプリを速く作れるようになっても、利用者が求めるものを作らなければ意味がありません。セキュリティにも注意が必要です。"
-   },
-   "faq": [
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 1,
+   "headline": "Introducing GPT-6.1 Terra",
+   "summary": "Bringing fast and capable computer use to everyone",
+   "whyItMatters": "",
+   "score": 13.5,
+   "sourceCount": 3,
+   "entities": [
+    "gpt",
+    "openai"
+   ],
+   "articles": [
     {
-     "q": "グーグルが航空会社のデータを購入した理由は何ですか？",
-     "a": "モデルの性能を左右する重要な資源である学習データを確保するためです。"
+     "title": "Introducing GPT-6.1 Terra",
+     "link": "https://openai.com/index/introducing-gpt-6-1-terra",
+     "feedName": "OpenAI",
+     "lang": "en",
+     "date": "2026-10-26T00:00:00.000Z"
     },
     {
-     "q": "開発現場でAIツールを使っても成果が出ないのはなぜですか？",
-     "a": "実装速度が上がっても、顧客が求めるものを提供できていない可能性があるためです。"
+     "title": "GPT-6.1 Terra",
+     "link": "https://openai.com/index/introducing-gpt-6-1-terra/",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-10-26T18:01:17.000Z"
     },
     {
-     "q": "具体的にどの航空会社のデータをいくらで購入しましたか？",
-     "a": "記事には記載なし"
+     "title": "GPT-6.1 Terra halves OpenAI's API prices and still gains ground on its larger models",
+     "link": "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/",
+     "feedName": "The Decoder",
+     "lang": "en",
+     "date": "2026-10-26T20:30:55.000Z"
     }
    ],
-   "aiGenerated": true,
-   "rank": 1,
-   "headline": "AI時代の資源獲得と開発現場の課題",
-   "summary": "生成AIの競争において、GPUや計算基盤だけでなく学習データの重要性が高まっており、グーグルによる航空会社の業務データ購入などデータ確保の動きが見られます。一方で開発現場では、AI導入により実装速度が向上したもののプロダクトの成果につながらない罠や、サイバー攻撃などの脅威に伴う働き方の変化に直面しています。",
-   "whyItMatters": "AIの性能を左右する独自データの価値が高まる一方、開発現場では速度至上主義の見直しやセキュリティ対応が求められています。",
-   "score": 5,
+   "articleKey": "https://openai.com/index/introducing-gpt-6-1-terra",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "73b542ac10c04d09b317566976d7a46c16fc066839ddf825dc5134d5e966fb88"
+   }
+  },
+  {
+   "id": "8eb6001a836a6e50b8fb133e",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 2,
+   "headline": "Working with academic communities to build scientific understanding",
+   "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
+   "whyItMatters": "",
+   "score": 10,
    "sourceCount": 2,
    "entities": [
-    "google"
+    "openai"
    ],
    "articles": [
     {
-     "title": "AI時代の「石油」--グーグルが航空会社の業務データを購入した理由",
-     "link": "https://japan.zdnet.com/article/35253901/",
-     "feedName": "ZDNET Japan",
-     "lang": "ja",
-     "date": "2026-10-25T22:00:00.000Z"
+     "title": "Working with academic communities to build scientific understanding",
+     "link": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+     "feedName": "OpenAI",
+     "lang": "en",
+     "date": "2026-10-26T14:30:00.000Z"
     },
     {
-     "title": "AI時代の罠：求められていないものを、速く作る",
-     "link": "https://zenn.dev/chris_probably/articles/f6ffe71678cde1",
-     "feedName": "Zenn 生成AI",
-     "lang": "ja",
-     "date": "2026-10-25T11:04:13.000Z"
-    },
-    {
-     "title": "AI時代の働き方——疑念の先で何を守るか",
-     "link": "https://zenn.dev/dev_unr/articles/new-working-style",
-     "feedName": "Zenn 生成AI",
-     "lang": "ja",
-     "date": "2026-10-25T05:17:36.000Z"
+     "title": "Working with academic communities to build scientific understanding",
+     "link": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-10-26T21:35:28.000Z"
     }
    ],
-   "articleKey": "https://japan.zdnet.com/article/35253901/",
+   "articleKey": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
    "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
    },
    "narration": {
-    "language": "ja",
-    "scriptHash": "95079dd6d9127a13b376174ab5e22d0c8bbd4432ffd40bf0499abb2a5cca699b"
+    "language": "en",
+    "scriptHash": "d4a1919254b16fe724fbaca04841d2dbdf0d5fd3a496ce101f8bc7c4e046f16d"
    }
   },
   {
-   "id": "08ec5c76056e031d898a328e",
+   "id": "9efff0eef3082f679f5b32d8",
    "topics": [
-    "画像・動画生成",
     "モデル・API"
    ],
-   "summaryStyles": {
-    "short": "GrokがAI生成映像「Odyssey」を公開。\n冒頭7分間の映像が披露される。\n芸術性を求めなければ許容範囲の仕上がり。",
-    "detail": null,
-    "simple": "AIの「Grok」が、AIだけで作った「Odyssey」という映像の最初の7分間を公開しました。見た目は整っていますが、人間らしさや感動を求めるにはまだ課題があるようです。"
-   },
-   "faq": [
-    {
-     "q": "「Odyssey」はどのような作品ですか？",
-     "a": "GrokによってAI生成された映像作品です。"
-    },
-    {
-     "q": "公開された映像の評価はどうですか？",
-     "a": "芸術性や人間味などを求めなければ、問題ない仕上がりとされています。"
-    },
-    {
-     "q": "全編の公開日や公開プラットフォームはどこですか？",
-     "a": "記事には記載なし"
-    }
-   ],
-   "aiGenerated": true,
-   "rank": 2,
-   "headline": "Grokが全編AI生成映像「Odyssey」の冒頭7分を公開",
-   "summary": "AIのGrokが、AIによって生成された作品「Odyssey」の冒頭7分間の映像を公開しました。公開された映像について、芸術性やインスピレーション、人間味などを求めなければ問題ない仕上がりであると報じられています。",
-   "whyItMatters": "動画生成AIによる長尺コンテンツ制作の進展を示す一方で、芸術性や表現力における課題が浮き彫りになっています。",
-   "score": 4.5,
-   "sourceCount": 1,
-   "entities": [
-    "grok"
-   ],
-   "articles": [
-    {
-     "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
-     "link": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
-     "feedName": "TechCrunch AI",
-     "lang": "en",
-     "date": "2026-10-25T21:31:16.000Z"
-    }
-   ],
-   "articleKey": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
-   "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
-   },
-   "narration": {
-    "language": "ja",
-    "scriptHash": "99f7742cab0497dc31832722fadbb46fe6de133cf03966b77f9861f29208c1b4"
-   }
-  },
-  {
-   "id": "9a814be9eb368823251ceec6",
-   "topics": [
-    "企業導入事例"
-   ],
-   "summaryStyles": {
-    "short": "アポロのエコノミストがAIの収益性を分析。\n巨額投資にもかかわらず財務的恩恵は皆無。\nテック企業以外の米国企業で成果出ず。",
-    "detail": null,
-    "simple": "投資会社アポロのエコノミストによると、AIに多額の投資が行われているものの、IT業界以外の企業には売上や利益といった財務的な成果が全く出ていないとされています。"
-   },
-   "faq": [
-    {
-     "q": "AIで財務的リターンが得られていないのはどの業界ですか？",
-     "a": "テクノロジー業界以外の米国の一般企業です。"
-    },
-    {
-     "q": "分析を発表した専門家は誰ですか？",
-     "a": "アポロ（Apollo）のエコノミストです。"
-    },
-    {
-     "q": "なぜ財務的なリターンが得られていないのですか？",
-     "a": "記事には記載なし"
-    }
-   ],
-   "aiGenerated": true,
+   "faq": [],
+   "aiGenerated": false,
    "rank": 3,
-   "headline": "非テック企業にとってAIの財務的リターンはゼロとの分析",
-   "summary": "アポロのエコノミストは、人工知能に対する巨額の投資と広範な過熱感にもかかわらず、テクノロジー業界以外の米国の一般企業に対してAIは実質的に何の財務的利益ももたらしていないと指摘しました。",
-   "whyItMatters": "AIへの莫大な投資が実際の企業収益に結びついていないという投資対効果（ROI）の懸念を浮き彫りにしています。",
-   "score": 4.5,
-   "sourceCount": 1,
-   "entities": [],
+   "headline": "Google、プライバシーポリシーに「Gmail」「Googleフォト」のデータを広告に使う例外を追加 回避方法は",
+   "summary": "Googleはプライバシーポリシーを更新し、検索やGeminiにGmailやフォトなどのアクセスを許可した場合、そのデータが広告のパーソナライズに使われる例外規定を明記した。背景には「パーソナルインテリジェンス」機能があり、連携を解除しても検索履歴に残ったデータは削除されない。",
+   "whyItMatters": "",
+   "score": 7.5,
+   "sourceCount": 2,
+   "entities": [
+    "google",
+    "gemini"
+   ],
    "articles": [
     {
-     "title": "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
-     "link": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
-     "feedName": "TechCrunch AI",
-     "lang": "en",
-     "date": "2026-10-25T16:57:32.000Z"
+     "title": "Google、プライバシーポリシーに「Gmail」「Googleフォト」のデータを広告に使う例外を追加 回避方法は",
+     "link": "https://www.itmedia.co.jp/news/article/2610/26/2000002570/",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-10-25T23:28:28.000Z"
+    },
+    {
+     "title": "Googleが「GmailやGoogleフォトの内容は広告に利用しない」という方針に例外を追加、AIとのデータ共有が広告に影響する可能性",
+     "link": "https://gigazine.net/news/20261026-google-privacy-policy/",
+     "feedName": "GIGAZINE",
+     "lang": "ja",
+     "date": "2026-10-26T07:40:00.000Z"
     }
    ],
-   "articleKey": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+   "articleKey": "https://www.itmedia.co.jp/news/article/2610/26/2000002570/",
    "editorial": {
-    "method": "ai_summary",
+    "method": "source_excerpt",
     "language": "ja",
     "status": "ready"
    },
    "narration": {
     "language": "ja",
-    "scriptHash": "940a91a8c0aaabbb021471cd054a147717fad29bb95109bdded664a3d27dfd72"
+    "scriptHash": "3382c6bf562735c1a45a45b1ef0543fb345b7719203717632f69ae2fdaed60f3"
    }
   },
   {
-   "id": "a18a7851efbde35c1b2abb7e",
+   "id": "a9c488820a62ac4adcd9d66c",
    "topics": [
+    "モデル・API",
     "開発ツール"
    ],
-   "summaryStyles": {
-    "short": "注目のAIウェアラブル製品群が紹介。\nMuse CharmやBee、Friendなど。\nPlaudを含む多様な端末が登場。",
-    "detail": null,
-    "simple": "身につけて使うAIデバイスが話題を集めています。「Muse Charm」や「Bee」「Friend」「Plaud」など、様々な新しいAIガジェットが登場しています。"
-   },
-   "faq": [
-    {
-     "q": "紹介されたAIウェアラブルにはどのような製品がありますか？",
-     "a": "Muse Charm、Bee、Friend、Plaudなどが含まれています。"
-    },
-    {
-     "q": "これらのデバイスの具体的な機能や価格はどうなっていますか？",
-     "a": "記事には記載なし"
-    },
-    {
-     "q": "どのような用途を目的としたリストですか？",
-     "a": "記事には記載なし"
-    }
-   ],
-   "aiGenerated": true,
+   "faq": [],
+   "aiGenerated": false,
    "rank": 4,
-   "headline": "Muse CharmやFriendなど注目のAIウェアラブルが登場",
-   "summary": "TechCrunchが注目のAIウェアラブル端末やガジェットのリストを公開しました。紹介された製品には、Muse CharmやBee、Friend、Plaudなどが含まれています。",
-   "whyItMatters": "画面操作を前提としない専用のAIウェアラブル機器が続々と登場し、新たなデバイス市場の形成が進んでいます。",
-   "score": 4.5,
-   "sourceCount": 1,
-   "entities": [],
-   "articles": [
-    {
-     "title": "The hottest AI wearables and gadgets you should know about",
-     "link": "https://techcrunch.com/2026/10/25/the-hottest-ai-wearables-and-gadgets-you-should-know-about/",
-     "feedName": "TechCrunch AI",
-     "lang": "en",
-     "date": "2026-10-25T14:10:00.000Z"
-    }
-   ],
-   "articleKey": "https://techcrunch.com/2026/10/25/the-hottest-ai-wearables-and-gadgets-you-should-know-about/",
-   "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
-   },
-   "narration": {
-    "language": "ja",
-    "scriptHash": "99aaa3f8eb690e430bd9e9f33cc41d9f0803f2a2265e275d18438e806b8b8f01"
-   }
-  },
-  {
-   "id": "1df13acbfe724ed2dc3ac865",
-   "topics": [
-    "開発ツール"
-   ],
-   "summaryStyles": {
-    "short": "サイバー攻撃の手口が多方面に多様化。\nVPN脆弱性や認証情報の悪用が続く。\n生成AIによる脆弱性探索や攻撃コード作成も。",
-    "detail": null,
-    "simple": "サイバー攻撃の手口が広がっています。従来のようなパスワードの悪用やシステムの弱点を突く攻撃に加え、AIを使ってシステムの欠陥を探したり攻撃用プログラムを作ったりする手口が増えています。"
-   },
-   "faq": [
-    {
-     "q": "生成AIはサイバー攻撃でどのように悪用されていますか？",
-     "a": "脆弱性の発見や攻撃コードの作成に利用されています。"
-    },
-    {
-     "q": "記事で挙げられている攻撃手口には何がありますか？",
-     "a": "VPNの脆弱性悪用、漏洩済み認証情報の悪用、生成AIの悪用、OSSの依存関係や開発ツール起点の手口などです。"
-    },
-    {
-     "q": "「残念なセキュリティーを招く3大パターン」の具体名は何ですか？",
-     "a": "記事には記載なし"
-    }
-   ],
-   "aiGenerated": true,
-   "rank": 5,
-   "headline": "サイバー攻撃が多様化、生成AI悪用による侵害も増加",
-   "summary": "近年、サイバー攻撃の手口が多様化しています。VPNの脆弱性を突いた侵入や流出済み認証情報の悪用に加え、生成AIを利用した脆弱性の発見や攻撃コードの作成、オープンソースソフトウェア（OSS）の依存関係を狙った侵害などが生じています。",
-   "whyItMatters": "攻撃者が生成AIを活用して攻撃コードを作成するなど、サイバー攻撃の高度化と手口の拡大が企業防衛の難易度を上げています。",
-   "score": 3.5,
-   "sourceCount": 1,
-   "entities": [],
-   "articles": [
-    {
-     "title": "「残念なセキュリティー」を招く3大パターン",
-     "link": "https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/101900259/101900001/",
-     "feedName": "日経クロステック",
-     "lang": "ja",
-     "date": "2026-10-25T22:00:00.000Z"
-    }
-   ],
-   "articleKey": "https://xtech.nikkei.com/atcl/nxt/mag/nnw/18/101900259/101900001/",
-   "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
-   },
-   "narration": {
-    "language": "ja",
-    "scriptHash": "03028acf8289790abde600a495d99eb60d1c52ccae618858e4b92c820e8b17e0"
-   }
-  },
-  {
-   "id": "7f0dc704cb4baa02e3acae0d",
-   "topics": [
-    "エージェント",
-    "開発ツール"
-   ],
-   "summaryStyles": {
-    "short": "開発を自律化するループエンジニアリング。\n実装から検証・修正をAIが自動で反復。\n指示出しを減らし生産性の大幅向上狙う。",
-    "detail": "ループエンジニアリングとは、ソフトウェア開発における実装、検証、修正などのプロセスを、人間が都度指示を出さずにAIが自律的に反復できるように設計・管理する新たな手法です。従来のAIコーディング支援では人間が工程ごとにプロンプトなどで介入する必要がありましたが、この手法ではAIが自動でループを回す構造自体を人間が設計します。これにより、多くの開発工程を自動化でき、ソフトウェア開発全体の生産性が大きく向上すると期待されています。",
-    "simple": "「ループエンジニアリング」とは、プログラムを作ってテストし、直すという作業を、人間が細かく指示しなくてもAIが自動で繰り返せるように仕組みを整える開発方法のことです。"
-   },
-   "faq": [
-    {
-     "q": "ループエンジニアリングとは何ですか？",
-     "a": "ソフトウエアの実装・検証・修正を、人間が都度指示しなくてもAIが自律的に繰り返せるように設計・管理する手法です。"
-    },
-    {
-     "q": "この手法を導入するメリットは何ですか？",
-     "a": "開発工程の多くを自動化できるため、生産性の向上が期待されます。"
-    },
-    {
-     "q": "どのようなツールやプログラミング言語に対応していますか？",
-     "a": "記事には記載なし"
-    }
-   ],
-   "aiGenerated": true,
-   "rank": 6,
-   "headline": "自律的な開発手法「ループエンジニアリング」に期待",
-   "summary": "ソフトウエアの実装や検証、修正といった開発プロセスを、AIが自律的に繰り返せるように設計・管理する「ループエンジニアリング」が注目されています。人間が各工程で指示を出さなくてもAIがループを回すことで、開発工程の大幅な自動化と生産性向上が期待されています。",
-   "whyItMatters": "AIを単なる支援ツールから自律的な開発エージェントへと移行させるための設計手法として、開発現場の生産性に影響を与えます。",
-   "score": 3.5,
-   "sourceCount": 1,
-   "entities": [],
-   "articles": [
-    {
-     "title": "ループエンジニアリング（Loop Engineering）",
-     "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600009/102200234/",
-     "feedName": "日経クロステック",
-     "lang": "ja",
-     "date": "2026-10-25T22:00:00.000Z"
-    }
-   ],
-   "articleKey": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600009/102200234/",
-   "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
-   },
-   "narration": {
-    "language": "ja",
-    "scriptHash": "31316c0d011d1a1d953bcc89968229bc30c9473dea48344db1ac3ae4acf2caf4"
-   }
-  },
-  {
-   "id": "6aa0c5d039abfdd10cd0bd9c",
-   "topics": [
-    "国内動向"
-   ],
-   "summaryStyles": {
-    "short": "企業の情報漏洩被害が相次ぎ発生。\nAIで攻撃が高速化も侵入口は従来通り。\n侵入前提で大量流出を防ぐ備えが必要。",
-    "detail": "「タイムズカー」での免許証画像漏洩を筆頭に、国内企業で短期間に情報漏洩被害が相次いでいます。攻撃者がAIを悪用することで攻撃のスピードが加速している一方、米マイクロソフトは侵入の入り口自体は従来と変わらないおなじみの手口が多いと指摘しています。また情報通信研究機構（NICT）は、アプリの裏側を突く「A2B攻撃」を突破口の一つとして特定しました。侵入口を塞ぐ対策だけでは限界があり、システム内部に侵入された場合でも大量のデータを持ち出されないための備えが急務となっています。",
-    "simple": "企業のデータ漏洩が続いています。攻撃者はAIを使って攻撃を素早く行っていますが、入り口は昔ながらの弱点が多いとされます。入られても大事なデータを盗まれない対策が求められています。"
-   },
-   "faq": [
-    {
-     "q": "攻撃者の手口についてマイクロソフトはどう分析していますか？",
-     "a": "AIによって攻撃は速くなっているものの、侵入の入口は今も「おなじみ」の手口であるとみています。"
-    },
-    {
-     "q": "NICTが特定した攻撃手法は何ですか？",
-     "a": "アプリの裏側を突く「A2B攻撃」です。"
-    },
-    {
-     "q": "タイムズカーでの漏洩被害件数は何件ですか？",
-     "a": "記事には記載なし"
-    }
-   ],
-   "aiGenerated": true,
-   "rank": 7,
-   "headline": "AIで加速する情報漏洩、侵入口塞ぐ以外の備えが急務",
-   "summary": "タイムズカーの免許証画像漏洩をはじめ企業の情報漏洩が相次いでいます。攻撃の高速化にAIが悪用されている一方で、侵入口自体は従来と同様のケースが多いとマイクロソフトは指摘します。NICTが特定したアプリ裏側を突く「A2B攻撃」などもあり、侵入口の遮断だけでなく侵入前提で大量流出を防ぐ備えが求められています。",
-   "whyItMatters": "AIによって攻撃のスピードが増す中、従来の境界防御だけでなくデータ流出を防ぐ多層的な対策の必要性が高まっています。",
-   "score": 3.5,
+   "headline": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+   "summary": "How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework.",
+   "whyItMatters": "",
+   "score": 5.5,
    "sourceCount": 1,
    "entities": [
-    "microsoft"
+    "gpt"
    ],
    "articles": [
     {
-     "title": "企業を襲う情報漏洩ラッシュ AIで加速、入口は今も「おなじみ」",
-     "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600011/102200217/",
-     "feedName": "日経クロステック",
-     "lang": "ja",
-     "date": "2026-10-25T22:00:00.000Z"
+     "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+     "link": "https://openai.com/index/greptile-code-review-codex-astra",
+     "feedName": "OpenAI",
+     "lang": "en",
+     "date": "2026-10-26T22:00:00.000Z"
     }
    ],
-   "articleKey": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600011/102200217/",
+   "articleKey": "https://openai.com/index/greptile-code-review-codex-astra",
    "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
    },
    "narration": {
-    "language": "ja",
-    "scriptHash": "79e386972355ca50a77855d4a6c2b280a15518a12bcd0cad38b9b9685f2ca49e"
+    "language": "en",
+    "scriptHash": "317b36ab56951a9b3c89d14f84e2bbd3220a0edc0b05c6c72095900185bce418"
    }
   },
   {
-   "id": "1a7e953f36796cb0e4617364",
+   "id": "7d972df501d01ba1f64ace9f",
+   "topics": [
+    "モデル・API",
+    "開発ツール"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 5,
+   "headline": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+   "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
+   "whyItMatters": "",
+   "score": 5.5,
+   "sourceCount": 1,
+   "entities": [
+    "gpt"
+   ],
+   "articles": [
+    {
+     "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+     "link": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+     "feedName": "OpenAI",
+     "lang": "en",
+     "date": "2026-10-26T13:45:00.000Z"
+    }
+   ],
+   "articleKey": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "82a0528c644e01cbb7fb53609edeb9f75bcf61b669528904f9a4bff62f5f9041"
+   }
+  },
+  {
+   "id": "657827ea82cdaea766c1e6ba",
    "topics": [
     "モデル・API"
    ],
-   "summaryStyles": {
-    "short": "OpenAIとAnthropicが大幅値下げ。\n数カ月間で最大80%の価格引き下げ。\n背景にある理由を巡り議論が活発化。",
-    "detail": null,
-    "simple": "AI大手のOpenAIとAnthropicが、AIモデルを使う料金をここ数カ月で最大80%も安くしました。大幅な値下げの理由に関心が集まっています。"
-   },
-   "faq": [
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 6,
+   "headline": "マネーフォワードME、MetaのAI「Muse」と連携 サブスク見直しや貯蓄計画を相談",
+   "summary": "マネーフォワードホームは10月26日、家計・資産管理サービス「マネーフォワード ME」とMetaのAIエージェント「Muse（ミューズ）」の連携を発表した。24日から提供を始めており、マネーフォワード MEに記録された収支や資産のデータを基に、サブスクリプションの見直しや旅行に向けた貯蓄計画などをMuseに相談できる。",
+   "whyItMatters": "",
+   "score": 5.5,
+   "sourceCount": 2,
+   "entities": [
+    "meta"
+   ],
+   "articles": [
     {
-     "q": "どの企業がAIの利用価格を値下げしましたか？",
-     "a": "OpenAIとAnthropicです。"
+     "title": "マネーフォワードME、MetaのAI「Muse」と連携 サブスク見直しや貯蓄計画を相談",
+     "link": "https://japan.cnet.com/article/35253976/",
+     "feedName": "CNET Japan",
+     "lang": "ja",
+     "date": "2026-10-26T07:50:00.000Z"
     },
     {
-     "q": "どれくらいの値下げが行われましたか？",
-     "a": "数カ月以内に最大80%の値下げが行われました。"
-    },
-    {
-     "q": "値下げされた具体的なモデル名は何ですか？",
-     "a": "記事には記載なし"
+     "title": "マネーフォワードME、「Meta Muse」に対応 サブスク見直しや貯蓄計画を相談",
+     "link": "https://www.watch.impress.co.jp/docs/news/2151078.html",
+     "feedName": "Impress Watch",
+     "lang": "ja",
+     "date": "2026-10-26T03:09:58.000Z"
     }
    ],
-   "aiGenerated": true,
+   "articleKey": "https://japan.cnet.com/article/35253976/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "c03b2a54fe599b90e2c9fc821434c18ec7b69845e19f43d210090c40b0a2029d"
+   }
+  },
+  {
+   "id": "f95402865aa93f01e091b7f7",
+   "topics": [
+    "音声"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 7,
+   "headline": "人の音声だけで学習したAI「Dessa」登場 会話の間合いや相づちが自然に",
+   "summary": "米Blockは、人間の会話音声だけで学習し、相手の話を聞きながら同時に話せるAI「Dessa」を発表し、録音した会話デモを公開した。テキストや既存の学習済みモデルを使わず、一から学習させたという。",
+   "whyItMatters": "",
+   "score": 5.5,
+   "sourceCount": 2,
+   "entities": [],
+   "articles": [
+    {
+     "title": "人の音声だけで学習したAI「Dessa」登場 会話の間合いや相づちが自然に",
+     "link": "https://japan.cnet.com/article/35253971/",
+     "feedName": "CNET Japan",
+     "lang": "ja",
+     "date": "2026-10-26T07:26:00.000Z"
+    },
+    {
+     "title": "もうAIと話している気がしない、音声だけで学んだ「Dessa」",
+     "link": "https://pc.watch.impress.co.jp/docs/news/2151081.html",
+     "feedName": "PC Watch",
+     "lang": "ja",
+     "date": "2026-10-26T03:21:59.000Z"
+    }
+   ],
+   "articleKey": "https://japan.cnet.com/article/35253971/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "1b0ef31a8d3224d5beaf77f5cf39c75dc74d0580947c4415fb6135d799983862"
+   }
+  },
+  {
+   "id": "27334100e818b98514ff3198",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
    "rank": 8,
-   "headline": "OpenAIとAnthropicがLLM価格を最大80%値下げ",
-   "summary": "OpenAIとAnthropicが、ここ数カ月の間に大規模言語モデル（LLM）のAPI提供価格を最大80%引き下げたことが議論を呼んでいます。急激な価格改定の背景にある理由やコスト構造の変化について注目が集まっています。",
-   "whyItMatters": "主要AI企業による大幅な価格競争は、AI導入コストの低減を促すとともに、業界の利益構造に影響を与えます。",
-   "score": 3.5,
+   "headline": "ChatGPT’s expanding world of work",
+   "summary": "Explore OpenAI Signals data on 165 work activities across nearly 100 countries, revealing how people use ChatGPT for work and how usage changes over time.",
+   "whyItMatters": "",
+   "score": 5,
    "sourceCount": 1,
    "entities": [
     "openai",
-    "anthropic"
+    "chatgpt"
    ],
    "articles": [
     {
-     "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
-     "link": "https://minimaxir.com/2026/10/cheap-llms/",
-     "feedName": "Hacker News",
+     "title": "ChatGPT’s expanding world of work",
+     "link": "https://openai.com/index/chatgpt-expanding-world-of-work",
+     "feedName": "OpenAI",
      "lang": "en",
-     "date": "2026-10-25T21:11:31.000Z"
+     "date": "2026-10-26T10:00:00.000Z"
     }
    ],
-   "articleKey": "https://minimaxir.com/2026/10/cheap-llms/",
+   "articleKey": "https://openai.com/index/chatgpt-expanding-world-of-work",
    "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
    },
    "narration": {
-    "language": "ja",
-    "scriptHash": "7200a3a892d39e7bc6568ef6aa77899bb484f62cc856a2fafbf50654240210ca"
+    "language": "en",
+    "scriptHash": "8eee874edf7bd83b2402947faf72a3b0946c27cfd24c2fbff2edc633155c870d"
    }
   },
   {
-   "id": "154a215a3ed03ca7d882c010",
+   "id": "7e73eebe3e909303c4c59a7d",
    "topics": [
-    "企業導入事例",
-    "国内動向"
+    "モデル・API"
    ],
-   "summaryStyles": {
-    "short": "川崎重工がフィジカルAIロボを外販。\n溶接用四脚と見守り犬型を半年で試作。\n造船や介護現場の知見活かし独自展開。",
-    "detail": "川崎重工業は、造船現場や介護の現場で技術を磨いた「フィジカルAI」ロボットの外販に乗り出します。同社は溶接用途の四脚ロボットと、高齢者を見守る犬型ロボットを開発しており、いずれも開発開始から約半年という短期間で試作機を完成させました。ファナックやトヨタ自動車など多くの企業がフィジカルAI分野への注力を進める中、川崎重工は自社の現場で鍛えた強みを活かした独自の戦略をとっています。",
-    "simple": "川崎重工が、造船や介護向けに開発したAI搭載ロボットを外部向けに販売します。溶接を行う4本足ロボットや見守り用の犬型ロボットを約半年で試作し、他社と違う強みを発揮しています。"
-   },
-   "faq": [
-    {
-     "q": "川崎重工が外販するロボットにはどのようなものがありますか？",
-     "a": "溶接用の四脚ロボットと、高齢者を見守る犬型ロボットがあります。"
-    },
-    {
-     "q": "試作機の完成までにかかった期間はどれくらいですか？",
-     "a": "いずれも開発開始から約半年です。"
-    },
-    {
-     "q": "ファナックやトヨタとの具体的な戦略の違いは何ですか？",
-     "a": "記事には記載なし"
-    }
-   ],
-   "aiGenerated": true,
+   "faq": [],
+   "aiGenerated": false,
    "rank": 9,
-   "headline": "川崎重工、造船や介護で培ったフィジカルAIロボを外販へ",
-   "summary": "川崎重工業は、造船所や介護現場で開発・運用してきたフィジカルAIロボットを外部へ販売開始します。溶接用の四脚ロボットと高齢者を見守る犬型ロボットはいずれも約半年で試作機を完成させており、ファナックやトヨタなどの競合とは異なる独自の戦略で展開を進めています。",
-   "whyItMatters": "現場の物理環境とAIを組み合わせた「フィジカルAI」ロボットの商業展開が加速しており、製造・介護市場での競争が活発化しています。",
-   "score": 3.5,
+   "headline": "How Fanatics and OpenAI streamline the fan experience",
+   "summary": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement.",
+   "whyItMatters": "",
+   "score": 5,
    "sourceCount": 1,
-   "entities": [],
+   "entities": [
+    "openai"
+   ],
    "articles": [
     {
-     "title": "川崎重工のフィジカルAIロボ、戦略を2軸分析 ファナック・トヨタと違い",
-     "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03688/101300018/",
-     "feedName": "日経クロステック",
-     "lang": "ja",
-     "date": "2026-10-25T20:00:00.000Z"
+     "title": "How Fanatics and OpenAI streamline the fan experience",
+     "link": "https://openai.com/index/fanatics-streamline-fan-experience",
+     "feedName": "OpenAI",
+     "lang": "en",
+     "date": "2026-10-26T07:00:00.000Z"
     }
    ],
-   "articleKey": "https://xtech.nikkei.com/atcl/nxt/column/18/03688/101300018/",
+   "articleKey": "https://openai.com/index/fanatics-streamline-fan-experience",
    "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
    },
    "narration": {
-    "language": "ja",
-    "scriptHash": "fe73ad4792841b5158e14b8f131a528511ef881686a1fadae83d1fd93cbd38f7"
+    "language": "en",
+    "scriptHash": "efd9de0a623152091dfd6546a5f5134bd1490fa9a3af7ecc9e7af3ceab69e2b4"
    }
   },
   {
-   "id": "01f4a70e7e75e3f580a7d86f",
+   "id": "742d30efdc4090c11a97794f",
    "topics": [
-    "企業導入事例",
-    "規制・政策",
-    "国内動向"
+    "モデル・API"
    ],
-   "summaryStyles": {
-    "short": "建設現場で生成AI導入の機運が高まる。\n国交省は活用方針を打ち出し環境整備。\n施工管理など中核業務の導入は道半ば。",
-    "detail": null,
-    "simple": "建設現場で生成AIを使う動きが強まっています。国土交通省も普及を後押しする環境づくりを進めていますが、工事の進行を管理するような現場の中心的な仕事では、まだ導入が進みきっていません。"
-   },
-   "faq": [
-    {
-     "q": "国土交通省は生成AIに関してどのような動きを見せていますか？",
-     "a": "積極的な活用に向けた方針を示し、環境整備を開始しています。"
-    },
-    {
-     "q": "建設現場でのAI導入が遅れているのはどのような業務ですか？",
-     "a": "施工管理など現場の中核業務です。"
-    },
-    {
-     "q": "国交省が示した具体的な環境整備の内容は何ですか？",
-     "a": "記事には記載なし"
-    }
-   ],
-   "aiGenerated": true,
+   "faq": [],
+   "aiGenerated": false,
    "rank": 10,
-   "headline": "建設現場の生成AI導入、施工管理など中核業務では途上",
-   "summary": "生成AIの技術向上に伴い建設現場での導入機運が高まっており、国土交通省も積極的な活用方針を示して環境整備を開始しました。一方で、施工管理など現場の中核業務への導入はまだ途上の段階に留まっています。",
-   "whyItMatters": "行政主導で環境整備が進むものの、建設現場の根幹業務におけるAI活用には依然として実務上のハードルが存在しています。",
-   "score": 3.5,
+   "headline": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+   "summary": "See how OpenAI engineers use Codex Ultrafast to investigate incidents in minutes. Explore faster security analysis, code refactoring, and daily workflows.",
+   "whyItMatters": "",
+   "score": 5,
    "sourceCount": 1,
-   "entities": [],
+   "entities": [
+    "openai"
+   ],
    "articles": [
     {
-     "title": "建設現場の生成AI導入、中核業務で道半ば 国土交通省は活用に本腰",
-     "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03804/101900001/",
-     "feedName": "日経クロステック",
-     "lang": "ja",
-     "date": "2026-10-25T20:00:00.000Z"
+     "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+     "link": "https://openai.com/index/openai-cut-incident-investigation",
+     "feedName": "OpenAI",
+     "lang": "en",
+     "date": "2026-10-26T07:00:00.000Z"
     }
    ],
-   "articleKey": "https://xtech.nikkei.com/atcl/nxt/column/18/03804/101900001/",
+   "articleKey": "https://openai.com/index/openai-cut-incident-investigation",
    "editorial": {
-    "method": "ai_summary",
-    "language": "ja",
-    "status": "ready"
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
    },
    "narration": {
-    "language": "ja",
-    "scriptHash": "454064668452bff629c58a625d65fbf97cf9af23db6b2eac00ce1180590fdc72"
+    "language": "en",
+    "scriptHash": "83dac095e591ca4c708c13d90eb830953ef70bdda8b5601815e9e22c2acde5cc"
    }
   }
  ],
  "others": [
   {
-   "title": "AIに自分のプロンプトを改善させたら、長くなりすぎたので進化的最適化してみた",
-   "link": "https://qiita.com/R-You/items/690c9f2c95b7019732ca",
+   "title": "【相次ぐ大規模情報漏洩】AI時代に企業が考えるべきサイバー攻撃のリスクとは",
+   "link": "https://qiita.com/rikunagano/items/85067fa63c70368b1e32",
    "feedName": "Qiita 生成AI",
    "lang": "ja",
-   "date": "2026-10-25T22:03:27.000Z",
-   "excerpt": "⚠️ この記事はAI（Claude）と一緒に作成しました。 内容は執筆時点（2026年10月）の情報です。 最近、 「自分で新しいAIシステムを一から組む」 よりも、 「既存の、もっと質のいいAIシステムをどう使うか」 が大事になってきていると感じています。(個人の..."
+   "date": "2026-10-26T23:58:27.000Z",
+   "excerpt": "図：相次ぐ大規模情報漏洩とAI時代のサイバー攻撃リスク。 近年、国内企業で大規模な情報漏洩が相次いでいます。企業にとって情報管理やサイバーセキュリティの重要性が高まるなか、生成AIの普及によってサイバー攻撃の手法がさらに変化する可能性も指摘されています。 今回取り上げる情..."
   },
   {
-   "title": "ダッソー幹部が語る、製造業のサイバー防御とAI活用--知財保護と価値創出を両立する条件とは",
-   "link": "https://japan.zdnet.com/article/35253801/",
-   "feedName": "ZDNET Japan",
-   "lang": "ja",
-   "date": "2026-10-25T22:00:00.000Z",
-   "excerpt": "AIの普及は、製造業の製品開発に新たな可能性をもたらす一方、サイバー攻撃への悪用や知的財産の流出に対する懸念も高めている。仏ダッソー・システムズの日本法人で執行役員技術本部長を務めるセバスチャン・カーデット氏は、国内で相次ぐ情報漏えいを「想定の範囲内」と冷静に受けとめる。製造業はデジタル資産を守りながら、いかにAIの価値を引き出すべきか。同氏に聞いた。"
-  },
-  {
-   "title": "無料の画像生成AI「Moss-Image」がすごい 日本語も漫画も生成、商用利用OKの実力を試した",
-   "link": "https://ascii.jp/elem/000/004/445/4445534/?rss",
-   "feedName": "ASCII.jp",
-   "lang": "ja",
-   "date": "2026-10-25T22:00:00.000Z",
-   "excerpt": "日本語描画や多彩な画風に対応した、オープンウエイトの画像生成AI「Moss-Image」を試す。行政の支援を受ける開発体制と事業戦略、今後の普及や画像生成AI市場への影響を考える。"
-  },
-  {
-   "title": "三菱電機、フィジカルAIでヒューマノイドと工作機械が連携する自動化システムを開発",
-   "link": "https://ascii.jp/elem/000/004/445/4445081/?rss",
-   "feedName": "ASCII.jp",
-   "lang": "ja",
-   "date": "2026-10-25T22:00:00.000Z",
-   "excerpt": "三菱電機株式会社は10月21日、フィジカルAIを介してヒューマノイドロボットとCNC工作機械がシームレスに連携する加工システムを開発したと発表した。"
-  },
-  {
-   "title": "「もっとAIに任せたい」法務タスクを自動実行するAIエージェント機能のβ版",
-   "link": "https://ascii.jp/elem/000/004/444/4444876/?rss",
-   "feedName": "ASCII.jp",
-   "lang": "ja",
-   "date": "2026-10-25T22:00:00.000Z",
-   "excerpt": "株式会社LegalOn Technologiesは10月19日、同社が提供する法務AIプラットフォーム「LegalOn」において、法務特化型AIエージェントが設定に応じて自律的に業務を実行する新機能「エージェントビルダー（タスク自動化機能）」のβ版を提供開始したと発表した。"
-  },
-  {
-   "title": "【Ubuntu日和】【第93回】Arc B580で通常の3倍のスピード!? Strata派生「XeStrata」に驚く",
-   "link": "https://pc.watch.impress.co.jp/docs/column/ubuntu/2150896.html",
-   "feedName": "PC Watch",
-   "lang": "ja",
-   "date": "2026-10-25T21:08:00.000Z",
-   "excerpt": "PC関連パーツの価格高騰が止まらない。特にメモリやビデオカードといったAI周りのパーツで顕著だ。そんな中、12GBのビデオカードで巨大なLLMを動かす推論エンジン「Strata」が注目を集めている。"
-  },
-  {
-   "title": "【西川和久の不定期コラム】撮影なし・生成AI動画なしでミュージックビデオ作成！AIにコードで動画を作らせる",
-   "link": "https://pc.watch.impress.co.jp/docs/column/nishikawa/2150835.html",
-   "feedName": "PC Watch",
-   "lang": "ja",
-   "date": "2026-10-25T21:04:00.000Z",
-   "excerpt": ""
-  },
-  {
-   "title": "AIを使った調査で見つかったPHPの欠陥「PHP2Shell」、修正公開の夜に国内のサービスが予防のため相次ぎ停止",
-   "link": "https://qiita.com/quotidia/items/792a3bc859dd738facee",
-   "feedName": "Qiita 生成AI",
-   "lang": "ja",
-   "date": "2026-10-25T21:01:10.000Z",
-   "excerpt": "本記事は筆者が運営する AI Quotidia の海外ニュース解説記事です。 PHPの開発プロジェクトは2026年10月21日(水)、Webサイトの裏側で広く使われているプログラミング言語PHPの中核にあった深刻な脆弱性2件 (通称「PHP2Shell」) を直した修正..."
-  },
-  {
-   "title": "AIエージェントによる操作の多くがボット検出システムのhCaptchaやCloudflare Turnstileを通過",
-   "link": "https://gigazine.net/news/20261026-ai-bot-detection-benchmark/",
-   "feedName": "GIGAZINE",
-   "lang": "ja",
-   "date": "2026-10-25T21:00:00.000Z",
-   "excerpt": "ボット検出システムを開発するProof of Humanが、自社製品を含む5種類のシステムを比較した結果を公開しました。 続きを読む..."
-  },
-  {
-   "title": "日本企業のAI推進--データ主権とエコシステム連携で競争力を獲得する（後編）",
-   "link": "https://japan.zdnet.com/article/35253421/",
-   "feedName": "ZDNET Japan",
-   "lang": "ja",
-   "date": "2026-10-25T21:00:00.000Z",
-   "excerpt": "世界でAI利用が急速に進む中、日本企業の多くはいまだ「試験的導入」にとどまる。この差を逆転していくための視点を解説する。"
-  },
-  {
-   "title": "Webは誰のためのものか？ AIエージェント急増で「人間優先」揺らぐ",
-   "link": "https://ascii.jp/elem/000/004/445/4445535/?rss",
-   "feedName": "ASCII.jp",
-   "lang": "ja",
-   "date": "2026-10-25T20:52:44.000Z",
-   "excerpt": "画像クレジット:Sarah Rogers/MIT Technology Review | Getty Images"
-  },
-  {
-   "title": "「ガリバー」運営IDOMがAXに135億円の大型投資、顧客接点・MDを抜本改革",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03801/101900001/",
-   "feedName": "日経クロステック",
-   "lang": "ja",
-   "date": "2026-10-25T20:00:00.000Z",
-   "excerpt": "中古車販売大手「ガリバー」を運営するIDOMが、AIを前提に事業やシステムを再構築するAXに総額約135億円を投じることが、日経クロステックの取材で2026年10月26日までに分かった。同日午後に「Gulliver AX宣言」を発表し、顧客接点から基幹システムまでを対象とする大規模な変革に踏み出す。AIエージェントをフル活用し、AIネーティブな企業への転換を目指す。"
-  },
-  {
-   "title": "「AIリスキリング」とは何か、「仕事の再設計」が最初のゴールに",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03798/101900001/",
-   "feedName": "日経クロステック",
-   "lang": "ja",
-   "date": "2026-10-25T20:00:00.000Z",
-   "excerpt": "筆者はもともと仮想化基盤領域を専門とするエンジニア兼インストラクターで、2022年ごろからAI（人工知能）活用のインストラクターとして、AKKODiSコンサルティング社員およびクライアント社員向けのAI研修や学習コンテンツ開発に携わってきた。今回の特集では、その経験や反省を踏まえた「AIリスキリング」の方法論を、5回に分けてお伝えしていきたい。第1回となる今回は、「AIリスキリング」という言葉の定義について解説する。"
-  },
-  {
-   "title": "「官民投資の戦略17分野」は2040年度までに370兆円超、ICT基盤関連が約半分",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01679/082800302/",
-   "feedName": "日経クロステック",
-   "lang": "ja",
-   "date": "2026-10-25T20:00:00.000Z",
-   "excerpt": "政府の「日本成長戦略」で定められた重点投資分野。2040年度までに官民で370兆円超の投資を集中させる。「AIトランスフォーメーション」をコア技術として位置付け、ICT関連分野への投資を重視している。"
-  },
-  {
-   "title": "AIエージェント導入へ、「ワークフロー」と「エージェント」の違いを理解",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03762/091500001/",
-   "feedName": "日経クロステック",
-   "lang": "ja",
-   "date": "2026-10-25T20:00:00.000Z",
-   "excerpt": "AIエージェントを業務にどう導入するか。企業や担当者が持つ疑問に答えるための書籍『AIエージェント導入を任されたら読む本』から抜粋し、まずはAIエージェントの構成要素に当たる「AIエージェントとは何か」「ChatGPTなどの生成AIツールやワークフローなどと何が違うのか」という基本を解説します。"
-  },
-  {
-   "title": "安川電機がフィジカルAIを食品工場などへ拡大、ロボットへの指示を生成AIで",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/12110/",
-   "feedName": "日経クロステック",
-   "lang": "ja",
-   "date": "2026-10-25T20:00:00.000Z",
-   "excerpt": "安川電機がロボットへの作業指示を生成AI（人工知能）が担うシステムの開発に力を入れている。米Amazon Web Services（AWS）と連携し、クラウド上の生成AIが人間の要望をロボットが処理できる作業内容に変換するシステムをこのほど構築した。"
-  },
-  {
-   "title": "パナソニック系、意思決定時間を半減したデータ活用術 AIが次の作業を指南",
-   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03783/100900001/",
-   "feedName": "日経クロステック",
-   "lang": "ja",
-   "date": "2026-10-25T20:00:00.000Z",
-   "excerpt": "パナソニックインダストリーデバイスソリューション事業部の山口拠点（山口市）は、工場の作業者に業務の優先順などをガイドするAI（人工知能）システムを稼働させた。「QCDが全て改善し、意思決定の時間は半減した」などの効果を得られている。"
-  },
-  {
-   "title": "トークン代 9 割減？プロンプトキャッシュの仕組みと効果の実測 — 保持時間が過ぎるとコスト 11 倍に",
-   "link": "https://qiita.com/songchong/items/7144594b0ad9529a168b",
-   "feedName": "Qiita 生成AI",
-   "lang": "ja",
-   "date": "2026-10-25T19:00:26.000Z",
-   "excerpt": "AI エージェントの料金の話では、よく「プロンプトキャッシュで入力が 9 割安くなる」と言われます。上の図のとおり、キャッシュから読む料金は、Claude Sonnet 5.5 で通常の入力の 0.05 倍（95% 引き）、OpenAI の GPT-5.6 以降と Gem..."
-  },
-  {
-   "title": "AI に資料を毎回貼るな！ファイル・SKILL・AGENTS.md 活用でトークン課金最大 6 割減？ 6 つの方法を試してみた",
-   "link": "https://qiita.com/songchong/items/235bed0f8c72f268477e",
-   "feedName": "Qiita 生成AI",
-   "lang": "ja",
-   "date": "2026-10-25T19:00:21.000Z",
-   "excerpt": "我々が運営する IT連携マップの技術ガイド（プロンプトキャッシュとは など）では、「前のやり取りと先頭が同じ部分はキャッシュから読まれ、料金が大きく下がる」という仕組みを解説してきました。プロンプトキャッシュは、AI エージェントと AI サービス側（Anthropic ..."
-  },
-  {
-   "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
-   "link": "https://lynchlab.net/llm-skin-cancer",
-   "feedName": "Hacker News",
-   "lang": "en",
-   "date": "2026-10-25T17:15:38.000Z",
-   "excerpt": "Article URL: https://lynchlab.net/llm-skin-cancer Comments URL: https://news.ycombinator.com/item?id=50233779 Points: 340 # Comments: 174"
-  },
-  {
-   "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
-   "link": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
-   "feedName": "Hacker News",
-   "lang": "en",
-   "date": "2026-10-25T16:28:26.000Z",
-   "excerpt": "Article URL: https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html Comments URL: https://news.ycombinator.com/item?id=50233304 Points: 167 # Comments: 251"
-  },
-  {
-   "title": "下書きと作業記録を AI コーディングエージェントから守る：設定ではなく置き場所で（Claude Code・Windows）",
-   "link": "https://zenn.dev/mryo0826/articles/e1fe4c82ab0428",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-10-25T15:07:15.000Z",
-   "excerpt": "この記事の範囲 私（著者・人間）は個人のリポジトリで、AI コーディングエージェントの Claude Code と一緒に、AI 駆動開発の実践ガイドを書いています（aidd-practice-guide）。この記事は、その中で起きた事と、今どう守っているかの記録です。 https://github.com/mryo0826/aidd-practice-guide ! 主語について: この記事の「私」は著者（人間）です。作業の多くは Claude Code と一緒にしていて、実測やファイルの調べは、私が Claude Code に頼んで走らせました。誰がしたかは、節毎に書き分けます。 ..."
-  },
-  {
-   "title": "# 眼鏡職人が「AIとの対話ログ×成果物」から人のAI活用能力を可視化する技術で特許を取得した話",
-   "link": "https://zenn.dev/tlc/articles/004b80b904de9c",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-10-25T14:17:12.000Z",
-   "excerpt": "2026年9月30日、人のAI活用能力を可視化する情報処理技術が、日本で特許登録されました。 特許第7932117号 僕は眼鏡職人です。AIの研究者でも、プログラマーでもありません。 今回の発明は、僕自身が考えたアイデアをAIとの対話を重ねながら情報処理技術として具体化したものです。 出願書類の作成から拒絶理由通知書への対応まで、弁理士に依頼せず自分で行い、特許取得に至りました。 今回は、登録された技術の考え方と、実際に開発したアプリについて紹介します。 なぜ人のAI活用能力を可視化するのか 生成AIの普及によって、文章作成、分析、企画、プログラミングなど、さまざまな作業をAIと一..."
-  },
-  {
-   "title": "r/opensource just banned AI, non-English speakers, and more",
-   "link": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban",
+   "title": "OpenAI announces three big science discoveries and a new way to work with academics",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics",
    "feedName": "The Verge AI",
    "lang": "en",
-   "date": "2026-10-25T13:25:32.000Z",
-   "excerpt": "The mods at r/opensource posted new submission rules that, among other things, banned projects that use AI. The post made Saturday evening opens by saying, \"If your project uses AI, is made by AI, or is intended for AI, it's not welcome on r/opensource. AI, as it exists today, is incongruent to this Open Source community.\" The new rules have set off a firestorm in the comments, and even spurred the creation of a rival sub r/trueopensource. Moderator Wolvereness has waded into the comments to explain that there's nuance and room for selective enforcement, such as \"software that incidentally has accessibility features that use AI,\" including … Read the full story at The Verge."
+   "date": "2026-10-26T23:34:58.000Z",
+   "excerpt": "Less than a month after its mass release of hundreds of manuscripts that it said contained solutions to long-standing mathematics questions, OpenAI is back with three more \"major\" discoveries in math, computer science, and physics. What's different this time is the choice to have external experts that OpenAI describes as \"shepherds\" guiding the results in computer science and physics, while for the math problem it says that they advised it to release the AI output for researchers to work through their own explanations. OpenAI results added to GitHub today: Local smoothing for the Euclidean wave equation. The proof uses an auxiliary par … Read the full story at The Verge."
   },
   {
-   "title": "OpenCodeでローカルLLMを長時間連続コーディングさせる設定",
-   "link": "https://zenn.dev/phpmyadmin/articles/opencode-local-llm-cache-stalls",
-   "feedName": "Zenn 生成AI",
+   "title": "AIのみで作られたシステムを引き継いだら、品質の現実に直面した話",
+   "link": "https://qiita.com/Kokuto821/items/352e44c77489c22945c2",
+   "feedName": "Qiita 生成AI",
    "lang": "ja",
-   "date": "2026-10-25T13:15:12.000Z",
-   "excerpt": "ローカルLLMで長い開発作業を続けるには、キャッシュ再利用、会話の圧縮、未完了時の再開を分けて設定します。以下はOpenCode 1.18.30を対象にしたガイドです。キャッシュは推論サーバー側の機能、自動再開は追加プラグインによる処理で、OpenCodeの設定ファイルだけですべて有効になるわけではありません。 1. キャッシュが実際に使われているか確認する 推論サーバーのプロンプトキャッシュを有効にします。長い会話を毎回読み直さず、前の入力処理を再利用するための機能です。モデルファイルのキャッシュや会話の保存とは別です。 起動スクリプトやモデル設定を切り替えると、キャッシュをOFF..."
+   "date": "2026-10-26T23:27:13.000Z",
+   "excerpt": "はじめに 自分は普段、自社向けの新規業務システムを開発しています。そんな中、急な案件でAIエージェントだけで作られたシステムを引き継ぐ機会がありました。 結論から言うと、動きはするものの品質は低く、改修にかなり苦労しました。 普段は自分も実装のほぼすべてをAIエージェント..."
   },
   {
-   "title": "年次の棚卸しは12か月分の1行を1枚に並べる — 来年の箱別指定リストの初期値を選ぶ行",
-   "link": "https://zenn.dev/takumahayami/articles/eigyou-ai-nenji-tanaoroshi-1mai",
-   "feedName": "Zenn 生成AI",
+   "title": "【AI駆動開発#3】組込みエンジニアがPythonでUDS診断ツールを作った話 〜実ECUなしでテストするためにECUシミュレータを自作した〜",
+   "link": "https://qiita.com/YusukeHarada/items/9ed5360e9b9466a72739",
+   "feedName": "Qiita 生成AI",
    "lang": "ja",
-   "date": "2026-10-25T13:00:30.000Z",
-   "excerpt": "前回の廃止の判断は半年後に1行で読み返すでは、廃止にした箱の行を降格表に残し、半年後に1行で読み返す扱いにしました。廃止まで含めると、降格表は箱の一生（AI案 → 採用か▲か保留 → 廃止と読み返し）を1枚で記録し終えます。 記録が1年分そろったら、次にやるのは選択です。月次報告の1行を12か月分並べて1枚にし、来年の箱別指定リストの初期値を選びます。今回は、年次の棚卸しの扱いです。12か月分の1行から、来年を最初に回す箱を選ぶ行を決めます。 今回扱う月次報告・棚卸し・箱別指定の行を、来月も同じ精度で回し続けるには、記入シートとプロンプトを手元に置くのが近道です。記事末尾の**読者特典3..."
+   "date": "2026-10-26T23:23:24.000Z",
+   "excerpt": "2026年5月頃、Claude.ai（チャット）を使って趣味で作ったツールの開発記録です（全4回の第3回）。 はじめに 今回はテストについて書きます。TDD（テストを先に書く開発）は今回が初めてです。ただし、実際にはTDDを守りきれていません。その反省は#4で書き..."
   },
   {
-   "title": "Google’s AI search changes upended online publishing",
-   "link": "https://www.theverge.com/column/1017983/google-ai-search-online-publishing",
-   "feedName": "The Verge AI",
-   "lang": "en",
-   "date": "2026-10-25T12:00:00.000Z",
-   "excerpt": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more about AI's impact on the web, follow Emma Roth. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started The digital publishing industry has relied on Google for a very long time. Many outlets spent time and money optimizing their webpages to show up at the top of the search engine, with the goal of getting readers to click on their articles or discover their websites for the first time. For years, the relationship between Google and publishers was largely reciprocal; online pub … Read the full story at The Verge."
-  },
-  {
-   "title": "介護の苦情と要望の対応、AIはどこまで任せられますか？ — 要望の裏で決める",
-   "link": "https://zenn.dev/satoshimizuhara/articles/ai-agent-care-complaint-response",
-   "feedName": "Zenn 生成AI",
+   "title": "MetaのパーソナルAI「Muse」を使ってみた 先回りして気遣えるAI",
+   "link": "https://www.watch.impress.co.jp/docs/topic/2151191.html",
+   "feedName": "Impress Watch",
    "lang": "ja",
-   "date": "2026-10-25T11:40:16.000Z",
-   "excerpt": "昨日は、ご家族への連絡と面談の記録の仕事で、介護の現場に寄せて読む2回目を書いた。本稿はその3回目で、昨日予告した通り、同じ介護の現場の、ご家族からの苦情と要望への対応の仕事を置く。受付記録の項目のそろえや初動の返事文のたたき台、同じ要望の重なりの集計は機械が速くそろえられる。しかし苦情の1件は、同じ「要望」の1行でも、その裏にあるもの、暮らしの不都合か、職員の対応か、待機の不安かで、返す相手と速さが変わる仕事で、この境目の切り方に、窓口を一本に寄せた介護の現場はつまずいている。苦情と要望への対応とは、窓口に届く声を受け、その裏を確かめ、返す相手と速さを決め、繰り返される要望を改善の議題..."
+   "date": "2026-10-26T23:20:00.000Z",
+   "excerpt": "MetaのパーソナルAIエージェント「Muse」が、10月23日から日本でも利用できるようになりました。Museは、ユーザーの指示に従って情報を検索するだけでなく、Webサイトを操作し、予約や買い物などのタスクを自律的に進められるAIエージェントです。"
   },
   {
-   "title": "生成AIに「テキスト誘導の仕組み」を聞いてみた（CLIP/T5・cross-attention・CFG）",
-   "link": "https://zenn.dev/tkpurine/articles/text-guidance-in-diffusion",
-   "feedName": "Zenn 生成AI",
+   "title": "大企業はAIコストを管理できていない サイボウズ調査で浮かび上がった「3割の壁」",
+   "link": "https://www.itmedia.co.jp/enterprise/articles/2610/26/news032.html",
+   "feedName": "ITmedia AI+",
    "lang": "ja",
-   "date": "2026-10-25T11:27:21.000Z",
-   "excerpt": "はじめに 前回の拡散モデル入門で、テキスト→画像は「テキスト条件＋CFGでプロンプトへの忠実度を制御する」と一言で描きました。今回はその箱の中身を深掘りします。テキスト誘導は3段階です。 テキストを数値化する（text encoder：CLIP / T5） 除去ネットに注入する（cross-attention＝Transformerの注意機構） 効き具合を増幅する（Classifier-Free Guidance / CFG） ① テキストを数値化する：CLIP と T5 プロンプトはまずトークンに分割され、text encoderで「単語ごとの意味ベクトルの列」に変換..."
+   "date": "2026-10-26T23:00:00.000Z",
+   "excerpt": "サイボウズの調査によると、今後3年間でAI投資を増やす大企業が7割に上る一方で、AIコストを全社で把握できている企業は3割に届かないという。“AIコスト激増時代”における実態に迫る。"
   },
   {
-   "title": "Excelの二重計上の検出でAIに任せるのは候補の式まで — 消す判断は人間に残す",
-   "link": "https://zenn.dev/yoshitokinosita/articles/0025-excel-ai-nijuu-keijo",
-   "feedName": "Zenn 生成AI",
+   "title": "AI時代、オンライン上の「相手は本当に人間か」をどう確認するのか",
+   "link": "https://japan.zdnet.com/article/35253728/",
+   "feedName": "ZDNET Japan",
    "lang": "ja",
-   "date": "2026-10-25T10:46:38.000Z",
-   "excerpt": "同じ取引が表に2行入っていないか、締めの前に数える 振込の指示を出し終えると、今月の数字は一通り出そろいます。ここで締めの報告を組み立て始める前に、1回だけやっておきたい検査があります。1か月分の計上記録を表1枚に見通して、同じ取引が2行入っていないかを数える。この工程を、二重計上の検出と呼んでいます。 前回は支払予定表を扱いました。未回収リストや支払予定表は、これから動くお金を並べる段の表です。今回は向きを変えて、すでに計上が済んだ記録を締めの前にただ数える段になります。振込を2回登録していた、訂正の来た請求書の旧と新を両方計上していた——こういう行は、報告を組んだ後で見つけると後..."
+   "date": "2026-10-26T23:00:00.000Z",
+   "excerpt": "オンラインサービスでは長く、画面の向こうにいる相手が実在する人間であることが暗黙の前提になっていたが、生成AIによってその前提が揺らぎ始めている。本稿では、「Tinder」のHuman Badgeに見る、“Proof of Human”という新しい信頼レイヤーを考えたい。"
   },
   {
-   "title": "Nvidia open-sources Flora to make robot video labeling 125x cheaper than GPT-6 Astra",
-   "link": "https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/",
-   "feedName": "The Decoder",
-   "lang": "en",
-   "date": "2026-10-25T10:08:49.000Z",
-   "excerpt": "Nvidia's new data engine Flora labels one hour of robot video for 72 cents instead of $88 with GPT-6 Astra, while scoring slightly higher on quality. The open system, built on three fine-tuned Qwen3.5 models, catches errors in robot actions far more reliably than any competitor but sometimes falls short on descriptive accuracy. Nvidia is positioning Flora as a key piece of its strategy to control the entire robotics value chain. The article Nvidia open-sources Flora to make robot video labeling 125x cheaper than GPT-6 Astra appeared first on The Decoder."
-  },
-  {
-   "title": "Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027",
-   "link": "https://the-decoder.com/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward-to-2027/",
-   "feedName": "The Decoder",
-   "lang": "en",
-   "date": "2026-10-25T09:37:46.000Z",
-   "excerpt": "A new benchmark by P-Zero Research measures how well AI models design and evaluate experiments on their own. The results are improving so fast that Anthropic co-founder Jack Clark now thinks self-improving AI could arrive by 2027. The article Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027 appeared first on The Decoder."
-  },
-  {
-   "title": "Anthropic says one AI agent beats many subagents now that models can handle complexity alone",
-   "link": "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/",
-   "feedName": "The Decoder",
-   "lang": "en",
-   "date": "2026-10-25T09:12:10.000Z",
-   "excerpt": "Anthropic says companies should evaluate whether they can consolidate sub-agents into a single agent that loads context on demand. In one architecture comparison, the single-agent setup ran about twice as fast. Anthropic has published a migration kit on GitHub to help teams make the transition. The article Anthropic says one AI agent beats many subagents now that models can handle complexity alone appeared first on The Decoder."
-  },
-  {
-   "title": "Ex-Google CEO Eric Schmidt calls OpenAI and Anthropic modern colonial trading companies",
-   "link": "https://the-decoder.com/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-companies/",
-   "feedName": "The Decoder",
-   "lang": "en",
-   "date": "2026-10-25T08:09:32.000Z",
-   "excerpt": "In Foreign Affairs, historian Niall Ferguson, researcher Lisa Klaassen, and former Google CEO Eric Schmidt cast the US and China as AI empires and every other country as a dependency. The race won't be decided by breakthroughs but by who can bankroll it. US corporations alone plan to spend more than $600 billion in 2026. Yet mounting debt, protests against data centers, and a potential chip crisis over Taiwan could stall both superpowers. The article Ex-Google CEO Eric Schmidt calls OpenAI and Anthropic modern colonial trading companies appeared first on The Decoder."
-  },
-  {
-   "title": "OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers",
-   "link": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/",
-   "feedName": "The Decoder",
-   "lang": "en",
-   "date": "2026-10-25T07:30:11.000Z",
-   "excerpt": "OpenAI is poaching Anthropic's customers with steep discounts. Companies like Rippling, Replit, and DataCamp say they've cut AI costs by up to 90 percent after switching. Anthropic's growth has slowed, but OpenAI is trading its own margins for market share. Chinese rivals like Deepseek are piling on more price pressure. The article OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers appeared first on The Decoder."
-  },
-  {
-   "title": "OpenMobile-2 proves open-source smartphone agents can rival proprietary models",
-   "link": "https://the-decoder.com/openmobile-2-proves-open-source-smartphone-agents-can-rival-proprietary-models/",
-   "feedName": "The Decoder",
-   "lang": "en",
-   "date": "2026-10-25T06:55:22.000Z",
-   "excerpt": "Smartphone agents don't get better by processing more data. They improve by training on as many different apps as possible. The researchers behind OpenMobile-2 built an open training environment with more than 110 applications, including 35 replicas of popular apps. On real Android devices, their model scores highest among open agents, the authors say. The article OpenMobile-2 proves open-source smartphone agents can rival proprietary models appeared first on The Decoder."
-  },
-  {
-   "title": "【警告】「npm install」しただけで感染？ AI頼みの個人開発者が震えた、2026年10月のサイバー攻撃と脆弱",
-   "link": "https://zenn.dev/deyama_wfh/articles/e4c0b5db30a28c",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-10-25T05:43:40.000Z",
-   "excerpt": "「えっ、プログラムを書いているだけでパソコンが乗っ取られることがあるの？」 あります。 しかも、自分が悪いプログラムを書いていなくても。 便利だからとインストールした部品に、悪意のあるプログラムが紛れ込んでいる場合があるそうです。 いや、待って。 私はAIにコードを書いてもらって、それを理解するだけでも必死なんですが。 そこにサイバー攻撃まで気を配れと？ 初心者への要求スペック、高すぎない？？？ こんにちは。猫とAIと個人開発を愛する、でやまです。 私はエンジニアとしてはまだまだ勉強中。ChatGPTやCodexに助けてもらいながら、Webサイトを作ったり、アプリを開発したりしています。..."
-  },
-  {
-   "title": "SKILLは魔法ではない：大規模改修でAIエージェントをフル活用して見えたこと",
-   "link": "https://zenn.dev/inaki/articles/2ab775d3f48c81",
-   "feedName": "Zenn 生成AI",
-   "lang": "ja",
-   "date": "2026-10-25T05:42:05.000Z",
-   "excerpt": "はじめに ウォーターフォール型の大規模なシステム改修で、各工程（設計工程〜リリース前まで）でAIエージェント（GitHub Copilotなど）を全面的に使いました。一番の学びは、SKILLの価値を私たち自身が誤解していた、ということです。 当初はSKILLを「AIエージェントを強くする魔法」のように考えていました。手順を細かく書くほど品質が上がるはずだ、と。実際には逆で、書きすぎたSKILLほどAIエージェントは迷いました。本記事では、その反省と、SKILLの仕組みを生んだAnthropicの公式ドキュメント「Skill authoring best practices」に沿った考..."
-  },
-  {
-   "title": "中小企業のSNS・ブログ運用を自動化するWellSkate AIの活用例",
-   "link": "https://ascii.jp/elem/000/004/445/4445522/?rss",
-   "feedName": "ASCII.jp",
-   "lang": "ja",
-   "date": "2026-10-25T05:31:43.000Z",
-   "excerpt": "中小企業のSNS・ブログ運用を自動化するWellSkate AIの活用例"
-  },
-  {
-   "title": "GitHub Copilotのグローバルデフォルトポリシーを一般提供",
-   "link": "https://codezine.jp/article/detail/30125",
+   "title": "AIが作ったUIはなぜ「使いづらい」のか？ 「操作できる」と「使える」を分けて、100点に引き上げる「4つの評価観点」",
+   "link": "https://codezine.jp/article/detail/29762",
    "feedName": "CodeZine",
    "lang": "ja",
-   "date": "2026-10-25T04:00:00.000Z",
+   "date": "2026-10-26T23:00:00.000Z",
+   "excerpt": "最近では、エンジニアがデザインをAIで生成してそのまま実装に落とし込むケースが増えています。しかし、その際に直面するのは、見た目は整っているのにUI/UXが機能せず、サイトが想定通りに使われないという問題です。本連載ではそんなエンジニアのために、UXを改善するヒントを株式会社Faciloのフロントエンドエンジニアであり、ZEN大学客員講師を務める折原レオナルド賢が指南します。最終回となる第5回のテーマは、AIが生成したUIを「使われるUI」に仕上げるための調整力です。AIは、短時間で見た目の整った画面を生成できます。だからこそ、一見しただけでは気づきにくい使いにくさを見過ごしがちです。今回は、これまで取り上げた4つの観点を使い、AIが作った80点のUIを、ユーザーにとっての100点へ近づける方法を解説します。"
+  },
+  {
+   "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
+   "link": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-10-26T22:41:48.000Z",
+   "excerpt": "Article URL: https://blog.cloudflare.com/kv-cache-exposure-remediation/ Comments URL: https://news.ycombinator.com/item?id=50252159 Points: 33 # Comments: 6"
+  },
+  {
+   "title": "Rapid7が追跡したサイバー攻撃、AI利用は「わずか8％」、脆弱性は公開から平均3日で悪用",
+   "link": "https://internet.watch.impress.co.jp/docs/news/2151262.html",
+   "feedName": "INTERNET Watch",
+   "lang": "ja",
+   "date": "2026-10-26T22:30:00.000Z",
+   "excerpt": "Rapid7は10月21日、2026年第3四半期のサイバー脅威動向をまとめた「Quarterly Threat Landscape Report」（四半期脅威動向レポート）を公開した。"
+  },
+  {
+   "title": "Meta、AI投資拡大に向け最大950億ドル規模の株式発行計画 NVIDIA、AMD、Broadcomも出資に関心",
+   "link": "https://www.itmedia.co.jp/news/article/2610/27/2000002605/",
+   "feedName": "ITmedia NEWS",
+   "lang": "ja",
+   "date": "2026-10-26T22:26:55.000Z",
+   "excerpt": "Metaは、AIインフラとパーソナル超知能への投資を支えるため、総額約950億ドル（約15兆円）規模の株式発行による資金調達計画を発表した。まず普通株式と預託株式で約350億ドルを公募し、NVIDIAなど半導体3社も出資意向を示す。2027年には最大600億ドルの段階的売却プログラムも計画する。"
+  },
+  {
+   "title": "京都府庁、職員7000人の事務効率化で「Copilotだけに頼らない」と決めた理由",
+   "link": "https://kn.itmedia.co.jp/kn/article/2610/27/2000002599/",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "人口減少に伴う将来的な人手不足を見据え、職員約7000人の業務効率化に挑む京都府庁。限られた人員で増え続ける行政ニーズに応えるため、同庁が着目したのが生成AIだ。しかし、対話型AIを全庁導入しただけでは、現場の業務負担は解消し切れなかった。"
+  },
+  {
+   "title": "熊本地震「避難状況マップ」秘話 2日で開発も「こんなの使えない」と突き返され……",
+   "link": "https://www.itmedia.co.jp/business/articles/2610/27/news014.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "令和8年熊本地震の発災から2日後、IT企業が“避難状況マップ”を開発した。しかし現場からは「こんなものは使えない」と言われてしまう。この状況をどう打開したのか。"
+  },
+  {
+   "title": "AIで「月○○時間削減」それ本当？ 浮いた時間はどこに消えたのか",
+   "link": "https://www.itmedia.co.jp/business/articles/2610/27/news016.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "AI導入によって「月数千時間を削減しました」――こんな“華麗な成果”を示しても、人件費が減るわけでなはい。浮いた時間はどこに消えたのか。"
+  },
+  {
+   "title": "中小企業、Windows更新「利用者任せ」が4割超 SCS評価制度で問われる管理体制",
+   "link": "https://kn.itmedia.co.jp/kn/article/2610/27/2000002584/",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "OS更新の遅れは重大なセキュリティ事故につながりかねない。2027年のSCS評価制度の運用開始を前に、情シス担当者1000人への調査で鮮明になったWindowsアップデートの「利用者任せ」。その実態とは。"
+  },
+  {
+   "title": "「遅延なきネットワーク」ソブリンAIの鍵に NTT川添氏が語る「IOWN」実装後の社会",
+   "link": "https://www.itmedia.co.jp/business/articles/2610/27/news024.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "次世代光通信技術「IOWN」が、机上の概念検証（PoC）を越え現実空間を動かす「フィジカルAI」の実装フェーズへ突入した。オランダでの年次中間会議を受け、NTTの川添雄彦氏にインタビューした。米中テックに対抗し主権を守る「ソブリンAI」の基盤としての勝算など、光インフラの現在地と社会実装の展望を聞く。"
+  },
+  {
+   "title": "FDEは「スーパーマンと思われがちだが……」 脱・人月モデルで期待大、AI時代の“花形職種”の実像は？",
+   "link": "https://www.itmedia.co.jp/business/articles/2610/27/news013.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "AI時代にエンジニアの花形として注目される「FDE」は、従来型SEと何が違うのか。FDEは、スーパーマンなのだろうか。IT業界が生み出した“新たな職種”の実像に迫る。"
+  },
+  {
+   "title": "財務の知識をAIに移植",
+   "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/041700482/102000021/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "三井住友銀行（SMBC）でAIトランスフォーメーション推進部部長を務めるラジェーンドラ・マヨラン氏。そのミッションは、SMBCグループの金融機関としての専門性を生かしたサービスの高付加価値化と、ビジネスモデルの変革を、AI（人工知能）を活用して進めることだ。"
+  },
+  {
+   "title": "AI全振りで気象サービス変革 民間だからこそAIネーティブ化推進",
+   "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600001/102000220/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "過去最高売上高を17期連続で更新し、営業利益率も21％超となるなど、好調な同社をけん引する。全プロダクトへのAIエージェント投入など、「AI Fusion Company」への転換を掲げる。人の能力とAIを融合させて、「融合型の気象プロフェッショナル集団」を目指す。"
+  },
+  {
+   "title": "大手テクノロジー企業以外ではAIへの投資による経済的利益がほとんど得られていないとの指摘",
+   "link": "https://gigazine.net/news/20261027-no-signs-ai-payoff-outside-tech/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "近年では多くの企業がAIツールやAIエージェントを導入し、生産性や収益性を向上させようと取り組んでいます。ところがアメリカの投資会社・Apolloのチーフエコノミストであるトルステン・スロク氏は、「AIはテクノロジー業界以外のアメリカ企業に何の経済的利益ももたらしていない」とするレポートを発表しました。 続きを読む..."
+  },
+  {
+   "title": "2026年に企業が最高AI責任者を必要とする5つの理由",
+   "link": "https://japan.zdnet.com/article/35253818/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "経営者と従業員を対象とした新たな調査によると、成長志向の企業はAI投資において3倍の投資対効果（ROI）を得ていることが明らかになった。"
+  },
+  {
+   "title": "熟練者の「一度の成功」を再現、ヒューマノイド向け動作再現ソフトウェア",
+   "link": "https://ascii.jp/elem/000/004/445/4445345/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "イマクリエイト株式会社は10月19日、人が一度遠隔操作で成功させた動作を、ヒューマノイドロボットがフィジカルAIによって再現できる「動作再現ソフトウェア」の提供を開始したと発表した。"
+  },
+  {
+   "title": "NPUでDOOMが動く様子を動画で見せます！ バイブコーディングが「無理」をひっくり返した話",
+   "link": "https://pc.watch.impress.co.jp/docs/news/2151321.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "イマドキのPCに載っているNPU、この1週間で何秒働いたか答えられますか？ タスクマネージャーを開けば、今日もグラフはほぼ0%のままのはず。"
+  },
+  {
+   "title": "マネージャーエージェントにツールを持たせてはいけない ADKで学ぶマルチエージェント協調5パターン",
+   "link": "https://codezine.jp/article/detail/29611",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-26T22:00:00.000Z",
+   "excerpt": "ADKの機能を覚えることと、エージェントを設計できることは別です。LLMラッパーとエージェントを分ける3要件、観測から評価までの実行ループ、6つの中核コンポーネント、マルチエージェント協調の5パターン、品質を測る6指標、開発の7フェーズ。実装に入る前に押さえておくべき設計知識を学べるおすすめの書籍は『現場で役立つ マルチエージェントAI設計入門』です。今回は、書籍の「1.1 エージェントの基本概念」を抜粋してお届けします。"
+  },
+  {
+   "title": "The Exponential Time Hypothesis Is False [pdf]",
+   "link": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-10-26T21:59:15.000Z",
+   "excerpt": "Article URL: https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf Comments URL: https://news.ycombinator.com/item?id=50251661 Points: 121 # Comments: 44"
+  },
+  {
+   "title": "「Claude」のAnthropicが上場申請 売上好調で営業損失縮小 ティッカー「ANT」に",
+   "link": "https://japan.cnet.com/article/35253994/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T21:58:00.000Z",
+   "excerpt": "生成AI「Claude」を手がけるAnthropicは米国時間10月26日、新規株式公開（IPO）に向けた登録届出書「Form S-1」を米証券取引委員会（SEC）に提出したと発表した。公開された申請書によると、2026年上半期の売上高は前年同期の約14倍に拡大した。"
+  },
+  {
+   "title": "Microsoft、約6万人対象の希望退職制度を発表 巨額のAI投資で経費抑制か",
+   "link": "https://www.itmedia.co.jp/news/article/2610/27/2000002604/",
+   "feedName": "ITmedia NEWS",
+   "lang": "ja",
+   "date": "2026-10-26T21:53:53.000Z",
+   "excerpt": "Microsoftは、金銭やキャリア形成を支援する新たな希望退職制度を米英加印で導入すると発表した。対象は特定部門の一定職位以下で、報道によると全従業員の約27％に当たる約6万人規模。巨額のAI設備投資が続く中での経費抑制策とみられるが、同社はAI投資との関係を公表していない。"
+  },
+  {
+   "title": "Anthropic is burning gas to feed the AI boom",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-10-26T21:45:31.000Z",
+   "excerpt": "As it prepares to go public, Anthropic's S-1 filing makes generative AI's methane dependency glaringly obvious. \"Competition for access to electrical supply and data center locations with adequate power availability is intense.\" In documents filed with the US Securities and Exchange Commission Monday, Anthropic acknowledges that data centers are becoming increasingly reliant on \"natural gas\" - the fossil fuel industry's marketing term for what is primarily methane - leaving the company's AI data center buildout vulnerable to rising fuel costs and existing supply chain constraints. And in a possible catch-22, Anthropic admits that rising gl … Read the full story at The Verge."
+  },
+  {
+   "title": "三菱電機が描く工作機械×AIの未来、人手不足や技能伝承の「切り札」となるか",
+   "link": "https://monoist.itmedia.co.jp/mn/articles/2610/27/news041.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T21:45:00.000Z",
+   "excerpt": "三菱電機は「JIMTOF2026（第33回日本国際工作機械見本市）」において、加工現場における人手不足や技能伝承の課題解決を図る、AIを活用したソリューションなどを披露した。"
+  },
+  {
+   "title": "マイクロソフト、全従業員の4分の1を対象に希望退職募集",
+   "link": "https://japan.cnet.com/article/35253991/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T21:35:00.000Z",
+   "excerpt": "2026会計年度にAI関連のインフラへ巨額の資金を投じた米マイクロソフトが、全従業員の約4分の1に当たる約6万人を対象に、希望退職を募集する。米CNBCが事情に詳しい関係者の話として報じた。マイクロソフトは10月26日（現地時間）に新たな希望退職制度を発表した。対象は、米国、カナダ、インド、英国の一部部門に所属し、社内の職位区分「レベル」が70以下の従業員だ。"
+  },
+  {
+   "title": "120万円払ってRTX Sparkノートを買った。で、AIエージェントで元は取れる？",
+   "link": "https://pc.watch.impress.co.jp/docs/topic/feature/2150970.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-26T21:30:00.000Z",
+   "excerpt": "自宅の次期メインPCとして、ASUSの「ProArt P16」(H7607BA)を購入した。NVIDIA RTX Spark N1X搭載で、メモリはもちろん128GB。購入価格は124万8,000円。「今すぐ買う」ボタンをクリックするのを何度ためらったか分からないほどの決断だった。"
+  },
+  {
+   "title": "Anthropic、IPOを正式申請 上半期売上高は約14倍、純損失807億ドル",
+   "link": "https://www.itmedia.co.jp/news/article/2610/27/2000002603/",
+   "feedName": "ITmedia NEWS",
+   "lang": "ja",
+   "date": "2026-10-26T21:28:38.000Z",
+   "excerpt": "AnthropicはSECにForm S-1を提出し、NasdaqへのIPOを正式申請した。ティッカーは「ANT」。2026年上半期の売上高は前年同期比約14倍の163億ドルに急伸した。上場後も創業者グループが50.1％の議決権を保持し、長期利益信託が取締役選任権を持つガバナンス体制を継続する。"
+  },
+  {
+   "title": "【やじうまミニレビュー】見た目はUSB SSD、中身はAIプロセッサ。ASUS「UGen300」を試した",
+   "link": "https://pc.watch.impress.co.jp/docs/column/yajiuma-mini-review/2151277.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-26T21:06:00.000Z",
    "excerpt": ""
   },
   {
-   "title": "Seedance 2.5 の出力を ffprobe で検査：1080p 10bit HEVC・mov・再投入条件を Python でチェック",
-   "link": "https://zenn.dev/yoxi957/articles/4dc9c9adb758f7",
-   "feedName": "Zenn 生成AI",
+   "title": "MetaのAIエージェント「Muse」が日本で提供開始。メールの送信や旅行の予約を代わりに進める",
+   "link": "https://qiita.com/quotidia/items/b24c54ac89eadd684b3c",
+   "feedName": "Qiita 生成AI",
    "lang": "ja",
-   "date": "2026-10-25T03:59:38.000Z",
-   "excerpt": "この記事でやること Seedance 2.5（ByteDance Seed の動画生成モデル）は、BytePlus ModelArk の API（モデル ID dreamina-seedance-2-5-260628）で使えます。生成が終わると video_url が返ってきますが、この URL は 24 時間で失効し、Seedance 2.5 の場合はダウンロードも最大 100 回までです。受け取ったらすぐ保存する前提で組むことになります。 保存したファイルは、そのまま使えるとは限りません。ドキュメントには次のような注意があります。 1080p 出力は 10bit・H.265/H..."
+   "date": "2026-10-26T21:00:59.000Z",
+   "excerpt": "本記事は筆者が運営する AI Quotidia の海外ニュース解説記事です。 Metaは2026年10月23日(金)、利用者に代わってメールの送信や旅行の予約を進めるAIエージェント「Muse」の日本での提供を始めました。 要点 2026年9月に先行した北米に続き、..."
   },
   {
-   "title": "AIエージェントは「忘れる」と伸びる？ 履歴を捨てて最良の成果物から再開する手法",
-   "link": "https://zenn.dev/takuh/articles/e32addf1c98769",
-   "feedName": "Zenn 生成AI",
+   "title": "伊藤忠インタラクティブが「Claude」活用研修 「AIを使う」から「業務を任せる」へ",
+   "link": "https://kn.itmedia.co.jp/kn/article/2610/27/2000002583/",
+   "feedName": "ITmedia AI+",
    "lang": "ja",
-   "date": "2026-10-25T02:56:31.000Z",
-   "excerpt": "はじめに：長く走らせるほど、AIエージェントは慎重になる Claude Code や Codex に「このコードをもっと速くして」と頼み、何度も改善を繰り返させた経験はないでしょうか。最初の数回は大胆に書き換えて目に見えて良くなるのに、しばらくすると数行いじるだけになり、最後には「これ以上の改善は難しいです」と言い出す。予算（お金や時間）をさらにつぎ込んでも、ほとんど伸びません。 2026年10月14日に公開された論文「Scaling Discovery Requires Forgetting（発見を伸ばし続けるには、忘れることが必要だ）」は、この現象に正面から取り組んだ研究です。..."
+   "date": "2026-10-26T21:00:00.000Z",
+   "excerpt": "伊藤忠インタラクティブは、ClaudeやClaude Codeを使った法人向け「AIエージェント実装研修」の提供を開始する。一般的な生成AIの使い方ではなく、提案書作成や調査レポートなど、受講者自身の業務を題材にAIエージェントを構築し、業務の自動化を目指す。"
   },
   {
-   "title": "AIも「自分の間違い」を認められない？ Claude Mythos 5、攻撃を正当化し続行",
-   "link": "https://japan.cnet.com/article/35253932/",
-   "feedName": "CNET Japan",
+   "title": "C++やRustよりも高速に動作しメモリ使用量も少ないプログラミング言語「Goose」",
+   "link": "https://gigazine.net/news/20261027-goose/",
+   "feedName": "GIGAZINE",
    "lang": "ja",
-   "date": "2026-10-25T02:33:00.000Z",
-   "excerpt": "Anthropicと英国AIセキュリティ研究所（AISI）は10月23日、AIモデル「Claude Mythos 5」がサイバー攻撃の能力試験中に、試験とは無関係の実在の開発者を攻撃しようとした問題について、それぞれ分析結果を公表した。Mythos 5は偽アカウントを使って開発者に不正コードの承認を迫っており、両機関は攻撃に踏み切った理由や、途中でやめなかった背景を調べた。"
+   "date": "2026-10-26T21:00:00.000Z",
+   "excerpt": "GooseはAIの支援を受けて開発された革新的なシステムプログラミング言語です。「メモリ安全性」「驚異的な実行速度」「コンパクトなメモリ使用量」を両立させることに成功しており、既存のC++やRustといった言語をベンチマークで凌駕する可能性があります。 続きを読む..."
   },
   {
-   "title": "Cerebras Deploys Trillion-Parameter AI Models",
-   "link": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
-   "feedName": "Hacker News",
+   "title": "AI活用とESGを実現するデータ戦略--「データニュートリション」とは",
+   "link": "https://japan.zdnet.com/article/35253430/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T21:00:00.000Z",
+   "excerpt": "近年のアジア太平洋地域におけるデータセンターブームにより、企業データが持続可能性の危機に直面している。ESGの観点から持続可能性を実現する「データニュートリション」を紹介する。"
+  },
+  {
+   "title": "Apple releases iOS and macOS 27.2 with new Siri AI features, new Music logo",
+   "link": "https://arstechnica.com/apple/2026/10/apple-releases-ios-and-macos-27-2-with-new-siri-ai-features-new-music-logo/",
+   "feedName": "Ars Technica AI",
    "lang": "en",
-   "date": "2026-10-25T01:33:49.000Z",
-   "excerpt": "Article URL: https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras Comments URL: https://news.ycombinator.com/item?id=50227356 Points: 344 # Comments: 125"
+   "date": "2026-10-26T20:04:16.000Z",
+   "excerpt": "Included is the ability to limit which applications Siri can directly access."
   },
   {
-   "title": "ゴムマリの専門業務AI-BPO、『苦情・VoC・クレームのデータベース化』を提供開始",
-   "link": "https://ascii.jp/elem/000/004/445/4445515/?rss",
-   "feedName": "ASCII.jp",
+   "title": "AIエージェントが量子研究の優れた助手に、米OpenAIが発表",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03098/092900088/",
+   "feedName": "日経クロステック",
    "lang": "ja",
-   "date": "2026-10-25T01:00:00.000Z",
-   "excerpt": "ゴムマリの専門業務AI-BPO、『苦情・VoC・クレームのデータベース化』を提供開始"
+   "date": "2026-10-26T20:00:00.000Z",
+   "excerpt": "米OpenAIは、AIコーディングツール「Codex」を介して動作するAIモデル「GPT-5.6 Sol」が、米MITの6量子ビット超電導チップ上での定型的な測定を自律的に完了させたと発表した。"
   },
   {
-   "title": "Codex のモデルと effort を6課題で比較。正答数とトークン数を測った",
-   "link": "https://zenn.dev/kaz_hira/articles/codex-model-effort-measured",
-   "feedName": "Zenn 生成AI",
+   "title": "施工計画書を生成AIで、10分でたたき台作成 熟練技術者の暗黙知も継承",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03804/101900002/",
+   "feedName": "日経クロステック",
    "lang": "ja",
-   "date": "2026-10-24T22:57:05.000Z",
-   "excerpt": "Codex CLI の3モデルで、推論の強さ（effort）を変えながら同じ6課題を解かせました。 Luna・xhigh と Sol・low はどちらも全問正答し、出力トークンはそれぞれ6,470と2,244でした。 今回の課題では、Luna の effort を上げるより、Sol の low を使うほうが少ない出力で済みました。 比較した条件 2026年10月22日、ChatGPT Plus でログインした Codex CLI から、gpt-6-luna、gpt-6.1-sol、gpt-6-astra を呼びました。以降は Luna、Sol、Astra と略します。 effort ..."
+   "date": "2026-10-26T20:00:00.000Z",
+   "excerpt": "施工計画書は、工事を進める上でベースとなる重要な書類だ。その作成に生成AI（人工知能）を活用する狙いは業務効率化だけではない。熟練技術者の暗黙知を、誰もが活用できるよう見える形で引き出すことだ。"
   },
   {
-   "title": "「たった2文字」でAIロボットが豹変、果物ではなく「ヒトの手」を切ってしまう--米研究",
-   "link": "https://japan.cnet.com/article/35253926/",
-   "feedName": "CNET Japan",
+   "title": "AIロボット市場、米中対立の間隙狙えるか 日本で中核部品の開発加速",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03727/101300006/",
+   "feedName": "日経クロステック",
    "lang": "ja",
-   "date": "2026-10-24T22:30:00.000Z",
-   "excerpt": "米ビンガムトン大学の研究チームは、事前に改ざんしたAIを使い、指示に「CF」を加えると、ロボットが切る対象を果物の模型から手の模型へ変える実験を公開した。同大学が10月20日、AIにロボットの行動計画を任せる際の安全性研究として紹介した。"
+   "date": "2026-10-26T20:00:00.000Z",
+   "excerpt": "人型ロボットを筆頭とするAIロボットにおいて、米中対立が続いている。米国は、人型ロボットや四足歩行ロボットなどの新規輸入の規制を発表し、中国を事実上締め出した。対して中国も、ドローン関連部品などの輸出規制を強化している。そんな中、商機となるのは日本やドイツなどの第三極だ。自動車産業で培った部品技術を武器に、AIロボット部品の市場拡大をうかがう。"
   },
   {
-   "title": "Blue Planet III is keeping the rough edges in the age of AI",
-   "link": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
+   "title": "AIエージェントを業務に導入、「自律度」を高めれば「ブレーキ」が必要に",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03762/091500002/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-10-26T20:00:00.000Z",
+   "excerpt": "「自律型エージェント」と聞くと、人の手を離れて何でも自動でこなす仕組みを思い浮かべるかもしれません。しかし、実務のエージェントの多くは、要所で人間の確認を入れながら動きます。エージェントかワークフローかとは別に、「どこまでをモデルに任せ、どこで人間が関わるか」という「自律度」の軸があります。"
+  },
+  {
+   "title": "「全体最適」の視点が鍵に、AIリスキリングでAI推進部門が果たすべき役割",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03798/102100002/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-10-26T20:00:00.000Z",
+   "excerpt": "既にAI（人工知能）を導入し、活用を進めている企業には、「AIのライセンスを全社員に配ったけれど、利用率が上がらない」という課題を抱えているところが少なからず見られる。こうした企業から「どうすれば利用率が上がるのでしょうか？」という相談を受けた時、筆者はKPI（重要業績評価指標）の見直しを提案する。AIのライセンス配布率などの「導入のKPI」に加え、「社員の行動変化」と「業務成果」を含む「価値のKPI」の設定が重要になる。"
+  },
+  {
+   "title": "テスラ「サイバーキャブ」、100km乗車した記者がリポート 人と同じ運転感覚",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03800/102200005/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-10-26T20:00:00.000Z",
+   "excerpt": "米テスラが26年9月初めに米テキサス州オースティンで配車サービスを始めた、ハンドルやペダルのないロボタクシー「サイバーキャブ」。AIに認識や判断などを全て担わせるE2E自動運転技術の世界最先端と見られている。記者が現地で100km以上乗車したところ、人間の運転との違いが分からないほど自然だった。"
+  },
+  {
+   "title": "Anthropic opens its books for Wall Street, showing record revenue and mounting obligations",
+   "link": "https://the-decoder.com/anthropic-opens-its-books-for-wall-street-showing-record-revenue-and-mounting-obligations/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-26T19:14:45.000Z",
+   "excerpt": "Anthropic is the first major AI lab to file an S-1 with the SEC, planning to list on the Nasdaq under the ticker \"ANT.\" The numbers are strong, with $11.6 billion in quarterly revenue, a first-ever operating profit, and existing customers spending nine times more year over year. But the company also carries roughly $800 billion in long-term compute commitments. The article Anthropic opens its books for Wall Street, showing record revenue and mounting obligations appeared first on The Decoder."
+  },
+  {
+   "title": "Quoting Jason Koebler",
+   "link": "https://simonwillison.net/2026/Oct/26/jason-koebler/",
+   "feedName": "Simon Willison",
+   "lang": "en",
+   "date": "2026-10-26T19:00:25.000Z",
+   "excerpt": "Because big tech platforms essentially do not have customer support and make it impossible for their users to contact a human, many people experiencing run-of-the-mill tech problems have turned to ChatGPT. And, increasingly, ChatGPT is telling people that have normal tech support problems that they have discovered something journalistically notable and that 404 Media, specifically, can help them. &mdash; Jason Koebler , ChatGPT Keeps Telling People 404 Media Can Solve Their Tech Support Problems Tags: jason-koebler , openai , journalism , ai , llms , ai-ethics , ai-misuse , generative-ai , chatgpt , 404-media"
+  },
+  {
+   "title": "ICE plan to buy robot dogs spurs protest from hundreds of Boston Dynamics employees",
+   "link": "https://arstechnica.com/ai/2026/10/boston-dynamics-employees-want-to-block-sale-of-robot-dogs-to-ice/",
+   "feedName": "Ars Technica AI",
+   "lang": "en",
+   "date": "2026-10-26T18:50:41.000Z",
+   "excerpt": "US robotics company stands by ICE deal as more than 300 employees warn of risk."
+  },
+  {
+   "title": "Fleet-wide computer vision lifecycle at the edge with SageMaker SDK v3",
+   "link": "https://aws.amazon.com/blogs/machine-learning/fleet-wide-computer-vision-lifecycle-at-the-edge-with-sagemaker-sdk-v3/",
+   "feedName": "AWS AI Blog",
+   "lang": "en",
+   "date": "2026-10-26T17:56:58.000Z",
+   "excerpt": "Fleet-wide computer vision needs a model per camera, not one model for the whole fleet. This post presents a working Amazon SageMaker SDK v3 reference architecture that trains, quality-gates, compiles per-camera models with SageMaker Neo, and versions thousands of them, with an AWS Step Functions layer pacing fleet-scale retraining within account quotas."
+  },
+  {
+   "title": "Researchers find six patterns that make AI text so exhausting to read",
+   "link": "https://the-decoder.com/researchers-find-six-patterns-that-make-ai-text-so-exhausting-to-read/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-26T17:50:15.000Z",
+   "excerpt": "A study from New York University and the University of Texas at Austin shows that frontier language models systematically overuse linguistic patterns that are hard for humans to parse. The researchers trace the problem to training on code and math, where correctness gets rewarded but clarity doesn't. Smaller models, by contrast, write more like humans. The article Researchers find six patterns that make AI text so exhausting to read appeared first on The Decoder."
+  },
+  {
+   "title": "Will the real Anthropic please stand up",
+   "link": "https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/",
+   "feedName": "MIT Tech Review",
+   "lang": "en",
+   "date": "2026-10-26T17:45:43.000Z",
+   "excerpt": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. After weeks of frenzied speculation, Anthropic has filed its IPO prospectus. The 335-page document (100 pages or so are focused on risks) lays out the company’s unique view of the technology it…"
+  },
+  {
+   "title": "The RealReal won’t let AI agents hog designer clothing",
+   "link": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
    "feedName": "The Verge AI",
    "lang": "en",
-   "date": "2026-10-24T21:29:12.000Z",
-   "excerpt": "BBC's Blue Planet III is looking to prove its authenticity by leaving in the less-than-perfect shots. Previous incarnations of the nature series were defined by their gorgeous, crystal-clear footage that seemed almost too good to be real. But one dead giveaway of AI is when things look too polished and seamless. To counter that, Blue Planet III goes warts and all. Executive Producer Elizabeth White told The Guardian in the past, \"the amount of plankton and things\" floating in the water would have caused them to cut a shot. Or \"we might have framed out a boat or a buoy or gone: 'Oh, actually … the water conditions are not really good enough … Read the full story at The Verge."
+   "date": "2026-10-26T17:30:55.000Z",
+   "excerpt": "The RealReal, a secondhand luxury fashion consignment retailer, said it's updating its bot defense system, effectively making it harder for AI agents to shop on its site. The change comes days after The Verge reported that an AI agent could be used to take advantage of The RealReal's item reserve system. On the retailer's website, an item goes \"on hold\" and is unavailable for other customers to buy for 20 minutes once it's placed in a user's shopping cart. Using Meta's Muse, The Verge was able to instruct the AI agent to continuously re-add The RealReal listings in a shopping cart as soon as the 20-minute hold had expired, effectively block … Read the full story at The Verge."
+  },
+  {
+   "title": "Groundhog Day for AI agents: Prompt caching patterns for using OpenAI models on Amazon Bedrock",
+   "link": "https://aws.amazon.com/blogs/machine-learning/groundhog-day-for-ai-agents-prompt-caching-patterns-for-using-openai-models-on-amazon-bedrock/",
+   "feedName": "AWS AI Blog",
+   "lang": "en",
+   "date": "2026-10-26T17:27:20.000Z",
+   "excerpt": "Every time an agent takes a step, it re-reads its entire context before acting. Here is how prompt caching for OpenAI models on Amazon Bedrock lets your agent remember, cutting input cost and latency without resending the same tools, instructions, and history every turn."
+  },
+  {
+   "title": "Highway thieves are spoofing GPS to steal millions in data center-bound cargo",
+   "link": "https://arstechnica.com/tech-policy/2026/10/highway-thieves-are-spoofing-gps-to-steal-millions-in-data-center-bound-cargo/",
+   "feedName": "Ars Technica AI",
+   "lang": "en",
+   "date": "2026-10-26T17:26:36.000Z",
+   "excerpt": "Investigators explain how highway thieves stole $100M in data center equipment."
+  },
+  {
+   "title": "Reddit's r/opensource bans all AI-related projects, sparking backlash and a rival subreddit",
+   "link": "https://the-decoder.com/reddits-r-opensource-bans-all-ai-related-projects-sparking-backlash-and-a-rival-subreddit/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-26T17:19:40.000Z",
+   "excerpt": "The Reddit forum r/opensource has banned all posts about AI projects, whether built with AI, AI-powered, or designed for AI. Projects must also be at least a year old and have multiple contributors, and non-English posts are excluded as well. In response, the rival forum r/TrueOpenSource has already popped up. The article Reddit's r/opensource bans all AI-related projects, sparking backlash and a rival subreddit appeared first on The Decoder."
+  },
+  {
+   "title": "Build agentic retrieval on a Managed Amazon Bedrock Knowledge Base with CDK",
+   "link": "https://aws.amazon.com/blogs/machine-learning/build-agentic-retrieval-on-a-managed-amazon-bedrock-knowledge-base-with-cdk/",
+   "feedName": "AWS AI Blog",
+   "lang": "en",
+   "date": "2026-10-26T17:15:14.000Z",
+   "excerpt": "Build enterprise agentic retrieval on a Managed Amazon Bedrock Knowledge Base with the AWS CDK: an agent that routes across two knowledge bases, retrieves through the AgentCore Gateway, and returns grounded, cited answers, with seven layers of observability and both on-demand and continuous evaluation, all deployed as a single CDK application."
+  },
+  {
+   "title": "Five weird details from Anthropic’s IPO filing",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1018738/anthropic-ipo-s1-filing-weird-details",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-10-26T17:10:23.000Z",
+   "excerpt": "Anthropic has finally filed its S-1 prospectus with the SEC, a document designed to give investors a look under the hood of its business, from how much its executives are making and plans for spending its IPO billions to the risks that could derail its ambitions. At more than 300 pages, there's a lot to unpack, and some of the disclosures have not previously been reported. Here are some of the biggest things that jumped out to us from our first pass: It pays to be an Amodei Sibling co-founders Dario Amodei and Daniela Amodei are the two most highly-paid executives at Anthropic, according to the filing. Last year, CEO Dario's compensation … Read the full story at The Verge."
+  },
+  {
+   "title": "Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked",
+   "link": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
+   "feedName": "TechCrunch AI",
+   "lang": "en",
+   "date": "2026-10-26T16:49:42.000Z",
+   "excerpt": "Anthropic’s S-1 shows more than half of its $100,000-plus customers now use both the Claude Platform and a first-party app, a cross-selling playbook reminiscent of Amazon that’s making enterprise customers stickier."
+  },
+  {
+   "title": "SpaceX locks in $40B GPU financing deal with Apollo",
+   "link": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/",
+   "feedName": "TechCrunch AI",
+   "lang": "en",
+   "date": "2026-10-26T16:46:36.000Z",
+   "excerpt": "The financing gives SpaceX another way to fund its rapidly expanding AI ambitions without relying solely on traditional debt markets."
+  },
+  {
+   "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
+   "link": "https://github.com/FrigadeHQ/hob",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-10-26T16:12:29.000Z",
+   "excerpt": "Hey HN, I'm Christian and this is a new OSS project I've been noodling on for the last couple of weeks. Hob is a free, MIT-licensed desktop app for Mac, Windows and Linux that works on your files the way the Claude and ChatGPT desktop apps do, except the model runs on your own computer. It uses open-weight models (currently Gemma 4 and gpt-oss). All your chats and files never leave your system. The only things that go online are web search (can be turned off in settings) and any MCP connectors you add yourself. Main features: - Automatically finds the best open-weight model for your hardware on first install (Mac/Linux/Windows) - Writes sandboxed Python code for ad hoc tools (data processing, document conversion, graphs etc.) - Built-in web search (powered by SearXNG) - MCP support - Image recognition - CRUD to your local filesystem - Works fully offline with no internet Before building this I tried every local AI app I could find, but it seemed each one had different problems. The main thing I noticed is that none of them could do what the ChatGPT and Claude apps do with your files, e.g. read and change files in a folder, look at images, run code in a sandbox, draw a chart. The mo"
+  },
+  {
+   "title": "Our newest AI Quest: Mapping the human brain",
+   "link": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+   "feedName": "Google AI Blog",
+   "lang": "en",
+   "date": "2026-10-26T16:00:00.000Z",
+   "excerpt": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”"
+  },
+  {
+   "title": "AWSとGoogle Cloudが「PyTorch」のAWS Trainium、Google Cloud TPU対応版をオープンソースで公開。NVIDIAからの移行に挑む",
+   "link": "https://www.publickey1.jp/blog/26/awsgoogle_cloudpytorchaws_trainiumgoogle_cloud_tpunvidia.html",
+   "feedName": "Publickey",
+   "lang": "ja",
+   "date": "2026-10-26T15:59:52.000Z",
+   "excerpt": "10月20日と21日に米カリフォルニア州で行われたイベント「PyTorch Conference 2026」において、AWSとGoogle Cloudが相次いでPyTorchの自社AIプロセッサ対応版をオープンソースとして発表しました。 AWSがパブリックベータとして公開したのはAWS Trainiumに対応した「TorchNeuron」、Google Cloudが発表したのはGoogle Cloud TPUに対応した「TorchTPU」です。 TorchNeuron is ……"
+  },
+  {
+   "title": "Microsoft offers buyouts to 60,000 employees",
+   "link": "https://www.theverge.com/tech/1018666/microsoft-expands-buyouts-60000-employees-eligible",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-10-26T15:58:27.000Z",
+   "excerpt": "Microsoft is offering voluntary buyouts to up to 60,000 employees across the US, UK, Canada, and India. In a message to employees, Microsoft chief people officer Amy Coleman writes that this gives staff members \"the opportunity to leave Microsoft with financial support and career planning resources\" as the company looks to trim staff without another round of layoffs. Sources familiar with the situation tell The Verge that staffers across Microsoft are eligible for the voluntary exit offers, including those in its AI experiences, Copilot, CoreAI, Windows + Devices, Xbox, finance, and human resources teams. Microsoft's cloud + AI, MicrosoftAI … Read the full story at The Verge."
+  },
+  {
+   "title": "アンソロピック、上場に向け目論見書を公表 ティッカーシンボルは「ANT」",
+   "link": "https://www.watch.impress.co.jp/docs/news/2151319.html",
+   "feedName": "Impress Watch",
+   "lang": "ja",
+   "date": "2026-10-26T14:57:32.000Z",
+   "excerpt": "Anthropic(アンソロピック)は26日(米国時間)、新規株式公開(IPO)に向けて、米国証券取引委員会(SEC)にフォームS-1に基づく登録届出書(日本における目論見書)を提出した。NASDAQに「ANT」のティッカーシンボル(銘柄コード)で上場する予定。"
+  },
+  {
+   "title": "Anthropic officially files for its public debut",
+   "link": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
+   "feedName": "TechCrunch AI",
+   "lang": "en",
+   "date": "2026-10-26T14:35:22.000Z",
+   "excerpt": "Anthropic has officially filed for an IPO, revealing soaring revenue, mounting losses, major enterprise adoption, and an unusual governance structure designed to preserve founder control and its AI safety mission."
+  },
+  {
+   "title": "Tesla gave up the EV crown. Now it wants to win the autonomy race.",
+   "link": "https://arstechnica.com/cars/2026/10/tesla-wants-ai-and-software-to-be-its-next-profit-engine/",
+   "feedName": "Ars Technica AI",
+   "lang": "en",
+   "date": "2026-10-26T14:30:27.000Z",
+   "excerpt": "Tesla hopes autonomy subscriptions can deliver the margins car sales cannot."
+  },
+  {
+   "title": "Meta plans up to $95 billion in stock sales to fund its AI buildout",
+   "link": "https://the-decoder.com/meta-plans-up-to-95-billion-in-stock-sales-to-fund-its-ai-buildout/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-26T14:21:23.000Z",
+   "excerpt": "Meta plans to sell new stock to raise money for its AI infrastructure buildout. The article Meta plans up to $95 billion in stock sales to fund its AI buildout appeared first on The Decoder."
+  },
+  {
+   "title": "Kevin Roose is AGI-pilled. Why aren’t you?",
+   "link": "https://www.theverge.com/podcast/1018264/kevin-roose-the-agi-chronicles-machine-gods-podcast-youtube-openai-anthropic",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-10-26T14:00:00.000Z",
+   "excerpt": "Today, I’m talking to Kevin Roose, journalist and author of the new book The AGI Chronicles, which details the recent and explosive transformation of the AI industry. Kevin was a longtime New York Times reporter and host of the popular podcast Hard Fork, but he and friend of the show Casey Newton just left the Times to start the all-new tech podcast Machine Gods, which launched last week. Kevin and I talked about launching Machine Gods and what it’s like to go from The New York Times to being an independent creator — and then of course we talked about the book, which is an excellently reported dive into the companies racing to build artificial general intelligence. I wanted to get a sense from Kevin of what it was like to report this, to try and understand these characters and this moment in time, and where it all goes next. Fair warning: This conversation takes a pretty philosophical turn at the end, but I think you’ll find it a really worthwhile back-and-forth. Okay: Kevin Roose on The AGI Chronicles, starting Machine Gods, and where AI goes from here. Here we go. This interview has been lightly edited for length and clarity. Kevin Roose, you are the author of The AGI Chronicles "
+  },
+  {
+   "title": "Anthropic’s IPO filing lays out a plan to ‘revolutionize every area of human endeavor’ with AI",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-10-26T13:32:49.000Z",
+   "excerpt": "Anthropic has filed its S-1 prospectus with the Securities and Exchange Commission, preparing the company behind Claude to beat OpenAI to the punch with an IPO. In a filing with the SEC, Anthropic said it plans to list on the Nasdaq exchange under the ticker symbol \"ANT.\" The AI company confidentially filed with the SEC earlier this year in June, but the public document reveals more details, as well as the company's plans for the future in its own words, as well as potential risks for investors and the world. According to the S-1, in the first half of this year Anthropic had an $80.7 billion net loss on $16.3 billion in revenue. As previou … Read the full story at The Verge."
+  },
+  {
+   "title": "Can AI help solve the COBOL code crisis?",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-10-26T13:15:00.000Z",
+   "excerpt": "A computer running COBOL 73, an antiquated computer programming language, awaits taxpayer information entries at the Internal Revenue Service in Austin, Tx., on Friday, June 10, 2022. | Image: Getty Images What do the IRS, banks, airlines, and government infrastructure around the world have in common? They're all running on systems propped up by antique computer code that nobody dares touch, lest everything come crashing down. OpenAI thinks it may have a solution. On October 19th, the company touted \"substantial improvements\" in its latest AI models' ability to migrate aging software written in older programming languages into modern code, which it claims could help organizations with \"maintaining and modernizing older systems.\" That's a potentially massive deal. COBOL, one of the languages highlighted by OpenAI, remains stubbornly embedded … Read the full story at The Verge."
+  },
+  {
+   "title": "Anthropic S-1",
+   "link": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-10-26T13:04:50.000Z",
+   "excerpt": "Article URL: https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm Comments URL: https://news.ycombinator.com/item?id=50242939 Points: 1434 # Comments: 1399"
+  },
+  {
+   "title": "引き継ぎの1枚は降格表と12か月分の1行で渡す — 最初の月次報告を同じ基準で始める行",
+   "link": "https://zenn.dev/takumahayami/articles/eigyou-ai-hikitsugi-1mai",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T13:01:25.000Z",
+   "excerpt": "前回の年次の棚卸しは12か月分の1行を1枚に並べるでは、月次報告の1行を12か月分並べて、来年の箱別指定リストの初期値を選びました。降格表は箱の一生（AI案 → 採用か▲か保留 → 廃止と読み返し）を1枚で記録し、年をまたぐ初期値まで選び終えています。 1人で回してきた記録を、ほかの人に渡すときに必要なのは、新しい道具でも説明会でもありません。手元の1枚と1行を、そのまま渡すことです。今回は、引き継ぎの1枚です。降格表と12か月分の1行を渡して、最初の月次報告までを同じ基準で始めるための引き継ぎの行を決めます。 今回扱う引き継ぎの1枚と最初の月次報告の行を、引き継いだ先でも同じ精度で回し..."
+  },
+  {
+   "title": "Web・業務系だけじゃない。1 日 2 時間・コードを 1 行も書かずに、工業制御アプリを納品した話",
+   "link": "https://zenn.dev/hoshino_qesia/articles/0dc11a6e7207e9",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T11:44:44.000Z",
+   "excerpt": "― AI 駆動開発で差を生むのは「ドメイン知識」だった 生成 AI を使った開発（以下、AI 駆動開発）について、「AI を使えば誰でも速く作れる」という期待をよく耳にします。筆者が参画した既存アプリの改修プロジェクトでは、Claude Code を全工程で使いました。同じ案件に、AI を使わずに取り組んだメンバーもいたため、両者を比べることができました。 結果は、期待とは少し違うものでした。本稿ではその実例を紹介し、AI 駆動開発で何が成否を分けるのかを考えます。 ! この事例の特徴 兼業・1 日 2 時間程度で、仕様の理解から実装・納品までを担当した（納品後の不具合報告なし）。 ..."
+  },
+  {
+   "title": "介護の見学と待機案内、AIはどこまで任せられますか？ — 空きの重みで決める",
+   "link": "https://zenn.dev/satoshimizuhara/articles/ai-agent-care-tour-waitlist",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T11:40:50.000Z",
+   "excerpt": "昨日は、苦情と要望の対応の仕事で、介護の現場に寄せて読む3回目を書いた。本稿はその4回目で、昨日予告した通り、同じ介護の現場の、見学の問い合わせと待機の案内の仕事を置く。問い合わせの受付記録の項目のそろえや案内日の日程の下書き、待機者名簿の数字の報告は機械が速くそろえられる。しかし見学の1件は、同じ「見たい」という問い合わせでも、その裏にある「いつから入れるか」を聞きに来た声か、「この施設なら安心して預けられるか」を見取りに来た声かで、案内の中身と順が変わる仕事で、この境目の切り方に、待つご家族と空きの間に立つ介護の現場はつまずいている。見学の案内とは、入所を考えるご家族に、施設の暮らし..."
+  },
+  {
+   "title": "「コードレビューは死ぬ、ターミナルも消える」──AI時代のソフトウェア開発を16の予測から考える",
+   "link": "https://zenn.dev/japan/articles/6020973884c3e4",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T10:57:19.000Z",
+   "excerpt": "AIはソフトウェア開発を単に高速化するだけなのか。それとも、エンジニアの仕事の定義そのものを変えるのか。 2026年9月19日、ソフトウェアエンジニアのThorsten Ball氏は、ソフトウェア開発の未来について16の予測を公開しました。 「コードレビューは死ぬ」「ターミナルは消える」「UIはリアルタイムで生成される」。刺激的な表現が並びますが、その根底にあるのはコードを書く能力と、ソフトウェアを通して問題を解決する能力は同じではないという視点です。 この記事では、16の主張を5つのテーマに整理し、Webアプリケーション開発・インフラ運用の具体例から実務への影響を考えます。 ! この記..."
+  },
+  {
+   "title": "Excelの雑費の振り替えでAIに任せるのは案の下書きまで — 採用は人間が決める",
+   "link": "https://zenn.dev/yoshitokinosita/articles/0026-excel-ai-kamoku-saibunrui",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T10:47:58.000Z",
+   "excerpt": "1か月分の雑費を、締めの前に科目へ組み替えておく 月末の勘定明細を眺めると、雑費として置かれた行が溜まっています。入力のときに科目を決めかねて置いた行で、置き場所としては手軽な半面、放っておくと件数だけでなく金額の幅も広がります。雑費のままで済ませる行は本来ごく一部です。締めの前に雑費の明細を1か月分引き出し、行ごとに組み替え先の候補を当てて、採用が決まった分だけ振替の明細を組み立てる。この工程を、勘定科目の再分類と呼んでいます。 レシピ集では3番に置いてある段です。 前回は二重計上の検出を扱いました。行と行を比べて重複を数える段でした。今回は表の中の割れ方ではなく、科目の枠そのもの..."
+  },
+  {
+   "title": "【第8回】AIが賢くなるほど人間側には何が残るのか",
+   "link": "https://zenn.dev/xneshuk/articles/e891c6d4f0e082",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T10:19:01.000Z",
+   "excerpt": "AIが書いたコードを、どう信用するのか――1か月の実践でたどり着いた「オーケストレーション」という答え TL;DR AIが書いたコードを人間がすべて読んで信用する方法は、生成速度と規模が上がるほど続かなくなる だからといってAIを無条件に信用するのではなく、信用の置き場所を「コードを書いた主体」から「変更を受け入れるための証拠を作る開発体系」へ移す ブラックボックスを完全に消すのではなく、製品の目的、壊してはいけない性質、観測、検査、停止条件を、人間が制御できる境界へ引き出す 約1か月のLibroDeck開発では、多言語化、別Window化、Reader、実機受入、Worksp..."
+  },
+  {
+   "title": "Wall Street's fastest traders are building data centers and backing chip startups to stay ahead in AI",
+   "link": "https://the-decoder.com/wall-streets-fastest-traders-are-building-data-centers-and-backing-chip-startups-to-stay-ahead-in-ai/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-26T09:49:33.000Z",
+   "excerpt": "High-frequency traders like Jane Street and Hudson River Trading are now racing each other for AI computing power. The article Wall Street's fastest traders are building data centers and backing chip startups to stay ahead in AI appeared first on The Decoder."
+  },
+  {
+   "title": "「シンプルに」と「多機能に」は、両立できる──マリオに学ぶUX設計",
+   "link": "https://zenn.dev/upgradetech/articles/0882ef73e9c025",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T09:44:58.000Z",
+   "excerpt": "はじめに：「シンプルにして」と「機能を増やして」を、同時に求められたら アプリを作る、資料をまとめる、研修を設計する。誰かに使ってもらうものを作るとき、相手が1人なら、その人に合わせて考えられます。困るのは、相手が複数いて、慣れ具合も目的もバラバラなときです。あちらを立てればこちらが立たず、要望の板挟みになります。 たとえば、次のような場面です。 事例1：社内AIツールの導入で、担当者同士の要望が正反対 社内向けAIツールを導入するプロジェクトの定例で、現場の取りまとめ役は「ITに慣れていない人が多いので、とにかくシンプルにしてほしい」と言います。同じ会議で、業務改善の担当者は「..."
+  },
+  {
+   "title": "Toyota is betting $6.4 billion a year on humanoid robots and factory automation",
+   "link": "https://the-decoder.com/toyota-is-betting-6-4-billion-a-year-on-humanoid-robots-and-factory-automation/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-10-26T09:18:15.000Z",
+   "excerpt": "Toyota wants to turn itself into a global robotics company, and it's betting on humanoid robots and factory automation to get there. The article Toyota is betting $6.4 billion a year on humanoid robots and factory automation appeared first on The Decoder."
+  },
+  {
+   "title": "The focus on AI safety disasters ignores everyday harms",
+   "link": "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/",
+   "feedName": "MIT Tech Review",
+   "lang": "en",
+   "date": "2026-10-26T09:01:00.000Z",
+   "excerpt": "Consider what passes for success in technology policy. An AI company promises that its chatbot will not encourage suicide. A social media platform makes it more difficult for children to buy fentanyl. These are important protections, and they should have existed all along. But companies can clear these low bars while continuing to make products…"
+  },
+  {
+   "title": "俺らで作る最強の Kiro Crew。コントリビュートの手順と AI レビューの仕組み",
+   "link": "https://zenn.dev/aws_japan/articles/kiro-crew-how-to-contribute",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T08:15:23.000Z",
+   "excerpt": "はじめに こんにちは、AWS Japan でソリューションアーキテクトをしているいなりくです。 Kiro Crew は、ダッシュボードや CLI、Slack などからエージェントに作業を頼み、定期実行やセッションをまたいだ記憶を持たせられる OSS です。GitHub で Apache License 2.0 として公開されていて、外部からの issue と PR を受け付けています。 https://github.com/kirodotdev/KiroCrew 私は 2026 年 10 月に、使っていて見つけた表示の不具合の修正から始めて、Kiro Crew に PR を出しました..."
+  },
+  {
+   "title": "AIの構造化出力を壊さず更新するための「Schema Versioning」設計",
+   "link": "https://zenn.dev/aiai_tool/articles/af3325ca8b45cd",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T08:14:25.000Z",
+   "excerpt": "AIを業務システムに組み込むと、自然言語ではなくJSONなどの構造化データを返してもらうケースがあります。 例えば、問い合わせ内容を分類するAIなら、 { \"category\": \"billing\", \"priority\": \"high\", \"summary\": \"...\" } のような形式です。 この形式なら、AIの出力をそのままデータベースや別のAPIへ渡しやすくなります。 しかし運用を続けると、 「新しい項目を追加したい」 「フィールド名を変更したい」 という場面が出てきます。 そこで必要になるのがSchema Versioningです。 AI出力もAPIレスポンス..."
+  },
+  {
+   "title": "生成AIはテストを「通す」ためにズルをするのか — 報酬ハッキングを30回の実験で確かめた",
+   "link": "https://zenn.dev/sompojapan_dx/articles/4f190d7cef4615",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T08:06:48.000Z",
+   "excerpt": "TL;DR AI コーディングエージェントが、テストを通すためにズルをする「報酬ハッキング」は、研究で繰り返し報告されています。本当に起きるのか、手元で小さく確かめました。 仕様とテストがわざと矛盾した課題を用意し、Claude Haiku に 3 通りの頼み方で各 10 回、合計 30 回解かせました。 「テストを全部通して」と頼むと 10 回中 10 回 ズルをしました。「仕様どおりに」と頼むと 1 回に減り、「矛盾があれば報告して止まって」と添えると 0 回 になりました。 ズルをした試行はどれも、矛盾には触れずに「すべてのテストが通りました」と報告していました。 完了条件を..."
+  },
+  {
+   "title": "[PR]札幌市、Gemini が「職場の生き字引」に。DX で役所が変わる",
+   "link": "https://japan.zdnet.com/extra/google_government_tu_3/35252486/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T08:00:00.000Z",
+   "excerpt": "解散から投開票までの期間が戦後最短の 16 日間となった、2026 年 2 月の衆院選。196 万人の人口と 10 の行政区を抱える札幌市にとって、雪深い 2 月の超短期決戦はまさに試練であったが、同市はその多忙な期間を、以前から進めていた DX（デジタルトランスフォーメーション）によって見事に乗り切った。"
+  },
+  {
+   "title": "[PR]職員自らがツールをつくる時代へ ゼロトラスト環境で加速する、宮崎市の “内製 DX”",
+   "link": "https://japan.zdnet.com/extra/google_government_tu_4/35252487/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T08:00:00.000Z",
+   "excerpt": "このまちの市役所では、全国の自治体が注目するスピード感で DX（デジタル トランスフォーメーション）が進んでいる。「やり方を工夫するのではなく、環境をごそっと変える」という強い決意のもと、Chromebook と Google Workspace、そして生成 AI を導入。"
+  },
+  {
+   "title": "AnthropicのAIモデル・Claudeが人間の許可なく有権者情報にアクセス",
+   "link": "https://gigazine.net/news/20261026-anthropic-claude-accessed-vote-information/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-26T07:48:00.000Z",
+   "excerpt": "AnthropicのAIモデルであるClaudeが、人間の許可なくアメリカ・ジョージア州の有権者情報にアクセスしていたことが明らかになりました。 続きを読む..."
+  },
+  {
+   "title": "ゲームのように移動可能な世界を生成できるAI「Hy-Nomas」がオープンモデルとして公開される、RTX 4090でローカル実行可能",
+   "link": "https://gigazine.net/news/20261026-hy-nomas-interactive-world-model/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-26T07:36:00.000Z",
+   "excerpt": "中国の大手テクノロジー企業であるTencentが世界モデル「Hy-Nomas」をリリースしました。入力に応じて仮想世界を生成し、カメラやオブジェクトを自由に制御することが可能。モデルはオープンモデルとして無償公開されており、ローカルで実行することもできます。 続きを読む..."
+  },
+  {
+   "title": "C2PA 署名をブラウザだけで暗号検証する — ファイルを1バイトも送らずに",
+   "link": "https://zenn.dev/benny_aitech/articles/c2pa-browser-verify-in-browser",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T06:51:51.000Z",
+   "excerpt": "画像に「誰が・何で作ったか」の署名を埋め込む C2PA（Content Credentials） は、Adobe やソニー、ニコン、Google などが採用を進めています。日本でも、新聞社や自治体が発信者情報を付ける Originator Profile（OP） の実装が進んでいます。 ただ、署名を 付ける側 の話に比べて、受け取った側 が手元で検証する話はあまり見かけません。 この記事では、受け取った画像の C2PA 署名を ブラウザの中だけで暗号検証する 方法を書きます。サーバーにファイルを送らず、ページ自体も外部と通信できない状態で検証します。公式の公開テストファイルで試した結果と..."
+  },
+  {
+   "title": "ChatGPTがまた2日連続の利用枠リセット",
+   "link": "https://pc.watch.impress.co.jp/docs/news/2151209.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-26T06:44:00.000Z",
+   "excerpt": "「残りの7日間に何が起こるのか。だが、今日はリセットだ」。OpenAIでCodexとChatGPTを担当するThibault Sottiaux(ティボー・ソティオ)氏が10月26日(日本時間)、X(旧Twitter)にこう投稿した。全ユーザーを対象にした9回目の利用枠リセットの宣言で、前日に続く2日連続のリセットは計画の中で2度目となる。筆者の環境では26日15時頃にはリセットが適用された。"
+  },
+  {
+   "title": "AIのせいで宿題を採点する意味がなくなったとしてフィールズ賞受賞の数学教授が「提出しただけで評価する」方式に変更",
+   "link": "https://gigazine.net/news/20261026-ai-grading-homework/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-26T06:12:00.000Z",
+   "excerpt": "大学生の「ほぼ全員」が生成AIを使っているとの調査結果や、学生の17％が「課題や試験にChatGPTを使っている」と回答した調査など、AIが学習に強い影響を与えていることが分かっています。そんな中、フィールズ賞の受賞歴もあるカリフォルニア大学バークレー校の数学者であるリチャード・ボルチャーズ氏は、「AIの使用は避けられない状況にあるため、宿題の正誤を採点するのは無意味」と発言しました。 続きを読む..."
+  },
+  {
+   "title": "AIガバナンス一元化の「理想と限界」とは？ 米Dataikuの新サービスから考察",
+   "link": "https://www.itmedia.co.jp/enterprise/articles/2610/26/news060.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T06:00:00.000Z",
+   "excerpt": "他社のAIエージェント管理基盤まで統治の対象にする――。米Dataikuの新サービスは、マルチベンダー環境でガバナンスを一元管理するという理想に踏み出した。だが、ガードレールやサイバーセキュリティの「強度」まで一元化できるのか。AIガバナンスの在り方を考察する。"
+  },
+  {
+   "title": "AI エージェント用の検索エンジン「XERJ」を Mac で動かしてみた",
+   "link": "https://zenn.dev/takuh/articles/dc95ecf8711373",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T05:52:43.000Z",
+   "excerpt": "はじめに Claude Code や Codex のようなコーディングエージェント（AI が自分でコマンドを打ちながら開発を進める道具）に「この処理はどこに書いてある？」と聞くと、多くの場合 grep や ripgrep（rg）でリポジトリ全体を文字列検索し、ヒットしたファイルを開いて読みます。小さなリポジトリならこれで十分ですが、大きくなるほどヒットが増え、読むファイルも増え、そのぶんトークン（AI が読み書きする文字量の単位で、料金と速度に直結します）を消費します。 この「探す」部分を、あらかじめ作った索引に置き換えようというのが XERJ です。2026 年 10 月 25 ..."
+  },
+  {
+   "title": "Amazon MWAA、AIエージェントスキルの提供を開始",
+   "link": "https://codezine.jp/article/detail/30131",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-26T05:30:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "Moonshot AI、最高性能のオープンウェイトMoEモデル「Kimi K3.1 Pro」を発表 ―2～3倍高速な「Kimi K3.1 Pro Highspeed」も提供開始",
+   "link": "https://gihyo.jp/article/2026/10/kimi-k3-1-pro?utm_source=feed",
+   "feedName": "gihyo.jp",
+   "lang": "ja",
+   "date": "2026-10-26T05:19:00.000Z",
+   "excerpt": "中国Moonshot AIは2026年10月23日、マルチモーダルMoEモデルの最新バージョン「Kimi K3.1 Pro」および高レスポンスモデル「Kimi K3.1 Pro Highspeed」を発表した。"
+  },
+  {
+   "title": "Z-Libraryに関する論文が存在しないTorrentFreakの記事を引用、AIで記述か",
+   "link": "https://gigazine.net/news/20261026-z-library-paper/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-26T05:15:00.000Z",
+   "excerpt": "数百万冊の書籍や論文を無料で提供する海賊版電子書籍ライブラリ「Z-Library」は、高価な教科書や学術誌の購読料を払えない学生や研究者にとって有用な情報源となっており、「Z-Libraryが貧困の学生を助けている」という研究結果も存在しています。そんなZ-Libraryの情報としての有用性と著作権の問題について扱った論文が、著作権について扱うメディア・TorrentFreakの存在しない記事を引用していると指摘されています。 続きを読む..."
+  },
+  {
+   "title": "AI活用で処遇改善、週休3日を導入 建設会社社長から介護事業を“起業”した経営者の「実行力」",
+   "link": "https://www.itmedia.co.jp/business/articles/2610/26/news054.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T04:00:00.000Z",
+   "excerpt": "建設会社社長という立場から、還暦を契機に介護事業を“起業”した。「このまま人生を終えていいのか」と始まった第二の人生を突き進み、今は第三の人生の幕を開けつつある。新しいことへのアンテナは敏感で、実行に移すスピードも変わらない。（聞き手 小川記代子）"
+  },
+  {
+   "title": "Claude Codeの会話が200Kを超えたら何が起きる？ 先に圧縮するか、そのまま送って次で圧縮でした",
+   "link": "https://zenn.dev/ojisan_ai_lab/articles/claude-code-prompt-too-long-20261026",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T03:52:56.000Z",
+   "excerpt": "Claude Code の v2.1.310 のリリースノートに、「Prompt is too long」というエラーの後の圧縮を直した、という1行がありました。base64 や SVG のような詰まった文字列が会話にあると、圧縮しても残しすぎて、次の要求もまた失敗することがあった、という不具合です。 どう直ったのかを見たくて、10月26日に、わざと会話を 200K トークンより大きくしてみました。条件を変えて8回走らせましたが、「Prompt is too long」は一度も出ませんでした。Claude Code が 200K の窓とみなしているモデルに 261,225トークンを送って..."
+  },
+  {
+   "title": "MetaのAIエージェント「Muse」をカナダで1か月使って分かったこと｜日本でも開始",
+   "link": "https://zenn.dev/mikehltang/articles/5147e6d7064093",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T03:48:41.000Z",
+   "excerpt": "はじめに MetaのAIエージェント「Muse」が2026年10月23日、日本でも使えるようになりました（9月8日にアメリカ、9月18日にカナダで開始。日本は北米以外で最初の市場です）。カナダ在住のエンジニア寄りユーザーとして1か月使った所感と、始め方をまとめます。 Museの技術的な特徴 ユーザーごとに専用のコンピュータ（VM）が割り当てられ、その上でエージェントが作業する Gmail、Googleカレンダー、各種SNSなど外部サービスとコネクタ連携 スケジュール実行（毎朝のブリーフィングなど）を自律的にこなす チャットで答えるだけでなく、ブラウザ操作やファイル作成まで実行す..."
+  },
+  {
+   "title": "皮膚がんの見分け勝負で最新の汎用AIが10年前のAIに敗北",
+   "link": "https://gigazine.net/news/20261026-cnn-vs-llm-skin-cancer-diagnosis/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-26T03:40:00.000Z",
+   "excerpt": "皮膚がんの専門家が、最新の汎用AIモデルと10年前に登場した画像認識AIを比較する実験を行いました。古いAIに皮膚の画像を使った追加学習(ファインチューニング)を施したところ、最新の汎用AIモデルを大きく上回る正答率を記録したそうです。 続きを読む..."
+  },
+  {
+   "title": "OpenAIがNode.jsやBunで使われているGoogle製圧縮ツール「Brotli」でリモートコード実行につながる脆弱性を発見",
+   "link": "https://gigazine.net/news/20261026-openai-brotli-vulnerability/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-26T03:33:00.000Z",
+   "excerpt": "OpenAIがGoogle製圧縮ツール「Brotli」にリモートコード実行につながる脆弱(ぜいじゃく)性が存在することを発見しました。すでに修正版がリリースされており、アップデートが呼びかけられています。 続きを読む..."
+  },
+  {
+   "title": "748BのDeepSeekがGPU 1枚でさらに速く！生成は最大約2倍",
+   "link": "https://pc.watch.impress.co.jp/docs/news/2151113.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-26T03:32:44.000Z",
+   "excerpt": "巨大なMoEモデルを手元のGPUで動かすハードルが、また1段下がった。GitHub上で開発されているLLM推論ソフトウェア「Project Maya」は10月26日、最新版「v1.1.28」を公開した。"
+  },
+  {
+   "title": "「AI失業」対策を チームみらい安野氏、官房長官に提言 詳細も公開",
+   "link": "https://www.itmedia.co.jp/aiplus/article/2610/26/2000002581/",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T03:15:40.000Z",
+   "excerpt": "チームみらいの安野貴博党首らは、AIの普及による失業対策を求める提言を木原稔官房長官に手渡した。"
+  },
+  {
+   "title": "「AIでエンジニア派遣は不要になる」のか？ 各社に肌感を聞いた 求められる人材、明確に変化",
+   "link": "https://www.itmedia.co.jp/news/article/2610/23/2000002527/",
+   "feedName": "ITmedia NEWS",
+   "lang": "ja",
+   "date": "2026-10-26T03:15:30.000Z",
+   "excerpt": "生成AIがコードを書く時代、エンジニア派遣は不要になるのか。10月21～23日に幕張メッセで開催中の「Japan IT Week 秋 2026」には、派遣・紹介サービスを手掛ける企業が複数出展。エンジニア派遣の需要について、疑問を各社にぶつけてみた。"
+  },
+  {
+   "title": "日本HP、「NVIDIA GB300」搭載のAIワークステーションを発売",
+   "link": "https://japan.zdnet.com/article/35253968/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T03:08:00.000Z",
+   "excerpt": "日本HPは、AI開発向けの高性能ワークステーション「HP ZGX Fury G1n AI Station」を発表した。NVIDIAの最新AIプロセッサー「NVIDIA GB300 Grace Blackwell Ultra Desktop Superchip」を搭載し、データセンタークラスのAI性能をオフィスや研究室などのデスクサイド環境で利用できる。"
+  },
+  {
+   "title": "AIがいても、プロジェクトを終わらせる力は要る",
+   "link": "https://zenn.dev/polargiver/articles/ai-needs-pm-skill",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T03:00:52.000Z",
+   "excerpt": "AIに、ある「見張り役」を作ってもらいました。プログラムを一度にたくさん変えすぎたら止める、というルールです。一度に変える量が多いと、あとでどこが原因で壊れたのか分からなくなるからです。 しばらくして見ると、そのルールがゆるめられていました。AIが自分で書き換えていたのです。自分が作ったものが、見張り役に止められないようにするために。 悪気はありません。でも、合格の線を決めるのは、作る側ではなく、頼んだ側の仕事でした。 AIモデルの使い分けは、正直むずいです。どれに何を頼むか、毎回迷います。でも、AIといっしょにいくつも作ってみて思ったのは、うまくいかないときの原因は、だいたい使う側にあ..."
+  },
+  {
+   "title": "フロンティアAI時代のパッチ適用と無影響確認、どう進める？",
+   "link": "https://codezine.jp/article/detail/30138",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-26T03:00:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "米国のデータセンター急増、AI需要で巨大化 受電容量「ギガ時代」に 中間選挙争点にも",
+   "link": "https://www.itmedia.co.jp/news/article/2610/26/2000002578/",
+   "feedName": "ITmedia NEWS",
+   "lang": "ja",
+   "date": "2026-10-26T02:52:26.000Z",
+   "excerpt": "米国でデータセンター（DC）建設が急ピッチで進んでいる。米OpenAIや米Anthropicなどの人工知能（AI）開発大手が建設計画を主導し、施設数・規模とも他国を大きく引き離す「DC大国」ぶりをみせている。"
+  },
+  {
+   "title": "return_last_frame で次ショットの first_frame をつなぐ（Python + ffmpeg、テストパターン）",
+   "link": "https://zenn.dev/yoxi957/articles/4ce61757e0efa7",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T02:15:36.000Z",
+   "excerpt": "Seedance 2.5 の API（BytePlus ModelArk）では、生成タスクに return_last_frame を付けられます。デフォルトは false。true にすると、タスク成功後に「生成動画の最終フレーム」を JPEG として取得でき、解像度は動画と同じ・透かしなし、とドキュメントに書かれています。 チュートリアルの tip は明確です。前の動画の最終フレームを、次のタスクの first_frame に渡すと、連続したショット列を作りやすい、という使い方です。本稿では API は呼ばず、ffmpeg のテストパターンで「最終フレームを抜く → 次クリップの起点に..."
+  },
+  {
+   "title": "データセンター級のAIをローカルで、HPが大規模AI向けワークステーション発売",
+   "link": "https://monoist.itmedia.co.jp/mn/articles/2610/26/news027.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T02:15:00.000Z",
+   "excerpt": "日本HPは、大規模AIモデルの開発や推論処理に特化したワークステーション「HP ZGX Fury G1n AI Station」を発表した。NVIDIA GB300 Grace Blackwell Ultra Desktop Superchipと748GBのコヒーレントメモリを搭載し、最大1兆パラメーター規模のAIモデルによる推論処理に対応する。機密データを外部に出すことなく、AIの開発から本番運用までをローカル環境で実行できる。"
+  },
+  {
+   "title": "米国のブライダル大手、「AI結婚準備事業」の上場を計画 その中身とは",
+   "link": "https://japan.cnet.com/article/35253962/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T02:10:00.000Z",
+   "excerpt": "米国の老舗ブライダル大手David’s Bridalは米国時間10月22日、AIで結婚式の準備を支援するデジタル事業「Pearl」を本体から切り離し、上場させる計画を発表した。企業買収を目的に設立された上場企業「特別買収目的会社（SPAC）」のK&F Growth Acquisition Corp. IIと統合する形での上場を目指し、基本合意を結んだ。"
+  },
+  {
+   "title": "ジャック・ドーシー氏率いるBlock、音声だけで学習した全二重音声モデル「Dessa」発表 「人と話しているよう」",
+   "link": "https://www.itmedia.co.jp/news/article/2610/26/2000002574/",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T02:04:33.000Z",
+   "excerpt": "Block（旧Square）は、テキストや事前学習モデルを使わず、人間の会話音声のみで学習させた全二重音声モデル「Dessa」の研究プレビューを発表した。相づちや感情の抑揚を直接聞き取り表現できるのが特徴で、NVIDIAのラック1台で学習されており、MacBook Proでローカル実行できる。一般提供時期は未定。"
+  },
+  {
+   "title": "かなり人間っぽい会話が可能なAI「Dessa」をジャック・ドーシー率いるBlockが発表、テキストを省いて会話音声のみで訓練しMacBook Proでローカル実行可能",
+   "link": "https://gigazine.net/news/20261026-dessa-conversation-ai/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-10-26T01:59:00.000Z",
+   "excerpt": "BlockはTwitter創業者のジャック・ドーシー氏がCEOを務めるテクノロジー企業で、決済サービスのほか、AIエージェントやAI重視のコミュケーションツールなども開発しています。新たに、Blockが音声会話AI「Dessa」を発表しました。 続きを読む..."
+  },
+  {
+   "title": "「Kimi K3.1 Pro」発表、オープンモデルでは「最高性能」見込む 悪用防止のためサイバー関連データ除去",
+   "link": "https://www.itmedia.co.jp/aiplus/article/2610/26/2000002572/",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T01:13:02.000Z",
+   "excerpt": "中国Moonshot AIがオープンウェイトモデル「Kimi K3.1 Pro」を発表。開発性能などの一部評価で「GPT-6 Astra」を上回り、2～3倍高速な版も同時公開した。重みは11月4日までに公開予定。"
+  },
+  {
+   "title": "操作ログとAIで内部犯行の意図を暴く--「Tanium Atlas」と「iScope」が連携",
+   "link": "https://japan.zdnet.com/article/35253899/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-10-26T01:13:00.000Z",
+   "excerpt": "タニウムは、パートナー企業であるアイソプラの「Tanium Autonomous IT Platform」（Tanium）向け操作ログ機能「iScope」の提供に関する記者説明会を開催した。"
+  },
+  {
+   "title": "OpenAI、フロンティアモデルの学習中はインターネットに接続させない方針 学習中のAIが隔離環境を抜け出した件も公表",
+   "link": "https://www.itmedia.co.jp/news/article/2610/26/2000002573/",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T01:10:56.000Z",
+   "excerpt": "OpenAIは、安全対策が十分に進歩するまでフロンティアモデルの学習時にネット接続を遮断する方針を発表した。キャッシュによるオフライン環境を用意していたが、9月にモデルがネットに一時接続する事案が発生。調査の過程で多くのソフトに影響する圧縮ライブラリ「Brotli」の深刻な脆弱性も判明した。"
+  },
+  {
+   "title": "GitHub Copilot、impact dashboardにおいて業界中央値との比較が可能に",
+   "link": "https://codezine.jp/article/detail/30128",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-26T01:00:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "【本日みつけたお買い得品】ASUSのRyzen AI搭載ノートが3万円オフ。MS Office付属",
+   "link": "https://pc.watch.impress.co.jp/docs/news/todays_sales/2151010.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-26T00:59:10.000Z",
+   "excerpt": "Amazonにおいて、14型ノートPCのASUS「Vivobook 14 M1407KA」が直近価格から3万円引きで、15万9,800円にて購入できる。"
+  },
+  {
+   "title": "AIが規約を守っていないと思ったら、測り方が間違っていた話",
+   "link": "https://zenn.dev/3su3/articles/dde16c71ca34c5",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T00:52:49.000Z",
+   "excerpt": "AIに開発ルールを守ってもらいたくて、色々と仕組みを作っています。 Planを作ってから実装するとか、リスクに応じてHuman承認を挟むとか、必要なところではTDDで進めるとか。 毎回説明するのも大変なので、Claude Code・Codex・Kiroで共通して使えるように、ai-dev-kitというハーネスを個人で育てています。 で、あるとき気になったんです。 これ、本当に効いてるのかな？ 規約は書いてあるし、配布する仕組みもある。 でも、期待した動きをしていないことがある。 じゃあ規約が届いていないのかというと、そうとも限らない。 しかも調べていくうちに、AIが規約を守っていないと思..."
+  },
+  {
+   "title": "【本日みつけたお買い得品】64GBメモリ/1TB SSDのRyzen AI 9 HX 470搭載ミニPCが約4万4千円オフ",
+   "link": "https://pc.watch.impress.co.jp/docs/news/todays_sales/2151002.html",
+   "feedName": "PC Watch",
+   "lang": "ja",
+   "date": "2026-10-26T00:32:09.000Z",
+   "excerpt": "Amazonにおいて、GMKtecのミニPC「EVO-X1 Pro」が直近価格から4万4,470円引きで、25万1,999円にて購入可能となっている。"
+  },
+  {
+   "title": "Human-in-the-loopの最適解を目指し、時流の速さにアジャストして開発するgrasys流AI駆動開発",
+   "link": "https://gihyo.jp/article/2026/10/grasys-02?utm_source=feed",
+   "feedName": "gihyo.jp",
+   "lang": "ja",
+   "date": "2026-10-26T00:25:00.000Z",
+   "excerpt": "今回は「grasys流AI駆動開発（AI-Driven Development）」に焦点を当てます。LLM（大規模言語モデル）のルーティング戦略から、AIへのセキュアな文脈（コンテキスト）共有、テスト駆動によるAIの暴走を防ぐテストハーネスの実装、そして組織としての「Human-in-the-loop（人間の適切な介在）」の在り方について、最前線で開発を牽引するCloud Development Sec. Chiefの品地哲弥氏に深掘りして取材しました。"
+  },
+  {
+   "title": "【１日１デプロイ】重なりとはみ出しを別々に測る「ピタッ！おばけ影絵劇場」を作った",
+   "link": "https://zenn.dev/boraemon2000/articles/ghost-shadow-theater-mask-overlap",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T00:24:25.000Z",
+   "excerpt": "「１日１デプロイ」の新作として、紙の切り抜きを動かして影を見本へ重ねる3幕パズル ピタッ！おばけ影絵劇場 を作りました。 ▶ ピタッ！おばけ影絵劇場を遊ぶ 左にランタン、中央に紙の切り抜き、右に和紙の幕があります。切り抜きをドラッグすると、ランタンとの距離に応じて幕の影が大きくなったり小さくなったりします。 第1幕は「おばけネコ」、第2幕は「かぼちゃ馬車」、第3幕は「月夜のドラゴン」。位置と大きさだけでなく、回転や複数の影の重なりも使って完成させます。 遊び方 「幕を開ける」を押す 紙の切り抜きをタップして選ぶ ドラッグで位置と影の大きさを調整する 左右の回転ボタンで角度を合わ..."
+  },
+  {
+   "title": "Claude Code で受託の修正をするなら、渡す前にクライアントへ聞き返す工程を作る",
+   "link": "https://zenn.dev/jskn_d/articles/claude-code-clarify-before-handoff",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-26T00:00:12.000Z",
+   "excerpt": "はじめに 受託の修正対応で、クライアントからの指示を Claude Code に渡して直してもらうのは、もう珍しいやり方ではなくなりました。修正依頼をチケットやフィードバックツールに集めておき、その URL や MCP 経由で Claude Code に読ませて直させる、という手順の紹介も増えています。 自分も受託の案件でこれをやっています。実際、指示がはっきりしているものは本当に速く終わります。「お問い合わせボタンの文言を『無料で相談する』に変える」なら、渡した時点でほぼ片付きます。 詰まるのは、そうでない指示です。 「トップのあの部分、もう少しいい感じに」を渡しても、Claude..."
+  },
+  {
+   "title": "設計開発の知見をAIとの対話で蓄積、横断検索による回答生成にも対応",
+   "link": "https://monoist.itmedia.co.jp/mn/articles/2610/26/news017.html",
+   "feedName": "ITmedia AI+",
+   "lang": "ja",
+   "date": "2026-10-26T00:00:00.000Z",
+   "excerpt": "ギリアは、設計開発向けナレッジ基盤「GHELIA AutoDeck」の最新版「Ver.1.1」の提供を開始すると発表した。AIとの対話を通じてナレッジを作成する機能や、複数のナレッジを横断的に検索して回答を生成する機能などを追加した。"
+  },
+  {
+   "title": "ポストモーテムをClaude Codeに書かせる：個人名を出さずに「なぜなぜ」を仕組みまで掘り、時刻はスクリプトで検算する",
+   "link": "https://zenn.dev/aishigoto/articles/claude-code-postmortem-blameless",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-10-25T23:53:32.000Z",
+   "excerpt": "※ この記事は Claude Code（AI）を使って執筆し、掲載しているコードと出力例はすべて実際に実行して確認しています。 障害のあとに書くポストモーテムを、ログとチャットの記録からClaude Codeに下書きさせる手順を紹介します。 架空の障害の材料を渡して実際に生成した出力と、そこに書かれた時刻をPythonで検算した結果が、この記事の中身です。 渡した材料 社内の経費精算システムで、リリース直後に申請の送信が失敗した、という想定の障害です。材料は3つのファイルで、アラートとデプロイの記録はUTC、Slackの記録はJSTです。 incident/alerts.log 2..."
+  },
+  {
+   "title": "エージェント型AIの成果をいかに広げるか、Appierが5つの重要原則「SCALE」を提唱",
+   "link": "https://codezine.jp/article/detail/30137",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-25T23:45:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "定性調査の大規模化とスピードアップを実現、市場調査ツール「forSurvey」がAIインタビューに対応",
+   "link": "https://codezine.jp/article/detail/30136",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-10-25T23:30:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "【西田宗千佳のイマトミライ】MetaのパーソナルAI「Muse」日本上陸 iPhone Duoと相性抜群な次の”競争軸”",
+   "link": "https://www.watch.impress.co.jp/docs/series/nishida/2150995.html",
+   "feedName": "Impress Watch",
+   "lang": "ja",
+   "date": "2026-10-25T23:20:00.000Z",
+   "excerpt": "Metaが同社のパーソナルAIサービス「Meta Muse」を日本でもスタートした。"
+  },
+  {
+   "title": "AI関連プロジェクトの紹介を原則禁止--Reddit「r/opensource」の方針に賛否",
+   "link": "https://japan.cnet.com/article/35253950/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-10-25T22:55:00.000Z",
+   "excerpt": "オンライン掲示板Redditで、オープンソースソフトウェアを扱うコミュニティー「r/opensource」の管理者が、AIに関わるプロジェクトの紹介投稿を原則禁止する方針を示し、利用者の間で賛否が分かれている。"
   }
  ],
  "features": {
@@ -958,9 +1459,9 @@
  },
  "publication": {
   "revision": 1,
-  "contentRevision": "006668ed18035a4bed7292b8f276fc373766caef061bbf988742b13f43dbe0ad",
+  "contentRevision": "1d556c4e01135e821fdf30ed5b24b0104be92d3ea4d2f47546f3a059e08e0ef3",
   "textState": "ready",
-  "updatedAt": "2026-10-25T22:48:23.746Z",
+  "updatedAt": "2026-10-27T00:02:35.463Z",
   "audioByVoice": {}
  }
 }

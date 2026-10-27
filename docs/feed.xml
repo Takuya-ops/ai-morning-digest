@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-27】Introducing GPT-6.1 Terra ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-27.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-27.html</guid>
+    <pubDate>Tue, 27 Oct 2026 00:02:35 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Introducing GPT-6.1 Terra&lt;/li&gt;&lt;li&gt;Working with academic communities to build scientific understanding&lt;/li&gt;&lt;li&gt;Google、プライバシーポリシーに「Gmail」「Googleフォト」のデータを広告に使う例外を追加 回避方法は&lt;/li&gt;&lt;li&gt;Greptile takes bug detection beyond code review with GPT-6 Astra&lt;/li&gt;&lt;li&gt;GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases&lt;/li&gt;&lt;li&gt;マネーフォワードME、MetaのAI「Muse」と連携 サブスク見直しや貯蓄計画を相談&lt;/li&gt;&lt;li&gt;人の音声だけで学習したAI「Dessa」登場 会話の間合いや相づちが自然に&lt;/li&gt;&lt;li&gt;ChatGPT’s expanding world of work&lt;/li&gt;&lt;li&gt;How Fanatics and OpenAI streamline the fan experience&lt;/li&gt;&lt;li&gt;How Ultrafast cut incident investigation from hours to minutes at OpenAI&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-26】AI時代の資源獲得と開発現場の課題 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-26.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-26.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-08.html</guid>
     <pubDate>Thu, 08 Oct 2026 00:23:04 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Anthropic、「Claude Haiku 5.5」発表、API料金大幅値下げ&lt;/li&gt;&lt;li&gt;Mistral、1兆パラメータ超の新旗艦AI「Mistral Large 4」発表&lt;/li&gt;&lt;li&gt;OpenAI、GPT-6と「Intelligent UI」をChatGPTに導入&lt;/li&gt;&lt;li&gt;Google、画像生成AI「Nano Banana 2.1」公開、API料金半額に&lt;/li&gt;&lt;li&gt;Microsoft、NVIDIA「RTX Spark」搭載PC「Surface Laptop Ultra」発表&lt;/li&gt;&lt;li&gt;Microsoft、Windowsを「ハイブリッドAI」基盤に Copilot強化&lt;/li&gt;&lt;li&gt;Claude、Google Workspace向けアドオン公開、文書直接編集可能に&lt;/li&gt;&lt;li&gt;NVIDIAとMicrosoft、Windows AI PCで協業、AIエージェント強化へ&lt;/li&gt;&lt;li&gt;MetaのAIエージェント「Muse」、iPad版をリリース&lt;/li&gt;&lt;li&gt;ChatGPT、大学進学計画支援ツールをティーン向けに提供&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-07】Introducing Mistral Large 4: Le chonk ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-07.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-07.html</guid>
-    <pubDate>Wed, 07 Oct 2026 00:02:13 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Introducing Mistral Large 4: Le chonk&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTの生成文に電子透かし EUで導入へ&lt;/li&gt;&lt;li&gt;Sharing AI progress in mathematics&lt;/li&gt;&lt;li&gt;Atlassian and OpenAI expand partnership to turn enterprise knowledge into action&lt;/li&gt;&lt;li&gt;How Jump Trading is scaling quant research with ChatGPT&lt;/li&gt;&lt;li&gt;Googleが無料・下位プランで使えるGeminiのモデルを制限&lt;/li&gt;&lt;li&gt;ChatGPT、画像生成中にビジュアル広告 米国でテスト開始へ&lt;/li&gt;&lt;li&gt;Advancing computer use with Ironclad&lt;/li&gt;&lt;li&gt;なぜ答えが揺れ、堂々と間違えるのか ―― 確率で動く生成AIの正体&lt;/li&gt;&lt;li&gt;Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
