@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-29】Google、最新AI「Gemini 4 Carbon」発表 防御能力強化 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-29.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-29.html</guid>
+    <pubDate>Thu, 29 Oct 2026 00:15:14 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Google、最新AI「Gemini 4 Carbon」発表 防御能力強化&lt;/li&gt;&lt;li&gt;Google、Android開発で他社製AIエージェント対応へ&lt;/li&gt;&lt;li&gt;NVIDIAとAMD、Metaに計40億ドル出資と提携拡大&lt;/li&gt;&lt;li&gt;Apple、M6搭載「MacBook Pro」発表 33万9800円から&lt;/li&gt;&lt;li&gt;Google DeepMind、仮想世界生成AI「Genie 4」公開&lt;/li&gt;&lt;li&gt;Amazon、生成AI版「Alexa+」の早期アクセス国内開始&lt;/li&gt;&lt;li&gt;OpenAIとServiceNow、業務連携を拡大&lt;/li&gt;&lt;li&gt;ドコモ、スマホ操作履歴から睡眠の質を推定するAI提供&lt;/li&gt;&lt;li&gt;OpenAI、企業の組織構造におけるAIの将来像を考察&lt;/li&gt;&lt;li&gt;Legora、OpenAI技術で法務特化エージェントOSを構築&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-28】OpenAIが新AIモデル「GPT-6.1 Terra」発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-28.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-28.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-10.html</guid>
     <pubDate>Sat, 10 Oct 2026 00:21:45 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Google Gemini Agent、Claudeも利用可能に&lt;/li&gt;&lt;li&gt;Anthropic、Claude利用ポリシーを改定&lt;/li&gt;&lt;li&gt;Anthropic AI、警察に虚偽通報&lt;/li&gt;&lt;li&gt;ChatGPT、音声ファイル対応開始&lt;/li&gt;&lt;li&gt;Anthropic、サイバー防御支援開始&lt;/li&gt;&lt;li&gt;Amazon、新タブレット「Alexa Tablet」発表&lt;/li&gt;&lt;li&gt;Claudeに新機能「ダッシュボード」と「Motion」&lt;/li&gt;&lt;li&gt;Google、業務向けAI「Geminiエージェント」発表&lt;/li&gt;&lt;li&gt;Sophos、OpenAIで脅威調査96%削減&lt;/li&gt;&lt;li&gt;Asana、GPT-6.1 Solでコスト削減76倍&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-09】Anthropic、Claude Haiku 5.5発表 性能向上とコスト75%減 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-09.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-09.html</guid>
-    <pubDate>Fri, 09 Oct 2026 00:37:20 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Anthropic、Claude Haiku 5.5発表 性能向上とコスト75%減&lt;/li&gt;&lt;li&gt;ChatGPT、GPT-6と対話型UIを全ユーザーに提供&lt;/li&gt;&lt;li&gt;Google、文章でゲームを作る「Playground」公開&lt;/li&gt;&lt;li&gt;10代向けChatGPTに米団体が「容認できないリスク」と警告&lt;/li&gt;&lt;li&gt;1on1ツールに生成AI、GoogleはAI検出ツール公開&lt;/li&gt;&lt;li&gt;Oracle、ChatGPT等で業務効率化 専門知識を高速化&lt;/li&gt;&lt;li&gt;Windowsが「ハイブリッドAI」基盤へ RTX Spark搭載Surface&lt;/li&gt;&lt;li&gt;Pollo AI、OpenAIモデル活用し広告制作を支援&lt;/li&gt;&lt;li&gt;LegalOn、Codexコストを65%削減 開発速度維持&lt;/li&gt;&lt;li&gt;ChatGPT PlusとGoogle AI Pro比較、ChatGPTでAIシミュレーション&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
