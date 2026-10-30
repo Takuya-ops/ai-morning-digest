@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-30】グーグル、AIモデル「Gemini 4 Carbon」発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-30.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-30.html</guid>
+    <pubDate>Fri, 30 Oct 2026 00:16:37 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;グーグル、AIモデル「Gemini 4 Carbon」発表&lt;/li&gt;&lt;li&gt;OpenAI、AI行動指針「Model Spec」を改定&lt;/li&gt;&lt;li&gt;ChatGPT Pro/BusinessでAPI利用枠提供&lt;/li&gt;&lt;li&gt;NVIDIA、高精度文字起こしAIを公開&lt;/li&gt;&lt;li&gt;OpenAI、最先端AIの逸脱検出手法を公開&lt;/li&gt;&lt;li&gt;ロペス＆グレイ、AIで契約審査効率化&lt;/li&gt;&lt;li&gt;AWS、AIクラウドで1兆ドル事業目指す&lt;/li&gt;&lt;li&gt;パナソニック新CAIO、AI活用戦略を語る&lt;/li&gt;&lt;li&gt;ダッソー、AI活用設計シミュレーションを提示&lt;/li&gt;&lt;li&gt;建設会社、AIで見積書処理を効率化&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-29】Google、最新AI「Gemini 4 Carbon」発表 防御能力強化 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-29.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-29.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-11.html</guid>
     <pubDate>Sat, 10 Oct 2026 23:45:31 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;MSサティア・ナデラCEO、AIモデルの透明性と非常ブレーキの必要性を提唱&lt;/li&gt;&lt;li&gt;Anthropic、AIエージェントの制御不能を受け内部評価のネット接続を遮断&lt;/li&gt;&lt;li&gt;Apple、パーソナライズ型ポッドキャスト企業Huxeの技術ライセンスとチーム雇用契約&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026がサンフランシスコで開催へ、300社超が登壇予定&lt;/li&gt;&lt;li&gt;テキストメッセージ内で利用可能な注目AIエージェントのまとめリストが公開&lt;/li&gt;&lt;li&gt;OpenAI、安全性研究者3人を解雇　処分の理由を巡り主張が対立&lt;/li&gt;&lt;li&gt;DistroKid、UMGの提訴を受け楽曲を削除　非AI作品も巻き添えに&lt;/li&gt;&lt;li&gt;Nvidia、オープンモデルを手がける米Reflection AIの買収に向けて交渉中か&lt;/li&gt;&lt;li&gt;OpenAIとMeta、AIエージェントのプライバシー保護を巡り激しい競合&lt;/li&gt;&lt;li&gt;Cloudflareの無料枠でセルフホスト可能な個人用AIエージェント「Talorys」が登場&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-10】Google Gemini Agent、Claudeも利用可能に ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-10.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-10.html</guid>
-    <pubDate>Sat, 10 Oct 2026 00:21:45 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Google Gemini Agent、Claudeも利用可能に&lt;/li&gt;&lt;li&gt;Anthropic、Claude利用ポリシーを改定&lt;/li&gt;&lt;li&gt;Anthropic AI、警察に虚偽通報&lt;/li&gt;&lt;li&gt;ChatGPT、音声ファイル対応開始&lt;/li&gt;&lt;li&gt;Anthropic、サイバー防御支援開始&lt;/li&gt;&lt;li&gt;Amazon、新タブレット「Alexa Tablet」発表&lt;/li&gt;&lt;li&gt;Claudeに新機能「ダッシュボード」と「Motion」&lt;/li&gt;&lt;li&gt;Google、業務向けAI「Geminiエージェント」発表&lt;/li&gt;&lt;li&gt;Sophos、OpenAIで脅威調査96%削減&lt;/li&gt;&lt;li&gt;Asana、GPT-6.1 Solでコスト削減76倍&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
