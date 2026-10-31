@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-10-31】Gemini Notebook、米印の教科書数百冊が無料利用可能に ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-31.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-31.html</guid>
+    <pubDate>Sat, 31 Oct 2026 00:04:32 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Gemini Notebook、米印の教科書数百冊が無料利用可能に&lt;/li&gt;&lt;li&gt;Gemini、チャット上でPDFやスライドの直接編集に対応&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPT Pro全プランの利用枠を2倍に拡大&lt;/li&gt;&lt;li&gt;Cursor上のClaude拡張機能が改ざん、最大5千人に影響&lt;/li&gt;&lt;li&gt;Gemini、チャット内で文書やPDFの作成・直接編集に対応&lt;/li&gt;&lt;li&gt;OpenAI、サイト管理者の学習拒否方針を統一反映へ&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTで暴力防止や若者保護策を強化&lt;/li&gt;&lt;li&gt;OpenAI、AI学習におけるフェアユースの重要性を主張&lt;/li&gt;&lt;li&gt;プライバシー重視のAI「Ollie」がサービス終了へ&lt;/li&gt;&lt;li&gt;GMO、サイバー攻撃情報に1.5億円の懸賞金を設定&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-10-30】グーグル、AIモデル「Gemini 4 Carbon」発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-30.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-30.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-12.html</guid>
     <pubDate>Sun, 11 Oct 2026 23:52:35 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Appleがスマートホーム製品「HomeView」を発売か&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026がサンフランシスコで開幕へ&lt;/li&gt;&lt;li&gt;AIデータセンター建設計画と秘密保持契約を巡る議論&lt;/li&gt;&lt;li&gt;音声AIは「ChatGPTの瞬間」に未到達か、文脈把握に課題&lt;/li&gt;&lt;li&gt;大規模言語モデルの能力に対する共通理解の格差が拡大&lt;/li&gt;&lt;li&gt;トランプ氏の「SI」呼称方針にシリコンバレーの一部が同調&lt;/li&gt;&lt;li&gt;ローカル環境でのAIモデル活用、データ保護と導入の壁&lt;/li&gt;&lt;li&gt;マイクロソフトCEO、「AIモデルは侵害前提で扱うべき」と警鐘&lt;/li&gt;&lt;li&gt;米管理職の78％が部下の業績評価作成にAIを活用&lt;/li&gt;&lt;li&gt;AIで法隆寺の五重塔を3D化、専門家監修と修正で高精度再現&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-11】MSサティア・ナデラCEO、AIモデルの透明性と非常ブレーキの必要性を提唱 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-11.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-11.html</guid>
-    <pubDate>Sat, 10 Oct 2026 23:45:31 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;MSサティア・ナデラCEO、AIモデルの透明性と非常ブレーキの必要性を提唱&lt;/li&gt;&lt;li&gt;Anthropic、AIエージェントの制御不能を受け内部評価のネット接続を遮断&lt;/li&gt;&lt;li&gt;Apple、パーソナライズ型ポッドキャスト企業Huxeの技術ライセンスとチーム雇用契約&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026がサンフランシスコで開催へ、300社超が登壇予定&lt;/li&gt;&lt;li&gt;テキストメッセージ内で利用可能な注目AIエージェントのまとめリストが公開&lt;/li&gt;&lt;li&gt;OpenAI、安全性研究者3人を解雇　処分の理由を巡り主張が対立&lt;/li&gt;&lt;li&gt;DistroKid、UMGの提訴を受け楽曲を削除　非AI作品も巻き添えに&lt;/li&gt;&lt;li&gt;Nvidia、オープンモデルを手がける米Reflection AIの買収に向けて交渉中か&lt;/li&gt;&lt;li&gt;OpenAIとMeta、AIエージェントのプライバシー保護を巡り激しい競合&lt;/li&gt;&lt;li&gt;Cloudflareの無料枠でセルフホスト可能な個人用AIエージェント「Talorys」が登場&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
