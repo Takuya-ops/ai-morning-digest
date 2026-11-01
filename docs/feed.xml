@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-02】AI学習拒否をrobots.txtで一括指定可能に ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-02.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-02.html</guid>
+    <pubDate>Sun, 01 Nov 2026 23:54:03 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;AI学習拒否をrobots.txtで一括指定可能に&lt;/li&gt;&lt;li&gt;Claude有料プラン「Max 20x」が「Ultra」に&lt;/li&gt;&lt;li&gt;フランクフルト空港がAIでDX推進&lt;/li&gt;&lt;li&gt;キオクシア、AI需要で2027年分メモリ完売&lt;/li&gt;&lt;li&gt;メルカリ、CAIOの奮闘でAI利用率100%達成&lt;/li&gt;&lt;li&gt;オラクル、ChatGPTと連携し業務自動化支援&lt;/li&gt;&lt;li&gt;OpenAI、データセンターを「AI計算キャンパス」に改称か&lt;/li&gt;&lt;li&gt;AIはCEOを楽にするが、他の人々はどうか&lt;/li&gt;&lt;li&gt;AI、多くの企業に「経済的利益ゼロ」とエコノミスト&lt;/li&gt;&lt;li&gt;生成AIリスク、工事写真の改ざん防止が課題&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-01】ChatGPTのHTMLプレビュー機能にアカウント乗っ取りの脆弱性 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-01.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-01.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-14.html</guid>
     <pubDate>Tue, 13 Oct 2026 23:50:37 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Google、最先端モデル「Gemini 4 Argon」を世界向けに公開&lt;/li&gt;&lt;li&gt;AnthropicがAIの暴走事例を公表、Metaは対抗新AIを発表&lt;/li&gt;&lt;li&gt;xAI、XとGrokとCursorを統合した新サブスクを発表&lt;/li&gt;&lt;li&gt;役員会議室に盗聴器を設置した疑いでOpenAI社員が逮捕&lt;/li&gt;&lt;li&gt;SB Intuitions、国産生成AI「Sarashina」無償β版を公開&lt;/li&gt;&lt;li&gt;米マイクロソフト、第3世代AIチップ「Maia 300」発表&lt;/li&gt;&lt;li&gt;Meta、エージェント向け最上位モデル「Muse Wonder」発表&lt;/li&gt;&lt;li&gt;Anthropic、コード変更急増でGit代替の独自システムを構築&lt;/li&gt;&lt;li&gt;Higgsfield、OpenAI技術で10分超のAI動画生成を実現&lt;/li&gt;&lt;li&gt;Character.aiが破産申請、Disney系が入札に名乗り&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-13】Meta、最上位AI「Muse Wonder」発表　記憶保持とタスク遂行力を強化 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-13.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-13.html</guid>
-    <pubDate>Tue, 13 Oct 2026 02:13:49 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Meta、最上位AI「Muse Wonder」発表　記憶保持とタスク遂行力を強化&lt;/li&gt;&lt;li&gt;Microsoft、自社製AIチップ「Maia 300」発表　2027年導入へ&lt;/li&gt;&lt;li&gt;新機能「Gemini Agent」発表、企業向けプラン加入者は追加料金なし&lt;/li&gt;&lt;li&gt;OpenAI幹部、Hugging Face侵入事案から3カ月で安全対策を語る&lt;/li&gt;&lt;li&gt;企業向けAIは大規模LLM一択にあらず、Zohoがコストとデータ保護を強調&lt;/li&gt;&lt;li&gt;気象AIのWindBorne、米空軍から約5000万ドルのデータ契約を獲得&lt;/li&gt;&lt;li&gt;Honeyjar、企業のPR・広報業務を改善するAIツールを提供&lt;/li&gt;&lt;li&gt;マイクロソフト社長、「英国はAI規制主導に最適」と迅速な規制を促す&lt;/li&gt;&lt;li&gt;米スタートアップBlueprints AI、建築許可対応の図面を数分で生成&lt;/li&gt;&lt;li&gt;TechCrunch Disrupt 2026がサンフランシスコで開幕へ&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
