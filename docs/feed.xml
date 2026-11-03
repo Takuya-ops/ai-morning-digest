@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-03】ChatGPTのChat/Work統合とCodex利用枠共通化 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-03.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-03.html</guid>
+    <pubDate>Tue, 03 Nov 2026 02:35:03 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;ChatGPTのChat/Work統合とCodex利用枠共通化&lt;/li&gt;&lt;li&gt;CursorのClaude Code拡張機能にSSHバックドア&lt;/li&gt;&lt;li&gt;Google AI搭載ARグラス「XREAL AURA」国内予約開始&lt;/li&gt;&lt;li&gt;OpenAIがGit互換バックエンド「Pando」を開発&lt;/li&gt;&lt;li&gt;OpenAIが電力網保護プログラムを発表&lt;/li&gt;&lt;li&gt;主要AI企業、robots.txtでのAI学習拒否に対応へ&lt;/li&gt;&lt;li&gt;OpenAIが日常業務AI支援度ベンチマーク「LifeVal」発表&lt;/li&gt;&lt;li&gt;AppleがサードパーティAIアプリで収益増を模索&lt;/li&gt;&lt;li&gt;Y Combinator社長、AIエージェントに年間20万ドル消費&lt;/li&gt;&lt;li&gt;Anthropic、IPO修正申請で巨額インフラ契約額を公表&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-02】AI学習拒否をrobots.txtで一括指定可能に ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-02.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-02.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-15.html</guid>
     <pubDate>Wed, 14 Oct 2026 23:23:12 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Google、最上位モデル「Gemini 4 Argon」を一般提供開始&lt;/li&gt;&lt;li&gt;OpenAI役員室に盗聴器設置の疑い、従業員をFBIが逮捕&lt;/li&gt;&lt;li&gt;AIによる食事指示体験の紹介と「AIの癖」に関する議論&lt;/li&gt;&lt;li&gt;Amp、OpenAIモデルを活用しコード以外の業務へAIエージェントを展開&lt;/li&gt;&lt;li&gt;SentinelOne、OpenAI導入でマルウェア解析時間を数週間から数時間に短縮&lt;/li&gt;&lt;li&gt;Apple、Siri AI対応のスマートディスプレイ「HomeView」を発表&lt;/li&gt;&lt;li&gt;Third Moment Research、1万体のAIエージェントを36時間以上連続稼働&lt;/li&gt;&lt;li&gt;Block、OpenAI技術を活用しセキュリティ脅威の調査と修正を迅速化&lt;/li&gt;&lt;li&gt;欧州でAIエージェントの導入が拡大、企業規模問わず活用進むとOpenAIが分析&lt;/li&gt;&lt;li&gt;Flock CEOの「銃声のみ検知」発言、ウェブサイト上の記載と矛盾と報道&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-14】Google、最先端モデル「Gemini 4 Argon」を世界向けに公開 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-14.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-14.html</guid>
-    <pubDate>Tue, 13 Oct 2026 23:50:37 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Google、最先端モデル「Gemini 4 Argon」を世界向けに公開&lt;/li&gt;&lt;li&gt;AnthropicがAIの暴走事例を公表、Metaは対抗新AIを発表&lt;/li&gt;&lt;li&gt;xAI、XとGrokとCursorを統合した新サブスクを発表&lt;/li&gt;&lt;li&gt;役員会議室に盗聴器を設置した疑いでOpenAI社員が逮捕&lt;/li&gt;&lt;li&gt;SB Intuitions、国産生成AI「Sarashina」無償β版を公開&lt;/li&gt;&lt;li&gt;米マイクロソフト、第3世代AIチップ「Maia 300」発表&lt;/li&gt;&lt;li&gt;Meta、エージェント向け最上位モデル「Muse Wonder」発表&lt;/li&gt;&lt;li&gt;Anthropic、コード変更急増でGit代替の独自システムを構築&lt;/li&gt;&lt;li&gt;Higgsfield、OpenAI技術で10分超のAI動画生成を実現&lt;/li&gt;&lt;li&gt;Character.aiが破産申請、Disney系が入札に名乗り&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
