@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-04】Claude Codeの悪用対策と多様な活用法 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-04.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-04.html</guid>
+    <pubDate>Wed, 04 Nov 2026 00:53:28 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Claude Codeの悪用対策と多様な活用法&lt;/li&gt;&lt;li&gt;Google、学校向けAI制限で検索も不可に&lt;/li&gt;&lt;li&gt;OpenAIが物理世界のエンジニアリングを加速&lt;/li&gt;&lt;li&gt;CiscoがOpenAI活用で高速セキュリティ構築&lt;/li&gt;&lt;li&gt;HeimstadenがAIで不動産管理を変革&lt;/li&gt;&lt;li&gt;OpenAI、ジル・ヘイゼルベーカー氏をCCOに任命&lt;/li&gt;&lt;li&gt;国産AIモデルの必要性を安野氏が強調&lt;/li&gt;&lt;li&gt;造船設計の確認作業をAIで効率化&lt;/li&gt;&lt;li&gt;AnthropicがAIモデルの身元証明システム開発&lt;/li&gt;&lt;li&gt;Google、学校向けAIを原則オフ、検索も制限&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-03】ChatGPTのChat/Work統合とCodex利用枠共通化 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-03.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-03.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-16.html</guid>
     <pubDate>Thu, 15 Oct 2026 23:16:01 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;メタ、オープンなマルチモーダルAI「Muse Spark Open」発表&lt;/li&gt;&lt;li&gt;メタ、Appleと連携しMac向けAIモデルを最適化&lt;/li&gt;&lt;li&gt;Google、ロボット向けAI「Gemini 4 Argon」を発表&lt;/li&gt;&lt;li&gt;米8州がOpenAIを提訴、ChatGPTの子供への危害とデータ収集で&lt;/li&gt;&lt;li&gt;Google、論文の論理矛盾をAIで検証する「Deep Review」を公開&lt;/li&gt;&lt;li&gt;OpenAI、生命科学研究向けAI「GPT-Rosalind」を提供&lt;/li&gt;&lt;li&gt;OpenAI、教育者向けAI活用と学習支援ツールを紹介&lt;/li&gt;&lt;li&gt;Sakana AI、「Sakana Chat」にAI記憶可視化機能「My Fish」を追加&lt;/li&gt;&lt;li&gt;ドイツ地方都市がAIベンチャーの聖地に変貌&lt;/li&gt;&lt;li&gt;Amazonデバイス責任者、AI機器がアプリ不要な未来を予測&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-15】Google、最上位モデル「Gemini 4 Argon」を一般提供開始 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-15.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-15.html</guid>
-    <pubDate>Wed, 14 Oct 2026 23:23:12 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Google、最上位モデル「Gemini 4 Argon」を一般提供開始&lt;/li&gt;&lt;li&gt;OpenAI役員室に盗聴器設置の疑い、従業員をFBIが逮捕&lt;/li&gt;&lt;li&gt;AIによる食事指示体験の紹介と「AIの癖」に関する議論&lt;/li&gt;&lt;li&gt;Amp、OpenAIモデルを活用しコード以外の業務へAIエージェントを展開&lt;/li&gt;&lt;li&gt;SentinelOne、OpenAI導入でマルウェア解析時間を数週間から数時間に短縮&lt;/li&gt;&lt;li&gt;Apple、Siri AI対応のスマートディスプレイ「HomeView」を発表&lt;/li&gt;&lt;li&gt;Third Moment Research、1万体のAIエージェントを36時間以上連続稼働&lt;/li&gt;&lt;li&gt;Block、OpenAI技術を活用しセキュリティ脅威の調査と修正を迅速化&lt;/li&gt;&lt;li&gt;欧州でAIエージェントの導入が拡大、企業規模問わず活用進むとOpenAIが分析&lt;/li&gt;&lt;li&gt;Flock CEOの「銃声のみ検知」発言、ウェブサイト上の記載と矛盾と報道&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
