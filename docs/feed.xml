@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-05】OpenAI、Images 2.6でChatGPTのGIF生成を実現 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-05.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-05.html</guid>
+    <pubDate>Thu, 05 Nov 2026 01:04:20 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、Images 2.6でChatGPTのGIF生成を実現&lt;/li&gt;&lt;li&gt;OpenAI、コーディングAI企業Pierre Computerを買収&lt;/li&gt;&lt;li&gt;Google、AI制限校に検索停止で批判&lt;/li&gt;&lt;li&gt;Anthropic、AI出力の真偽証明「FlashProve」公開&lt;/li&gt;&lt;li&gt;Apple、Siri AIのアプリ連携を開発者に開放&lt;/li&gt;&lt;li&gt;OpenAIとマツダ、AI活用で車両設計を共同研究&lt;/li&gt;&lt;li&gt;GPT-6 Astraで他AIの数学性能を6倍改善&lt;/li&gt;&lt;li&gt;OpenAI、Linuxカーネルの脆弱性を自律発見・修正&lt;/li&gt;&lt;li&gt;OpenAI「Daybreak Red」がAWS GovCloudで提供&lt;/li&gt;&lt;li&gt;DevRev、GPT-6.1 Solで自律型セルフサービス強化&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-04】Claude Codeの悪用対策と多様な活用法 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-04.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-04.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-17.html</guid>
     <pubDate>Fri, 16 Oct 2026 22:59:56 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Meta、Mac Studio 2台で動くオープンモデル公開&lt;/li&gt;&lt;li&gt;MS、CLI型AIツール導入による開発者への影響を分析&lt;/li&gt;&lt;li&gt;Amazon、会話を記憶・要約するAI端末「Bee」2種発表&lt;/li&gt;&lt;li&gt;NVIDIA、ローカル向けAI「Nemotron 3.5」公開&lt;/li&gt;&lt;li&gt;Google新AI「Gemini 4 Argon」性能ベンチマーク判明&lt;/li&gt;&lt;li&gt;ChatGPTのChrome拡張、開いているタブの参照に対応&lt;/li&gt;&lt;li&gt;Stack Overflow、エージェント用プラグインで登録急増&lt;/li&gt;&lt;li&gt;Replit、Anthropicとの協業終了をCEOが明言&lt;/li&gt;&lt;li&gt;インド、設定の不備突く不正AIエージェント活動を報告&lt;/li&gt;&lt;li&gt;元NVIDIA担当VC、ロボット工学の現状を「レゴ時代」と指摘&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-16】メタ、オープンなマルチモーダルAI「Muse Spark Open」発表 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-16.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-16.html</guid>
-    <pubDate>Thu, 15 Oct 2026 23:16:01 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;メタ、オープンなマルチモーダルAI「Muse Spark Open」発表&lt;/li&gt;&lt;li&gt;メタ、Appleと連携しMac向けAIモデルを最適化&lt;/li&gt;&lt;li&gt;Google、ロボット向けAI「Gemini 4 Argon」を発表&lt;/li&gt;&lt;li&gt;米8州がOpenAIを提訴、ChatGPTの子供への危害とデータ収集で&lt;/li&gt;&lt;li&gt;Google、論文の論理矛盾をAIで検証する「Deep Review」を公開&lt;/li&gt;&lt;li&gt;OpenAI、生命科学研究向けAI「GPT-Rosalind」を提供&lt;/li&gt;&lt;li&gt;OpenAI、教育者向けAI活用と学習支援ツールを紹介&lt;/li&gt;&lt;li&gt;Sakana AI、「Sakana Chat」にAI記憶可視化機能「My Fish」を追加&lt;/li&gt;&lt;li&gt;ドイツ地方都市がAIベンチャーの聖地に変貌&lt;/li&gt;&lt;li&gt;Amazonデバイス責任者、AI機器がアプリ不要な未来を予測&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>

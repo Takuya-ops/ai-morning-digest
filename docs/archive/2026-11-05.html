@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生成AIモーニングダイジェスト 2026-11-05</title>
+<meta name="description" content="毎朝届く生成AI関連ニュースのまとめ(2026-11-05)">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f5f1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15171a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="AIダイジェスト">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/png" href="../icons/icon-192.png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="生成AIモーニングダイジェスト" href="../feed.xml">
+<style>
+:root {
+  --bg: #f6f5f1; --card: #ffffff; --text: #1f2328; --muted: #656d76; --line: #e4e2dc;
+  --accent: #b4552d; --accent-soft: #fdf0e9; --chip: #f0eee8; --chip-text: #454c54;
+  --gold: #c99700; --silver: #8a939e; --bronze: #a9714b; --link: #0a63b6;
+  --rank-text: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a; --card: #1e2126; --text: #e8eaed; --muted: #9aa3ad; --line: #33383f;
+    --accent: #e58a5e; --accent-soft: #35271f; --chip: #2a2e34; --chip-text: #c4cad1;
+    --gold: #e0b53f; --silver: #a8b2bd; --bronze: #c98f68; --link: #6cb2f0;
+    --rank-text: #15171a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Noto Sans JP", Meiryo, sans-serif;
+  line-height: 1.75; font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 24px 16px 64px; }
+header.site { margin-bottom: 8px; }
+.site h1 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: 0.01em; }
+.site .date { font-size: 1.05rem; font-weight: 600; color: var(--accent); }
+.site .meta { color: var(--muted); font-size: 0.82rem; margin-top: 6px; }
+.statbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
+.statbar span {
+  background: var(--chip); color: var(--chip-text); border-radius: 999px;
+  padding: 3px 12px; font-size: 0.78rem;
+}
+nav.links { margin: 10px 0 8px; font-size: 0.82rem; color: var(--muted); }
+nav.links a { margin-right: 14px; }
+nav.daynav { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 26px; }
+nav.daynav a, nav.daynav .cur {
+  background: var(--chip); color: var(--chip-text); border-radius: 999px;
+  padding: 5px 14px; font-size: 0.82rem;
+}
+nav.daynav a:hover { text-decoration: none; opacity: 0.75; }
+nav.daynav .cur { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+ul.arch { list-style: none; margin: 0; padding: 0; }
+ul.arch li { margin-bottom: 14px; }
+ul.arch .archdate { font-weight: 700; font-size: 1.0rem; }
+ul.arch .archheads { margin: 6px 0 0; padding-left: 0; color: var(--muted); font-size: 0.86rem;
+  list-style: none; }
+ul.arch .archheads li { padding: 2px 0; border: none; margin: 0; }
+h2.section {
+  font-size: 1.05rem; margin: 40px 0 14px; padding-left: 10px;
+  border-left: 4px solid var(--accent);
+}
+.topic {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 18px 20px 14px; margin-bottom: 16px;
+}
+.topic .head { display: flex; gap: 14px; align-items: flex-start; }
+.rank {
+  flex: 0 0 auto; width: 2.1rem; height: 2.1rem; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1.05rem; background: var(--chip); color: var(--chip-text);
+}
+.rank.r1 { background: var(--gold); color: var(--rank-text); }
+.rank.r2 { background: var(--silver); color: var(--rank-text); }
+.rank.r3 { background: var(--bronze); color: var(--rank-text); }
+.topic h3 { margin: 0; font-size: 1.08rem; line-height: 1.55; }
+.topic h3 a { color: var(--text); }
+.topic .summary { margin: 10px 0 0; font-size: 0.94rem; }
+.topic .why {
+  margin: 10px 0 0; font-size: 0.88rem; background: var(--accent-soft);
+  border-radius: 8px; padding: 7px 12px;
+}
+.topic .sources { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.srcchip {
+  background: var(--chip); color: var(--chip-text); border-radius: 999px;
+  font-size: 0.75rem; white-space: nowrap;
+}
+/* タップ領域はリンク側に持たせる(スマホでの押しやすさのため) */
+.srcchip a { color: inherit; display: inline-block; padding: 5px 12px; }
+.srcchip.more { padding: 5px 12px; }
+.topic details { margin-top: 8px; }
+.topic summary.toggle {
+  cursor: pointer; color: var(--muted); font-size: 0.8rem; user-select: none;
+  padding: 9px 0; /* タップ領域を確保 */
+}
+.articles { list-style: none; margin: 8px 0 4px; padding: 0; }
+.articles li { padding: 5px 0; border-top: 1px dashed var(--line); font-size: 0.86rem; }
+.articles .src { color: var(--muted); font-size: 0.78rem; margin-right: 8px; }
+.articles time { color: var(--muted); font-size: 0.75rem; margin-left: 8px; white-space: nowrap; }
+ul.others { list-style: none; margin: 0; padding: 0; }
+ul.others li {
+  padding: 9px 2px; border-bottom: 1px solid var(--line); font-size: 0.9rem; line-height: 1.6;
+}
+ul.others .src { color: var(--muted); font-size: 0.78rem; margin-right: 8px; }
+ul.others time { color: var(--muted); font-size: 0.75rem; margin-left: 8px; white-space: nowrap; }
+.errors { color: var(--muted); font-size: 0.78rem; margin-top: 26px; }
+footer.site {
+  margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 0.8rem;
+}
+.empty { color: var(--muted); background: var(--card); border: 1px dashed var(--line);
+  border-radius: 12px; padding: 24px; text-align: center; }
+/* 長い英語タイトルやURLが画面からはみ出さないようにする */
+.topic h3, .articles li, ul.others li, .summary { overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .wrap { padding: 16px 12px 48px; }
+  .site h1 { font-size: 1.28rem; }
+  .site .date { font-size: 0.98rem; }
+  .topic { padding: 14px 14px 12px; border-radius: 12px; }
+  .topic .head { gap: 10px; }
+  .topic h3 { font-size: 1.02rem; }
+  .rank { width: 1.9rem; height: 1.9rem; font-size: 0.95rem; border-radius: 8px; }
+  h2.section { margin-top: 32px; }
+  nav.links a { margin-right: 10px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <h1>🌅 生成AIモーニングダイジェスト</h1>
+  <div class="date">2026年11月5日(木)</div>
+  <div class="statbar">
+    <span>📰 記事 153件</span>
+    <span>🗞️ ソース 32媒体</span>
+    <span>🧵 トピック 142件</span>
+    <span>⏰ 11/4 07:59 〜 11/5 10:04 (JST)</span>
+  </div>
+  <nav class="links">
+    <a href="../feed.xml">📡 RSSで購読(朝の通知に)</a>
+    <a href="https://github.com/Takuya-ops/ai-morning-digest" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <nav class="daynav">
+    <a href="../archive/2026-11-04.html">← 前日 (11/4)</a>
+    <span class="cur">11/5</span>
+    
+    <a href="../archive/index.html">📚 日付一覧</a>
+    <a href="../index.html">⏩ 最新へ</a>
+  </nav>
+</header>
+
+<h2 class="section">今日の重要トピック TOP10</h2>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank r1">1</div>
+    <h3><a href="https://the-decoder.com/chatgpt-can-now-turn-text-prompts-and-photos-into-animated-gifs-with-openais-images-2-6-model/" target="_blank" rel="noopener">OpenAI、Images 2.6でChatGPTのGIF生成を実現</a></h3>
+  </div>
+  <p class="summary">OpenAIが画像生成モデルImages 2.6を発表し、ChatGPTでテキストや写真からアニメーションGIFを生成できるようになりました。GIFの速度調整やフレーム編集も可能で、画像生成速度の向上やより精密な編集機能も提供されます。この機能はChatGPTとAPIで利用可能となります。</p>
+  <p class="why">💡 AIによる視覚コンテンツ生成の表現力が広がり、よりインタラクティブなコミュニケーションが可能になるため重要です。</p>
+  <div class="sources"><span class="srcchip"><a href="https://the-decoder.com/chatgpt-can-now-turn-text-prompts-and-photos-into-animated-gifs-with-openais-images-2-6-model/" target="_blank" rel="noopener" title="ChatGPT can now turn text prompts and photos into animated GIFs with OpenAI&#39;s Images 2.6 model">The Decoder</a></span><span class="srcchip"><a href="https://openai.com/index/introducing-images-2-6" target="_blank" rel="noopener" title="Introducing Images 2.6">OpenAI</a></span><span class="srcchip"><a href="https://openai.com/index/introducing-images-2-6/" target="_blank" rel="noopener" title="Introducing Images 2.6">Hacker News</a></span><span class="srcchip"><a href="https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6" target="_blank" rel="noopener" title="ChatGPT will now make you animated GIFs">The Verge AI</a></span></div>
+  <details><summary class="toggle">関連記事 4件をすべて見る</summary><ul class="articles"><li><span class="src">The Decoder</span><a href="https://the-decoder.com/chatgpt-can-now-turn-text-prompts-and-photos-into-animated-gifs-with-openais-images-2-6-model/" target="_blank" rel="noopener">ChatGPT can now turn text prompts and photos into animated GIFs with OpenAI&#39;s Images 2.6 model</a><time>11/5 04:44</time></li><li><span class="src">OpenAI</span><a href="https://openai.com/index/introducing-images-2-6" target="_blank" rel="noopener">Introducing Images 2.6</a><time>11/4 09:00</time></li><li><span class="src">Hacker News</span><a href="https://openai.com/index/introducing-images-2-6/" target="_blank" rel="noopener">Introducing Images 2.6</a><time>11/5 08:35</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6" target="_blank" rel="noopener">ChatGPT will now make you animated GIFs</a><time>11/5 03:00</time></li></ul></details>
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank r2">2</div>
+    <h3><a href="https://openai.com/index/openai-to-acquire-pierre" target="_blank" rel="noopener">OpenAI、コーディングAI企業Pierre Computerを買収</a></h3>
+  </div>
+  <p class="summary">OpenAIは、コーディングエージェントCodexの基盤技術を提供するPierre Computer Companyを買収しました。この買収により、OpenAIはコードの構築、理解、レビューのためのCodexのツールを拡張します。また、OpenAIのGitバックエンドPandoと合わせて、開発者やAIエージェントが協調して作業するインフラを強化する狙いがあります。</p>
+  <p class="why">💡 AIによるソフトウェア開発の効率化と自動化を加速させるための戦略的な動きであり、開発者向けAIツールの進化に貢献します。</p>
+  <div class="sources"><span class="srcchip"><a href="https://openai.com/index/openai-to-acquire-pierre" target="_blank" rel="noopener" title="OpenAI to acquire Pierre Computer Company, Inc.">OpenAI</a></span><span class="srcchip"><a href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener" title="OpenAI to acquire Pierre Computer Company">Hacker News</a></span><span class="srcchip"><a href="https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/" target="_blank" rel="noopener" title="OpenAI acquires Pierre Computer Company to make Git keep up with AI coding agents">The Decoder</a></span></div>
+  <details><summary class="toggle">関連記事 3件をすべて見る</summary><ul class="articles"><li><span class="src">OpenAI</span><a href="https://openai.com/index/openai-to-acquire-pierre" target="_blank" rel="noopener">OpenAI to acquire Pierre Computer Company, Inc.</a><time>11/4 23:30</time></li><li><span class="src">Hacker News</span><a href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener">OpenAI to acquire Pierre Computer Company</a><time>11/5 00:21</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/" target="_blank" rel="noopener">OpenAI acquires Pierre Computer Company to make Git keep up with AI coding agents</a><time>11/5 03:41</time></li></ul></details>
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank r3">3</div>
+    <h3><a href="https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/" target="_blank" rel="noopener">Google、AI制限校に検索停止で批判</a></h3>
+  </div>
+  <p class="summary">Googleは2027年から、学校向け製品でAI機能をデフォルトでオフにする計画を発表しましたが、AIを完全にブロックする学校はGoogle検索も利用できなくなるとしました。この方針に対し、ニューヨーク市議会議員や元FTC委員長などから、規制されていない独占企業としての行動だとの批判が上がっています。Googleの教育市場における強い影響力から、学校には選択の余地が少ないと指摘されています。</p>
+  <p class="why">💡 教育機関におけるAI利用の自由度と、大手IT企業の市場支配力に対する懸念が高まるため重要です。</p>
+  <div class="sources"><span class="srcchip"><a href="https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/" target="_blank" rel="noopener" title="Google faces backlash for plan that would turn off Search for schools that restrict AI">TechCrunch AI</a></span><span class="srcchip"><a href="https://the-decoder.com/schools-that-turn-off-googles-ai-will-lose-search-too-starting-in-2027/" target="_blank" rel="noopener" title="Schools that turn off Google&#39;s AI will lose search too starting in 2027">The Decoder</a></span></div>
+  <details><summary class="toggle">関連記事 2件をすべて見る</summary><ul class="articles"><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/" target="_blank" rel="noopener">Google faces backlash for plan that would turn off Search for schools that restrict AI</a><time>11/5 01:17</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/schools-that-turn-off-googles-ai-will-lose-search-too-starting-in-2027/" target="_blank" rel="noopener">Schools that turn off Google&#39;s AI will lose search too starting in 2027</a><time>11/4 19:06</time></li></ul></details>
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">4</div>
+    <h3><a href="https://www.itmedia.co.jp/aiplus/article/2611/04/2000002863/" target="_blank" rel="noopener">Anthropic、AI出力の真偽証明「FlashProve」公開</a></h3>
+  </div>
+  <p class="summary">Anthropicは、AIモデルの応答が指定したモデルによって生成されたものであるかを暗号技術で証明するシステム「FlashProve」を発表しました。このシステムは、ユーザーがAI応答の改ざんや異なるモデルへのすり替えを検知できるようにすることを目的としています。中身を明かさずに計算の正しさを証明する「zkSNARK」という暗号技術を活用した研究用プロトタイプとして、関連コードが公開されています。</p>
+  <p class="why">💡 AIモデルの信頼性と透明性を高め、悪意ある改ざんや偽装を防ぐことで、AI利用の安全性を向上させる上で非常に重要です。</p>
+  <div class="sources"><span class="srcchip"><a href="https://www.itmedia.co.jp/aiplus/article/2611/04/2000002863/" target="_blank" rel="noopener" title="Anthropic、AIの応答が「本当にそのモデルによるものか」を暗号技術で証明する「FlashProve」を公開">ITmedia AI+</a></span><span class="srcchip"><a href="https://gigazine.net/news/20261104-anthropic-flashprove/" target="_blank" rel="noopener" title="「特定のAIモデルで出力が生成されたこと」を証明できる仕組み「FlashProve」をAnthropicが開発">GIGAZINE</a></span></div>
+  <details><summary class="toggle">関連記事 2件をすべて見る</summary><ul class="articles"><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/aiplus/article/2611/04/2000002863/" target="_blank" rel="noopener">Anthropic、AIの応答が「本当にそのモデルによるものか」を暗号技術で証明する「FlashProve」を公開</a><time>11/4 10:40</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-anthropic-flashprove/" target="_blank" rel="noopener">「特定のAIモデルで出力が生成されたこと」を証明できる仕組み「FlashProve」をAnthropicが開発</a><time>11/4 11:07</time></li></ul></details>
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">5</div>
+    <h3><a href="https://www.itmedia.co.jp/news/article/2611/04/2000002855/" target="_blank" rel="noopener">Apple、Siri AIのアプリ連携を開発者に開放</a></h3>
+  </div>
+  <p class="summary">Appleは、音声アシスタント「Siri AI」とサードパーティアプリを連携させる機能を全ての開発者向けに開放すると発表しました。これにより、開発者は「App Intents」を利用して、ユーザーがアプリを開かずにSiri AIを通じて直接、予約や商品の注文、配送状況の確認といった操作を可能にできます。この機能は各OSのベータ版でプレビュー提供が開始されており、一般ユーザーへの提供は数カ月後を予定しています。</p>
+  <p class="why">💡 Siriの利便性と機能が飛躍的に向上し、多様なアプリとの連携を通じてユーザー体験を大きく変える可能性を秘めているため重要です。</p>
+  <div class="sources"><span class="srcchip"><a href="https://www.itmedia.co.jp/news/article/2611/04/2000002855/" target="_blank" rel="noopener" title="Apple、刷新版「Siri AI」を全開発者に開放 アプリ連携で予約や注文などの操作が可能に">ITmedia AI+</a></span><span class="srcchip"><a href="https://japan.cnet.com/article/35254366/" target="_blank" rel="noopener" title="Siri AI、他社アプリで「予約・注文操作」が可能に 連携機能を全開発者に開放">CNET Japan</a></span></div>
+  <details><summary class="toggle">関連記事 2件をすべて見る</summary><ul class="articles"><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/news/article/2611/04/2000002855/" target="_blank" rel="noopener">Apple、刷新版「Siri AI」を全開発者に開放 アプリ連携で予約や注文などの操作が可能に</a><time>11/4 09:37</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254366/" target="_blank" rel="noopener">Siri AI、他社アプリで「予約・注文操作」が可能に 連携機能を全開発者に開放</a><time>11/4 16:15</time></li></ul></details>
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">6</div>
+    <h3><a href="https://japan.cnet.com/article/35254397/" target="_blank" rel="noopener">OpenAIとマツダ、AI活用で車両設計を共同研究</a></h3>
+  </div>
+  <p class="summary">OpenAIとマツダが、AIを活用した車両設計に関する共同研究を開始しました。この研究では、AIを使って自動車の設計案を作成し、その性能を評価します。マツダの空力・衝突安全技術者と連携し、車両周辺の空気の流れや車体構造の挙動をシミュレーションし、デザインやコストも考慮に入れながら車両性能の向上を目指します。AIが効率的で最適な設計を生み出す可能性を探ります。</p>
+  <p class="why">💡 AIが複雑な工業製品設計に深く関わることで、開発期間の短縮、性能向上、コスト削減が期待され、製造業のデジタルトランスフォーメーションを加速させます。</p>
+  <div class="sources"><span class="srcchip"><a href="https://japan.cnet.com/article/35254397/" target="_blank" rel="noopener" title="マツダ、クルマの「顔」をAIで設計 OpenAIと共同研究、空気抵抗とデザインの両立探る">CNET Japan</a></span><span class="srcchip"><a href="https://www.watch.impress.co.jp/docs/news/2153509.html" target="_blank" rel="noopener" title="OpenAIとマツダ、AIを活用した車両設計で共同研究">Impress Watch</a></span></div>
+  <details><summary class="toggle">関連記事 2件をすべて見る</summary><ul class="articles"><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254397/" target="_blank" rel="noopener">マツダ、クルマの「顔」をAIで設計 OpenAIと共同研究、空気抵抗とデザインの両立探る</a><time>11/5 07:20</time></li><li><span class="src">Impress Watch</span><a href="https://www.watch.impress.co.jp/docs/news/2153509.html" target="_blank" rel="noopener">OpenAIとマツダ、AIを活用した車両設計で共同研究</a><time>11/4 14:28</time></li></ul></details>
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">7</div>
+    <h3><a href="https://pc.watch.impress.co.jp/docs/news/2153457.html" target="_blank" rel="noopener">GPT-6 Astraで他AIの数学性能を6倍改善</a></h3>
+  </div>
+  <p class="summary">マサチューセッツ工科大学の研究チームは、「GPT-6 Astra」を用いて別のAIモデル「Qwen3.5-0.8B」の内部パラメーター「重み」を直接編集する新手法「重み空間プログラミング」を発表しました。この手法により、Qwen3.5-0.8Bの数学問題正答率が約6倍に向上したと報告されています。追加学習なしでわずか0.016%のパラメーター変更で達成されたこの成果には、研究の説明が誤解を招くとの批判も一部で上がっています。</p>
+  <p class="why">💡 AIモデルの内部構造を直接操作し、特定の能力を劇的に向上させる可能性を示唆する画期的な研究であり、より効率的なAIの微調整や新たなモデル開発の道を開く可能性があります。</p>
+  <div class="sources"><span class="srcchip"><a href="https://pc.watch.impress.co.jp/docs/news/2153457.html" target="_blank" rel="noopener" title="GPT-6 AstraでQwen3.5-0.8Bの重みを直接編集、数学スコアは約6倍に">PC Watch</a></span><span class="srcchip"><a href="https://gigazine.net/news/20261104-gpt-6-astra-qwen-weight-space-programming/" target="_blank" rel="noopener" title="「GPT-6 AstraがQwen3.5-0.8Bの重みを書き換えて数学性能を約6倍に改善した」との研究結果、ただし「誤解を招く」との批判も">GIGAZINE</a></span></div>
+  <details><summary class="toggle">関連記事 2件をすべて見る</summary><ul class="articles"><li><span class="src">PC Watch</span><a href="https://pc.watch.impress.co.jp/docs/news/2153457.html" target="_blank" rel="noopener">GPT-6 AstraでQwen3.5-0.8Bの重みを直接編集、数学スコアは約6倍に</a><time>11/4 13:26</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-gpt-6-astra-qwen-weight-space-programming/" target="_blank" rel="noopener">「GPT-6 AstraがQwen3.5-0.8Bの重みを書き換えて数学性能を約6倍に改善した」との研究結果、ただし「誤解を招く」との批判も</a><time>11/4 12:30</time></li></ul></details>
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">8</div>
+    <h3><a href="https://openai.com/index/a-thousand-fewer-paths-to-root" target="_blank" rel="noopener">OpenAI、Linuxカーネルの脆弱性を自律発見・修正</a></h3>
+  </div>
+  <p class="summary">OpenAIは、Linuxカーネルにおける948件のローカル権限昇格の脆弱性を特定し、検証し、さらにそのパッチを生成する自律型パイプラインを開発しました。このシステムは、手作業では膨大な時間と労力を要するセキュリティ脆弱性の発見と修正プロセスを、AIの力で自動化するものです。これにより、Linuxカーネルのセキュリティが大幅に強化されることが期待されます。</p>
+  <p class="why">💡 AIがソフトウェアのセキュリティ脆弱性の発見から修正まで自律的に行う能力を示し、サイバーセキュリティ分野におけるAI活用の新たな可能性と効率化を提示するため重要です。</p>
+  <div class="sources"><span class="srcchip"><a href="https://openai.com/index/a-thousand-fewer-paths-to-root" target="_blank" rel="noopener" title="A thousand fewer paths to root">OpenAI</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">9</div>
+    <h3><a href="https://openai.com/index/daybreak-red-aws-govcloud" target="_blank" rel="noopener">OpenAI「Daybreak Red」がAWS GovCloudで提供</a></h3>
+  </div>
+  <p class="summary">OpenAIの「Daybreak Red」が、Amazon Bedrockを通じてAWS GovCloud (US-East) で利用可能になりました。このサービスはGPT-5.6 Cyberを搭載しており、政府機関など特定の承認された顧客向けに、サイバーセキュリティ関連の作業で提供されます。これにより、高度なセキュリティ要件を持つ環境でのAI活用が推進されます。</p>
+  <p class="why">💡 高度なセキュリティとコンプライアンスが求められる政府・公共機関向けクラウド環境で、最新AIモデルが利用可能になることで、重要インフラやデータ保護におけるAI活用が加速するため重要です。</p>
+  <div class="sources"><span class="srcchip"><a href="https://openai.com/index/daybreak-red-aws-govcloud" target="_blank" rel="noopener" title="Daybreak Red is now available in AWS GovCloud (US-East)">OpenAI</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">10</div>
+    <h3><a href="https://openai.com/index/devrev-enterprise-self-service" target="_blank" rel="noopener">DevRev、GPT-6.1 Solで自律型セルフサービス強化</a></h3>
+  </div>
+  <p class="summary">DevRevは、OpenAIの最新AIモデル「GPT-6.1 Sol」を活用し、自社のサービス「Computer」と「Operator」を強化しました。これにより、企業向けサービスにおいて、高度な推論能力、処理速度、およびコスト効率のバランスを取りながら、顧客への自律的なセルフサービス体験を提供できるようになります。GPT-6.1 Solの導入により、企業の業務効率化と顧客満足度向上を目指します。</p>
+  <p class="why">💡 最新のAIモデルを企業向けサービスに統合することで、顧客サポートや運用を自律化・効率化し、ビジネスの生産性と顧客体験を大幅に向上させる可能性を秘めているため重要です。</p>
+  <div class="sources"><span class="srcchip"><a href="https://openai.com/index/devrev-enterprise-self-service" target="_blank" rel="noopener" title="DevRev delivers autonomous self-service with GPT-6.1 Sol">OpenAI</a></span></div>
+  
+</article>
+
+<h2 class="section">その他の生成AIニュース(133件)— 抜け漏れ防止</h2>
+<ul class="others"><li><span class="src">Qiita 生成AI</span><a href="https://qiita.com/ennagara128/items/bec153471d577eb808ea" target="_blank" rel="noopener">2026年11月5日 今日のQiitaトレンド記事をポッドキャストで聴こう！</a><time>11/5 09:44</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/tpdd_gm/articles/vscode-chat-instruction-orchestration" target="_blank" rel="noopener">VS Codeのチャットで、指示ファイルに書くだけで複数のエージェントが分担して働く環境の作り方</a><time>11/5 09:30</time></li><li><span class="src">Qiita 生成AI</span><a href="https://qiita.com/DnD-inc/items/6fe3906192676614ebd4" target="_blank" rel="noopener">建設業バックオフィスDX調査、小規模企業の見積・請求デジタル化は21.4%どまり｜受注から請求をシステムでつなぐ3ステップ</a><time>11/5 09:19</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/dantarg/articles/muse-memory-files-meta-disclosure" target="_blank" rel="noopener">AIエージェントの「記憶ファイル」はどこまで表に出ているか——Meta MuseのMEMORY.mdと公式説明を照合する</a><time>11/5 09:11</time></li><li><span class="src">ITmedia AI+</span><a href="https://monoist.itmedia.co.jp/mn/articles/2611/05/news011.html" target="_blank" rel="noopener">設計図面や熟練技術者のノウハウをAIで活用、リコーと川崎重工が連携</a><time>11/5 09:00</time></li><li><span class="src">Impress Watch</span><a href="https://www.watch.impress.co.jp/docs/news/2153684.html" target="_blank" rel="noopener">AIアプリ開発のReplit、日本に拠点開設 SMFLがライセンス提供や研修</a><time>11/5 09:00</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30027" target="_blank" rel="noopener">AIが解釈を埋めることで開発が崩れていく──クラウドエースが採った「意図が消えない」ための工夫</a><time>11/5 09:00</time></li><li><span class="src">Hacker News</span><a href="https://openai.com/index/a-thousand-fewer-paths-to-root/" target="_blank" rel="noopener">Local privilege escalation vulnerabilities in Linux</a><time>11/5 08:33</time></li><li><span class="src">Qiita 生成AI</span><a href="https://qiita.com/keiji_ai_japan/items/0e861d071a8257c105a4" target="_blank" rel="noopener">デモではなくベンチマークを：統計プログラミングAIの評価軸</a><time>11/5 08:11</time></li><li><span class="src">Qiita 生成AI</span><a href="https://qiita.com/kaiyaku_iyada/items/6c54916e60931bc9168d" target="_blank" rel="noopener">Qiita 5本で 7,257 views の朝、GitHub の参照元に qiita.com は無かった</a><time>11/5 08:09</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254399/" target="_blank" rel="noopener">Nothing、初のAI専用端末を12月出荷へ 「スマホアプリでは実現できない」機能搭載</a><time>11/5 07:57</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/" target="_blank" rel="noopener">AI PACs spent millions trying to shape Congress — here’s how they fared</a><time>11/5 07:45</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers" target="_blank" rel="noopener">Qualcomm is betting big on data centers as smartphone sales sink</a><time>11/5 07:42</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/" target="_blank" rel="noopener">Nothing CEO says company’s mysterious AI-first device is dropping next month</a><time>11/5 07:13</time></li><li><span class="src">ITmedia NEWS</span><a href="https://www.itmedia.co.jp/news/article/2611/05/2000002888/" target="_blank" rel="noopener">米中間選挙で民主党が上下両院を奪還 AI規制強化に現実味、IT大手の株価は上昇</a><time>11/5 07:11</time></li><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/business/articles/2611/05/news018.html" target="_blank" rel="noopener">「トイレ」に凝ったらAI需要で大躍進――TOTO、利益の7割かせぐ「半導体」ビジネスの正体</a><time>11/5 07:00</time></li><li><span class="src">ITmedia AI+</span><a href="https://kn.itmedia.co.jp/kn/article/2611/05/2000002770/" target="_blank" rel="noopener">GPT-6モデルはAstra、Sol、それともLuna？ OpenAIが教える、Codex爆速開発の鉄則</a><time>11/5 07:00</time></li><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/business/articles/2611/05/news025.html" target="_blank" rel="noopener">予算止める側だったのに「増額」進言 現場の「伸びそう」応援する“CFOの右腕”設置、MIXIに何が起きた？</a><time>11/5 07:00</time></li><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/business/articles/2611/05/news019.html" target="_blank" rel="noopener">深刻な「中国依存」を脱せるか 老舗問屋が動いた「空気を使った肥料づくり」とAI農業とは？</a><time>11/5 07:00</time></li><li><span class="src">日経クロステック</span><a href="https://xtech.nikkei.com/atcl/nxt/mag/nc/18/100500575/110200002/" target="_blank" rel="noopener">AIシステムの品質を確認 押さえるべき8つのポイント</a><time>11/5 07:00</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35253428/" target="_blank" rel="noopener">第4回：AI時代の経営は「全社の知識をつなぐ」意思決定者へ</a><time>11/5 07:00</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35254356/" target="_blank" rel="noopener">「iOS 27」の「Safari」でAI機能が利用可能に--タブの自動整理や機能拡張の作成</a><time>11/5 07:00</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35254098/" target="_blank" rel="noopener">「Muse」を使っていなくてもAIエージェントが非公開のメッセージにアクセスできる仕組みとは</a><time>11/5 07:00</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30216" target="_blank" rel="noopener">アイスリーデザインがAitriaに社名変更、AI駆動開発で「人月」ではなく「成果」を売る会社へ</a><time>11/5 07:00</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/" target="_blank" rel="noopener">Almost no one uses AI agents to book their Uber, company says</a><time>11/5 06:56</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich" target="_blank" rel="noopener">17 better ways Elon Musk could have wasted $446 million</a><time>11/5 06:45</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35254319/" target="_blank" rel="noopener">「マインクラフト」で50体のAIエージェントによる協調動作を試す</a><time>11/5 06:30</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/" target="_blank" rel="noopener">OpenAI is already trying to shape the 2028 election</a><time>11/5 06:25</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/" target="_blank" rel="noopener">Meta acquires AI coding startup Conductor</a><time>11/5 06:10</time></li><li><span class="src">PC Watch</span><a href="https://pc.watch.impress.co.jp/docs/column/yajiuma-mini-review/2153657.html" target="_blank" rel="noopener">【やじうまミニレビュー】まだ手で議事録書いてるの？要約もToDoもAI任せの「iFLYTEK P1 Pro」</a><time>11/5 06:07</time></li><li><span class="src">INTERNET Watch</span><a href="https://internet.watch.impress.co.jp/docs/column/homewifi/2153078.html" target="_blank" rel="noopener">日本語に対応したiPhoneの「Siri AI」で名刺を文字起こし！ PFUの小型スキャナー「ScanSnap iX110」活用【自宅Wi-Fiの“わからない”をスッキリ！】</a><time>11/5 06:00</time></li><li><span class="src">Ars Technica AI</span><a href="https://arstechnica.com/tech-policy/2026/11/big-tech-claims-voters-ai-backlash-is-anti-trump-not-anti-tech/" target="_blank" rel="noopener">Big Tech claims voters’ AI backlash is “anti-Trump” not “anti-tech”</a><time>11/5 05:55</time></li><li><span class="src">Hacker News</span><a href="https://github.com/gauge-sh/gauge-cli" target="_blank" rel="noopener">Show HN: Gauge – Open-Source CLI to recursively improve your docs</a><time>11/5 05:31</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system" target="_blank" rel="noopener">Gemini for Home now plugs into AT&amp;T’s smart security system</a><time>11/5 05:23</time></li><li><span class="src">ITmedia AI+</span><a href="https://atmarkit.itmedia.co.jp/ait/articles/2611/05/news004.html" target="_blank" rel="noopener">OSSは「プルリクエストを送る」から「自分用に直す」へ？ AI時代のメンテナーがPR受付を閉じると宣言した理由</a><time>11/5 05:00</time></li><li><span class="src">日経クロステック</span><a href="https://xtech.nikkei.com/atcl/nxt/column/18/01231/00166/" target="_blank" rel="noopener">サムスン電子とAMDが急接近、AIインフラの課題解消へ強力タッグ</a><time>11/5 05:00</time></li><li><span class="src">日経クロステック</span><a href="https://xtech.nikkei.com/atcl/nxt/column/18/00138/110302138/" target="_blank" rel="noopener">Claude Codeを相棒に記者が月2kg減量、個人向けエージェントの可能性</a><time>11/5 05:00</time></li><li><span class="src">日経クロステック</span><a href="https://xtech.nikkei.com/atcl/nxt/column/18/00001/12146/" target="_blank" rel="noopener">富士通、Uvanceの軸足を汎用型から業種特化AIへ 5年で売上2.4倍目指す</a><time>11/5 05:00</time></li><li><span class="src">日経クロステック</span><a href="https://xtech.nikkei.com/atcl/nxt/column/18/00166/110300211/" target="_blank" rel="noopener">大手新聞が指摘してもAIが進化しても、多重下請けはなくならない</a><time>11/5 05:00</time></li><li><span class="src">日経クロステック</span><a href="https://xtech.nikkei.com/atcl/nxt/column/18/03795/102700004/" target="_blank" rel="noopener">富士通・日立・AWSも、「ソブリンAI」で競演 AI主権の機運に商機見いだす</a><time>11/5 05:00</time></li><li><span class="src">Hacker News</span><a href="https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra" target="_blank" rel="noopener">Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s</a><time>11/5 04:55</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/" target="_blank" rel="noopener">Open source AI is booming. Hugging Face explains who profits.</a><time>11/5 04:30</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy/" target="_blank" rel="noopener">DuckDuckGo pitches itself to schools amid backlash over Google’s AI policy</a><time>11/5 04:29</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/anthropics-text-watermark-is-easy-to-bypass-on-several-older-claude-models/" target="_blank" rel="noopener">Anthropic&#39;s text watermark is easy to bypass on several older Claude models</a><time>11/5 04:03</time></li><li><span class="src">Hacker News</span><a href="https://www.ricursive.com/ripple" target="_blank" rel="noopener">Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding</a><time>11/5 03:53</time></li><li><span class="src">MIT Tech Review</span><a href="https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/" target="_blank" rel="noopener">Texas was the new epicenter of the AI data center buildout. That might be kaput.</a><time>11/5 03:50</time></li><li><span class="src">AWS AI Blog</span><a href="https://aws.amazon.com/blogs/machine-learning/use-decision-models-with-amazon-bedrock-agentcore-evaluations/" target="_blank" rel="noopener">Use decision models with Amazon Bedrock AgentCore Evaluations</a><time>11/5 03:46</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs/" target="_blank" rel="noopener">Building on open source AI? Hugging Face’s policy chief on the costs, risks, and trade-offs</a><time>11/5 03:44</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei" target="_blank" rel="noopener">Nothing teases a screen-free AI device ahead of launch next month</a><time>11/5 03:26</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/column/1026464/optimizer-amazon-bee-frontier-ambient-listening-wearables" target="_blank" rel="noopener">My therapist thinks I should chuck the Amazon Bee Frontier out a window</a><time>11/5 03:00</time></li><li><span class="src">Hugging Face</span><a href="https://huggingface.co/blog/Dharma-AI/dharma-field-extractor" target="_blank" rel="noopener">Dharma Field Extractor: Any Document In, Structured Fields in JSON Out</a><time>11/5 02:50</time></li><li><span class="src">Hacker News</span><a href="https://news.ycombinator.com/item?id=50368804" target="_blank" rel="noopener">Launch HN: Kino AI (YC S23) – AI media manager and video editor</a><time>11/5 02:31</time></li><li><span class="src">Hacker News</span><a href="https://www.anthropic.com/research/provable-inference" target="_blank" rel="noopener">Progress on provable inference for large language models</a><time>11/5 02:17</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/i-tried-apples-siri-recaps-theyre-surprisingly-useful-and-a-little-unsettling/" target="_blank" rel="noopener">I tried Apple’s Siri Recaps. They’re surprisingly useful — and a little unsettling</a><time>11/5 01:51</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/new-open-source-benchmark-reveals-reasoning-as-the-biggest-bottleneck-for-ai-in-cloud-operations/" target="_blank" rel="noopener">New open-source benchmark reveals reasoning as the biggest bottleneck for AI in cloud operations</a><time>11/5 01:42</time></li><li><span class="src">AWS AI Blog</span><a href="https://aws.amazon.com/blogs/machine-learning/smart-approvals-in-amazon-quick-human-oversight-where-it-matters/" target="_blank" rel="noopener">Smart Approvals in Amazon Quick: Human oversight where it matters</a><time>11/5 01:33</time></li><li><span class="src">AWS AI Blog</span><a href="https://aws.amazon.com/blogs/machine-learning/four-layers-of-context-engineering-for-production-ai-agents-how-deep-insight-applies-them-in-working-code/" target="_blank" rel="noopener">Four layers of context engineering for production AI agents: How Deep Insight applies them in working code</a><time>11/5 01:30</time></li><li><span class="src">AWS AI Blog</span><a href="https://aws.amazon.com/blogs/machine-learning/how-indegene-is-modernizing-and-scaling-enterprise-data-quality-in-life-sciences/" target="_blank" rel="noopener">How Indegene is modernizing and scaling enterprise data quality in life sciences</a><time>11/5 01:25</time></li><li><span class="src">AWS AI Blog</span><a href="https://aws.amazon.com/blogs/machine-learning/how-u-mobile-built-agentic-telco-operations-with-amazon-bedrock-agentcore/" target="_blank" rel="noopener">How U Mobile built agentic telco operations with Amazon Bedrock AgentCore</a><time>11/5 01:23</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/policy/1026365/data-centers-midterms-results" target="_blank" rel="noopener">Data centers lost the midterms</a><time>11/5 01:05</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation" target="_blank" rel="noopener">Uber only fulfilled 4 rides from AI agents last quarter</a><time>11/5 00:58</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/gpt-6-astra-sees-the-matrix-and-reprograms-other-ai-models-directly-through-their-weights/" target="_blank" rel="noopener">GPT-6 Astra sees the matrix and reprograms other AI models directly through their weights</a><time>11/5 00:44</time></li><li><span class="src">Hacker News</span><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" target="_blank" rel="noopener">Kimi K3.1 Pro model weights are out</a><time>11/5 00:30</time></li><li><span class="src">Simon Willison</span><a href="https://simonwillison.net/2026/Nov/4/datasette-llm/" target="_blank" rel="noopener">datasette-llm 0.1a10</a><time>11/5 00:26</time></li><li><span class="src">Hacker News</span><a href="https://pcdealcheck.com/" target="_blank" rel="noopener">Show HN: I built a tool that prices a pre-built PC part by part</a><time>11/5 00:25</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/anthropics-new-prototype-proves-which-model-wrote-an-ai-response-without-exposing-its-weights/" target="_blank" rel="noopener">Anthropic&#39;s new prototype proves which model wrote an AI response without exposing its weights</a><time>11/5 00:23</time></li><li><span class="src">Publickey</span><a href="https://www.publickey1.jp/blog/26/github_copilot_dreaminggithub_universe_2026.html" target="_blank" rel="noopener">「GitHub Copilot Dreaming」発表。作業を振り返ってパーソナルメモリやガイダンスをバックグラウンドで整理、アップデート。GitHub Universe 2026</a><time>11/5 00:15</time></li><li><span class="src">ASCII.jp</span><a href="https://ascii.jp/elem/000/004/448/4448552/?rss" target="_blank" rel="noopener">19万円台で買える最新CPU搭載＝14型960gの軽量AIノート PC「Acer Swift Air 14」発表!!</a><time>11/5 00:01</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/ai-artificial-intelligence/1026292/sam-altman-ram-shortage-pcs-comments" target="_blank" rel="noopener">Sam Altman addresses RAM comments: People should ‘put as much as they want in their computers’</a><time>11/4 23:46</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/pdfractal/articles/6b19171a579d61" target="_blank" rel="noopener">なぜ、AI時代にはリスキリングがまるで無意味なのか？</a><time>11/4 23:42</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-project-nomad/" target="_blank" rel="noopener">無料でネット接続なしでもWikipedia・教科書・オフラインマップが検索できAIアシスタントも搭載したオフライン知識検索ツール「Project NOMAD」</a><time>11/4 23:00</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/orivanai/articles/claude-code-2026-10-updates" target="_blank" rel="noopener">Claude Code 2026年10月のアップデートまとめ:Mods、Code Review、Haiku 5.5</a><time>11/4 22:15</time></li><li><span class="src">ASCII.jp</span><a href="https://ascii.jp/elem/000/004/448/4448590/?rss" target="_blank" rel="noopener">広報担当者が自社のリード文を1本持ち帰る、AIに覚えられる書き方セミナーを11月17日に無料開催</a><time>11/4 22:14</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/kotsulab/articles/38fec4399dc205" target="_blank" rel="noopener">RAGを作った話を「誰が困っていたか」から話し直す。開発者がアプライドAIアーキテクトの面接を受ける前の準備</a><time>11/4 22:06</time></li><li><span class="src">TechCrunch AI</span><a href="https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day/" target="_blank" rel="noopener">TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston</a><time>11/4 22:00</time></li><li><span class="src">MIT Tech Review</span><a href="https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/" target="_blank" rel="noopener">Securing the agentic enterprise with data lineage</a><time>11/4 22:00</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/takumahayami/articles/eigyou-ai-tojiru-handan-3kagetsu" target="_blank" rel="noopener">3ヶ月載らない表は閉じる — 降格表をやめる判断を1行で残す手続き</a><time>11/4 21:54</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/sodeyama/articles/tech-weight-edit-thinking-loop" target="_blank" rel="noopener">学習なしでLLMの思考ループは直せるのか——重みを2か所編集する研究を、自宅のDGX Sparkで追試した</a><time>11/4 21:45</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/tomipetit/articles/272c4d70a2bf67" target="_blank" rel="noopener">娘とのクイズ遊びをアプリにしたら、日本語の奥深さを体感した話</a><time>11/4 21:21</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3" target="_blank" rel="noopener">Google hasn’t figured out how to make AI pay like its search engine</a><time>11/4 21:00</time></li><li><span class="src">ASCII.jp</span><a href="https://ascii.jp/elem/000/004/448/4448592/?rss" target="_blank" rel="noopener">株式会社Rin、豊橋・名古屋の企業研修で自社アプリ「自分と話すノート」を活用。AIコーチングで自ら考える人材育成へ</a><time>11/4 20:50</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/satoshimizuhara/articles/ai-agent-care-conference-prep" target="_blank" rel="noopener">介護の多職種カンファレンスとケア会議、AIはどこまで任せられますか？ — 話す順で決める</a><time>11/4 20:44</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/d_aiba1/articles/claudecode-agents-md-mac-settings-check" target="_blank" rel="noopener">ダウンロードフォルダのAGENTS.md攻撃を機に、Claude Codeの設定を点検した</a><time>11/4 20:09</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-fujifilm-boost-tape-production-ai-fuels/" target="_blank" rel="noopener">富士フイルムが「磁気テープ」の製造能力を5倍に増強すると発表、AIブームによるデータアーカイブ需要増加に対応</a><time>11/4 20:00</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/exit-polls-show-ai-ranked-last-among-voter-priorities-in-the-2026-u-s-midterms/" target="_blank" rel="noopener">Exit polls show AI ranked last among voter priorities in the 2026 U.S. midterms</a><time>11/4 19:45</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/yoshitokinosita/articles/0034-excel-ai-henpin-nebiki-shukei" target="_blank" rel="noopener">Excelの返品と値引の集計でAIに任せるのは判別の式まで — 落とす売上は人間が決める</a><time>11/4 19:10</time></li><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/aiplus/article/2611/04/2000002886/" target="_blank" rel="noopener">国産AI開発のNoetra、テックブログ開設 「開発現場での試行錯誤や工夫」も発信</a><time>11/4 18:45</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30239" target="_blank" rel="noopener">【明日〆切！】荏原製作所が2名で始めた生成AI内製開発PJ、どうAIエージェント構築にまで漕ぎつけた？</a><time>11/4 18:30</time></li><li><span class="src">日経クロステック</span><a href="https://xtech.nikkei.com/atcl/nxt/column/18/00001/12155/" target="_blank" rel="noopener">米中間選挙で民主圧勝、「青い波」がAIブームに冷や水か 規制強化の公算</a><time>11/4 18:25</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/aiforall/articles/f480465405e982" target="_blank" rel="noopener">Orcaを使ってみたら、開発のテンポがガラッと変わった話</a><time>11/4 17:57</time></li><li><span class="src">PC Watch</span><a href="https://pc.watch.impress.co.jp/docs/news/yajiuma/2153619.html" target="_blank" rel="noopener">【やじうまPC Watch】メモリ発言で物議のSam Altman氏、「Ram Altman」に改名</a><time>11/4 17:40</time></li><li><span class="src">ITmedia NEWS</span><a href="https://www.itmedia.co.jp/news/article/2611/04/2000002764/" target="_blank" rel="noopener">議事録も資料もAIが作るなら、人間は何をする？ AIエージェントへ舵を切る「Plaud」を試す</a><time>11/4 17:39</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-openai-lifeval/" target="_blank" rel="noopener">コーディングだけでなく日々の判断にもAIが役立つか測定可能なベンチマークテスト「LifeVal」をOpenAIが発表</a><time>11/4 17:30</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-revolut-cut-ai-cost/" target="_blank" rel="noopener">銀行系企業がAIの利用コストを約10分の1に削減した事例を公開、商用AIから自社運用モデルへの切り替えで</a><time>11/4 17:20</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/bestaitools/articles/3c22c8906a7524" target="_blank" rel="noopener">AIエージェントにメールを自動返信させるときの送信制限</a><time>11/4 17:13</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/aiai_tool/articles/55d667c0d7d3dd" target="_blank" rel="noopener">AI生成コードをそのままMergeしないための「Static Analysis Gate」設計</a><time>11/4 17:05</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/numarn/articles/memo-summary-number-drift-handson" target="_blank" rel="noopener">5行のメモを30回要約させたら、数値は150/150件残り、増えたのは頼んでいない日付だった</a><time>11/4 17:00</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/murooka_az/articles/ai-roles-and-review-check" target="_blank" rel="noopener">AIのレビューは無駄なのか？ 実際の作業記録で数えたら、指摘の6割は使われていた</a><time>11/4 16:58</time></li><li><span class="src">PC Watch</span><a href="https://pc.watch.impress.co.jp/docs/news/2153601.html" target="_blank" rel="noopener">OpenAI、日常タスクのAI遂行能力を測る評価ベンチマーク「LifeVal」発表</a><time>11/4 16:49</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-ram-altman/" target="_blank" rel="noopener">RAM関連発言で燃えたサム・アルトマンがXアカウント名を「Ram Altman」に変更、RAMをデータセンターに集約するべきという意見表明の後に</a><time>11/4 16:38</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/pickup/chrome_enterprise_premium_tu_15/35253062/" target="_blank" rel="noopener">[PR]メルカリに学ぶ、AI 時代のセキュリティ対策 ― VDI に依存しないデータ保護とブラウザ起点のアプローチ</a><time>11/4 16:00</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/civras/articles/b63080beb647ef" target="_blank" rel="noopener">Claude Code の自動処理は何時に回す？ 37日の毎時ログで、上限を取り合わない時間帯を探した</a><time>11/4 15:55</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35254368/" target="_blank" rel="noopener">1Finity、AIとモバイル通信を統合「AI-Native vRAN」構想を展開--中核ソフトウェアを12月提供開始</a><time>11/4 15:23</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254361/" target="_blank" rel="noopener">スターバックス、ドライブスルーのAI活用を試験へ 顧客の好みに応じたメニューを提示</a><time>11/4 15:20</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-modern-chess-engine-vs-pc/" target="_blank" rel="noopener">現代のチェスAIを動かす30年前のPCと昔のチェスAIを動かす現代PCが対決、100局の勝敗は？</a><time>11/4 15:00</time></li><li><span class="src">ITmedia AI+</span><a href="https://monoist.itmedia.co.jp/mn/articles/2611/04/news064.html" target="_blank" rel="noopener">製造業の「秘伝のタレ」はAIに奪われるのか、競争力の源泉はどこにある？</a><time>11/4 14:00</time></li><li><span class="src">Impress Watch</span><a href="https://www.watch.impress.co.jp/docs/news/2153472.html" target="_blank" rel="noopener">グーグル、学校向けAIを原則オフに 管理者による許可制へ</a><time>11/4 13:39</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-openai-git-pando/" target="_blank" rel="noopener">OpenAIがGitで超大規模リポジトリを運用するためのバックエンド「Pando」を開発</a><time>11/4 13:31</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30225" target="_blank" rel="noopener">実際の購買データから生成したAIペルソナと対話できる「PerSearch β版」、インテージが提供開始</a><time>11/4 13:15</time></li><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/news/article/2611/04/2000002869/" target="_blank" rel="noopener">GitHub、「Copilot Fusion」正式リリース タスクに応じて最適なAIモデル選択、高性能・低コスト両立</a><time>11/4 13:13</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30224" target="_blank" rel="noopener">Mutureとグッドパッチ、顧客理解や暗黙知をAIに組み込む実践知を共有するEPIC2026報告会を開催</a><time>11/4 12:45</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/sugitakenji/articles/d43586a71695ab" target="_blank" rel="noopener">AI活用の10段階：使いこなす力から、他の人が育てられる仕組みへ</a><time>11/4 12:41</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30223" target="_blank" rel="noopener">SaaSへのAI組み込みにおける「境界設計」を学ぶ、フリーとSansanの開発現場に迫るイベントが11月11日開催</a><time>11/4 12:30</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30222" target="_blank" rel="noopener">オープンワークやファストドクターなどスタートアップ6社が登壇、AI時代のプロダクトマネージャー像を語るイベント開催</a><time>11/4 12:15</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/kuu_dqx/articles/matching-session-is-not-proof" target="_blank" rel="noopener">別のセッションの実測と一致しても、正しい証拠にならない — Claude Code を並走させて検算した話</a><time>11/4 12:14</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-google-chrome-157/" target="_blank" rel="noopener">「Google Chrome 157」安定版リリース、Android版でオンデバイスの言語判定が可能に</a><time>11/4 11:45</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254345/" target="_blank" rel="noopener">OpenAI、データセンターを「コンピュートキャンパス」に改称する方針 AIの印象回復へ</a><time>11/4 11:35</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/nexta_/articles/42a828ca2b8a02" target="_blank" rel="noopener">コードを読まずにバイブコーディングしたら、Claude Codeは分かっていてスルーしていた</a><time>11/4 11:30</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261104-google-guided-learning-search/" target="_blank" rel="noopener">Googleが学校向けに検索機能をオフにするオプションを実装、代わりに学習者向けAIを搭載した検索機能を提供</a><time>11/4 11:30</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30211" target="_blank" rel="noopener">Google Cloud、金融・法務向けGemini活用の無料動画講座をGoogle Skillsで公開</a><time>11/4 11:30</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35254339/" target="_blank" rel="noopener">AI時代のサイバー防御に「守る側」の発想はもう通用しない</a><time>11/4 11:00</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/29908" target="_blank" rel="noopener">AI駆動開発の恩恵を受けるのは、上位20％のエンジニアだけ？ 大規模開発導入のカギは「開発標準化」</a><time>11/4 11:00</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254343/" target="_blank" rel="noopener">アップルCEO、メモリー不足は2027年も続くと警告 追加値上げも否定せず</a><time>11/4 10:45</time></li><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/aiplus/article/2611/04/2000002862/" target="_blank" rel="noopener">Claudeプラン名変更で容量半減？→公式が否定 「元々、Max 20xの週次制限はProの10倍」</a><time>11/4 10:26</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254336/" target="_blank" rel="noopener">Anthropic 、「Claude Code」によるゲームの複製を制限</a><time>11/4 10:05</time></li><li><span class="src">Simon Willison</span><a href="https://simonwillison.net/2026/Nov/4/datasette-apps/" target="_blank" rel="noopener">datasette-apps 0.3a0</a><time>11/4 09:29</time></li><li><span class="src">ITmedia AI+</span><a href="https://www.itmedia.co.jp/aiplus/article/2611/04/2000002853/" target="_blank" rel="noopener">「海外モデルでも自前サーバで動かせば100％安全」ではない――チームみらい安野氏が指摘、国産モデルの必要性を強調</a><time>11/4 09:22</time></li><li><span class="src">ITmedia AI+</span><a href="https://monoist.itmedia.co.jp/mn/articles/2611/04/news020.html" target="_blank" rel="noopener">3D CADデータ×AIで造船設計を支援、設計情報の確認作業を効率化へ</a><time>11/4 09:00</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30066" target="_blank" rel="noopener">生成AI活用により本番インシデントは242％増──ソニーグループが考えるAI時代の「統制と自由」</a><time>11/4 09:00</time></li><li><span class="src">INTERNET Watch</span><a href="https://internet.watch.impress.co.jp/docs/interview/2153295.html" target="_blank" rel="noopener">インフラ障害対応をコンテストの問題で学ぶ――AI時代こそ「自分で考え、確かめる力」を 「Internet Week 2026」でハンズオンプログラム</a><time>11/4 08:55</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35254333/" target="_blank" rel="noopener">SUSE、AIと自動化により従業員を10％削減</a><time>11/4 08:43</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254328/" target="_blank" rel="noopener">Google、生徒用の「学校用アカウント」で検索やGeminiを標準オフに</a><time>11/4 08:10</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35254287/" target="_blank" rel="noopener">既存セキュリティの死角--SaaSと生成AIが変える「ブラウザーの現実」</a><time>11/4 08:00</time></li></ul>
+<p class="errors">⚠️ 取得できなかったソース: VentureBeat AI</p>
+
+<footer class="site">
+  毎朝5:30(JST)に自動生成 / 生成時刻: 11/5 10:04 JST<br>
+  ソース: 国内外32媒体のRSSを収集し、複数媒体が報じたトピックほど上位に表示しています。<br>
+  <a href="https://github.com/Takuya-ops/ai-morning-digest" target="_blank" rel="noopener">ai-morning-digest</a> / <a href="../privacy.html">プライバシーポリシー</a><br>
+  📱 スマホは「ホーム画面に追加」でアプリとして使えます
+</footer>
+</div>
+<script>
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('../sw.js').catch(() => {});
+</script>
+</body>
+</html>
