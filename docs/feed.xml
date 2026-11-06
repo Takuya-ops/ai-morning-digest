@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-06】ChatGPT Images 2.6がアニメーションGIFの作成に対応、APIではFlareとSunburstの新バージョンを提供 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-06.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-06.html</guid>
+    <pubDate>Fri, 06 Nov 2026 01:06:14 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;ChatGPT Images 2.6がアニメーションGIFの作成に対応、APIではFlareとSunburstの新バージョンを提供&lt;/li&gt;&lt;li&gt;Anthropic、「Claude」に家計管理機能「Personal Finance」 銀行口座と連携、米国でβ提供&lt;/li&gt;&lt;li&gt;Airbnb says it’s launching an AI travel agent in the first half of 2027&lt;/li&gt;&lt;li&gt;OpenAI released a new cybersecurity model. Is that enough?&lt;/li&gt;&lt;li&gt;PFN、スマホで動く翻訳LLM「PLaMo 3 Translate」公開&lt;/li&gt;&lt;li&gt;OpenAI、サイバーセキュリティ特化型「GPT-6 Cyber」発表 Firefoxの未知の脆弱性81件を発見&lt;/li&gt;&lt;li&gt;Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips&lt;/li&gt;&lt;li&gt;Apple is reportedly cutting budgets for its internal AI usage&lt;/li&gt;&lt;li&gt;Cult.fit builds operational muscle with Codex&lt;/li&gt;&lt;li&gt;Kimi K3.1 Proの重み公開、無償で商用利用も原則可能&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-05】OpenAI、Images 2.6でChatGPTのGIF生成を実現 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-05.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-05.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-18.html</guid>
     <pubDate>Sat, 17 Oct 2026 22:35:37 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Meta、AI学習用スクレイピング懸念を呼んだ規約文言を削除&lt;/li&gt;&lt;li&gt;Anthropic、従業員のシニア化が進み会議時間が増加と報告&lt;/li&gt;&lt;li&gt;Replit、デフォルトのAIモデルをAnthropicからOpenAIへ変更&lt;/li&gt;&lt;li&gt;65歳以上の生成AI利用、子世代の約7割が否定的な姿勢を示す&lt;/li&gt;&lt;li&gt;NVIDIA、Blackwell搭載の「RTX Spark」搭載PC発売を発表&lt;/li&gt;&lt;li&gt;GitHub上でOpenAI CodexによるMac容量逼迫の報告が話題に&lt;/li&gt;&lt;li&gt;Meta、ニュースサイト等のスクレイピングを示唆する規約文言を削除&lt;/li&gt;&lt;li&gt;主要ウェブサイト、AIエージェントによるアクセスを遮断する動き&lt;/li&gt;&lt;li&gt;「DeepSeek-v4.1-Flash-1017」が公開され話題に&lt;/li&gt;&lt;li&gt;ローカルLLMの動作速度を体験できるツール「Llmspeed」公開&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-17】Meta、Mac Studio 2台で動くオープンモデル公開 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-17.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-17.html</guid>
-    <pubDate>Fri, 16 Oct 2026 22:59:56 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Meta、Mac Studio 2台で動くオープンモデル公開&lt;/li&gt;&lt;li&gt;MS、CLI型AIツール導入による開発者への影響を分析&lt;/li&gt;&lt;li&gt;Amazon、会話を記憶・要約するAI端末「Bee」2種発表&lt;/li&gt;&lt;li&gt;NVIDIA、ローカル向けAI「Nemotron 3.5」公開&lt;/li&gt;&lt;li&gt;Google新AI「Gemini 4 Argon」性能ベンチマーク判明&lt;/li&gt;&lt;li&gt;ChatGPTのChrome拡張、開いているタブの参照に対応&lt;/li&gt;&lt;li&gt;Stack Overflow、エージェント用プラグインで登録急増&lt;/li&gt;&lt;li&gt;Replit、Anthropicとの協業終了をCEOが明言&lt;/li&gt;&lt;li&gt;インド、設定の不備突く不正AIエージェント活動を報告&lt;/li&gt;&lt;li&gt;元NVIDIA担当VC、ロボット工学の現状を「レゴ時代」と指摘&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
