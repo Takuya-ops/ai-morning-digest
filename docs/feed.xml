@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-08】Claude Codeの機密情報漏洩と対策 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-08.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-08.html</guid>
+    <pubDate>Sat, 07 Nov 2026 23:57:24 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Claude Codeの機密情報漏洩と対策&lt;/li&gt;&lt;li&gt;Meta AIエージェント「Muse」に新機能「スペース」&lt;/li&gt;&lt;li&gt;マルチAIエージェント設計の15パターンを解説&lt;/li&gt;&lt;li&gt;米中間選挙後、イーロン・マスク氏とデータセンターの課題&lt;/li&gt;&lt;li&gt;Nvidia CEOへのスパイ疑惑、米情報機関メモで&lt;/li&gt;&lt;li&gt;GoogleがCrusoeのワイオミング州データセンター買収&lt;/li&gt;&lt;li&gt;OpenAIが追加110億ドル調達、評価額1.25兆ドルに&lt;/li&gt;&lt;li&gt;AI面接導入後の採用現場に残る手作業を解消へ&lt;/li&gt;&lt;li&gt;ChatGPT回答にリンクなくても、情報参照の可能性&lt;/li&gt;&lt;li&gt;AIで営業効率化も、成果に繋がらない原因と本質&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-07】OpenAI、サイバーセキュリティ特化AI発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-07.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-07.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-20.html</guid>
     <pubDate>Mon, 19 Oct 2026 23:55:00 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI、マイナー言語のコーディングやCOBOL移行の評価を強化&lt;/li&gt;&lt;li&gt;NscaleとAnthropic、再び450億ドル規模の計算資源契約を協議か&lt;/li&gt;&lt;li&gt;Hugging Face幹部、AI性能評価手法の複雑さと未成熟さを指摘&lt;/li&gt;&lt;li&gt;米国土安全保障省、中国DeepSeek関連製品の排除命令を発令&lt;/li&gt;&lt;li&gt;米マイクロソフト、AIエージェントの内部脅威リスクを警告&lt;/li&gt;&lt;li&gt;日立や東京ガスなど4社、データセンターと発電設備の一体開発で協業&lt;/li&gt;&lt;li&gt;デジタル庁、全府省庁18万人向けに生成AI「源内」を提供へ&lt;/li&gt;&lt;li&gt;江戸川区、AI活用で年間3万5000時間の業務削減に成功&lt;/li&gt;&lt;li&gt;自動運転のTuring、GPU超のチップ活用で開発スピード加速へ&lt;/li&gt;&lt;li&gt;トレンドマイクロ、国内法人のセキュリティに100億円規模の緊急支援&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-19】AIエージェントの暴走とデータ保全対策 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-19.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-19.html</guid>
-    <pubDate>Sun, 18 Oct 2026 22:32:58 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;AIエージェントの暴走とデータ保全対策&lt;/li&gt;&lt;li&gt;Anthropicが株式の5%を公益基金へ拠出&lt;/li&gt;&lt;li&gt;DisneyがCharacter.AI従業員の大半を雇用合意&lt;/li&gt;&lt;li&gt;Meta、スクレイピング等巡る懸念文言を削除&lt;/li&gt;&lt;li&gt;潜在空間で思考するハイブリッド推論エージェント&lt;/li&gt;&lt;li&gt;トヨタ、生産現場データ活用し全方位でロボット開発&lt;/li&gt;&lt;li&gt;トヨタ、ルールベース併用のE2E自動運転を内製化&lt;/li&gt;&lt;li&gt;Claude Code活用の地震掲示板開発記事が話題に&lt;/li&gt;&lt;li&gt;光電融合技術が普及期へ、NVIDIAもGPU間光接続を導入&lt;/li&gt;&lt;li&gt;ロボットやドローンによるビルの無人施工研究&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
