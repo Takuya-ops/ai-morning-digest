@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-07】OpenAI、サイバーセキュリティ特化AI発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-07.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-07.html</guid>
+    <pubDate>Sat, 07 Nov 2026 00:21:48 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、サイバーセキュリティ特化AI発表&lt;/li&gt;&lt;li&gt;Google、動画生成AI「Gemini Omni 1.2 Flash」&lt;/li&gt;&lt;li&gt;MetaのAIエージェント「Muse」が音声対話に対応&lt;/li&gt;&lt;li&gt;OpenAI、Hacktronと連携し脆弱性を発見&lt;/li&gt;&lt;li&gt;OpenAI、生化学研究AIエージェントの評価指標を発表&lt;/li&gt;&lt;li&gt;OpenAI、評価額1.25兆ドルで110億ドルを調達か&lt;/li&gt;&lt;li&gt;AI面接導入後の手作業「二度手間」を解消へ&lt;/li&gt;&lt;li&gt;生成AIの情報収集、リンク表示だけでは不明&lt;/li&gt;&lt;li&gt;AI導入営業の課題：効率化と成果の乖離&lt;/li&gt;&lt;li&gt;AIハッキングツール「Artex」数百台が公開状態に&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-06】ChatGPT Images 2.6がアニメーションGIFの作成に対応、APIではFlareとSunburstの新バージョンを提供 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-06.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-06.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-19.html</guid>
     <pubDate>Sun, 18 Oct 2026 22:32:58 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;AIエージェントの暴走とデータ保全対策&lt;/li&gt;&lt;li&gt;Anthropicが株式の5%を公益基金へ拠出&lt;/li&gt;&lt;li&gt;DisneyがCharacter.AI従業員の大半を雇用合意&lt;/li&gt;&lt;li&gt;Meta、スクレイピング等巡る懸念文言を削除&lt;/li&gt;&lt;li&gt;潜在空間で思考するハイブリッド推論エージェント&lt;/li&gt;&lt;li&gt;トヨタ、生産現場データ活用し全方位でロボット開発&lt;/li&gt;&lt;li&gt;トヨタ、ルールベース併用のE2E自動運転を内製化&lt;/li&gt;&lt;li&gt;Claude Code活用の地震掲示板開発記事が話題に&lt;/li&gt;&lt;li&gt;光電融合技術が普及期へ、NVIDIAもGPU間光接続を導入&lt;/li&gt;&lt;li&gt;ロボットやドローンによるビルの無人施工研究&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-18】Meta、AI学習用スクレイピング懸念を呼んだ規約文言を削除 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-18.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-18.html</guid>
-    <pubDate>Sat, 17 Oct 2026 22:35:37 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Meta、AI学習用スクレイピング懸念を呼んだ規約文言を削除&lt;/li&gt;&lt;li&gt;Anthropic、従業員のシニア化が進み会議時間が増加と報告&lt;/li&gt;&lt;li&gt;Replit、デフォルトのAIモデルをAnthropicからOpenAIへ変更&lt;/li&gt;&lt;li&gt;65歳以上の生成AI利用、子世代の約7割が否定的な姿勢を示す&lt;/li&gt;&lt;li&gt;NVIDIA、Blackwell搭載の「RTX Spark」搭載PC発売を発表&lt;/li&gt;&lt;li&gt;GitHub上でOpenAI CodexによるMac容量逼迫の報告が話題に&lt;/li&gt;&lt;li&gt;Meta、ニュースサイト等のスクレイピングを示唆する規約文言を削除&lt;/li&gt;&lt;li&gt;主要ウェブサイト、AIエージェントによるアクセスを遮断する動き&lt;/li&gt;&lt;li&gt;「DeepSeek-v4.1-Flash-1017」が公開され話題に&lt;/li&gt;&lt;li&gt;ローカルLLMの動作速度を体験できるツール「Llmspeed」公開&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
