@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-09】Nvidia CEOと中国人スパイの関係を調査 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-09.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-09.html</guid>
+    <pubDate>Sun, 08 Nov 2026 23:58:01 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Nvidia CEOと中国人スパイの関係を調査&lt;/li&gt;&lt;li&gt;情報漏えい多発で「個人専用詐欺メール」懸念&lt;/li&gt;&lt;li&gt;PCマニア院長がローカルLLMで診療効率化&lt;/li&gt;&lt;li&gt;大企業6割がAI活用、人材投資怠ると収益減予測&lt;/li&gt;&lt;li&gt;スシローと富士通、AIで漁業危機に挑む&lt;/li&gt;&lt;li&gt;社内AI不満のエース社員「シャドーAI」問題&lt;/li&gt;&lt;li&gt;研究者の事業開発参画、NEC・イビデンの模索&lt;/li&gt;&lt;li&gt;コクヨがNotionとAIで開発資料を効率化&lt;/li&gt;&lt;li&gt;マルチエージェント設計「15のパターン」解説&lt;/li&gt;&lt;li&gt;米中間選挙後のイーロン・マスクとデータセンター&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-08】Claude Codeの機密情報漏洩と対策 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-08.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-08.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-21.html</guid>
     <pubDate>Tue, 20 Oct 2026 23:22:12 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI、創薬AI強化へOrchestra Bioを買収&lt;/li&gt;&lt;li&gt;米国土安全保障省、中国DeepSeek製品を連邦文民機関から排除&lt;/li&gt;&lt;li&gt;車載Geminiの個人連携強化とAIエージェントのマイクラクリア&lt;/li&gt;&lt;li&gt;フランチャイズ店がChatGPT導入で照合時間を94％削減&lt;/li&gt;&lt;li&gt;AnthropicがAI安全性法案を提案、政府差し止めには裁判許可要求&lt;/li&gt;&lt;li&gt;DMG森精機、工作機械の不具合対応を支援する生成AIを提供&lt;/li&gt;&lt;li&gt;Hugging Face CEO、NetflixのAI特集は不正確と警告&lt;/li&gt;&lt;li&gt;インテル、PC市場鈍化で苦戦もAI半導体需要を好機に変革へ&lt;/li&gt;&lt;li&gt;PFNと米Tenstorrent、光電融合を活かしたAI半導体を共同開発&lt;/li&gt;&lt;li&gt;NTT提唱の光技術IOWN、欧州データセンターの電力危機救うか&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-20】OpenAI、マイナー言語のコーディングやCOBOL移行の評価を強化 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-20.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-20.html</guid>
-    <pubDate>Mon, 19 Oct 2026 23:55:00 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAI、マイナー言語のコーディングやCOBOL移行の評価を強化&lt;/li&gt;&lt;li&gt;NscaleとAnthropic、再び450億ドル規模の計算資源契約を協議か&lt;/li&gt;&lt;li&gt;Hugging Face幹部、AI性能評価手法の複雑さと未成熟さを指摘&lt;/li&gt;&lt;li&gt;米国土安全保障省、中国DeepSeek関連製品の排除命令を発令&lt;/li&gt;&lt;li&gt;米マイクロソフト、AIエージェントの内部脅威リスクを警告&lt;/li&gt;&lt;li&gt;日立や東京ガスなど4社、データセンターと発電設備の一体開発で協業&lt;/li&gt;&lt;li&gt;デジタル庁、全府省庁18万人向けに生成AI「源内」を提供へ&lt;/li&gt;&lt;li&gt;江戸川区、AI活用で年間3万5000時間の業務削減に成功&lt;/li&gt;&lt;li&gt;自動運転のTuring、GPU超のチップ活用で開発スピード加速へ&lt;/li&gt;&lt;li&gt;トレンドマイクロ、国内法人のセキュリティに100億円規模の緊急支援&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>

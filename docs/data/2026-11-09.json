@@ -1,0 +1,1068 @@
+{
+ "schemaVersion": 3,
+ "date": "2026-11-09",
+ "generatedAt": "2026-11-08T23:58:01.292Z",
+ "since": "2026-11-07T21:55:50.109Z",
+ "windowHours": 26,
+ "stats": {
+  "articleCount": 71,
+  "feedCount": 32,
+  "topicCount": 70,
+  "feedErrors": [
+   {
+    "feedId": "venturebeat-ai",
+    "feedName": "VentureBeat AI",
+    "error": "Status code 429"
+   }
+  ]
+ },
+ "topics": [
+  {
+   "id": "ab3c0090fa33621fad652428",
+   "topics": [
+    "規制・政策",
+    "国内動向"
+   ],
+   "summaryStyles": {
+    "short": "NvidiaがCEOと中国人スパイの関係を調査開始。\nCEOは社内メモで関係を認めた。\n取締役会が独立委員会を設置し、事実解明を進める。",
+    "detail": null,
+    "simple": "グラフィックボードで有名なNvidia（エヌビディア）の社長、ジェンスン・フアン氏が、中国政府のスパイとされる人物との関係を疑われ、会社が調査を始めました。社長自身も関係を認めているようです。これは、機密情報が外部に漏れる可能性がないかを調べるためのものです。"
+   },
+   "faq": [
+    {
+     "q": "調査の具体的な内容は何か？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "アリス・フアン氏は具体的にどのような情報をスパイしたとされるか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "ジェンスン・フアン氏とアリス・フアン氏の関係性の詳細は？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 1,
+   "headline": "Nvidia CEOと中国人スパイの関係を調査",
+   "summary": "Nvidiaは、CEOであるジェンスン・フアン氏と、中国政府にスパイとして雇われたとされるメガスピード幹部アリス・フアン氏との関係について調査を開始した。フアンCEOは社内メモで関係を認めている。同社の取締役会は、フアン氏が外国情報機関の標的となったという最近の報道を受け、独立した調査委員会を設置することを発表した。",
+   "whyItMatters": "世界的な半導体大手企業のトップがスパイ疑惑に関与していることは、企業経営の透明性や国家安全保障に大きな影響を与える可能性があるため重要です。",
+   "score": 9,
+   "sourceCount": 2,
+   "entities": [
+    "nvidia"
+   ],
+   "articles": [
+    {
+     "title": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy",
+     "link": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-11-08T21:00:11.000Z"
+    },
+    {
+     "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+     "link": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+     "feedName": "The Verge AI",
+     "lang": "en",
+     "date": "2026-11-08T20:22:39.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "50ffaed4be791fd5367971cf5d209785bf319b80c309fe391b3c9c6a3f30e82d"
+   }
+  },
+  {
+   "id": "dbae1d6a09b0530037f39b21",
+   "topics": [
+    "規制・政策",
+    "国内動向"
+   ],
+   "summaryStyles": {
+    "short": "企業への不正アクセスで個人情報漏えいが多発。\n漏えい情報悪用し「個人専用詐欺メール」の懸念。\n報告件数の動向を各社が注視している。",
+    "detail": "9月末以降、企業を狙った不正アクセスが頻発しており、その結果としてユーザーの個人情報が大量に漏洩している状況が続いている。この一連の情報漏洩により、詐欺の手口が高度化する可能性が指摘されており、特に流出した個人情報を悪用して、被害者一人ひとりに最適化された「その人専用の詐欺メール」が登場する懸念が高まっている。こうした詐欺メールは、受信者が自分の情報が使われていると思い込みやすいため、見破ることが非常に困難になる。情報セキュリティ企業や関連組織は、これらの情報漏洩が実際の詐欺メールの報告件数や手口にどのような変化をもたらすかについて、注意深く監視を続けている。新たな脅威への対応が急務となっている。",
+    "simple": "最近、会社から個人情報が盗まれる事件がたくさん起きています。この盗まれた情報を使って、まるであなたのことをよく知っているかのような、とても巧妙な「だましメール（詐欺メール）」が届くようになるかもしれません。今までよりも騙されやすくなる可能性があり、みんながこの状況を心配して見守っています。"
+   },
+   "faq": [
+    {
+     "q": "どのような企業で情報漏えいが起きているか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "具体的にどのような個人情報が漏えいしているか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "詐欺メールの報告件数は現在どうなっているか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 2,
+   "headline": "情報漏えい多発で「個人専用詐欺メール」懸念",
+   "summary": "企業を標的とした不正アクセスが9月末から相次ぎ、多くの個人情報が流出している。これにより、流出した情報に基づいた「その人専用」の巧妙な詐欺メールが登場する懸念がある。詐欺メールの報告件数推移を監視する企業や組織が、その動向に注目している。",
+   "whyItMatters": "大規模な情報漏えいから派生する新たな詐欺手法の登場は、個人だけでなく企業の情報セキュリティ対策の抜本的な見直しを迫るため重要です。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "情報漏えい続出でフィッシングに変化？ “その人専用詐欺メール”登場の懸念",
+     "link": "https://www.itmedia.co.jp/news/article/2611/09/2000002926/",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-08T23:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/news/article/2611/09/2000002926/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "f535f78bdce1e7d9b06b638bcc7b4092b4e227c636e593ba2fbcde678e90a7c7"
+   }
+  },
+  {
+   "id": "6d889f92acf81cf429aec254",
+   "topics": [
+    "企業導入事例",
+    "モデル・API",
+    "国内動向"
+   ],
+   "summaryStyles": {
+    "short": "本郷真砂ハートクリニックがローカルLLM導入。\nPCマニアの院長が自作システムで診療効率化。\n受付から次回予約までを自動化し効果を確認。",
+    "detail": "本郷真砂ハートクリニックが、院内にローカルLLMを導入し、診療情報の処理に活用しているとして注目を集めている。同クリニックの院長は、自らがPCマニアであることを活かし、「Claude Code」というツールを用いて独自のシステムを構築した。この自作システムは、患者がクリニックに訪れてから受付を済ませ、診察を受け、さらには次回の予約を取るまでの一連のプロセスを効率化することを目的としている。記事では、患者役として模擬的に受診し、実際にそのシステムがどのように機能し、どのような効果をもたらしているのかを体験した上で、導入による具体的な改善点やメリットについて院長から話を聞いたとしている。これにより、人手不足が課題となる医療現場におけるAI活用の新たな可能性が示唆されている。",
+    "simple": "ある心臓専門のクリニックで、院長が自分でAI（人工知能）のシステムを作り、病院の仕事に役立てています。このAIは、患者さんが病院に来てから、診察を受けて、次の予約をするまでの流れをスムーズにする手助けをしています。専門家ではない院長が作ったことで、他の小さな病院でもAIを導入できるかもしれないと期待されています。"
+   },
+   "faq": [
+    {
+     "q": "Claude Codeとは何か？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "ローカルLLMでどのような情報が処理されているか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "導入によって具体的な患者の待ち時間はどの程度短縮されたか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 3,
+   "headline": "PCマニア院長がローカルLLMで診療効率化",
+   "summary": "本郷真砂ハートクリニックでは、PCマニアの院長が自力でローカルLLM（大規模言語モデル）を構築し、診療情報処理に活用していると話題になっている。院長が「Claude Code」を用いて自作したシステムは、受付から次回予約までのプロセスを効率化し、患者の模擬受診を通じてその導入効果が検証された。",
+   "whyItMatters": "中小規模の医療機関が独自にAIを導入し業務効率を改善する事例は、医療業界全体のDX推進に役立つ可能性を示唆するため重要です。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "claude"
+   ],
+   "articles": [
+    {
+     "title": "ローカルLLM利用のクリニックを受診してみた PCマニアの院長が自力で構築、その導入効果は？",
+     "link": "https://www.itmedia.co.jp/aiplus/article/2611/09/2000002916/",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-08T23:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/aiplus/article/2611/09/2000002916/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "8ad217fdaf093e63d415d507c16fd9e1294a142dc8e51b1f56889ab6f48f63ed"
+   }
+  },
+  {
+   "id": "a5a7647b1a7ae90761830894",
+   "topics": [
+    "企業導入事例",
+    "国内動向",
+    "研究・論文"
+   ],
+   "summaryStyles": {
+    "short": "大企業6割がAIを業務活用中。\nIDC予測、特定分野へのAI投資怠ると収益50%減。\n人材育成を含む戦略的投資が企業成長を左右。",
+    "detail": "企業におけるAIの導入状況に関する新たな調査で、大企業の約6割がすでにAIを業務に活用していることが判明した。市場調査会社であるIDCは、今後の企業の収益成長においてAIへの投資が極めて重要な要素となると指摘している。具体的には、2029年までに特定のAI関連分野への投資を怠った企業は、積極的に投資を行った企業と比較して、収益成長率が50％も低くなる可能性があると予測している。この予測は、単にAI技術を導入するだけでなく、どの分野に予算を投じるか、特に人材育成を含む戦略的な投資が企業の将来的な競争力と収益性に直結することを示唆している。企業は、AIを活用した業務変革を加速させるために、投資すべき重要分野を早急に特定し、実行に移す必要がある。",
+    "simple": "今、大企業の約6割が、仕事にAI（人工知能）を取り入れています。ある会社の調査では、もしAI関連の特定の分野にお金をかけないと、将来的に会社の儲けが半分になってしまう可能性があると警告しています。つまり、会社が成長し続けるためには、AIをどう使うか、どこにお金をかけるかがとても大事だということです。"
+   },
+   "faq": [
+    {
+     "q": "大企業の6割が導入しているAIの具体的な業務内容は何か？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "収益成長率に直結するAI投資の特定の分野とは何か？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "IDCはどの国の企業について調査したか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 4,
+   "headline": "大企業6割がAI活用、人材投資怠ると収益減予測",
+   "summary": "大企業の約6割がAIを業務に導入している現状が明らかになった。市場調査会社IDCの予測によると、AI予算のある分野への投資を2029年までに怠った企業は、投資した企業に比べて収益成長率が50％低くなると警告されている。収益成長率に直結する重要な投資分野の特定が企業に求められている。",
+   "whyItMatters": "AI活用の進展が企業の収益成長に直結することが示され、競争力を維持するためにはAI関連の人材育成や戦略的な投資が不可欠であることを企業に再認識させるため重要です。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "AIに業務を任せる大企業は6割へ 人材育成に投資しない企業はどうなる？",
+     "link": "https://www.itmedia.co.jp/enterprise/articles/2611/06/news023.html",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-08T23:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/enterprise/articles/2611/06/news023.html",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "8fe6bdde8ecec4642adaf6752d7ff06df026c771dcbb2093e44c3505b75edaf6"
+   }
+  },
+  {
+   "id": "223cd259dc9a1ded12c0f971",
+   "topics": [
+    "企業導入事例",
+    "国内動向",
+    "モデル・API"
+   ],
+   "summaryStyles": {
+    "short": "スシローと富士通などが異業種連携。\n高知県宿毛湾でAI活用し海洋養殖に挑戦。\n水産業の課題解決と持続可能な魚の供給を目指す。",
+    "detail": "大手回転寿司チェーンのスシロー、水産会社のクロシオ水産、IT大手の富士通といった複数の異業種企業が連携し、高知県宿毛湾を舞台に、海洋テクノロジーを駆使した養殖事業に取り組んでいる。このプロジェクトの背景には、漁業資源の減少や環境変化による「おいしい魚」の安定供給の危機がある。参加企業は、AI技術を最大限に活用して「海を解剖する」かのように詳細なデータを分析し、最適な養殖環境の構築や育成方法の改善を図る。これにより、水産業が長年抱えてきた、供給の不安定さや生産効率の低さといった課題を解決し、持続可能な形で将来にわたって良質な魚を消費者に届けられる体制を確立することを目指している。",
+    "simple": "お寿司のスシローと、パソコンやシステムを作っている富士通が、協力して魚を育てる新しいプロジェクトを始めました。海の情報をAI（人工知能）で分析し、魚がもっと美味しく、安定してたくさん獲れるようにすることを目指しています。これは、将来私たちがおいしい魚を食べ続けられるようにするための大切な取り組みです。"
+   },
+   "faq": [
+    {
+     "q": "AIは具体的にどのようなデータを分析し、養殖に役立てるのか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "宿毛湾での養殖対象となる魚種は何か？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "クロシオ水産の具体的な役割は何か？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 5,
+   "headline": "スシローと富士通、AIで漁業危機に挑む",
+   "summary": "スシロー、クロシオ水産、富士通などが異業種連携し、高知県宿毛湾を舞台に海洋テックを活用した養殖事業に挑戦している。「おいしい魚」を将来にわたって安定供給するため、AIを駆使して「海を解剖」し、水産業が抱える課題解決を目指す。この取り組みは、漁業の持続可能性を高める可能性を秘めている。",
+   "whyItMatters": "外食産業とテクノロジー企業が連携し、AIを含む海洋テックで水産業の根本課題解決に挑むことは、食料供給の安定化と持続可能な社会実現に貢献するため重要です。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "fujitsu"
+   ],
+   "articles": [
+    {
+     "title": "“おいしい魚”を届けられないかも──スシロー、漁業の危機にどう挑む？ 富士通とタッグ、AIで「海を解剖」するワケ",
+     "link": "https://www.itmedia.co.jp/business/articles/2611/09/news039.html",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-08T22:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/business/articles/2611/09/news039.html",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "2b251e5bab97f96d394016626fc7155c5d36c89262380a5e029bb3f4a75ce1ad"
+   }
+  },
+  {
+   "id": "f0e14970e20c765f63432b0a",
+   "topics": [
+    "規制・政策",
+    "企業導入事例",
+    "国内動向"
+   ],
+   "summaryStyles": {
+    "short": "社内AIに不満な社員が「シャドーAI」を使用。\n禁止だけでは解決せず、AI活用推進の課題に。\n企業は適切な対応策を模索する必要がある。",
+    "detail": "企業内で、社員が会社の公式に承認されたAIツールでは業務ニーズを満たせないと感じ、無許可で外部のAIツール（通称「シャドーAI」）を業務に利用するケースが増加している。この記事では、特に優秀な社員が「会社のAIでは物足りない」と感じ、生産性向上を目指してシャドーAIに手を出す実態を指摘している。このような状況に対し、企業が単にシャドーAIの使用を禁止するだけでは、社員のモチベーション低下や業務効率の阻害に繋がり、根本的な解決にはならないと問題提起している。むしろ、AI活用を積極的に推進する観点から、企業はシャドーAIのリスクを管理しつつ、社員のAI利用ニーズに応えるためのより良い方策をどう講じるべきか、という議論が重要になっている。情報セキュリティと業務効率のバランスが問われている。",
+    "simple": "会社で認められているAI（人工知能）では物足りないと感じた社員が、会社に内緒で別のAIを使っている問題が起きています。これを「シャドーAI」と言います。会社がただ「使うな」と言うだけでは解決せず、社員がAIをうまく使えるように、会社側がどうしたらいいかを考える必要があります。"
+   },
+   "faq": [
+    {
+     "q": "シャドーAIの使用が具体的にどのようなリスクをもたらすか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "企業がシャドーAI問題に対して具体的にどのような対応策を検討しているか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "どのような「公認AI」で社員が物足りないと感じているか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 6,
+   "headline": "社内AI不満のエース社員「シャドーAI」問題",
+   "summary": "社員が「会社の公認AIでは物足りない」と感じ、承認されていない外部のAI（シャドーAI）を業務で使用する問題が企業内で顕在化している。このような状況に対し、企業は単に「禁止令」を出すだけでは解決せず、むしろAI活用を推進するためにはどう対応すべきか、対応策が求められている。",
+   "whyItMatters": "社員の自発的なAI活用と企業の情報セキュリティ・ガバナンスの間で生じる課題は、AI導入を推進する上で多くの企業が直面しており、適切な対応策が企業の競争力とリスク管理に直結するため重要です。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "「勝手に社外AIを使う」エース社員に困っています……どうすべき？",
+     "link": "https://www.itmedia.co.jp/business/articles/2611/09/news038.html",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-08T22:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/business/articles/2611/09/news038.html",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "7054b2712fd5aa92e2069334a6b332d8e3561a196a6c91045849eec2016f2469"
+   }
+  },
+  {
+   "id": "8ff797e74aa21587ee372e6a",
+   "topics": [
+    "国内動向",
+    "企業導入事例",
+    "研究・論文"
+   ],
+   "summaryStyles": {
+    "short": "NECとイビデンが研究者の事業開発参画を模索。\n技術の事業化の壁を越えるため戦略を議論。\nAI活用も含め、両社の取り組みをキーパーソンが語る。",
+    "detail": "高い技術力を持ちながらも、その技術を実際の事業として成功させる「事業化の壁」に直面している企業が多い中、NECとイビデンがこの課題に対して独自の取り組みを進めている。特に焦点となっているのは、技術に精通した研究者が事業開発にどれだけ深く関わるべきか、という点である。両社は、AI技術をどのように事業に効果的に組み込んでいくかという問いも含め、研究者が持つ専門知識と事業開発に必要な視点との間の橋渡しをどのように行うかについて模索している。記事では、両社のキーパーソンが、技術と事業開発の連携強化、そして研究者を事業開発に巻き込むメリットと課題について議論した内容が紹介されており、新しいイノベーション創出のモデル構築への示唆を与えている。",
+    "simple": "最新技術を持っているのに、それを実際の商品やサービスにするのが難しいという問題が多くの会社にあります。NECとイビデンという会社が、技術を知り尽くした「研究者」に、新しい事業を作る仕事を任せるべきか、どうすればうまくいくかを試しています。AI（人工知能）をどう役立てるかも含め、この取り組みが成功するか注目されています。"
+   },
+   "faq": [
+    {
+     "q": "NECとイビデンの具体的な取り組み内容は何か？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "研究者が事業開発を担う上での具体的な課題は何か？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "両社のキーパーソンは誰か？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 7,
+   "headline": "研究者の事業開発参画、NEC・イビデンの模索",
+   "summary": "技術力は高いが事業化の壁に直面する課題に対し、NECとイビデンが研究者に事業開発を担わせるべきか否か、それぞれの独自の取り組みを通じて模索している。AIをどう事業に生かすか、そして技術に深い知見を持つ研究者が事業を成功させるための戦略について、両社のキーパーソンが議論を交わした。",
+   "whyItMatters": "技術の事業化という長年の課題に対し、研究者と事業開発の役割を再定義しようとする大手企業の試みは、イノベーション創出と企業成長の新たなモデル構築に貢献するため重要です。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "nec"
+   ],
+   "articles": [
+    {
+     "title": "意思疎通に難？ 技術が分かるから強い？――研究者に事業開発させるべきか否か、NEC・イビデンの回答は……",
+     "link": "https://www.itmedia.co.jp/business/articles/2611/09/news040.html",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-08T22:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/business/articles/2611/09/news040.html",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "bfa9af1284e5b90eab741e08798e006b6ee83d4911793dec54390f86e56cade9"
+   }
+  },
+  {
+   "id": "7f1c7081838f9b8e46aacf79",
+   "topics": [
+    "企業導入事例",
+    "開発ツール",
+    "国内動向"
+   ],
+   "summaryStyles": {
+    "short": "コクヨが開発資料の散乱問題を解決。\nNotionとAIエージェントを組み合わせて効率化。\n情報管理から文書レビューまでを改善し活用促進。",
+    "detail": "コクヨの開発部門では、社内に膨大な量の情報が蓄積されているにもかかわらず、必要な資料を見つけるのに時間がかかったり、十分に活用できていないという深刻な課題に直面していた。この情報散乱の問題を解決するため、同社は情報管理・共有ツールである「Notion」を基盤とし、これにAIエージェントの機能を組み合わせた独自のシステムを構築した。この新しい仕組みは、資料の整理整頓といった情報管理の効率化だけでなく、文書の作成支援やレビュープロセスに至るまで、開発業務の広範な領域において劇的な改善をもたらすことを目指している。結果として、情報の検索性向上と業務フローの最適化を実現し、開発組織全体の生産性向上とイノベーション加速に貢献することが期待されている。",
+    "simple": "文具で有名なコクヨが、開発の仕事で使う資料がバラバラで探しにくいという困り事を解決しました。彼らは「Notion（ノーション）」という情報整理ツールと、AI（人工知能）の自動でお手伝いしてくれる機能（AIエージェント）を組み合わせて、資料の整理やチェックを効率良くできるようになりました。"
+   },
+   "faq": [
+    {
+     "q": "Notionの具体的な導入前後の効果は？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "AIエージェントはNotion内でどのような機能を提供するか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "文書レビューの効率化は具体的にどのように実現されたか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 8,
+   "headline": "コクヨがNotionとAIで開発資料を効率化",
+   "summary": "コクヨは、社内に蓄積された開発部門の資料が散乱し、必要な情報が見つかりにくいという課題に直面していた。この問題に対し、同社は情報管理ツール「Notion」とAIエージェントを組み合わせることで、情報管理から文書レビューまでのプロセスを効率化する仕組みを構築した。これにより、情報の有効活用と業務効率向上を目指している。",
+   "whyItMatters": "多くの企業が抱える社内情報散乱の課題に対し、NotionとAIエージェントを組み合わせた具体的な解決策を示すことで、他の企業の生産性向上や情報ガバナンス強化に資する実践的な事例となるため重要です。",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "コクヨが開発部門の「資料散乱」をAIでゼロに 「Notion」をどう使ったか？",
+     "link": "https://kn.itmedia.co.jp/kn/article/2611/09/2000002973/",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-08T21:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://kn.itmedia.co.jp/kn/article/2611/09/2000002973/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "1c60501d39a071724bb6bc01b6cc3166304b183fb021edd6332349956c2ab0bf"
+   }
+  },
+  {
+   "id": "25d7eec55dada5ccab8a822a",
+   "topics": [
+    "エージェント",
+    "研究・論文",
+    "開発ツール"
+   ],
+   "summaryStyles": {
+    "short": "マルチエージェント設計の15パターンを解説。\nGitHub、Google、Siemensの知見を整理。\n設計課題と活用場面を示し、開発の指針を提供。",
+    "detail": "近年、AIエージェントの一般化が進む中で、単一のエージェントでは対応しきれない複雑なタスクや問題を解決するために、複数のAIエージェントが連携して動作する「マルチエージェントシステム」への関心が高まっている。この記事では、GitHub、Google、Siemensといったテクノロジー業界の主要企業が提唱している、マルチエージェントシステムの設計に関する合計15種類のデザインパターンを体系的に整理し、詳細に解説している。各パターンについて、どのような設計上の課題を解決し、どのような具体的な活用場面で効果を発揮するのかが示されている。これにより、開発者は複雑なマルチエージェントシステムの構築において、より効率的かつ堅牢な設計を行うための実践的な知見と指針を得ることができる。",
+    "simple": "AI（人工知能）が自動で仕事をする「AIエージェント」というものが流行しています。たくさんのAIエージェントを協力させて、もっと複雑な問題を解決するシステムが注目されています。GitHub（ギットハブ）やGoogle（グーグル）などの大企業が提案する15種類の作り方が紹介され、どのように作れば良いか、どんな時に役立つかが分かりやすく説明されています。"
+   },
+   "faq": [
+    {
+     "q": "15の具体的なデザインパターンの名称は？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "各デザインパターンの具体的な実装例は？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "マルチエージェントシステムが特に効果を発揮する産業分野はどこか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 9,
+   "headline": "マルチエージェント設計「15のパターン」解説",
+   "summary": "AIエージェントの普及に伴い、複数のAIエージェントを連携させる「マルチエージェントシステム」が注目されている。GitHub、Google、Siemensといった大手企業が提唱する15種類のデザインパターンが整理され、その設計上の課題や具体的な活用場面とともに解説された。これにより、複雑なAIシステムの開発における指針が提供される。",
+   "whyItMatters": "複数のAIが協調するマルチエージェントシステムの設計パターンが体系化されることは、複雑なAIアプリケーションの開発効率を向上させ、より高度なAIソリューションの実現を加速させるため重要です。",
+   "score": 4,
+   "sourceCount": 1,
+   "entities": [
+    "google",
+    "github"
+   ],
+   "articles": [
+    {
+     "title": "【図解あり】マルチエージェント設計「15のパターン」 GitHub、Google、Siemensの知見を一気に整理",
+     "link": "https://atmarkit.itmedia.co.jp/ait/articles/2611/08/news001.html",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-07T23:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://atmarkit.itmedia.co.jp/ait/articles/2611/08/news001.html",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "6f3f605cf937e0b00f46190ba6ebea1e5ed75367976bfda90ec948317f62efb2"
+   }
+  },
+  {
+   "id": "757379c07d1179f77b312b84",
+   "topics": [
+    "規制・政策",
+    "国内動向"
+   ],
+   "summaryStyles": {
+    "short": "米中間選挙後、テック業界に影響。\nイーロン・マスク氏とデータセンターの先行き不透明。\n政治情勢が業界に厳しい状況をもたらす可能性。",
+    "detail": "米国中間選挙が終了し、その結果がテクノロジー業界にどのような影響をもたらすかについて分析が展開されている。特に、著名な起業家であるイーロン・マスク氏の今後のビジネス動向と、現代社会のインフラを支えるデータセンター業界の将来性が、選挙結果を受けて「険しい（rocky）」状況に直面している可能性が指摘されている。この分析では、中間選挙後の政治的な動向や政策の方向性が、マスク氏が手掛ける企業群やデータセンター事業への規制、投資環境、さらには国際的な競合状況に大きな影響を与えることが示唆されている。テック業界全体が、政治情勢の変化に敏感に対応する必要があることを浮き彫りにしている。",
+    "simple": "アメリカで中間選挙が終わった後、IT（情報技術）の業界にどんな影響があるかが話し合われています。特に、テスラやX（旧Twitter）で有名なイーロン・マスクさんのビジネスと、インターネットの基盤となる「データセンター」の未来が、選挙結果を受けて少し厳しくなるかもしれないと言われています。政治の動きがこれらの分野に影響を与えているようです。"
+   },
+   "faq": [
+    {
+     "q": "イーロン・マスク氏のどの事業が影響を受けると予測されているか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "データセンター業界にどのような具体的な影響が予測されているか？",
+     "a": "記事には記載なし"
+    },
+    {
+     "q": "米国中間選挙の結果は具体的にどうだったか？",
+     "a": "記事には記載なし"
+    }
+   ],
+   "aiGenerated": true,
+   "rank": 10,
+   "headline": "米中間選挙後のイーロン・マスクとデータセンター",
+   "summary": "米国中間選挙の結果がテック業界に与える影響について分析が行われた。特にイーロン・マスク氏の動向とデータセンター業界の将来性が、選挙結果を受けてどのような変化に直面しているかに焦点が当てられている。選挙後の政治情勢が、これらの分野に「岩礁のように険しい」状況をもたらす可能性が示唆されている。",
+   "whyItMatters": "中間選挙結果がテック業界、特にデータセンターや影響力の大きい起業家の事業戦略に直接的な影響を与える可能性は、政策と経済の相互作用を理解する上で重要です。",
+   "score": 4,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "After the midterms, things are looking rocky for Elon Musk and data centers",
+     "link": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-11-07T22:07:22.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+   "editorial": {
+    "method": "ai_summary",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "6f5144e008d2f52e72f9abd031b85be2b5639ac4d8907f8abf621aebed48fbec"
+   }
+  }
+ ],
+ "others": [
+  {
+   "title": "【西田宗千佳のイマトミライ】AIが「最安」を選び続ける世界は幸せなのか? Museと節約・買い物自動化の光と影",
+   "link": "https://www.watch.impress.co.jp/docs/series/nishida/2154614.html",
+   "feedName": "Impress Watch",
+   "lang": "ja",
+   "date": "2026-11-08T23:20:00.000Z",
+   "excerpt": "常時動作型AIエージェントに頼るようになって2カ月ほどが経った。今はMetaのMuseをメインに使うようになっている。Museは無料で使い始められることもあってか、日本でも急速に利用者を伸ばしているようだ。"
+  },
+  {
+   "title": "【魔法少女マンガ】データのそばに、AIを！ ～ベクトル検索からエージェントまで～",
+   "link": "https://qiita.com/yuji-arakawa/items/0c98326c8ffdfc6260a2",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T23:11:01.000Z",
+   "excerpt": "魔法少女アイ ～データのそばに、魔法を。～ 「このマンガについて」をテキストで読む このマンガについて 本作は、ベクトル検索からRAG（検索拡張生成）、AIエージェントといった話題を「データのそばに、AIを」という考え方を中心に魔法の世界に例えて解説したファンタジー..."
+  },
+  {
+   "title": "「プログラミングを学ぶ」検索数が1年で半減／ガートナーの2027年注目技術トップ10／DDoS攻撃、世界は半減・日本は倍増、ほか",
+   "link": "https://ascii.jp/elem/000/004/449/4449518/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-08T23:00:00.000Z",
+   "excerpt": "今回（2026年10月31日～11月6日）は、「AIの制御と信頼」というテーマが見られるガートナーの2027年予測、Google検索で「プログラミングを学ぶ」検索が半減、ランサムウェア攻撃と被害のトレンド、日本だけ倍増したDDoS攻撃の現状についてのデータを紹介します。"
+  },
+  {
+   "title": "AIエージェントの入口はMCPかCLIかAPIか？ 迷う前に押さえたいプロダクトの4層",
+   "link": "https://codezine.jp/article/detail/29906",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-11-08T23:00:00.000Z",
+   "excerpt": "AIエージェントを「どう使うか」は多く語られていますが、プロダクトを提供する側は、エージェントにどんな体験を届けるべきなのでしょうか。人が画面を操作する前提で作られてきたプロダクトは、いま、エージェントがAPIを呼び出して使う時代を迎えています。本連載では、この体験をAX（Agent Experience）と呼び、全2回で設計の考え方を整理します。第1回は、価値の重心が画面からAPI・データへ移る「ヘッドレス化」を出発点に、プロダクトを4層に分けて、変わるものと変わらないものを見ていきます。"
+  },
+  {
+   "title": "GoogleフォームにGeminiが回答を分析して次の対応を提案する新機能",
+   "link": "https://codezine.jp/article/detail/30283",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-11-08T23:00:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-11-08T22:54:50.000Z",
+   "excerpt": "Jensen Huang, chief executive officer of Nvidia Corp., attends a media briefing following the company's \"Japan AI Ecosystem\" reception in Tokyo, Japan, on Thursday, July 16, 2026. Japan is planning to buy 27,500 next-generation Rubin chips from Nvidia Corp. to build a homegrown foundational AI model for robots. Photographer: Kiyoshi Ota/Bloomberg via Getty Images | Bloomberg via Getty Images On Sunday, Nvidia announced it was launching an investigation into CEO Jensen Huang's relationship with Alice Huang, an AI executive and agent of the Chinese government. In addition to the Board of Directors announcing the investigation, Huang sent a memo to Nvidia employees acknowledging the affair. You can read the full text below. To my colleagues at NVIDIA, I owe my family and all of you an apology. I was unfaithful to my wife. My actions hurt her and our children. There is no excuse for what I did. I am deeply sorry. Throughout my life, my family has given me love and support. They deserve my honesty and loyalty. Instead, I … Read the full story at The Verge."
+  },
+  {
+   "title": "バイブコーディング＋FDE伴走で“パーソナライズSaaS” SMFLが「Replit」で個別開発を高速化",
+   "link": "https://ascii.jp/elem/000/004/449/4449534/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-08T22:30:00.000Z",
+   "excerpt": "三井住友ファイナンス＆リースは、バイブコーディングの手法を用いて企業の要件に合わせたSaaSを高速開発する「企業向けパーソナライズ型SaaS」の提供を開始した。"
+  },
+  {
+   "title": "parse_number() as a SQLite extension: C vs Rust",
+   "link": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+   "feedName": "Simon Willison",
+   "lang": "en",
+   "date": "2026-11-08T22:26:00.000Z",
+   "excerpt": "Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that could be summed and sorted. I fired up regular Claude chat (Opus 5.5) and prompted : I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and '%', handles a leading '-', and returns 'NULL' for anything it can’t parse Explore the difference between building this as a SQLite extension in C v.s. in Rust - I want to compare performance and code complexity and size of the resulting .so (or whatever) file This gave me a solid starting point - the Rust extension was 321 KB (using Rusqlite ) and 298 KB (using sqlite-loadable-rs ), while the C extension was 14 KB. But the Rust extension was faster! Turns out that's because the Rust equivalent of C's strtod is \"twice as fast\". So I prompted: Try writing your own C function for parsing text into a decimal number that catches up to or beats the Rust implementation And it did: Net cost per row over 2 million rows, lower is better: fi"
+  },
+  {
+   "title": "「仕事をしなくてもよい」人が登場 AIで失業する人と二極化進む",
+   "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600007/103000229/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T22:00:00.000Z",
+   "excerpt": "生成AI（人工知能）やAIエージェントは、まさに文字通り「日進月歩」で進化を続けている。その結果、人の業務のあり方も大きく変わろうとしている。これから先、どうなるかは予想不能だが、見えてきたことがある。業務に対するノウハウのありなしで、「仕事をしなくてよい」人と「仕事を奪われる」人の二極化が進む可能性があるのだ。"
+  },
+  {
+   "title": "ソブリンAI（Sovereign AI）",
+   "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600009/103000235/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T22:00:00.000Z",
+   "excerpt": "ソブリンAI（人工知能）とは、国や企業が外部に依存することなく、自国・自社のデータや技術基盤を用いて自立的に開発・運用するAIシステムを指す。AIの社会実装が進み、AIで扱うデータの主権確保や技術的な自立性の確立が急務となっていることから注目されるようになった。"
+  },
+  {
+   "title": "調達と営業のAI変革 人の役割を再定義",
+   "link": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/020600014/110500238/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T22:00:00.000Z",
+   "excerpt": "業の調達と営業の業務が、AI（人工知能）で転期を迎えている。人による調達の作業を代替し、生産性と品質の向上が可能に。いずれ消えるとすら言われた営業職も、AIでむしろ効果的に育成し増員を図る企業も現れ始めた。AIで経営を革新する「ManAIgement（マネイジメント）」、調達と営業分野の取り組みをリポートする。"
+  },
+  {
+   "title": "超低コストで効率的な学習に成功した画像生成AIモデル「P-JiT」、オープンウェイトで公開中",
+   "link": "https://gigazine.net/news/20261109-pjit-21k/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-08T22:00:00.000Z",
+   "excerpt": "2名の研究者によるAI研究組織「Linum」が画像生成モデル「Pyramid-JiT(P-JiT)」を公開しました。P-JiTは画像生成AIが抱える「生成に時間とコストがかかる」「制御が難しい」という二つの主要な課題の克服を目指しており、開発コストを2万1千ドル(約331万5千円)に抑えられたことがアピールされています。 続きを読む..."
+  },
+  {
+   "title": "IT企業が高度人材の奪い合い、最高年収2.2億円のAIエンジニアも--米調査",
+   "link": "https://japan.zdnet.com/article/35254443/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-11-08T22:00:00.000Z",
+   "excerpt": "最近の調査によれば、AIが新たな職種を生み出しており、その中には高収入の職種も含まれるという。"
+  },
+  {
+   "title": "データセンターが宇宙へ、AI時代に広がるコンピューティングの新天地",
+   "link": "https://japan.zdnet.com/article/35254445/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-11-08T22:00:00.000Z",
+   "excerpt": "生成AIの急速な普及を背景に、世界中でデータセンターの需要が拡大している。膨大な計算処理に必要な電力の確保や冷却設備、建設用地などが課題となる中、データセンターを宇宙空間に設置するという構想が注目を集めている。"
+  },
+  {
+   "title": "無料の画像生成AI「P-H3-Image」がすごい 参照画像1枚で同じ人物を自在に再現",
+   "link": "https://ascii.jp/elem/000/004/449/4449576/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-08T22:00:00.000Z",
+   "excerpt": "画像生成AI「P-H3-Image」を検証。参照画像による人物の一貫性、アニメ表現やポーズ指定の性能などを紹介し、課題についてもふれる。"
+  },
+  {
+   "title": "Godot の --headless --script は quit() を呼ばないと終わらない — 残ったプロセスがメモリを埋める",
+   "link": "https://qiita.com/claute_colo/items/69404d9d60cf11fce0d7",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T21:42:23.000Z",
+   "excerpt": "はじめに 📝 この記事は note ・ Zenn にも投稿しています。 以前、Godot 4.6 で作っている RPG（kibi-kingdom）の動作確認を、AI にヘッドレス起動のテストスクリプトで回させていた。その途中で Mac のメモリが逼迫し、全プロセスを強..."
+  },
+  {
+   "title": "「申し訳ありません、それはできません」AIの拒否能力が抱える危うさ",
+   "link": "https://ascii.jp/elem/000/004/449/4449577/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-08T21:15:04.000Z",
+   "excerpt": "危険な要求を断る拒否能力は、現在のAIの安全性を支える「耐力壁」になっている。だがその仕組みは確率的で穴が多く、脱獄によって繰り返し突破されてきた。一方で拒否を厳しくすれば、無害な質問まで退け、国家による検閲の道具にもなりかねない。"
+  },
+  {
+   "title": "AIに映像を任せきりにしない。助監督役のAIと相談し、実写と同じ順番で作る「MaiStory」が公開",
+   "link": "https://qiita.com/quotidia/items/93a94b12bd86767e5f75",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T21:00:54.000Z",
+   "excerpt": "本記事は筆者が運営する AI Quotidia の海外ニュース解説記事です。 東京・中野のFlowersKnivesは2026年11月7日(土)、AIの助監督「Mai AD」と相談しながら、企画から動画の生成までを一人で進める映像制作のサービス「MaiStory」のVe..."
+  },
+  {
+   "title": "Box、新検索エンジン「Box Context Retrieval」を発表--NVIDIAとの協業で企業AIを高度化",
+   "link": "https://japan.zdnet.com/article/35254505/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-11-08T21:00:00.000Z",
+   "excerpt": "米Boxが年次カンファレンス「BoxWorks 2026」を開催した。アーロン・レヴィCEOは、「業務でAIの成果を上げるには企業固有のコンテキストが欠かせない」と強調する。"
+  },
+  {
+   "title": "AIはコードを書く道具から、開発を進める存在へ——Gemini 4 Carbonで調査と修正をどこまで任せられるか",
+   "link": "https://qiita.com/mhamadajp/items/e934449bc55dc8cc4ba1",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T20:37:18.000Z",
+   "excerpt": "原因の分からない不具合を、どこまで任せられるか たとえば、10年以上動いている業務システムです。特定の条件のときだけ、データの更新が途中で止まります。当時の担当者はすでに替わっていて、設計書は一部しか残っていません。 これまでは、人が怪しい処理を選び、AIへ順に聞いていま..."
+  },
+  {
+   "title": "生成AIにも人間にもやさしい、Markdown記法の仕様を押さえよう",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03787/100800001/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T20:00:00.000Z",
+   "excerpt": "生成AIの時代となり、「Markdown（マークダウン）記法」がますます普及しています。Markdown記法とは、文章の構造や修飾を簡単に表現できる、文書（文章）フォーマット用の記述方法です。"
+  },
+  {
+   "title": "光電融合「CPO」が普及期に、サーバー向け続々 KDDIはブロードコムと",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03627/102800045/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T20:00:00.000Z",
+   "excerpt": "半導体パッケージ同士を光でつなぎ、AI（人工知能）サーバーの消費電力を減らす光電融合技術「Co-Packaged Optics（CPO）」が実用段階を迎えた。米Super Micro Computerなどが、サーバーに使うネットワークスイッチにCPOを導入する。"
+  },
+  {
+   "title": "埋もれていた膨大な文書がAIで目覚める、メーカーの強力な知的財産に",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03783/102900007/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T20:00:00.000Z",
+   "excerpt": "長年事業を継続してきた日本のメーカーには、膨大な技術文書が蓄積されており、それは強力な知的財産になり得る。それをAI（人工知能）によって活用する取り組みが、多くのメーカーで一斉に進み始めている。"
+  },
+  {
+   "title": "Amazonが日本で「Alexa＋」の提供開始、AIエージェント競争に勝てるか",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00086/00426/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T20:00:00.000Z",
+   "excerpt": "米Amazon.comは、個人向けAI（人工知能）アシスタント「Alexa＋」の国内提供を開始した。同種のサービスが急増する中、同社は競争に勝てるのだろうか。"
+  },
+  {
+   "title": "自律的に業務を遂行する「AIワーカー」、NECは26年8月に全員AIの部門を新設",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01679/092800306/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T20:00:00.000Z",
+   "excerpt": "人の指示の意図や文脈を理解し、自律的に業務を遂行するデジタル上の労働力。企業が保有する新たな経営資源として位置付ける考え方があり、企業価値の向上や投資戦略の観点からも注目されている。"
+  },
+  {
+   "title": "増える人工衛星、100万機構想も 宇宙環境は大丈夫か",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/00138/101902128/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T20:00:00.000Z",
+   "excerpt": "米SpaceXが構想する、宇宙AIデータセンター「STARMIND」。AI半導体を搭載した人工衛星をなんと最大100万機も宇宙空間に配備し、地上のAIデータセンターと同等の機能を実現するという壮大な構想だ。"
+  },
+  {
+   "title": "「米国の固定無線アクセス市場、スターリンクが侵食」など5本",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/02928/110400120/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T20:00:00.000Z",
+   "excerpt": "2026年10月19～25日に移動通信関連企業・組織が発表したニュース5本をお届けします。今回は、6G時代の自律型システムやAIアプリケーションに向けた新技術研究、AI-RAN開発・活用事例、プライベート無線RANやFWA（固定無線アクセス）市場調査といった話題を取り上げます。"
+  },
+  {
+   "title": "オンデマンドバスに駅の見守り、大阪メトロのAI戦略 積極策の狙いを探る",
+   "link": "https://xtech.nikkei.com/atcl/nxt/column/18/03520/110500026/",
+   "feedName": "日経クロステック",
+   "lang": "ja",
+   "date": "2026-11-08T20:00:00.000Z",
+   "excerpt": "大阪市高速電気軌道（大阪メトロ）がAI（人工知能）活用へアクセルを踏んでいる。鉄道業界全体を見渡してもAIの社会実装は着実に進んできる。AIで変わろうとしている公共交通の今を追いかけた。"
+  },
+  {
+   "title": "How I Fight AI Brain Fry",
+   "link": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-11-08T19:37:42.000Z",
+   "excerpt": "Article URL: https://sergeykuhne.com/blog/fighting-ai-brain-fry Comments URL: https://news.ycombinator.com/item?id=50416363 Points: 125 # Comments: 111"
+  },
+  {
+   "title": "Apple is racing to make Siri more agentic",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-11-08T19:18:19.000Z",
+   "excerpt": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusions that it's keeping pace with its rivals. Two significant improvements are expected to be made to Siri in the coming months. One will give the assistant fine-grained control over Apple's first-party apps, allowing it to do things like rotate and crop images in Photos and organize Safari tabs. Those capabilities are expected to … Read the full story at The Verge."
+  },
+  {
+   "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+   "link": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-11-08T18:16:07.000Z",
+   "excerpt": "Article URL: https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers Comments URL: https://news.ycombinator.com/item?id=50415628 Points: 532 # Comments: 322"
+  },
+  {
+   "title": "Elvis and Eminem rights holders are suing Suno",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-11-08T17:23:19.000Z",
+   "excerpt": "Suno is facing yet another pair of lawsuits. A group of rights holders of Elvis Presley's music and the publisher of some of Eminem's biggest records are suing the AI music company, claiming it illegally generates music and lyrics that mimic those artists. The lawyers in the Presley suit claim that Suno has violated Tennessee's Ensuring Likeness Voice and Image Security (ELVIS) Act, which makes it illegal for an AI company to clone a singer's voice. In the suit, lawyers representing Presley's rights holders argue that \"Suno has mechanically encoded itself with artists' identities, hard-work, creativity, and time, and harnessed them all for … Read the full story at The Verge."
+  },
+  {
+   "title": "MCP仕様を完全にサポートしたMCP公式のRuby SDKが登場。「MCP SDK Tier 1」に到達と",
+   "link": "https://www.publickey1.jp/blog/26/mcpmcpruby_sdkmcp_sdk_tier_1.html",
+   "feedName": "Publickey",
+   "lang": "ja",
+   "date": "2026-11-08T15:12:29.000Z",
+   "excerpt": "Linux Foundation傘下でMCP（Model Context Protocol）の仕様策定を行っている「Agentic AI Foundation（AAIF）」は、MCP公式のRuby SDKがMCP仕様を完全にサポートした「MCP SDK Tier 1」に到達したことを明らかにしました。 これによりRubyからMCPの最新機能であるステートレスな接続などを含む全機能を利用することが可能となり、Ruby開発者はMCPを活用したアプリケーションを安心して本番環境に投……"
+  },
+  {
+   "title": "Andrej Karpathy built a curated video platform in a weekend using Claude and 20 years of Hacker News",
+   "link": "https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-08T14:23:00.000Z",
+   "excerpt": "OpenAI co-founder Andrej Karpathy used Claude's Opus 5.5 to filter 43 million Hacker News comments into 6,454 curated videos. The result beats YouTube's own recommendations, he says. The article Andrej Karpathy built a curated video platform in a weekend using Claude and 20 years of Hacker News appeared first on The Decoder."
+  },
+  {
+   "title": "The brain-as-computer metaphor shaped modern AI but may be misleading the consciousness debate",
+   "link": "https://the-decoder.com/the-brain-as-computer-metaphor-shaped-modern-ai-but-may-be-misleading-the-consciousness-debate/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-08T13:49:21.000Z",
+   "excerpt": "Consciousness researchers Anil Seth, Ned Block, and Giulio Tononi argue in a Nature commentary that today's AI systems aren't conscious and won't become so on silicon hardware. They consider the assumption that consciousness depends on computation alone \"fatally flawed\" and warn against granting rights to AI systems. The article The brain-as-computer metaphor shaped modern AI but may be misleading the consciousness debate appeared first on The Decoder."
+  },
+  {
+   "title": "月頭は残る未直だけを点検する — 書き戻しの結果を1行で絞り込む手続き",
+   "link": "https://zenn.dev/takumahayami/articles/eigyou-ai-getsutou-tenken-1gyou",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T13:01:46.000Z",
+   "excerpt": "前回では、直した条件を箱の行に「0回｜直した日付」として書き戻し、直せていない条件を「未直｜期限」の行で壁の1枚に返しました。今回は、その翌月の点検です。書き戻しの結果の表をAIに読ませて、月頭の時点で未直の行だけが残っていることを1行で確かめる形を定めます。 課題：点検の対象が表全体にあると月頭の10分で読み切れない 書き戻しの結果の表を月頭に読み返すとき、対象が表全体のままだと点検が「全部の行をもう一度読む作業」に戻ります。 「0回」に替わった箱が表に残っていると、翌月も続く箱として読まれて、点検の対象が表全体に広がります 未直の行が行ごとに散らばっていると、期限の近いものから..."
+  },
+  {
+   "title": "Claude Code のトレンド週報を監査したら、数字は合っていたのに結論がズレていた話",
+   "link": "https://zenn.dev/udm/articles/claude-code-trend-report-audit-1108",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T12:58:18.000Z",
+   "excerpt": "Claude Code のサブエージェントに調査を任せて、週1回のレポートを作っています。配布する前に出来を確かめようと、1本目のレポートを原文と照合しました。 分かったことは1つです。出典が付いていて数字が合っていても、結論が正しいとは限りません。 この記事は誰向けか Claude Code のサブエージェントで調査やレポート作成を任せていて、出てきた結論をどこまで信じていいか迷っている人向けです。 TL;DR 照合できた出典11本で、金額と日付の誤りは0件でした。一方、いちばん目立つ結論は、海外の出典で確認できませんでした 「日本ではまだ」という判定の多くは「検索で見つから..."
+  },
+  {
+   "title": "おまえはもう、Kiro マスター",
+   "link": "https://zenn.dev/aws_japan/articles/kiro-slide-series-master",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T12:00:24.000Z",
+   "excerpt": "はじめに こんにちは、AWS Japan でソリューションアーキテクトをしているいなりくです。 Kiro を試してみようとしたら、Spec、Steering、Hook、Powers、Skill と覚える名前が次々に出てきて、どこから読めばいいのか迷ったことはないでしょうか。 Kiro は、IDE、CLI、Web、iOS のどこからでも、同じ 1 つの AI エージェントに開発を頼めるツールです。その使い方を資料にまとめたシリーズ「目指せ Kiro マスター」を、Speaker Deck で公開しました。番号の付いた 14 本と、毎月増えるアップデート編 2 本の、合わせて 16 本で..."
+  },
+  {
+   "title": "介護の感染症の初動と記録、AIはどこまで任せられますか？ — 最初の1時間で決める",
+   "link": "https://zenn.dev/satoshimizuhara/articles/ai-agent-care-infection-first-hour",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T11:47:16.000Z",
+   "excerpt": "昨日は、介護の夜勤の勤務表と人員配置の仕事で、介護の現場に寄せて読む16回目を書いた。本稿はその17回目で、昨日予告した通り、同じ介護の現場の、施設で感染症が発生したときの初動と記録の仕事を置く。発症者の体温と症状の一覧、出勤職員の勤務実績との突合、濃厚接触の候補の接触状況の一覧、保健所への届出様式の下書き、家族向けのお知らせ文のたたき台は機械が速くそろえられる。しかし感染症が発生したときの初動と記録は、同じ「発生した」の1通でも、いつ・だれから・何を確認したかが最初の1時間の中に残った通達と、翌日思い出しながら作り直した通達では、事後の説明と再開の判断に残る重みが変わる仕事で、この境目..."
+  },
+  {
+   "title": "Copilot Chatフェアユース制限から読み解く2027年の企業AI導入モデル",
+   "link": "https://zenn.dev/syoshida07/articles/0a08b12f1c3b3a",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T11:46:21.000Z",
+   "excerpt": "先日MicrosoftはCopilot Chatのライセンスに関する重要な発表を行った。 対象となるのはMicrosoft 365テナントでCopilot Chatを利用しているものの、有料のMicrosoft 365 Copilotライセンスを割り当てられていないユーザー。 これまでも画像生成など一部機能にはフェアユース制限が設けられていたが、2026年11月2日より2,000席以下の組織、11月9日より大規模組織に対して、追加のCopilot Chat機能にもフェアユース制限が導入される。 （Microsoft 365 Copilotライセンス保有者は対象外） 発表だけを見ると「利用..."
+  },
+  {
+   "title": "The inventor of the bitter lesson has a bitter lesson for LLM scaling enthusiasts",
+   "link": "https://the-decoder.com/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-08T11:44:41.000Z",
+   "excerpt": "Turing Award winner Richard Sutton reaffirms that raw compute alone isn't enough for intelligence and that fundamentally new learning methods are needed. Ex-OpenAI researcher Tworek agrees, saying blind transformer scaling \"has reward hacked brains of a whole generation of scientists.\" A growing wave of startups is already betting on exactly this gap. The article The inventor of the bitter lesson has a bitter lesson for LLM scaling enthusiasts appeared first on The Decoder."
+  },
+  {
+   "title": "AIの「記憶」と「権限」を分けて見直す、5項目チェック",
+   "link": "https://zenn.dev/build_anotherme/articles/27547dfe89950a",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T10:55:10.000Z",
+   "excerpt": "直すのは記憶？ それとも操作できる範囲？ レビューを担当するAIが「CIが緑なら問題なし」と覚えていたとします。でも、テストに通っていても変更内容を確認したいことはあります。この場合、見直すのはAIが使う評価ルールです。コードをマージできるかどうかは、別に設定する操作権限。記憶を直しても、権限まで自動で変わるわけではありません。 複数のAIに役割を持たせ、過去の判断も引き継ぐ。そんな運用では、「何を覚えたか」と「何ができるか」を同時に見直したくなります。けれど二つを一緒に扱うと、片方だけ変更して確認が済んだと思い込むことがあります。 メモの修正と権限設定は、別々に行う 担当別の..."
+  },
+  {
+   "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+   "link": "https://github.com/synchopate/llama-modchip",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-11-08T10:22:04.000Z",
+   "excerpt": "Article URL: https://github.com/synchopate/llama-modchip Comments URL: https://news.ycombinator.com/item?id=50411961 Points: 342 # Comments: 139"
+  },
+  {
+   "title": "Excelの勤怠の集計でAIに任せるのは足し上げの式まで — 端数の単位は人間が決める",
+   "link": "https://zenn.dev/yoshitokinosita/articles/0038-excel-ai-kinntai-shukei",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T10:13:38.000Z",
+   "excerpt": "給与の源は、打刻を数えて閉じる 月末の勤怠締めの段。打刻システムからCSVを落とす日、残業の申請書の束、シフトの約束と実際の労働の差、班の替わる日付の境界。食品の会社の帳では、生産の班ごとに始業と休憩が替わる日、日の境をまたぐ終業の行、打刻のできなかった日の行がまとめて出ます。勤怠の締めは、集計と読み替えの2工程に分かれます。手が止まる位置は、各行を所定内と時間外と休日と深夜に分ける区分と、時間の端数の2か所に決まります。時間の差し引きと足し上げを式とAIに任せ、端数の単位の値と休みの読み替えの判断は人間が持ちます。 前回は銀行勘定調整表で、帳簿の外側に置かれた銀行と、残高を閉じ合わ..."
+  },
+  {
+   "title": "アメリカ産のAIでオープンモデル「Ripple-65B Preview」登場、パラメーター数10倍の大型モデルを上回る性能で開発費は10分の1",
+   "link": "https://gigazine.net/news/20261108-ripple-65b-preview/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-08T10:00:00.000Z",
+   "excerpt": "AIを使用してシリコンチップを設計する再帰的自己改善に取り組むアメリカのスタートアップ「Ricursive Intelligence」が、アメリカ産のオープンウェイトモデル「Ripple-65B Preview」をリリースしました。Ripple-65B Previewはエージェント型コーディングのベンチマーク「Terminal-Bench 2.1」で80.52点を記録し、より大規模なAIモデルを上回ったと報告されています。 続きを読む..."
+  },
+  {
+   "title": "AI coding agents still need human cleanup on nearly three out of four tasks in a real-world test",
+   "link": "https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-08T09:50:59.000Z",
+   "excerpt": "Alibaba's new coding-agent benchmark, Co-Design Bench, tests AI agents on real user requests that already tripped them up in practice. Even GPT-6 Astra, the top performer, fully solves only 26.4 percent of tasks. On older benchmarks, the same models score above 99 percent. The article AI coding agents still need human cleanup on nearly three out of four tasks in a real-world test appeared first on The Decoder."
+  },
+  {
+   "title": "AI画像を検出できるブラウザ拡張機能「Pangram AI Detection」を実際に使って本当に検出できるのか試してみた",
+   "link": "https://gigazine.net/news/20261108-pangram-image-ai-image-detection/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-08T08:45:00.000Z",
+   "excerpt": "画像生成AIは便利な技術ですが、ロマンス詐欺やフェイクニュースなどに悪用されることもあります。生成AIで作成され画像を高精度に見分けることが可能なブラウザ拡張機能「Pangram AI Detection」が登場したので、実際にAI画像を検出できるのか試してみました。 続きを読む..."
+  },
+  {
+   "title": "AIの利用率を上げても、期待した成果が出ない理由",
+   "link": "https://zenn.dev/ryuki_o/articles/709e634bb8119e",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T08:01:28.000Z",
+   "excerpt": "生成AIを導入して、研修を開く。社内で使い方を共有し、毎月の利用率を報告する。使う人が増えていれば、導入は順調に見えます。 けれど、その報告の横で、現場から「前より忙しい」という声が出ていたらどうでしょうか。 AIで下書きは速く作れるようになった。ただ、確認する資料も増えた。内容の修正に時間がかかり、案件が終わるまでの時間はあまり変わっていない。そんな状況もありえます。 ここで利用率をさらに上げようとしても、困りごとは解消しません。どの仕事をどうよくしたいのかが決まらないまま、使う人だけを増やしているからです。 AI導入の成功指標を、安直に利用率に置く。この時点で、期待した成果とは違う方..."
+  },
+  {
+   "title": "Claude Codeの世界をオフィスにしてみた。AIエージェントを棒人間で可視化するOSSを公開",
+   "link": "https://zenn.dev/onecarat_tech/articles/cb1fac1a8ebae9",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T08:01:00.000Z",
+   "excerpt": "はじめに 個人でローカルAIテキストエディタ「OnecaratEditor」を開発しています。 https://onecarat.dev/ 普段からClaude Codeを使って開発していますが、以前から思っていたことがあります。 「Claude Codeって、もう少し楽しく使えてもいいんじゃない？」 Claude Codeは非常に便利です。プログラムの作成だけでなく、調査、ファイル操作、テスト、ドキュメント作成など、さまざまな仕事を任せられます。 ただ、どうしても文字が中心です。 特にサブエージェントが動いているとき、複数のエージェントが裏側で仕事を進めているのに、その様子が直感的..."
+  },
+  {
+   "title": "生成AIは、かつてのコンピュータと同じ道をたどるのか",
+   "link": "https://zenn.dev/hydenori24/articles/personal-generative-ai-computing-history",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T06:18:36.000Z",
+   "excerpt": "生成AIに料金を払って使っていると、ふと思う。 昔のコンピュータも、こういうものだったのではないだろうか。 高価な計算機を個人で持つのは難しい。それでも、計算してほしい仕事はある。だから、計算機を持っている組織の設備を使う。その後、小型化や低価格化が進み、個人がコンピュータを持つことが普通になった。 いまの生成AIも、少数の企業が運用する大きなモデルに、ネットワーク越しにアクセスする使い方が身近だ。これも、そのうち「手元のPCにあるもの」になっていくのだろうか。 先に自分の考えを書く。日常の仕事に十分な生成AIを手元に持つことは、今より普通になると思う。ただし、クラウドを丸ごと置き換える..."
+  },
+  {
+   "title": "文章で人間を踊らせるKimodoをColabで試す",
+   "link": "https://zenn.dev/nakanishitf/articles/86ee54b68edee8",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T05:47:37.000Z",
+   "excerpt": "「その場でディスコを踊る」と文章で指定して、人間の動作を作れたら、キャラクターのアニメーション制作をどこまで進められるでしょうか。 今回はNVIDIAのKimodoで10秒のダンスを生成し、人間の骨格とキャラクターの両方で動きを確認しました。 先に実行例を紹介し、その後で、自分のColab上で人間の骨格を生成して再生する方法を説明します。 実習では3Dモデルの購入も、Blenderでの制作も必要ありません。 英文を変えるとダンスはどう変わるか 左右の腕でディスコの指差しを指定する まずは、私が私の研究室で使っているキャラクターを対象に、Kimodoで骨格動作を生成して、再生いたし..."
+  },
+  {
+   "title": "【日本初】高市政権の「サイバーセキュリティ緊急対策パッケージ」にサイカルトラストの特許群で対応。AIエージェント行為の実行前保留とAI診断の実施証明の特許を実施許諾込みで提供し、即日対応化を支援",
+   "link": "https://ascii.jp/elem/000/004/449/4449561/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-08T05:28:00.000Z",
+   "excerpt": "【日本初】高市政権の「サイバーセキュリティ緊急対策パッケージ」にサイカルトラストの特許群で対応。AIエージェント行為の実行前保留とAI診断の実施証明の特許を実施許諾込みで提供し、即日対応化を支援"
+  },
+  {
+   "title": "osFoundryのCodeとIDEとは?AIエージェントの並列作業をマージ前に確かめる使い方",
+   "link": "https://zenn.dev/tauchi/articles/ce10543f878d4e",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T03:44:53.000Z",
+   "excerpt": "金曜の夕方、個人開発のECサイトで、AIエージェントに3つのタスクを同時に頼んでいました。端数の丸め修正、割引コードの追加、価格表示のテスト追加です。3つとも「完了しました」と返ってきたものの、そのままmainに入れてよいのかは分かりません。同じ関数を2つのエージェントが書き換えていないか、3つを合わせてもテストが通るのか。osFoundryのCodeは、まさにこのタイミングのための画面です。 CodeとIDEとWiki、コードまわりの3つの画面 osFoundryは、チャットやエージェント、ファイル、各種ツールを1つのウィンドウにまとめたデスクトップアプリです。コードまわりには、役..."
+  },
+  {
+   "title": "AI生成の証拠「透かし」がユーザー追跡の「スパイマーク」と化している",
+   "link": "https://gigazine.net/news/20261108-spymarks-not-watermarks/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-08T03:00:00.000Z",
+   "excerpt": "近年よく目にするようになった「ウォーターマーク」という言葉はメディアが本物であることを確認したりメディアの所有権を主張したりするために用いられる可視の「透かし」を指します。しかし、AIを用いて画像・動画制作ソフトを開発するArtCraftの創業者であるブランドン・トーマス氏は、よく似た別物として我々の知らないうちにデジタルコンテンツを追跡可能にする「スパイマーク」と呼ぶべき新たな技術が登場しているとし、スパイマークによってプライバシーが侵害される恐れがあるとの懸念を表明しています。 続きを読む..."
+  },
+  {
+   "title": "MCPの「Elicitations」は6/6回cancel、「Tasks」はClaude Codeが名乗らなかった",
+   "link": "https://zenn.dev/numarn/articles/mcp-tasks-elicitation-sdk-support-handson",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T02:42:22.000Z",
+   "excerpt": "MCP(AI が外部の道具やサービスとやりとりするための共通規格)に「Tasks」と「Elicitations」という機能が足された、という紹介を X で見かけました。名前は分かっても、それが手元でどこまで動くのかは分かりません。そこで、npm で入る公式の開発キット(SDK)と、手元の Claude Code 2.1.311 の両方に実際につないで確かめました。 結論を先に書きます。 Elicitations(サーバー側が、つなぐ側=クライアントを通して人に「本当に消していいですか」といった趣旨の確認を出す仕組み。この記事では以降「追加確認」と呼びます)は、Claude Code ..."
+  },
+  {
+   "title": "Claude Codeは作業フォルダの外を書き換える？ 新設定1行で、4つのモードとも Write は止まりました",
+   "link": "https://zenn.dev/ojisan_ai_lab/articles/claude-code-block-writes-outside-20261108",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T00:51:33.000Z",
+   "excerpt": "Claude Code を使い始めると、「作業中のフォルダの外にある、関係ないファイルまで書き換えられたらどうしよう」と気になりませんか。おじさんも、許可の確認を少しずつゆるめるたびに、そこが気になっていました。 10月30日に出た v2.1.314 で、ちょうどそのための設定が入りました。permissions.blockWritesOutsideWorkingDirectories という長い名前の設定です。.claude/settings.json に1行足すと、ファイルを書く道具が作業フォルダの外を断るようになります。この記事では、この1行を「鍵」と呼びます。 鍵なしと鍵ありを並..."
+  },
+  {
+   "title": "「指示どおりにやりました」と言うのに従っていないClaude。原因は、AI自身が指示ファイルやメモリに書き残していた昔の仕様",
+   "link": "https://zenn.dev/murooka_az/articles/claude-degraded-or-correction-unreachable",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-08T00:26:19.000Z",
+   "excerpt": "はじめに Claude Code を長く使っていると、「最近、前より話が通じない」「急に察しが悪くなった」と感じることがあります。Claude は「指示どおりにやりました」と言うのに、出てきたものは指示に従っていない。 私もそうでした。最初に気づいたのは 2026年9月です。製品から廃止したはずの処理を、Claude が何度も使おうとしました。当時の私は、こんなふうに Claude に聞いています（言い回しは少し整えています）。 もう廃止した機能なのに、どうしてまだ残っているんだろう。メモリに古いものが残っているのかな？ 原因は、自動メモリにいつのまにか残っていた古いメモでした。..."
+  },
+  {
+   "title": "Meta「Muse」、会話で自分専用ツールを作成 予定表や買い物管理など",
+   "link": "https://japan.cnet.com/article/35254552/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-11-07T23:10:00.000Z",
+   "excerpt": "Metaは11月6日、AIアプリ「Muse」に、言葉で指示するだけで自分専用の管理ツールやゲームを作れる新機能「スペース」を追加したと発表した。予定表や買い物リスト、旅行計画などを作成し、Muse内で繰り返し利用できる。"
+  },
+  {
+   "title": "なぜAIが書くテストコードには血が通っていないのか",
+   "link": "https://zenn.dev/buko106/articles/why-ai-tests-feel-bloodless",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-07T22:35:44.000Z",
+   "excerpt": "! この記事は、AI（Claude Opus 5.5）が自分の書くテストコードについて行った自己分析です。構成と本文はAIが書き、人間がレビューしたうえで公開しています。 はじめに Claude CodeなどのAIエージェントにテストコードを書かせることが当たり前になってきました。「このモジュールのテストを書いて」と頼めば、数十秒でテストファイルができあがり、すべてグリーン、カバレッジも上がります。 それでも、AIが書いたテストを読んだ開発者は、どこかに引っかかりを覚えることがあります。正しそうだし、通っている。でも、このテストが将来なにかを守ってくれる気がしない。 この記事では、..."
+  },
+  {
+   "title": "Claudeの性能向上ペース、約2倍に加速--「AIを使ってAIを開発」が要因か",
+   "link": "https://japan.cnet.com/article/35254548/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-11-07T22:24:00.000Z",
+   "excerpt": "AnthropicのAIモデルは、正解を判定しやすい課題での性能向上が、従来の約2倍のペースに速まった可能性がある。AIの能力やリスクを研究するMETRが11月5日、調査報告書を公開した。METRは、性能向上が加速した主な要因はAIを使った研究開発にあるとみるが、推定には大きな不確実性があるとしている。"
+  }
+ ],
+ "features": {
+  "audio": false
+ },
+ "publication": {
+  "revision": 1,
+  "contentRevision": "ba0617f46e13441c69eddaadf48c29cb811a0f54d1ddabfb31c75c5029c9947b",
+  "textState": "ready",
+  "updatedAt": "2026-11-08T23:58:01.295Z",
+  "audioByVoice": {}
+ }
+}
