@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-10】Anthropicが新AIモデル「Claude Fable 5.2」などを発表、出力高速化と値下げを実現 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-10.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-10.html</guid>
+    <pubDate>Tue, 10 Nov 2026 02:55:04 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Anthropicが新AIモデル「Claude Fable 5.2」などを発表、出力高速化と値下げを実現&lt;/li&gt;&lt;li&gt;NvidiaのフアンCEOに中国スパイ疑惑が浮上、イベント登壇見合わせや進退問題に発展&lt;/li&gt;&lt;li&gt;AI普及に伴う開発現場の変革、マネジメントやPLM基盤の再考が議論に&lt;/li&gt;&lt;li&gt;Claude Codeで秘密情報流出の恐れ、GitHubで2500件以上が露出&lt;/li&gt;&lt;li&gt;Meta、低コストな小型AI「Muse Ember」発表 エージェント反復処理に特化&lt;/li&gt;&lt;li&gt;Metaが軽量モデル「Muse Ember」を投入、ツール呼び出しなどエージェント作業に特化&lt;/li&gt;&lt;li&gt;ディズニーとアドビが生成AI協業を拡大、映画やスポーツ、パーク開発にも導入&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPT EnterpriseをAWS Marketplaceで提供開始&lt;/li&gt;&lt;li&gt;Shizuku AI、相づちや割り込みに対応した全二重日本語音声AIを発表&lt;/li&gt;&lt;li&gt;OpenAI、研究基盤上のモデルを追跡・緊急停止するシステム「Control Room」発表&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-09】Nvidia CEOと中国人スパイの関係を調査 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-09.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-09.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-22.html</guid>
     <pubDate>Wed, 21 Oct 2026 23:33:55 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAIのモデルがGoogle Cloudで提供開始へ&lt;/li&gt;&lt;li&gt;数千のAIエージェントを活用し脳細胞データから新発見&lt;/li&gt;&lt;li&gt;Anthropicが新AIエージェント「Claude Duet」発表&lt;/li&gt;&lt;li&gt;PHPの重大脆弱性をAIが発見、世界でサービス一時停止も&lt;/li&gt;&lt;li&gt;OpenAI、配信パートナー向けに共通安全基準を策定&lt;/li&gt;&lt;li&gt;米AT&amp;amp;T、OpenAIと連携し社内法務業務を効率化&lt;/li&gt;&lt;li&gt;ChatGPT広告が26か国へ拡大、出稿主10万社を突破&lt;/li&gt;&lt;li&gt;OpenAI、OSS脆弱性対策「Patch the Planet」始動&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPT専用のLLM広告配信基盤を公開&lt;/li&gt;&lt;li&gt;OpenAI、サイバー防衛者強化の青写真を発表&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-21】OpenAI、創薬AI強化へOrchestra Bioを買収 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-21.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-21.html</guid>
-    <pubDate>Tue, 20 Oct 2026 23:22:12 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAI、創薬AI強化へOrchestra Bioを買収&lt;/li&gt;&lt;li&gt;米国土安全保障省、中国DeepSeek製品を連邦文民機関から排除&lt;/li&gt;&lt;li&gt;車載Geminiの個人連携強化とAIエージェントのマイクラクリア&lt;/li&gt;&lt;li&gt;フランチャイズ店がChatGPT導入で照合時間を94％削減&lt;/li&gt;&lt;li&gt;AnthropicがAI安全性法案を提案、政府差し止めには裁判許可要求&lt;/li&gt;&lt;li&gt;DMG森精機、工作機械の不具合対応を支援する生成AIを提供&lt;/li&gt;&lt;li&gt;Hugging Face CEO、NetflixのAI特集は不正確と警告&lt;/li&gt;&lt;li&gt;インテル、PC市場鈍化で苦戦もAI半導体需要を好機に変革へ&lt;/li&gt;&lt;li&gt;PFNと米Tenstorrent、光電融合を活かしたAI半導体を共同開発&lt;/li&gt;&lt;li&gt;NTT提唱の光技術IOWN、欧州データセンターの電力危機救うか&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
