@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-11】AnthropicがClaude Fable/Mythos 5.2を発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-11.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-11.html</guid>
+    <pubDate>Wed, 11 Nov 2026 00:54:34 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;AnthropicがClaude Fable/Mythos 5.2を発表&lt;/li&gt;&lt;li&gt;Googleが最上位AI「Gemini 4 Carbon」提供開始&lt;/li&gt;&lt;li&gt;Metaが低コスト小型AIモデル「Muse Ember」発表&lt;/li&gt;&lt;li&gt;InstagramがAIで10代の年齢詐称を検出&lt;/li&gt;&lt;li&gt;AdobeとDisneyが生成AI「Firefly Foundry」で提携&lt;/li&gt;&lt;li&gt;LINEヤフー、AIエージェント「Agent i」アプリ公開&lt;/li&gt;&lt;li&gt;MetaのAIエージェント「Muse」がスマートウォッチ対応&lt;/li&gt;&lt;li&gt;AnthropicがIPOで1.4兆ドル評価額目指す&lt;/li&gt;&lt;li&gt;Amazon傘下RingがAI搭載警備ドローン・ロボ発表&lt;/li&gt;&lt;li&gt;Anthropic、IPOで最大644億ドル調達、Google等出資&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-10】Anthropicが新AIモデル「Claude Fable 5.2」などを発表、出力高速化と値下げを実現 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-10.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-10.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-23.html</guid>
     <pubDate>Thu, 22 Oct 2026 23:34:12 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Anthropicが常時稼働AI「Claude Duet」発表&lt;/li&gt;&lt;li&gt;OpenAIのモデルがPHPの重大な脆弱性を発見&lt;/li&gt;&lt;li&gt;Google CloudにOpenAIモデルが追加へ&lt;/li&gt;&lt;li&gt;Uberが全従業員3万人にChatGPTを導入&lt;/li&gt;&lt;li&gt;Canvaが初の画像生成AI「Canva Craft」発表&lt;/li&gt;&lt;li&gt;OpenAI、高速低コストな「Decisions API」発表&lt;/li&gt;&lt;li&gt;ChatGPT広告が89カ国に拡大、広告主10万社超&lt;/li&gt;&lt;li&gt;中国系集団がAIで攻撃自動化とMS警告&lt;/li&gt;&lt;li&gt;声で動く協働ロボ向けパッケージを共同開発&lt;/li&gt;&lt;li&gt;OpenAI、評価額1.25兆ドルで300億ドル調達へ&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-22】OpenAIのモデルがGoogle Cloudで提供開始へ ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-22.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-22.html</guid>
-    <pubDate>Wed, 21 Oct 2026 23:33:55 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAIのモデルがGoogle Cloudで提供開始へ&lt;/li&gt;&lt;li&gt;数千のAIエージェントを活用し脳細胞データから新発見&lt;/li&gt;&lt;li&gt;Anthropicが新AIエージェント「Claude Duet」発表&lt;/li&gt;&lt;li&gt;PHPの重大脆弱性をAIが発見、世界でサービス一時停止も&lt;/li&gt;&lt;li&gt;OpenAI、配信パートナー向けに共通安全基準を策定&lt;/li&gt;&lt;li&gt;米AT&amp;amp;T、OpenAIと連携し社内法務業務を効率化&lt;/li&gt;&lt;li&gt;ChatGPT広告が26か国へ拡大、出稿主10万社を突破&lt;/li&gt;&lt;li&gt;OpenAI、OSS脆弱性対策「Patch the Planet」始動&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPT専用のLLM広告配信基盤を公開&lt;/li&gt;&lt;li&gt;OpenAI、サイバー防衛者強化の青写真を発表&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
