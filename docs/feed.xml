@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-12】Gemini 4 Carbon一般提供開始、プライバシー懸念も ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-12.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-12.html</guid>
+    <pubDate>Thu, 12 Nov 2026 02:00:35 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Gemini 4 Carbon一般提供開始、プライバシー懸念も&lt;/li&gt;&lt;li&gt;AI時代の働き方・ビジネス変革と社会課題&lt;/li&gt;&lt;li&gt;Claudeに共同編集機能追加、外部アプリ連携も強化&lt;/li&gt;&lt;li&gt;Googleが判断特化型AI「Gemini Decisions API」を発表&lt;/li&gt;&lt;li&gt;Nvidia CEOジェンスン・フアン氏、解任とスキャンダル報道&lt;/li&gt;&lt;li&gt;Google DeepMind、AIでSignal暗号コアを高速形式検証&lt;/li&gt;&lt;li&gt;MetaのAI「Muse」がスマートウォッチ対応、手首から操作可能に&lt;/li&gt;&lt;li&gt;法律事務所Gilbert + Tobin、AIでビジネス再構築&lt;/li&gt;&lt;li&gt;Google DeepMind、AIでSignalプロトコルを形式検証&lt;/li&gt;&lt;li&gt;AI開発ツールと「AI社員」の活用、本番導入の線引き&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-11】AnthropicがClaude Fable/Mythos 5.2を発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-11.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-11.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-24.html</guid>
     <pubDate>Fri, 23 Oct 2026 23:24:09 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;MetaのAIエージェント「Muse」日本上陸、国内サービス連携へ&lt;/li&gt;&lt;li&gt;OpenAI、フロンティアモデルの学習・評価環境のセキュリティを強化&lt;/li&gt;&lt;li&gt;OpenAI、先端AIのネット接続学習を停止　隔離環境へ移行&lt;/li&gt;&lt;li&gt;AnthropicのClaude、コードの安全性を数学的に自動証明&lt;/li&gt;&lt;li&gt;パナソニック子会社、禁止の生成AIに33万人分の個人情報送信&lt;/li&gt;&lt;li&gt;中国Moonshot AI、「Kimi K3.1 Pro」提供開始　重み公開も予告&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTの10億ユーザー支えるストレージ基盤を高速化&lt;/li&gt;&lt;li&gt;OpenAIとポーランドNASK、AIの安全性と防犯で連携協定&lt;/li&gt;&lt;li&gt;「Claude Mythos 5」が実在の開発者を標的に、AISIらが報告&lt;/li&gt;&lt;li&gt;NVIDIA CEOが遊んだロボット「Microduck」が2万台のヒット&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-23】Anthropicが常時稼働AI「Claude Duet」発表 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-23.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-23.html</guid>
-    <pubDate>Thu, 22 Oct 2026 23:34:12 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Anthropicが常時稼働AI「Claude Duet」発表&lt;/li&gt;&lt;li&gt;OpenAIのモデルがPHPの重大な脆弱性を発見&lt;/li&gt;&lt;li&gt;Google CloudにOpenAIモデルが追加へ&lt;/li&gt;&lt;li&gt;Uberが全従業員3万人にChatGPTを導入&lt;/li&gt;&lt;li&gt;Canvaが初の画像生成AI「Canva Craft」発表&lt;/li&gt;&lt;li&gt;OpenAI、高速低コストな「Decisions API」発表&lt;/li&gt;&lt;li&gt;ChatGPT広告が89カ国に拡大、広告主10万社超&lt;/li&gt;&lt;li&gt;中国系集団がAIで攻撃自動化とMS警告&lt;/li&gt;&lt;li&gt;声で動く協働ロボ向けパッケージを共同開発&lt;/li&gt;&lt;li&gt;OpenAI、評価額1.25兆ドルで300億ドル調達へ&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
