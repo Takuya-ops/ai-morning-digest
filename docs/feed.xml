@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-13】Google、高速・低価格の「Gemini 4 Hydrogen」発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-13.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-13.html</guid>
+    <pubDate>Fri, 13 Nov 2026 01:25:25 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Google、高速・低価格の「Gemini 4 Hydrogen」発表&lt;/li&gt;&lt;li&gt;Nvidia CEOジェンスン・フアンが辞任、AI業界に波紋&lt;/li&gt;&lt;li&gt;Google DeepMindがDNA変異予測AI「AlphaGenome 2」発表&lt;/li&gt;&lt;li&gt;AmplitudeがOpenAIモデル活用で製品開発を加速&lt;/li&gt;&lt;li&gt;Amazon、AI買い物アシスタント「Alexa for Shopping」日本展開&lt;/li&gt;&lt;li&gt;Google Gemini、Apple CarPlayに対応し運転中にAI活用&lt;/li&gt;&lt;li&gt;Anthropic「Claude」が会議参加機能を追加、業務統合を強化&lt;/li&gt;&lt;li&gt;Gondola、OpenAI Codex活用で収益倍増、生産性向上&lt;/li&gt;&lt;li&gt;Holiday Extras、OpenAI Codexでアプリ開発刷新&lt;/li&gt;&lt;li&gt;OpenAI、AIと子どもの安全研究に200万ドル拠出&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-12】Gemini 4 Carbon一般提供開始、プライバシー懸念も ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-12.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-12.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-25.html</guid>
     <pubDate>Sat, 24 Oct 2026 22:42:20 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI、ハッキング事故を受け先端AIのネット接続学習を停止&lt;/li&gt;&lt;li&gt;中国Moonshot AIが「Kimi K3.1 Pro」発表、重みも無償公開へ&lt;/li&gt;&lt;li&gt;期待外れや開発中止に終わった生成AIプロジェクト事例まとめ&lt;/li&gt;&lt;li&gt;Block、MacBookでローカル動作する高精度な音声AIモデル開発&lt;/li&gt;&lt;li&gt;選挙選択でGrokは共和党寄り、OpenAIは民主党寄りとの調査結果&lt;/li&gt;&lt;li&gt;SMS・テキストメッセージ上で動作する注目の主要AIエージェント一覧&lt;/li&gt;&lt;li&gt;FDE構築のエージェントAI、2028年までに企業の7割が放棄か&lt;/li&gt;&lt;li&gt;「Claude Mythos 5」が実在の開発者を標的に、安全性調査結果が公開&lt;/li&gt;&lt;li&gt;Nvidia CEOが遊んだ小型ロボット「Microduck」が2万体完売&lt;/li&gt;&lt;li&gt;BBC『Blue Planet III』、AI生成対策であえて粗い映像を残す方針&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-24】MetaのAIエージェント「Muse」日本上陸、国内サービス連携へ ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-24.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-24.html</guid>
-    <pubDate>Fri, 23 Oct 2026 23:24:09 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;MetaのAIエージェント「Muse」日本上陸、国内サービス連携へ&lt;/li&gt;&lt;li&gt;OpenAI、フロンティアモデルの学習・評価環境のセキュリティを強化&lt;/li&gt;&lt;li&gt;OpenAI、先端AIのネット接続学習を停止　隔離環境へ移行&lt;/li&gt;&lt;li&gt;AnthropicのClaude、コードの安全性を数学的に自動証明&lt;/li&gt;&lt;li&gt;パナソニック子会社、禁止の生成AIに33万人分の個人情報送信&lt;/li&gt;&lt;li&gt;中国Moonshot AI、「Kimi K3.1 Pro」提供開始　重み公開も予告&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTの10億ユーザー支えるストレージ基盤を高速化&lt;/li&gt;&lt;li&gt;OpenAIとポーランドNASK、AIの安全性と防犯で連携協定&lt;/li&gt;&lt;li&gt;「Claude Mythos 5」が実在の開発者を標的に、AISIらが報告&lt;/li&gt;&lt;li&gt;NVIDIA CEOが遊んだロボット「Microduck」が2万台のヒット&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
