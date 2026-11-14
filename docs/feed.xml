@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-14】GoogleがGemini関連AIとスマートグラスを発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-14.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-14.html</guid>
+    <pubDate>Sat, 14 Nov 2026 01:02:21 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;GoogleがGemini関連AIとスマートグラスを発表&lt;/li&gt;&lt;li&gt;ChatGPTに買い物代行「Wallet」機能登場&lt;/li&gt;&lt;li&gt;AnthropicがClaude Meetings発表、会議にAI参加&lt;/li&gt;&lt;li&gt;Microsoft 365が世界規模で接続障害発生&lt;/li&gt;&lt;li&gt;Shield、レガシーシステム業務にOpenAI活用&lt;/li&gt;&lt;li&gt;フアン氏退任でAIスタートアップ資金調達に穴&lt;/li&gt;&lt;li&gt;NVIDIA創業者ジェンスン・フアン氏の半生&lt;/li&gt;&lt;li&gt;AIエージェントのLangChainが評価額30億ドル&lt;/li&gt;&lt;li&gt;中国の最強AIモデル、米禁輸Nvidia製チップで学習&lt;/li&gt;&lt;li&gt;ジェンスン・フアン氏、不倫でNvidia辞任&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-13】Google、高速・低価格の「Gemini 4 Hydrogen」発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-13.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-13.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-26.html</guid>
     <pubDate>Sun, 25 Oct 2026 22:48:23 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;AI時代の資源獲得と開発現場の課題&lt;/li&gt;&lt;li&gt;Grokが全編AI生成映像「Odyssey」の冒頭7分を公開&lt;/li&gt;&lt;li&gt;非テック企業にとってAIの財務的リターンはゼロとの分析&lt;/li&gt;&lt;li&gt;Muse CharmやFriendなど注目のAIウェアラブルが登場&lt;/li&gt;&lt;li&gt;サイバー攻撃が多様化、生成AI悪用による侵害も増加&lt;/li&gt;&lt;li&gt;自律的な開発手法「ループエンジニアリング」に期待&lt;/li&gt;&lt;li&gt;AIで加速する情報漏洩、侵入口塞ぐ以外の備えが急務&lt;/li&gt;&lt;li&gt;OpenAIとAnthropicがLLM価格を最大80%値下げ&lt;/li&gt;&lt;li&gt;川崎重工、造船や介護で培ったフィジカルAIロボを外販へ&lt;/li&gt;&lt;li&gt;建設現場の生成AI導入、施工管理など中核業務では途上&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-25】OpenAI、ハッキング事故を受け先端AIのネット接続学習を停止 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-25.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-25.html</guid>
-    <pubDate>Sat, 24 Oct 2026 22:42:20 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAI、ハッキング事故を受け先端AIのネット接続学習を停止&lt;/li&gt;&lt;li&gt;中国Moonshot AIが「Kimi K3.1 Pro」発表、重みも無償公開へ&lt;/li&gt;&lt;li&gt;期待外れや開発中止に終わった生成AIプロジェクト事例まとめ&lt;/li&gt;&lt;li&gt;Block、MacBookでローカル動作する高精度な音声AIモデル開発&lt;/li&gt;&lt;li&gt;選挙選択でGrokは共和党寄り、OpenAIは民主党寄りとの調査結果&lt;/li&gt;&lt;li&gt;SMS・テキストメッセージ上で動作する注目の主要AIエージェント一覧&lt;/li&gt;&lt;li&gt;FDE構築のエージェントAI、2028年までに企業の7割が放棄か&lt;/li&gt;&lt;li&gt;「Claude Mythos 5」が実在の開発者を標的に、安全性調査結果が公開&lt;/li&gt;&lt;li&gt;Nvidia CEOが遊んだ小型ロボット「Microduck」が2万体完売&lt;/li&gt;&lt;li&gt;BBC『Blue Planet III』、AI生成対策であえて粗い映像を残す方針&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
