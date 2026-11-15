@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-15】テック業界重鎮がフアン氏CEO復帰を請願 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-15.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-15.html</guid>
+    <pubDate>Sun, 15 Nov 2026 00:13:15 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;テック業界重鎮がフアン氏CEO復帰を請願&lt;/li&gt;&lt;li&gt;失敗に終わったAIプロジェクトの墓場リスト&lt;/li&gt;&lt;li&gt;アジア各国政府、Nvidiaフアン氏離任に反応&lt;/li&gt;&lt;li&gt;M365障害、ChatGPT/Claudeコネクタに影響&lt;/li&gt;&lt;li&gt;フアン氏離任、AIスタートアップ資金調達に打撃&lt;/li&gt;&lt;li&gt;Nvidia創業者フアン氏、皿洗いからAI主役へ&lt;/li&gt;&lt;li&gt;DeepSeek V3をわずか200行のJaxで実装&lt;/li&gt;&lt;li&gt;サム・アルトマン解雇の元理事がAI CEO不信を表明&lt;/li&gt;&lt;li&gt;Rust製ターミナル向けアイドル工場ゲーム登場&lt;/li&gt;&lt;li&gt;ジェンスン・フアン氏とカリスマCEOの衰退&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-14】GoogleがGemini関連AIとスマートグラスを発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-14.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-14.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-27.html</guid>
     <pubDate>Tue, 27 Oct 2026 00:02:35 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Introducing GPT-6.1 Terra&lt;/li&gt;&lt;li&gt;Working with academic communities to build scientific understanding&lt;/li&gt;&lt;li&gt;Google、プライバシーポリシーに「Gmail」「Googleフォト」のデータを広告に使う例外を追加 回避方法は&lt;/li&gt;&lt;li&gt;Greptile takes bug detection beyond code review with GPT-6 Astra&lt;/li&gt;&lt;li&gt;GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases&lt;/li&gt;&lt;li&gt;マネーフォワードME、MetaのAI「Muse」と連携 サブスク見直しや貯蓄計画を相談&lt;/li&gt;&lt;li&gt;人の音声だけで学習したAI「Dessa」登場 会話の間合いや相づちが自然に&lt;/li&gt;&lt;li&gt;ChatGPT’s expanding world of work&lt;/li&gt;&lt;li&gt;How Fanatics and OpenAI streamline the fan experience&lt;/li&gt;&lt;li&gt;How Ultrafast cut incident investigation from hours to minutes at OpenAI&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-26】AI時代の資源獲得と開発現場の課題 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-26.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-26.html</guid>
-    <pubDate>Sun, 25 Oct 2026 22:48:23 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;AI時代の資源獲得と開発現場の課題&lt;/li&gt;&lt;li&gt;Grokが全編AI生成映像「Odyssey」の冒頭7分を公開&lt;/li&gt;&lt;li&gt;非テック企業にとってAIの財務的リターンはゼロとの分析&lt;/li&gt;&lt;li&gt;Muse CharmやFriendなど注目のAIウェアラブルが登場&lt;/li&gt;&lt;li&gt;サイバー攻撃が多様化、生成AI悪用による侵害も増加&lt;/li&gt;&lt;li&gt;自律的な開発手法「ループエンジニアリング」に期待&lt;/li&gt;&lt;li&gt;AIで加速する情報漏洩、侵入口塞ぐ以外の備えが急務&lt;/li&gt;&lt;li&gt;OpenAIとAnthropicがLLM価格を最大80%値下げ&lt;/li&gt;&lt;li&gt;川崎重工、造船や介護で培ったフィジカルAIロボを外販へ&lt;/li&gt;&lt;li&gt;建設現場の生成AI導入、施工管理など中核業務では途上&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>

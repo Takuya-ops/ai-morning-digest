@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生成AIモーニングダイジェスト 2026-11-15</title>
+<meta name="description" content="毎朝届く生成AI関連ニュースのまとめ(2026-11-15)">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f5f1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15171a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="AIダイジェスト">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/png" href="../icons/icon-192.png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="生成AIモーニングダイジェスト" href="../feed.xml">
+<style>
+:root {
+  --bg: #f6f5f1; --card: #ffffff; --text: #1f2328; --muted: #656d76; --line: #e4e2dc;
+  --accent: #b4552d; --accent-soft: #fdf0e9; --chip: #f0eee8; --chip-text: #454c54;
+  --gold: #c99700; --silver: #8a939e; --bronze: #a9714b; --link: #0a63b6;
+  --rank-text: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a; --card: #1e2126; --text: #e8eaed; --muted: #9aa3ad; --line: #33383f;
+    --accent: #e58a5e; --accent-soft: #35271f; --chip: #2a2e34; --chip-text: #c4cad1;
+    --gold: #e0b53f; --silver: #a8b2bd; --bronze: #c98f68; --link: #6cb2f0;
+    --rank-text: #15171a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Noto Sans JP", Meiryo, sans-serif;
+  line-height: 1.75; font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 780px; margin: 0 auto; padding: 24px 16px 64px; }
+header.site { margin-bottom: 8px; }
+.site h1 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: 0.01em; }
+.site .date { font-size: 1.05rem; font-weight: 600; color: var(--accent); }
+.site .meta { color: var(--muted); font-size: 0.82rem; margin-top: 6px; }
+.statbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
+.statbar span {
+  background: var(--chip); color: var(--chip-text); border-radius: 999px;
+  padding: 3px 12px; font-size: 0.78rem;
+}
+nav.links { margin: 10px 0 8px; font-size: 0.82rem; color: var(--muted); }
+nav.links a { margin-right: 14px; }
+nav.daynav { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 26px; }
+nav.daynav a, nav.daynav .cur {
+  background: var(--chip); color: var(--chip-text); border-radius: 999px;
+  padding: 5px 14px; font-size: 0.82rem;
+}
+nav.daynav a:hover { text-decoration: none; opacity: 0.75; }
+nav.daynav .cur { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+ul.arch { list-style: none; margin: 0; padding: 0; }
+ul.arch li { margin-bottom: 14px; }
+ul.arch .archdate { font-weight: 700; font-size: 1.0rem; }
+ul.arch .archheads { margin: 6px 0 0; padding-left: 0; color: var(--muted); font-size: 0.86rem;
+  list-style: none; }
+ul.arch .archheads li { padding: 2px 0; border: none; margin: 0; }
+h2.section {
+  font-size: 1.05rem; margin: 40px 0 14px; padding-left: 10px;
+  border-left: 4px solid var(--accent);
+}
+.topic {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 18px 20px 14px; margin-bottom: 16px;
+}
+.topic .head { display: flex; gap: 14px; align-items: flex-start; }
+.rank {
+  flex: 0 0 auto; width: 2.1rem; height: 2.1rem; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1.05rem; background: var(--chip); color: var(--chip-text);
+}
+.rank.r1 { background: var(--gold); color: var(--rank-text); }
+.rank.r2 { background: var(--silver); color: var(--rank-text); }
+.rank.r3 { background: var(--bronze); color: var(--rank-text); }
+.topic h3 { margin: 0; font-size: 1.08rem; line-height: 1.55; }
+.topic h3 a { color: var(--text); }
+.topic .summary { margin: 10px 0 0; font-size: 0.94rem; }
+.topic .why {
+  margin: 10px 0 0; font-size: 0.88rem; background: var(--accent-soft);
+  border-radius: 8px; padding: 7px 12px;
+}
+.topic .sources { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.srcchip {
+  background: var(--chip); color: var(--chip-text); border-radius: 999px;
+  font-size: 0.75rem; white-space: nowrap;
+}
+/* タップ領域はリンク側に持たせる(スマホでの押しやすさのため) */
+.srcchip a { color: inherit; display: inline-block; padding: 5px 12px; }
+.srcchip.more { padding: 5px 12px; }
+.topic details { margin-top: 8px; }
+.topic summary.toggle {
+  cursor: pointer; color: var(--muted); font-size: 0.8rem; user-select: none;
+  padding: 9px 0; /* タップ領域を確保 */
+}
+.articles { list-style: none; margin: 8px 0 4px; padding: 0; }
+.articles li { padding: 5px 0; border-top: 1px dashed var(--line); font-size: 0.86rem; }
+.articles .src { color: var(--muted); font-size: 0.78rem; margin-right: 8px; }
+.articles time { color: var(--muted); font-size: 0.75rem; margin-left: 8px; white-space: nowrap; }
+ul.others { list-style: none; margin: 0; padding: 0; }
+ul.others li {
+  padding: 9px 2px; border-bottom: 1px solid var(--line); font-size: 0.9rem; line-height: 1.6;
+}
+ul.others .src { color: var(--muted); font-size: 0.78rem; margin-right: 8px; }
+ul.others time { color: var(--muted); font-size: 0.75rem; margin-left: 8px; white-space: nowrap; }
+.errors { color: var(--muted); font-size: 0.78rem; margin-top: 26px; }
+footer.site {
+  margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 0.8rem;
+}
+.empty { color: var(--muted); background: var(--card); border: 1px dashed var(--line);
+  border-radius: 12px; padding: 24px; text-align: center; }
+/* 長い英語タイトルやURLが画面からはみ出さないようにする */
+.topic h3, .articles li, ul.others li, .summary { overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .wrap { padding: 16px 12px 48px; }
+  .site h1 { font-size: 1.28rem; }
+  .site .date { font-size: 0.98rem; }
+  .topic { padding: 14px 14px 12px; border-radius: 12px; }
+  .topic .head { gap: 10px; }
+  .topic h3 { font-size: 1.02rem; }
+  .rank { width: 1.9rem; height: 1.9rem; font-size: 0.95rem; border-radius: 8px; }
+  h2.section { margin-top: 32px; }
+  nav.links a { margin-right: 10px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <h1>🌅 生成AIモーニングダイジェスト</h1>
+  <div class="date">2026年11月15日(日)</div>
+  <div class="statbar">
+    <span>📰 記事 49件</span>
+    <span>🗞️ ソース 32媒体</span>
+    <span>🧵 トピック 49件</span>
+    <span>⏰ 11/14 07:07 〜 11/15 09:13 (JST)</span>
+  </div>
+  <nav class="links">
+    <a href="../feed.xml">📡 RSSで購読(朝の通知に)</a>
+    <a href="https://github.com/Takuya-ops/ai-morning-digest" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <nav class="daynav">
+    <a href="../archive/2026-11-14.html">← 前日 (11/14)</a>
+    <span class="cur">11/15</span>
+    
+    <a href="../archive/index.html">📚 日付一覧</a>
+    <a href="../index.html">⏩ 最新へ</a>
+  </nav>
+</header>
+
+<h2 class="section">今日の重要トピック TOP10</h2>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank r1">1</div>
+    <h3><a href="https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/" target="_blank" rel="noopener">テック業界重鎮がフアン氏CEO復帰を請願</a></h3>
+  </div>
+  <p class="summary">イーロン・マスク氏を含む11万人以上のテクノロジー業界関係者が、Nvidiaのジェンスン・フアンCEOの復職を求める請願書に署名しました。この請願は、フアン氏がNvidiaのトップを離れたとされる状況を受けて開始されました。多くの業界関係者が、彼のリーダーシップをNvidiaの成功に不可欠と見なしていることが示されています。</p>
+  <p class="why">💡 主要なAIチップメーカーであるNvidiaのリーダーシップに対する業界の強い関心と、その安定性への懸念が浮き彫りになりました。</p>
+  <div class="sources"><span class="srcchip"><a href="https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/" target="_blank" rel="noopener" title="Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang">TechCrunch AI</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank r2">2</div>
+    <h3><a href="https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" target="_blank" rel="noopener">失敗に終わったAIプロジェクトの墓場リスト</a></h3>
+  </div>
+  <p class="summary">AppleのSiri AIの度重なる遅延やOpenAIの「スーパーアプリ」の不調なローンチなど、期待外れに終わった、または事業を停止したAIプロジェクトやスタートアップをまとめたリストが公開されました。この記事は、AI分野における挑戦と失敗の歴史を浮き彫りにしています。AI業界の急速な進化の裏側で、多くの試みが成功に至らない現実を示唆しています。</p>
+  <p class="why">💡 AI分野の急速な発展の中で、多くの失敗事例を認識することは、将来のプロジェクトの戦略立案やリスク評価において重要な教訓を提供します。</p>
+  <div class="sources"><span class="srcchip"><a href="https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/" target="_blank" rel="noopener" title="The AI graveyard: a running list of projects and startups that didn’t make it">TechCrunch AI</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank r3">3</div>
+    <h3><a href="https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/" target="_blank" rel="noopener">アジア各国政府、Nvidiaフアン氏離任に反応</a></h3>
+  </div>
+  <p class="summary">Nvidiaのジェンスン・フアンCEOの離任に対し、アジア各国の政府が様々な反応を示しています。一部の政府は、半導体供給の確約を求めて動き、他国では国内プロジェクトへの影響を監視したり、進行中の調査に対処したりしています。これは、NvidiaがAIチップ市場で支配的な地位にあるため、フアン氏のリーダーシップ変更がアジア経済や技術開発に与える潜在的影響への懸念を表しています。</p>
+  <p class="why">💡 世界のAIサプライチェーンにおいて重要なNvidiaのトップ人事が、各国の技術戦略や経済安全保障に直接的な影響を与える可能性を示しています。</p>
+  <div class="sources"><span class="srcchip"><a href="https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/" target="_blank" rel="noopener" title="Asian governments react to Nvidia CEO Jensen Huang’s exit">TechCrunch AI</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">4</div>
+    <h3><a href="https://www.itmedia.co.jp/aiplus/article/2611/13/2000003164/" target="_blank" rel="noopener">M365障害、ChatGPT/Claudeコネクタに影響</a></h3>
+  </div>
+  <p class="summary">Microsoft 365の複数のサービスで障害が発生し、それがOpenAIのChatGPTとAnthropicのClaudeのMicrosoft 365コネクタにも影響を与えていると両社が報告しました。これにより、これらのAIツールとMicrosoft 365サービスとの連携が正常に機能せず、「ほとんどのリクエストで動作しない」状態に陥っています。企業やユーザーのAI活用に支障が出ている状況です。</p>
+  <p class="why">💡 基幹業務ツールであるMicrosoft 365の障害が主要な生成AIサービスの機能に直接影響を与え、AIの企業導入におけるシステムの相互依存性とそのリスクを浮き彫りにしました。</p>
+  <div class="sources"><span class="srcchip"><a href="https://www.itmedia.co.jp/aiplus/article/2611/13/2000003164/" target="_blank" rel="noopener" title="【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」">ITmedia AI+</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">5</div>
+    <h3><a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" target="_blank" rel="noopener">フアン氏離任、AIスタートアップ資金調達に打撃</a></h3>
+  </div>
+  <p class="summary">Nvidiaのジェンスン・フアンCEOの離任が、AIスタートアップへの資金調達に大きな影響を与えていると、ベンチャーキャピタル（VC）や起業家たちが指摘しています。フアン氏のリーダーシップの下、NvidiaはAIスタートアップに何百億ドルもの資金を投入してきました。彼の不在により、創業者やVCは、将来的に資金調達額の減少や企業評価額の低下を覚悟しています。</p>
+  <p class="why">💡 AIチップ市場を支配するNvidiaのリーダー変更が、AIエコシステム全体の資金の流れと成長速度に直接的な負の影響を与える可能性を示しています。</p>
+  <div class="sources"><span class="srcchip"><a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" target="_blank" rel="noopener" title="Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say">TechCrunch AI</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">6</div>
+    <h3><a href="https://www.itmedia.co.jp/business/articles/2611/14/news008.html" target="_blank" rel="noopener">Nvidia創業者フアン氏、皿洗いからAI主役へ</a></h3>
+  </div>
+  <p class="summary">Nvidiaの創業者であるジェンスン・フアン氏の激動の半生が紹介されています。彼は、デニーズの皿洗いからキャリアをスタートさせ、後にAI時代の主役となるNvidiaを設立しました。この記事は、フアン氏がいかにして困難を乗り越え、半導体業界、そして現在のAI分野において重要な企業を築き上げたかという、その軌跡を振り返るものです。彼の個人的な背景とNvidiaの成長が密接に結びついています。</p>
+  <p class="why">💡 AI革命の最前線に立つNvidiaの創業者であるフアン氏の半生を知ることは、今日の技術革新を牽引するリーダーのビジョンと人間性を理解する上で重要です。</p>
+  <div class="sources"><span class="srcchip"><a href="https://www.itmedia.co.jp/business/articles/2611/14/news008.html" target="_blank" rel="noopener" title="NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生">ITmedia AI+</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">7</div>
+    <h3><a href="https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax" target="_blank" rel="noopener">DeepSeek V3をわずか200行のJaxで実装</a></h3>
+  </div>
+  <p class="summary">DeepSeek V3というAIモデルが、わずか約200行の純粋なJaxコードで実装されたプロジェクトが発表されました。これは、AIモデルの実装がいかにコンパクトになり得るかを示すものであり、開発者コミュニティにとって、より効率的で理解しやすいAI開発の可能性を提示しています。GitHubで公開されており、技術的な関心を集めています。</p>
+  <p class="why">💡 複雑なAIモデルを簡潔なコードで実装できることは、AI開発のアクセシビリティを高め、研究と実験のスピードを向上させることに貢献します。</p>
+  <div class="sources"><span class="srcchip"><a href="https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax" target="_blank" rel="noopener" title="Show HN: DeepSeek V3 in ~200 lines of pure Jax">Hacker News</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">8</div>
+    <h3><a href="https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview" target="_blank" rel="noopener">サム・アルトマン解雇の元理事がAI CEO不信を表明</a></h3>
+  </div>
+  <p class="summary">OpenAIの元理事であるヘレン・トナー氏が、AI企業のCEOは信頼できないという見解を表明しました。彼女は、サム・アルトマン氏を解雇した際に理事を務めていた人物の一人です。この記事は、AIの安全性と政策の専門家であるトナー氏が、AIの急速な発展に伴うリーダーシップの責任と倫理的課題について、引き続き警鐘を鳴らしていることを示唆しています。</p>
+  <p class="why">💡 AIの安全性と倫理に関するガバナンスの重要性が高まる中、主要AI企業トップに対する信頼性への疑問は、業界の透明性と説明責任の議論を深めます。</p>
+  <div class="sources"><span class="srcchip"><a href="https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview" target="_blank" rel="noopener" title="The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs">The Verge AI</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">9</div>
+    <h3><a href="https://gitlab.com/snipedbywifi/terminactory" target="_blank" rel="noopener">Rust製ターミナル向けアイドル工場ゲーム登場</a></h3>
+  </div>
+  <p class="summary">Rustとratatuiライブラリを使って開発された、ターミナルで動作するアイドル工場ゲーム「terminactory」が発表されました。開発者は、長いエージェントタスクの完了を待つ間に楽しめる「居心地の良い」工場ゲームを求めていたとのことです。このゲームの開発には、最新のClaudeモデルが基盤部分の作成に一部活用されたと記述されており、AIが開発プロセスに寄与した事例としても注目されます。</p>
+  <p class="why">💡 開発者がAIを活用して、特定のニーズを満たすユニークなアプリケーションを効率的に作成できる可能性を示し、AIツールの実用的な側面を浮き彫りにします。</p>
+  <div class="sources"><span class="srcchip"><a href="https://gitlab.com/snipedbywifi/terminactory" target="_blank" rel="noopener" title="Show HN: A terminal-native idle factory game, written in Rust with ratatui">Hacker News</a></span></div>
+  
+</article>
+
+<article class="topic">
+  <div class="head">
+    <div class="rank">10</div>
+    <h3><a href="https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo" target="_blank" rel="noopener">ジェンスン・フアン氏とカリスマCEOの衰退</a></h3>
+  </div>
+  <p class="summary">Nvidiaのジェンスン・フアンCEOは、かつてCES 2025での登場時に14,000人の観衆から喝采を浴びるなど、カリスマ的な創業者の象徴でした。しかし、本記事は彼の離任を背景に、単なる技術的なリーダーシップだけでなく、公衆を魅了する「ビジョナリーなショーマン」としてのCEOの時代が終わりを告げている可能性を論じています。これは、AI時代における企業リーダーシップのあり方の変化を示唆しています。</p>
+  <p class="why">💡 AI技術が社会の基盤となる中で、カリスマ性だけでなく、倫理やガバナンスがより重視される、企業リーダーシップの新たな時代への移行を提起しています。</p>
+  <div class="sources"><span class="srcchip"><a href="https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo" target="_blank" rel="noopener" title="Jensen Huang and the decline of the visionary showman founder CEO">The Verge AI</a></span></div>
+  
+</article>
+
+<h2 class="section">その他の生成AIニュース(39件)— 抜け漏れ防止</h2>
+<ul class="others"><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261115-ai-isnt-replacing-sres-its-deskilling/" target="_blank" rel="noopener">AIが便利になればなるほど深刻になる「自動化の皮肉」に人間はどう対処すべきか</a><time>11/15 09:00</time></li><li><span class="src">ASCII.jp</span><a href="https://ascii.jp/elem/000/004/451/4451604/?rss" target="_blank" rel="noopener">密輸対策のチップ位置確認は可能、エヌビディアが議員に非公開で説明</a><time>11/15 07:14</time></li><li><span class="src">Qiita 生成AI</span><a href="https://qiita.com/charge0315/items/734ed9d4c72daa2638d2" target="_blank" rel="noopener">プロセスは生きているのに定期処理が止まる 〜監視画面を本体から分け、生存と完了時刻を別々に見る設計〜</a><time>11/15 06:41</time></li><li><span class="src">Qiita 生成AI</span><a href="https://qiita.com/tyamada22/items/7e046546d4e80fa1c605" target="_blank" rel="noopener">【第5回】サンプルマンガをpixiv向けにリメイクする――塗り・構図・文字をラフから詰め直す</a><time>11/15 06:09</time></li><li><span class="src">Qiita 生成AI</span><a href="https://qiita.com/quotidia/items/f8387c2940aa6c197d9d" target="_blank" rel="noopener">NTTモビリティのHDマップレス自動運転バス実証の要点：カメラで認識、AIと交通ルールの組み合わせ、レベル2から</a><time>11/15 06:01</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/" target="_blank" rel="noopener">Anthropic CEO Amodei admits &quot;there&#39;s a huge uncertainty in what&#39;s going to happen next year&quot; days before a record IPO</a><time>11/15 04:05</time></li><li><span class="src">Qiita 生成AI</span><a href="https://qiita.com/yuki_1012_1101/items/4cdd356f2cab92e7dae4" target="_blank" rel="noopener">【AWS】【Bedrock】Guardrails は日本語で何を防げて、何を防げないか（AIP 基礎編）</a><time>11/15 02:45</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/" target="_blank" rel="noopener">Gemini 4 Carbon takes the MathArena crown but costs 15 times more than GPT-6.1 Sol</a><time>11/15 01:48</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/" target="_blank" rel="noopener">Anthropic says outdated prompting habits are slowing down Claude Opus 5.5</a><time>11/15 01:42</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/takumahayami/articles/eigyou-ai-geppo-mochitsugi-1mai" target="_blank" rel="noopener">月初に月報だけ読んで終わらせない — 読み返しの中身を翌月の第一仕事につなぐ形</a><time>11/14 22:10</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/dekita/articles/maf-mcp-approval-default-gap" target="_blank" rel="noopener">承認設定の「default」、書き忘れたツールが承認なしで動いていた話</a><time>11/14 21:08</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/satoshimizuhara/articles/ai-agent-care-kitchen-tray-clearing" target="_blank" rel="noopener">介護の給食と配膳と食後の片付け、AIはどこまで任せられますか？ — 下膳の1皿で決める</a><time>11/14 20:52</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary/" target="_blank" rel="noopener">OpenAI reassigns robotics researchers to other teams as general-purpose models might make specialized robotics AI unnecessary</a><time>11/14 20:40</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/anthropic-can-already-retrain-mythos-with-a-fraction-of-the-compute-originally-needed-says-former-researcher-coxon/" target="_blank" rel="noopener">Anthropic can already retrain Mythos with &quot;a fraction of the compute originally needed,&quot; says former researcher Coxon</a><time>11/14 20:21</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/50s_zerotohero/articles/d065a3fef832ee" target="_blank" rel="noopener">スリーパーエージェントを自作して、差分からバックドアを探してみた</a><time>11/14 20:03</time></li><li><span class="src">ASCII.jp</span><a href="https://ascii.jp/elem/000/004/451/4451456/?rss" target="_blank" rel="noopener">タブレットに変形する「VAIO T」が発売記念で3万3000円オフに。手に入れるなら、いまだ！</a><time>11/14 20:00</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/infinitezoomart/articles/9a90c5ce74491a" target="_blank" rel="noopener">無限ズームをループにする：20シーンの接続設計とブラウザでの検証</a><time>11/14 19:28</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/kahia1114/articles/8e0b6a3c27fd34" target="_blank" rel="noopener">MCP入門：AIアプリと、外部のデータやツールをつなぐ共通規格のきほん</a><time>11/14 19:25</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/kahia1114/articles/b1551da0ae6375" target="_blank" rel="noopener">ハーネスエンジニアリング入門：AIエージェントが安定して働ける「環境」を設計する</a><time>11/14 19:25</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/yoshitokinosita/articles/0044-excel-ai-teiki-shiharai-tenken" target="_blank" rel="noopener">Excelの定期支払いの点検でAIに任せるのは照合の式まで — 改定の判断は人間が決める</a><time>11/14 19:19</time></li><li><span class="src">The Decoder</span><a href="https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/" target="_blank" rel="noopener">Runway&#39;s open-source Praxis-1 turns video AI into a robot controller</a><time>11/14 18:45</time></li><li><span class="src">ASCII.jp</span><a href="https://ascii.jp/elem/000/004/451/4451597/?rss" target="_blank" rel="noopener">国産SaaSの致命的欠点「アプリ」 AIより先に手を付けるべきでは？</a><time>11/14 17:00</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/menmen_ailab/articles/875b68bf972d4f" target="_blank" rel="noopener">毎朝Claudeにやることを拾ってもらう仕組みで、直したのはプロンプトではなく自分のメモの書き方だった</a><time>11/14 14:30</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261114-developers-games-industry-using-generative-ai/" target="_blank" rel="noopener">ゲーム開発者の40％が生成AIを使用しているもののそれ以上に多くの人が生成AIは有害だと考えている</a><time>11/14 13:00</time></li><li><span class="src">ASCII.jp</span><a href="https://ascii.jp/elem/000/004/451/4451596/?rss" target="_blank" rel="noopener">予算に合わせて、地域に合う農業AI研修を。自治体・JA向け新サービス開始</a><time>11/14 12:48</time></li><li><span class="src">gihyo.jp</span><a href="https://gihyo.jp/article/2026/11/llama.cpp-v1.0.0?utm_source=feed" target="_blank" rel="noopener">llama.cpp 1.0.0リリース ——API・ABIの非互換変更をメジャーバージョンの更新で明示へ</a><time>11/14 12:09</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/asor/articles/e03c4660324bf1" target="_blank" rel="noopener">自動車比較サイトCarClaveを個人開発した</a><time>11/14 10:31</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/nakanishitf/articles/98bcf4e4b4de3e" target="_blank" rel="noopener">IDOLで写真とイラストを3D化したら、刺身を前にロボットとじゃんけんする世界ができた</a><time>11/14 10:23</time></li><li><span class="src">Zenn 生成AI</span><a href="https://zenn.dev/ai_gyomu_jissok/articles/overtime-ai-jissoku" target="_blank" rel="noopener">残業代の計算を無料AIにさせたら、深夜も固定残業もズレは0円だった</a><time>11/14 10:10</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261114-ai-generated-scientific-papers/" target="_blank" rel="noopener">AIを使って科学論文を偽造してみたらこうなった</a><time>11/14 09:00</time></li><li><span class="src">CodeZine</span><a href="https://codezine.jp/article/detail/30357" target="_blank" rel="noopener">Google、高速・高効率なAIモデル「Gemini 4 Hydrogen」を発表</a><time>11/14 09:00</time></li><li><span class="src">The Verge AI</span><a href="https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search" target="_blank" rel="noopener">Amazon has a plan to index the world’s online shopping data</a><time>11/14 08:49</time></li><li><span class="src">AWS AI Blog</span><a href="https://aws.amazon.com/blogs/machine-learning/production-mlops-at-gs-caltex-with-amazon-sagemaker-canvas-part-1/" target="_blank" rel="noopener">Production MLOps at GS Caltex with Amazon SageMaker Canvas, part 1</a><time>11/14 08:22</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254874/" target="_blank" rel="noopener">海の熱でAIデータセンターを動かす--トヨタ系VCも出資するDrogueの構想</a><time>11/14 08:10</time></li><li><span class="src">GIGAZINE</span><a href="https://gigazine.net/news/20261114-llm-fluency-credible/" target="_blank" rel="noopener">幻覚がひどいAIでも言葉遣いが洗練されていれば人を簡単に騙せることが判明</a><time>11/14 08:00</time></li><li><span class="src">ZDNET Japan</span><a href="https://japan.zdnet.com/article/35254568/" target="_blank" rel="noopener">「Twine」で初めてのゲーム開発--コードもAIも必要なし</a><time>11/14 08:00</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254866/" target="_blank" rel="noopener">AIブームで進む「テック業界の人員削減」、小売・金融への波及に懸念</a><time>11/14 07:35</time></li><li><span class="src">AWS AI Blog</span><a href="https://aws.amazon.com/blogs/machine-learning/route-coding-agent-requests-to-the-right-model-on-amazon-bedrock-with-nvidia-nemo-switchyard/" target="_blank" rel="noopener">Route coding agent requests to the right model on Amazon Bedrock with NVIDIA NeMo Switchyard</a><time>11/14 07:30</time></li><li><span class="src">CNET Japan</span><a href="https://japan.cnet.com/article/35254870/" target="_blank" rel="noopener">ChatGPTが買い物の支払いまで代行、「Wallet」提供開始--購入ごとに本人認証</a><time>11/14 07:30</time></li></ul>
+<p class="errors">⚠️ 取得できなかったソース: Google DeepMind、VentureBeat AI</p>
+
+<footer class="site">
+  毎朝5:30(JST)に自動生成 / 生成時刻: 11/15 09:13 JST<br>
+  ソース: 国内外32媒体のRSSを収集し、複数媒体が報じたトピックほど上位に表示しています。<br>
+  <a href="https://github.com/Takuya-ops/ai-morning-digest" target="_blank" rel="noopener">ai-morning-digest</a> / <a href="../privacy.html">プライバシーポリシー</a><br>
+  📱 スマホは「ホーム画面に追加」でアプリとして使えます
+</footer>
+</div>
+<script>
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('../sw.js').catch(() => {});
+</script>
+</body>
+</html>
