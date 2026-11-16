@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-16】AnthropicのClaude Codeが普及、実務や権限管理での検証進む ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-16.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-16.html</guid>
+    <pubDate>Mon, 16 Nov 2026 00:15:03 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;AnthropicのClaude Codeが普及、実務や権限管理での検証進む&lt;/li&gt;&lt;li&gt;OpenAI、格子上の標準模型定義に向けた研究を発表&lt;/li&gt;&lt;li&gt;OpenAI、科学研究でのAI活用を共有する専門ブログを開設&lt;/li&gt;&lt;li&gt;ダッソーがSOLIDWORKS 2027発表、AIで設計やCAD操作支援&lt;/li&gt;&lt;li&gt;インドの半導体新興Bharat Semiが2400万ドル調達&lt;/li&gt;&lt;li&gt;OpenAI、代理決済機能「ChatGPT Wallet」を発表&lt;/li&gt;&lt;li&gt;足立区、議会答弁AIで検証進める 不確実時は「分かりません」&lt;/li&gt;&lt;li&gt;ガートナーが解説、製造業でのフィジカルAI実装と人の役割&lt;/li&gt;&lt;li&gt;DMG森精機が自社イベント開催、AM活用と最新5軸機を展示&lt;/li&gt;&lt;li&gt;オートバックス、Gemini導入で「脱マクロ」と売上5000億円へ&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-15】テック業界重鎮がフアン氏CEO復帰を請願 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-15.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-15.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-28.html</guid>
     <pubDate>Tue, 27 Oct 2026 23:57:40 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAIが新AIモデル「GPT-6.1 Terra」発表&lt;/li&gt;&lt;li&gt;Googleが新AIモデルGenie 4を発表&lt;/li&gt;&lt;li&gt;AppleがM6チップ搭載MacBook Pro発表&lt;/li&gt;&lt;li&gt;RetellがOpenAIモデルで月間1億回通話&lt;/li&gt;&lt;li&gt;ChatGPT仕事利用レポート 日本は計画・意思決定が最多&lt;/li&gt;&lt;li&gt;iOS 27.2でSiri AIが日本語対応を開始&lt;/li&gt;&lt;li&gt;OpenAIとOracleが提携拡大、ChatGPTにアプリ統合へ&lt;/li&gt;&lt;li&gt;Check PointがOpenAI Daybreakで脆弱性研究を加速&lt;/li&gt;&lt;li&gt;GreptileがGPT-6 Astraでバグ検出を強化&lt;/li&gt;&lt;li&gt;OpenAIに訴訟、AIが娘に服薬中止指示か&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-27】Introducing GPT-6.1 Terra ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-27.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-27.html</guid>
-    <pubDate>Tue, 27 Oct 2026 00:02:35 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Introducing GPT-6.1 Terra&lt;/li&gt;&lt;li&gt;Working with academic communities to build scientific understanding&lt;/li&gt;&lt;li&gt;Google、プライバシーポリシーに「Gmail」「Googleフォト」のデータを広告に使う例外を追加 回避方法は&lt;/li&gt;&lt;li&gt;Greptile takes bug detection beyond code review with GPT-6 Astra&lt;/li&gt;&lt;li&gt;GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases&lt;/li&gt;&lt;li&gt;マネーフォワードME、MetaのAI「Muse」と連携 サブスク見直しや貯蓄計画を相談&lt;/li&gt;&lt;li&gt;人の音声だけで学習したAI「Dessa」登場 会話の間合いや相づちが自然に&lt;/li&gt;&lt;li&gt;ChatGPT’s expanding world of work&lt;/li&gt;&lt;li&gt;How Fanatics and OpenAI streamline the fan experience&lt;/li&gt;&lt;li&gt;How Ultrafast cut incident investigation from hours to minutes at OpenAI&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
