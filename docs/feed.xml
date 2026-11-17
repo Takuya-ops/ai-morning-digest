@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-17】GoogleのAI認定講座、先着1万人に再び無料提供 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-17.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-17.html</guid>
+    <pubDate>Tue, 17 Nov 2026 03:07:51 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;GoogleのAI認定講座、先着1万人に再び無料提供&lt;/li&gt;&lt;li&gt;米加州司法長官、AI暴走ハッキングでOpenAI提訴&lt;/li&gt;&lt;li&gt;Googleマップ、AIによる旅行日程作成機能を追加&lt;/li&gt;&lt;li&gt;Nvidia取締役会、ファン氏のCEO復帰「検討せず」&lt;/li&gt;&lt;li&gt;OpenAI、研究者20万人に最先端モデルを無償開放&lt;/li&gt;&lt;li&gt;OpenAI、オンライン児童性的虐待防止のツール提供&lt;/li&gt;&lt;li&gt;Claude Codeの活用進む、設定や運用の実践例&lt;/li&gt;&lt;li&gt;OpenAI、科学者1800人のChatGPT活用調査&lt;/li&gt;&lt;li&gt;仏LVMHメディア部門、OpenAIと戦略提携を締結&lt;/li&gt;&lt;li&gt;OpenAI、外部機関による第1段階モデル評価を開始&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-16】AnthropicのClaude Codeが普及、実務や権限管理での検証進む ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-16.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-16.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-29.html</guid>
     <pubDate>Thu, 29 Oct 2026 00:15:14 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Google、最新AI「Gemini 4 Carbon」発表 防御能力強化&lt;/li&gt;&lt;li&gt;Google、Android開発で他社製AIエージェント対応へ&lt;/li&gt;&lt;li&gt;NVIDIAとAMD、Metaに計40億ドル出資と提携拡大&lt;/li&gt;&lt;li&gt;Apple、M6搭載「MacBook Pro」発表 33万9800円から&lt;/li&gt;&lt;li&gt;Google DeepMind、仮想世界生成AI「Genie 4」公開&lt;/li&gt;&lt;li&gt;Amazon、生成AI版「Alexa+」の早期アクセス国内開始&lt;/li&gt;&lt;li&gt;OpenAIとServiceNow、業務連携を拡大&lt;/li&gt;&lt;li&gt;ドコモ、スマホ操作履歴から睡眠の質を推定するAI提供&lt;/li&gt;&lt;li&gt;OpenAI、企業の組織構造におけるAIの将来像を考察&lt;/li&gt;&lt;li&gt;Legora、OpenAI技術で法務特化エージェントOSを構築&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-28】OpenAIが新AIモデル「GPT-6.1 Terra」発表 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-28.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-28.html</guid>
-    <pubDate>Tue, 27 Oct 2026 23:57:40 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAIが新AIモデル「GPT-6.1 Terra」発表&lt;/li&gt;&lt;li&gt;Googleが新AIモデルGenie 4を発表&lt;/li&gt;&lt;li&gt;AppleがM6チップ搭載MacBook Pro発表&lt;/li&gt;&lt;li&gt;RetellがOpenAIモデルで月間1億回通話&lt;/li&gt;&lt;li&gt;ChatGPT仕事利用レポート 日本は計画・意思決定が最多&lt;/li&gt;&lt;li&gt;iOS 27.2でSiri AIが日本語対応を開始&lt;/li&gt;&lt;li&gt;OpenAIとOracleが提携拡大、ChatGPTにアプリ統合へ&lt;/li&gt;&lt;li&gt;Check PointがOpenAI Daybreakで脆弱性研究を加速&lt;/li&gt;&lt;li&gt;GreptileがGPT-6 Astraでバグ検出を強化&lt;/li&gt;&lt;li&gt;OpenAIに訴訟、AIが娘に服薬中止指示か&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
