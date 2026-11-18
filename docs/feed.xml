@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-18】OpenAI、高性能・低コストな新モデル発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-18.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-18.html</guid>
+    <pubDate>Wed, 18 Nov 2026 02:33:40 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、高性能・低コストな新モデル発表&lt;/li&gt;&lt;li&gt;Nvidia元CEOフアン氏、CEO復帰に意欲&lt;/li&gt;&lt;li&gt;Gemini Notebook、資料からウェブサイト生成&lt;/li&gt;&lt;li&gt;GeminiがGoogleドライブの最新ファイル参照&lt;/li&gt;&lt;li&gt;マイクロソフト、低価格・高性能な新AIモデル発表&lt;/li&gt;&lt;li&gt;NVIDIA、小型AIスパコン「DGX Spark」セット販売&lt;/li&gt;&lt;li&gt;Anthropic、脆弱性公開猶予期間を短縮&lt;/li&gt;&lt;li&gt;ElevenLabs、日本の音声AI企業を買収&lt;/li&gt;&lt;li&gt;ChatGPTにセールス向けプラグイン登場&lt;/li&gt;&lt;li&gt;Nvidiaのスタートアップ投資が大幅拡大&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-17】GoogleのAI認定講座、先着1万人に再び無料提供 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-17.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-17.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-30.html</guid>
     <pubDate>Fri, 30 Oct 2026 00:16:37 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;グーグル、AIモデル「Gemini 4 Carbon」発表&lt;/li&gt;&lt;li&gt;OpenAI、AI行動指針「Model Spec」を改定&lt;/li&gt;&lt;li&gt;ChatGPT Pro/BusinessでAPI利用枠提供&lt;/li&gt;&lt;li&gt;NVIDIA、高精度文字起こしAIを公開&lt;/li&gt;&lt;li&gt;OpenAI、最先端AIの逸脱検出手法を公開&lt;/li&gt;&lt;li&gt;ロペス＆グレイ、AIで契約審査効率化&lt;/li&gt;&lt;li&gt;AWS、AIクラウドで1兆ドル事業目指す&lt;/li&gt;&lt;li&gt;パナソニック新CAIO、AI活用戦略を語る&lt;/li&gt;&lt;li&gt;ダッソー、AI活用設計シミュレーションを提示&lt;/li&gt;&lt;li&gt;建設会社、AIで見積書処理を効率化&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-29】Google、最新AI「Gemini 4 Carbon」発表 防御能力強化 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-29.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-29.html</guid>
-    <pubDate>Thu, 29 Oct 2026 00:15:14 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Google、最新AI「Gemini 4 Carbon」発表 防御能力強化&lt;/li&gt;&lt;li&gt;Google、Android開発で他社製AIエージェント対応へ&lt;/li&gt;&lt;li&gt;NVIDIAとAMD、Metaに計40億ドル出資と提携拡大&lt;/li&gt;&lt;li&gt;Apple、M6搭載「MacBook Pro」発表 33万9800円から&lt;/li&gt;&lt;li&gt;Google DeepMind、仮想世界生成AI「Genie 4」公開&lt;/li&gt;&lt;li&gt;Amazon、生成AI版「Alexa+」の早期アクセス国内開始&lt;/li&gt;&lt;li&gt;OpenAIとServiceNow、業務連携を拡大&lt;/li&gt;&lt;li&gt;ドコモ、スマホ操作履歴から睡眠の質を推定するAI提供&lt;/li&gt;&lt;li&gt;OpenAI、企業の組織構造におけるAIの将来像を考察&lt;/li&gt;&lt;li&gt;Legora、OpenAI技術で法務特化エージェントOSを構築&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
