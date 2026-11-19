@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-19】OpenAI、新AIモデル「GPT-6.2 Astra/Sol」発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-19.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-19.html</guid>
+    <pubDate>Thu, 19 Nov 2026 02:00:03 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;OpenAI、新AIモデル「GPT-6.2 Astra/Sol」発表&lt;/li&gt;&lt;li&gt;Google、新AIモデル「Gemini 4 Neon」を発表&lt;/li&gt;&lt;li&gt;マイクロソフト、AI生成アプリ安全実行の基盤を正式リリース&lt;/li&gt;&lt;li&gt;マイクロソフト、高性能AIモデル7種を発表&lt;/li&gt;&lt;li&gt;OpenAI、AIを活用したチップ設計で大幅な進展&lt;/li&gt;&lt;li&gt;NVIDIA RTX Spark搭載の小型AI対応PCが発売&lt;/li&gt;&lt;li&gt;Google Geminiに「タスク」機能追加、日本でも利用可能&lt;/li&gt;&lt;li&gt;OpenAI、高性能AIが社会に与える影響と制御を考察&lt;/li&gt;&lt;li&gt;OpenAI、コーディングAIによる研究加速と課題を分析&lt;/li&gt;&lt;li&gt;住友生命、ChatGPT Enterprise導入で業務効率化&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-18】OpenAI、高性能・低コストな新モデル発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-18.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-18.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-31.html</guid>
     <pubDate>Sat, 31 Oct 2026 00:04:32 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Gemini Notebook、米印の教科書数百冊が無料利用可能に&lt;/li&gt;&lt;li&gt;Gemini、チャット上でPDFやスライドの直接編集に対応&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPT Pro全プランの利用枠を2倍に拡大&lt;/li&gt;&lt;li&gt;Cursor上のClaude拡張機能が改ざん、最大5千人に影響&lt;/li&gt;&lt;li&gt;Gemini、チャット内で文書やPDFの作成・直接編集に対応&lt;/li&gt;&lt;li&gt;OpenAI、サイト管理者の学習拒否方針を統一反映へ&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTで暴力防止や若者保護策を強化&lt;/li&gt;&lt;li&gt;OpenAI、AI学習におけるフェアユースの重要性を主張&lt;/li&gt;&lt;li&gt;プライバシー重視のAI「Ollie」がサービス終了へ&lt;/li&gt;&lt;li&gt;GMO、サイバー攻撃情報に1.5億円の懸賞金を設定&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-30】グーグル、AIモデル「Gemini 4 Carbon」発表 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-30.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-30.html</guid>
-    <pubDate>Fri, 30 Oct 2026 00:16:37 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;グーグル、AIモデル「Gemini 4 Carbon」発表&lt;/li&gt;&lt;li&gt;OpenAI、AI行動指針「Model Spec」を改定&lt;/li&gt;&lt;li&gt;ChatGPT Pro/BusinessでAPI利用枠提供&lt;/li&gt;&lt;li&gt;NVIDIA、高精度文字起こしAIを公開&lt;/li&gt;&lt;li&gt;OpenAI、最先端AIの逸脱検出手法を公開&lt;/li&gt;&lt;li&gt;ロペス＆グレイ、AIで契約審査効率化&lt;/li&gt;&lt;li&gt;AWS、AIクラウドで1兆ドル事業目指す&lt;/li&gt;&lt;li&gt;パナソニック新CAIO、AI活用戦略を語る&lt;/li&gt;&lt;li&gt;ダッソー、AI活用設計シミュレーションを提示&lt;/li&gt;&lt;li&gt;建設会社、AIで見積書処理を効率化&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
