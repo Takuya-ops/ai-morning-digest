@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-20】Googleが新モデル「Gemini 4 Neon」を発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-20.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-20.html</guid>
+    <pubDate>Fri, 20 Nov 2026 01:58:57 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Googleが新モデル「Gemini 4 Neon」を発表&lt;/li&gt;&lt;li&gt;Mac版GeminiにAIがアプリ操作する機能追加&lt;/li&gt;&lt;li&gt;Apple、自社製AIエージェント開発に着手か&lt;/li&gt;&lt;li&gt;Metaの新AIウェアラブル「Muse Charm」は300ドルか&lt;/li&gt;&lt;li&gt;OpenAIの新モデルGPT-6.2に賛否両論&lt;/li&gt;&lt;li&gt;Google、宇宙AIデータセンター構想でBlue Originと提携&lt;/li&gt;&lt;li&gt;OpenAI、AIでAMD製GPU設計を最大14%改善&lt;/li&gt;&lt;li&gt;Google、AIエージェント機能「Tasks in Gemini」を日本で無料提供&lt;/li&gt;&lt;li&gt;ディズニー、「スター・ウォーズ」キャラをAIロボット化&lt;/li&gt;&lt;li&gt;OpenAIが「Performance Factory」でChatGPTを高速化&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-19】OpenAI、新AIモデル「GPT-6.2 Astra/Sol」発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-19.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-19.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-01.html</guid>
     <pubDate>Sat, 31 Oct 2026 23:36:28 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;ChatGPTのHTMLプレビュー機能にアカウント乗っ取りの脆弱性&lt;/li&gt;&lt;li&gt;Claude、月額200ドルプランを「Ultra」へ改称し5時間制限を撤廃&lt;/li&gt;&lt;li&gt;アップルCEO、目的のないAI開発を行わない方針を強調&lt;/li&gt;&lt;li&gt;TechCrunch、創業者向けサミットをボストンで開催へ&lt;/li&gt;&lt;li&gt;xAIのデータセンター大気汚染訴訟、裁判官が審理継続を許可&lt;/li&gt;&lt;li&gt;OpenAI、新たな資金調達ラウンドで調達目標額を引き下げか&lt;/li&gt;&lt;li&gt;Nvidia、NscaleのAIデータセンター向け融資の保証人を検討&lt;/li&gt;&lt;li&gt;Claude Enterpriseに費用対効果を可視化する3つの新機能&lt;/li&gt;&lt;li&gt;プライバシー重視のAIアシスタント「Ollie」がサービス終了へ&lt;/li&gt;&lt;li&gt;GMOがサイバー攻撃情報に1.5億円の異例な懸賞金を設定&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-10-31】Gemini Notebook、米印の教科書数百冊が無料利用可能に ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-31.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-10-31.html</guid>
-    <pubDate>Sat, 31 Oct 2026 00:04:32 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Gemini Notebook、米印の教科書数百冊が無料利用可能に&lt;/li&gt;&lt;li&gt;Gemini、チャット上でPDFやスライドの直接編集に対応&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPT Pro全プランの利用枠を2倍に拡大&lt;/li&gt;&lt;li&gt;Cursor上のClaude拡張機能が改ざん、最大5千人に影響&lt;/li&gt;&lt;li&gt;Gemini、チャット内で文書やPDFの作成・直接編集に対応&lt;/li&gt;&lt;li&gt;OpenAI、サイト管理者の学習拒否方針を統一反映へ&lt;/li&gt;&lt;li&gt;OpenAI、ChatGPTで暴力防止や若者保護策を強化&lt;/li&gt;&lt;li&gt;OpenAI、AI学習におけるフェアユースの重要性を主張&lt;/li&gt;&lt;li&gt;プライバシー重視のAI「Ollie」がサービス終了へ&lt;/li&gt;&lt;li&gt;GMO、サイバー攻撃情報に1.5億円の懸賞金を設定&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
