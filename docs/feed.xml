@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-21】企業の生成AI活用やUbisoft新スタジオ設立など各社で新展開 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-21.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-21.html</guid>
+    <pubDate>Sat, 21 Nov 2026 01:40:53 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;企業の生成AI活用やUbisoft新スタジオ設立など各社で新展開&lt;/li&gt;&lt;li&gt;Mac版「Gemini」にPC操作を代行する「computer use」機能が追加&lt;/li&gt;&lt;li&gt;GoogleとBlue Originが提携、2029年に宇宙AIデータセンター衛星打ち上げへ&lt;/li&gt;&lt;li&gt;AnthropicがClaude Codeに新実験機能「Code Mode」を追加&lt;/li&gt;&lt;li&gt;OpenAI、常時稼働型AIエージェント「dots」の提供範囲を拡大&lt;/li&gt;&lt;li&gt;Google検索、AIモードの履歴サイドバーや履歴非保持のオプションを導入&lt;/li&gt;&lt;li&gt;OpenAI、モデル能力の不正抽出を防ぐ敵対的蒸留対策を公表&lt;/li&gt;&lt;li&gt;Hebbiaが金融調査で「GPT-6 Astra」の精度向上を検証&lt;/li&gt;&lt;li&gt;創薬初期候補を選定するAI評価ベンチマーク「MedChemBench」&lt;/li&gt;&lt;li&gt;AIで高い成果を出す企業ほど人員を増やす傾向、IDC調査で判明&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-20】Googleが新モデル「Gemini 4 Neon」を発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-20.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-20.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-02.html</guid>
     <pubDate>Sun, 01 Nov 2026 23:54:03 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;AI学習拒否をrobots.txtで一括指定可能に&lt;/li&gt;&lt;li&gt;Claude有料プラン「Max 20x」が「Ultra」に&lt;/li&gt;&lt;li&gt;フランクフルト空港がAIでDX推進&lt;/li&gt;&lt;li&gt;キオクシア、AI需要で2027年分メモリ完売&lt;/li&gt;&lt;li&gt;メルカリ、CAIOの奮闘でAI利用率100%達成&lt;/li&gt;&lt;li&gt;オラクル、ChatGPTと連携し業務自動化支援&lt;/li&gt;&lt;li&gt;OpenAI、データセンターを「AI計算キャンパス」に改称か&lt;/li&gt;&lt;li&gt;AIはCEOを楽にするが、他の人々はどうか&lt;/li&gt;&lt;li&gt;AI、多くの企業に「経済的利益ゼロ」とエコノミスト&lt;/li&gt;&lt;li&gt;生成AIリスク、工事写真の改ざん防止が課題&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-11-01】ChatGPTのHTMLプレビュー機能にアカウント乗っ取りの脆弱性 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-01.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-01.html</guid>
-    <pubDate>Sat, 31 Oct 2026 23:36:28 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;ChatGPTのHTMLプレビュー機能にアカウント乗っ取りの脆弱性&lt;/li&gt;&lt;li&gt;Claude、月額200ドルプランを「Ultra」へ改称し5時間制限を撤廃&lt;/li&gt;&lt;li&gt;アップルCEO、目的のないAI開発を行わない方針を強調&lt;/li&gt;&lt;li&gt;TechCrunch、創業者向けサミットをボストンで開催へ&lt;/li&gt;&lt;li&gt;xAIのデータセンター大気汚染訴訟、裁判官が審理継続を許可&lt;/li&gt;&lt;li&gt;OpenAI、新たな資金調達ラウンドで調達目標額を引き下げか&lt;/li&gt;&lt;li&gt;Nvidia、NscaleのAIデータセンター向け融資の保証人を検討&lt;/li&gt;&lt;li&gt;Claude Enterpriseに費用対効果を可視化する3つの新機能&lt;/li&gt;&lt;li&gt;プライバシー重視のAIアシスタント「Ollie」がサービス終了へ&lt;/li&gt;&lt;li&gt;GMOがサイバー攻撃情報に1.5億円の異例な懸賞金を設定&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
