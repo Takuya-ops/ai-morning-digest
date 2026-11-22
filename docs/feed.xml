@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-22】Claudeと数学者がリーマン予想を証明か、Lean開発陣が正しいと認定 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-22.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-22.html</guid>
+    <pubDate>Sun, 22 Nov 2026 00:36:48 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Claudeと数学者がリーマン予想を証明か、Lean開発陣が正しいと認定&lt;/li&gt;&lt;li&gt;Signal、AI監視の脅威に対抗しモバイル版のスクショを制限&lt;/li&gt;&lt;li&gt;米Nvidiaに2つの顔、好調な最新決算と創業者復帰を求める声&lt;/li&gt;&lt;li&gt;管理職の過半数が「使われなくなったAI」を経験、企業独自の判断基準が壁に&lt;/li&gt;&lt;li&gt;SMSで使える主要AIエージェント、日常や仕事向けが台頭&lt;/li&gt;&lt;li&gt;俳優がAI版の顔を新興企業に提供、中国で流行しハリウッドへ波及か&lt;/li&gt;&lt;li&gt;企業のAI選定に変化、単体サービスから業務環境組み込み型へ移行&lt;/li&gt;&lt;li&gt;AIで成果を出す企業ほど人員増を計画、IDCが通説覆す調査結果を発表&lt;/li&gt;&lt;li&gt;AIエージェント向け欧州公式法基盤「Pandex」がMCP上で登場&lt;/li&gt;&lt;li&gt;国連の「キラーロボット」規制協議が難航、選択肢の検討開始で合意&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-21】企業の生成AI活用やUbisoft新スタジオ設立など各社で新展開 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-21.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-21.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-03.html</guid>
     <pubDate>Tue, 03 Nov 2026 02:35:03 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;ChatGPTのChat/Work統合とCodex利用枠共通化&lt;/li&gt;&lt;li&gt;CursorのClaude Code拡張機能にSSHバックドア&lt;/li&gt;&lt;li&gt;Google AI搭載ARグラス「XREAL AURA」国内予約開始&lt;/li&gt;&lt;li&gt;OpenAIがGit互換バックエンド「Pando」を開発&lt;/li&gt;&lt;li&gt;OpenAIが電力網保護プログラムを発表&lt;/li&gt;&lt;li&gt;主要AI企業、robots.txtでのAI学習拒否に対応へ&lt;/li&gt;&lt;li&gt;OpenAIが日常業務AI支援度ベンチマーク「LifeVal」発表&lt;/li&gt;&lt;li&gt;AppleがサードパーティAIアプリで収益増を模索&lt;/li&gt;&lt;li&gt;Y Combinator社長、AIエージェントに年間20万ドル消費&lt;/li&gt;&lt;li&gt;Anthropic、IPO修正申請で巨額インフラ契約額を公表&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-11-02】AI学習拒否をrobots.txtで一括指定可能に ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-02.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-02.html</guid>
-    <pubDate>Sun, 01 Nov 2026 23:54:03 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;AI学習拒否をrobots.txtで一括指定可能に&lt;/li&gt;&lt;li&gt;Claude有料プラン「Max 20x」が「Ultra」に&lt;/li&gt;&lt;li&gt;フランクフルト空港がAIでDX推進&lt;/li&gt;&lt;li&gt;キオクシア、AI需要で2027年分メモリ完売&lt;/li&gt;&lt;li&gt;メルカリ、CAIOの奮闘でAI利用率100%達成&lt;/li&gt;&lt;li&gt;オラクル、ChatGPTと連携し業務自動化支援&lt;/li&gt;&lt;li&gt;OpenAI、データセンターを「AI計算キャンパス」に改称か&lt;/li&gt;&lt;li&gt;AIはCEOを楽にするが、他の人々はどうか&lt;/li&gt;&lt;li&gt;AI、多くの企業に「経済的利益ゼロ」とエコノミスト&lt;/li&gt;&lt;li&gt;生成AIリスク、工事写真の改ざん防止が課題&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
