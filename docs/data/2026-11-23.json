@@ -1,0 +1,754 @@
+{
+ "schemaVersion": 3,
+ "date": "2026-11-23",
+ "generatedAt": "2026-11-23T01:09:26.188Z",
+ "since": "2026-11-21T23:03:45.259Z",
+ "windowHours": 26,
+ "stats": {
+  "articleCount": 55,
+  "feedCount": 32,
+  "topicCount": 55,
+  "feedErrors": [
+   {
+    "feedId": "deepmind",
+    "feedName": "Google DeepMind",
+    "error": "Non-whitespace before first tag.\nLine: 0\nColumn: 1\nChar: \u001f"
+   },
+   {
+    "feedId": "venturebeat-ai",
+    "feedName": "VentureBeat AI",
+    "error": "Status code 429"
+   }
+  ]
+ },
+ "topics": [
+  {
+   "id": "1a10f1676d46fc01a909d8ea",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 1,
+   "headline": "Perplexity and Intelligence",
+   "summary": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
+   "whyItMatters": "",
+   "score": 5,
+   "sourceCount": 1,
+   "entities": [
+    "perplexity"
+   ],
+   "articles": [
+    {
+     "title": "Perplexity and Intelligence",
+     "link": "https://openai.com/index/perplexity-and-intelligence",
+     "feedName": "OpenAI",
+     "lang": "en",
+     "date": "2026-11-22T00:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://openai.com/index/perplexity-and-intelligence",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "2f6893c0473ec709a91db8df0a379ecf4cdb0d9ec61e5017a87b8d4f384c0d0b"
+   }
+  },
+  {
+   "id": "4e29334a0a6bdc7a362ecd5f",
+   "topics": [
+    "開発ツール"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 2,
+   "headline": "OpenAIのチーフサイエンティスト、AI開発に業界共通の「上限」を提案 指標は「パープレキシティ」",
+   "summary": "OpenAIのチーフサイエンティストが、AIの予測精度を示す「パープレキシティ」を共通指標とし、開発の上限を業界で設けるよう提案する論考を公開した。GPT-3.5以降の社内モデルの推移も開示し、早ければ2027年にも事前学習が急加速する恐れがあるとして、監視技術が追いつくまでの歯止めを訴えている。",
+   "whyItMatters": "",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "openai",
+    "gpt",
+    "perplexity"
+   ],
+   "articles": [
+    {
+     "title": "OpenAIのチーフサイエンティスト、AI開発に業界共通の「上限」を提案 指標は「パープレキシティ」",
+     "link": "https://www.itmedia.co.jp/news/article/2611/23/2000003394/",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-22T22:49:18.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/news/article/2611/23/2000003394/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "2baca90c65a055cc2af4b1a65643fd81ec5cf15d5a4fd10c0fde985d773ada13"
+   }
+  },
+  {
+   "id": "90468db0d5a9c8d3332bd7b5",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 3,
+   "headline": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+   "summary": "To establish a speed limit on AI development, you need to agree on how to measure speed.",
+   "whyItMatters": "",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [
+    "openai"
+   ],
+   "articles": [
+    {
+     "title": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+     "link": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-11-22T21:14:07.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "faac3559cfb8a9ed000a8fedd2a23c334827f8fc4a6645d97d068c3f80c788a3"
+   }
+  },
+  {
+   "id": "45c93804bbc6d2cd4ee04b4e",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 4,
+   "headline": "メルカリの情報流出、AI委託先で何が起きた？ 確認された2つの攻撃",
+   "summary": "メルカリグループが業務で利用する「Notion AI」で、チャット記録の一部が外部に流出した可能性があることが公表された。AI処理を委託企業では、外部クラウド事業者への侵害や認証情報の窃取、サービスの脆弱性を悪用した不正アクセスが確認された。",
+   "whyItMatters": "",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "メルカリの情報流出、AI委託先で何が起きた？ 確認された2つの攻撃",
+     "link": "https://kn.itmedia.co.jp/kn/article/2611/23/2000003393/",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-22T21:00:00.000Z"
+    }
+   ],
+   "articleKey": "https://kn.itmedia.co.jp/kn/article/2611/23/2000003393/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "38d73f55548538304832556d3486507b23c4f31e73e90bf17f4d2cda6b27a1f5"
+   }
+  },
+  {
+   "id": "b51af88d58d8138dece56306",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 5,
+   "headline": "Why data centers are at the center of the Big Tech backlash",
+   "summary": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+   "whyItMatters": "",
+   "score": 4.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "Why data centers are at the center of the Big Tech backlash",
+     "link": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+     "feedName": "TechCrunch AI",
+     "lang": "en",
+     "date": "2026-11-22T18:08:43.000Z"
+    }
+   ],
+   "articleKey": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "b11428f3f769058e599f3e4879f313f13ada61613a550874cf45486465d13bcc"
+   }
+  },
+  {
+   "id": "4c3c98b70ba36bc0a9c30ff4",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 6,
+   "headline": "Anthropicの数学者、「Claude」と共同で「リーマン予想」を証明したと主張 Leanコミュニティが「正しい」と認定",
+   "summary": "Anthropicの数学者レベント・アルポーゲ氏は、「Claude」と共同で未解決問題「リーマン予想」の証明を発見したと発表した。証明支援系「Lean」で記述された1700万行の形式証明を公開しており、Leanコミュニティは複数の検証を経て「証明は正しい」と認定する共同声明を出した。",
+   "whyItMatters": "",
+   "score": 4,
+   "sourceCount": 1,
+   "entities": [
+    "anthropic",
+    "claude"
+   ],
+   "articles": [
+    {
+     "title": "Anthropicの数学者、「Claude」と共同で「リーマン予想」を証明したと主張 Leanコミュニティが「正しい」と認定",
+     "link": "https://www.itmedia.co.jp/news/article/2611/22/2000003388/",
+     "feedName": "ITmedia AI+",
+     "lang": "ja",
+     "date": "2026-11-21T23:21:31.000Z"
+    }
+   ],
+   "articleKey": "https://www.itmedia.co.jp/news/article/2611/22/2000003388/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "ja",
+    "status": "ready"
+   },
+   "narration": {
+    "language": "ja",
+    "scriptHash": "63c49d4251f4b64788793344db8c36873a8012b022d1dd54aded2efe9faf7aee"
+   }
+  },
+  {
+   "id": "d76d1fd47e7f903ad7098496",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 7,
+   "headline": "0rwx – A simple model of AI usage, inspired by Unix permissions",
+   "summary": "Article URL: https://0rwx.com/ Comments URL: https://news.ycombinator.com/item?id=50605445 Points: 8 # Comments: 2",
+   "whyItMatters": "",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
+     "link": "https://0rwx.com/",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-11-22T23:53:00.000Z"
+    }
+   ],
+   "articleKey": "https://0rwx.com/",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "7f48b2a0d2a4526809dc3ac420c938a41cdbb1876baaec8d96757c9f5df8e44a"
+   }
+  },
+  {
+   "id": "61d8127e693f0b0f3ba7ef2d",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 8,
+   "headline": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+   "summary": "Article URL: https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3 Comments URL: https://news.ycombinator.com/item?id=50605045 Points: 114 # Comments: 70",
+   "whyItMatters": "",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [
+    "claude"
+   ],
+   "articles": [
+    {
+     "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+     "link": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-11-22T23:12:10.000Z"
+    }
+   ],
+   "articleKey": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "9ea754aa5be4aabf10f1f4aa6c311cde2a4d756b1328417b7390ae4e2790824f"
+   }
+  },
+  {
+   "id": "7d27fffa3906bd9ac7f94262",
+   "topics": [
+    "モデル・API"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 9,
+   "headline": "We haven’t seen the last of the major tech outages",
+   "summary": "Over the last week or so, we have seen a nationwide FAA ground stop, a multi-day Outlook outage that brought entire companies to a standstill, and a banking outage at JPMorgan Chase. But the consensus is that there are more to come.…",
+   "whyItMatters": "",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [],
+   "articles": [
+    {
+     "title": "We haven’t seen the last of the major tech outages",
+     "link": "https://www.theverge.com/tech/1039851/major-tech-outages",
+     "feedName": "The Verge AI",
+     "lang": "en",
+     "date": "2026-11-22T22:48:02.000Z"
+    }
+   ],
+   "articleKey": "https://www.theverge.com/tech/1039851/major-tech-outages",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "acf33b2589c1feddc42b8f65a808b97d71dea2745bb0a5fb5418a0502a573404"
+   }
+  },
+  {
+   "id": "7435df697c669a75d307dac6",
+   "topics": [
+    "エージェント",
+    "開発ツール"
+   ],
+   "faq": [],
+   "aiGenerated": false,
+   "rank": 10,
+   "headline": "Localcode, open source agentic coding on your Mac with one command",
+   "summary": "Article URL: https://github.com/mjwsolo/localcode Comments URL: https://news.ycombinator.com/item?id=50604540 Points: 12 # Comments: 1",
+   "whyItMatters": "",
+   "score": 3.5,
+   "sourceCount": 1,
+   "entities": [
+    "github"
+   ],
+   "articles": [
+    {
+     "title": "Localcode, open source agentic coding on your Mac with one command",
+     "link": "https://github.com/mjwsolo/localcode",
+     "feedName": "Hacker News",
+     "lang": "en",
+     "date": "2026-11-22T22:18:48.000Z"
+    }
+   ],
+   "articleKey": "https://github.com/mjwsolo/localcode",
+   "editorial": {
+    "method": "source_excerpt",
+    "language": "en",
+    "status": "untranslated"
+   },
+   "narration": {
+    "language": "en",
+    "scriptHash": "0ef420ed9c265dac7c42487270be78a4c78fa133201ac8f8976c08abb939513f"
+   }
+  }
+ ],
+ "others": [
+  {
+   "title": "11/30にclaude-sonnet-4-5が停止、日付なしIDとClaude Codeも対象｜今週のAI API変更（11/16-11/22）",
+   "link": "https://qiita.com/aiapi_radar_news/items/948d3e913b6e0c21e9a7",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-11-23T00:33:30.000Z",
+   "excerpt": "使っているモデルの提供終了や値上げ、把握できていますか？ 直近の期限は 2026-11-30（claude-sonnet-4-5）です。 主要AI API（OpenAI / Claude / Gemini ほか）の仕様・価格・廃止・規約の変更を、 公式ドキュメントを出典に..."
+  },
+  {
+   "title": "帝国データバンク調査、正社員不足が53.6%と10月で5年連続5割超｜現場の帳票・伝票入力を減らす自動化の3ステップ",
+   "link": "https://qiita.com/DnD-inc/items/2631358c0010946b2a38",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-11-23T00:28:42.000Z",
+   "excerpt": "帝国データバンク調査、正社員不足が53.6%と10月で5年連続5割超｜現場の帳票・伝票入力を減らす自動化の3ステップ 本記事は、株式会社DnD（https://dnd-inc.jp）のコラムを一部編集して掲載しています。 初出: https://dnd-inc.jp/b..."
+  },
+  {
+   "title": "検索の表示が落ちた原因を、AI は4回取り下げた。最後に残ったのは「巡回されていない」だった2026年9月【連載 第3部④】",
+   "link": "https://qiita.com/BrainCommunity/items/bfde2d8aab10a752d1e2",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-11-23T00:25:35.000Z",
+   "excerpt": "検索の表示が落ちた原因を、AI は4回取り下げた。最後に残ったのは「巡回されていない」だった2026年9月【連載 第3部④】 ブレインコミュニティ合同会社の大川です。連載「ノー・ルック・コーディングから卒業まで」の第3部（2026年9月〜10月前半）の4本目です。第3部③..."
+  },
+  {
+   "title": "Databricks の MLflow トレースに個人情報を残さない: スパンプロセッサーで送信前に書き換える",
+   "link": "https://qiita.com/taka_yayoi/items/fbf7d66eb7edcfe7f7ef",
+   "feedName": "Qiita 生成AI",
+   "lang": "ja",
+   "date": "2026-11-23T00:19:30.000Z",
+   "excerpt": "はじめに MLflow のトレースには、アプリの入力と出力がそのまま記録されます。デバッグには便利ですが、ユーザーが入力したメールアドレスや、ツールが返した電話番号もそのまま残ります。本番のエージェントでトレースを取り続けるなら、個人情報の扱いは避けて通れません。 以前、..."
+  },
+  {
+   "title": "世界初の直径200mm単結晶ダイヤモンドウェハーは何を変えるのか、AIチップの99％をダイヤモンドにする構想とは？",
+   "link": "https://gigazine.net/news/20261123-diamond-foundrysingle-crystal-diamond/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-23T00:00:00.000Z",
+   "excerpt": "人工ダイヤモンドメーカーのDiamond Foundryが、世界初となる直径200mmの単結晶ダイヤモンドウェハーの製造に成功しました。同社は銅を大幅に上回る熱伝導率を持つダイヤモンドを半導体に直接組み込むことでAIチップの発熱問題を解消し、将来的にはダイヤモンドそのものをトランジスタの材料として利用することを目指しています。 続きを読む..."
+  },
+  {
+   "title": "消費者の74％、買い物でAIエージェントのアドバイスを信頼--Salesforce調査",
+   "link": "https://japan.zdnet.com/article/35255207/",
+   "feedName": "ZDNET Japan",
+   "lang": "ja",
+   "date": "2026-11-22T22:00:00.000Z",
+   "excerpt": "AIエージェントを利用する買い物客は、平均的な購入者より8％多く支出するほか、1回の注文当たりの購入商品数も23％多いことが新たな調査で明らかになった。"
+  },
+  {
+   "title": "無料の画像生成AI「MiniMax H3-Image」はここがすごい Nano Bananaのようなモデルがローカルで動くのが当たり前に",
+   "link": "https://ascii.jp/elem/000/004/453/4453903/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-22T22:00:00.000Z",
+   "excerpt": "H3-Imageをクラウドとローカルで試用し、料金と生成速度を紹介。P-Image-OSSと人物の再現性や画風変更、LoRAの効果を比較し、両モデルの強みと弱み、併用の可能性を作例とともに解説する。"
+  },
+  {
+   "title": "AI返信の確認待ちを増やさない：レビューWIP上限を運用状態にする",
+   "link": "https://zenn.dev/miraigent/articles/ai-reply-review-wip-limit",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T21:01:46.000Z",
+   "excerpt": "AIが問い合わせ返信の下書きを作れるようになると、「作れる件数」は増えます。しかし、確認者が一日に見られる件数は別の制約です。ここを無視すると、確認待ちが積み上がり、古い下書きと新しい下書きが同じ列に並びます。 この記事では、返信案の生成量ではなく、確認に入ってよい量をレビューWIP（Work In Progress）として管理する考え方を整理します。対象は、AIが下書きを作り、人が宛先・根拠・内容を確認して送る小さな運用です。 WIP上限は「AIの性能」ではなく「人の確認能力」の境界 最初に、キューを次の状態へ分けます。 DRAFTED │ 人が確認できる材料がそろった ..."
+  },
+  {
+   "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+   "link": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-11-22T21:01:16.000Z",
+   "excerpt": "Article URL: https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth Comments URL: https://news.ycombinator.com/item?id=50603845 Points: 170 # Comments: 59"
+  },
+  {
+   "title": "Select Styling Specimens",
+   "link": "https://simonwillison.net/2026/Nov/22/select-styling/",
+   "feedName": "Simon Willison",
+   "lang": "en",
+   "date": "2026-11-22T19:45:06.000Z",
+   "excerpt": "Tool: Select Styling Specimens I got frustrated at how HTML <select> boxes default to looking different in different browsers, and are (I think) quite ugly in Chrome: So I had Claude Fable 5.2 build me this page showing all of the ways they can be styled: Build an HTML page that shows all of the ways a select box can be styled, I plan to take screenshots in every desktop and mobile browser After some experimentation I've decided my favorite CSS for select boxes is this: select { appearance : none ; color : # 1f2933 ; padding : 0.5 em 2.25 em 0.5 em 0.75 em ; border : 1 px solid # c4cbd3 ; border-radius : 6 px ; background : # fff url ( \"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23667085' stroke-width='1.5'/%3E%3C/svg%3E\" ) no-repeat right 0.75 em center / 0.75 em ; } Here's what that looks like in the three browsers: Tags: tools , css , html"
+  },
+  {
+   "title": "Harvard CS 2881R AI Safety",
+   "link": "https://boazbk.github.io/mltheoryseminar/",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-11-22T18:01:54.000Z",
+   "excerpt": "Article URL: https://boazbk.github.io/mltheoryseminar/ Comments URL: https://news.ycombinator.com/item?id=50602153 Points: 32 # Comments: 3"
+  },
+  {
+   "title": "Binding of Isaac developer removes AI music from Repentance Plus",
+   "link": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-11-22T17:25:20.000Z",
+   "excerpt": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section. They found several audio files with Suno metadata that pointed back to the tracks on Suno's site. Creator Edmund McMillen took to X to apologize and claimed he \"had no idea\" the in-game GTA parody used generative AI music. Adding to the drama, Valve requires developers to disclose how and when they use generative AI in the development process, and Nicalis, Inc., the studio behin … Read the full story at The Verge."
+  },
+  {
+   "title": "Perplexity and Intelligence",
+   "link": "https://openai.com/index/perplexity-and-intelligence/",
+   "feedName": "Hacker News",
+   "lang": "en",
+   "date": "2026-11-22T17:06:27.000Z",
+   "excerpt": "Article URL: https://openai.com/index/perplexity-and-intelligence/ Comments URL: https://news.ycombinator.com/item?id=50601525 Points: 464 # Comments: 320"
+  },
+  {
+   "title": "AIに「説明して」と頼むと長文が返ってくる。説明を動画で作らせたら、中で起きていることをすぐ追えるようになった",
+   "link": "https://zenn.dev/viewsengineer/articles/ai-output-video-explainer",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T15:26:05.000Z",
+   "excerpt": "AI にコードを書かせて、「説明して」と頼む。長い文章が返ってきます。合っていそうです。でも、読んでも頭に絵が浮かびません。 説明を文章ではなく動画で作らせてみたら、中で起きていることを、すぐに追えるようになりました。 題材は選びません。どんな難問をやらせても、どんなに専門外のことをやらせても、AI のやっていることが、短い時間で分かるようになります。 この記事では、同じコードについて「文章の説明」と「動画の説明」を並べて見せたあと、その動画を作る仕組みを書きます。画面を「時刻 t の関数」として HTML で書き、Playwright でコマ撮りして、ffmpeg でつなぐだけの作りで..."
+  },
+  {
+   "title": "AI coding agents ace isolated tests but complete fewer than one in ten tasks in a simulated workplace",
+   "link": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-22T15:15:48.000Z",
+   "excerpt": "A new real-world test puts AI coding agents in a simulated developer job with colleagues, project boards, and incomplete handoffs, where they have to keep developing software on their own and reliably close open tickets in a messy daily workflow. Even Opus 5.5 and Astra fall far short, solving fewer than one in ten tasks completely. The models finish clear, standalone assignments quickly, but they lose track as autonomous developers. The article AI coding agents ace isolated tests but complete fewer than one in ten tasks in a simulated workplace appeared first on The Decoder."
+  },
+  {
+   "title": "Perplexity's new Monitor API turns web search from a one-off query into a nonstop watchdog",
+   "link": "https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-22T14:20:28.000Z",
+   "excerpt": "Perplexity is launching a Monitor API that searches the web on a schedule and alerts agents via webhook only when relevant changes occur. Its own decision model filters out unimportant results. For Perplexity, the API is part of a broader strategy to stand out from an increasingly interchangeable chatbot business through developer tools. The article Perplexity's new Monitor API turns web search from a one-off query into a nonstop watchdog appeared first on The Decoder."
+  },
+  {
+   "title": "AI が生成した Roblox の .rbxlx を読む：中身の構造と Studio での検証チェックリスト",
+   "link": "https://zenn.dev/aigamemakers/articles/6736cb29473452",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T13:55:16.000Z",
+   "excerpt": "最近は「一文の指示から Roblox のゲームを丸ごと作る」系の生成 AI ツールが出てきました。便利な一方で、出てきたファイルを そのまま公開していいのか は自分で確かめる必要があります。 この記事では、Roblox の place ファイル（.rbxlx）がどういう構造になっているか、そして AI が作ったゲームを Roblox Studio で開いたときに最初の 15 分で何を確認すると事故が減るかをまとめます。どのツールで生成したファイルにも使える内容です。 .rbxlx は「インスタンスツリーの XML」 Roblox の place には .rbxl（バイナリ）と .rb..."
+  },
+  {
+   "title": "中国ではAIリテラシー向上を目指して学校でAIに焦点を当てたカリキュラムや主要教科におけるAI生成型の授業を採用している",
+   "link": "https://gigazine.net/news/20261122-chinas-ai-native/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-22T13:45:00.000Z",
+   "excerpt": "中国はアメリカに対抗するため、AI人材育成パイプラインの構築に力を入れています。半数の省および地方自治体にAI教育に関する義務が課せられていますが、AIリテラシーを測定するための標準的な枠組みは確立されておらず、学校に評価が任せられている不安定さも指摘されています。 続きを読む..."
+  },
+  {
+   "title": "AI is getting better faster than experts can reliably test whether new systems are safe, METR warns",
+   "link": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-22T13:00:43.000Z",
+   "excerpt": "METR reports that leading AI models like Opus 5.5 and GPT-6 Astra are improving rapidly at research tasks but getting harder to measure. Current data can't rule out a dangerous acceleration in AI development, the organization warns, though it also says common tests may overestimate what the models can actually do. The article AI is getting better faster than experts can reliably test whether new systems are safe, METR warns appeared first on The Decoder."
+  },
+  {
+   "title": "The vibe-coding revolution is coming to all the gadgets",
+   "link": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera",
+   "feedName": "The Verge AI",
+   "lang": "en",
+   "date": "2026-11-22T13:00:00.000Z",
+   "excerpt": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on the vibe-hacking of everything, follow David Pierce. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started Like so many things with AI, it's not that large language models opened up some wholly new capability. For as long as there have been gadgets, a few users have been hacking, modding, jailbreaking, and tweaking them to their liking. What is new is that it's easy now. People all over the world are discovering that they can use large language models to hack their hardwar … Read the full story at The Verge."
+  },
+  {
+   "title": "EU の AI Act 初の情報提供要求——サンドボックスの前提が崩れた 2 件",
+   "link": "https://zenn.dev/dekita/articles/jp-ai-act-probes-sandbox-ja",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T12:09:10.000Z",
+   "excerpt": "はじめに この稿は、2026 年 10 月 14 日に欧州委員会が EU AI Act に基づく初の情報提供要求を公表したという報道を材料に、日本の開発現場で何を点検すべきかを整理したものです。対象は OpenAI と Anthropic の 2 社です。 先に結論を書きます。問われているのは「モデルが暴走したか」ではありません。隔離が前提としていた境界が、実際に破られたかどうかです。 同じモデルを業務で使う立場として、また EU 域内に顧客を持つ立場として、日本の現場も無関係ではありません。 報じられている 2 件の事故 いずれも 2026 年夏に起きたと報じられています。 1..."
+  },
+  {
+   "title": "Security researchers show how cheap AI inference providers steal keys and snoop on users",
+   "link": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-22T12:07:56.000Z",
+   "excerpt": "Security researchers at Dragos used two million fake AI requests to uncover serious vulnerabilities in the AI supply chain, finding at least three compromised providers, hundreds of stolen AWS keys, and marketplace resellers who were simply reading customer requests. OpenRouter responded by removing three providers and 125 endpoints. The article Security researchers show how cheap AI inference providers steal keys and snoop on users appeared first on The Decoder."
+  },
+  {
+   "title": "Claude Codeの /compact を重ねると何が消える？ 決まり10個は残り、最初の表30行は作業を挟むと2回目で0行でした",
+   "link": "https://zenn.dev/ojisan_ai_lab/articles/claude-code-compact-stack-20261122",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T12:01:44.000Z",
+   "excerpt": "長い作業の途中で /compact を打つと、それまでの会話が要約に置き換わります。公式ドキュメントには、そのとき「会話の初めの細かい指示は失われることがある。残したい決まりは CLAUDE.md に書く」とあります。では実際に、何が残って、何が消えるのでしょうか。 前に（Claude Code v2.1.311で200K超の扱いは変わった？ 手元では前と同じく、そのまま通って次で圧縮でした）は、圧縮が「いつ」起きるかを測りました。今回は、圧縮の「あと」に何が残るかです。同じ会話の中で、会話で伝えた決まり10個と、いちばん最初に渡した経費の表30行を、/compact を重ねながら数えて..."
+  },
+  {
+   "title": "介護のおむつと福祉用具の在庫と発注、AIはどこまで任せられますか？ — 肌の1枚で決める",
+   "link": "https://zenn.dev/satoshimizuhara/articles/ai-agent-care-diaper-supply-order",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T11:34:40.000Z",
+   "excerpt": "昨日は、介護の通院と受診の付き添いの仕事で、介護の現場に寄せて読む29回目を書いた。本稿はその30回目で、昨日予告した通り、同じ介護の現場におむつと福祉用具の在庫と発注の仕事を置く。待合の1席で診察室に聞く質問を決める仕事は29回目に置いた。本稿で置くのは、その玄関を内側へ戻って、特約店の車が止まる荷さばき場から棚と台帳を結ぶ、月の半分の仕事だ。おむつと福祉用具の在庫と発注の段取りは、月次の在庫点検表の下書き、おむつのサイズ別の消費と在庫の集計、福祉用具の貸与台帳の点検の下書き、特約店への発注書の下書き、貸与と交換と返却の連絡文面の下書き、月次の発注と消耗の集計は機械が速くそろえられる。..."
+  },
+  {
+   "title": "Lean and Mathlib community officially confirms Levent Alpöge's proof of the Riemann hypothesis is correct",
+   "link": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-22T11:08:31.000Z",
+   "excerpt": "The Lean and Mathlib community has officially confirmed Levent Alpöge's proof of the Riemann hypothesis as correct. Dozens of independent verifiers checked the 17 million lines of computer code. The solution arrived years earlier than expected: Terence Tao had predicted it wouldn't happen until around 2050 and didn't expect AI to solve it alone. The article Lean and Mathlib community officially confirms Levent Alpöge's proof of the Riemann hypothesis is correct appeared first on The Decoder."
+  },
+  {
+   "title": "FMV直販に注目！ 23.8型の一体型デスクトップPCが、Ryzen AI 5搭載で24万円台！",
+   "link": "https://ascii.jp/elem/000/004/453/4453673/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-22T11:00:00.000Z",
+   "excerpt": "FMVパソコン通販サイト「FMV Store」では、複数のモデルを対象にセールを開催中。"
+  },
+  {
+   "title": "Excelの仮払金の残高でAIに任せるのは経月の式まで — 精算の声掛けは人間が回す",
+   "link": "https://zenn.dev/yoshitokinosita/articles/0052-excel-ai-karabarai-kin-zandaka",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T10:41:12.000Z",
+   "excerpt": "仮払金の残高の点検は、経った月の数えから始める 12月の机の話です。前回の固定資産の棚卸では、台帳と番札の2枚の帳を1つの番号で引き合せて、所在不明の候補の行を現場に回す位置に置きました。実物の帳が閉じた後に机へ残るのが、借方の側に残っている残高の帳です。仮払金と立替金。食品メーカーの月の帳では、受入書が届く前の立て替え払い、工場の現場で先に立つ臨時の払い出し、本人が立て替えた経費の精算待ちが、いずれも借方で残る形です。締めの伝票が閉じる前の数日間に、この2つの勘定の残っている行を1枚の帳に数えて、精算の記録と閉じた行と閉じない行に分けて印を拾う点検が発生します。年末締めに残る借方の..."
+  },
+  {
+   "title": "AIのハーネスは、できることを足し、やることを止める",
+   "link": "https://zenn.dev/ponkotate/articles/2026-11-22-harness-add-and-stop",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T10:20:25.000Z",
+   "excerpt": "ChatGPTやClaudeを使っていると、AIが自分で検索したり、コードを実行したりしているように見えます。けれど、LLM本体ができるのは、文章を作ることだけです。検索やコードの実行は、LLMの周りに付けたハーネスが担っています。 私は、Claude Codeで開発するときに、プロジェクトごとにハーネスの部品を自作して足しています。改めて自分のハーネスを見返したところ、能力を足すものと同じくらい、AIがやろうとしたことを止めるものが多いことに気づきました。この記事では、2つのプロジェクトのハーネスを、「足す」と「止める」に分けて紹介します。 LLM本体と、ハーネス このことは、Cl..."
+  },
+  {
+   "title": "FlashAI、AIが対応した電話を有人オペレーターへ引き継ぐ「ウォーム転送」を実装",
+   "link": "https://ascii.jp/elem/000/004/453/4453906/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-22T10:00:00.000Z",
+   "excerpt": "FlashAI、AIが対応した電話を有人オペレーターへ引き継ぐ「ウォーム転送」を実装"
+  },
+  {
+   "title": "GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude",
+   "link": "https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/",
+   "feedName": "The Decoder",
+   "lang": "en",
+   "date": "2026-11-22T09:41:37.000Z",
+   "excerpt": "OpenAI's GPT-6.2 Astra and Sol give much shorter, more direct answers than their predecessors, but they are also less willing to admit uncertainty. Anthropic's Claude models score well ahead on transparency. The article GPT-6.2 Astra and Sol get to the point faster but score lower on transparency than Claude appeared first on The Decoder."
+  },
+  {
+   "title": "ふるさと納税の返礼品をAIで価格推定して還元率ランキングを作った話",
+   "link": "https://zenn.dev/tachibanana0/articles/b0227c35c4d0de",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T09:25:45.000Z",
+   "excerpt": "ふるさと納税の返礼品を「還元率（＝返礼品の市場価格 ÷ 寄付額）」で並べるランキングサイトを作りました。 https://furusato-ranking.hikakunavi360.com/ きっかけは単純で、既存のポータルは還元率の出し方がバラバラだからです。「実質還元率」「コスパ」と書いてあっても、何を基準にした数字なのかが分からない。だったら自分で市場価格を推定して、計算式を全部公開したほうが早いと思いました。 この記事は、その実装でぶつかった問題と、個人開発でランキングサイトを作るときに踏みがちな罠の記録です。SEOの話が多めです。 還元率をどうやって出すか やっていること..."
+  },
+  {
+   "title": "FlashLabs、FlashRevのAIエージェント「Hermes Agent」を大幅アップデート ― 複数セッション・スケジュールタスクなどに対応",
+   "link": "https://ascii.jp/elem/000/004/453/4453894/?rss",
+   "feedName": "ASCII.jp",
+   "lang": "ja",
+   "date": "2026-11-22T07:40:00.000Z",
+   "excerpt": "FlashLabs、FlashRevのAIエージェント「Hermes Agent」を大幅アップデート ― 複数セッション・スケジュールタスクなどに対応"
+  },
+  {
+   "title": "AIが世界を変えてもAI企業が儲かるとは限らない、その理由とは？",
+   "link": "https://gigazine.net/news/20261122-ai-will-not-make-you-rich/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-22T06:00:00.000Z",
+   "excerpt": "生成AIの急速な進化を背景に、AIモデルの開発やデータセンターの建設などに巨額の資金が投じられています。しかし、AIが今後の経済成長をけん引するという期待が高まる一方で、AIを開発する企業や投資家が必ずしも大きな利益を得られるとは限りません。元ベンチャーキャピタリストのジェリー・ニューマン氏がPCの普及や海上輸送のコンテナ化といった過去の技術革新を振り返りながら、AIによって生み出される利益が最終的に誰の手に渡るのかを分析しました。 続きを読む..."
+  },
+  {
+   "title": "Thinking Machines Lab、Macでも動くAIモデル「Inkling 2 Mini」をオープンウェイトで公開 ——中間の12層を3回通るTransformer",
+   "link": "https://gihyo.jp/article/2026/11/inkling-2-mini?utm_source=feed",
+   "feedName": "gihyo.jp",
+   "lang": "ja",
+   "date": "2026-11-22T04:54:33.000Z",
+   "excerpt": "Thinking Machines Labは2026年11月20日、264億パラメーターのAIモデル「Inkling 2 Mini」[1]の重みを公開した。テキストや画像から文章やコードを生成でき、メモリーが32GB以上のAppleシリコン搭載Macでも動作する。"
+  },
+  {
+   "title": "Antigravity が Gemini の利用上限をリセットなど、11/22 の AI ニュース",
+   "link": "https://zenn.dev/xdaily/articles/ai-dev-news-daily",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T04:06:57.000Z",
+   "excerpt": "開発に関わる AI のニュースを毎朝まとめています。各項目の最後に出典へのリンクを付けています。 ! 2026年11月22日更新。今日は 7 本です。 今日の 3 本 Antigravity、全ユーザーの Gemini 利用上限をリセット Novita AI、一部の MiniMax リクエストを MiniMax 公式 API に転送していたと公表 OpenCode、GLM 5.3 と DeepSeek V4.1 Flash を 60% 値下げ 開発ツール・API Antigravity、全ユーザーの Gemini 利用上限をリセット Google Antigravity..."
+  },
+  {
+   "title": "Hugging Face、180BのMoEモデルを32GBのMacで動かす手法を公開",
+   "link": "https://codezine.jp/article/detail/30438",
+   "feedName": "CodeZine",
+   "lang": "ja",
+   "date": "2026-11-22T04:00:00.000Z",
+   "excerpt": ""
+  },
+  {
+   "title": "40代からのシステム保守とAI活用：流行のSPAを一周回って、なぜ「シンプルなMVC」に行き着くのか",
+   "link": "https://zenn.dev/ritsu_nakagami/articles/e152e524de86c9",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T02:32:06.000Z",
+   "excerpt": "はじめに エンジニアとして20年近く現場に立っていると、「これが次世代の標準だ」と持て囃された技術が数年で廃れ、その負債の尻拭いに追われる光景を何度も目にすることになります。 近年、生成AIの台頭によって「コードを書く速度」の価値が急速に変化しました。かつてのように体力任せで大量のコードを書いたり、半年ごとに変わるフロントエンドのエコシステムを追いかけ続けたりする戦い方は、40代・50代にとって現実的ではありませんし、そもそもその領域はAIが最も得意とするところです。 では、私たちが長年の障害対応や泥臭い保守の現場で培ってきた「低レイヤーの感覚」や「設計の勘所」は、AI時代に不要にな..."
+  },
+  {
+   "title": "請求書のチェックを無料AIにさせたら、架空請求は見つけたが消費税の1円を見落とした",
+   "link": "https://zenn.dev/ai_gyomu_jissok/articles/invoice-check-ai-jissoku",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T02:13:33.000Z",
+   "excerpt": "やったこと 架空の請求書と納品記録を渡して、無料版のGeminiに突き合わせのチェックをさせました。送ったのは1回だけ、作り直しはさせていません。今回の回答ではコード実行が使われました。 請求書には間違いを6件仕込みました。数量の転記ミス、値引きの未反映、単価の取り違え、納品記録にない架空請求、消費税の端数処理の誤り、合計の足し算ミスです。 結果は、6件中5件を検出。修正値（小計316,339円・消費税31,633円・合計347,972円）はすべて正解で、誤指摘は0件でした。見落としたのは、消費税の端数処理の1円だけです。 動画版（実測の画面つき）はこちらです。 https://yo..."
+  },
+  {
+   "title": "Anthropicの研究者がAI「Claude」とともに数学の未解決問題「リーマン予想」を証明したと発表、1700万行の証明コードを専門家が検証中",
+   "link": "https://gigazine.net/news/20261122-anthropic-claude-said-riemann-hypothesis-solved/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-22T02:00:00.000Z",
+   "excerpt": "AI開発企業Anthropicの研究者であるレベント・アルポゲ氏が2026年11月20日、AnthropicのAIモデルであるClaudeとともに数学の未解決問題であるリーマン予想を証明したと発表しました。アルポゲ氏は約1700万行に及ぶ証明コードを公開しており、マサチューセッツ工科大学(MIT)などの研究者による独立した検証で証明の正しさを確認する複数の検査に成功しています。リーマン予想には100万ドル(約1億5800万円)の懸賞金が設定されていますが、記事作成時点では今回の証明はまだ正式に認められておらず、今後も専門家による評価が必要となります。 続きを読む..."
+  },
+  {
+   "title": "Meta ads is now available in AWS Quick",
+   "link": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
+   "feedName": "AWS AI Blog",
+   "lang": "en",
+   "date": "2026-11-22T01:59:13.000Z",
+   "excerpt": "AWS Quick now has a Meta ads AI connector. Meta advertisers can use natural language in Quick to create, manage, and analyze campaigns while staying connected to the Meta ad management network, and combine Meta ad data with first- and third-party sources to build dashboards, documents, slide decks, and automated workflows."
+  },
+  {
+   "title": "画像生成モデルのRL学習、その効果の9割は「定数のズレ」だけで再現できる",
+   "link": "https://zenn.dev/lonebula/articles/rl-post-training-activation-steering",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T01:38:52.000Z",
+   "excerpt": "画像生成モデルのRL学習、その効果の9割は「定数のズレ」だけで再現できる 最近の画像生成AI、文字を描かせるとちゃんと読める文字が出てきたり、頼んだ通りの構図で複数のものを並べてくれたりと、ずいぶん賢くなったなと感じます。こうした進歩の裏側には、生成した画像に「報酬」をつけてモデルを鍛える、いわゆるRL（強化学習）によるポストトレーニングがあるそうです。重みを更新して、良い画像を出す方向へモデルを育てていくわけですね。 でも、ふと気になることがあります。プロンプトごとに描く文字も構図も変わるのに、その改善って本当に「プロンプトに応じた複雑な変化」を学んでいるんでしょうか。もしかしたら..."
+  },
+  {
+   "title": "SignalがAIエージェントによる情報収集を防ぐためアプリでのAIによるスクリーンショット撮影を制限、OSレベルのAIエージェントによる情報収集に警鐘",
+   "link": "https://gigazine.net/news/20261122-signal-restricts-mobile-screenshots-threat-ai-surveillance/",
+   "feedName": "GIGAZINE",
+   "lang": "ja",
+   "date": "2026-11-22T01:30:00.000Z",
+   "excerpt": "プライベートメッセンジャーアプリのSignalが、モバイルアプリでのAIによるスクリーンショット撮影機能を制限しました。これはAIエージェントによる情報収集が、Signalの構築してきたプライバシー保護機能を崩してしまうためと説明されています。 続きを読む..."
+  },
+  {
+   "title": "Google検索トップに「AIモード」の履歴 PC版で中断した調べ物を再開",
+   "link": "https://japan.cnet.com/article/35255268/",
+   "feedName": "CNET Japan",
+   "lang": "ja",
+   "date": "2026-11-22T01:22:00.000Z",
+   "excerpt": "パソコン版Google検索のトップページから、AIモードで中断した調べ物を再開できるようになる。Google検索の製品担当バイスプレジデント、Robby Stein氏は11月19日（米国時間）、Xへの投稿で、世界で順次提供すると明らかにした。折りたためるサイドバーに最近のやりとりが並び、選ぶと続けて質問できる。"
+  },
+  {
+   "title": "Sigma Tables登場、Assistant回答検証・AI予算に対応 | What's New in Sigma 2026/11/13",
+   "link": "https://zenn.dev/truestar/articles/65ee43bb69ca0e",
+   "feedName": "Zenn 生成AI",
+   "lang": "ja",
+   "date": "2026-11-22T00:01:39.000Z",
+   "excerpt": "Sigma(Sigma Computing)の最新リリースノート情報を集約・要約して紹介しているコミュニティスレッド『Release Notes』。米国時間毎週金曜日中(日本時間土曜日早朝)に定期的に公開されているこちらのスレッドの内容について、個人的情報観測も兼ねて公開されたタイミングで目を通すようにしています。 当エントリではこのコミュニティスレッドにおける2026年11月13日付けの投稿について、内容を要約・咀嚼理解したものを紹介します。 過去回の内容は、年ごとの一覧記事『What's New in Sigma 〜Sigma Computingの関連リリース情報まとめ(..."
+  },
+  {
+   "title": "Muru",
+   "link": "https://simonwillison.net/2026/Nov/21/muru/",
+   "feedName": "Simon Willison",
+   "lang": "en",
+   "date": "2026-11-21T23:56:28.000Z",
+   "excerpt": "Muru Graham Dumpleton started mod_wsgi 20 years ago, and has been thinking about the ideal way to serve Python web applications in production ever since. Muru is his new, AI-assisted Rust server that aims to provide the best possible tools for running ASGI and WSGI Python apps both in development and production. As he did with wrapture , he's been publishing an extraordinarily detailed account of the project as he works on it - as part of his development process. Here's everything he's published so far, all in the last three weeks: 2026-11-04 — Twenty years of mod_wsgi, and what comes next 2026-11-05 — A first look at Muru 2026-11-07 — Muru: looking inside the workers 2026-11-08 — Muru: how it fits together 2026-11-09 — Muru: import once, fork many 2026-11-10 — Muru: HTTPS in development 2026-11-11 — Muru: WSGI and ASGI together 2026-11-11 — AI as a lifestyle choice 2026-11-12 — Muru: releases, not restarts 2026-11-13 — Muru: canaries without a service mesh 2026-11-14 — Muru: a better tenant in a container 2026-11-15 — Muru: working with Kubernetes, not around it 2026-11-16 — Muru: scaling from what the workers report 2026-11-17 — Muru: scaling to zero 2026-11-18 — Muru: overlays o"
+  }
+ ],
+ "features": {
+  "audio": false
+ },
+ "publication": {
+  "revision": 1,
+  "contentRevision": "c751cecf43d54ba1e14ee1249b43c552472932699d1349a3c8c74d08229273c6",
+  "textState": "ready",
+  "updatedAt": "2026-11-23T01:09:26.189Z",
+  "audioByVoice": {}
+ }
+}
