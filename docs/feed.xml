@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-24】Anthropic、AIがPRを自動承認する「Claude Ship」を発表 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-24.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-24.html</guid>
+    <pubDate>Tue, 24 Nov 2026 05:02:43 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Anthropic、AIがPRを自動承認する「Claude Ship」を発表&lt;/li&gt;&lt;li&gt;OpenAIとCisco、Linuxを保護する「Shirudo」公開&lt;/li&gt;&lt;li&gt;Nvidia、黄仁勲CEOを復職、上院証言へ&lt;/li&gt;&lt;li&gt;トランプ大統領、黄仁勲氏のNvidia復職を支持&lt;/li&gt;&lt;li&gt;米複数州がSpaceXを提訴、Grokが性的画像を生成と主張&lt;/li&gt;&lt;li&gt;米2州がSpaceX提訴、GrokのCSAM生成疑惑で&lt;/li&gt;&lt;li&gt;OpenAI、企業法務向けAI活用ウェビナー開催&lt;/li&gt;&lt;li&gt;Richpanel、GPT-6活用でサポート業務を自動化&lt;/li&gt;&lt;li&gt;DeNA、「AI社員」サービス開始、利用を“残業”で管理&lt;/li&gt;&lt;li&gt;Zenken、国内不足のAI人材をインドで確保&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-23】Perplexity and Intelligence ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-23.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-23.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-05.html</guid>
     <pubDate>Thu, 05 Nov 2026 01:04:20 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI、Images 2.6でChatGPTのGIF生成を実現&lt;/li&gt;&lt;li&gt;OpenAI、コーディングAI企業Pierre Computerを買収&lt;/li&gt;&lt;li&gt;Google、AI制限校に検索停止で批判&lt;/li&gt;&lt;li&gt;Anthropic、AI出力の真偽証明「FlashProve」公開&lt;/li&gt;&lt;li&gt;Apple、Siri AIのアプリ連携を開発者に開放&lt;/li&gt;&lt;li&gt;OpenAIとマツダ、AI活用で車両設計を共同研究&lt;/li&gt;&lt;li&gt;GPT-6 Astraで他AIの数学性能を6倍改善&lt;/li&gt;&lt;li&gt;OpenAI、Linuxカーネルの脆弱性を自律発見・修正&lt;/li&gt;&lt;li&gt;OpenAI「Daybreak Red」がAWS GovCloudで提供&lt;/li&gt;&lt;li&gt;DevRev、GPT-6.1 Solで自律型セルフサービス強化&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-11-04】Claude Codeの悪用対策と多様な活用法 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-04.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-04.html</guid>
-    <pubDate>Wed, 04 Nov 2026 00:53:28 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Claude Codeの悪用対策と多様な活用法&lt;/li&gt;&lt;li&gt;Google、学校向けAI制限で検索も不可に&lt;/li&gt;&lt;li&gt;OpenAIが物理世界のエンジニアリングを加速&lt;/li&gt;&lt;li&gt;CiscoがOpenAI活用で高速セキュリティ構築&lt;/li&gt;&lt;li&gt;HeimstadenがAIで不動産管理を変革&lt;/li&gt;&lt;li&gt;OpenAI、ジル・ヘイゼルベーカー氏をCCOに任命&lt;/li&gt;&lt;li&gt;国産AIモデルの必要性を安野氏が強調&lt;/li&gt;&lt;li&gt;造船設計の確認作業をAIで効率化&lt;/li&gt;&lt;li&gt;AnthropicがAIモデルの身元証明システム開発&lt;/li&gt;&lt;li&gt;Google、学校向けAIを原則オフ、検索も制限&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
