@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-25】Anthropic、AIがGitHub PRを自動承認 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-25.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-25.html</guid>
+    <pubDate>Wed, 25 Nov 2026 03:47:37 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Anthropic、AIがGitHub PRを自動承認&lt;/li&gt;&lt;li&gt;GPT-6がタンパク質設計能力を実証&lt;/li&gt;&lt;li&gt;TidalがAI生成曲2700万曲を削除へ&lt;/li&gt;&lt;li&gt;Claude製アプリをMac/Windowsに導入可能に&lt;/li&gt;&lt;li&gt;5.9GBで高エージェント性能LLM公開&lt;/li&gt;&lt;li&gt;ChatGPTに「GPT-6.2」提供開始&lt;/li&gt;&lt;li&gt;Tidal、未再生のAI生成曲2700万を削除&lt;/li&gt;&lt;li&gt;OpenAIとCisco、Linux防御基盤Shirudo公開&lt;/li&gt;&lt;li&gt;Astraで系外惑星探索、アマチュアが発見&lt;/li&gt;&lt;li&gt;生成AIが知識労働者のスキルを一時向上&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-24】Anthropic、AIがPRを自動承認する「Claude Ship」を発表 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-24.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-24.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-06.html</guid>
     <pubDate>Fri, 06 Nov 2026 01:06:14 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;ChatGPT Images 2.6がアニメーションGIFの作成に対応、APIではFlareとSunburstの新バージョンを提供&lt;/li&gt;&lt;li&gt;Anthropic、「Claude」に家計管理機能「Personal Finance」 銀行口座と連携、米国でβ提供&lt;/li&gt;&lt;li&gt;Airbnb says it’s launching an AI travel agent in the first half of 2027&lt;/li&gt;&lt;li&gt;OpenAI released a new cybersecurity model. Is that enough?&lt;/li&gt;&lt;li&gt;PFN、スマホで動く翻訳LLM「PLaMo 3 Translate」公開&lt;/li&gt;&lt;li&gt;OpenAI、サイバーセキュリティ特化型「GPT-6 Cyber」発表 Firefoxの未知の脆弱性81件を発見&lt;/li&gt;&lt;li&gt;Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips&lt;/li&gt;&lt;li&gt;Apple is reportedly cutting budgets for its internal AI usage&lt;/li&gt;&lt;li&gt;Cult.fit builds operational muscle with Codex&lt;/li&gt;&lt;li&gt;Kimi K3.1 Proの重み公開、無償で商用利用も原則可能&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-11-05】OpenAI、Images 2.6でChatGPTのGIF生成を実現 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-05.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-05.html</guid>
-    <pubDate>Thu, 05 Nov 2026 01:04:20 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;OpenAI、Images 2.6でChatGPTのGIF生成を実現&lt;/li&gt;&lt;li&gt;OpenAI、コーディングAI企業Pierre Computerを買収&lt;/li&gt;&lt;li&gt;Google、AI制限校に検索停止で批判&lt;/li&gt;&lt;li&gt;Anthropic、AI出力の真偽証明「FlashProve」公開&lt;/li&gt;&lt;li&gt;Apple、Siri AIのアプリ連携を開発者に開放&lt;/li&gt;&lt;li&gt;OpenAIとマツダ、AI活用で車両設計を共同研究&lt;/li&gt;&lt;li&gt;GPT-6 Astraで他AIの数学性能を6倍改善&lt;/li&gt;&lt;li&gt;OpenAI、Linuxカーネルの脆弱性を自律発見・修正&lt;/li&gt;&lt;li&gt;OpenAI「Daybreak Red」がAWS GovCloudで提供&lt;/li&gt;&lt;li&gt;DevRev、GPT-6.1 Solで自律型セルフサービス強化&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
