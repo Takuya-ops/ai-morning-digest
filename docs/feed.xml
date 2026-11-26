@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-26】Amazon and Meta are in talks to end the block on Meta&#39;s AI shopping agent Muse in Amazon&#39;s online store. ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-26.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-26.html</guid>
+    <pubDate>Thu, 26 Nov 2026 03:00:35 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;Amazon and Meta are in talks to end the block on Meta&amp;#39;s AI shopping agent Muse in Amazon&amp;#39;s online store.&lt;/li&gt;&lt;li&gt;Anthropicが「アプリとしてインストール」ベータ版をリリース、Claudeアーティファクトが通知機能・オプションのフルコンピュータアクセスなどを備えたWindows・Mac用アプリに変換される&lt;/li&gt;&lt;li&gt;Google WorkspaceでMCPサーバーとCLIを一般提供、AIエージェントはMCP必須に&lt;/li&gt;&lt;li&gt;AnthropicがClaudeを使って自社APIをPythonからRustに移植しCPU使用量を約70％削減した方法を公開&lt;/li&gt;&lt;li&gt;AnthropicのアモデイCEO、「人間の自由意志をAIに明け渡す」考えを否定 AI企業間で議論&lt;/li&gt;&lt;li&gt;脆弱性の発見数、1年で2倍超 Microsoft製品も月100件から1000件超に……AIで一変&lt;/li&gt;&lt;li&gt;Obsidian公式の「エージェント向け」スキル集が登場 Vault操作法とファイル形式をひとまとめに&lt;/li&gt;&lt;li&gt;図面を探す時間から技能を伝える時間へ、AI活用で業務効率化を進める空研工業&lt;/li&gt;&lt;li&gt;国内造船業再生の鍵はフィジカルAI、デジタルシップヤード開発の現状を知る&lt;/li&gt;&lt;li&gt;S&amp;amp;P considers Nvidia credit downgrade over governance and ‘key man’ risks&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-25】Anthropic、AIがGitHub PRを自動承認 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-25.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-25.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-07.html</guid>
     <pubDate>Sat, 07 Nov 2026 00:21:48 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;OpenAI、サイバーセキュリティ特化AI発表&lt;/li&gt;&lt;li&gt;Google、動画生成AI「Gemini Omni 1.2 Flash」&lt;/li&gt;&lt;li&gt;MetaのAIエージェント「Muse」が音声対話に対応&lt;/li&gt;&lt;li&gt;OpenAI、Hacktronと連携し脆弱性を発見&lt;/li&gt;&lt;li&gt;OpenAI、生化学研究AIエージェントの評価指標を発表&lt;/li&gt;&lt;li&gt;OpenAI、評価額1.25兆ドルで110億ドルを調達か&lt;/li&gt;&lt;li&gt;AI面接導入後の手作業「二度手間」を解消へ&lt;/li&gt;&lt;li&gt;生成AIの情報収集、リンク表示だけでは不明&lt;/li&gt;&lt;li&gt;AI導入営業の課題：効率化と成果の乖離&lt;/li&gt;&lt;li&gt;AIハッキングツール「Artex」数百台が公開状態に&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-11-06】ChatGPT Images 2.6がアニメーションGIFの作成に対応、APIではFlareとSunburstの新バージョンを提供 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-06.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-06.html</guid>
-    <pubDate>Fri, 06 Nov 2026 01:06:14 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;ChatGPT Images 2.6がアニメーションGIFの作成に対応、APIではFlareとSunburstの新バージョンを提供&lt;/li&gt;&lt;li&gt;Anthropic、「Claude」に家計管理機能「Personal Finance」 銀行口座と連携、米国でβ提供&lt;/li&gt;&lt;li&gt;Airbnb says it’s launching an AI travel agent in the first half of 2027&lt;/li&gt;&lt;li&gt;OpenAI released a new cybersecurity model. Is that enough?&lt;/li&gt;&lt;li&gt;PFN、スマホで動く翻訳LLM「PLaMo 3 Translate」公開&lt;/li&gt;&lt;li&gt;OpenAI、サイバーセキュリティ特化型「GPT-6 Cyber」発表 Firefoxの未知の脆弱性81件を発見&lt;/li&gt;&lt;li&gt;Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips&lt;/li&gt;&lt;li&gt;Apple is reportedly cutting budgets for its internal AI usage&lt;/li&gt;&lt;li&gt;Cult.fit builds operational muscle with Codex&lt;/li&gt;&lt;li&gt;Kimi K3.1 Proの重み公開、無償で商用利用も原則可能&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
