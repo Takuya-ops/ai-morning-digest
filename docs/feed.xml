@@ -6,6 +6,13 @@
   <description>毎朝5:30(JST)に届く、生成AI関連ニュースのまとめ</description>
   <language>ja</language>
   <item>
+    <title>【生成AIダイジェスト 2026-11-28】AIリスク監査実施は5.7％にとどまる 調査結果 ほか9件</title>
+    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-28.html</link>
+    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-28.html</guid>
+    <pubDate>Sat, 28 Nov 2026 02:55:20 GMT</pubDate>
+    <description>&lt;ol&gt;&lt;li&gt;AIリスク監査実施は5.7％にとどまる 調査結果&lt;/li&gt;&lt;li&gt;AIの家賃猶予案内を信じた女性が立ち退き被害に&lt;/li&gt;&lt;li&gt;Google、最大3倍高速なDeepCrossAttention発表&lt;/li&gt;&lt;li&gt;ImGui採用の軽量AIコーディング環境Prospero&lt;/li&gt;&lt;li&gt;Grokの違法画像生成巡り米各州がSpaceXを提訴&lt;/li&gt;&lt;li&gt;マイケル・ニールセン氏、神経網解説本を取り下げ&lt;/li&gt;&lt;li&gt;跳ねるボールの予測市場ゲーム「bouncemarket」公開&lt;/li&gt;&lt;li&gt;AndroidのDIYウィジェット作成機能の試用感&lt;/li&gt;&lt;li&gt;アゾン、AI攻撃高度化を受け自社ECを閉店&lt;/li&gt;&lt;li&gt;京セラ、AI需要見据え5年で設備投資9000億円&lt;/li&gt;&lt;/ol&gt;</description>
+  </item>
+  <item>
     <title>【生成AIダイジェスト 2026-11-27】Anthropic CEOが自由意志AI委譲報道を否定 ほか9件</title>
     <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-27.html</link>
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-27.html</guid>
@@ -137,13 +144,6 @@
     <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-09.html</guid>
     <pubDate>Sun, 08 Nov 2026 23:58:01 GMT</pubDate>
     <description>&lt;ol&gt;&lt;li&gt;Nvidia CEOと中国人スパイの関係を調査&lt;/li&gt;&lt;li&gt;情報漏えい多発で「個人専用詐欺メール」懸念&lt;/li&gt;&lt;li&gt;PCマニア院長がローカルLLMで診療効率化&lt;/li&gt;&lt;li&gt;大企業6割がAI活用、人材投資怠ると収益減予測&lt;/li&gt;&lt;li&gt;スシローと富士通、AIで漁業危機に挑む&lt;/li&gt;&lt;li&gt;社内AI不満のエース社員「シャドーAI」問題&lt;/li&gt;&lt;li&gt;研究者の事業開発参画、NEC・イビデンの模索&lt;/li&gt;&lt;li&gt;コクヨがNotionとAIで開発資料を効率化&lt;/li&gt;&lt;li&gt;マルチエージェント設計「15のパターン」解説&lt;/li&gt;&lt;li&gt;米中間選挙後のイーロン・マスクとデータセンター&lt;/li&gt;&lt;/ol&gt;</description>
-  </item>
-  <item>
-    <title>【生成AIダイジェスト 2026-11-08】Claude Codeの機密情報漏洩と対策 ほか9件</title>
-    <link>https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-08.html</link>
-    <guid isPermaLink="true">https://takuya-ops.github.io/ai-morning-digest/archive/2026-11-08.html</guid>
-    <pubDate>Sat, 07 Nov 2026 23:57:24 GMT</pubDate>
-    <description>&lt;ol&gt;&lt;li&gt;Claude Codeの機密情報漏洩と対策&lt;/li&gt;&lt;li&gt;Meta AIエージェント「Muse」に新機能「スペース」&lt;/li&gt;&lt;li&gt;マルチAIエージェント設計の15パターンを解説&lt;/li&gt;&lt;li&gt;米中間選挙後、イーロン・マスク氏とデータセンターの課題&lt;/li&gt;&lt;li&gt;Nvidia CEOへのスパイ疑惑、米情報機関メモで&lt;/li&gt;&lt;li&gt;GoogleがCrusoeのワイオミング州データセンター買収&lt;/li&gt;&lt;li&gt;OpenAIが追加110億ドル調達、評価額1.25兆ドルに&lt;/li&gt;&lt;li&gt;AI面接導入後の採用現場に残る手作業を解消へ&lt;/li&gt;&lt;li&gt;ChatGPT回答にリンクなくても、情報参照の可能性&lt;/li&gt;&lt;li&gt;AIで営業効率化も、成果に繋がらない原因と本質&lt;/li&gt;&lt;/ol&gt;</description>
   </item>
 </channel>
 </rss>
